@@ -58,6 +58,19 @@ def edit(path: Path, pattern: str, replacement: str, count: int = 1) -> None:
     path.write_text(new, encoding="utf-8")
 
 
+def forget(data: Path, id_: str) -> None:
+    """Remove every link to an id from every record, so a test can delete that record cleanly.
+    Added 2026-10-16 when the real explanations arrived and the dark forest gained neighbours."""
+    pat = re.escape(id_)
+    for path in sorted(data.rglob("*.toml")):
+        text = path.read_text(encoding="utf-8")
+        new = re.sub(rf'"{pat}",\s*', "", text)
+        new = re.sub(rf',\s*"{pat}"', "", new)
+        new = re.sub(rf'"{pat}"', "", new)
+        if new != text:
+            path.write_text(new, encoding="utf-8")
+
+
 class TheRecords(unittest.TestCase):
     def test_examples_pass(self):
         self.assertEqual(problems_for(DATA), [])
@@ -151,9 +164,9 @@ class ExplanationRules(unittest.TestCase):
 class Links(unittest.TestCase):
     def test_dangling_related_explanation_is_refused(self):
         with TempData() as data:
-            edit(data / "explanations" / "dark-forest.toml", r"^related = \[\]", 'related = ["zoo-hypothesis"]')
+            edit(data / "explanations" / "dark-forest.toml", r"^related = \[.*\]$", 'related = ["dark-woods"]')
             problems = problems_for(data)
-        self.assertTrue(any("'zoo-hypothesis'" in p and "not an explanation that exists" in p for p in problems), problems)
+        self.assertTrue(any("'dark-woods'" in p and "not an explanation that exists" in p for p in problems), problems)
 
     def test_dangling_library_link_is_refused(self):
         with TempData() as data:
@@ -200,7 +213,7 @@ class RenamedIds(unittest.TestCase):
     def test_id_gone_from_history_without_retirement_is_refused(self):
         with TempData() as data:
             (data / "explanations" / "dark-forest.toml").unlink()
-            edit(data / "library" / "three-body-problem.toml", r'^explanations = \["dark-forest"\]\n', "")
+            forget(data, "dark-forest")
             seen = {("explanation", "dark-forest"), ("factor", "planets")}
             problems = problems_for(data, seen)
         self.assertTrue(any("'dark-forest' was committed before and is now gone" in p for p in problems), problems)
@@ -208,7 +221,7 @@ class RenamedIds(unittest.TestCase):
     def test_retired_id_satisfies_the_history_check(self):
         with TempData() as data:
             (data / "explanations" / "dark-forest.toml").unlink()
-            edit(data / "library" / "three-body-problem.toml", r'^explanations = \["dark-forest"\]\n', "")
+            forget(data, "dark-forest")
             (data / "retired.toml").write_text(
                 '[[retired]]\nid = "dark-forest"\nkind = "explanation"\ndate = 2026-10-16\n'
                 'why = "Test retirement."\n', encoding="utf-8")
