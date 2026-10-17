@@ -11,14 +11,13 @@ link = "https://arxiv.org/abs/2103.02127"
 finding = """
 A review of what the Kepler mission and other surveys show about how planets are spread among
 stars, concentrating on orbits inside about the Earth-Sun distance, and of what those statistics say
-about how planets form and move. Its abstract gives no figure for the share of stars with planets,
-so it is logged without an estimate."""
+about how planets form and move. Neither its abstract nor its full text concludes that the share of
+stars with planets is close to 100 percent. Its summary says about 30 percent of Sun-like stars host
+planets inside about the Earth-Sun distance (down to Earth's mass and size), averaging about three such
+planets each; it also warns that the average number of planets per star and the share of stars with
+planets are different quantities. It is logged without an estimate."""
 factors = ["planets"]
 explanations = []
 moved_range = false
 
-verify = [
-  "The outside reviewer said the review concludes that the share of stars with planets is close to 100 percent; that statement was not found in the abstract or in coverage, and the full text has not been read for it. Until it is, the review is logged without an estimate.",
-]
-
-notes = "Logged 2026-10-17 on the outside review's item 6 (accepted in part by John: logged as a publication, added as an estimate if the full text gives the figure). Authors, title, venue, pages and date checked on 2026-10-17 against the arXiv record and Crossref."
+notes = "Logged 2026-10-17 on the outside review's item 6 (accepted in part by John: logged as a publication, added as an estimate if the full text gives the figure). Authors, title, venue, pages and date checked on 2026-10-17 against the arXiv record and Crossref. Read in full 2026-10-17 (arXiv HTML version of 2103.02127): the outside reviewer's statement that the review concludes the share of stars with planets is close to 100 percent is not in the paper and is not made in this record. The paper's first summary point gives about 30 percent of Sun-like stars with inner planets (inside about 1 AU, down to Earth mass), its section 3.1 gives about 10 percent with cold giant planets, and its section 1.1 explains why a planets-per-star figure is not the share of stars with planets. A figure for part of the parameter space is not an estimate of this factor, so none is added. Flagged for John in the changelog: whether the 30 percent belongs in the factor's notes."

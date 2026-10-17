@@ -19,7 +19,7 @@ chance of life starting."""
 what_would_move_this = "A published argument with a number on how long technological civilisations last (from history, from risk studies of our own prospects, or from the physics of long-lived machines), or a detection whose age bounds it."
 
 verify = [
-  "David Grinspoon's 'potentially billions of years' is quoted from the Wikipedia article, which cites Lonely Planets (2004); check the book, and whether a billion is his figure or the article's rounding. Tried 2026-10-16 and still open: the Internet Archive copy is not readable (lending only) and Google Books refused the query. Second-hand only: a Drake-equation paper (arXiv:1705.07816) says Grinspoon replaces the factor by the share of civilisations that become immortal times how long that has been going on, which 'may approach the age of the universe'; so the structure in the method line holds, but a figure of one billion is not confirmed, and the book's first publication was 2003 (the record says 2004, the paperback).",
+  "David Grinspoon's 'potentially billions of years' is quoted from the Wikipedia article, which cites Lonely Planets (2004); check the book, and whether a billion is his figure or the article's rounding. Tried 2026-10-16 and still open: the Internet Archive copy is not readable (lending only) and Google Books refused the query. Second-hand only: a Drake-equation paper (arXiv:1705.07816) says Grinspoon replaces the factor by the share of civilisations that become immortal times how long that has been going on, which 'may approach the age of the universe'; so the structure in the method line holds, but a figure of one billion is not confirmed, and the book's first publication was 2003 (the record says 2004, the paperback). Awaiting the book, ordered 2026-10-17: Lonely Planets (Grinspoon, 2004); the next pass with the book in hand closes this entry.",
 ]
 
 notes = """
@@ -45,8 +45,8 @@ who = "Frank Drake and the Green Bank meeting"
 when = "1961"
 low = 1000
 high = 100000000
-source = "Green Bank meeting of November 1961, as recorded in Drake and Sobel, Is Anyone Out There? (Delacorte, 1992), pages 55 to 62 (drake-1961)"
-method = "Educated guess, from a thousand years for a civilisation that destroys itself to a hundred million for one that does not; the meeting's spread of N, 20 to 50 million, came almost entirely from this factor."
+source = "Green Bank meeting of November 1961, as reported by Pearman in the first printed account of it (Interstellar Communication, 1963), page 292 (drake-1961)"
+method = "Pearman: the distribution of lifetimes might have two humps, societies that destroy themselves within, say, less than a thousand years and others that last for periods of the order of hundreds of millions of years; the record's 1,000 to 100,000,000 is those two ends, rounded. The account says the lifetime has a decisive influence on the number of civilisations."
 
 [[estimate]]
 who = "J. Richard Gott"
@@ -131,3 +131,10 @@ field = "range.status"
 old = "first-pass"
 new = "reviewed"
 why = "The outside review of the seven ranges ran on 2026-10-17 and John ruled on every item the same day (docs/reviews/2026-10-17-rulings.md)."
+
+[[revision]]
+date = 2026-10-17
+field = "estimate"
+old = "Drake 1961 source: Drake and Sobel (1992), pages 55 to 62; method named a spread of N of 20 to 50 million"
+new = "Drake 1961 source: Pearman (1963), page 292; the spread of N is no longer stated"
+why = "Checked 2026-10-17 against Pearman's 1963 account of the meeting, the first printed one, which is openly readable at the Internet Archive; the source line now cites it with its page, in place of Drake and Sobel (1992), whose page numbers came from a secondary summary and which has not been read. The estimate's numbers are unchanged. The clause about a spread of N of 20 to 50 million is removed from the method line: it came from a secondary summary and Pearman's account does not say it in a form that could be read."

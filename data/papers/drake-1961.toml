@@ -5,27 +5,26 @@
 id = "drake-1961"
 date = "1961-11"
 added_on = 2026-10-16
-authors = ["Frank Drake", "and the Green Bank meeting: Dana Atchley, Melvin Calvin, Su-Shu Huang, John Lilly, Philip Morrison, Bernard Oliver, Carl Sagan, Otto Struve, J. Peter Pearman"]
+authors = ["Frank Drake", "and the Green Bank meeting: Dana Atchley, Melvin Calvin, Giuseppe Cocconi, Su-Shu Huang, John Lilly, Philip Morrison, Bernard Oliver, Carl Sagan, Otto Struve, J. Peter Pearman"]
 title = "The Drake Equation, as written for the Green Bank conference on extraterrestrial intelligent life"
 venue = "Order of Dolphin meeting, National Radio Astronomy Observatory, Green Bank, West Virginia, 1961-11-01 to 1961-11-03; first published account in J. P. T. Pearman, 'Extraterrestrial Intelligent Life and Interstellar Communication: An Informal Discussion', in Interstellar Communication, ed. A. G. W. Cameron (Benjamin, 1963), 287–293"
 link = "https://www.seti.org/drake-equation-index"
 finding = """
-Drake wrote the equation on a blackboard as the agenda for a three-day meeting of about ten
-people: the number of detectable civilisations in the galaxy equals the rate at which
-suitable stars form, times the share with planets, times the habitable planets per such
-star, times the share on which life starts, times the share where it becomes intelligent,
-times the share that become detectable, times how long they stay so. The meeting's own
-values, as later recounted, were about 1 to 10 stars a year, 0.2 to 0.5, 1 to 5, 1, 1, 0.1
-to 0.2, and a lifetime of 1,000 to 100,000,000 years, which made the number of
-civilisations roughly equal to the lifetime in years: somewhere between 1,000 and 100
-million. The equation was never meant as a calculation; it was a way to organise an
-argument, and it has done that job for sixty-five years."""
+Drake wrote the equation on a blackboard as the agenda for a three-day meeting of eleven people:
+the number of communicative societies in the galaxy equals the rate at which stars form, times the
+share with planets, times the number of planets per star suitable for life, times the share on
+which life starts, times the share where intelligence appears, times the share that are
+communicative, times how long they stay so. The meeting's own values, as its first printed
+account reports them (Pearman, 1963), were about 1 star a year, with as many as 10 if some older
+stars are counted; 0.2 to 0.5 for the share with planets, all called weak arguments; 1 to 5
+planets per star suitable for life; about 1 for life starting and about 1 for intelligence
+following; 0.1 to 0.2 for the share that are communicative; and a lifetime that might have two
+humps, under a thousand years for societies that destroy themselves and hundreds of millions for
+those that do not. The account says the lifetime decides the answer. The equation was never meant
+as a calculation; it was a way to organise an argument, and it has done that job for
+sixty-five years."""
 factors = ["star-formation", "planets", "habitable-planets", "life", "intelligence", "detectable", "lifetime"]
 explanations = []
 moved_range = false
 
-verify = [
-  "The meeting's values for each factor are quoted from secondary accounts (Drake and Sobel, Is Anyone Out There?, 1992; Drake, Vakoch and Dowd, The Drake Equation, 2015); check against those books, and in particular whether the star-formation rate was given as 1 per year or as 1 to 10. Checked 2026-10-16 and still open: neither book could be reached tonight. The Wikipedia article (secondary, citing Drake and Sobel pages 55 to 62) gives 1 per year; the Cambridge abstract of the star-formation chapter of the 2015 volume says 'The estimate given in 1961 was ten stars per year'; the other six values match the Wikipedia list. Arithmetic favours 10 (with 1, the product of the other factors times the lifetime is not roughly equal to the lifetime).",
-  "The Pearman 1963 chapter's page numbers (287 to 293). Checked 2026-10-16 and still open: the start page 287 appears in a citation list, the end page was not confirmed (ADS and WorldCat refused automated access). The meeting's dates are borne out by Drake's own account (Science News interview: it 'started on November 1' and ran three days); the Green Bank plaque gives the National Academy of Sciences conference as 1961-10-30 to 1961-11-03, which is the wider event.",
-]
-notes = "Corrected 2026-10-16: the headcount in the finding was eleven; the author field names ten and the secondary accounts say about ten (Drake himself says he invited twelve). Founding entry. There is no 1961 paper by Drake presenting the equation; the earliest printed version is Pearman's 1963 account, and Drake's own first published form is in his 1965 chapter 'The Radio Search for Intelligent Extraterrestrial Life' in Current Aspects of Exobiology. The link is the SETI Institute's page on the equation."
+notes = "Corrected 2026-10-16: the headcount in the finding was eleven; the author field names ten and the secondary accounts say about ten (Drake himself says he invited twelve). Founding entry. There is no 1961 paper by Drake presenting the equation; the earliest printed version is Pearman's 1963 account, and Drake's own first published form is in his 1965 chapter 'The Radio Search for Intelligent Extraterrestrial Life' in Current Aspects of Exobiology. The link is the SETI Institute's page on the equation. Checked 2026-10-17 against Pearman's chapter itself (read in full at the Internet Archive, https://archive.org/details/interstellar_communication_1963): it runs on pages 287 to 293 of Interstellar Communication (the next chapter, Oliver's, begins on page 294), so the page range is confirmed. Corrected: the chapter lists eleven attendees, Struve (chairman), Atchley, Calvin, Cocconi, Drake, Huang, Lilly, Morrison, Oliver, Sagan and Pearman, so the headcount is eleven as the finding first said, and the author field lacked Giuseppe Cocconi (named on the volume's contributors list); the finding is rewritten from the chapter, whose values for each factor are given on its pages 289 to 292 and are now the source of the factor records' 1961 estimates. The star-formation question is answered there: about 1 a year, up to 10 with older stars counted. The finding's earlier sentence that the values made the number of civilisations roughly equal to the lifetime, between 1,000 and 100 million, is removed: it came from a secondary summary, and the chapter's own figures for the number of civilisations could not be read in the scan's text. Drake and Sobel (1992) and Drake, Vakoch and Dowd (2015) retell the meeting and have not been read here; they remain worth a cross-check when the books arrive."

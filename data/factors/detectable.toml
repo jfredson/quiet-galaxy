@@ -38,8 +38,8 @@ who = "Frank Drake and the Green Bank meeting"
 when = "1961"
 low = 0.1
 high = 0.2
-source = "Green Bank meeting of November 1961, as recorded in Drake and Sobel, Is Anyone Out There? (Delacorte, 1992), pages 55 to 62 (drake-1961)"
-method = "Educated guess: one in five to one in ten intelligent species would build radio and choose to signal."
+source = "Green Bank meeting of November 1961, as reported by Pearman in the first printed account of it (Interstellar Communication, 1963), page 291 (drake-1961)"
+method = "Pearman: about 0.2 of intelligent cultures reach the communicative state, from counting between one and five independent attempts on Earth at large-scale social organisation, one of which has got there (an argument the meeting called vulnerable and anthropocentric); whether such a society would be interested in signalling is conjecture, and 0.1 to 0.2 was suggested."
 
 [[estimate]]
 who = "Anders Sandberg, Eric Drexler and Toby Ord"
@@ -110,3 +110,10 @@ field = "range.status"
 old = "first-pass"
 new = "reviewed"
 why = "The outside review of the seven ranges ran on 2026-10-17 and John ruled on every item the same day (docs/reviews/2026-10-17-rulings.md)."
+
+[[revision]]
+date = 2026-10-17
+field = "estimate"
+old = "Drake 1961 source: Drake and Sobel (1992), pages 55 to 62"
+new = "Drake 1961 source: Pearman (1963), page 291"
+why = "Checked 2026-10-17 against Pearman's 1963 account of the meeting, the first printed one, which is openly readable at the Internet Archive; the source line now cites it with its page, in place of Drake and Sobel (1992), whose page numbers came from a secondary summary and which has not been read. The estimate's numbers are unchanged. The method line now gives the account's reasoning."

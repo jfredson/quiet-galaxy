@@ -5,7 +5,7 @@
 id = "hurowitz-2025"
 date = "2025-09-10"
 added_on = 2026-10-16
-authors = ["Joel A. Hurowitz", "M. M. Tice", "A. C. Allwood", "M. L. Cable", "K. P. Hand", "A. E. Murphy", "K. Uckert", "J. F. Bell III", "T. Bosak", "A. P. Broz", "E. Clavé", "A. Cousin", "and 77 others"]
+authors = ["Joel A. Hurowitz", "M. M. Tice", "A. C. Allwood", "M. L. Cable", "K. P. Hand", "A. E. Murphy", "K. Uckert", "J. F. Bell III", "T. Bosak", "A. P. Broz", "E. Clavé", "A. Cousin", "S. Davidoff", "E. Dehouck", "K. A. Farley", "S. Gupta", "S.-E. Hamran", "K. Hickman-Lewis", "J. R. Johnson", "A. J. Jones", "M. W. M. Jones", "P. S. Jørgensen", "L. C. Kah", "H. Kalucha", "T. V. Kizovski", "D. A. Klevang", "Y. Liu", "F. M. McCubbin", "E. L. Moreland", "G. Paar", "D. A. Paige", "A. C. Pascuzzo", "M. S. Rice", "M. E. Schmidt", "K. L. Siebach", "S. Siljeström", "J. I. Simon", "K. M. Stack", "A. Steele", "N. J. Tosca", "A. H. Treiman", "S. J. VanBommel", "L. A. Wade", "B. P. Weiss", "R. C. Wiens", "K. H. Williford", "R. Barnes", "P. A. Barr", "A. Bechtold", "P. Beck", "K. Benzerara", "S. Bernard", "O. Beyssac", "R. Bhartia", "A. J. Brown", "G. Caravaca", "E. L. Cardarelli", "E. A. Cloutis", "A. G. Fairén", "D. T. Flannery", "T. Fornaro", "T. Fouchet", "B. Garczynski", "F. Goméz", "E. M. Hausrath", "C. M. Heirwegh", "C. D. K. Herd", "J. E. Huggett", "J. L. Jørgensen", "S. W. Lee", "A. Y. Li", "J. N. Maki", "L. Mandon", "N. Mangold", "J. A. Manrique", "J. Martínez-Frías", "J. I. Núñez", "L. P. O’Neil", "B. J. Orenstein", "N. Phelan", "C. Quantin-Nataf", "P. Russell", "M. D. Schulte", "E. Scheller", "S. Sharma", "D. L. Shuster", "A. Srivastava", "B. V. Wogsland", "Z. U. Wolf"]
 title = "Redox-driven mineral and organic associations in Jezero Crater, Mars"
 venue = "Nature 645, 332–340 (2025)"
 link = "https://doi.org/10.1038/s41586-025-09413-0"
@@ -21,8 +21,4 @@ factors = ["life"]
 explanations = ["rare-life", "great-filter-behind-us"]
 moved_range = false
 
-verify = [
-  "The author list is 89 names; the first twelve are given here and the count was read from the paper's byline.",
-]
-
-notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict. Checked 2026-10-17 against the paper's own page on nature.com (https://www.nature.com/articles/s41586-025-09413-0) and the Crossref record: the byline is 89 names and is now given in full; Nature 645, 332-340, published online 2025-09-10."

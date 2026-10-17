@@ -17,25 +17,21 @@ moon, moving continents and a quiet neighbourhood, which is where the argument o
 factor now lives."""
 what_would_move_this = "A new count of rocky planets in the habitable zone per star from Kepler, TESS, Gaia or PLATO data, or a measurement of how often such planets keep an atmosphere and liquid water (the TRAPPIST-1 and K2-18b results bear on this)."
 
-verify = [
-  "Drake's 1961 range of 1 to 5 planets per star is quoted from the Wikipedia article on the Drake equation, which cites Drake and Sobel 1992; the same article notes that Glade and colleagues' 2012 table of the 1961 values differs from the book. Tried 2026-10-16 and still open: neither book could be opened; other secondary accounts give a single 2 (Glade and colleagues 2012, Table 1; Scoles and Heatherly 2011) or 'approximately one' (SETI Institute).",
-]
-
 notes = """
 Lineweaver, Fenner and Gibson (Science, 2004) argued that only about a tenth of the galaxy's
 stars sit in a 'galactic habitable zone' with enough heavy elements and few enough nearby
 supernovae for complex life; that is a multiplier on this factor rather than an estimate of
 it, and the surveys above count planets without it. The Rare Earth argument (Ward and Brownlee
 2000, ward-2000) is written up as an explanation in its own right; its number is recorded here
-because it is the published pessimistic extreme. Checked 2026-10-16: the 1% to 0.001% is Ward and Brownlee's reading of the ordinary equation, before their further extras (pages 269 to 270; the extras come on page 271), so the range's reason below, which describes the one-in-a-hundred-thousand end as resting on the extras, was written before this was checked and should be revisited at the outside review; the range itself is unchanged. Drake's 1961 range of 1 to 5 could not be checked against the book tonight: other secondary accounts give a single 2 (Glade and colleagues 2012, Table 1; Scoles and Heatherly 2011) or 'approximately one' (SETI Institute). Written 2026-10-16. Outside review, 2026-10-17: the proposal to lower the floor from 0.01 to 0.00001 to match Ward and Brownlee (item 7) was declined and the reason in the range rewritten, as this note had asked; the headline at 0.00001 on a scratch copy was 69% alone in the galaxy against 59%. Ruled by John 2026-10-17."""
+because it is the published pessimistic extreme. Checked 2026-10-16: the 1% to 0.001% is Ward and Brownlee's reading of the ordinary equation, before their further extras (pages 269 to 270; the extras come on page 271), so the range's reason below, which describes the one-in-a-hundred-thousand end as resting on the extras, was written before this was checked and should be revisited at the outside review; the range itself is unchanged. Drake's 1961 range of 1 to 5 was checked on 2026-10-17 against Pearman's 1963 account of the meeting, page 290: 'For the galaxy in general a value for n_e of 1 to 5 was postulated'; the secondary accounts that give a single 2 (Glade and colleagues 2012, Table 1; Scoles and Heatherly 2011) or 'approximately one' (SETI Institute) are other readings of the same meeting. Written 2026-10-16. Outside review, 2026-10-17: the proposal to lower the floor from 0.01 to 0.00001 to match Ward and Brownlee (item 7) was declined and the reason in the range rewritten, as this note had asked; the headline at 0.00001 on a scratch copy was 69% alone in the galaxy against 59%. Ruled by John 2026-10-17."""
 
 [[estimate]]
 who = "Frank Drake and the Green Bank meeting"
 when = "1961"
 low = 1
 high = 5
-source = "Green Bank meeting of November 1961, as recorded in Drake and Sobel, Is Anyone Out There? (Delacorte, 1992), pages 55 to 62 (drake-1961)"
-method = "Educated guess from the solar system, where Venus, Earth and Mars all orbit near the zone where water can be liquid."
+source = "Green Bank meeting of November 1961, as reported by Pearman in the first printed account of it (Interstellar Communication, 1963), page 290 (drake-1961)"
+method = "Pearman calls it a matter of pure guesswork. For the solar system he reports at least 2 (Earth and Mars), and possibly one of the major planets if methane and ammonia warm it by the greenhouse effect; for the galaxy in general the meeting postulated 1 to 5."
 
 [[estimate]]
 who = "Carl Sagan"
@@ -153,3 +149,10 @@ field = "range.status"
 old = "first-pass"
 new = "reviewed"
 why = "The outside review of the seven ranges ran on 2026-10-17 and John ruled on every item the same day (docs/reviews/2026-10-17-rulings.md)."
+
+[[revision]]
+date = 2026-10-17
+field = "estimate"
+old = "Drake 1961 source: Drake and Sobel (1992), pages 55 to 62"
+new = "Drake 1961 source: Pearman (1963), page 290"
+why = "Checked 2026-10-17 against Pearman's 1963 account of the meeting, the first printed one, which is openly readable at the Internet Archive; the source line now cites it with its page, in place of Drake and Sobel (1992), whose page numbers came from a secondary summary and which has not been read. The estimate's numbers are unchanged."

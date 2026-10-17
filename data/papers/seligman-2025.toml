@@ -5,7 +5,7 @@
 id = "seligman-2025"
 date = "2025-07-03"
 added_on = 2026-10-16
-authors = ["Darryl Z. Seligman", "Marco Micheli", "Davide Farnocchia", "Larry Denneau", "John W. Noonan", "Henry H. Hsieh", "Toni Santana-Ros", "John Tonry", "Katie Auchettl", "Luca Conversi", "Maxime Devogèle", "Laura Faggioli", "and 35 others"]
+authors = ["Darryl Z. Seligman", "Marco Micheli", "Davide Farnocchia", "Larry Denneau", "John W. Noonan", "Henry H. Hsieh", "Toni Santana-Ros", "John Tonry", "Katie Auchettl", "Luca Conversi", "Maxime Devogèle", "Laura Faggioli", "Adina D. Feinstein", "Marco Fenucci", "Marin Ferrais", "Tessa Frincke", "Michaël Gillon", "Olivier R. Hainaut", "Kyle Hart", "Andrew Hoffman", "Carrie E. Holt", "Willem B. Hoogendam", "Mark E. Huber", "Emmanuel Jehin", "Theodore Kareta", "Jacqueline V. Keane", "Michael S. P. Kelley", "Tim Lister", "Kathleen Mandt", "Jean Manfroid", "Dušan Marčeta", "Karen J. Meech", "Mohamed Amine Miftah", "Marvin Morgan", "Francisco Ocaña", "Eloy Peña-Asensio", "Benjamin J. Shappee", "Robert J. Siverd", "Aster G. Taylor", "Michael A. Tucker", "Richard Wainscoat", "Robert Weryk", "James J. Wray", "Atsuhiro Yaginuma", "Bin Yang", "Quanzhi Ye", "Qicheng Zhang"]
 title = "Discovery and Preliminary Characterization of a Third Interstellar Object: 3I/ATLAS"
 venue = "arXiv:2507.02757 (astro-ph.EP); accepted for publication in the Astrophysical Journal Letters"
 link = "https://arxiv.org/abs/2507.02757"
@@ -19,8 +19,4 @@ factors = []
 explanations = ["they-are-already-here", "berserkers"]
 moved_range = false
 
-verify = [
-  "The author list is 47 names; the first twelve are given here and the count is from the arXiv page. Check nothing else is needed.",
-]
-
-notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict. Checked 2026-10-17 against the arXiv listing (https://arxiv.org/abs/2507.02757, submitted 2025-07-03): the author list is 47 names and is now given in full, in the listing's order."

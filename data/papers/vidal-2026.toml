@@ -5,7 +5,7 @@
 id = "vidal-2026"
 date = "2026-05-20"
 added_on = 2026-10-16
-authors = ["Clément Vidal", "Benji L. Fields", "Damian R. Sowinski", "Stuart Bartlett", "Richard J. Terrile", "Alex Ellery", "Daliah Bibas", "Armando M. Mastrogiovanni", "Niklas Döbler", "Manika Singla", "Julia DeMarines", "Theresa Fisher", "and 7 others"]
+authors = ["Clément Vidal", "Benji L. Fields", "Damian R. Sowinski", "Stuart Bartlett", "Richard J. Terrile", "Alex Ellery", "Daliah Bibas", "Armando M. Mastrogiovanni", "Niklas Döbler", "Manika Singla", "Julia DeMarines", "Theresa Fisher", "Yuri Uno", "Jake D. Turner", "Evan L. Sneed", "Advait Huggahalli", "Megan Grace Li", "Zhuofu Li", "Ramiro Saide"]
 title = "The Search for Technosignatures: a Review of Possibilities"
 venue = "arXiv:2605.21093 (astro-ph.EP, with astro-ph.IM), 118 pages; from a workshop at the Penn State SETI Symposium 2023"
 link = "https://arxiv.org/abs/2605.21093"
@@ -20,8 +20,4 @@ factors = ["detectable"]
 explanations = ["not-looked-long-enough", "listening-the-wrong-way"]
 moved_range = false
 
-verify = [
-  "The author list is 19 names; the first twelve are given here and the count is from the arXiv page.",
-]
-
-notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict. Checked 2026-10-17 against the arXiv listing (https://arxiv.org/abs/2605.21093, submitted 2026-05-20; a second version appeared 2026-10-02): the author list is 19 names and is now given in full, in the listing's order (the listing splits the last-but-one author's name, Zhuofu Li, across two entries)."
