@@ -1,13 +1,23 @@
 ---
 // Site navigation, from the Sentient Horizons design standard (design/shell.html): the spine of
 // the site in heavier ink, the reference pages lighter, the theme toggle last; collapses to a menu
-// on small screens. The spine's pages (the equation, the explanations, the library, the
-// publications log, the method) arrive with the first full version; until then only the
-// repository link is shown, so no link on the page leads nowhere.
+// on small screens. Which page goes in which tier follows the tracker pattern
+// (design/tracker-pattern.md, rule 4.6, ruled by John 2026-10-16): the spine is the home page,
+// the equation, the explanations, the library and the story so far; the reference tier is how the
+// numbers are worked out and the disagree page, with the public names from the pattern's section 4.
 const path = Astro.url.pathname;
-const primary: { href: string; label: string }[] = [];
-const secondary: { href: string; label: string }[] = [];
-const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
+const primary = [
+  { href: '/', label: 'Home' },
+  { href: '/equation/', label: 'The equation' },
+  { href: '/explanations/', label: 'Explanations' },
+  { href: '/library/', label: 'Library' },
+  { href: '/story/', label: 'The story so far' },
+];
+const secondary = [
+  { href: '/method/', label: 'How the numbers are worked out' },
+  { href: '/disagree/', label: 'Disagree with something' },
+];
+const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href) || (href === '/equation/' && path.startsWith('/factors/')));
 ---
 
 <header class="site-header">
@@ -21,7 +31,7 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
       {primary.map((l) => (
         <a href={l.href} class={isActive(l.href) ? 'active' : ''}>{l.label}</a>
       ))}
-      {primary.length > 0 && <span class="nav-divider" aria-hidden="true"></span>}
+      <span class="nav-divider" aria-hidden="true"></span>
       {secondary.map((l) => (
         <a href={l.href} class={`nav-secondary ${isActive(l.href) ? 'active' : ''}`}>{l.label}</a>
       ))}
@@ -51,7 +61,7 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
     }
     btn.addEventListener('click', function () { setOpen(!header.classList.contains('nav-open')); });
     menu.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
-    window.addEventListener('resize', function () { if (window.innerWidth > 820) setOpen(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 1080) setOpen(false); });
   })();
 </script>
 

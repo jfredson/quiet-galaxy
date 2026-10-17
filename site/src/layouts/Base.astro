@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import Nav from '../components/Nav.astro';
 import Starfield from '../components/Starfield.astro';
-import { records, longDate } from '../lib/records';
+import { records, longDate, builtFrom } from '../lib/records';
 
 interface Props {
   title?: string;
@@ -18,8 +18,6 @@ const {
 
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const currentYear = new Date().getFullYear();
-const c = records.counts;
-const builtFrom = `${c.factors} of the equation's ${c.factors_expected} factors, ${c.explanations} explanation${c.explanations === 1 ? '' : 's'}, ${c.library} library entr${c.library === 1 ? 'y' : 'ies'} and ${c.publications} publication${c.publications === 1 ? '' : 's'}`;
 ---
 
 <!doctype html>
@@ -72,10 +70,16 @@ const builtFrom = `${c.factors} of the equation's ${c.factors_expected} factors,
           <span class="footer-brand">The Quiet Galaxy</span>
           <p class="footer-tag">A public explainer and tracker for the question of why the galaxy looks empty. Every number on this site is computed from the records in the public repository.</p>
           <p class="footer-links">
+            <a href="/equation/">The equation</a>
+            <a href="/explanations/">Explanations</a>
+            <a href="/library/">Library</a>
+            <a href="/story/">The story so far</a>
+            <a href="/method/">How the numbers are worked out</a>
+            <a href="/disagree/">Disagree with something</a>
             <a href="https://github.com/jfredson/quiet-galaxy" rel="noopener">Source on GitHub</a>
           </p>
           <p class="footer-meta">
-            © {currentYear} John Fredrickson. Last built {longDate(records.exported_on)}{records.commit ? ` (version ${records.commit})` : ''} from {builtFrom}. Free to reuse with credit (<a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>); code under the MIT licence.
+            © {currentYear} John Fredrickson. Last built {longDate(records.exported_on)}{records.commit ? ` (version ${records.commit})` : ''} from {builtFrom()}. Free to reuse with credit (<a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>); code under the MIT licence.
           </p>
           <p class="footer-parent"><a href="https://sentient-horizons.com" rel="noopener">A Sentient Horizons project.</a></p>
         </div>

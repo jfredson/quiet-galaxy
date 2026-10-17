@@ -1,0 +1,236 @@
+---
+// The equation page: the branches of the tracker (design/tracker-pattern.md, section 2), and the
+// calculator, the one interactive piece of the site (kickoff, "How it is built", item 4). Seven
+// sliders in plain JavaScript, no framework; N is recomputed as a slider moves. Each slider is
+// labelled in plain words, carries the symbol, and marks the range this site uses as a band under
+// the track. The slider travel (how far it can go) comes from scripts/export.py and is not an
+// estimate; the ranges come from the factor records. The sliders start at the middle of the
+// project's range, so the page opens on the project's own picture and the visitor moves it.
+import Base from '../../layouts/Base.astro';
+import { records, rangeWords, plainNumber, symbolHtml, plural, estimateWords } from '../../lib/records';
+
+const factors = records.factors;
+const written = factors.filter((f) => f.exists);
+const head = records.headline;
+
+// What the calculator needs, serialised once for the inline script.
+const calc = factors.map((f) => ({
+  id: f.id,
+  symbol: f.symbol,
+  name: f.name,
+  unit: f.unit,
+  low: f.slider.low,
+  high: f.slider.high,
+  range: f.range ? { low: f.range.low, high: f.range.high } : null,
+}));
+
+function middle(f: typeof factors[number]): number {
+  const r = f.range ?? f.slider;
+  return Math.sqrt(r.low * r.high);
+}
+const startN = factors.reduce((acc, f) => acc * middle(f), 1);
+
+// The band marking the project's range, as a share of the slider's travel on the tenfold scale.
+function bandStyle(f: typeof factors[number]): string {
+  if (!f.range) return 'display:none';
+  const span = Math.log10(f.slider.high) - Math.log10(f.slider.low);
+  const left = (Math.log10(f.range.low) - Math.log10(f.slider.low)) / span;
+  const right = (Math.log10(f.range.high) - Math.log10(f.slider.low)) / span;
+  return `left:${(left * 100).toFixed(2)}%;width:${Math.max(0.6, (right - left) * 100).toFixed(2)}%`;
+}
+function startPos(f: typeof factors[number]): number {
+  const span = Math.log10(f.slider.high) - Math.log10(f.slider.low);
+  return Math.round(((Math.log10(middle(f)) - Math.log10(f.slider.low)) / span) * 1000);
+}
+---
+
+<Base
+  title="The equation — The Quiet Galaxy"
+  description="The seven pieces of the Drake Equation, each with the range this site uses and the published estimates behind it, and a calculator to try the numbers yourself."
+>
+  <section class="hero">
+    <p class="eyebrow">The equation</p>
+    <h1>Seven pieces, multiplied</h1>
+    <p class="lede">
+      How many civilisations are in our galaxy that we could detect right now? In 1961 the astronomer Frank Drake wrote the question as a multiplication of seven quantities, so that a room of scientists could argue about one at a time. This page is that multiplication, with the range this site uses for each piece and a way to try your own.
+    </p>
+  </section>
+
+  <section class="section narrow prose" style="padding-top: 0;">
+    <p class="equation" aria-label="The equation">
+      <span class="term">N</span><span class="op">=</span>
+      {factors.map((f, i) => (
+        <>
+          <a class="term" href={f.path} set:html={symbolHtml(f.symbol)}></a>
+          {i < factors.length - 1 && <span class="op">×</span>}
+        </>
+      ))}
+    </p>
+    <ul class="terms">
+      {factors.map((f) => (
+        <li><span class="sym" set:html={symbolHtml(f.symbol)}></span><span><a href={f.path}>{f.name}</a>{f.unit === 'fraction' ? '' : ` (${f.unit})`}</span></li>
+      ))}
+    </ul>
+    <p style="margin-top: 1.4em;">
+      Multiply the seven and you get N, the number of civilisations in our galaxy that could be detected right now. The first two pieces are measured: astronomers count stars being born and planets around other stars. The last five are not, and the honest answer to each is a range so wide that a single multiplied-out number misleads. So this site does what a 2018 paper by the researchers Anders Sandberg, Eric Drexler and Toby Ord did: each piece carries a range drawn from the published estimates, the multiplication is run many thousands of times with a random pick from each range, and the result is a spread of answers. The middle of that spread is the number on the home page; <a href="/method/">how the numbers are worked out</a> says the rest.
+    </p>
+  </section>
+
+  <section class="section" id="calculator">
+    <div class="shead">
+      <h2>Try the numbers yourself</h2>
+      <span>move a slider and the answer changes</span>
+    </div>
+    <div class="calc" id="calc">
+      <div class="calc-head">
+        <div>
+          <p class="calc-label">Your N: detectable civilisations in the galaxy</p>
+          <p class="calc-n" data-calc="n">{plainNumber(startN)}</p>
+          <p class="calc-n-words" data-calc="words"></p>
+        </div>
+        <button type="button" class="btn ghost calc-reset" data-calc="reset">Back to the middle of each range</button>
+      </div>
+      <div class="sliders">
+        {factors.map((f) => (
+          <div class="slider" data-factor={f.id}>
+            <span class="slider-name"><span class="sym" set:html={symbolHtml(f.symbol)}></span><a href={f.path}>{f.name}</a></span>
+            <span class="slider-value" data-value={f.id}></span>
+            <div class="slider-track">
+              <span class="range-mark" style={bandStyle(f)} aria-hidden="true"></span>
+              <input type="range" min="0" max="1000" step="1" value={startPos(f)} data-slider={f.id} aria-label={f.name} />
+            </div>
+            <span class="slider-cap">
+              <span>{plainNumber(f.slider.low)}</span>
+              {f.range
+                ? <span class="range-note">the band marks the range this site uses: {rangeWords(f.range.low, f.range.high, f.unit)}{f.range.status === 'first-pass' ? ', a first pass' : ''}</span>
+                : <span class="range-note pending">no range set yet for this piece</span>}
+              <span>{plainNumber(f.slider.high)}{f.unit === 'years' ? ' years' : ''}</span>
+            </span>
+          </div>
+        ))}
+      </div>
+      <p class="calc-foot">
+        Each slider moves in tenfold steps, so a small drag is a big change: that is how uncertain these pieces are. The tinted band under a slider is the range this site draws from when it computes the number on the home page; your position outside it is a position someone has argued, and the piece's page lists who. The slider's ends are only how far it can travel, not estimates.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="pieces">
+    <div class="shead">
+      <h2>Each piece, on its own page</h2>
+      <span>{written.length} of 7 written up</span>
+    </div>
+    <div class="fgrid">
+      {factors.map((f) => (
+        <a class={`fcard ${f.exists ? '' : 'missing'}`} href={f.path}>
+          <span class="fletter">Piece {f.order} of 7 · <span set:html={symbolHtml(f.symbol)}></span></span>
+          <h3>{f.name}</h3>
+          {f.exists ? (
+            <>
+              <p>{f.description.split(/(?<=\.)\s/)[0]}</p>
+              <p class="fcount">{f.range ? `Range used: ${rangeWords(f.range.low, f.range.high, f.unit)}` : ''} · {plural(f.estimates.length, 'published estimate', 'published estimates')}{f.estimates.length ? `, from ${estimateWords(f.estimates[0], f.unit)} (${f.estimates[0].who}, ${f.estimates[0].when.slice(0, 4)}) onward` : ''}</p>
+            </>
+          ) : (
+            <p class="fcount">Not written up yet. The published estimates for this piece are being gathered; until all seven are in, the number on the home page cannot be computed.</p>
+          )}
+        </a>
+      ))}
+    </div>
+    {!head.available && (
+      <p class="dim" style="font-size: 14px; margin-top: 18px;">{head.reason}</p>
+    )}
+  </section>
+
+  <script type="application/json" id="calc-data" set:html={JSON.stringify(calc)}></script>
+  <script is:inline>
+    (function () {
+      var el = document.getElementById('calc-data');
+      if (!el) return;
+      var factors = JSON.parse(el.textContent || '[]');
+      var STEPS = 1000;
+
+      // A slider position (0 to 1000) maps to a value on a scale where every tenfold step is the
+      // same width, between the slider's low and high ends.
+      function valueAt(f, pos) {
+        var lo = Math.log10(f.low), hi = Math.log10(f.high);
+        return Math.pow(10, lo + (hi - lo) * (pos / STEPS));
+      }
+      function posOf(f, value) {
+        var lo = Math.log10(f.low), hi = Math.log10(f.high);
+        return Math.round(((Math.log10(value) - lo) / (hi - lo)) * STEPS);
+      }
+      var WORDS = [[1e12, 'trillion'], [1e9, 'billion'], [1e6, 'million'], [1e3, 'thousand']];
+      function trim(v, places) { return v.toFixed(places).replace(/\.?0+$/, ''); }
+      function plain(x) {
+        if (!isFinite(x)) return 'no number';
+        if (x === 0) return '0';
+        if (x >= 1e4) {
+          for (var i = 0; i < WORDS.length; i++) {
+            if (x >= WORDS[i][0]) { var q = x / WORDS[i][0]; return trim(q, q >= 100 ? 0 : q >= 10 ? 1 : 2) + ' ' + WORDS[i][1]; }
+          }
+        }
+        if (x < 1e-4) {
+          var inv = 1 / x;
+          for (var j = 0; j < WORDS.length; j++) {
+            if (inv >= WORDS[j][0]) { var r = inv / WORDS[j][0]; return '1 in ' + (r >= 1.05 ? trim(r, r >= 10 ? 0 : 1) + ' ' : 'a ') + WORDS[j][1]; }
+          }
+          return '1 in ' + trim(inv, 0);
+        }
+        if (x >= 100) return trim(x, 0);
+        if (x >= 1) return trim(x, 2);
+        if (x >= 0.01) return trim(x, 3);
+        return trim(x, 5);
+      }
+      function unitWords(unit) {
+        if (unit === 'fraction') return '';
+        if (unit === 'stars per year') return ' stars a year';
+        if (unit === 'planets per star') return ' planets per star';
+        if (unit === 'years') return ' years';
+        return ' ' + unit;
+      }
+      function words(n) {
+        if (n >= 1e6) return 'With these settings the galaxy would hold ' + plain(n) + ' detectable civilisations: it would be crowded, and the silence would need an explanation from the "they are there and we cannot see them" family.';
+        if (n >= 100) return 'With these settings there would be ' + plain(n) + ' detectable civilisations in the galaxy right now. The silence would be surprising, and the explanations that say we are not looking properly would carry the weight.';
+        if (n >= 2) return 'With these settings there would be about ' + plain(n) + ' detectable civilisations in the galaxy right now, us among them. Not crowded, but not alone.';
+        if (n >= 0.5) return 'With these settings there would be about one detectable civilisation in the galaxy right now. That could be us, and the silence would be exactly what you would expect.';
+        if (n >= 0.01) return 'With these settings, fewer than one detectable civilisation per galaxy: about ' + plain(n) + '. You would expect one in roughly every ' + plain(1 / n) + ' galaxies, and the silence here would be no puzzle at all.';
+        return 'With these settings, about ' + plain(n) + ' detectable civilisations per galaxy: one in roughly every ' + plain(1 / n) + ' galaxies. On these numbers we would be alone across a large part of the observable universe.';
+      }
+
+      var inputs = {};
+      factors.forEach(function (f) { inputs[f.id] = document.querySelector('[data-slider="' + f.id + '"]'); });
+      var nEl = document.querySelector('[data-calc="n"]');
+      var wordsEl = document.querySelector('[data-calc="words"]');
+
+      function update() {
+        var n = 1;
+        factors.forEach(function (f) {
+          var input = inputs[f.id];
+          if (!input) return;
+          var v = valueAt(f, Number(input.value));
+          n *= v;
+          var out = document.querySelector('[data-value="' + f.id + '"]');
+          if (out) out.textContent = plain(v) + unitWords(f.unit);
+        });
+        if (nEl) nEl.textContent = plain(n);
+        if (wordsEl) wordsEl.textContent = words(n);
+      }
+      function reset() {
+        factors.forEach(function (f) {
+          var input = inputs[f.id];
+          if (!input) return;
+          var r = f.range || { low: f.low, high: f.high };
+          input.value = posOf(f, Math.sqrt(r.low * r.high));
+        });
+        update();
+      }
+      factors.forEach(function (f) {
+        var input = inputs[f.id];
+        if (input) input.addEventListener('input', update);
+      });
+      var resetBtn = document.querySelector('[data-calc="reset"]');
+      if (resetBtn) resetBtn.addEventListener('click', reset);
+      update();
+    })();
+  </script>
+</Base>

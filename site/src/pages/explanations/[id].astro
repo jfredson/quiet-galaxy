@@ -1,0 +1,171 @@
+---
+// One page per explanation, at /explanations/<id>/: a leaf page in the tracker pattern (section 3).
+// In the pattern's order: the plain name and the summary; the test, which for an explanation is
+// what would strengthen or weaken it; who settles it (the kind of evidence named there); its state
+// now (how seriously it is taken); its record; what the story so far says about it (the papers);
+// and a way to disagree with this one thing. The library entries and papers are gathered at build
+// time by scripts/export.py from the records that point at this explanation; the explanation's own
+// record stores neither (docs/record-schema.md, decision 6). Layout copied from The Belt
+// Equation's event page (site/src/pages/tree/[factor]/[id].astro).
+import Base from '../../layouts/Base.astro';
+import {
+  records, directionWords, issueUrl, recordUrl, inline, worldDate, symbolHtml, paragraphs, plural,
+  type Explanation,
+} from '../../lib/records';
+
+export function getStaticPaths() {
+  return records.explanations.map((e) => ({ params: { id: e.id }, props: { explanation: e } }));
+}
+
+const { explanation: e } = Astro.props as { explanation: Explanation };
+const family = records.families.find((f) => f.key === e.family)!;
+const description = e.summary.length > 200 ? e.summary.slice(0, 197) + '…' : e.summary;
+const disagree = issueUrl('error-on-a-page.md', `Error on the page for: ${e.name}`,
+  `Page: ${Astro.site}explanations/${e.id}/\n\nWhat is wrong:\n\nWhat it should say, with a source:\n`);
+const related = [...e.related, ...e.related_in];
+---
+
+<Base title={`${e.name} — The Quiet Galaxy`} description={description}>
+  <section class="hero wide">
+    <p class="eyebrow"><a href="/explanations/">Explanations</a> · <a href={`/explanations/#${family.key}`}>{family.name}</a></p>
+    <h1>{e.name}</h1>
+    <div class="chips">
+      <span class="chip">Proposed by {e.proposed_by}, {e.proposed_in}</span>
+      {e.bears_on.map((b) => (
+        <a class="chip" href={b.path} title={b.name}><span set:html={symbolHtml(b.symbol)}></span> {b.direction === 'lowers' ? 'smaller' : b.direction === 'raises' ? 'larger' : 'left alone'}</a>
+      ))}
+    </div>
+  </section>
+
+  <div class="record">
+    <div class="prose">
+      <p><em>{e.summary}</em></p>
+      {paragraphs(e.body).map((p) => <p>{p}</p>)}
+
+      <h2>What it says about the equation</h2>
+      <p style="font-size: 15px;">
+        Every explanation is a claim about one or more of the seven pieces that are multiplied to give the number of detectable civilisations. This one bears on {plural(e.bears_on.length, 'piece', 'pieces')}:
+      </p>
+      <ul class="watchlist">
+        {e.bears_on.map((b) => (
+          <li>
+            <a class="wname" href={b.path}><span set:html={symbolHtml(b.symbol)}></span> · {b.name}</a>
+            <span class="wworth">piece {b.order} of 7</span>
+            <span class="wno">{directionWords[b.direction].replace('this', 'this piece')}{b.exists ? '' : ' · the piece is not written up yet'}</span>
+          </li>
+        ))}
+      </ul>
+
+      <h2>The test: what would strengthen or weaken it</h2>
+      <p><strong>Would strengthen it:</strong> {e.would_strengthen}</p>
+      <p><strong>Would weaken it:</strong> {e.would_weaken}</p>
+      <p class="dim" style="font-size: 14.5px;">
+        These two lines are what the record is read against when a new paper or discovery is logged. A result of the kind named here, published with its evidence, is what would settle it; a press claim on its own settles nothing.
+      </p>
+
+      {e.standing && (
+        <>
+          <h2>How seriously it is taken</h2>
+          <p>{e.standing}</p>
+        </>
+      )}
+
+      <h2>The papers that bear on it</h2>
+      {e.publications.length === 0 ? (
+        <p class="empty-note">No paper in the log bears on this explanation yet. When one is logged, it appears here with its date and whether it moved anything.</p>
+      ) : (
+        <ul class="watchlist">
+          {e.publications.map((p) => (
+            <li>
+              <a class="wname" href={p.path}>{p.title}</a>
+              <span class="wworth">{worldDate(p.date)}</span>
+              <span class="wno">{p.authors.join(', ')} · {p.moved_range ? 'moved a range' : 'logged; moved no range'}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      <h2>Books, films and other work that take it up</h2>
+      {e.library.length === 0 ? (
+        <p class="empty-note">Nothing in the library illustrates this explanation yet.</p>
+      ) : (
+        <ul class="watchlist">
+          {e.library.map((l) => (
+            <li>
+              <a class="wname" href={l.path}>{l.title}</a>
+              <span class="wworth">{l.year}</span>
+              <span class="wno">{l.kind_name} · {l.maker}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      {related.length > 0 && (
+        <>
+          <h2>Read next</h2>
+          <ul class="watchlist">
+            {related.map((r) => (
+              <li>
+                <a class="wname" href={r.path}>{r.name}</a>
+                <span class="wworth">{r.family_name ?? ''}</span>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+
+      {e.notes && (
+        <>
+          <h2>Notes</h2>
+          <p set:html={inline(e.notes)} />
+        </>
+      )}
+      {e.verify.length > 0 && (
+        <div class="callout verify-box">
+          <h3>Claims still to be checked</h3>
+          <p style="font-size: 14.5px;">These were written from memory and have not yet been checked against a source. A later pass clears each one.</p>
+          <ul>{e.verify.map((v) => <li>{v}</li>)}</ul>
+        </div>
+      )}
+
+      <hr />
+      <p class="dim record-foot">
+        Think this page gets the explanation wrong, or misses an objection? <a href={disagree} rel="noopener">Say so</a>, or read <a href="/disagree/">how disagreement gets folded in</a>.
+        The record itself is <a href={recordUrl(e.file)} rel="noopener"><code>{e.file}</code></a> in the public repository. This page's address will never change; if the explanation is ever retired, the address will say what replaced it.
+      </p>
+    </div>
+
+    <aside class="record-aside">
+      <div class="rail">
+        <h4>This explanation</h4>
+        <dl>
+          <dt>Family</dt><dd><a href={`/explanations/#${family.key}`}>{family.name}</a></dd>
+          <dt>Proposed by</dt><dd>{e.proposed_by}</dd>
+          <dt>In</dt><dd>{e.proposed_in}</dd>
+          {e.proposed_source && <><dt>Where</dt><dd>{e.proposed_source}</dd></>}
+        </dl>
+      </div>
+      <div class="rail">
+        <h4>Bears on</h4>
+        <ul>
+          {e.bears_on.map((b) => (
+            <li><a href={b.path}>{b.name}</a><span class="sub">{b.direction === 'lowers' ? 'says it is smaller' : b.direction === 'raises' ? 'says it is larger' : 'leaves it where it is'}</span></li>
+          ))}
+        </ul>
+      </div>
+      <div class="rail">
+        <h4>In the same family</h4>
+        {family.explanations.filter((id) => id !== e.id).length === 0 ? (
+          <p class="dim">Nothing else written up in this family yet.</p>
+        ) : (
+          <ul>
+            {family.explanations.filter((id) => id !== e.id).map((id) => {
+              const o = records.explanations.find((x) => x.id === id)!;
+              return <li><a href={o.path}>{o.name}</a></li>;
+            })}
+          </ul>
+        )}
+      </div>
+    </aside>
+  </div>
+</Base>

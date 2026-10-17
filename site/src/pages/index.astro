@@ -1,95 +1,178 @@
 ---
-// The home page, holding version (2026-10-16): the question, the equation in plain words, the
-// three numbers the site will show once the seven factors are seeded, and the four kinds of
-// record. Written for a reader who has never heard of any of this (design standard, section 1a).
+// The home page: the trunk of the tracker (design/tracker-pattern.md, section 1, ruled by John
+// 2026-10-16). The first screen holds, in this order: an eyebrow saying what kind of site this is,
+// the thing held at a glance (the headline number, with the chance we are alone beside it), the
+// question as the title, one paragraph for a reader who has never heard of the project, the
+// last-checked strip, and two buttons. No control on the first screen: the calculator lives on the
+// equation page (rule 1.4). The layout and the big number are copied from The Belt Equation's
+// home page (site/src/pages/index.astro there), the pattern's reference implementation.
 import Base from '../layouts/Base.astro';
-import { records, longDate } from '../lib/records';
+import { records, longDate, plainNumber, percent, rangeWords, plural, symbolHtml } from '../lib/records';
 
+const head = records.headline;
 const c = records.counts;
-const terms = [
-  { sym: 'R*', words: 'how many stars are born in our galaxy each year' },
-  { sym: 'fp', words: 'what share of those stars have planets' },
-  { sym: 'ne', words: 'how many planets, per star with planets, could support life' },
-  { sym: 'fl', words: 'on what share of those planets life actually starts' },
-  { sym: 'fi', words: 'on what share of those it becomes intelligent' },
-  { sym: 'fc', words: 'what share of intelligent species make themselves detectable' },
-  { sym: 'L', words: 'how long they stay detectable, in years' },
-];
+const factors = records.factors;
+const written = factors.filter((f) => f.exists).length;
+
+// The width of the argument (pattern, section 6): N with every piece at its most hopeful
+// published estimate, and at its most pessimistic. The run supplies both when it has run.
+const width = head.available && head.optimist !== undefined && head.pessimist !== undefined
+  ? { optimist: head.optimist, pessimist: head.pessimist }
+  : null;
+
+function civilisations(n: number): string {
+  if (n >= 1.5) return `about ${plainNumber(n)} civilisations`;
+  if (n >= 0.95) return 'about one civilisation';
+  return `about ${plainNumber(n)} of a civilisation: fewer than one`;
+}
 ---
 
 <Base>
-  <section class="hero">
-    <p class="eyebrow">A public explainer and tracker · first version coming 19 October 2026</p>
-    <h1 class="question">Where is everybody?</h1>
-    <p class="lede">
-      The galaxy is old enough and big enough that, on most ways of counting, someone else should have shown up by now. Nobody has.
+  <section class="home-hero">
+    <div class="home-hero-main">
+      <p class="eyebrow">A public explainer and tracker for the empty sky</p>
+      {head.available ? (
+        <>
+          <p class="big-number">{plainNumber(head.median)}</p>
+          <p class="big-what"><strong>{civilisations(head.median)}</strong> in our galaxy that we could detect right now, taking the middle of the spread. Beside it, the chance that we are the only one in the galaxy: <strong>{percent(head.alone_galaxy)}</strong>.</p>
+        </>
+      ) : (
+        <>
+          <p class="big-number pending">Not yet computed</p>
+          <p class="big-what">This is where the number goes: how many civilisations are in our galaxy that we could detect right now, taking the middle of the spread, with the chance that we are the only one beside it. {head.reason}</p>
+        </>
+      )}
+      <h1 class="big-claim">Where is everybody?</h1>
+      <p class="big-sub">
+        The galaxy is old enough and big enough that, on most ways of counting, someone else should have shown up by now. Nobody has. The physicist Enrico Fermi asked the question over lunch in 1950, and the puzzle has carried his name ever since. This site takes it apart: seven pieces anyone can argue about, a number at the top that is worked out from the pieces and never chosen by hand, and every serious explanation for the silence on a page of its own.
+      </p>
+      <p class="scan-strip">
+        <span class="strip-dot" aria-hidden="true"></span>
+        <span>
+          No weekly reading of the records against the news has run yet. The records were last changed on {longDate(records.exported_on)}: {written} of the seven pieces written up, {plural(c.explanations, 'explanation', 'explanations')}, {plural(c.publications, 'paper logged', 'papers logged')}.
+          {' '}<a href="/story/">See the story so far</a>.
+        </span>
+      </p>
+      <div class="ctas">
+        <a class="btn" href="/equation/">Why that number?</a>
+        <a class="btn ghost" href="#who">Who is asking</a>
+      </div>
+    </div>
+
+    <div class="numbers-card" id="numbers">
+      <span class="card-label">The three numbers this site tracks</span>
+      <div class="stat-row">
+        <div>
+          {head.available ? <span class="stat">{plainNumber(head.median)}</span> : <span class="stat pending">not yet</span>}
+          <span class="stat-label">Detectable civilisations in our galaxy right now: the middle of the spread</span>
+        </div>
+        <div>
+          {head.available ? <span class="stat">{percent(head.alone_galaxy)}</span> : <span class="stat pending">not yet</span>}
+          <span class="stat-label">The chance that we are the only one in the galaxy</span>
+        </div>
+        <div>
+          {head.available ? <span class="stat">{percent(head.alone_universe)}</span> : <span class="stat pending">not yet</span>}
+          <span class="stat-label">The chance that we are the only one in the whole observable universe</span>
+        </div>
+        <div>
+          {head.available && head.runs ? <span class="stat">{plainNumber(head.runs)}</span> : <span class="stat pending">{head.available ? '—' : 'not yet'}</span>}
+          <span class="stat-label">Times the multiplication was run, each with a fresh random pick from every piece's range</span>
+        </div>
+      </div>
+      <p class="width-line">
+        <span class="kicker" style="margin: 0 0 6px; display: block;">The width of the argument</span>
+        {width
+          ? <>Take the most hopeful published estimate of every piece and the multiplication gives <strong>{plainNumber(width.optimist)}</strong> civilisations. Take the most pessimistic and it gives <strong>{plainNumber(width.pessimist)}</strong>. Everything in between is a position someone serious has held.</>
+          : <>Beside the three numbers will sit a fourth pair: what you get if you take the most hopeful published estimate of every piece, and then the most pessimistic. That is how wide the argument is, and it is the thing most people have never seen.</>}
+      </p>
+      <p class="card-foot">
+        {head.available
+          ? <>Computed on {head.computed_on ? longDate(head.computed_on) : longDate(records.exported_on)} from the ranges on the seven pieces' pages. Every range is a first pass until the outside review has run. <a href="/method/">How the numbers are worked out</a>.</>
+          : <>Every one of these will be worked out from the ranges on the seven pieces' pages, never typed in. <a href="/method/">How the numbers will be worked out</a>.</>}
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="pieces">
+    <div class="shead">
+      <h2>The seven pieces</h2>
+      <span>multiply them and you get the number</span>
+    </div>
+    <p class="big-sub" style="margin-bottom: 4px;">
+      In 1961 the astronomer Frank Drake wrote the question down as a multiplication, to organise the first scientific meeting on searching for other civilisations. Seven quantities, multiplied together, give the number of civilisations in our galaxy that could be detected right now. The honest answer to most of the seven is "somewhere between this and that", so each piece on this site carries a range drawn from the published estimates, and the multiplication is run many thousands of times with a random pick from each range. The result is a spread of answers rather than one. Click a piece to see the estimates behind it.
+    </p>
+    <div class="pieces">
+      {factors.map((f) => (
+        <a class={`piece ${f.exists ? '' : 'missing'}`} href={f.path}>
+          <span class="piece-top"><span>{String(f.order).padStart(2, '0')}</span><span class="piece-symbol" set:html={symbolHtml(f.symbol)}></span></span>
+          <span class="piece-title">{f.name}</span>
+          {f.range
+            ? <span class="piece-range">{rangeWords(f.range.low, f.range.high, f.unit)}</span>
+            : <span class="piece-range pending">not yet written up</span>}
+          <span class="piece-cap">{f.range ? `the range this site uses, ${f.range.status === 'first-pass' ? 'first pass' : 'reviewed'}` : 'the estimates are still being gathered'}</span>
+        </a>
+      ))}
+    </div>
+    <p class="equation-line" aria-label="The equation">
+      Written out:
+      <span class="term">N</span><span class="op">=</span>
+      {factors.map((f, i) => (
+        <>
+          <a class="term" href={f.path} title={f.name} set:html={symbolHtml(f.symbol)}></a>
+          {i < factors.length - 1 && <span class="op">×</span>}
+        </>
+      ))}
+      <span class="op">·</span> <a href="/equation/">try the numbers yourself</a>
     </p>
   </section>
 
-  <div class="prose narrow">
-    <p>
-      The physicist Enrico Fermi asked that question over lunch in 1950, and the puzzle has carried his name ever since: the Fermi Paradox. This site takes it apart. It breaks the question into seven pieces anyone can argue about, puts a number at the top that is computed from the pieces and never chosen by hand, and keeps every serious explanation for the silence on a page of its own, so you can point to one from anywhere.
-    </p>
-
-    <h2>The equation</h2>
-    <p>
-      In 1961 the astronomer Frank Drake wrote the pieces down as a multiplication, to organise the first scientific meeting on searching for other civilisations. Multiply seven quantities and you get N, the number of civilisations in our galaxy that could be detected right now.
-    </p>
-    <p class="equation">N = R<sub>*</sub> × f<sub>p</sub> × n<sub>e</sub> × f<sub>l</sub> × f<sub>i</sub> × f<sub>c</sub> × L</p>
-    <ul class="terms">
-      {terms.map((t) => (
-        <li><span class="sym">{t.sym}</span><span>{t.words}</span></li>
+  <section class="section" id="explanations">
+    <div class="shead">
+      <h2>Every serious explanation for the silence</h2>
+      <span>{plural(c.explanations, 'so far', 'so far')}, in three families</span>
+    </div>
+    <div class="families-home">
+      {records.families.map((fam) => (
+        <a class="family-card" href={`/explanations/#${fam.key}`}>
+          <h3>{fam.name}</h3>
+          <p>{fam.blurb}</p>
+          <span class="count">{plural(fam.count, 'explanation', 'explanations')}</span>
+        </a>
       ))}
-    </ul>
-    <p>
-      The honest answer to most of these is "somewhere between this and that", across a range so wide that a single multiplied-out number misleads. So this site does what a 2018 paper by the researchers Anders Sandberg, Eric Drexler and Toby Ord did: each piece carries a range drawn from the published estimates, the multiplication is run many thousands of times with a random pick from each range, and the result is a spread of answers rather than one.
-    </p>
-
-    <h2>What the top of this page will show</h2>
-    <div class="numbers">
-      <div class="number">
-        <div class="value pending">not yet computed</div>
-        <p class="what">The middle estimate of how many detectable civilisations are in our galaxy right now.</p>
-      </div>
-      <div class="number">
-        <div class="value pending">not yet computed</div>
-        <p class="what">The chance that we are the only one in the galaxy.</p>
-      </div>
-      <div class="number">
-        <div class="value pending">not yet computed</div>
-        <p class="what">The chance that we are the only one in the whole observable universe.</p>
-      </div>
     </div>
-    <p>
-      {records.headline.reason} Beside the three numbers will sit a fourth: what you get if you take the most hopeful published estimate of every piece, and then the most pessimistic. That is the width of the argument, and it is the thing most people have never seen.
-    </p>
+  </section>
 
-    <h2>Four kinds of record</h2>
-    <div class="records">
-      <div class="record">
-        <h3>The seven pieces</h3>
-        <p>Each with every published estimate, who made it and when, and the range this site uses now and why. When a discovery changes the record, the range moves, the number at the top recomputes, and the change is logged with its reason.</p>
-        <span class="count">{c.factors} of {c.factors_expected} written so far</span>
-      </div>
-      <div class="record">
-        <h3>The explanations</h3>
-        <p>Every serious answer to the silence, in three families: they were never there; they are gone; they are there and we cannot see them. Each on its own page, at an address that never changes.</p>
-        <span class="count">{c.explanations} written so far</span>
-      </div>
-      <div class="record">
-        <h3>The library</h3>
-        <p>Books, films, shows, games and videos that bring one of the explanations to life, with a line on whether each is worth your time.</p>
-        <span class="count">{c.library} written so far</span>
-      </div>
-      <div class="record">
-        <h3>The publications log</h3>
-        <p>A dated list of the scientific papers and discoveries that bear on the numbers, from the founding papers to the newest results, each saying what it changed.</p>
-        <span class="count">{c.publications} written so far</span>
-      </div>
+  <section class="section who" id="who">
+    <div>
+      <p class="kicker">Why the name?</p>
+      <p>Because that is the observed fact. The sky is quiet. Every explanation on this site is an answer to that one observation, and the site does not presume which answer is right: it works out, from the published numbers, how surprised we should be.</p>
     </div>
+    <div>
+      <p class="kicker">Who is asking</p>
+      <p>I'm John, and I write about AI, sentience and the spread of conscious life beyond Earth at <a href="https://sentient-horizons.com" rel="noopener">Sentient Horizons</a>. This is the sister of <a href="https://beltequation.com" rel="noopener">The Belt Equation</a>, where I track the odds of leaving Earth myself. Here the question is older and larger: whether anyone else is out there, and why we cannot tell. I wanted a place where the argument is laid out piece by piece, every number carries its source, and a new discovery moves the answer in public.</p>
+    </div>
+  </section>
 
-    <p class="status-line">
-      Records as of {longDate(records.exported_on)}. Everything on this site is built from a public repository, <a href="https://github.com/jfredson/quiet-galaxy" rel="noopener">on GitHub</a>, where every number carries its source and every change its date.
-    </p>
-  </div>
+  <section class="section moves">
+    <div class="move">
+      <p class="kicker">What would move it</p>
+      <p>A planet with signs of life in its air, or a survey that finds none on hundreds of them. The two pieces we know least about are whether life starts at all and whether it becomes intelligent; everything else is a detail beside those. Each piece's page says what discovery would narrow its range.</p>
+    </div>
+    <div class="move">
+      <p class="kicker">What has changed</p>
+      <p>Every paper and discovery that bears on the numbers is logged with its date, which piece it touches, and whether it moved a range. The log reaches back to the founding papers of the 1960s and forward to whatever is published next.</p>
+      <a class="btn ghost" href="/story/">Read the story so far</a>
+    </div>
+    <div class="move">
+      <p class="kicker">Think I'm wrong?</p>
+      <p>Good. Every piece has a page, every estimate a source, and every explanation a statement of what would strengthen or weaken it. Name a missing explanation, argue a range with a source, or point out an error, and the change lands with a dated line.</p>
+      <a class="btn ghost" href="/disagree/">Disagree with something</a>
+    </div>
+  </section>
+
+  <p class="dim home-meta">
+    Records as of {longDate(records.exported_on)}. Everything on this site is built from a public repository, <a href="https://github.com/jfredson/quiet-galaxy" rel="noopener">on GitHub</a>, where every number carries its source and every change its date.
+    <span class="sep">|</span><a href="/method/">How the numbers are worked out</a><span class="sep">|</span><a href="/library/">Books and films that take the question seriously</a>
+  </p>
 </Base>
+

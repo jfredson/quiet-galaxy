@@ -1,0 +1,61 @@
+---
+// Disagree with something: the three forms and what happens next (tracker pattern, rule 4.4).
+// Each form is an issue template in the repository (.github/ISSUE_TEMPLATE/), so the issue is
+// durable and the change that answers it can cite it. Copied from The Belt Equation's feedback
+// page (site/src/pages/feedback.astro), with this project's three kinds: a missing explanation, a
+// range that should move with a source, an error on a page.
+import Base from '../../layouts/Base.astro';
+import { issueUrl, REPO } from '../../lib/records';
+
+const missing = issueUrl('missing-explanation.md', 'Missing explanation: ');
+const move = issueUrl('move-a-range.md', 'Move a range: ');
+const error = issueUrl('error-on-a-page.md', 'Error on a page: ');
+---
+
+<Base
+  title="Disagree with something — The Quiet Galaxy"
+  description="How to name a missing explanation, argue that a range should move, or point out an error, and what happens to each."
+>
+  <section class="hero">
+    <p class="eyebrow">Disagree with something</p>
+    <h1>The point of publishing the pieces is that you can argue with one</h1>
+    <p class="lede">
+      Three kinds of disagreement move this project: an explanation for the silence that is missing, a range that should move, and an error on a page. Each is welcome, and each leaves a trace that the change can cite.
+    </p>
+  </section>
+
+  <section class="section narrow prose">
+    <h2>The three forms</h2>
+    <div class="forms">
+      <div class="form-card">
+        <h3>Name a missing explanation</h3>
+        <p>An answer to the silence that someone has seriously proposed and the catalogue does not have. The most useful thing you can give is which piece of the equation it bears on, and in which direction; an explanation that bears on no piece cannot be added.</p>
+        <a class="btn" href={missing} rel="noopener">Name a missing explanation</a>
+      </div>
+      <div class="form-card">
+        <h3>Argue a range, with a source</h3>
+        <p>A range on one of the seven pieces that is too wide, too narrow, or in the wrong place. Say what you would move it to and point at the published estimate or survey that supports the move; a range moves on a source, not on a feeling.</p>
+        <a class="btn ghost" href={move} rel="noopener">Argue a range</a>
+      </div>
+      <div class="form-card">
+        <h3>Point out an error</h3>
+        <p>A number, a date, a name or a claim on any page that is wrong, including an estimate wrongly attributed or a paper misread. Say which page and what it should say, with a source where there is one.</p>
+        <a class="btn ghost" href={error} rel="noopener">Point out an error</a>
+      </div>
+    </div>
+    <p>
+      Each form opens an issue in the public repository with the right questions already in it. Issues are used because they are durable and quotable, and folding one into the record is a change that can cite it. Every piece's page and every explanation's page also has a link at the bottom that opens the right form with that page's name filled in. Or write a plain issue: the page, what you would change, and why is exactly enough.
+    </p>
+
+    <h2>What happens to it</h2>
+    <ol>
+      <li>I rule on it. Some disagreements change the record; some are answered and left as they are. Either way the issue records the ruling and the reason.</li>
+      <li>A change to the record lands as a dated change in the repository that cites the issue, with a line in the changelog and, where a paper is involved, an entry in <a href="/story/">the story so far</a>.</li>
+      <li>A moved range gets a dated revision on the piece's page, with the old number, the new one, the source and the reason, and the number on the home page is recomputed from the new range.</li>
+      <li>Disagreement that arrives between reviews is folded in before the yearly review, when every range is re-read against the record and the method's fixed parts are reconsidered.</li>
+    </ol>
+    <p class="dim" style="font-size: 14.5px;">
+      The repository is at <a href={REPO} rel="noopener">github.com/jfredson/quiet-galaxy</a>. The records are free to reuse with credit, and the site's code is under the MIT licence.
+    </p>
+  </section>
+</Base>

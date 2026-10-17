@@ -12,10 +12,24 @@ The public face of the records: https://thequietgalaxy.com (domain registered by
 
 ## Pages
 
-| Path | What it shows |
-|---|---|
-| `/` | Holding version (2026-10-16): the question, the equation in plain words, the three numbers that will go at the top once the seven factors are seeded, and the four kinds of record with live counts. The first full version (the equation page with its calculator, one page per factor, the explanations by family, the library, the publications log, the method and feedback pages) is Saturday session D's work (`docs/2026-10-16-kickoff.md`, weekend step 6). |
-| `/404.html` | Not found. Explanation ids are the page addresses and are never renamed, so a link that fails probably never pointed at one. |
+The page map, built 2026-10-16 (weekend step 6 of `docs/2026-10-16-kickoff.md`) on the tracker pattern of the design standard (`sentient-horizons/design/tracker-pattern.md`, ruled by John 2026-10-16). Every record in `data/` gets a page or an anchored entry, and the counts on every page come from the same export the validator passed.
+
+| Path | What it shows | Source file |
+|---|---|---|
+| `/` | The home page: the thing held at a glance (the middle estimate of detectable civilisations, with the chance we are alone beside it), the question, one paragraph for a newcomer, the last-checked strip, two buttons; then the three numbers and the width of the argument, the seven pieces as cards with the equation line under them, the three families, who is asking, what would move it. | `src/pages/index.astro` |
+| `/equation/` | The equation in plain words, the calculator (seven sliders, plain JavaScript, N recomputed live, each with the project's range marked as a band), and a card per piece. | `src/pages/equation/index.astro` |
+| `/factors/<id>/` | One page per piece of the equation, all seven (a piece whose record is not written yet says so): the range used and why, the published estimates with dates and sources, what would move it, how the range has moved, the explanations that lean on it, the papers and library entries that point at it. | `src/pages/factors/[id].astro` |
+| `/explanations/` | Every explanation, in the three families with their plain names and blurbs. | `src/pages/explanations/index.astro` |
+| `/explanations/<id>/` | One page per explanation at its permanent address: summary, body, which pieces it bears on and how, what would strengthen or weaken it, how seriously it is taken, the papers and library entries that point at it (gathered at build time by `scripts/export.py`), related explanations in both directions. | `src/pages/explanations/[id].astro` |
+| `/library/` | The shelf, grouped by kind, each work at an anchor named for its id (`/library/#three-body-problem`). | `src/pages/library/index.astro` |
+| `/story/` | The story so far: the publications log, newest first by the day each was logged, each entry at an anchor named for its id, saying which pieces or explanations it bears on and whether it moved a range, with the revisions it caused. | `src/pages/story/index.astro` |
+| `/method/` | How the numbers are worked out, in plain words, with the working documents linked and prefaced at the end. | `src/pages/method/index.astro` |
+| `/disagree/` | Disagree with something: the three forms (a missing explanation, a range that should move with a source, an error on a page), each a prefilled issue template under `.github/ISSUE_TEMPLATE/`, and the four steps that follow. | `src/pages/disagree/index.astro` |
+| `/404.html` | Not found, with the retired ids and their replacements when there are any. | `src/pages/404.astro` |
+
+Top bar (tracker pattern rule 4.6): the heavier tier is Home, The equation, Explanations, Library, The story so far; the lighter tier is How the numbers are worked out, Disagree with something, Source. The components copied from The Belt Equation (the big number, the last-checked strip, the equation line, the piece cards, the record layout with its rail, the "what would move this" list, the story entry card, the three disagree forms) and from the AGI Zeitgeist Tracker (the working-document preface) each carry a comment saying where they came from, per the pattern's rule 7.1.
+
+**The headline.** `scripts/export.py` reads the numbers from `data/headline.json` (or `--headline FILE`) when that file exists, with the keys `median`, `alone_galaxy`, `alone_universe` and optionally `optimist`, `pessimist`, `runs`, `computed_on`, `seed` and `note`. Until `compute.py run` writes it, every page says the numbers are not computed and why. The last-checked strip says in words that no weekly reading has run yet; the export's `reading` field is where the latest reading goes once the weekly scan exists.
 
 ## Commands
 
