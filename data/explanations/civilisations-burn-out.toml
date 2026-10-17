@@ -29,12 +29,13 @@ persist do so at a scale and pace that does not make them visible across the gal
 
 Adam Frank and his colleagues gave the idea a mathematical form in 2018, modelling a
 civilisation and its planet as a pair that affect each other, as humans and Earth's
-climate do now. Their models produced a small number of outcomes: a soft landing, in
-which the civilisation shrinks to a sustainable size; a die-off, in which most of the
-population is lost but some survive; collapse without recovery; and collapse that comes
-even after the civilisation changes course, because it changed course too late. Which
-outcome occurred depended on how quickly the civilisation recognised the problem and how
-severe the planet's response was. The authors drew the lesson that a civilisation's
+climate do now. Their models produced three broad kinds of outcome: a smooth
+settling into a steady state the authors call sustainable; a boom followed by a die-off,
+in which the population falls to a fraction of its peak; and a rapid collapse. In the
+authors' own description of the work, collapse comes in two forms: one where the
+civilisation never changes the resources it draws on, and one where it switches to
+low-impact resources but too late. Which outcome occurred depended on how the
+civilisation drew on resources and how strongly the planet pushed back. The authors drew the lesson that a civilisation's
 growth phase is a dangerous and probably short passage, and that humanity is in it now.
 
 The bearing on the Drake Equation is on the last two factors. The detectable lifetime is
@@ -57,10 +58,7 @@ would_strengthen = "Evidence of an atmosphere around another star bearing the tr
 would_weaken = "A detected civilisation that is both long-lived and expanding; evidence that a civilisation can move its industry off its planet before running into limits; a model showing soft landings are the common outcome."
 related = ["self-destruction", "great-filter-ahead", "inward-turn", "no-interest-in-contact", "expansion-stalls"]
 
-verify = [
-  "That Haqq-Misra and Baum (2009) is in JBIS volume 62, pages 47–51, and that it is framed around exponential growth being unsustainable; check.",
-  "That Frank and colleagues (2018) is in Astrobiology volume 18 and describes the four outcomes as listed; check the paper's own naming of the outcomes.",
-]
+notes = "Checked 2026-10-16. Borne out: Haqq-Misra and Baum, 'The Sustainability Solution to the Fermi Paradox', Journal of the British Interplanetary Society 62, 47-51 (2009), whose abstract questions the assumption that civilisations grow exponentially or very fast (https://arxiv.org/abs/0906.0568); Frank, Carroll-Nellenback, Alberti and Kleidon, Astrobiology 18(5), 503-518 (2018), https://doi.org/10.1089/ast.2017.1671. Corrected: the paper's abstract names three classes of outcome (sustainable steady states, die-off, collapse), not four; the four-way list (die-off, sustainability, collapse without a change of resources, collapse after a change of resources that came too late) is the University of Rochester's description of the paper (https://www.sciencedaily.com/releases/2018/06/180604172652.htm), so the body now gives the three named classes and says the two forms of collapse come from the authors' own description. The earlier sentence that the outcome depended on how quickly the civilisation recognised the problem was not found in either source and was replaced."
 
 [[bears_on]]
 factor = "lifetime"

@@ -7,7 +7,7 @@ name = "The Great Filter is ahead of us: civilisations get as far as we have all
 family = "gone"
 proposed_by = "Robin Hanson"
 proposed_in = 1998
-proposed_source = "'The Great Filter — Are We Almost Past It?', essay published online, 1998; the pessimistic reading pressed by Nick Bostrom in 'Where Are They?', MIT Technology Review, 2008"
+proposed_source = "'The Great Filter — Are We Almost Past It?', essay on Hanson's website (first draft dated 1996-09-15, online by 1998-02-20; the revised version usually cited is dated 1998-09-15); the pessimistic reading pressed by Nick Bostrom in 'Where Are They?', MIT Technology Review, 2008"
 summary = """
 If the road from dead matter to a galaxy-spanning civilisation has a step almost nothing
 passes, the Great Filter, then the question is whether that step is behind us or ahead.
@@ -52,9 +52,7 @@ would_strengthen = "Simple or complex life found elsewhere in the solar system o
 would_weaken = "Evidence that the origin of life or of complex cells is extremely rare, which would place the Filter behind us; a detected civilisation that has lasted far longer than we have; a convincing explanation from the 'unseen' family, which would remove the need for a Filter."
 related = ["great-filter-behind-us", "self-destruction", "civilisations-burn-out", "berserkers", "they-became-machines"]
 
-verify = [
-  "That Bostrom's 2008 article appeared in MIT Technology Review under the title 'Where Are They? Why I hope the search for extraterrestrial life finds nothing'; check.",
-]
+notes = "Checked 2026-10-16. Borne out: Bostrom's article is titled 'Where Are They?' with the subtitle 'Why I hope the search for extraterrestrial life finds nothing', MIT Technology Review, May/June 2008, pages 72-77 (online 2008-04-22; https://www.technologyreview.com/2008/04/22/220999/where-are-they/ and https://nickbostrom.com/extraterrestrial). Hanson's essay: his page (https://mason.gmu.edu/~rhanson/greatfilter.html) shows 'Sept. 15, 1998' under the title and 'September 15, 1996' in the byline, and the earliest archived copy (captured 1998-02-20, http://web.archive.org/web/19980220204948/http://hanson.berkeley.edu:80/greatfilter.html) is headed 'DRAFT - Sept. 15, 1996'. Corrected: the source line now gives the 1996 draft date, the earliest online copy found, and the 1998 revised version; the year 1998 in the record, the year of the version usually cited, was left unchanged."
 
 [[bears_on]]
 factor = "lifetime"

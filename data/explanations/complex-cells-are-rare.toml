@@ -22,15 +22,17 @@ that look much like them; between them they ran the planet alone for roughly hal
 history. Everything else, from yeast to whales, is built from a third kind of cell that is
 far larger and more complicated, with an internal skeleton, compartments and, above all,
 many small power stations called mitochondria. Those power stations were once free-living
-bacteria. At some point, probably between 1.5 and 2 billion years ago, one cell swallowed
-another and failed to digest it, and the two became a single organism. Every complex cell
+bacteria. At some point, probably between about 1.2 and 2.1 billion years ago (estimates differ),
+one cell swallowed another and failed to digest it, and the two became a single organism. Every complex cell
 alive carries the descendants of that captured bacterium.
 
 The biochemist Nick Lane and the microbiologist William Martin argued in 2010 that this
 merger was not just one event among many but the event. A simple cell makes its energy on
-its outer membrane, so its energy budget grows with its surface while its needs grow with
-its volume; it cannot get much bigger or run many more genes without starving. A cell
-with hundreds of internal power stations has no such limit, and could afford the large
+its outer membrane, and a cell's surface grows more slowly than its volume, so the
+energy it can make is a poor match for the genes and bulk it would have to support. A cell
+with hundreds of internal power stations carries a far larger area of energy-making
+membrane inside it, and Lane and Martin estimated that the merger allowed a 200,000-fold
+expansion in the number of genes a cell could use. That is what could pay for the large
 genomes from which complex bodies were later built. On this view the long stall in Earth's
 history was not bad luck but a wall, and the merger was the one way through it. The wall
 is sometimes called the eukaryote bottleneck, after the technical name for complex cells.
@@ -46,8 +48,11 @@ The main objection is again the sample of one. That the merger happened once on 
 mean it is hard, or may mean that once it happened the winners took every available niche
 and left no room for a second attempt, which is the usual pattern when a new kind of life
 appears. Some biologists also question whether the energy argument is as tight as Lane
-and Martin make it, pointing to giant bacteria and to simple cells with internal
-compartments. Others note that even if the step is hard, two billion years is a long time
+and Martin make it. Michael Lynch and Georgi Marinov argued in 2015 that the energy cost
+of each gene does not rise, and generally falls, in larger cells of both bacteria and
+complex cells, and in 2017 that the area of a cell's membrane does not look like the
+limit on its energy supply. Lane and Martin themselves wrote that even giant bacteria
+carrying many copies of their genome cannot pay the energy price of complexity. Others note that even if the step is hard, two billion years is a long time
 and most planets that can carry life get at least that. The argument stands or falls on
 whether there are other ways to build a complex cell, and nobody knows."""
 standing = "Respected among cell biologists and widely cited in writing about the Fermi question; whether the merger was a hard step or simply a first-come-first-served event is openly argued."
@@ -55,11 +60,7 @@ would_strengthen = "Discovery of life elsewhere that is simple and has stayed si
 would_weaken = "Discovery of a second, independent origin of complex cells on Earth, living or fossil; a laboratory or natural example of a simple cell growing a large genome without captured power stations; complex life found on another world."
 related = ["rare-life", "rare-intelligence", "rare-earth", "great-filter-behind-us"]
 
-verify = [
-  "That the merger is usually dated to between 1.5 and 2 billion years ago; check the current consensus range.",
-  "That Lane and Martin's energy argument is stated as above, surface-area energy supply against volume-based need; check the 2010 paper.",
-  "The objection from giant bacteria and from simple cells with internal compartments is from memory of the debate; find a specific published critique.",
-]
+notes = "Checked 2026-10-16. Borne out: Lane and Martin, 'The energetics of genome complexity', Nature 467, 929-934 (2010); the abstract says prokaryotic genome size is constrained by bioenergetics and that the mitochondrial merger allowed a 200,000-fold expansion in the number of genes expressed (https://doi.org/10.1038/nature09486). The surface-area point is how Lynch and Marinov, eLife 6, e20437 (2017), report Lane and Martin's case: energy-making machinery is confined to the cell membrane in simple cells, and mitochondria give a large internal membrane area (https://elifesciences.org/articles/20437); the Nature paper itself could not be read tonight, so the 'surface against volume' wording is that report's. Corrected: the merger date was given as 1.5 to 2 billion years ago, but a 2018 molecular-clock study dates the origin of mitochondria to between 2.053 and 1.21 billion years ago (Betts and colleagues, Nature Ecology and Evolution 2, 1556-1562, https://doi.org/10.1038/s41559-018-0644-x), so the page now says about 1.2 to 2.1 billion years and that estimates differ. The objection from giant bacteria and 'simple cells with internal compartments' was not found as a published critique: the specific critiques found are Lynch and Marinov, 'The bioenergetic costs of a gene', Proceedings of the National Academy of Sciences 112, 15690-15695 (2015), and the 2017 eLife paper, which the body now cites; giant bacteria with many genome copies are discussed by Lane and Martin themselves (quoted in the 2017 eLife paper), and the internal-compartments half of the claim was removed because no source was found."
 
 [[bears_on]]
 factor = "intelligence"

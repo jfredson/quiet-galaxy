@@ -19,8 +19,8 @@ everything at once. On this view the galaxy is quiet because its inhabitants hav
 their resources and gone to sleep, leaving caretakers to stop anyone else from spending
 the inheritance."""
 body = """
-The three authors, two of them at Oxford's Future of Humanity Institute, published the
-idea in 2016. It starts from a result in physics known as Landauer's principle: erasing a
+The three authors, all of them affiliated with Oxford's Future of Humanity Institute,
+published the idea in 2016. It starts from a result in physics known as Landauer's principle: erasing a
 single bit of information, which any computation must do, releases a minimum amount of
 heat, and that minimum is proportional to the temperature of the environment. The
 cosmic background temperature today is a little under three degrees above absolute zero.
@@ -47,26 +47,23 @@ zoo hypothesis and the dark forest, belongs to the family of explanations in whi
 galaxy may be full and chooses to look empty.
 
 The main objection came in 2019 from the physicist Charles Bennett, Robin Hanson and
-Jess Riedel, who argued that the energy accounting is mistaken: the computations
-that matter can be done now and their results stored, the energy-cost advantage of waiting
-is smaller than claimed once the full accounting is done, and a civilisation waiting
-trillions of years forgoes everything that could be done in the meantime, including
-collecting the energy of stars that will otherwise be lost. The original authors replied
-that the hypothesis stands as a possibility even if the advantage is smaller, provided
-the sleepers value late computation highly enough. A second objection is the one that
+Jess Riedel, who argued that the energy accounting is mistaken. The original argument
+assumes that the heat given off by erasing information can only be dumped into the
+cosmic background, so a colder background is worth waiting for. Bennett and his
+co-authors answered that the universe today already holds places that can soak up that
+waste heat at any time, so a civilisation has no reason to wait, and that the original
+paper gave no worked-out model of the effect it claimed. In their comment they thank
+Anders Sandberg for confirming their summary of the argument, but say it should not be
+read as endorsed by the original authors. A second objection is the one that
 applies to the whole family: sleeping civilisations that nevertheless guard their
 resources would still have to prevent newcomers from spending them, and there is no sign
 anyone is preventing us."""
-standing = "A recent and much-discussed idea from serious researchers, admired for making a definite physical argument; its energy argument was challenged in print in 2019 and most physicists regard the challenge as substantially correct, leaving the hypothesis as an interesting possibility rather than a strong contender."
+standing = "A recent and much-discussed idea from serious researchers, admired for making a definite physical argument; its energy argument was challenged in print in 2019 by authors who argue that waiting for a colder universe gains nothing, leaving the hypothesis as an interesting possibility rather than a strong contender."
 would_strengthen = "Evidence that large-scale wasteful processes in the universe are being suppressed, such as an unexplained shortage of certain kinds of stellar death; discovery of dormant artificial structures; a resolution of the energy-accounting debate in the original authors' favour."
 would_weaken = "Detection of an old civilisation that is active and expanding now; confirmation that the computational advantage of waiting is small or negative; evidence that the universe's resources are being consumed freely without interference."
 related = ["transcension", "zoo-hypothesis", "dark-forest", "they-became-machines", "inward-turn"]
 
-verify = [
-  "That the JBIS citation is volume 69, pages 406–415, dated 2016, and the arXiv posting is from 2017; check both.",
-  "That the cosmic background temperature today is about 2.7 kelvin and the future cooling factor quoted in the paper is of order 10 to the 30; check the paper's own figure.",
-  "That the 2019 critique is by Bennett, Hanson and Riedel and makes the points summarised; check its abstract and the authors' reply.",
-]
+notes = "Checked 2026-10-16. Bibliographic details borne out: Journal of the British Interplanetary Society 69(11), 406-415, 1 November 2016 (Oxford University Research Archive record, https://ora.ox.ac.uk/objects/uuid:2836b807-21ce-431a-9271-289e837f10be); arXiv:1705.03394 posted 2017-04-27; the paper's own figure is a 10 to the 30 gain in achievable computation, set against a present background of about 3 kelvin (https://arxiv.org/abs/1705.03394); NASA's COBE measurement gives 2.725 kelvin today (https://lambda.gsfc.nasa.gov/product/cobe/about_firas.html). The 2019 comment is by Bennett, Hanson and Riedel, Foundations of Physics 49, 820-829 (arXiv:1902.06730). Corrected: the page had summarised the comment's points wrongly (it said the results could be computed now and stored, that the advantage of waiting was merely smaller, and that waiting forgoes the energy of stars; the comment says instead that waste heat can be dumped into existing reservoirs now, so there is no advantage in waiting), had said the original authors published a reply (none was found; the comment says only that Sandberg confirmed its summary), and had said two of the three authors were at the Future of Humanity Institute (the paper lists all three). The standing line no longer says most physicists regard the challenge as correct, which no source supports."
 
 [[bears_on]]
 factor = "detectable"

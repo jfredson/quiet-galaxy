@@ -17,7 +17,7 @@ until they are ready, or ever. The silence is deliberate and enforced. We hear n
 not because nobody is there but because everyone who is there has agreed we should not
 hear them."""
 body = """
-The radio astronomer John Ball proposed the idea in a two-page paper in 1973, as a
+The radio astronomer John Ball proposed the idea in a three-page paper in 1973, as a
 deliberately unsettling alternative to the hopeful assumptions behind the early searches.
 His reasoning started from the age of the galaxy: if civilisations arise at all, the
 earliest should be billions of years older than ours, with technology we cannot picture,
@@ -29,8 +29,9 @@ watchers would be evidence they had failed at their one job, and he thought this
 to take it seriously rather than to dismiss it.
 
 The idea was in the air before Ball named it. Science fiction had used it for decades,
-most famously in the Prime Directive of Star Trek from 1966, which forbids contact with
-civilisations that have not yet reached a certain level. Later writers refined it. Martyn
+most famously in the Prime Directive of Star Trek, first stated in the 1967 episode "The
+Return of the Archons", which forbids interfering with civilisations that have not yet
+reached a certain level. Later writers refined it. Martyn
 Fogg's "interdict" scenario of 1987 argued that a galaxy settled long before Earth's
 biosphere matured would have reached a stable arrangement in which inhabited worlds were
 left alone by agreement. Others have proposed that the watchers are waiting for a
@@ -45,9 +46,12 @@ any earlier factor and is compatible with a crowded galaxy.
 The main objection is that the arrangement requires everyone to agree and to keep
 agreeing for a very long time. A galaxy of many independent civilisations, each with its
 own factions and dissenters, would need only one to break the rule once. Duncan Forgan
-showed in 2011 and 2017 that for the agreement to hold, the first civilisation would have
-to have established it before any others arose and enforced it ever since, which narrows
-the hypothesis to a single ancient ruling power. A second objection is the one Ball
+studied this in 2011 and again in a paper that appeared in 2016 and in print in 2017. The
+agreement would have to be set up across the whole galaxy by one early, long-lived
+civilisation. But nothing travels faster than light, so a civilisation that arises far
+away learns of the rules late or never. In his models the galaxy usually splits into
+several groups that have not agreed with one another, which makes the hypothesis a weak
+explanation that holds only if that one ancient ruling power really existed. A second objection is the one Ball
 himself raised: an explanation that predicts no evidence can never be checked. A third is
 that hiding a settled galaxy from a civilisation with telescopes may be impossible,
 because a galaxy full of industry would look different from an empty one whether or not
@@ -57,12 +61,28 @@ would_strengthen = "Any sign of deliberate surveillance of Earth, such as an art
 would_weaken = "A detected civilisation that is transmitting freely; evidence that the galaxy is not settled, which would leave nobody to keep the zoo; a demonstration that a settled galaxy could not be hidden from a civilisation with our telescopes."
 related = ["dark-forest", "planetarium", "no-interest-in-contact", "they-are-already-here", "berserkers"]
 
-verify = [
-  "That Ball's 1973 paper is in Icarus volume 19, pages 347–349; check.",
-  "That Fogg's 1987 paper uses the word 'interdict' and is in Icarus; check the citation.",
-  "That Forgan's papers on the zoo hypothesis are from 2011 (International Journal of Astrobiology) and 2017 (the 'cultural' or 'soft' zoo paper) and conclude as described; check.",
-  "That the Prime Directive dates from the original 1966–1969 series; check which episode first states it.",
-]
+notes = """
+Checked against sources on 2026-10-16. Corrected: (1) Ball, 'The Zoo Hypothesis', Icarus 19,
+347-349 (1973-07) (Crossref, doi 10.1016/0019-1035(73)90111-5): pages 347 to 349 make three pages;
+the text had said two. (2) Forgan, 'Spatio-temporal constraints on the zoo hypothesis, and the
+breakdown of total hegemony', International Journal of Astrobiology 10, 341-347 (2011) and 'The
+Galactic Club or Galactic Cliques? Exploring the limits of interstellar hegemony and the Zoo
+Hypothesis', International Journal of Astrobiology 16, 349-354 (online 2016-11-28, in print
+2017-10) (Crossref, doi 10.1017/s147355041100019x and 10.1017/s1473550416000392, abstracts read
+there). Both call the zoo solution 'soft': the 2011 paper finds that total hegemony is typically
+broken because of the finite speed of light, so the hypothesis demands a long-lived early
+civilisation to establish it; the 2017 paper finds the galaxy usually divides into more than one
+culturally connected group, and that a single club needs many civilisations lasting millions of
+years. The text had said they showed the first civilisation would have to have set up the
+agreement before any others arose and enforced it since; it now says what the papers find. The
+2017 paper is not a 'cultural zoo' paper by name. (3) The Prime Directive: first mentioned in
+'The Return of the Archons', first shown 1967-02-09 (filmed 1966), in the original series that
+ran 1966 to 1969 (https://en.wikipedia.org/wiki/The_Return_of_the_Archons, which itself flags the
+citation for 'first reference' as weak, and https://en.wikipedia.org/wiki/Prime_Directive); the text
+had said 'from 1966', now names the 1967 episode. Confirmed with no change: Fogg, 'Temporal aspects
+of the interaction among the first galactic civilizations: the "interdict hypothesis"', Icarus 69,
+370-384 (1987-02) (Crossref, doi 10.1016/0019-1035(87)90112-6).
+"""
 
 [[bears_on]]
 factor = "detectable"

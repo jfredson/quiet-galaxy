@@ -7,7 +7,7 @@ name = "We are early: the universe has barely started making civilisations, and 
 family = "never-there"
 proposed_by = "Robin Hanson, Daniel Martin, Calvin McCarter and Jonathan Paulson, with an earlier version by Abraham Loeb, Rafael Batista and David Sloan"
 proposed_in = 2021
-proposed_source = "'If Loud Aliens Explain Human Earliness, Quiet Aliens Are Also Rare', The Astrophysical Journal 922, 182 (2021); Loeb, Batista and Sloan, 'Relative likelihood for life as a function of cosmic time', Journal of Cosmology and Astroparticle Physics (2016)"
+proposed_source = "'If Loud Aliens Explain Human Earliness, Quiet Aliens Are Also Rare', The Astrophysical Journal 922, 182 (2021); Loeb, Batista and Sloan, 'Relative likelihood for life as a function of cosmic time', Journal of Cosmology and Astroparticle Physics 2016 (08), article 040"
 summary = """
 The universe is about 13.8 billion years old, but most of the stars that will ever shine
 have not yet been born, and the small, dim, long-lived stars that make up most of the
@@ -27,8 +27,10 @@ stars already made, are small red dwarfs that will burn for hundreds of billions
 trillions of years. If planets around such stars can carry life, then almost all the
 life-years the universe will ever offer lie far in the future. Abraham Loeb and his
 colleagues worked this through in 2016 and found that, counted that way, a typical
-civilisation should appear in the far future around a small star, and a civilisation
-appearing now around a star like the Sun is early by a factor of a thousand or more.
+civilisation should appear in the far future around a small star: the chance of life per
+unit of time peaks around the smallest stars some ten trillion years from now, at about a
+thousand times its value around the Sun today. A civilisation appearing now around a star
+like the Sun is early by a factor of about a thousand.
 Either red dwarfs are poor homes, which would make us typical, or we are among the first.
 
 The second argument, from the economist Robin Hanson and three collaborators in 2021,
@@ -40,9 +42,11 @@ reach stops producing new civilisations. The reason we see no grabby civilisatio
 and the reason we arrived so early in the universe's life, are then the same fact seen
 from two sides. We are early because the deadline is coming. The model fits three numbers
 together, how fast expansion goes, how many hard steps evolution must pass, and how early
-we are, and the fit says grabby civilisations appear about once per million galaxies,
-expand at a large fraction of the speed of light, and will fill the universe within a few
-hundred million to a billion years. Loud civilisations are thus rare, and the paper's title
+we are, and the fit says each grabby civilisation will eventually come to control somewhere
+between about a hundred thousand and thirty million galaxies, so they are rare; that they
+expand at over half the speed of light; that they already control something like 40 to 50
+percent of the universe's volume; and that we could meet one in roughly 200 million to 2
+billion years. Loud civilisations are thus rare, and the paper's title
 notes that quiet ones must then be rare too, since otherwise the loud ones would not be so
 few.
 
@@ -68,12 +72,27 @@ would_strengthen = "Evidence that planets around red dwarf stars can hold atmosp
 would_weaken = "Evidence that red dwarf planets are generally uninhabitable, which would make us typical rather than early; the discovery of an old civilisation nearby; the detection of a distant region of sky altered by an expanding civilisation that is small, which the model says should not be seen."
 related = ["great-filter-behind-us", "hostile-galaxy", "rare-intelligence", "expansion-stalls", "no-paradox-just-wide-ranges"]
 
-verify = [
-  "That the 2021 paper's headline numbers are roughly as stated: about one grabby civilisation per million galaxies, expansion at a large fraction of light speed, filling the universe within a few hundred million to a billion years; check the paper's abstract and figures.",
-  "That the Loeb, Batista and Sloan 2016 paper finds civilisations around Sun-like stars to be early by a factor of about a thousand relative to red dwarfs; check the number.",
-  "That star formation in the universe peaked about ten billion years ago; check a standard source.",
-  "The Astrophysical Journal volume and article number for Hanson and colleagues (922, 182); check.",
-]
+notes = """
+Checked against sources on 2026-10-16. Corrected: (1) The grabby-aliens numbers. The abstract of
+Hanson, Martin, McCarter and Paulson (https://arxiv.org/abs/2102.01522; full text read from
+https://arxiv.org/pdf/2102.01522) says loud civilisations 'now control 40-50% of universe volume,
+each will later control ~10^5 - 3x10^7 galaxies, and we could meet them in ~200Myr - 2Gyr'; the
+conclusion says they expand at over half the speed of light. The text had said grabby civilisations
+appear 'about once per million galaxies' (the paper gives no such rate; the range of galaxies per
+civilisation is the nearest figure, and 'one-in-a-million-galaxies' appears there only in a remark
+about a 'rare Earth') and that they 'fill the universe within a few hundred million to a billion
+years' (the 200 million to 2 billion years is the time until we could meet one, not the time to
+fill the universe). The body now states the paper's figures. (2) Loeb, Batista and Sloan
+(https://arxiv.org/abs/1606.08448; full text read from https://arxiv.org/pdf/1606.08448): the paper
+says the probability of life per unit of time peaks around the lowest-mass stars (lifetime about 10
+trillion years) at a value 'a thousand times larger than for the Sun'; the text had said early by a
+factor of 'a thousand or more', now 'about a thousand', and states what the thousand compares. The
+citation was filled out to 2016 (08), article 040 (doi 10.1088/1475-7516/2016/08/040). Confirmed
+with no change: The Astrophysical Journal 922, 182 (2021-11-30; Crossref doi 10.3847/1538-4357/ac2369);
+star formation peaked about 3.5 billion years after the Big Bang, which is about ten billion years
+ago (Madau and Dickinson 2014, Annual Review of Astronomy and Astrophysics 52, 415-486,
+https://arxiv.org/abs/1403.0007).
+"""
 
 [[bears_on]]
 factor = "life"

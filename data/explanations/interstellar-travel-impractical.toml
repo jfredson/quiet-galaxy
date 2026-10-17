@@ -7,7 +7,7 @@ name = "Interstellar travel is impractical: the distances are so great and the c
 family = "unseen"
 proposed_by = "Sebastian von Hoerner"
 proposed_in = 1962
-proposed_source = "'The General Limits of Space Travel', Science 137, 18–23 (1962); the point was pressed against Michael Hart's 1975 argument by many, including Carl Sagan"
+proposed_source = "'The General Limits of Space Travel', Science 137, 18–23 (1962); Hart's 1975 argument was answered on other grounds (slow spread, reasons to hold back) by Newman and Sagan, Icarus 46 (1981)"
 summary = """
 The strongest version of the Fermi question is not "why do we hear nothing" but "why is
 nobody here". Michael Hart argued in 1975 that a civilisation able to travel between
@@ -19,22 +19,28 @@ may be full of civilisations, each confined to its own star system, each as unab
 visit us as we are to visit them."""
 body = """
 The nearest star beyond the Sun is about four light-years away, which is roughly
-forty trillion kilometres. The fastest object humans have ever launched would take tens
-of thousands of years to get there. Crossing that gap in a human lifetime would need a
+forty trillion kilometres. Voyager 1, the most distant
+spacecraft humans have built, moves at about 17 kilometres a second and would take about
+75,000 years to get there. Crossing that gap in a human lifetime would need a
 ship moving at a good fraction of the speed of light, and the energy needed to get a
 ship of useful size to such a speed, and to slow it down again at the other end, is
 greater than the whole of humanity's present energy use for years or decades. The German
-astronomer Sebastian von Hoerner worked through these limits in 1962 and concluded that
-interstellar travel by living crews was so far beyond any reasonable budget that it
-should be set aside, and that if contact were ever made it would be by radio.
+astronomer Sebastian von Hoerner worked through these limits in 1962. He did not claim to have
+proved interstellar travel impossible and left the final judgment to the reader, but he
+found the requirements so extreme that he concluded, as his own view, that space travel
+would stay confined to our own planetary system for ever, and that the only means of
+communication between civilisations would be radio signals.
 
 The argument took on a new role after 1975, when Michael Hart published the paper that
 turned Fermi's lunchtime question into a scientific problem. Hart argued that the
 absence of visitors was strong evidence that we were the first civilisation in the
-galaxy, because any earlier one would have had time to settle everywhere. His critics,
-Carl Sagan prominent among them, answered that Hart had assumed interstellar settlement
-was easy, and that there was no reason to think so. Perhaps every civilisation looks at
-the cost, as we do, and decides that it is not worth it; perhaps a few try and the ships
+galaxy, because any earlier one would have had time to settle everywhere. His critics
+answered that settlement need not be as automatic as he assumed. William Newman and Carl
+Sagan, in 1981, did not argue that travel was impossible: they argued that a settled
+region spreads far more slowly than a single ship travels, and that there may be reasons
+every society holds back, such as the need to limit its own numbers. A separate reply, the
+one this page is about, is that the travel itself is too costly. Perhaps every
+civilisation looks at the cost, as we do, and decides that it is not worth it; perhaps a few try and the ships
 fail; perhaps the physics of life makes long voyages impossible for any living thing. If
 nobody travels, the absence of visitors tells us nothing about how many civilisations
 there are.
@@ -61,11 +67,8 @@ would_strengthen = "A physical result showing that interstellar flight even at a
 would_weaken = "A detected probe or craft from elsewhere; humanity's own successful launch of an interstellar probe; evidence of civilisations that have settled more than one star."
 related = ["expansion-stalls", "ships-in-the-night", "not-looked-long-enough", "shouting-is-costly"]
 
-verify = [
-  "That von Hoerner's 1962 paper is in Science volume 137, pages 18–23, and reaches the conclusion summarised; check.",
-  "That Sagan's reply to Hart made this argument explicitly (the usual citation is Sagan's remarks in the 1980s debate and his 1983 paper with Newman); check which source.",
-  "That the fastest human-launched object would take tens of thousands of years to reach the nearest star; Voyager 1 is usually quoted at about 70,000 years for four light-years; check.",
-]
+notes = "Corrected 2026-10-16, three points. (1) The body said the fastest object humans have launched would take tens of thousands of years to reach the nearest star; the fastest spacecraft, Parker Solar Probe, is faster than that at its closest pass to the Sun (about 700,000 km/h) but is not leaving the solar system, so the text now uses Voyager 1: NASA gives its speed as 17.0 km/s (https://science.nasa.gov/mission/voyager/voyager-1/), and about 4.25 light-years at that speed is about 75,000 years. (2) The body and proposed_source said Sagan answered Hart by saying settlement was hard or costly. Newman and Sagan's reply (Icarus 46, 1981, https://ntrs.nasa.gov/citations/19810061288; and the early 1978 Cornell draft, https://ntrs.nasa.gov/citations/19790011801) does not rest on travel being impossible; it argues that settlement spreads slowly and that societies have social reasons to hold back, and the wording now says so. (3) The body said von Hoerner concluded travel by living crews should be set aside as beyond any budget; he wrote that interstellar travel is not shown to be impossible, left the final judgment to the reader, and gave his own conclusion that space travel would stay within our planetary system and that radio would be the only means of contact (Science 137, 18-23 (1962), reading of the printed paper at https://wwwadd.zah.uni-heidelberg.de/publikationen/mhb/mhb008/mhb008.htm). The page range 18-23 is confirmed there."
+
 
 [[bears_on]]
 factor = "detectable"

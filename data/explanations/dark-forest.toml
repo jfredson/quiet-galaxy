@@ -27,10 +27,12 @@ lives, to destroy them before they can do the same to you. The galaxy becomes a 
 in which every hunter moves without a sound.
 
 The idea has antecedents. David Brin's 1983 survey of the silence, "The Great Silence",
-listed deliberate quiet out of fear as one possible answer, and Greg Bear's 1987 novel
-The Forge of God imagined a galaxy policed by self-replicating killers that punish any
-species loud enough to be noticed. Liu Cixin gave the reasoning its name and its most
-complete form.
+did not list a galaxy-wide rule of silence among its explanations, but it noted a
+version of the fear: if hostile probes exist, knowledgeable civilisations would be
+cautious about leaking radio into their skies and selective about whom they contact.
+Greg Bear's 1987 novel The Forge of God imagined self-replicating machines that destroy
+noisy civilisations as possible threats. Liu Cixin gave the reasoning its name and its
+most complete form.
 
 It bears on the equation at the last two factors. It says the share of intelligent
 species that make themselves detectable is very small, not because they cannot but because
@@ -50,12 +52,7 @@ would_strengthen = "Evidence of a civilisation deliberately suppressing its emis
 would_weaken = "Any detected civilisation that broadcasts freely; a demonstration that the traces of industry (waste heat, atmospheric change) cannot be hidden, so silence gains nothing; a long record of Earth's own leakage with no consequence."
 related = ["zoo-hypothesis", "berserkers", "shouting-is-costly", "everyone-listens-nobody-transmits", "no-interest-in-contact", "aestivation"]
 
-verify = [
-  "That Greg Bear's The Forge of God (1987) is a fair example of the 'punish the loud' idea and the year is right; check before the page goes live.",
-  "That Brin's 1983 paper lists deliberate quiet out of fear among its explanations; check the paper's list.",
-]
-
-notes = "Written 2026-10-16 as the schema's worked example; related ids filled in the same day once the rest of the catalogue existed."
+notes = "Written 2026-10-16 as the schema's worked example; related ids filled in the same day once the rest of the catalogue existed. Checked 2026-10-16. Borne out: Greg Bear, The Forge of God, Tor Books, October 1987; in the novel noisy civilisations are destroyed by self-replicating machines built to remove potential threats to their makers (https://en.wikipedia.org/wiki/The_Forge_of_God). Corrected: the page said Brin's 1983 paper listed deliberate quiet out of fear as an explanation. Brin's list of causes (Table 1 and the text, Quarterly Journal of the Royal Astronomical Society 24, 283-309; https://articles.adsabs.harvard.edu/pdf/1983QJRAS..24..283B) has no such entry; the nearest passage is his note that, if the Deadly Probes scenario has any truth, knowledgeable civilisations would be cautious about leaking radiation and selective about whom they contact. The body now says that. The Forge of God sentence was reworded to match what the novel's plot is described as."
 
 [[bears_on]]
 factor = "detectable"

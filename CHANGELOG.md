@@ -2,6 +2,10 @@
 
 Every change to a range, a record, the method or the site, with absolute dates. Newest first. A range change always says which publication moved it and by how much.
 
+## 2026-10-16 (explanation records checked against sources)
+
+- **The 86 claims marked to verify in `data/explanations/` were each checked against a source on the web** (the paper or book, the author's own text, a catalogue or reference work for dates): **42 cleared** (borne out, entry deleted), **41 corrected** (the record fixed, entry deleted, the correction and its source written in the record's `notes`), **3 left** (hostile galaxy: the last page of Annis's 1999 paper rests on one mailing-list post; ships in the night: the text of Shklovskii and Sagan's 1966 book could not be reached; they became machines: whether Schneider's 2019 book repeats her 2015 argument), each with what was tried. One new entry was added (natural catastrophes: whether Ćirković's 2004 paper argues what the body says), so 4 remain in all. The count of 87 in the entry below was off by one; the records held 86. Corrections that change what a page says: Planetarium (Baxter's idea is an artificial universe, not a shell round the solar system), Forgan on the zoo (light-speed delay breaks agreement into separate groups), Piran and Jiménez (no complex life before a redshift of about 0.5), Horner and Jones (Jupiter can raise the impact rate), Spiegel and Turner (inconclusive, not mild support), the Green Bank lifetimes (1,000 to 100 million years, not "decades"), the grabby-aliens figures, and the Sandberg paper's lower bound (no 10 to the minus 36 floor). One date moved: the listening-the-wrong-way record now dates the idea 1999, when the paper was first posted (2004 is the alternative; noted in the record).
+
 ## 2026-10-16 (the headline's parameters ruled)
 
 - **John ruled on the seven parameters proposed in `docs/method.md`**, in his words: "Use the 2018 paper's log-normal rate shape for the chance life starts, adding the third shape to the record layout; accept the other six parameters as proposed." The method note marks every row ruled and the schema's known simplifications say so.
