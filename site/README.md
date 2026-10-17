@@ -28,7 +28,7 @@ Run from `site/`. Needs Node (the Mac has 26) and Python 3.11 or later for the e
     npm run preview      serve dist/ locally
     npm run deploy       build, then `wrangler deploy` to Cloudflare Workers static assets
 
-The ordinary way to publish is not `npm run deploy` but `python3 scripts/publish.py --push` from the repository root: it validates, exports and builds everything, shows what changed, and pushes main, and the GitHub Action (`.github/workflows/deploy.yml`) builds and deploys from that push. That needs two repository secrets, `CLOUDFLARE_ACCOUNT_ID` (set 2026-10-16) and `CLOUDFLARE_API_TOKEN` (a token with Workers Scripts: Edit and, once the zone exists, Workers Routes: Edit; John creates it in the Cloudflare dashboard, as for The Belt Equation on 2026-09-25). `npm run deploy` stays for a deploy from this Mac by hand, which needs a Cloudflare login here (`npx wrangler login`). The Worker is named `quietgalaxy`.
+The ordinary way to publish is not `npm run deploy` but `python3 scripts/publish.py --push` from the repository root: it validates, exports and builds everything, shows what changed, and pushes main, and the GitHub Action (`.github/workflows/deploy.yml`) builds and deploys from that push. That needs two repository secrets, `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN` (a token with Workers Scripts: Edit and Workers Routes: Edit on the zones), both set on 2026-10-16; the first deploy from GitHub ran that evening. `npm run deploy` stays for a deploy from this Mac by hand, which needs a Cloudflare login here (`npx wrangler login`). The Worker is named `quietgalaxy`.
 
 ## The domain and the forwarding address
 
