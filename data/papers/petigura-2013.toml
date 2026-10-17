@@ -1,0 +1,23 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "petigura-2013"
+date = "2013-11-26"
+added_on = 2026-10-16
+authors = ["Erik A. Petigura", "Andrew W. Howard", "Geoffrey W. Marcy"]
+title = "Prevalence of Earth-size planets orbiting Sun-like stars"
+venue = "Proceedings of the National Academy of Sciences 110, 19273–19278 (2013)"
+link = "https://doi.org/10.1073/pnas.1319909110"
+finding = """
+Counting planets in Kepler's data with an independent search that also measured how
+many real planets the search would miss, the authors find that 22 percent (give or take
+8) of Sun-like stars have a planet of one to two Earth radii receiving between a quarter
+and four times the light Earth gets, which they take as the habitable zone. That is the
+figure, 'one in five', that was widely reported and that most popular accounts of the
+equation have used since. The number depends heavily on where the edges of the habitable
+zone are drawn, as the paper says; narrower edges give a smaller share."""
+factors = ["habitable-planets", "planets"]
+explanations = ["rare-earth"]
+moved_range = false
+
+notes = "Written 2026-10-16. Superseded for the project's purposes by bryson-2020, which uses the full Kepler catalogue and the mission's final reliability figures, but kept because it is the number people remember."

@@ -1,0 +1,23 @@
+# Library record: Stanisław Lem's novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "his-masters-voice"
+title = "His Master's Voice"
+maker = "Stanisław Lem"
+year = 1968
+kind = "book"
+explanations = ["listening-the-wrong-way", "not-looked-long-enough"]
+factors = ["detectable"]
+link = "https://en.wikipedia.org/wiki/His_Master%27s_Voice_(novel)"
+how = """
+A stream of neutrinos from the sky turns out to repeat, which makes it a message, and a
+secret American project of the best minds alive spends years failing to read it. They get
+two by-products out of it, one of them a possible weapon, and never learn what it says or
+whether it was meant for anyone. The book is written as the memoir of a mathematician on
+the project, and it is the most honest account in fiction of what receiving a signal
+would actually be like: not a conversation, but a decades-long argument among the
+receivers about whether they are reading or projecting. For the catalogue it is the case
+that a detectable civilisation and an understood one are different things."""
+worth_the_time = "Yes, for readers who liked Contact and want to know what the hard version looks like; it is a novel of ideas with almost no action, and better for it."
+
+notes = "Written 2026-10-16."

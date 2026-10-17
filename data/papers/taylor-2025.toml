@@ -1,0 +1,26 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "taylor-2025"
+date = "2025-04"
+added_on = 2026-10-16
+authors = ["Jake Taylor"]
+title = "Are there Spectral Features in the MIRI/LRS Transmission Spectrum of K2-18b?"
+venue = "Research Notes of the American Astronomical Society 9, 86 (2025); arXiv:2504.15916"
+link = "https://arxiv.org/abs/2504.15916"
+finding = """
+A short note, out within about a week of madhusudhan-2025, that tests the new data
+without assuming any particular gas. Taylor asks whether the spectrum shows any feature
+at all beyond a flat line with a slope, and finds that it does not with any confidence:
+a featureless model fits the data about as well as one with dimethyl sulfide in it.
+The point is methodological and important. A three-standard-deviation signal for a
+specific molecule can appear when the data are fitted only against models that contain
+that molecule; a fair test asks first whether there is anything there to explain."""
+factors = ["life"]
+explanations = ["rare-life"]
+moved_range = false
+
+verify = [
+  "The note's volume and number and its arXiv identifier; from memory.",
+]
+notes = "Written 2026-10-16."

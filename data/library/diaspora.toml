@@ -1,0 +1,25 @@
+# Library record: Greg Egan's novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "diaspora"
+title = "Diaspora"
+maker = "Greg Egan"
+year = 1997
+kind = "book"
+explanations = ["they-became-machines", "transcension", "inward-turn", "natural-catastrophes"]
+factors = ["detectable", "lifetime"]
+link = "https://en.wikipedia.org/wiki/Diaspora_(novel)"
+how = """
+By the thirtieth century most of humanity lives as software in a handful of city-sized
+computers, and the ones still in bodies are a small minority. A burst from a pair of
+colliding stars wipes out the people of flesh, and the software people send copies of
+themselves to the stars to find out why nobody warned them. What they find is that older
+civilisations left: not died, but moved into forms and dimensions where talking to us is
+beside the point. Egan's book is the fullest fictional case that a species which becomes
+its own computers stops needing planets, stops sending anything, and may stop occupying
+the ordinary universe at all, and that this, rather than extinction, is where the silence
+comes from. The star-burst that opens the book is also a clear picture of the natural
+catastrophe explanation."""
+worth_the_time = "Yes, for readers comfortable with hard mathematics in their fiction; the first chapter alone, on how a mind is born in software, repays the effort."
+
+notes = "Written 2026-10-16."

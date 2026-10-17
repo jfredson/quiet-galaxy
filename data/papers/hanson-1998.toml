@@ -1,0 +1,25 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "hanson-1998"
+date = "1998-09-15"
+added_on = 2026-10-16
+authors = ["Robin Hanson"]
+title = "The Great Filter – Are We Almost Past It?"
+venue = "Essay published on the author's website, George Mason University, 1998 (first version 1996)"
+link = "https://mason.gmu.edu/~rhanson/greatfilter.html"
+finding = """
+Hanson's essay gives the modern framing. Somewhere between dead matter and a civilisation
+that spreads across the galaxy there must be at least one step that almost nothing gets
+past, because if every step were easy the galaxy would be visibly full. He calls that
+step the Great Filter and asks the only question that matters for us: is it behind us or
+ahead? If life, or complex cells, or intelligence is the hard step, we are through it
+and the silence is good news. If the hard step is surviving technology, then every
+species gets this far and then stops, and the silence is a warning. He draws the
+practical conclusion that finding simple life on Mars or Europa would be bad news,
+because it would move the filter forward."""
+factors = ["life", "intelligence", "lifetime"]
+explanations = ["great-filter-behind-us", "great-filter-ahead", "self-destruction", "rare-life", "complex-cells-are-rare"]
+moved_range = false
+
+notes = "Nick Bostrom's 2008 essay 'Where Are They? Why I hope the search for extraterrestrial life finds nothing' (MIT Technology Review) restates the Mars point for a general reader."

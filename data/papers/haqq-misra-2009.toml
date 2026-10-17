@@ -1,0 +1,24 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "haqq-misra-2009"
+date = "2009"
+added_on = 2026-10-16
+authors = ["Jacob D. Haqq-Misra", "Seth D. Baum"]
+title = "The Sustainability Solution to the Fermi Paradox"
+venue = "Journal of the British Interplanetary Society 62, 47–51 (2009); arXiv:0906.0568"
+link = "https://arxiv.org/abs/0906.0568"
+finding = """
+Hart's argument assumes that a civilisation keeps growing exponentially for millions of
+years. The authors point out that nothing on Earth has ever done that: fast-growing
+populations and economies hit limits and either collapse or level off. If the same holds
+elsewhere, civilisations that grow fast enough to fill a galaxy would be exactly the ones
+that burn out first, and the ones that last would be those that grew slowly or stopped,
+and therefore never spread far. The galaxy could then hold many old, stable, small
+civilisations and no empire. The paper's practical point is that the silence may be
+telling us something about the kind of growth that survives."""
+factors = ["lifetime", "detectable"]
+explanations = ["expansion-stalls", "civilisations-burn-out", "self-destruction", "inward-turn"]
+moved_range = false
+
+notes = "Written 2026-10-16."

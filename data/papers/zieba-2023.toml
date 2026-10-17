@@ -1,0 +1,27 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "zieba-2023"
+date = "2023-06-19"
+added_on = 2026-10-16
+authors = ["Sebastian Zieba", "Laura Kreidberg", "Elsa Ducrot", "Michaël Gillon", "Caroline Morley", "and others"]
+title = "No thick carbon dioxide atmosphere on the rocky exoplanet TRAPPIST-1 c"
+venue = "Nature 620, 746–749 (2023)"
+link = "https://doi.org/10.1038/s41586-023-06232-z"
+finding = """
+The same measurement as greene-2023 for the second planet of TRAPPIST-1, which gets about
+as much light as Venus does. Its day side is around 380 kelvin, cooler than bare rock
+would be but far too hot for a thick carbon-dioxide atmosphere; the data allow at most a
+thin atmosphere or none. Together the two results suggest that the inner planets of the
+system either never had much atmosphere or lost it to the star's radiation early on, which
+is the pessimistic case for planets around red dwarfs. The habitable-zone planets further
+out (e, f and g) are the real test, and their measurements are harder and still coming
+in."""
+factors = ["habitable-planets"]
+explanations = ["rare-earth"]
+moved_range = false
+
+verify = [
+  "The day-side temperature of about 380 kelvin (the paper gives 380 ± 31 K) and the author list beyond the first two; from memory.",
+]
+notes = "Written 2026-10-16."

@@ -1,0 +1,29 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "piran-2014"
+date = "2014-12-05"
+added_on = 2026-10-16
+authors = ["Tsvi Piran", "Raul Jimenez"]
+title = "Possible Role of Gamma Ray Bursts on Life Extinction in the Universe"
+venue = "Physical Review Letters 113, 231102 (2014)"
+link = "https://doi.org/10.1103/PhysRevLett.113.231102"
+finding = """
+Gamma-ray bursts, the brightest explosions known, would strip a planet's ozone and kill
+most surface life if one went off close enough. The authors work out how often that
+happens as a function of where and when a planet sits. For Earth's position they find a
+roughly 50 percent chance of a lethal burst in the last 500 million years and a near
+certainty over the last 5 billion. The inner quarter of the galaxy, where stars are
+densest, is hit too often for land life to last; and because bursts were more common
+when the universe was young and poor in heavy elements, life as we know it was probably
+impossible anywhere before about 5 billion years ago, and is still unlikely in most
+galaxies. The paper is the quantitative basis for the idea that the galaxy keeps being
+reset."""
+factors = ["habitable-planets", "lifetime", "star-formation"]
+explanations = ["natural-catastrophes", "we-are-early", "rare-earth"]
+moved_range = false
+
+verify = [
+  "The 50 percent in 500 million years, the inner quarter of the galaxy and the 5-billion-year threshold; from memory of the abstract.",
+]
+notes = "Written 2026-10-16. James Annis made a similar argument in 'An astrophysical explanation for the great silence' (JBIS 52, 19–22, 1999), proposing that the galaxy only recently became quiet enough for civilisations to appear, which is why nobody is ahead of us."

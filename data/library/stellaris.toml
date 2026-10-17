@@ -1,0 +1,24 @@
+# Library record: Paradox's strategy game. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "stellaris"
+title = "Stellaris"
+maker = "Paradox Development Studio"
+year = 2016
+kind = "game"
+explanations = ["inward-turn", "berserkers", "expansion-stalls", "they-became-machines"]
+factors = ["habitable-planets", "intelligence", "lifetime"]
+link = "https://en.wikipedia.org/wiki/Stellaris_(video_game)"
+how = """
+A galaxy-scale strategy game in which the player sets, at the start, almost every number
+in the Drake Equation: how many habitable planets there are, how many species start at the
+same time, how fast travel is. Then they watch what a galaxy with those settings does over
+centuries. Two of its fixtures are worked examples from the catalogue. The Fallen Empires
+are ancient civilisations that long ago stopped expanding and now sit on a few systems,
+indifferent to everyone, which is the inward turn made playable. The late-game crises
+include a machine intelligence that wakes to sterilise the galaxy. The game teaches, by
+repetition, the point that one expanding species fills a galaxy fast, and that the quiet
+needs a reason."""
+worth_the_time = "For players who like strategy games, yes, and set the habitable-planet slider low once to feel the empty version; everyone else can skip it."
+
+notes = "Written 2026-10-16."

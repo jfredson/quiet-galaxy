@@ -1,0 +1,28 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "sandberg-2016"
+date = "2016"
+added_on = 2026-10-16
+authors = ["Anders Sandberg", "Stuart Armstrong", "Milan M. Ćirković"]
+title = "That is not dead which can eternal lie: the aestivation hypothesis for resolving Fermi's paradox"
+venue = "Journal of the British Interplanetary Society 69, 406–415 (2016); arXiv:1705.03394 (2017)"
+link = "https://arxiv.org/abs/1705.03394"
+finding = """
+Computation costs energy, and the cost of erasing a bit of information falls as the
+surroundings get colder. The universe is still warm from its birth and will cool for
+trillions of years, so a civilisation that cares most about how much thinking it can do
+in total would gain about a factor of 10 to the power 30 by waiting: do nothing now,
+sleep through the hot early universe, and wake when the cosmos is cold. The authors
+propose that advanced civilisations may be doing exactly that, dormant but present, which
+would explain why we see neither them nor their works. They note it predicts that
+someone should be guarding resources against waste, and that we see no sign of such
+guarding, which is the main argument against it."""
+factors = ["detectable"]
+explanations = ["aestivation", "they-became-machines", "inward-turn"]
+moved_range = false
+
+verify = [
+  "The factor of 10^30 for the gain from waiting; quoted from memory of the abstract.",
+]
+notes = "Charles Bennett, Robin Hanson and Jess Riedel replied in 'Comment on the aestivation hypothesis' (Foundations of Physics 49, 820–829, 2019), arguing that the thermodynamic saving is smaller than claimed because the cold-universe computation could be done later anyway while still using resources now."

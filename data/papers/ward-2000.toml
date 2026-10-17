@@ -1,0 +1,25 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "ward-2000"
+date = "2000-01"
+added_on = 2026-10-16
+authors = ["Peter D. Ward", "Donald Brownlee"]
+title = "Rare Earth: Why Complex Life Is Uncommon in the Universe"
+venue = "Copernicus Books (Springer), New York, 2000, 333 pages"
+link = "https://en.wikipedia.org/wiki/Rare_Earth_(book)"
+finding = """
+A palaeontologist and an astronomer argue that simple life may be common but that animals
+are not, because Earth's history depended on a long list of conditions that rarely come
+together: the right kind of star in the right part of the galaxy, a large moon that
+steadies the tilt, Jupiter sweeping up comets, plate tectonics recycling carbon, a
+magnetic field, and an unusually quiet several hundred million years in which complex
+cells could arise. They split the Drake Equation's habitable-planets factor into many
+smaller ones and conclude that the product is tiny. The book named the position, and
+every later argument about how rare Earth-like conditions are starts by agreeing or
+disagreeing with its list."""
+factors = ["habitable-planets", "life", "intelligence"]
+explanations = ["rare-earth", "complex-cells-are-rare", "rare-intelligence", "great-filter-behind-us"]
+moved_range = false
+
+notes = "The usual replies are that several items on the list (a large moon, Jupiter's protection, plate tectonics) have since been shown to matter less or to be less rare than the book assumed; the exoplanet record since 2009 has been the main test of its claims about stars and planets."

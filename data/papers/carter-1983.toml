@@ -1,0 +1,25 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "carter-1983"
+date = "1983-12-20"
+added_on = 2026-10-16
+authors = ["Brandon Carter"]
+title = "The anthropic principle and its implications for biological evolution"
+venue = "Philosophical Transactions of the Royal Society of London A 310, 347–363 (1983)"
+link = "https://doi.org/10.1098/rsta.1983.0096"
+finding = """
+Carter notices that intelligence on Earth took about four billion years to appear, and
+that the Sun will only stay fit for life for something like five to ten billion years in
+all. If intelligence usually took far less time than a star's life, we would expect it to
+have appeared early, not with the clock nearly run out; if it usually took far more, we
+would not be here at all. The near-match, he argues, is what you would see if the
+expected time for intelligence to evolve is much longer than a star's lifetime, and we are
+a lucky exception. From the timing he estimates that the path from simple life to
+observers has only one or two very improbable steps, and that intelligent life is
+correspondingly rare. This is the argument behind every 'hard steps' calculation since."""
+factors = ["life", "intelligence"]
+explanations = ["rare-intelligence", "rare-life", "complex-cells-are-rare", "great-filter-behind-us"]
+moved_range = false
+
+notes = "The Snyder-Beattie, Sandberg, Drexler and Bonsall 2021 paper in this log applies the same reasoning with modern dates for Earth's transitions."

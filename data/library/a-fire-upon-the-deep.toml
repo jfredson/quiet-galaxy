@@ -1,0 +1,24 @@
+# Library record: Vernor Vinge's novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "a-fire-upon-the-deep"
+title = "A Fire Upon the Deep"
+maker = "Vernor Vinge"
+year = 1992
+kind = "book"
+explanations = ["transcension", "interstellar-travel-impractical", "they-became-machines"]
+factors = ["detectable", "intelligence"]
+link = "https://en.wikipedia.org/wiki/A_Fire_Upon_the_Deep"
+how = """
+Vinge divides the galaxy into zones by distance from the core. Near the centre, in the
+Unthinking Depths, no mind can work at all; in the Slow Zone that holds Earth, nothing
+travels faster than light and computers stay dumb; further out, in the Beyond, travel
+between stars and real artificial minds become possible; and at the rim, in the
+Transcend, civilisations become something like gods and lose interest in everything
+below. It is a made-up physics, but it does two things for the paradox at once: it gives a
+reason travel to us might be impossible even for species who travel freely elsewhere, and
+it shows what a region full of civilisations that have grown past us would look like from
+down here, which is to say quiet."""
+worth_the_time = "Yes, for readers who like a big galaxy and a clever premise; it is a long adventure novel with the idea built into its map rather than argued."
+
+notes = "Written 2026-10-16."

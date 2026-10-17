@@ -1,0 +1,27 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "borucki-2010"
+date = "2010-02-19"
+added_on = 2026-10-16
+authors = ["William J. Borucki", "and the Kepler team (David Koch, Gibor Basri, Natalie Batalha, Timothy Brown and others)"]
+title = "Kepler Planet-Detection Mission: Introduction and First Results"
+venue = "Science 327, 977–980 (2010)"
+link = "https://doi.org/10.1126/science.1185402"
+finding = """
+The Kepler space telescope, launched in 2009-03, stared at one patch of sky containing
+about 150,000 stars and watched for the tiny dimming when a planet crosses in front of
+its star. This paper reports the first five planets from the first six weeks of data,
+all large and hot, and sets out the mission's real purpose: to count how common
+Earth-sized planets in the habitable zones of Sun-like stars are. Over the next nine
+years Kepler found more than 2,600 confirmed planets and showed that small planets are
+the most common kind, which turned the equation's second and third factors from guesses
+into statistics. Every occurrence-rate paper in this log rests on its catalogue."""
+factors = ["planets", "habitable-planets"]
+explanations = []
+moved_range = false
+
+verify = [
+  "The counts of about 150,000 stars watched and more than 2,600 confirmed planets; the first from the mission's design papers, the second from NASA's tally at the mission's end in 2018.",
+]
+notes = "Written 2026-10-16."

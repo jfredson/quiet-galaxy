@@ -1,0 +1,29 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "bryson-2020"
+date = "2020-10-28"
+added_on = 2026-10-16
+authors = ["Steve Bryson", "Michelle Kunimoto", "Ravi K. Kopparapu", "Jeffrey L. Coughlin", "William J. Borucki", "and the Kepler team"]
+title = "The Occurrence of Rocky Habitable-zone Planets around Solar-like Stars from Kepler Data"
+venue = "The Astronomical Journal 161, 36 (2021); arXiv:2010.14812 (2020-10-28)"
+link = "https://arxiv.org/abs/2010.14812"
+finding = """
+The Kepler team's final answer to the question the telescope was built for. Using the
+complete catalogue, the mission's measured reliability, and stellar sizes from the Gaia
+spacecraft, the authors estimate how many rocky planets (half to one and a half times
+Earth's radius) sit in the habitable zones of stars like the Sun. For the conservative
+habitable zone they find between about 0.37 and 0.60 such planets per star, with wide
+uncertainty (the lower figure's range runs from 0.16 to 0.85); for a more generous zone,
+0.58 to 0.88. In plain terms, roughly half of Sun-like stars have a rocky planet where
+liquid water could exist, and the nearest such planet is probably within about 20 light
+years. This is the best current measurement of the equation's third factor for Sun-like
+stars; red dwarfs, which are more numerous, are a separate question."""
+factors = ["habitable-planets", "planets"]
+explanations = ["rare-earth"]
+moved_range = false
+
+verify = [
+  "The exact occurrence figures (0.37 and 0.60 for the conservative zone, 0.58 and 0.88 for the optimistic one) and the nearest-planet distance; from memory of the abstract, which should be checked before session A leans on them.",
+]
+notes = "Written 2026-10-16. The paper gives its results as a range between two statistical methods rather than a single number, which is why the finding quotes two figures for each zone."

@@ -1,0 +1,23 @@
+# Library record: Denis Villeneuve's film, from Ted Chiang's story. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "arrival"
+title = "Arrival (from Ted Chiang's 'Story of Your Life', 1998)"
+maker = "Denis Villeneuve (film); Ted Chiang (story)"
+year = 2016
+kind = "film"
+explanations = ["listening-the-wrong-way"]
+factors = ["detectable"]
+link = "https://en.wikipedia.org/wiki/Arrival_(film)"
+how = """
+Twelve ships land and the whole film is the work of learning to talk to what is inside
+them. The aliens are right there, willing, and still nearly impossible to understand,
+because their written language does not run in time the way ours does. The film is the
+best popular illustration of a point the equation hides inside the factor for detectable
+civilisations: a signal is only a signal if the listener can tell it is one, and two minds
+can be in the same room without either recognising the other's speech. Chiang's story is
+quieter and more exact about the linguistics; the film adds the politics of twelve nations
+each hearing something different."""
+worth_the_time = "Yes, for anyone; it is the rare film where the hard part of contact is understanding rather than fighting, and the story it comes from is worth the hour."
+
+notes = "Written 2026-10-16."

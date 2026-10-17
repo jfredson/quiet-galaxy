@@ -1,0 +1,23 @@
+# Library record: Stanisław Lem's last novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "fiasco"
+title = "Fiasco"
+maker = "Stanisław Lem"
+year = 1986
+kind = "book"
+explanations = ["listening-the-wrong-way", "self-destruction", "everyone-listens-nobody-transmits"]
+factors = ["detectable", "lifetime"]
+link = "https://en.wikipedia.org/wiki/Fiasco_(novel)"
+how = """
+A human expedition reaches a planet, Quinta, whose civilisation is plainly technological
+and plainly there, and fails completely to make contact with it. The Quintans are locked
+in a cold war among themselves, their sky is full of weapons and jamming, and they do not
+answer. The humans, unable to accept that a civilisation might simply decline to speak,
+escalate until they destroy the thing they came to meet. Lem's title is the verdict. The
+book is the pessimist's companion to Contact: contact can fail even when both sides exist
+and know about each other, because neither can read the other's silence correctly, and
+because a species busy destroying itself has no attention to spare for visitors."""
+worth_the_time = "Yes, for readers who have finished Solaris and want the version where it is our failure rather than the universe's; it is slow to start and merciless at the end."
+
+notes = "Written 2026-10-16."

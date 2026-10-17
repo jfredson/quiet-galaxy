@@ -1,0 +1,26 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "gajjar-2021"
+date = "2021-07"
+added_on = 2026-10-16
+authors = ["Vishal Gajjar", "Karen I. Perez", "Andrew P. V. Siemion", "Griffin Foster", "Bryan Brzycki", "and the Breakthrough Listen team"]
+title = "The Breakthrough Listen Search for Intelligent Life Near the Galactic Center. I."
+venue = "The Astronomical Journal 162, 33 (2021)"
+link = "https://doi.org/10.3847/1538-3881/abfd36"
+finding = """
+The centre of the galaxy packs the most stars into the smallest patch of sky, so a
+single pointing covers tens of millions of them, and a civilisation wanting to be heard
+across the galaxy might reasonably signal from or toward it. Breakthrough Listen observed
+the central region for about seven hours with Green Bank and Parkes over a wide radio
+band, and found nothing. The limits are coarse because the stars are so far away: only a
+transmitter far more powerful than anything humans have built would have been seen. The
+paper lays out the plan for a deeper survey of the region and is the first of a series."""
+factors = ["detectable"]
+explanations = ["not-looked-long-enough", "everyone-listens-nobody-transmits"]
+moved_range = false
+
+verify = [
+  "The observing time and frequency coverage, and the author list beyond the first five; from memory of the abstract.",
+]
+notes = "Written 2026-10-16. Later Breakthrough Listen results (a machine-learning search of 820 stars by Peter Ma and colleagues in Nature Astronomy, 2023, and the ongoing MeerKAT survey) should be logged by the weekly scan as it reads them."

@@ -1,0 +1,29 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "luque-2025"
+date = "2025-05"
+added_on = 2026-10-16
+authors = ["Rafael Luque", "Caroline Piaulet-Ghorayeb", "Matthew Radica", "and others"]
+title = "Insufficient evidence for DMS and DMDS in the atmosphere of K2-18 b"
+venue = "arXiv:2505.13407 (2025)"
+link = "https://arxiv.org/abs/2505.13407"
+finding = """
+The fullest of the reanalyses, combining all of Webb's observations of K2-18 b from both
+instruments and fitting them together. With the whole data set, the authors find no
+significant evidence for dimethyl sulfide or dimethyl disulfide; the feature in the 2025
+paper can be fitted as well or better by other gases, and the overall evidence for an
+ocean world remains weak. Their conclusion is not that the planet is lifeless but that
+the data cannot support the claim made for them. After this paper the working view
+among exoplanet astronomers was that K2-18 b has shown methane, probably carbon dioxide,
+and nothing yet that bears on the chance that life starts. For this project the episode
+is a lesson in how a factor's evidence arrives: as a claim, a correction and a long
+argument, not as a result."""
+factors = ["life", "habitable-planets"]
+explanations = ["rare-life"]
+moved_range = false
+
+verify = [
+  "The author list beyond the first three and whether the paper has since been published in a journal; from memory of the preprint. A further reanalysis by Luis Welbanks and colleagues (arXiv, 2025-04) reached the same conclusion and could be logged separately.",
+]
+notes = "Written 2026-10-16."

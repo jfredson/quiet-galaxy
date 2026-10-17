@@ -1,0 +1,22 @@
+# Library record: Arthur C. Clarke's novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "rendezvous-with-rama"
+title = "Rendezvous with Rama"
+maker = "Arthur C. Clarke"
+year = 1973
+kind = "book"
+explanations = ["ships-in-the-night", "no-interest-in-contact"]
+factors = ["detectable"]
+link = "https://en.wikipedia.org/wiki/Rendezvous_with_Rama"
+how = """
+A fifty-kilometre cylinder enters the solar system, a human crew gets inside it, and it
+leaves again having taken no notice of them at all. Nothing in it is explained and nobody
+aboard it ever appears. Clarke's point is the opposite of the invasion story: a galaxy can
+hold travellers who pass through our neighbourhood on business of their own, find nothing
+worth stopping for, and are gone before we understand what we saw. It is the cleanest
+dramatisation of the idea that contact might be missed rather than refused, and of a
+civilisation that is detectable only for the few weeks it happens to be nearby."""
+worth_the_time = "Yes, and only the first book: it is short, the mystery is the point, and the sequels answer questions that were better left open."
+
+notes = "Written 2026-10-16."

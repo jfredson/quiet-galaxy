@@ -1,0 +1,27 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "kipping-2020"
+date = "2020-05-18"
+added_on = 2026-10-16
+authors = ["David Kipping"]
+title = "An objective Bayesian analysis of life's early start and our late arrival"
+venue = "Proceedings of the National Academy of Sciences 117, 11995–12003 (2020)"
+link = "https://doi.org/10.1073/pnas.1921655117"
+finding = """
+Earth's life started quickly, within a few hundred million years of the planet becoming
+habitable, and intelligence took almost four billion years more. Kipping asks what those
+two dates say about how likely each step is on an Earth-like planet, taking care to
+assume as little as possible beforehand. He finds odds of at least 3 to 1 that life
+starts quickly when conditions allow, and weaker odds of about 3 to 2 that intelligence
+is rare even when life is common. In plain terms: the record leans toward life being
+easy and minds being hard, but neither lean is strong, and the paper is explicit that a
+single example cannot settle it."""
+factors = ["life", "intelligence"]
+explanations = ["rare-intelligence", "rare-life", "great-filter-behind-us"]
+moved_range = false
+
+verify = [
+  "The odds of 3 to 1 for rapid life and 3 to 2 for rare intelligence; from memory of the abstract.",
+]
+notes = "Spiegel and Turner reached a more cautious conclusion with the same kind of analysis in 2012 (in this log as spiegel-2012); the difference is mostly in how much the two papers assume before looking at the data."

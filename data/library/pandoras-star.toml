@@ -1,0 +1,24 @@
+# Library record: Peter F. Hamilton's novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "pandoras-star"
+title = "Pandora's Star (and its second half, Judas Unchained, 2005)"
+maker = "Peter F. Hamilton"
+year = 2004
+kind = "book"
+explanations = ["hostile-galaxy", "no-interest-in-contact", "zoo-hypothesis"]
+factors = ["detectable", "lifetime"]
+link = "https://en.wikipedia.org/wiki/Pandora%27s_Star"
+how = """
+An astronomer watches a star a thousand light years away switch off, and finds it has
+been sealed inside a shell. Humanity, curious, builds a ship to go and look, and opens the
+shell. Inside is a species that regards every other mind as something to be absorbed or
+destroyed, and the shell had been put there by someone else to keep it in. The book has
+two answers to the silence running at once. One is that some neighbours are quiet because
+they have been deliberately walled off by an older power, which is the zoo idea with the
+bars facing the other way. The other is the Silfen, an elder species who wander the galaxy
+on foot through paths of their own and have no interest in anything humans want to talk
+about."""
+worth_the_time = "For readers who want a long, busy space opera with a Fermi argument buried in it; the sealed star is a great premise and the book takes its time getting there."
+
+notes = "Written 2026-10-16."

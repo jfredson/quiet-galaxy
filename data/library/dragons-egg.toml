@@ -1,0 +1,24 @@
+# Library record: Robert L. Forward's novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "dragons-egg"
+title = "Dragon's Egg"
+maker = "Robert L. Forward"
+year = 1980
+kind = "book"
+explanations = ["rare-earth"]
+factors = ["habitable-planets", "life", "intelligence"]
+link = "https://en.wikipedia.org/wiki/Dragon%27s_Egg"
+how = """
+Life on the surface of a neutron star, where gravity is sixty-seven billion times
+Earth's, chemistry runs on nuclear forces, and a civilisation goes from stone tools to
+beyond human science in the month a human ship spends in orbit watching it. Forward was a
+physicist and worked the numbers; the book is a thought experiment on how narrow our idea
+of a habitable place is. It belongs in the catalogue as the counter-case to Rare Earth:
+every argument that only an Earth-like planet around a Sun-like star will do assumes life
+has to be our kind of chemistry at our speed. If it does not, the factor for habitable
+places per star could be much larger than any survey of rocky planets in the habitable
+zone would count."""
+worth_the_time = "Yes, for readers who enjoy a premise worked out to the last decimal; the people are thin, the physics is the point."
+
+notes = "Written 2026-10-16."

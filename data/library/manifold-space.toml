@@ -1,0 +1,24 @@
+# Library record: Stephen Baxter's novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "manifold-space"
+title = "Manifold: Space"
+maker = "Stephen Baxter"
+year = 2000
+kind = "book"
+explanations = ["natural-catastrophes", "civilisations-burn-out", "expansion-stalls"]
+factors = ["lifetime"]
+link = "https://en.wikipedia.org/wiki/Manifold:_Space"
+how = """
+The second book of a trilogy in which each volume gives a different answer to Fermi's
+question. The first, Manifold: Time (1999), has a universe in which we are alone. Space
+takes the other branch: the galaxy is crowded, life is everywhere, and the reason nobody
+has reached Earth is that the galaxy's core goes off every few hundred million years in a
+burst that sterilises everything, so no civilisation ever gets a long enough run to fill
+it. Baxter's hero travels through a galaxy of species trying to prepare for the next reset,
+and the book is a sustained tour of what a hard ceiling on the lifetime factor would do to
+everyone at once. It is the most direct novel-length engagement with the paradox as a
+problem to be solved rather than a mood."""
+worth_the_time = "Yes, for readers who want a tour of explanations in story form; it stands alone, and Manifold: Time is the companion for the lonely-universe answer."
+
+notes = "Written 2026-10-16."

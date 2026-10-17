@@ -1,0 +1,23 @@
+# Library record: Adrian Tchaikovsky's novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "children-of-time"
+title = "Children of Time"
+maker = "Adrian Tchaikovsky"
+year = 2015
+kind = "book"
+explanations = ["rare-intelligence", "self-destruction"]
+factors = ["life", "intelligence"]
+link = "https://en.wikipedia.org/wiki/Children_of_Time_(novel)"
+how = """
+A terraforming project seeds a planet with a virus meant to lift monkeys to intelligence;
+the monkeys never arrive and the virus goes to work on spiders instead. Half the book is
+the slow, generation-by-generation climb of a spider civilisation, and it is the best
+fictional treatment of how many separate lucky steps lie between simple life and a mind
+that builds radios. The other half follows the last humans, fleeing a ruined Earth, which
+is the self-destruction explanation played out in the background. The book's quiet argument
+is that intelligence is not a destination evolution aims at: left alone, the planet would
+have stayed a world of clever animals."""
+worth_the_time = "Yes, for anyone who wants to feel how long and improbable the road from life to intelligence is; the spider chapters carry the book."
+
+notes = "Written 2026-10-16."
