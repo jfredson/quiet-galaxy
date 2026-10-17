@@ -334,8 +334,10 @@ export function rangeWords(low: number, high: number, unit: string): string {
 export function medianWords(n: number): string {
   if (n >= 1.5) return `about ${plainNumber(n)} detectable civilisations in our galaxy`;
   if (n >= 0.5) return 'about one detectable civilisation in our galaxy';
+  // A count of galaxies is a whole number to a reader: 64, not 63.57.
   const per = 1 / n;
-  return `about one detectable civilisation per ${plainNumber(per).replace(/^about /, '')} galaxies like ours`;
+  const perWords = per < 1000 ? String(Math.round(per)) : plainNumber(per).replace(/^about /, '');
+  return `about one detectable civilisation per ${perWords} galaxies like ours`;
 }
 
 /** An estimate's number: a single value or a range, in the factor's unit. */
