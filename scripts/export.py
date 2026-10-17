@@ -8,6 +8,7 @@ Plain Python, standard library only. Run from anywhere:
     python3 scripts/export.py --out DIR        write the JSON somewhere else
     python3 scripts/export.py --data DIR       read a different data folder (for tests)
     python3 scripts/export.py --headline FILE  read the headline numbers from another file
+    python3 scripts/export.py --public DIR     write the served copy of the headline file somewhere else
 
 The records are read with the same loader and validator as scripts/compute.py, so the site can
 never show a record that fails the schema: if validation fails, nothing is written and the
@@ -35,6 +36,12 @@ of docs/2026-10-16-kickoff.md):
   home page's strip; and each record's own readings, newest first, for its page. Added 2026-10-16
   with the weekly reading; the shape is The Belt Equation's `export_scans`, adapted.
 
+Besides the JSON, the export copies the headline file as it stands into site/public/data/, so the
+built site serves it unchanged at thequietgalaxy.com/data/headline.json (added 2026-10-17 at John's
+ruling on the family's lessons review: every tracker's headline file is served from its own site as
+well as from its repository). That copy is generated and not committed, like the JSON; `--public DIR`
+puts it somewhere else.
+
 The one-way links between records (docs/record-schema.md: a library entry names its
 explanations, a publication names its factors, nothing links back) are turned into both-way
 lists here, at build time, which is the arrangement the schema's decision 6 assumes.
@@ -47,6 +54,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -232,6 +240,8 @@ def load_headline(data_dir: Path, path: Path | None) -> dict | None:
             return None
         out["available"] = True
         out["file"] = str(cand.relative_to(ROOT)) if cand.is_relative_to(ROOT) else str(cand)
+        # Where the file was read from, for the copy the site serves; dropped from the JSON by main.
+        out["_source"] = str(cand)
         if isinstance(out.get("computed_on"), str) is False and "computed_on" in out:
             out["computed_on"] = str(out["computed_on"])
         return out
@@ -596,6 +606,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--out", default=str(ROOT / "site" / "src" / "data"))
     parser.add_argument("--headline", default=None,
                         help="the JSON written by `compute.py run` (default: data/headline.json if it exists)")
+    parser.add_argument("--public", default=str(ROOT / "site" / "public" / "data"),
+                        help="where the copy of the headline file the site serves is written (default: site/public/data)")
     parser.add_argument("--check", action="store_true", help="validate and print counts, write nothing")
     args = parser.parse_args(argv)
 
@@ -609,6 +621,7 @@ def main(argv: list[str] | None = None) -> int:
         return 1
 
     headline = load_headline(data_dir, Path(args.headline).resolve() if args.headline else None)
+    headline_source = Path(headline.pop("_source")) if headline and "_source" in headline else None
     export = build_export(loaded, headline)
     c = export["counts"]
     rc = export["readings_counts"]
@@ -623,6 +636,18 @@ def main(argv: list[str] | None = None) -> int:
     out.mkdir(parents=True, exist_ok=True)
     (out / "records.json").write_text(json.dumps(export, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"wrote {out / 'records.json'}")
+    # The headline file, byte for byte, where Astro copies public/ into the built site: the same
+    # file as in the repository, served at /data/headline.json. A stale copy from an earlier run
+    # is removed when there is no headline to serve, so the site never serves old numbers.
+    public = Path(args.public).resolve()
+    served = public / "headline.json"
+    if headline_source is not None:
+        public.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(headline_source, served)
+        print(f"wrote {served} (a copy of {headline_source.relative_to(ROOT) if headline_source.is_relative_to(ROOT) else headline_source}, served at /data/headline.json)")
+    elif served.exists():
+        served.unlink()
+        print(f"removed {served}: no headline to serve")
     return 0
 
 

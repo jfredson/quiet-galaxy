@@ -8,6 +8,9 @@ node_modules/
 .wrangler/
 # the JSON the export script writes; rebuilt from ../data on every build
 src/data/*.json
+# the copy of ../data/headline.json the export script writes for the site to serve at
+# /data/headline.json; rebuilt on every build the same way (added 2026-10-17)
+public/data/
 # logs and macOS
 npm-debug.log*
 .DS_Store

@@ -17,6 +17,7 @@ has no git history.
 from __future__ import annotations
 
 import io
+import json
 import re
 import shutil
 import sys
@@ -516,6 +517,41 @@ class TheHeadline(unittest.TestCase):
                 code = compute.main(["--data", str(data), "run"])
         self.assertEqual(code, 1)
         self.assertIn("Refusing to run", err.getvalue())
+
+
+class TheServedHeadline(unittest.TestCase):
+    """The export copies the headline file into the site's public folder, byte for byte, so the
+    built site serves it at /data/headline.json (added 2026-10-17 at John's ruling on the family's
+    lessons review); and removes a stale copy when there is no headline to serve."""
+
+    def test_export_copies_the_headline_file_unchanged(self):
+        import export
+        source = DATA / "headline.json"
+        self.assertTrue(source.exists(), "data/headline.json is what compute.py run writes")
+        with tempfile.TemporaryDirectory() as tmp:
+            out, public = Path(tmp) / "out", Path(tmp) / "public"
+            with redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()):
+                code = export.main(["--out", str(out), "--public", str(public)])
+            self.assertEqual(code, 0)
+            self.assertTrue((out / "records.json").exists())
+            self.assertEqual((public / "headline.json").read_bytes(), source.read_bytes())
+            # The source path is for the copy only and never reaches the JSON the site reads.
+            written = json.loads((out / "records.json").read_text(encoding="utf-8"))
+            self.assertTrue(written["headline"]["available"])
+            self.assertNotIn("_source", written["headline"])
+
+    def test_export_removes_a_stale_copy_when_there_is_no_headline(self):
+        import export
+        with TempData() as data, tempfile.TemporaryDirectory() as tmp:
+            (data / "headline.json").unlink()
+            out, public = Path(tmp) / "out", Path(tmp) / "public"
+            public.mkdir()
+            (public / "headline.json").write_text("{}", encoding="utf-8")
+            with redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()):
+                code = export.main(["--data", str(data), "--out", str(out), "--public", str(public),
+                                    "--headline", str(data / "headline.json")])
+            self.assertEqual(code, 0)
+            self.assertFalse((public / "headline.json").exists())
 
 
 if __name__ == "__main__":
