@@ -17,20 +17,15 @@ whether by the dip in a star's light as a planet crosses it, by the wobble of th
 the bending of light from a background star, finds planets around most or all stars."""
 what_would_move_this = "A survey that counts planets around a large, well-understood sample of stars, including the dim red dwarfs that make up most of the galaxy, and reports the share of stars with none."
 
-verify = [
-  "Zhu and Dong (2021, zhu-2021), the Annual Review of Astronomy and Astrophysics survey of planet statistics, is logged for this factor, but the reviewer's statement that it concludes the share of stars with planets is close to 100 percent was not found in its abstract or in coverage, and the full text has not been read for it; until it is, there is no estimate to add. Raised 2026-10-17 by the outside review (item 6); open.",
-  "Drake's 1961 range of 0.2 to 0.5 for fp is quoted from the Wikipedia article on the Drake equation, which cites Drake and Sobel's 1992 book, pages 55 to 62; check it against the book or the 2015 Drake, Vakoch and Dowd volume. Tried 2026-10-16 and still open: neither book could be opened (restricted lending copy, no snippets); other secondary accounts give a single 0.5 for 1961 (Glade and colleagues 2012, Table 1; Scoles and Heatherly 2011 in the Astronomical Society of the Pacific's magazine), and the SETI Institute's page says attendees thought the share was close to 100 percent.",
-]
-
-notes = "Checked 2026-10-16 against the primary sources: Sagan's one third and the Mayor period limit of 100 days are borne out; Mayor's statistics use 822 stars, not 376 (corrected in the estimate and in a revision below). Drake's 1961 value of 0.2 to 0.5 could not be checked against Drake and Sobel or the 2015 volume tonight: other secondary accounts give a single 0.5 (Glade and colleagues 2012, arXiv:1112.1506, Table 1; the Astronomical Society of the Pacific article by Scoles and Heatherly, 2011), so the 1961 range is still unconfirmed; it has no weight in the range, which rests on the surveys. Saturday session C writes the publication records for the 2012 microlensing paper and the others cited here; when they exist, each estimate gets a 'publication' link to its record. Written 2026-10-16. Outside review, 2026-10-17: the proposal to change the shape to uniform (item 5) was declined for consistency with the other log-uniform ranges, the headline being the same within noise either way (58.7% against 58.8% alone in the galaxy on a scratch copy); the range is unchanged. Ruled by John 2026-10-17."
+notes = "Checked 2026-10-16 against the primary sources: Sagan's one third and the Mayor period limit of 100 days are borne out; Mayor's statistics use 822 stars, not 376 (corrected in the estimate and in a revision below). Drake's 1961 value of 0.2 to 0.5 was checked on 2026-10-17 against Pearman's 1963 account of the meeting (the source line gives it): the account's values are about 0.5 (called probably an upper limit), 0.2 and 0.4, with a fourth argument giving about 0.01, so 0.2 to 0.5 is the span of three of the four; other secondary accounts give a single 0.5 (Glade and colleagues 2012, arXiv:1112.1506, Table 1; Scoles and Heatherly 2011). It has no weight in the range, which rests on the surveys. Zhu and Dong (2021, zhu-2021) was read in full on 2026-10-17: it does not conclude that the share of stars with planets is close to 100 percent, as the outside review said, and its figure of about 30 percent of Sun-like stars with inner planets is for part of the parameter space, so no estimate is added (the review's item 6; flagged for John). Saturday session C writes the publication records for the 2012 microlensing paper and the others cited here; when they exist, each estimate gets a 'publication' link to its record. Written 2026-10-16. Outside review, 2026-10-17: the proposal to change the shape to uniform (item 5) was declined for consistency with the other log-uniform ranges, the headline being the same within noise either way (58.7% against 58.8% alone in the galaxy on a scratch copy); the range is unchanged. Ruled by John 2026-10-17."
 
 [[estimate]]
 who = "Frank Drake and the Green Bank meeting"
 when = "1961"
 low = 0.2
 high = 0.5
-source = "Green Bank meeting of November 1961, as recorded in Drake and Sobel, Is Anyone Out There? (Delacorte, 1992), pages 55 to 62, and in Drake, Vakoch and Dowd, The Drake Equation: Estimating the Prevalence of Extraterrestrial Life through the Ages (Cambridge University Press, 2015); the meeting's record is the founding entry of the publications log (drake-1961)"
-method = "Educated guess before any planet outside the solar system had been found."
+source = "Green Bank meeting of November 1961, as reported by Pearman in the first printed account of it (Interstellar Communication, 1963), page 289 (drake-1961)"
+method = "Educated guess before any planet outside the solar system had been found. Pearman reports several weak arguments: about 0.5 if every single star later than spectral class F5 formed planets, which he calls probably an upper limit; about 0.2 if the leftover disc more often made a second star; about 0.4 from the stars out to 61 Cygni; and about 0.01 from extrapolating binary-star statistics to very small companions. The meeting called all of them weak; the record's 0.2 to 0.5 is the span of the first three."
 
 [[estimate]]
 who = "Arnaud Cassan and colleagues"
@@ -113,3 +108,11 @@ field = "range.status"
 old = "first-pass"
 new = "reviewed"
 why = "The outside review of the seven ranges ran on 2026-10-17 and John ruled on every item the same day (docs/reviews/2026-10-17-rulings.md)."
+
+[[revision]]
+date = 2026-10-17
+field = "estimate"
+old = "Drake 1961 source: Drake and Sobel (1992), pages 55 to 62, and Drake, Vakoch and Dowd (2015)"
+new = "Drake 1961 source: Pearman (1963), page 289"
+why = "Checked 2026-10-17 against Pearman's 1963 account of the meeting, the first printed one, which is openly readable at the Internet Archive; the source line now cites it with its page, in place of Drake and Sobel (1992), whose page numbers came from a secondary summary and which has not been read. The estimate's numbers are unchanged. The method line now gives the arguments the account reports."
+publication = "drake-1961"

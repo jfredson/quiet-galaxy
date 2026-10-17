@@ -17,8 +17,4 @@ factors = ["detectable"]
 explanations = []
 moved_range = false
 
-verify = [
-  "The outside reviewer said the chapter gives 1 for the detectable factor; the chapter's text could not be read (the book is behind a paywall), and its abstract gives no number. Until it is read, the chapter is logged without an estimate.",
-]
-
-notes = "Logged 2026-10-17 on the outside review's item 16 (accepted by John once the figure is read). That chapter 12 is Shostak's, on the detectable factor, and its title and pages were checked on 2026-10-17 against the book's contents page and the Crossref record."
+notes = "Logged 2026-10-17 on the outside review's item 16 (accepted by John once the figure is read). That chapter 12 is Shostak's, on the detectable factor, and its title and pages were checked on 2026-10-17 against the book's contents page and the Crossref record. Searched 2026-10-17 for the chapter's text: the Cambridge Core chapter page (https://doi.org/10.1017/cbo9781139683593.015) shows the abstract only, the Google Books interface refused the query and the Internet Archive holds no copy, so no open source gives the chapter's number. The outside reviewer's statement that it gives 1 is not made in this record, which logs the chapter without an estimate. The abstract adds that the chapter's value of fc matters for SETI experiments because radio or other technology is hardly inevitable even where intelligence is present."
