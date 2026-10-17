@@ -18,10 +18,10 @@ year, above the top of the range this site uses (1 to 10). A possible strong unk
 1.8 MeV is noted; if some of the emission is local the rate sits at the low end of the new range."""
 factors = ["star-formation"]
 explanations = []
-moved_range = false
+moved_range = true
 
 verify = [
   "The conversion of 4 to 8 solar masses a year to about 10 to 20 stars a year is Science News's (Ken Croswell, 2023-02-23), not the paper's; check the paper's own conversion or the initial mass function it assumes.",
 ]
 
-notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict. Flagged for John: the estimate is above the range's top, and whether the range's top should rise is his call (the reading's limits, docs/weekly-reading.md)."
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict. Flagged for John: the estimate is above the range's top, and whether the range's top should rise is his call (the reading's limits, docs/weekly-reading.md). Moved the range on 2026-10-17: John ruled on the outside review that the top of the star-formation range rises from 10 to 20 (moved_range changed from false to true with a changelog line)."

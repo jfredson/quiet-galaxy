@@ -1,6 +1,6 @@
 # Factor record: R*, how many stars are born in the galaxy each year. Layout in docs/record-schema.md.
-# Written 2026-10-16 (Saturday session A, run early at John's ruling). Every range is a first
-# pass until the outside review of the seven ranges has run.
+# Written 2026-10-16 (Saturday session A, run early at John's ruling). The outside review of the
+# seven ranges ran on 2026-10-17 and John ruled on it the same day; this range is "reviewed".
 
 id = "star-formation"
 symbol = "R*"
@@ -15,7 +15,11 @@ and a half to two solar masses a year, which is three or four stars a year once 
 stars are counted. The one real argument is over which rate to use: today's, or the higher
 average over the galaxy's whole life, since the stars that could host a civilisation today
 were mostly born billions of years ago."""
-what_would_move_this = "A new measurement of the Milky Way's present star-formation rate, or of its star-formation history, that falls outside one to ten stars a year."
+what_would_move_this = "A new measurement of the Milky Way's present star-formation rate, or of its star-formation history, that falls outside one to twenty stars a year."
+
+verify = [
+  "Ruiz-Lara and colleagues (2020, ruiz-lara-2020) is logged for this factor, but whether its full text gives a rate for the whole galaxy in stars a year (it reconstructs the star-formation history of a region of about 2,000 parsecs around the Sun, with bursts about 5.7, 1.9 and 1.0 billion years ago) has not been read; the reviewer's remark that the bursts ran at 'about four times the normal rate' was not found in the abstract or in coverage. Until the full text is read there is no estimate to add. Raised 2026-10-17 by the outside review (item 3); open.",
+]
 
 notes = """
 Carl Sagan's version of the equation in Cosmos (1980) replaces this factor with the total number
@@ -23,7 +27,11 @@ of stars in the galaxy and asks what fraction of a planet's life a civilisation 
 numbers do not translate to a rate per year and are not listed here. Westby and Conselice (2020)
 likewise work from the galaxy's star-formation history rather than a single rate. Checked
 2026-10-16: Robitaille and Whitney's 0.68 to 1.45, Licquia and Newman's 1.65 plus or minus 0.19 and their stellar mass of 6.08 plus or minus 1.14 times ten to the tenth solar masses, and Kennicutt and Evans's mean star mass of 0.5 solar masses are all in the papers' own text. Open and not changed here: Drake's 1961 value is recorded as 1 star a year, but the Cambridge abstract of the star-formation chapter of the 2015 Drake volume says 'ten stars per year' and Glade and colleagues (2012, Table 1) give 10; the book could not be opened tonight, so the estimate and the range (whose reasoning does not depend on it) should be revisited once it is. Written
-2026-10-16."""
+2026-10-16. Outside review, 2026-10-17: the top of the range rose from 10 to 20 (items 2 and 4); the
+reviewer's proposal to change the shape to uniform (item 1) was declined because a uniform span from 1
+to 20 puts more than half its weight above 10, where one method sits and five do not, whereas the
+question is still which power of ten (headline with a uniform shape on a scratch copy: 56% alone in
+the galaxy); ruled by John 2026-10-17."""
 
 [[estimate]]
 who = "Frank Drake and the Green Bank meeting"
@@ -80,20 +88,25 @@ method = "Counted the massive, short-lived stars within about three thousand lig
 
 [range]
 low = 1
-high = 10
+high = 20
 shape = "log-uniform"
-status = "first-pass"
-set_on = 2026-10-16
-sources = ["sandberg-2018"]
+status = "reviewed"
+set_on = 2026-10-17
+sources = ["sandberg-2018", "siegert-2023"]
 why = """
 Narrower than the 2018 paper's 1 to 100: the top of their span is far above any measurement of
 this galaxy. Measurements of today's rate (Robitaille and Whitney 2010, Licquia and Newman
-2015) cluster between 1.4 and 3.7 stars a year. The range reaches up to 10 because the stars
-that could host a civilisation today were mostly born long ago, when the galaxy made stars
-faster: spreading its roughly six times ten to the tenth solar masses of stars over its ten
-billion years gives an average of about six solar masses, or ten stars, a year. Drake's 1961
-value of one star a year is the floor. Evenly spread across powers of ten, the same shape the
-2018 paper used, because the question is which power of ten, not which digit."""
+2015, Quintana and others 2025) cluster between 1.3 and 3.7 stars a year. The range reaches up
+to 20 for two reasons. The stars that could host a civilisation today were mostly born long ago,
+when the galaxy made stars faster: spreading its roughly six times ten to the tenth solar masses
+of stars over its ten billion years gives an average of about six solar masses, or ten stars, a
+year. And the 2023 measurement of the galaxy's aluminium-26 glow (Siegert and others) gives 8 to
+16 stars a year, which a range meant to cover the published argument has to hold; it is one
+method, and its authors flag a possible foreground that could make the true figure lower, so 20,
+a round step, is used rather than 16. Drake's 1961 value of one star a year is the floor, and the
+2025 census (1.3) sits just above it. Evenly spread across powers of ten, the same shape the 2018
+paper used, because the question is which power of ten, not which digit. The top was 10 until
+2026-10-17, when it rose to 20 (ruled by John 2026-10-17 on the outside review, items 2 and 4)."""
 
 [[revision]]
 date = 2026-10-16
@@ -102,3 +115,25 @@ old = "four published estimates"
 new = "six published estimates: the 2023 aluminium-26 measurement (8 to 16 stars a year) and the 2025 massive-star census (1.3 a year) added"
 why = "The weekly reading of 2026-10-16 found two measurements the record did not carry and flagged the range for John. He ruled on 2026-10-16: add both to the estimate list and leave the range's top at 10 until the outside review of the seven ranges."
 publication = "siegert-2023"
+
+[[revision]]
+date = 2026-10-17
+field = "range.high"
+old = 10
+new = 20
+why = "Ruled by John 2026-10-17 on the outside review (items 2 and 4 of docs/reviews/2026-10-17-rulings.md): the 2023 aluminium-26 measurement gives 8 to 16 stars a year, above the old top of 10, and the weekly reading of 2026-10-16 had flagged the same. The floor of 1 holds (the 2025 census gives 1.3) and the shape stays log-uniform."
+publication = "siegert-2023"
+
+[[revision]]
+date = 2026-10-17
+field = "what_would_move_this"
+old = "falls outside one to ten stars a year"
+new = "falls outside one to twenty stars a year"
+why = "Ruled by John 2026-10-17 on the outside review (item 4): the test line names the range's ends, so it follows the top."
+
+[[revision]]
+date = 2026-10-17
+field = "range.status"
+old = "first-pass"
+new = "reviewed"
+why = "The outside review of the seven ranges ran on 2026-10-17 and John ruled on every item the same day (docs/reviews/2026-10-17-rulings.md)."

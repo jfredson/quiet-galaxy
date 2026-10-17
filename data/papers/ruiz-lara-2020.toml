@@ -1,0 +1,25 @@
+# Publication record. Layout in docs/record-schema.md. Logged on 2026-10-17 after the outside review of the
+# seven ranges (docs/reviews/2026-10-17-rulings.md; ruled by John the same day). Append-only.
+
+id = "ruiz-lara-2020"
+date = "2020-05-25"
+added_on = 2026-10-17
+authors = ["Tomás Ruiz-Lara", "Carme Gallart", "Edouard J. Bernard", "Santi Cassisi"]
+title = "The recurrent impact of the Sagittarius dwarf on the star formation history of the Milky Way"
+venue = "Nature Astronomy 4, 965-973 (2020)"
+link = "https://doi.org/10.1038/s41550-020-1097-0"
+finding = """
+Rebuilds the history of star formation in a region of about 2,000 parsecs around the Sun from the
+European space telescope Gaia's measurements, and finds three bursts of star formation, about 5.7,
+1.9 and 1.0 billion years ago, which the authors tie to the Sagittarius dwarf galaxy passing through
+the Milky Way's disc. It is a history of the region round the Sun, not a rate in stars a year for the
+whole galaxy, so it gives no number for the star-formation estimate list."""
+factors = ["star-formation"]
+explanations = []
+moved_range = false
+
+verify = [
+  "The outside reviewer said the bursts ran at about four times the normal rate; that figure was not found in the abstract or in coverage of the paper, and the full text has not been read for a rate for the whole galaxy. Until it is, the paper is logged without an estimate.",
+]
+
+notes = "Logged 2026-10-17 on the outside review's item 3 (accepted in part by John: logged as a publication, added as an estimate only if the full text gives a galaxy-wide rate). Authors, title, venue, pages and the three burst ages checked on 2026-10-17 against the Crossref record and the paper's abstract as carried by the Instituto de Astrofisica de Canarias page."
