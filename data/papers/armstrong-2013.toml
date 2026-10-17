@@ -1,0 +1,25 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "armstrong-2013"
+date = "2013-08"
+added_on = 2026-10-16
+authors = ["Stuart Armstrong", "Anders Sandberg"]
+title = "Eternity in six hours: Intergalactic spreading of intelligent life and sharpening the Fermi paradox"
+venue = "Acta Astronautica 89, 1–13 (2013)"
+link = "https://doi.org/10.1016/j.actaastro.2013.04.002"
+finding = """
+Using only physics and engineering we already understand in outline (dismantling the
+planet Mercury for materials, solar-powered launchers, self-copying probes slowed by
+magnetic sails), the authors show that a single civilisation could launch probes to
+every galaxy within reach, millions of them, and that the whole launch would take about
+six hours of the Sun's energy output. The galaxy is therefore not the right scale for
+the paradox: if even one civilisation in a billion galaxies had ever chosen to expand,
+its probes should be here. That makes explanations that rely on every civilisation
+independently choosing not to spread much harder to hold, and pushes the weight onto
+explanations where civilisations are very rare or do not last."""
+factors = ["detectable", "intelligence", "lifetime"]
+explanations = ["interstellar-travel-impractical", "expansion-stalls", "rare-intelligence", "great-filter-ahead"]
+moved_range = false
+
+notes = "Written 2026-10-16. The title's six hours is the energy budget, not the travel time."

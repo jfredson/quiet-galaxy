@@ -1,0 +1,23 @@
+# Library record: Greg Bear's novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "the-forge-of-god"
+title = "The Forge of God (and its sequel Anvil of Stars, 1992)"
+maker = "Greg Bear"
+year = 1987
+kind = "book"
+explanations = ["berserkers", "dark-forest", "shouting-is-costly"]
+factors = ["lifetime", "detectable"]
+link = "https://en.wikipedia.org/wiki/The_Forge_of_God"
+how = """
+Earth is destroyed, almost casually, by self-replicating machines that scour the galaxy
+for any species that has started to make noise. A character puts the moral in one line:
+the galaxy is a forest full of predators, and a young species that calls out is a fawn
+bleating. Written twenty years before Liu Cixin's trilogy, it is the earliest full novel
+of the idea that the silence is self-preservation and that the loud do not survive. The
+sequel sends the survivors' children out to find the makers of the machines and asks
+whether answering a massacre with a massacre is justice; together the two books are the
+most complete fictional treatment of killer machines as a rule the galaxy lives under."""
+worth_the_time = "Yes, for readers who want the dark forest argument before it had that name, in a book that does not flinch from the ending; the sequel is for those who want the moral question too."
+
+notes = "Written 2026-10-16. The dark forest record's verify list asks whether this book is a fair example of 'punish the loud' and whether 1987 is right; the year is right, and the book is a fair example."

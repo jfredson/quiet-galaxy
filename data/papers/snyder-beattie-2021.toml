@@ -1,0 +1,25 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "snyder-beattie-2021"
+date = "2021-03"
+added_on = 2026-10-16
+authors = ["Andrew E. Snyder-Beattie", "Anders Sandberg", "K. Eric Drexler", "Michael B. Bonsall"]
+title = "The Timing of Evolutionary Transitions Suggests Intelligent Life Is Rare"
+venue = "Astrobiology 21, 265–278 (2021)"
+link = "https://doi.org/10.1089/ast.2019.2149"
+finding = """
+Carter's 1983 timing argument redone with modern dates for Earth's big steps (the start
+of life, oxygen-making photosynthesis, complex cells, animals, and intelligence) and with
+the Earth's remaining habitable time, which the authors take to be around a billion
+years, not five. If those steps were each easy, they would have happened early and
+quickly; that they took most of Earth's habitable span suggests each would typically
+take far longer than a planet stays habitable. Running the numbers, the authors find
+that the expected time for the whole sequence exceeds Earth's habitable lifetime by a
+large factor, and conclude that intelligent life is probably exceptionally rare, while
+being clear that the inference rests on Earth being an ordinary case."""
+factors = ["life", "intelligence"]
+explanations = ["rare-intelligence", "complex-cells-are-rare", "rare-life", "great-filter-behind-us"]
+moved_range = false
+
+notes = "Written 2026-10-16. A companion to carter-1983 and the quantitative counterweight to kipping-2020."

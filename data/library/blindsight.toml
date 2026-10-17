@@ -1,0 +1,23 @@
+# Library record: Peter Watts's novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "blindsight"
+title = "Blindsight"
+maker = "Peter Watts"
+year = 2006
+kind = "book"
+explanations = ["rare-intelligence", "shouting-is-costly"]
+factors = ["intelligence", "detectable"]
+link = "https://en.wikipedia.org/wiki/Blindsight_(Watts_novel)"
+how = """
+The novel's aliens are more capable than humans at every task that matters and are not
+conscious at all: they process, build and fight without anyone being home. Watts uses them
+to pull apart two things the equation runs together, intelligence and the kind of
+self-aware mind that would want to send a message. The aliens treat Earth's broadcasts as a
+pointless and therefore hostile waste of energy, which is the clearest fictional statement
+of the idea that shouting into the galaxy is a cost most minds would never pay. It is also
+a sustained argument that the factor for intelligence may be large while the factor for
+detectable, talkative civilisations stays small."""
+worth_the_time = "Yes, for readers who want the bleakest serious version of the argument and do not mind a dense, difficult book; the end notes are half the value."
+
+notes = "Written 2026-10-16."

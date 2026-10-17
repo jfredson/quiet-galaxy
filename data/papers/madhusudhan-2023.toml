@@ -1,0 +1,28 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "madhusudhan-2023"
+date = "2023-10-10"
+added_on = 2026-10-16
+authors = ["Nikku Madhusudhan", "Subhajit Sarkar", "Savvas Constantinou", "Måns Holmberg", "Anjali A. A. Piette", "Julianne I. Moses"]
+title = "Carbon-bearing Molecules in a Possible Hycean Atmosphere"
+venue = "The Astrophysical Journal Letters 956, L13 (2023)"
+link = "https://doi.org/10.3847/2041-8213/acf577"
+finding = """
+Webb's first spectrum of K2-18 b, a planet about eight times Earth's mass in the
+habitable zone of a red dwarf 124 light years away. The authors report methane and carbon
+dioxide in its atmosphere (methane at about five standard deviations of confidence,
+carbon dioxide at about three) and no ammonia, which they argue fits a world with a
+hydrogen atmosphere over a liquid-water ocean, a type they call 'hycean'. They also
+report a weak hint of dimethyl sulfide, a gas that on Earth is made only by living
+things, and are careful to call it tentative. The paper started the two-year argument,
+logged in the entries that follow, about whether this planet has an ocean at all and
+whether the hint was real."""
+factors = ["life", "habitable-planets"]
+explanations = ["rare-life", "rare-earth"]
+moved_range = false
+
+verify = [
+  "The confidence levels for methane and carbon dioxide and the planet's distance and mass; from memory of the abstract and press coverage.",
+]
+notes = "Written 2026-10-16. The first of six K2-18 b entries logged together on 2026-10-16: this claim, the 2024 pushback on the ocean (wogan-2024), the 2025 stronger claim (madhusudhan-2025) and three reanalyses that found no significant signal (schmidt-2025, taylor-2025, luque-2025)."

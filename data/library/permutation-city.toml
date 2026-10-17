@@ -1,0 +1,24 @@
+# Library record: Greg Egan's novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "permutation-city"
+title = "Permutation City"
+maker = "Greg Egan"
+year = 1994
+kind = "book"
+explanations = ["simulation", "inward-turn", "they-became-machines"]
+factors = ["detectable"]
+link = "https://en.wikipedia.org/wiki/Permutation_City"
+how = """
+Copies of people run as software, and the book asks what it would take for them to be
+safe from being switched off. Its answer is to build a universe of their own, with its
+own simulated physics, and move in, leaving the original world behind. Inside it, a
+simulated chemistry evolves its own life, which eventually works out that it was made.
+Egan published this nine years before the philosophical paper that made the simulation
+argument famous, and the book is the fullest fictional account of why a civilisation that
+can build worlds might prefer them to the one it was born in. For the equation it is the
+inward turn taken to its limit, and an illustration of the simulation explanation from
+both sides of the glass."""
+worth_the_time = "Yes, for readers who want the simulation idea taken seriously rather than used for a twist; it is demanding and the second half is unlike anything else."
+
+notes = "Written 2026-10-16."

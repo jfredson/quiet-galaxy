@@ -1,0 +1,27 @@
+# Library record: Isaac Arthur's video series. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "isaac-arthur-fermi-paradox"
+title = "Science & Futurism with Isaac Arthur: the Fermi Paradox series"
+maker = "Isaac Arthur (YouTube channel)"
+year = 2016
+kind = "video"
+explanations = ["rare-earth", "aestivation", "berserkers", "zoo-hypothesis", "interstellar-travel-impractical", "expansion-stalls", "dark-forest", "self-destruction"]
+factors = ["detectable", "lifetime"]
+link = "https://www.youtube.com/@isaacarthurSFIA"
+how = """
+A long-running set of half-hour episodes, each taking one proposed explanation for the
+silence and testing it against what we know about physics, engineering and how living
+things spread. Arthur's standing argument is that most 'they are hiding' and 'they all
+died' explanations fail the same test: they need every civilisation, without exception, to
+behave the same way for millions of years, and one exception is enough to fill the galaxy.
+He is therefore most sympathetic to the explanations that make us rare or early. The
+series is the most thorough plain-spoken survey of the catalogue anywhere, and the place
+to go when a single explanation needs an hour rather than a paragraph. The year given is
+when the series began; it has continued since."""
+worth_the_time = "Yes, as a reference rather than a binge: pick the episode for the explanation you are weighing, and start with the 'Fermi Paradox Compendium' episode."
+
+verify = [
+  "That the series began in 2016 and that an episode titled 'Fermi Paradox Compendium' exists under that name; check against the channel's playlist.",
+]
+notes = "Written 2026-10-16."

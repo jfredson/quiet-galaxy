@@ -1,0 +1,27 @@
+# Library record: Olaf Stapledon's novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "star-maker"
+title = "Star Maker"
+maker = "Olaf Stapledon"
+year = 1937
+kind = "book"
+explanations = ["civilisations-burn-out", "self-destruction", "transcension", "rare-intelligence"]
+factors = ["intelligence", "lifetime"]
+link = "https://en.wikipedia.org/wiki/Star_Maker"
+how = """
+A man on a hill outside London leaves his body and travels the universe as a disembodied
+mind, gathering other minds as he goes, through the whole history of life in the galaxy
+and then of the cosmos. Written before the equation, before radio searches, before anyone
+had found a planet outside the solar system, it already contains most of the catalogue:
+worlds where intelligence never gets past a certain point, worlds that destroy themselves
+at the moment of reaching space, a galactic community that forms late and then faces the
+end of the stars. Freeman Dyson said the idea of a shell built around a star to catch its
+light, now called a Dyson sphere, came from this book. It is the ancestor of every work
+in this library that takes the long view."""
+worth_the_time = "Yes, for readers with patience for a book that has no characters and spans the age of the universe; it is short and nothing written since has matched its scale."
+
+verify = [
+  "That Dyson credited Star Maker as the source of the Dyson sphere idea; the attribution is widely repeated and should be checked against his own words.",
+]
+notes = "Written 2026-10-16."

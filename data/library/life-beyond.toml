@@ -1,0 +1,27 @@
+# Library record: John D. Boswell's film series. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "life-beyond"
+title = "Life Beyond (chapters 1 to 3)"
+maker = "John D. Boswell (melodysheep, YouTube channel)"
+year = 2019
+kind = "video"
+explanations = ["rare-earth", "great-filter-ahead", "they-became-machines", "transcension", "not-looked-long-enough"]
+factors = ["habitable-planets", "life", "intelligence", "detectable"]
+link = "https://www.youtube.com/watch?v=SUK7Ivdl8vc"
+how = """
+Three films of half an hour each, built from narration by scientists over simulated
+images of alien worlds and minds. The first chapter walks through the Drake Equation
+factor by factor, from the number of planets to the chance that life starts, and is
+careful to say which numbers are measured and which are guesses. The second imagines what
+life elsewhere might look like and how different it could be from ours; the third follows
+intelligence past biology into machines and beyond, and ends on the silence. The series
+is the most cinematic plain-language introduction to the equation and the catalogue, and
+it does not pretend to know the answer. The year given is for the first chapter; the
+third appeared in 2022."""
+worth_the_time = "Yes, for a first evening with the subject, in the order they were made; they are slow by design and best watched on a large screen."
+
+verify = [
+  "The release years of the three chapters (2019, 2020, 2022) and that the link points at chapter 1; check against the channel.",
+]
+notes = "Written 2026-10-16."

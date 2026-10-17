@@ -1,0 +1,28 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "tipler-1980"
+date = "1980"
+added_on = 2026-10-16
+authors = ["Frank J. Tipler"]
+title = "Extraterrestrial Intelligent Beings do not Exist"
+venue = "Quarterly Journal of the Royal Astronomical Society 21, 267–281 (1980)"
+link = "https://adsabs.harvard.edu/full/1980QJRAS..21..267T"
+finding = """
+Tipler sharpens Hart's argument by removing the need for anyone to travel. A civilisation
+with our level of rocketry plus a machine able to copy itself from raw materials (the
+self-reproducing probe that John von Neumann described) could send one probe, which
+builds more at each star, and have a probe at every star in the galaxy within about 300
+million years for the cost of a single launch. Since no such probes are in the solar
+system, he concludes that no other technological civilisation has ever arisen in the
+galaxy, and that the radio search is founded on a mistake. The paper is where the
+self-copying probe entered the debate, both as the reason the galaxy should be full and,
+in later hands, as the thing that might be keeping it empty."""
+factors = ["intelligence", "detectable"]
+explanations = ["rare-intelligence", "berserkers", "interstellar-travel-impractical", "they-are-already-here"]
+moved_range = false
+
+verify = [
+  "That Tipler's galaxy-filling time is about 300 million years; the figure is quoted from memory.",
+]
+notes = "Sagan and Newman answered it in 1983 ('The Solipsist Approach to Extraterrestrial Intelligence', same journal, 24, 113–121), arguing that a civilisation that would build such probes would not survive them."

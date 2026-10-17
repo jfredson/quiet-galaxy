@@ -1,0 +1,25 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "smart-2012"
+date = "2012-09"
+added_on = 2026-10-16
+authors = ["John M. Smart"]
+title = "The transcension hypothesis: Sufficiently advanced civilizations invariably leave our universe, and implications for METI and SETI"
+venue = "Acta Astronautica 78, 55–68 (2012)"
+link = "https://doi.org/10.1016/j.actaastro.2011.11.006"
+finding = """
+Smart proposes that technological civilisations do not expand outward but inward: each
+step of progress packs more computation into less space, time, energy and matter, and
+the end of that road is something like a black hole, where a civilisation would find the
+densest possible computing and, perhaps, a way out of this universe altogether. If that
+is the universal pattern, every advanced civilisation disappears from view at roughly
+the same stage, shortly after ours, and the galaxy's silence is what a developmental law
+looks like from outside. He draws the practical conclusion that sending messages is
+pointless and that the search should look for the brief signatures of civilisations in
+transition."""
+factors = ["detectable", "lifetime"]
+explanations = ["transcension", "inward-turn", "they-became-machines"]
+moved_range = false
+
+notes = "Written 2026-10-16. The idea is the one most often illustrated in fiction (Clarke, Banks, Vinge) and least often taken up in the research literature."

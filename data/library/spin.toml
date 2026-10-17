@@ -1,0 +1,24 @@
+# Library record: Robert Charles Wilson's novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "spin"
+title = "Spin"
+maker = "Robert Charles Wilson"
+year = 2005
+kind = "book"
+explanations = ["they-became-machines", "planetarium", "civilisations-burn-out"]
+factors = ["lifetime"]
+link = "https://en.wikipedia.org/wiki/Spin_(novel)"
+how = """
+One night the stars go out. Earth has been wrapped in a membrane by someone, and outside
+it time runs a hundred million times faster, so the Sun will die within a human lifetime.
+The someone turns out to be a galaxy-wide ecology of self-replicating machines, older than
+any species, that have outlived all their makers and now, without anything we would call a
+purpose, preserve young civilisations from the fate that took the old ones. The book is a
+rare treatment of two ideas at once: that what fills the galaxy may be machinery with no
+one behind it, and that a young species' view of the sky could be deliberately managed.
+It is told from the ground, through three people who grow up under the dark sky, which is
+why it won the Hugo award."""
+worth_the_time = "Yes, for readers who want the human scale kept in view; it is a quiet, well-written novel with a very large idea behind it, and it stands alone despite two sequels."
+
+notes = "Written 2026-10-16."

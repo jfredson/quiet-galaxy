@@ -1,0 +1,25 @@
+# Library record: Alastair Reynolds's series. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "revelation-space"
+title = "Revelation Space (and its sequels Redemption Ark and Absolution Gap)"
+maker = "Alastair Reynolds"
+year = 2000
+kind = "book"
+explanations = ["berserkers", "hostile-galaxy", "dark-forest"]
+factors = ["lifetime", "detectable"]
+link = "https://en.wikipedia.org/wiki/Revelation_Space"
+how = """
+Reynolds was a working astronomer when he wrote these, and the series is built on the
+Fermi question. The galaxy's ruins are explained by the Inhibitors, machines left over
+from an ancient war whose job is to watch for any species that starts travelling between
+stars and cull it before it spreads. They do not hunt everyone, only the loud and the
+expanding, so quiet, slow, home-bound civilisations survive longer. That makes the books
+an unusually careful version of the self-replicating killer idea: the machines have a
+reason (a coming galactic catastrophe they mean to steer life through), a trigger (noise
+and expansion), and a cost (they are failing). The series also shows what a galaxy under
+such a rule looks like from inside: silence, and a few survivors who have learned not to
+be noticed."""
+worth_the_time = "Yes, for readers who want the hard-science version of the killer machines and are ready for long, cold books; Revelation Space alone gives the premise, Redemption Ark the machines themselves."
+
+notes = "Written 2026-10-16."

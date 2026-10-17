@@ -1,0 +1,24 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "landis-1998"
+date = "1998"
+added_on = 2026-10-16
+authors = ["Geoffrey A. Landis"]
+title = "The Fermi Paradox: An Approach Based on Percolation Theory"
+venue = "Journal of the British Interplanetary Society 51, 163–166 (1998)"
+link = "https://ntrs.nasa.gov/citations/20020014807"
+finding = """
+Landis, a NASA physicist, models settlement of the galaxy the way physicists model a
+liquid seeping through rock. Each settled star either sends out settlers to its
+neighbours or does not, with some fixed probability; if that probability is below a
+critical value, the settled region stops growing by itself and leaves large voids, and
+if it is above, the galaxy fills. The point is that Hart's and Tipler's argument assumes
+every colony keeps colonising, forever. Relax that one assumption and a galaxy can hold
+many civilisations, some of them very old, with unsettled regions the size of our
+neighbourhood, without any of them choosing to hide."""
+factors = ["detectable"]
+explanations = ["expansion-stalls", "interstellar-travel-impractical"]
+moved_range = false
+
+notes = "The model has been extended several times, notably by Carroll-Nellenback, Frank, Wright and Scharf in 'The Fermi Paradox and the Aurora Effect' (Astronomical Journal 158, 117, 2019), which adds moving stars and settlements that die out."

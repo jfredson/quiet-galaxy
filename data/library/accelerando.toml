@@ -1,0 +1,24 @@
+# Library record: Charles Stross's novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "accelerando"
+title = "Accelerando"
+maker = "Charles Stross"
+year = 2005
+kind = "book"
+explanations = ["inward-turn", "they-became-machines", "transcension", "interstellar-travel-impractical"]
+factors = ["detectable"]
+link = "https://en.wikipedia.org/wiki/Accelerando"
+how = """
+Three generations of one family live through the century in which humanity's machines
+outgrow it, dismantle the inner planets to build a thinking shell around the Sun, and lose
+interest in anything as slow as a journey to another star. Stross's answer to the Fermi
+question is stated outright by his characters: a civilisation that converts its solar
+system into computing power does not travel, because every light-year of distance is an
+unbearable delay to a mind that thinks in nanoseconds, and it does not broadcast, because
+it has nothing to say to anything that slow. The old civilisations are all still at home,
+turned inward, and the galaxy's silence is the sound of everyone minding their own
+business at the speed of light. The chapters were published as stories from 2001."""
+worth_the_time = "Yes, for readers who want the inward turn argued with energy and jokes; it is dense with ideas of its moment and some have aged, but the central argument has not."
+
+notes = "Written 2026-10-16."

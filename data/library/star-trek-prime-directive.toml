@@ -1,0 +1,24 @@
+# Library record: Star Trek's rule of non-interference. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "star-trek-prime-directive"
+title = "Star Trek and the Prime Directive"
+maker = "Gene Roddenberry and successors (Paramount)"
+year = 1966
+kind = "television"
+explanations = ["zoo-hypothesis"]
+factors = ["detectable"]
+link = "https://en.wikipedia.org/wiki/Prime_Directive"
+how = """
+The Federation's first rule forbids its starships from interfering with a civilisation
+that has not yet built its own faster-than-light drive, and dozens of episodes across
+sixty years turn on whether to break it. The rule is the zoo hypothesis written into
+law: a galaxy full of advanced species could be watching a young one and keeping quiet
+on purpose, not out of fear but out of policy, until the young one reaches some threshold.
+Star Trek: First Contact (1996) shows the threshold itself, the first warp flight, as the
+moment the watchers finally land. The series is where most people first met the idea,
+even if the catalogue traces it to John Ball's 1973 paper. The year given is the original
+series' first season, where the rule is first named."""
+worth_the_time = "Dip in rather than binge: the Next Generation episodes 'Who Watches the Watchers' (1989) and 'First Contact' (1991) carry the whole argument in two hours."
+
+notes = "Written 2026-10-16."

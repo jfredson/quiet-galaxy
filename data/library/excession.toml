@@ -1,0 +1,25 @@
+# Library record: Iain M. Banks's Culture novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "excession"
+title = "Excession (and the Culture novels, 1987 to 2012)"
+maker = "Iain M. Banks"
+year = 1996
+kind = "book"
+explanations = ["transcension", "zoo-hypothesis", "they-became-machines", "inward-turn"]
+factors = ["detectable", "lifetime"]
+link = "https://en.wikipedia.org/wiki/Excession"
+how = """
+The Culture is a galactic civilisation run by its own vast machine minds, which keep
+humans around out of affection. Across the series, old civilisations do not die: they
+Sublime, departing the ordinary universe for a higher-dimensional existence from which
+they almost never return and about which they say almost nothing. Excession is the book
+where that background comes forward, when an object appears that is older than the
+universe and the Minds have to decide what to do about something they cannot understand.
+Banks's galaxy also has a working rule of non-interference with young species, enforced
+and broken by the Culture's Contact section, which makes the series a long argument about
+whether watching is kinder than talking. Taken together it is the richest picture of a
+galaxy that is full, old and quiet because its elders have left."""
+worth_the_time = "Yes, for readers who want the optimistic version of machine civilisation; start with The Player of Games (1988) or Consider Phlebas (1987) and come to Excession later."
+
+notes = "Written 2026-10-16."

@@ -1,0 +1,24 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "gray-2015"
+date = "2015-03"
+added_on = 2026-10-16
+authors = ["Robert H. Gray"]
+title = "The Fermi Paradox Is Neither Fermi's Nor a Paradox"
+venue = "Astrobiology 15, 195–199 (2015)"
+link = "https://doi.org/10.1089/ast.2014.1247"
+finding = """
+A history paper that checks the story. Going back to the recollections of the people at
+the 1950 Los Alamos lunch where Fermi asked 'where is everybody?', Gray finds that Fermi
+was asking about interstellar travel, not doubting that other civilisations exist, and
+that the argument now called the Fermi paradox (they would be here by now, so they do not
+exist) was made by Hart in 1975 and Tipler in 1980. He also argues it is not a paradox
+but an argument with disputable premises, mainly that every civilisation would colonise
+and that colonisation would be fast and complete. The paper is the reason this project
+calls the thing the silence rather than the paradox where it can."""
+factors = ["detectable"]
+explanations = ["not-looked-long-enough", "expansion-stalls", "interstellar-travel-impractical"]
+moved_range = false
+
+notes = "Written 2026-10-16. Gray's own suggested name for the argument is the 'Hart-Tipler argument'."

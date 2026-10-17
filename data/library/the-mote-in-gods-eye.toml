@@ -1,0 +1,23 @@
+# Library record: Niven and Pournelle's novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "the-mote-in-gods-eye"
+title = "The Mote in God's Eye"
+maker = "Larry Niven and Jerry Pournelle"
+year = 1974
+kind = "book"
+explanations = ["civilisations-burn-out", "expansion-stalls", "self-destruction"]
+factors = ["lifetime"]
+link = "https://en.wikipedia.org/wiki/The_Mote_in_God%27s_Eye"
+how = """
+Humans make first contact with the Moties, a species sealed in one star system by an
+accident of the book's travel physics: their only way out leads straight into a red
+giant. Trapped, and biologically unable to stop breeding, they have risen to high
+technology and collapsed back to savagery so many times that they keep museums for the
+next cycle to rebuild from. The book is the best fictional study of a civilisation whose
+lifetime factor is short not because it dies once but because it can never stay up, and
+of how a species can be ancient, brilliant and still never reach the stars. The humans'
+dilemma, whether to let them out, is the zoo hypothesis seen from the keeper's side."""
+worth_the_time = "Yes, for anyone interested in why a civilisation might never leave home; the human characters are of their time, the Moties are not."
+
+notes = "Written 2026-10-16."

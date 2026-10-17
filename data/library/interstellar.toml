@@ -1,0 +1,23 @@
+# Library record: Christopher Nolan's film. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "interstellar"
+title = "Interstellar"
+maker = "Christopher Nolan"
+year = 2014
+kind = "film"
+explanations = ["we-are-early", "zoo-hypothesis"]
+factors = ["lifetime"]
+link = "https://en.wikipedia.org/wiki/Interstellar_(film)"
+how = """
+A dying Earth, a wormhole that someone placed near Saturn, and a crew sent through it to
+find a new home. Through most of the film the unseen helpers are 'they', watchers who open
+doors at the right moment, and the film turns that expectation over at the end: 'they' are
+us, far in the future, reaching back. It is the watcher story told with no aliens in it, and
+so an illustration of the idea that we may be among the first, with nobody older to find.
+It also plays the last factor straight: the whole plot is a species trying to extend how
+long it lasts. The science advice came from the physicist Kip Thorne, and the black hole on
+screen is drawn from his calculations."""
+worth_the_time = "Yes, for the visual argument and for the ending's turn; readers who want the explanations rather than the spectacle can skip it."
+
+notes = "Written 2026-10-16."

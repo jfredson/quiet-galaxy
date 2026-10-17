@@ -1,0 +1,23 @@
+# Library record: James S. A. Corey's novels and the television series. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "the-expanse"
+title = "The Expanse (novels 2011 to 2021; television 2015 to 2022)"
+maker = "James S. A. Corey (Daniel Abraham and Ty Franck); Syfy and Amazon (television)"
+year = 2011
+kind = "book"
+explanations = ["hostile-galaxy", "great-filter-ahead", "civilisations-burn-out"]
+factors = ["lifetime"]
+link = "https://en.wikipedia.org/wiki/The_Expanse_(novel_series)"
+how = """
+Humans spread through the solar system and stumble on a tool left by a civilisation that
+built a network of gates across a thousand star systems two billion years ago. That
+civilisation is gone, and the series slowly reveals that it was killed by something it
+reached into without understanding, and that the same thing is still there. The
+background story is a study of the last factor in the equation: a species that solved
+travel between the stars and was still erased, with the galaxy left quiet and the gates
+still standing. The novels say more than the show about what the builders were and how
+they ended. The year given is for the first novel, Leviathan Wakes."""
+worth_the_time = "Yes, for readers who want the long version with a plausible solar-system politics in front and the dead civilisation behind; the television series is a faithful shorter route through the first six books."
+
+notes = "Written 2026-10-16."

@@ -1,0 +1,27 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "schmidt-2025"
+date = "2025-01-30"
+added_on = 2026-10-16
+authors = ["Stephen P. Schmidt", "Kevin B. Stevenson", "and others"]
+title = "A Comprehensive Reanalysis of K2-18 b's JWST NIRISS and NIRSpec Transmission Spectrum"
+venue = "arXiv:2501.18477 (2025); later published in The Astronomical Journal"
+link = "https://arxiv.org/abs/2501.18477"
+finding = """
+An independent group reprocessed the 2023 Webb data on K2-18 b from the raw frames up,
+with several different pipelines, before the 2025 claim appeared. They confirm methane
+and find the evidence for carbon dioxide weaker than first reported, and they find no
+statistically significant sign of dimethyl sulfide: the hint in the original paper
+depends on choices made in reducing the data and does not survive other reasonable
+choices. The paper is the first of the reanalyses and set the pattern for the ones that
+followed: the planet has an atmosphere with methane in it, and the rest is not yet
+established."""
+factors = ["life", "habitable-planets"]
+explanations = ["rare-life"]
+moved_range = false
+
+verify = [
+  "The paper's exact title, its author list beyond the first two, and where and when it was finally published; from memory of the preprint.",
+]
+notes = "Written 2026-10-16."

@@ -1,0 +1,28 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "madhusudhan-2025"
+date = "2025-04-17"
+added_on = 2026-10-16
+authors = ["Nikku Madhusudhan", "Savvas Constantinou", "Måns Holmberg", "Subhajit Sarkar", "Anjali A. A. Piette", "Julianne I. Moses"]
+title = "New Constraints on DMS and DMDS in the Atmosphere of K2-18 b from JWST MIRI"
+venue = "The Astrophysical Journal Letters 983, L40 (2025)"
+link = "https://doi.org/10.3847/2041-8213/adc1c8"
+finding = """
+A second look at K2-18 b with a different Webb instrument, working at longer infrared
+wavelengths than the 2023 observation. The authors report a feature they attribute to
+dimethyl sulfide or the related dimethyl disulfide, at about three standard deviations
+of confidence and at concentrations thousands of times higher than Earth's, and say that
+no known process other than life produces so much. The announcement was reported
+worldwide as the strongest hint yet of life beyond Earth. Three standard deviations is
+below the level physicists treat as a discovery, the authors said so, and within weeks
+other groups had reanalysed the same data and found the feature could not be
+distinguished from noise or from other gases (the three entries that follow)."""
+factors = ["life"]
+explanations = ["rare-life"]
+moved_range = false
+
+verify = [
+  "The confidence level of about three standard deviations and the volume and article number; from memory of the paper and its press release.",
+]
+notes = "Written 2026-10-16."

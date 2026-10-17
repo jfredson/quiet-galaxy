@@ -1,0 +1,24 @@
+# Library record: BioWare's game trilogy. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "mass-effect"
+title = "Mass Effect (trilogy, 2007 to 2012)"
+maker = "BioWare"
+year = 2007
+kind = "game"
+explanations = ["berserkers", "civilisations-burn-out", "they-became-machines"]
+factors = ["lifetime"]
+link = "https://en.wikipedia.org/wiki/Mass_Effect"
+how = """
+A galaxy full of species sharing a network of relays they did not build, and a hidden
+truth: every fifty thousand years a fleet of machines called the Reapers returns from
+the dark between galaxies and harvests every civilisation advanced enough to use the
+network, then withdraws to let the next crop grow. The relays themselves are the trap;
+they steer each new civilisation down the same technological path so the harvest is
+easy. It is the killer-machines explanation turned into a cycle, with the lifetime factor
+capped by design rather than by accident, and the player spends three games finding out
+what the Reapers are and why they do it. The first game sets the premise; the third gives
+the makers' reasoning, which many players found less convincing than the mystery."""
+worth_the_time = "Yes, for players; the premise is the best use of the Fermi question in a game, and the first game carries it. Non-players can read a plot summary and lose little of the argument."
+
+notes = "Written 2026-10-16."
