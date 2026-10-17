@@ -1,0 +1,64 @@
+# Outside-model review of the seven ranges: protocol
+
+The kickoff's after-the-weekend item 2 (`docs/2026-10-16-kickoff.md`): before any range is promoted past "first pass", the seven ranges are put in front of a model from another lab with a fixed brief, and the author rules on every item it raises. Proposed 2026-10-17, adapted from The Belt Equation's review protocol of 2026-09-19 (`~/Code/belt-equation/docs/reviews/protocol.md`), and run the same day as proposed at the master session's instruction, so that John's ruling on the protocol can take the first run's results into account. Each design choice is listed at the end with a confidence level and its strongest alternative, per the ground rule of 2026-09-08. **Nothing here is ruled until John says so.**
+
+## Purpose
+
+Every range was proposed by one model (Claude) on 2026-10-16 and accepted by John as a first pass. That is one source of error with no check on it, and the headline rests on it. The review puts each factor's record in front of a model from another lab, files what it says verbatim, and has John rule on every item. It is a critique pass, not a vote: the reviewer can move a range only through John's ruling, and a ruling to keep a range over the reviewer's objection is a valid outcome that goes on the record with its reason.
+
+The weekly reading (`docs/weekly-reading.md`) is a different thing and stays separate. It looks for new publications once a week and may move a range only within a cap; it may not touch a shape, or the centre and spread of the chance life starts. Those are this review's to argue.
+
+## What is reviewed
+
+The seven factor ranges: their shape, their low and high (or, for the chance life starts, the centre and spread of its log-normal rate), the estimate list each rests on, and the record's line on what would move it. Everything on each record goes to the reviewer: the description, every estimate with its source and method, the range with its reason, the notes, the revisions, the claims still to be checked, and every publication the site has logged against the factor.
+
+Two questions are put specially, because they were left open for this review on 2026-10-16: whether the top of the star-formation range rises past 10 stars a year given the 2023 aluminium-26 measurement (8 to 16 stars a year) and the 2025 massive-star census (1.3 a year); and the centre and spread of the log-normal rate for the chance life starts, whose shape John ruled that day and whose centre and spread he left open.
+
+Not reviewed: the headline numbers, the site, the method's rule for combining the seven (independent draws, the number of runs, the seed, the galaxy count), and the catalogue of explanations. The brief tells the reviewer so and allows one line on each at the end; they get their own review once the ranges are settled.
+
+## The reviewer
+
+Google's Gemini, called through its API with a fixed model id and the version string the API reports recorded at the top of every filed response, with Google Search lookup switched on so the reviewer can check measurements the record may have missed. The first run uses `gemini-3.1-pro-preview`, the strongest Pro model the key lists on 2026-10-17 and the one the AGI Zeitgeist project pins. The key is read from the environment and never written anywhere. If a lab ships a new model mid-review, the review finishes on the model it started with.
+
+One reviewer for the first run; a second from a third lab is added if John wants a second opinion on items where Claude's recommended ruling disagrees with the reviewer (decision 1).
+
+## The brief
+
+One fixed text (`docs/reviews/brief.md`), sent unchanged at the top of every packet. For every factor it asks four things: is the shape right; are the low and high defensible against the estimates listed and the published measurements; which estimate or measurement is missing; and is the "what would move this" line the right test. It puts the two special questions, says what is not asked, and asks for a table of items first, then the items, then one line per factor left as it is. It sets thresholds so that small differences are not argued: a factor of two at an end, two powers of ten on the life rate's centre, ten powers of ten on its spread. Lookup is allowed and must be flagged.
+
+## Packets
+
+Three packets, by the kind of evidence the factors rest on, so the reviewer sees a factor's neighbours:
+
+| Packet | Factors | Why together |
+|---|---|---|
+| `stars-and-planets` | star formation, the share with planets, habitable planets per star | The measured factors; the planet counts share the Kepler sources |
+| `life-and-mind` | the chance life starts, the chance it becomes intelligent | The biological factors; both rest on Earth's single history and the 2020 Bayesian analysis of it |
+| `signals-and-lifetimes` | the share that become detectable, how long they stay so | The civilisation factors; both are assumptions, and the search limits bear on both |
+
+Packets are generated by `scripts/review_packets.py` from the records and `docs/method.md`, never hand-written, so a packet is always the record as of its date. The generated packets live under `docs/reviews/packets/`, named by date and packet.
+
+## Running
+
+`scripts/review_gemini.py PACKET` sends a packet to the model, saves the raw reply outside the repository, and writes the filed review document (below). One call per packet; three calls per review.
+
+## Filing
+
+- `docs/reviews/YYYY-MM-DD-<packet>-<model>.md`: the model line (id and the version string the API reported), the date, the mode (packet shown in full, lookup on or off and how many searches were made), the packet file, and the response verbatim. Never edited after filing.
+- `docs/reviews/YYYY-MM-DD-rulings.md`: every item the reviewer raised, across all packets, each with the factor, what was raised, the reviewer's proposal, Claude's one-line view (agree, disagree with why, or unsure), a recommended ruling, and a column for John's ruling; and a short note of what the headline would be if every recommended ruling were taken, computed by running `scripts/compute.py run` on a scratch copy of the records, never on the records themselves. The review itself changes no range, no status and no record.
+- When John has ruled, every accepted item lands as a revision on the factor, a dated line in `CHANGELOG.md`, and a re-run of the headline; a range whose items are all ruled has its status set to `reviewed`. A declined item keeps its reason on the record so the next review can see it was considered.
+
+## Done
+
+Every factor reviewed, every item ruled, the changes landed, the headline re-run and the new numbers in the changelog, and no range left at "first pass". Then the method's combination rule gets its own single pass with a different brief.
+
+## Decisions (proposed 2026-10-17, not ruled; each with confidence, whether it is standard practice, and the alternative)
+
+1. **One reviewer from another lab for the first run, a second only on request.** Confidence moderate. The Belt Equation used two from the start, which is the standard two-referee practice; here the second lab's model is reachable only through its app, which John would have to run by hand, and the first run's rulings list will show whether a tiebreak is needed. Alternative: two reviewers from the start (GPT through the ChatGPT app, as the Belt Equation did), at the cost of John's time on three app sessions before the first rulings list exists.
+2. **The reviewer is called through the API, with a fixed model id, the reported version string filed, and Google Search lookup on, rather than through the Gemini app by John.** Confidence high that the version must be filed and the key never written; moderate on the API over the app. The API gives a reproducible, pinned call that a later review can repeat on the same model, and lookup lets the reviewer check measurements the record may have missed, which the brief asks for. The Belt Equation's decision 6 had John run the apps because that was the only way to reach the other models; here it is not. Alternative: John in the Gemini app, which gets the app's "extended thinking" mode and keeps the transcript in his hands, at the cost of three sessions of his time and a model version the app does not state exactly.
+3. **Three packets by kind of evidence rather than one per factor or one for all seven.** Confidence moderate; a judgment call about depth against context. The reviewer sees a factor's neighbours (the two planet counts share sources; the two biological factors share Earth's single history), and three calls keep each prompt short enough for a careful answer. Alternative: one packet per factor, seven calls, sharper answers but no neighbours; or one packet for all seven, one call, the longest prompt and the shallowest answers. Take the first if the three-packet answers come back shallow on any factor.
+4. **Thresholds: a factor of two at an end, two powers of ten on the life rate's centre, ten on its spread.** Confidence low to moderate; a judgment about signal against noise, with no standard to follow. The ranges span powers of ten, so a smaller move at an end changes the headline by less than its run-to-run noise; the life thresholds are set where the sensitivity table in `docs/method.md` shows the headline starting to move. Alternative: no threshold, file every difference, which buries the real disagreements under quibbles about the second digit. The planets range (0.5 to 1) is narrow enough that a factor of two is the whole range; that is accepted, since the brief also asks for missing estimates and the reviewer can still argue the floor.
+5. **The shape of the chance life starts is not reopened.** Confidence high. John ruled it on 2026-10-16 with the reasoning in `docs/method.md` item 7, and the ruling left only the centre and spread open; reopening it would ask the reviewer to relitigate a ruling rather than review a proposal. Alternative: ask anyway and file the answer as information; cheap, but it invites a ruling to be reargued by a reviewer who has not seen the sensitivity table's lesson.
+6. **Packets generated from the records by a script.** Confidence high; standard practice, and what the Belt Equation does. Alternative: hand-written packets, which drift from the records between the writing and the sending.
+7. **The review changes nothing itself; the rulings list carries recommended rulings and the headline they would give, from a scratch copy.** Confidence high. It is the kickoff's rule (nothing promoted before John rules) and the CLAUDE.md rule (nothing settled until John says so). Alternative: land the recommended rulings on a branch for John to merge, which puts the changes one click away but mixes the reviewer's items, Claude's view and John's ruling in one diff.
+8. **Filed documents named by date, packet and model; the rulings list by date.** Confidence high; it is the Belt Equation's naming and sorts by date in a listing. No real alternative.
