@@ -3,8 +3,7 @@
   // beltequation.com, sentient-horizons.com and hearthandvoid.com. thequietgalaxy.com and
   // www were attached as custom domains on 2026-10-16, the day John registered the domain;
   // the routes below keep the config in step with what is deployed so a deploy from a fresh
-  // machine does not drop them. whereareallthealiens.com is added the same way once its
-  // zone is on the account; worker/redirect.js already forwards it.
+  // machine does not drop them.
   "name": "quietgalaxy",
   "main": "worker/redirect.js",
   "compatibility_date": "2026-10-01",
@@ -12,7 +11,11 @@
   "workers_dev": true,
   "routes": [
     { "pattern": "thequietgalaxy.com", "custom_domain": true },
-    { "pattern": "www.thequietgalaxy.com", "custom_domain": true }
+    { "pattern": "www.thequietgalaxy.com", "custom_domain": true },
+    // The forwarding address, registered by John 2026-10-16: worker/redirect.js answers it
+    // with a permanent redirect to the same page at thequietgalaxy.com.
+    { "pattern": "whereareallthealiens.com", "custom_domain": true },
+    { "pattern": "www.whereareallthealiens.com", "custom_domain": true }
   ],
   "assets": {
     "directory": "./dist",
