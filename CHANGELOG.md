@@ -47,6 +47,7 @@ Every change to a range, a record, the method or the site, with absolute dates. 
 
 ## 2026-10-16
 
+- Star formation: the 2023 aluminium-26 measurement (8 to 16 stars a year) and the 2025 massive-star census (1.3 a year) added to the estimate list at John's ruling after the first weekly reading flagged them; the range's top stays at 10 until the outside review, with a dated revision that clears the reading's item for John.
 - Home page left column reordered at John's asking: the question "Where is everybody?" and its paragraph lead, the seven-piece equation follows, then the width line, the strip and the buttons.
 - The ruled shape for the chance life starts merged into main and deployed: the headline is now a 41% chance of other detectable civilisations in the galaxy (59% alone), 60% somewhere in the observable universe, a middle estimate of one civilisation per 64 galaxies like ours; the count of galaxies in that line is rounded to a whole number.
 - Home page first screen swapped at John's asking: the equation line sits in the wide left column with a plain name and the range under each term, and the headline sits in a box on the right, now stated the other way round as the chance that there are other detectable civilisations in our galaxy (12% from the first-pass ranges), with the observable-universe chance flipped to match. On a phone the box comes first.

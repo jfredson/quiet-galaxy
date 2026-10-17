@@ -59,6 +59,25 @@ source = "Sandberg, Drexler and Ord, 'Dissolving the Fermi Paradox', arXiv:1806.
 link = "https://arxiv.org/abs/1806.02404"
 method = "A deliberately wide span, evenly spread across its powers of ten, meant to cover the whole published argument rather than to measure anything; the paper itself notes that the real uncertainty is about one power of ten."
 
+[[estimate]]
+who = "Thomas Siegert and others"
+when = "2023-01"
+low = 8
+high = 16
+source = "Siegert and others, 'Galactic 26Al traces metal loss through hot chimneys', Astronomy and Astrophysics 672, A54 (2023) (siegert-2023)"
+link = "https://arxiv.org/abs/2301.10192"
+publication = "siegert-2023"
+method = "Measured the gamma-ray glow of radioactive aluminium made by massive stars across the galaxy and worked back to how fast stars must be forming to keep it topped up; 4 to 8 solar masses of new stars a year, which is 8 to 16 stars a year at half a solar mass per star. One method, and above the several that agree on 1 to 4; added at John's ruling on 2026-10-16 after the first weekly reading found it."
+
+[[estimate]]
+who = "Alexis Quintana and others"
+when = "2025-03"
+value = 1.3
+source = "Quintana and others, 'A census of OB stars within 1 kpc and the star formation and core collapse supernova rates of the Milky Way', Monthly Notices of the Royal Astronomical Society (2025) (quintana-2025)"
+link = "https://arxiv.org/abs/2503.08286"
+publication = "quintana-2025"
+method = "Counted the massive, short-lived stars within about three thousand light years of the Sun and scaled the count to the whole galaxy; 0.67 solar masses a year, which is 1.3 stars a year at half a solar mass per star. Added at John's ruling on 2026-10-16 after the first weekly reading found it."
+
 [range]
 low = 1
 high = 10
@@ -75,3 +94,11 @@ faster: spreading its roughly six times ten to the tenth solar masses of stars o
 billion years gives an average of about six solar masses, or ten stars, a year. Drake's 1961
 value of one star a year is the floor. Evenly spread across powers of ten, the same shape the
 2018 paper used, because the question is which power of ten, not which digit."""
+
+[[revision]]
+date = 2026-10-16
+field = "estimate"
+old = "four published estimates"
+new = "six published estimates: the 2023 aluminium-26 measurement (8 to 16 stars a year) and the 2025 massive-star census (1.3 a year) added"
+why = "The weekly reading of 2026-10-16 found two measurements the record did not carry and flagged the range for John. He ruled on 2026-10-16: add both to the estimate list and leave the range's top at 10 until the outside review of the seven ranges."
+publication = "siegert-2023"
