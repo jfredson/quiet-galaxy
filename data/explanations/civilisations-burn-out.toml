@@ -1,0 +1,71 @@
+# Explanation record: civilisations burn out. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address
+# (/explanations/civilisations-burn-out/) and is never renamed.
+
+id = "civilisations-burn-out"
+name = "Civilisations burn out: the fast growth that makes a civilisation detectable also uses up its planet, and the ones that survive are the ones that slow down and go quiet"
+family = "gone"
+proposed_by = "Jacob Haqq-Misra and Seth Baum"
+proposed_in = 2009
+proposed_source = "'The Sustainability Solution to the Fermi Paradox', Journal of the British Interplanetary Society 62, 47–51 (2009); developed by Adam Frank and colleagues, 'The Anthropocene Generalized', Astrobiology 18, 503–518 (2018)"
+summary = """
+A civilisation becomes visible from space by growing fast: burning fuel, building,
+transmitting, changing its atmosphere. That kind of growth cannot continue on one planet
+for long. Either the civilisation collapses when its planet can no longer support it, or
+it learns to live within its limits, in which case it stops growing and stops being loud.
+On this view there is no galaxy-spanning expansion because expansion is exactly the habit
+that kills, and the civilisations that last are the ones that gave it up. The sky is
+quiet because the loud ones are gone and the quiet ones are, by definition, quiet."""
+body = """
+Jacob Haqq-Misra and Seth Baum put the argument in a short 2009 paper. The reasoning
+behind the Fermi question, from Hart in 1975 onward, assumes that a civilisation
+capable of spreading between stars would do so exponentially, filling the galaxy in a few
+million years. But exponential growth is not something any living system sustains. On
+Earth, every population that grows that way runs into the limits of its habitat and either
+crashes or levels off. A civilisation's growth draws on energy and materials from a finite
+planet, and the faster it grows, the sooner it meets the wall. The authors concluded that
+civilisations able to sustain exponential expansion may not exist, and that those which
+persist do so at a scale and pace that does not make them visible across the galaxy.
+
+Adam Frank and his colleagues gave the idea a mathematical form in 2018, modelling a
+civilisation and its planet as a pair that affect each other, as humans and Earth's
+climate do now. Their models produced a small number of outcomes: a soft landing, in
+which the civilisation shrinks to a sustainable size; a die-off, in which most of the
+population is lost but some survive; collapse without recovery; and collapse that comes
+even after the civilisation changes course, because it changed course too late. Which
+outcome occurred depended on how quickly the civilisation recognised the problem and how
+severe the planet's response was. The authors drew the lesson that a civilisation's
+growth phase is a dangerous and probably short passage, and that humanity is in it now.
+
+The bearing on the Drake Equation is on the last two factors. The detectable lifetime is
+short, because the loud phase is the dangerous one and does not last. The share of
+intelligent species that remain detectable is lowered as well, since the survivors are the
+ones that stopped doing the things that can be seen. The argument sits between
+self-destruction and the "unseen" family: the loud ones destroy themselves, and the quiet
+ones are still there.
+
+Objections: a civilisation that learned to live within limits could still choose to
+expand slowly, settle other worlds and eventually be visible on a longer timescale, so the
+argument needs the quiet ones to stay quiet forever; the limits of one planet are not the
+limits of a solar system, and a civilisation that gets even a little way off its planet has
+vastly more to draw on; and the models are built on Earth's situation and may not
+generalise. The reply is that getting off the planet in a serious way is itself a product
+of the fast-growth phase, and that the window in which a civilisation is both able to
+expand and not yet in trouble may be narrow."""
+standing = "A recent and well-regarded line of work, especially since the 2018 paper, and congenial to researchers who study climate and sustainability; it is taken as one serious candidate for a Filter ahead rather than as a settled answer."
+would_strengthen = "Evidence of an atmosphere around another star bearing the traces of industry but no present signal; models of coupled civilisation-and-planet systems that find collapse to be the usual outcome under a wide range of assumptions; humanity's own trajectory continuing toward its planet's limits without correction."
+would_weaken = "A detected civilisation that is both long-lived and expanding; evidence that a civilisation can move its industry off its planet before running into limits; a model showing soft landings are the common outcome."
+related = ["self-destruction", "great-filter-ahead", "inward-turn", "no-interest-in-contact", "expansion-stalls"]
+
+verify = [
+  "That Haqq-Misra and Baum (2009) is in JBIS volume 62, pages 47–51, and that it is framed around exponential growth being unsustainable; check.",
+  "That Frank and colleagues (2018) is in Astrobiology volume 18 and describes the four outcomes as listed; check the paper's own naming of the outcomes.",
+]
+
+[[bears_on]]
+factor = "lifetime"
+direction = "lowers"
+
+[[bears_on]]
+factor = "detectable"
+direction = "lowers"

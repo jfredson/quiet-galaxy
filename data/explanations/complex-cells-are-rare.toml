@@ -1,0 +1,66 @@
+# Explanation record: complex cells are rare. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address
+# (/explanations/complex-cells-are-rare/) and is never renamed.
+
+id = "complex-cells-are-rare"
+name = "Complex cells are rare: life may start easily but then stay simple forever, because the one step that made big cells happened only once"
+family = "never-there"
+proposed_by = "Nick Lane and William Martin"
+proposed_in = 2010
+proposed_source = "'The energetics of genome complexity', Nature 467, 929–934 (2010); developed in Lane's book The Vital Question (2015)"
+summary = """
+Life on Earth was single-celled and simple for about two billion years before anything
+more complicated appeared, and everything complicated since, every plant, animal and
+fungus, descends from one event in which one simple cell took up residence inside
+another. That merger gave cells a power supply big enough to run large genomes and build
+large bodies. It happened once in four billion years, and there is no sign it was easy. If
+the same bottleneck holds elsewhere, most living planets are covered in microbes and
+never get further, and the galaxy is alive but has nobody in it to talk to."""
+body = """
+The two oldest kinds of life on Earth are bacteria and a second group of single cells
+that look much like them; between them they ran the planet alone for roughly half its
+history. Everything else, from yeast to whales, is built from a third kind of cell that is
+far larger and more complicated, with an internal skeleton, compartments and, above all,
+many small power stations called mitochondria. Those power stations were once free-living
+bacteria. At some point, probably between 1.5 and 2 billion years ago, one cell swallowed
+another and failed to digest it, and the two became a single organism. Every complex cell
+alive carries the descendants of that captured bacterium.
+
+The biochemist Nick Lane and the microbiologist William Martin argued in 2010 that this
+merger was not just one event among many but the event. A simple cell makes its energy on
+its outer membrane, so its energy budget grows with its surface while its needs grow with
+its volume; it cannot get much bigger or run many more genes without starving. A cell
+with hundreds of internal power stations has no such limit, and could afford the large
+genomes from which complex bodies were later built. On this view the long stall in Earth's
+history was not bad luck but a wall, and the merger was the one way through it. The wall
+is sometimes called the eukaryote bottleneck, after the technical name for complex cells.
+
+The bearing on the Drake Equation is on the share of living planets where intelligence
+appears, since a mind needs a body and a body needs complex cells. It leaves the chance
+that life starts untouched, and so sits comfortably beside the view that microbes are
+common. It is one of the strongest candidates for a step that is both necessary and hard,
+which makes it a favourite location for the Great Filter, the idea that some step on the
+road from dead matter to a galaxy-spanning civilisation is very unlikely.
+
+The main objection is again the sample of one. That the merger happened once on Earth may
+mean it is hard, or may mean that once it happened the winners took every available niche
+and left no room for a second attempt, which is the usual pattern when a new kind of life
+appears. Some biologists also question whether the energy argument is as tight as Lane
+and Martin make it, pointing to giant bacteria and to simple cells with internal
+compartments. Others note that even if the step is hard, two billion years is a long time
+and most planets that can carry life get at least that. The argument stands or falls on
+whether there are other ways to build a complex cell, and nobody knows."""
+standing = "Respected among cell biologists and widely cited in writing about the Fermi question; whether the merger was a hard step or simply a first-come-first-served event is openly argued."
+would_strengthen = "Discovery of life elsewhere that is simple and has stayed simple for billions of years; further evidence that no second lineage of complex cells ever arose on Earth; a theoretical result showing that the energy limit on simple cells cannot be got around any other way."
+would_weaken = "Discovery of a second, independent origin of complex cells on Earth, living or fossil; a laboratory or natural example of a simple cell growing a large genome without captured power stations; complex life found on another world."
+related = ["rare-life", "rare-intelligence", "rare-earth", "great-filter-behind-us"]
+
+verify = [
+  "That the merger is usually dated to between 1.5 and 2 billion years ago; check the current consensus range.",
+  "That Lane and Martin's energy argument is stated as above, surface-area energy supply against volume-based need; check the 2010 paper.",
+  "The objection from giant bacteria and from simple cells with internal compartments is from memory of the debate; find a specific published critique.",
+]
+
+[[bears_on]]
+factor = "intelligence"
+direction = "lowers"

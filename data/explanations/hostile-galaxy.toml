@@ -1,0 +1,75 @@
+# Explanation record: a hostile galaxy. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address (/explanations/hostile-galaxy/)
+# and is never renamed.
+
+id = "hostile-galaxy"
+name = "A hostile galaxy: exploding stars and bursts of radiation have kept resetting life almost everywhere, and only recently stopped"
+family = "never-there"
+proposed_by = "James Annis"
+proposed_in = 1999
+proposed_source = "'An astrophysical explanation for the great silence', Journal of the British Interplanetary Society 52, 19–22 (1999); developed by Piran and Jimenez, Physical Review Letters 113, 231102 (2014), and in the 'galactic habitable zone' work of Gonzalez, Brownlee and Ward (2001) and Lineweaver, Fenner and Gibson (2004)"
+summary = """
+The galaxy is a dangerous place. Dying stars explode, and a rarer kind of explosion,
+a gamma-ray burst, can sterilise the surface of every planet within thousands of
+light-years in a few seconds. Such bursts were far more common when the galaxy was young
+and poor in heavy elements, and they are still common near its crowded centre. On this
+view, life kept starting across the galaxy and kept being wiped back to microbes before
+it could get anywhere, so that only in the last few billion years, and only in the quiet
+outer suburbs where we live, has there been a long enough stretch of calm for anything
+complicated to grow. We are among the first because the galaxy only just became safe."""
+body = """
+The astronomer James Annis proposed in 1999 that the silence had an astrophysical cause.
+Gamma-ray bursts, the brightest explosions in the universe, had just been shown to come
+from distant galaxies, and their energy, if one went off nearby, would strip the ozone
+from a planet's atmosphere and bathe its surface in deadly radiation. Annis estimated how
+often such bursts happen in a galaxy like ours and found that, until fairly recently, they
+would have happened often enough to reset every planet's surface life every few hundred
+million years, which is less time than complex life took to appear on Earth. Because the
+rate of bursts falls as a galaxy ages, there would come a moment when the intervals grew
+long enough for complex life to make it through, and the whole galaxy would pass that
+threshold at about the same time. Annis called this a phase transition: a galaxy goes from
+sterile to potentially crowded in a relatively short window, and we may be living in it.
+
+Tsvi Piran and Raul Jimenez revisited the calculation in 2014 with better data and found
+the picture largely held: a planet in the inner part of the galaxy would almost certainly
+have suffered a lethal burst in the last billion years, the outer parts are much safer,
+and the universe as a whole was too dangerous for complex life until it was about five
+billion years old. Earlier, in 2001 and 2004, other groups had argued for a "galactic
+habitable zone", a ring of the galaxy far enough from the centre to avoid the worst of
+the explosions and dense enough in heavy elements to build rocky planets, and found that
+most of the galaxy's stars lie outside it.
+
+The bearing on the Drake Equation is on the number of planets per star that can carry
+life for long enough to matter, which is lowered for most of the galaxy, and on the share
+of living planets on which intelligence appears, since repeated resets stop the clock
+before intelligence can arrive. The explanation also feeds the view that we are early: if
+the galaxy only recently became safe, nobody has had time to get far ahead of us.
+
+Objections: the lethal radius of a burst and its effect on life under water or under ice
+are uncertain, and a burst that sterilises land may leave the oceans largely alone, which
+is where life spent most of its history anyway. The galactic habitable zone has been
+challenged as too narrow, since planets have now been found around stars of almost every
+composition. And the explanation accounts for the emptiness of the past better than the
+emptiness of the present: if the galaxy became safe a few billion years ago, there has
+been time since for several civilisations to arise and spread, unless something else is
+also at work. Its defenders reply that a few billion years is not much against the time
+complex life took on Earth, and that the explanation was never meant to work alone."""
+standing = "Taken seriously as a real constraint on where and when complex life could have appeared; few researchers treat it as the whole answer, and the galactic habitable zone in particular is contested."
+would_strengthen = "Better estimates of the rate and lethal reach of gamma-ray bursts confirming that most of the galaxy was sterilised frequently until recent times; geological evidence tying one of Earth's mass extinctions to a burst or a nearby supernova; a finding that habitable-zone planets near the galactic centre lack the gases life produces."
+would_weaken = "Evidence that complex life survives bursts under water or ice, so that resets do not stop the clock; discovery of life or civilisations in the inner galaxy; a lower revised rate of nearby bursts over the galaxy's history."
+related = ["we-are-early", "rare-earth", "natural-catastrophes", "great-filter-behind-us"]
+
+verify = [
+  "That Annis's 1999 paper is in JBIS volume 52, pages 19–22, and that it uses the phrase 'phase transition'; check.",
+  "That Piran and Jimenez (2014) conclude the universe was too dangerous for complex life until it was about five billion years old and that the inner galaxy has very likely suffered a lethal burst in the last billion years; check their numbers.",
+  "That the galactic habitable zone papers are Gonzalez, Brownlee and Ward (Icarus, 2001) and Lineweaver, Fenner and Gibson (Science, 2004), and that the latter puts most stars outside the zone; check.",
+  "The link between a gamma-ray burst and the late Ordovician extinction is a hypothesis (Melott and others, 2004), not an established finding; the record says 'evidence tying' as a thing that would strengthen, which is correct, but check no stronger claim slipped in.",
+]
+
+[[bears_on]]
+factor = "habitable-planets"
+direction = "lowers"
+
+[[bears_on]]
+factor = "intelligence"
+direction = "lowers"

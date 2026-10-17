@@ -1,0 +1,68 @@
+# Explanation record: rare intelligence. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address (/explanations/rare-intelligence/)
+# and is never renamed.
+
+id = "rare-intelligence"
+name = "Rare intelligence: evolution has no goal, and of the billions of species that have lived on Earth only one built anything"
+family = "never-there"
+proposed_by = "George Gaylord Simpson"
+proposed_in = 1964
+proposed_source = "'The Nonprevalence of Humanoids', Science 143, 769–775 (1964); pressed again by Ernst Mayr in his 1995 exchange with Carl Sagan"
+summary = """
+Evolution is not a ladder with us at the top. It is a branching process with no
+direction, and intelligence of the kind that builds telescopes is one outcome among
+millions, not the destination. Earth has carried life for about four billion years and
+complex animals for over half a billion; in all that time, among perhaps billions of
+species, human-level intelligence arose once, recently, and nearly died out. If that is
+typical, then even a galaxy full of living, animal-bearing worlds would have almost no one
+on it who could notice us. The silence would be the silence of forests and oceans, which
+are full of life and have nothing to say."""
+body = """
+The case was made first by palaeontologists, the people who know the fossil record best.
+George Gaylord Simpson, one of the architects of modern evolutionary theory, wrote in 1964
+that the search for other intelligences rested on a misunderstanding of evolution: there
+was no tendency toward minds, only toward whatever worked in a particular place at a
+particular time, and the long chain of accidents that produced humans would not repeat.
+Ernst Mayr, another founder of the field, said the same thing more bluntly thirty years
+later in a published argument with Carl Sagan. Of the roughly fifty billion species that
+Mayr estimated had lived on Earth, one had developed the kind of intelligence that could
+build a civilisation, and it had done so in the last few hundred thousand years. Sagan
+replied that intelligence had clear survival value and that on a long enough timescale
+something would find its way to it; Mayr answered that the dinosaurs had had a hundred
+and fifty million years and never did.
+
+The modern form of the argument points at how slowly and narrowly intelligence appeared
+even once the ingredients were present. Large brains are expensive to run and risky to be
+born with. The human line nearly went extinct more than once. Other animals with large
+brains and complex societies, such as dolphins, elephants, crows and octopuses, have had
+as long as we have and show no sign of heading toward tools, fire or writing. Intelligence
+of the kind the Drake Equation cares about seems to have needed a particular mix of hands,
+social life, diet, climate stress and luck, and there is no reason to think that mix is
+common.
+
+The argument bears on one factor: the share of living planets on which intelligence
+appears. It accepts that stars, planets and life may all be plentiful.
+
+Against it, three points are usually raised. First, intelligence in the broad sense has
+evolved many times on Earth, in groups as distant as mammals, birds and molluscs; what
+arose once was not intelligence but technology, and the gap between the two may be a
+separate question. Second, half a billion years of animal life is not long compared with
+the age of the galaxy, and a planet that stays habitable for several billion years gives
+evolution many more chances. Third, once intelligence appears and starts to help its
+owners survive, it tends to be reinforced, so the first appearance may be the hard part
+and the rest may follow. The reply is that the first appearance is exactly the step being
+argued about, and one example of it is no basis for calling it likely."""
+standing = "A mainstream position among evolutionary biologists, many of whom regard the optimism of astronomers about alien minds as naive; astronomers tend to reply that biologists are generalising from one planet. Neither side has evidence beyond Earth."
+would_strengthen = "Discovery of a second living world whose life has stayed simple or non-intelligent for billions of years; further evidence that intelligence on Earth depended on an unusual chain of events; a finding that other large-brained animals have been at their present level for tens of millions of years without change."
+would_weaken = "A detected technological civilisation anywhere; evidence that intelligence on Earth arose independently in several lineages that were converging on tool use; a clear evolutionary argument that problem-solving intelligence is strongly favoured once animals exist."
+related = ["rare-technology", "complex-cells-are-rare", "rare-earth", "great-filter-behind-us"]
+
+verify = [
+  "That Simpson's 1964 Science paper is correctly titled and cited; check volume and pages.",
+  "That the Mayr and Sagan exchange took place in 1995 in the Planetary Society's Bioastronomy News and that Mayr's fifty-billion-species figure appears there; check.",
+  "That the dinosaur argument is Mayr's and not a later paraphrase; check the text of the exchange.",
+]
+
+[[bears_on]]
+factor = "intelligence"
+direction = "lowers"

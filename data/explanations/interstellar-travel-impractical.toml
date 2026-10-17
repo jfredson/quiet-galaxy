@@ -1,0 +1,72 @@
+# Explanation record: interstellar travel is impractical. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address
+# (/explanations/interstellar-travel-impractical/) and is never renamed.
+
+id = "interstellar-travel-impractical"
+name = "Interstellar travel is impractical: the distances are so great and the costs so high that nobody ever goes anywhere, so nobody has come here"
+family = "unseen"
+proposed_by = "Sebastian von Hoerner"
+proposed_in = 1962
+proposed_source = "'The General Limits of Space Travel', Science 137, 18–23 (1962); the point was pressed against Michael Hart's 1975 argument by many, including Carl Sagan"
+summary = """
+The strongest version of the Fermi question is not "why do we hear nothing" but "why is
+nobody here". Michael Hart argued in 1975 that a civilisation able to travel between
+stars would have settled the whole galaxy within a few million years, so the fact that
+Earth has not been settled means no such civilisation exists. The reply is that the
+premise is wrong: the distances between stars are so vast and the energy needed to cross
+them so enormous that no civilisation ever does it on a scale that matters. The galaxy
+may be full of civilisations, each confined to its own star system, each as unable to
+visit us as we are to visit them."""
+body = """
+The nearest star beyond the Sun is about four light-years away, which is roughly
+forty trillion kilometres. The fastest object humans have ever launched would take tens
+of thousands of years to get there. Crossing that gap in a human lifetime would need a
+ship moving at a good fraction of the speed of light, and the energy needed to get a
+ship of useful size to such a speed, and to slow it down again at the other end, is
+greater than the whole of humanity's present energy use for years or decades. The German
+astronomer Sebastian von Hoerner worked through these limits in 1962 and concluded that
+interstellar travel by living crews was so far beyond any reasonable budget that it
+should be set aside, and that if contact were ever made it would be by radio.
+
+The argument took on a new role after 1975, when Michael Hart published the paper that
+turned Fermi's lunchtime question into a scientific problem. Hart argued that the
+absence of visitors was strong evidence that we were the first civilisation in the
+galaxy, because any earlier one would have had time to settle everywhere. His critics,
+Carl Sagan prominent among them, answered that Hart had assumed interstellar settlement
+was easy, and that there was no reason to think so. Perhaps every civilisation looks at
+the cost, as we do, and decides that it is not worth it; perhaps a few try and the ships
+fail; perhaps the physics of life makes long voyages impossible for any living thing. If
+nobody travels, the absence of visitors tells us nothing about how many civilisations
+there are.
+
+The bearing on the Drake Equation is nil, which is the point. The equation counts
+civilisations detectable by radio and says nothing about travel. This explanation answers
+Hart's question while leaving Drake's open: the factors can be whatever they are, and the
+silence in the radio bands, if it continues, still needs an explanation of its own. It
+sits in the "unseen" family because it says the absence of visitors is about the
+difficulty of visiting rather than about the number of civilisations.
+
+The objections are strong, and most researchers think this explanation fails on its own.
+Travel need not be fast. A ship that takes ten thousand years to reach the next star is
+slow for a crew but fast against the age of the galaxy, and a civilisation that sent such
+ships, with frozen passengers, with generations born on the way, or with no living crew
+at all, would still fill the galaxy in a few tens of millions of years. Machines need no
+life support and can wait. And a civilisation does not need to want to settle the galaxy;
+it only needs to settle the next star once in a while, and the next star's settlers will
+do the same. The reply is that every one of those steps is a guess about technology
+nobody has, and that the universal failure to detect even a single slow probe may mean
+the guesses are wrong."""
+standing = "The first and most natural answer to Hart's argument, and still raised; among researchers it is widely considered insufficient on its own, because slow and uncrewed travel evades the energy objection and would still settle the galaxy in time."
+would_strengthen = "A physical result showing that interstellar flight even at a few percent of light speed faces an insurmountable barrier, such as damage from the thin gas and dust between the stars that cannot be shielded against; a long record of detected civilisations that have never left their home systems."
+would_weaken = "A detected probe or craft from elsewhere; humanity's own successful launch of an interstellar probe; evidence of civilisations that have settled more than one star."
+related = ["expansion-stalls", "ships-in-the-night", "not-looked-long-enough", "shouting-is-costly"]
+
+verify = [
+  "That von Hoerner's 1962 paper is in Science volume 137, pages 18–23, and reaches the conclusion summarised; check.",
+  "That Sagan's reply to Hart made this argument explicitly (the usual citation is Sagan's remarks in the 1980s debate and his 1983 paper with Newman); check which source.",
+  "That the fastest human-launched object would take tens of thousands of years to reach the nearest star; Voyager 1 is usually quoted at about 70,000 years for four light-years; check.",
+]
+
+[[bears_on]]
+factor = "detectable"
+direction = "unchanged"

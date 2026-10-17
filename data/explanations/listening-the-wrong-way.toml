@@ -1,0 +1,71 @@
+# Explanation record: we are listening the wrong way. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address
+# (/explanations/listening-the-wrong-way/) and is never renamed.
+
+id = "listening-the-wrong-way"
+name = "We are listening the wrong way: an efficient message is indistinguishable from noise, and they may not be using radio at all"
+family = "unseen"
+proposed_by = "Michael Lachmann, Mark Newman and Cristopher Moore"
+proposed_in = 2004
+proposed_source = "'The physical limits of communication, or why any sufficiently advanced communication is indistinguishable from noise', American Journal of Physics 72, 1290–1293 (2004)"
+summary = """
+The searches assume that a signal from another civilisation will look like a signal: a
+narrow tone, a regular pulse, something no natural process makes. But a message that is
+packed as efficiently as physics allows looks exactly like random static, and a
+civilisation that cared about efficiency would send that. Others may communicate with
+lasers, with particles that pass through planets, or with methods nobody has thought of.
+On this view the galaxy may be full of conversation, and our radio telescopes are tuned
+to a kind of signal that only a very young civilisation would ever send."""
+body = """
+Three physicists made the sharpest version of the argument in 2004, starting from a
+result in the theory of information. The most efficient way to send a message through a
+channel with limited power is to use every part of the channel equally, with no pattern
+that could be predicted; a message encoded that way has the statistical properties of
+thermal noise, the same hiss that every warm object gives off. That is not a limitation
+of our technology but a mathematical fact: the better the encoding, the more it looks
+like noise. A civilisation sending information to itself across space, between colonies
+or probes, would use the best encoding it had, and its traffic would be indistinguishable
+from the natural background to anyone who did not already know the code. The authors
+drew the conclusion that a civilisation's ordinary communications would never be found by
+the methods the searches use, which look for artificial regularity.
+
+The broader point predates the paper and has many forms. Earth's own radio leakage is
+falling as broadcasting moves to cables, satellites and tightly aimed beams, and the loud
+era of television transmitters that could be heard at a distance lasted a few decades;
+a civilisation a century ahead of us may emit almost nothing by accident. Deliberate
+messages might be sent by laser, which is harder to intercept and easier to aim, and
+searches for brief laser flashes are now part of the programme. Still more exotic
+proposals involve streams of neutrinos, particles that pass through whole planets, or
+patterns imposed on natural sources. A search tuned to one kind of signal is blind to
+the rest.
+
+The bearing on the Drake Equation is on the last-but-one factor, the share of intelligent
+civilisations that are detectable, but in an unusual sense: the explanation says the
+civilisations are out there and transmitting, and it is our definition of "detectable"
+that is at fault. For the catalogue the factor is left unchanged, and the silence is put
+down to the design of the search.
+
+The main objection is that the argument applies to a civilisation's private traffic, not
+to anything it might send on purpose to be found. A civilisation that wanted to be heard
+would send a signal that was obviously artificial precisely because an efficient one is
+not, and the searches are designed for that case. The authors of the 2004 paper accepted
+this; their point was that the hope of overhearing a civilisation going about its
+business is probably vain. A second objection is that waste heat cannot be encoded away:
+whatever a civilisation does with its signals, its industry warms its surroundings, and
+searches for that warmth, which have been run on tens of thousands of galaxies, have so
+far found nothing. The reply is that those searches also rest on assumptions about what
+an advanced civilisation does with energy, and are themselves a bet on one kind of
+signal."""
+standing = "The core result about efficient encoding is accepted physics and has influenced how searches are designed; as an explanation of the silence it is considered partial, since it does not account for the absence of deliberate beacons or of waste heat."
+would_strengthen = "A detected signal found by a new method after decades of radio searching, showing the old methods were blind; evidence that Earth's own leakage has fallen to undetectable levels, which would confirm the loud phase is brief; a demonstration that efficient communication can also hide its waste heat."
+would_weaken = "A detection by the standard radio or laser methods; evidence that advanced civilisations would have strong reasons to send recognisable beacons; surveys of waste heat around many stars and galaxies finding none, which would suggest nobody is out there to encode anything."
+related = ["not-looked-long-enough", "shouting-is-costly", "everyone-listens-nobody-transmits", "they-became-machines"]
+
+verify = [
+  "That the 2004 paper is in American Journal of Physics volume 72, pages 1290–1293, and that its argument is as stated; check.",
+  "That searches for waste heat have covered tens of thousands of galaxies (the usual citation is the Ĝ survey, Griffith and others, 2015, about 100,000 galaxies); check the number.",
+]
+
+[[bears_on]]
+factor = "detectable"
+direction = "unchanged"

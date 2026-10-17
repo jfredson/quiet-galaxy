@@ -1,0 +1,64 @@
+# Explanation record: the planetarium. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address (/explanations/planetarium/)
+# and is never renamed.
+
+id = "planetarium"
+name = "The planetarium: an advanced civilisation is projecting an empty sky around us so that we believe we are alone"
+family = "unseen"
+proposed_by = "Stephen Baxter"
+proposed_in = 2001
+proposed_source = "'The Planetarium Hypothesis: A Resolution of the Fermi Paradox', Journal of the British Interplanetary Society 54, 210–216 (2001)"
+summary = """
+A planetarium shows an audience a sky that is not really there. The planetarium
+hypothesis says the sky we see is one of these: a civilisation far beyond us has
+surrounded the solar system with a shell of some kind that shows us a universe empty of
+anyone else, either to protect us, to study us, or for reasons we cannot guess. It is the
+zoo hypothesis with the fence made invisible. The silence is manufactured, and we are the
+only ones who do not know it."""
+body = """
+The novelist Stephen Baxter, who writes science fiction with a strong grounding in physics,
+put the idea forward in a 2001 paper. He asked what it would take to fake the universe for
+a civilisation at our level, and treated it as an engineering problem. A perfect
+simulation of the whole observable universe is out of the question; it would require more
+energy and information than the universe itself contains. But the deception does not have
+to be perfect. It only has to be good enough to fool the instruments the inhabitants
+actually have. Baxter estimated the energy needed to maintain a convincing false sky
+around a region the size of the solar system and found it was within the reach of a
+civilisation that could command the whole energy output of its galaxy. Such a civilisation
+could keep us in a planetarium indefinitely, updating the show as our telescopes improve,
+and we would see exactly what we see: stars, planets, galaxies, and no one in them.
+
+The idea is the oldest kind of philosophical worry, that the senses might be deceived by
+a powerful being, given a physical budget. It differs from the simulation hypothesis in
+that here the solar system and its inhabitants are real and only the surroundings are
+faked, whereas in a simulation nothing is real in the ordinary sense. It differs from the
+zoo hypothesis in that the zoo keepers merely stay out of sight, whereas here they
+actively paint the walls.
+
+The bearing on the Drake Equation is that the observations the equation is meant to
+explain are themselves in question: the factors are left unchanged, and the silence is
+put down to a deliberate deception. That is why the explanation sits in the "unseen"
+family and why it is usually mentioned as a limiting case rather than a candidate.
+
+The objections are the ones Baxter himself raised. The hypothesis cannot be tested from
+inside, except by finding a flaw in the show, and any flaw found could be dismissed as
+part of the show. A deception that has to keep pace with better instruments gets more
+expensive every decade, and there would come a point at which the keepers either let it
+slip or spend absurd resources to maintain it. And the hypothesis gives no reason why a
+civilisation would go to such lengths, beyond the reasons given for the zoo. Baxter's
+own conclusion was that the hypothesis was a useful way of showing how little the silence
+alone can prove, since any observation at all is compatible with a sufficiently capable
+deceiver, and that it should be ranked by the cost it imposes on whoever is doing the
+deceiving, which is enormous."""
+standing = "A thought experiment from a science fiction writer with a physics background, cited in surveys as the extreme case of the 'they are hiding from us' family; nobody defends it as likely, and its value is in making clear what the silence can and cannot prove."
+would_strengthen = "An observation that behaves like a seam in the sky, such as a region where physical law or the distribution of stars changes inexplicably at a fixed distance from the Sun; evidence that distant observations change in response to what our instruments can resolve."
+would_weaken = "Measurements from probes far outside the solar system matching what was predicted from inside it; the sheer improbability of maintaining the deception against ever better instruments; a detected civilisation, which would mean the show had failed."
+related = ["simulation", "zoo-hypothesis", "they-are-already-here", "dark-forest"]
+
+verify = [
+  "That Baxter's 2001 paper is in JBIS volume 54, pages 210–216, and that it frames the energy cost against a civilisation commanding a galaxy's output; check the paper's own numbers.",
+]
+
+[[bears_on]]
+factor = "detectable"
+direction = "unchanged"

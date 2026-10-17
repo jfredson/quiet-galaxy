@@ -1,0 +1,68 @@
+# Explanation record: the simulation. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address (/explanations/simulation/)
+# and is never renamed.
+
+id = "simulation"
+name = "The simulation: the universe we observe is a computer model, and whoever is running it did not bother to include anyone else"
+family = "unseen"
+proposed_by = "Nick Bostrom, as a general argument; applied to the Fermi question by many since"
+proposed_in = 2003
+proposed_source = "'Are You Living in a Computer Simulation?', Philosophical Quarterly 53, 243–255 (2003)"
+summary = """
+If a civilisation can run detailed simulations of minds and worlds, it will probably run
+many of them, and simulated people would then outnumber real ones by a wide margin. That
+is the simulation argument, and it concludes that unless such simulations are impossible
+or never run, we are more likely to be in one than not. Applied to the silence, the
+thought is simple: a simulation of a single civilisation on a single planet does not
+need to contain any others, and a sky full of stars is far cheaper to render than a galaxy
+full of neighbours. We see no one because the model stops at the edge of what we can
+check."""
+body = """
+The philosopher Nick Bostrom published the argument in 2003. It does not claim we are in a
+simulation. It claims that one of three things must be true: almost no civilisation
+reaches the stage of being able to simulate minds in detail; almost none that reaches it
+chooses to run simulations of its own past; or we are almost certainly in a simulation,
+because simulated minds would vastly outnumber the real ones. The argument has been
+discussed ever since by philosophers, physicists and the public, and it has been attached
+to the Fermi question in an obvious way. A simulation has a budget. Modelling one planet's
+inhabitants in enough detail to fool them is expensive; modelling a galaxy of other
+civilisations, each with its own history and its own attempts at contact, is far more so.
+A simulator interested in us, or in a civilisation like us, would have every reason to
+leave the rest of the galaxy as scenery: real enough to look at, empty of anyone who
+might answer.
+
+The idea has an older cousin in the planetarium hypothesis, which has its own page: there
+the sky is faked by an outside civilisation to deceive us, whereas here the whole of our
+reality is a model and the empty galaxy is simply a feature of its design. The two make
+the same prediction about the silence and differ about what lies behind it.
+
+The bearing on the Drake Equation is unusual. The explanation does not say any factor is
+small. It says the equation describes a model rather than a universe, and that the model
+need not obey the equation at all; whoever runs it decides how many civilisations it
+contains. For the catalogue's purposes the explanation leaves the factors unchanged and
+puts the silence down to our situation, which is why it sits in the "unseen" family.
+
+The objections are of two kinds. Against the simulation argument itself: it assumes that
+simulated minds are possible and would be conscious, which is unknown; it assumes
+advanced civilisations would want to run such simulations; and some physicists argue that
+simulating physics at the level we observe would take more computation than any physical
+computer could provide. Against its use as an answer to the silence: it is not an
+explanation so much as a way of making the question go away, since a simulator could
+have included aliens as easily as not, and nothing about the simulation argument predicts
+an empty galaxy rather than a full one. An explanation that is compatible with every
+observation explains none of them. Its defenders reply that the same is true of the zoo
+hypothesis, which the field takes seriously, and that the simulation argument at least
+makes a definite claim about what the sky's emptiness would cost to produce."""
+standing = "The simulation argument is a respected piece of philosophy and widely discussed; its use as an answer to the Fermi question is common in popular writing and rare in the research literature, where it is regarded as untestable and as not predicting the silence in particular."
+would_strengthen = "A physical finding that the universe behaves as a discrete computation at the smallest scales; evidence of a boundary or shortcut in physical law that looks like a cost-saving measure; a demonstration that conscious minds can be simulated, which would make the argument's first premise true."
+would_weaken = "A proof that simulating minds or physics at our level is impossible in principle; a detected civilisation, which would at least show the model included one; strong arguments that advanced civilisations would not run such simulations."
+related = ["planetarium", "zoo-hypothesis", "transcension", "not-looked-long-enough"]
+
+verify = [
+  "That Bostrom's paper is in Philosophical Quarterly volume 53, pages 243–255, 2003; check.",
+  "That there is published physics arguing simulation of our universe is computationally infeasible (Ringel and Kovrizhin, 2017, is the usual citation); check what it actually shows.",
+]
+
+[[bears_on]]
+factor = "detectable"
+direction = "unchanged"

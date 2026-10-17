@@ -1,0 +1,80 @@
+# Explanation record: there is no paradox, only wide ranges. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address
+# (/explanations/no-paradox-just-wide-ranges/) and is never renamed. Added beyond the
+# session brief's list of thirty, because it is the method this site uses for its headline.
+
+id = "no-paradox-just-wide-ranges"
+name = "There is no paradox: once you admit how little we know about each factor, an empty galaxy is the expected result, not a surprise"
+family = "never-there"
+proposed_by = "Anders Sandberg, Eric Drexler and Toby Ord"
+proposed_in = 2018
+proposed_source = "'Dissolving the Fermi Paradox', arXiv:1806.02404 (2018)"
+summary = """
+The Fermi question feels like a paradox because people multiply seven best guesses together
+and get a galaxy with thousands of civilisations, then look up and see none. But a best
+guess is the wrong thing to multiply. Several of the factors, above all the chance that
+life starts on a suitable planet, are uncertain not by a factor of a few but by a factor of one followed by a hundred
+zeros, and when you run the equation with honest ranges instead of single best guesses, a large share of the outcomes have the galaxy empty and a good share have the
+whole observable universe empty. On this view there was never anything to explain: the
+silence is what you should expect from what we actually know, and the surprise was an
+artefact of false precision."""
+body = """
+The argument is a point about arithmetic, made by three researchers at Oxford's Future of
+Humanity Institute in 2018. The Drake Equation multiplies seven numbers. If each is
+uncertain, the right way to combine them is not to pick a middle value for each and
+multiply, but to let each vary across its plausible range, draw one value from each range
+many thousands of times, multiply each time, and look at the spread of results. When they
+did that with ranges drawn from the published literature, the middle outcome was a
+fraction of a civilisation per galaxy, and the chance that we are alone in the Milky Way
+came out above one half. The chance that we are alone in the entire observable universe
+came out around four in ten.
+
+The reason is that one or two of the factors dominate. The chance that life starts on a
+suitable planet could, on what is known, be anywhere from nearly certain to one in a
+trillion trillion trillion. When a factor can be that small, the product can be that small,
+and no amount of optimism about stars and planets can rescue it. A single best guess hides
+this by quietly choosing a value in the middle of the range, which is where the odds are
+least likely to lie. Multiplying middles gives a confident-looking number that no
+individual step justifies.
+
+The paper's second move was to turn the argument around. If the silence is what one
+expects, then the silence is also weak evidence about the factors, and the authors updated
+their ranges on the observation that nobody is visible. The result was the same in shape:
+the probability that we are alone went up, and the bulk of the uncertainty moved further
+toward the early steps, the origin of life and of intelligence. In the catalogue's terms
+this explanation lives with the "never there" family, because its conclusion is that the
+factors before the lifetime are probably small, but it reaches that conclusion by
+accounting rather than by any claim about biology.
+
+This site's headline numbers follow the paper's method: every factor carries a range, the
+equation is run many thousands of times, and what goes on the home page is the spread.
+That is the practical reason the explanation gets a page of its own.
+
+The main objection is that "dissolving" the paradox depends entirely on the ranges chosen,
+and the wide lower end for the origin of life is doing almost all the work. Critics argue
+that the lower bound of one in ten to the thirty-six is not an estimate anyone defends but
+a formal placeholder for ignorance, and that putting it in the range on equal terms with
+the rest guarantees the conclusion. The authors agree that the ranges are the argument,
+and reply that anyone who wants a crowded galaxy has to say which range is wrong and why,
+which is a better conversation than the one about paradoxes. A second objection is that
+the argument answers Drake's question (how many are detectable now) and not Hart's (why
+has nobody in ten billion years spread across the galaxy), and a single early civilisation
+anywhere in the galaxy's past would have been enough to fill it."""
+standing = "Widely read and influential; its method is now the standard way to present the equation, and this site uses it. The strength of its conclusion is disputed, mostly over how wide a range to allow for the origin of life."
+would_strengthen = "A published argument or measurement that narrows the lower end of the origin-of-life range downward, confirming that very small values are plausible; continued absence of detections in surveys of the atmospheres of planets around other stars consistent with an empty neighbourhood."
+would_weaken = "Any discovery of life beyond Earth, which would cut the origin-of-life range at the bottom and re-crowd the galaxy in the computation; a persuasive case that the lower bounds used were placeholders rather than estimates and should be dropped."
+related = ["rare-life", "great-filter-behind-us", "we-are-early", "not-looked-long-enough"]
+
+verify = [
+  "That the paper's headline figures are a median of about 0.3 civilisations in the galaxy, a 52% chance we are alone in the galaxy and a 38% chance we are alone in the observable universe; the publication record sandberg-2018 in data/papers carries the same numbers and should agree.",
+  "That the lower bound used for the origin-of-life factor was 10 to the minus 36 per planet; check the paper's table of ranges.",
+  "That the Hart-versus-Drake objection has been made in print (rather than only in discussion) and by whom; find a citation or soften the wording.",
+]
+
+[[bears_on]]
+factor = "life"
+direction = "lowers"
+
+[[bears_on]]
+factor = "intelligence"
+direction = "lowers"

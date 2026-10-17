@@ -1,0 +1,70 @@
+# Explanation record: life under ice. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address (/explanations/life-under-ice/)
+# and is never renamed. Added beyond the session brief's list of thirty.
+
+id = "life-under-ice"
+name = "Life under ice: most living worlds may be oceans sealed under miles of ice, whose inhabitants never see the sky"
+family = "unseen"
+proposed_by = "S. Alan Stern"
+proposed_in = 2017
+proposed_source = "'An answer to Fermi's Paradox in the prevalence of ocean worlds?', presented at the American Astronomical Society Division for Planetary Sciences meeting, October 2017"
+summary = """
+In our own solar system there is one world with oceans on its surface and at least half a
+dozen with oceans hidden under thick shells of ice: moons of Jupiter and Saturn, probably
+Pluto, perhaps more. If that ratio holds across the galaxy, then most of the places life
+could live are dark, sealed and cut off from everything outside. Life there would be
+shielded from the explosions and impacts that threaten surface life, which makes it a good
+bet to exist, but it would have no reason to suspect there was a universe beyond the ice,
+no way to see stars, and no means of building anything that could signal to them. The
+galaxy may be teeming, and almost all of it is living in the dark."""
+body = """
+The suggestion came from Alan Stern, the planetary scientist who led the New Horizons
+mission to Pluto, at a conference in 2017. The discoveries of the previous two decades had
+turned the solar system's inventory of habitable places upside down. Jupiter's moon Europa
+has a salt-water ocean under its ice with more water than all of Earth's oceans. Saturn's
+moon Enceladus vents its ocean into space through cracks at its south pole, and the vents
+carry the ingredients of life. Ganymede, Callisto, Titan and probably Pluto have oceans of
+their own. Earth, with its water out in the open, is the odd one out.
+
+If the solar system is typical, Stern argued, then the typical habitable world is an
+interior ocean, not a surface one, and the typical form of life is sealed in. Such life
+would be protected from the hazards that threaten surface life, from radiation to impacts
+to the flares of a red dwarf sun, so there is every reason to think it could persist for
+billions of years. But it would live in darkness under miles of ice, with no sky, no stars
+and no seasons to prompt the idea of an outside. Even if it became intelligent, it would
+have no fire, no metal, no astronomy and no reason to broadcast. Getting through the ice
+would be a project it had no motive to undertake.
+
+The bearing on the Drake Equation is on the share of intelligent species that become
+detectable, which this view says is very small for reasons of geography rather than
+choice. It is friendly to the view that life is common and to the view that intelligence
+is not especially rare. It also touches the factor for habitable planets per star in an
+unusual way: it says that factor may be larger than usually counted, because moons and
+distant icy bodies count too, while making almost none of those worlds detectable.
+
+Objections: an interior ocean fed by heat from tides or radioactive decay may have far
+less energy available than a sunlit surface, which could keep life simple; the chemistry
+of such oceans is unknown; and an intelligent species under ice could in principle work
+out that the ice has an outside and go looking, as humans worked out the shape of the
+Earth from indirect clues. The strongest reply is that none of this is tested, and that
+the first missions designed to look for life under ice, Europa Clipper and the proposed
+Enceladus landers, will begin to test it in the 2030s. If Europa's ocean turns out to be
+inhabited, this explanation moves from clever suggestion to serious contender."""
+standing = "A recent and appealing suggestion from a prominent planetary scientist; it has not been worked out in detail and is usually mentioned alongside the rare-technology argument rather than as a position in its own right."
+would_strengthen = "Life found in the ocean of Europa or Enceladus; a census of planetary systems showing interior-ocean worlds greatly outnumbering surface-ocean ones; evidence that complex life can thrive on the energy available under ice."
+would_weaken = "Sterile oceans under the ice of Europa and Enceladus despite suitable chemistry; evidence that interior oceans have too little energy to support anything beyond microbes; a detected technological civilisation, showing that at least some life does reach the sky."
+related = ["rare-technology", "rare-earth", "rare-life", "no-interest-in-contact"]
+
+verify = [
+  "That Stern presented this at the 2017 Division for Planetary Sciences meeting and that the title is roughly as given; check the abstract listing.",
+  "That Europa's ocean is usually said to hold more water than Earth's oceans; check the standard estimate.",
+  "That Europa Clipper arrives in the early 2030s; check the mission's current schedule.",
+]
+
+[[bears_on]]
+factor = "detectable"
+direction = "lowers"
+
+[[bears_on]]
+factor = "habitable-planets"
+direction = "raises"

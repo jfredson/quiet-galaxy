@@ -1,0 +1,61 @@
+# Explanation record: the Great Filter is ahead of us. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address
+# (/explanations/great-filter-ahead/) and is never renamed.
+
+id = "great-filter-ahead"
+name = "The Great Filter is ahead of us: civilisations get as far as we have all the time, and something stops nearly all of them from going further"
+family = "gone"
+proposed_by = "Robin Hanson"
+proposed_in = 1998
+proposed_source = "'The Great Filter — Are We Almost Past It?', essay published online, 1998; the pessimistic reading pressed by Nick Bostrom in 'Where Are They?', MIT Technology Review, 2008"
+summary = """
+If the road from dead matter to a galaxy-spanning civilisation has a step almost nothing
+passes, the Great Filter, then the question is whether that step is behind us or ahead.
+The pessimistic reading is that it is ahead: life, complex cells, minds and technology are
+all reasonably common, so the galaxy has produced many civilisations like ours, and nearly
+all of them have failed to go further. What stops them is not known. It may be war, a
+runaway technology, exhaustion of a planet, or something no one has thought of yet. On
+this reading, every discovery that makes early life look easy is bad news, because it
+moves the Filter closer to us."""
+body = """
+Robin Hanson's 1998 essay set out the logic that the silence implies a Filter somewhere
+on the road, and left open where. The philosopher Nick Bostrom drew out the dark reading
+in 2008. If the early steps turn out to be easy, if life appears readily and complex life
+follows, then the Filter has not been passed and must lie in our future. That is why
+Bostrom wrote that he hoped the search for life on Mars would find nothing: a dead Mars
+would be mild evidence that the hard step is behind us, while fossils of complex life
+would be evidence that it is not.
+
+What the Filter ahead might be is a matter of guesswork, and the catalogue gives separate
+pages to the main candidates. Self-destruction by war is the oldest guess. Burning
+through a planet's resources before learning to live within them is another. A
+technology that turns on its makers, whether a machine intelligence or a self-copying
+device, is a third. The common feature is that the step must stop nearly every
+civilisation, not most: a Filter that lets one in a hundred through would still have
+filled the galaxy by now, given how many chances there have been.
+
+The bearing on the Drake Equation is on the last factor, how long a civilisation remains
+detectable. The Filter ahead says that number is short for nearly everyone. It leaves the
+earlier factors alone and, if anything, assumes they are generous.
+
+The objections are those against the Filter idea in general, with one addition. The
+general objections: the whole argument assumes that a surviving civilisation would spread
+visibly across its galaxy, which every explanation in the "unseen" family denies, and the
+Filter need not be a single step. The addition: the Filter ahead has to be a step that no
+one escapes, whereas every candidate so far is a danger that a careful civilisation might
+avoid. A danger that can be avoided by some is not a Filter, and the first to avoid it
+would own the galaxy. Pessimists reply that we do not know what the step is, which is
+precisely the problem, and that a danger invisible until it is too late is the one to
+worry about."""
+standing = "The pessimistic reading is taken seriously, especially among people who work on long-term risks to humanity, and it is the reason finding simple life nearby is sometimes described as bad news. Most astrobiologists lean toward the Filter being behind us, but on the evidence available neither side can be ruled out."
+would_strengthen = "Simple or complex life found elsewhere in the solar system or detected around another star, which would show the early steps are easy; signs of civilisations that existed and ended; a clear argument that some coming technology is both inevitable and uncontrollable."
+would_weaken = "Evidence that the origin of life or of complex cells is extremely rare, which would place the Filter behind us; a detected civilisation that has lasted far longer than we have; a convincing explanation from the 'unseen' family, which would remove the need for a Filter."
+related = ["great-filter-behind-us", "self-destruction", "civilisations-burn-out", "berserkers", "they-became-machines"]
+
+verify = [
+  "That Bostrom's 2008 article appeared in MIT Technology Review under the title 'Where Are They? Why I hope the search for extraterrestrial life finds nothing'; check.",
+]
+
+[[bears_on]]
+factor = "lifetime"
+direction = "lowers"
