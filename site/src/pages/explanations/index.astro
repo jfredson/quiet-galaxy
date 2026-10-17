@@ -1,0 +1,62 @@
+---
+// The explanations index: every serious answer to the silence, in the three families, with each
+// family's plain name and one paragraph saying what the family claims (schema decision 7: the
+// families' names live in the script, scripts/compute.py, and their blurbs in scripts/export.py).
+import Base from '../../layouts/Base.astro';
+import { records, explanationById, directionShort, plural, symbolHtml } from '../../lib/records';
+
+const total = records.counts.explanations;
+---
+
+<Base
+  title="Every explanation for the silence — The Quiet Galaxy"
+  description="Every serious explanation for why the galaxy looks empty, sorted into three families, each on its own page with what would strengthen or weaken it."
+>
+  <section class="hero">
+    <p class="eyebrow">Explanations</p>
+    <h1>Every serious answer to the silence</h1>
+    <p class="lede">
+      Why have we heard nothing? Every answer anyone has seriously proposed is, in the end, a claim about one or more of the seven pieces of the equation. The answers sort into three families, and each one has a page of its own, at an address that never changes, so you can point to it from anywhere.
+    </p>
+    <p class="dim" style="font-size: 14px;">
+      {plural(total, 'explanation', 'explanations')} on the record so far. Each page says who proposed it and when, which pieces of the equation it bears on and in which direction, what evidence would strengthen or weaken it, and which books, films and papers take it up.
+    </p>
+  </section>
+
+  {records.families.map((fam, i) => (
+    <section class="section family" id={fam.key}>
+      <div class="family-head">
+        <p class="kicker">Family {i + 1} of 3 · {plural(fam.count, 'explanation', 'explanations')}</p>
+        <h2>{fam.name}</h2>
+        <p>{fam.blurb}</p>
+      </div>
+      {fam.count === 0 ? (
+        <p class="empty-note">No explanation in this family has been written up yet.</p>
+      ) : (
+        <ul class="explist">
+          {fam.explanations.map((id) => {
+            const e = explanationById(id)!;
+            return (
+              <li id={e.id}>
+                <a class="ename" href={e.path}>{e.name}</a>
+                <p class="esum">{e.summary}</p>
+                <div class="chips">
+                  <span class="chip">{e.proposed_by}, {e.proposed_in}</span>
+                  {e.bears_on.map((b) => (
+                    <a class="chip" href={b.path} title={b.name}><span set:html={symbolHtml(b.symbol)}></span> {directionShort[b.direction]}</a>
+                  ))}
+                  {e.library.length > 0 && <span class="chip">{plural(e.library.length, 'book or film', 'books and films')}</span>}
+                  {e.publications.length > 0 && <span class="chip">{plural(e.publications.length, 'paper', 'papers')}</span>}
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </section>
+  ))}
+
+  <p class="dim" style="font-size: 14px;">
+    Missing one? <a href="/disagree/">Name it</a>, with the piece of the equation it bears on. An explanation that bears on no piece cannot be added, because it would not be an explanation of the silence but a story beside it.
+  </p>
+</Base>

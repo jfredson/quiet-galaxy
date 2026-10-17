@@ -1,0 +1,66 @@
+---
+// The library: books, films, television, games, videos and essays that treat a piece of the
+// equation or an explanation in an interesting way. One page, grouped by kind, each entry at an
+// anchor named for its id so that an explanation page can point at it. Each entry says what it
+// illustrates, how, and whether it is worth the time (docs/record-schema.md, the library record).
+import Base from '../../layouts/Base.astro';
+import { records, plural, symbolHtml, hostOf } from '../../lib/records';
+
+const total = records.counts.library;
+const kinds = records.library_kinds;
+---
+
+<Base
+  title="The library — The Quiet Galaxy"
+  description="Books, films, television, games and videos that take the question of the empty sky seriously, each with the explanation or piece of the equation it illustrates and whether it is worth the time."
+>
+  <section class="hero">
+    <p class="eyebrow">Library</p>
+    <h1>The question, told as a story</h1>
+    <p class="lede">
+      Much of the best thinking about the silence was done in fiction before it was done in papers. This is a shelf of the books, films, shows, games and videos that treat one of the explanations, or one of the pieces of the equation, in a way worth your time, with a line on who each is for.
+    </p>
+    <p class="dim" style="font-size: 14px;">
+      {plural(total, 'work', 'works')} on the shelf{kinds.length > 1 ? `: ${kinds.map((k) => `${k.count} ${k.name.toLowerCase()}${k.count === 1 ? '' : k.key === 'television' ? '' : 's'}`).join(', ')}` : ''}. Each entry points at the explanation it illustrates; the explanation's own page lists everything on this shelf that points at it.
+    </p>
+  </section>
+
+  {total === 0 ? (
+    <p class="empty-note">Nothing on the shelf yet.</p>
+  ) : kinds.map((k) => (
+    <section class="shelf" id={k.key}>
+      <h2 class="shelf-head">{k.name}{k.count === 1 ? '' : k.key === 'television' ? '' : 's'}</h2>
+      {records.library.filter((w) => w.kind === k.key).map((w) => (
+        <article class="work" id={w.id}>
+          <div>
+            <h3 class="work-title">{w.link ? <a href={w.link} rel="noopener">{w.title}</a> : w.title}</h3>
+            <p class="work-meta">{w.maker}, {w.year}{w.link ? ` · ${hostOf(w.link)}` : ''}</p>
+            <p class="how">{w.how}</p>
+            <p class="worth"><strong>Worth the time?</strong>{w.worth_the_time}</p>
+            {w.verify.length > 0 && (
+              <p class="dim" style="font-size: 13px; margin: 8px 0 0;">Still to be checked against a source: {w.verify.join(' ')}</p>
+            )}
+          </div>
+          <aside class="work-aside">
+            {w.explanations.length > 0 && (
+              <>
+                <p class="kicker">Illustrates</p>
+                <ul>{w.explanations.map((x) => <li><a href={x.path}>{x.name}</a></li>)}</ul>
+              </>
+            )}
+            {w.factors.length > 0 && (
+              <>
+                <p class="kicker">Bears on</p>
+                <ul>{w.factors.map((x) => <li><a href={x.path}><span set:html={symbolHtml(x.symbol)}></span> · {x.name}</a></li>)}</ul>
+              </>
+            )}
+          </aside>
+        </article>
+      ))}
+    </section>
+  ))}
+
+  <p class="dim" style="font-size: 14px;">
+    Know a book or a film that belongs here? <a href="/disagree/">Suggest it</a>, with the explanation it illustrates. The shelf is kept short on purpose: a work earns its place by treating the idea well, not by mentioning it.
+  </p>
+</Base>

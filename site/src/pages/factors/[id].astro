@@ -1,0 +1,237 @@
+---
+// One page per piece of the equation: a branch page in the tracker pattern (section 2.2), carrying
+// its plain name and meaning, its own number (the range this site uses, with the published
+// estimates behind it), what would move it, its history (the revisions), and what the story so far
+// says about it (the papers that bear on it). The layout, with the record's details in a rail
+// beside the text, is copied from The Belt Equation's event page (site/src/pages/tree/[factor]/[id].astro).
+// All seven pieces get a page, so no link on the equation page leads nowhere; a piece whose record
+// is not written yet says so.
+import Base from '../../layouts/Base.astro';
+import {
+  records, rangeWords, estimateWords, plainNumber, worldDate, longDate, symbolHtml, shapeWords,
+  statusWords, directionWords, issueUrl, recordUrl, hostOf, inline, plural, paragraphs, type Factor,
+} from '../../lib/records';
+
+export function getStaticPaths() {
+  return records.factors.map((f) => ({ params: { id: f.id }, props: { factor: f } }));
+}
+
+const { factor } = Astro.props as { factor: Factor };
+const f = factor;
+const title = `${f.name} — The Quiet Galaxy`;
+const description = f.exists
+  ? f.description.split(/(?<=\.)\s/)[0]
+  : `Piece ${f.order} of the equation, ${f.symbol}. The published estimates for it are still being gathered.`;
+const disagree = issueUrl('move-a-range.md', `Move a range: ${f.name}`,
+  `Piece: ${f.id} (${f.symbol}; ${Astro.site}factors/${f.id}/)\n\nThe range I would move, from what to what:\n\nThe source:\n\nWhy:\n`);
+const error = issueUrl('error-on-a-page.md', `Error on the page for ${f.name}`,
+  `Page: ${Astro.site}factors/${f.id}/\n\nWhat is wrong:\n\nWhat it should say, with a source:\n`);
+const lowers = f.explanations.filter((e) => e.direction === 'lowers');
+const raises = f.explanations.filter((e) => e.direction === 'raises');
+const leaves = f.explanations.filter((e) => e.direction === 'unchanged');
+---
+
+<Base title={title} description={description}>
+  <section class="hero wide">
+    <p class="eyebrow"><a href="/equation/">The equation</a> · piece {f.order} of 7 · <span set:html={symbolHtml(f.symbol)}></span></p>
+    <h1>{f.name}</h1>
+    {f.exists ? (
+      <p class="lede">{paragraphs(f.description)[0]}</p>
+    ) : (
+      <p class="lede">The record for this piece is not written up yet. The published estimates are being gathered, and until all seven pieces have a range the number on the home page cannot be computed.</p>
+    )}
+  </section>
+
+  <div class="record">
+    <div class="prose">
+      {f.exists && paragraphs(f.description).slice(1).map((p) => <p>{p}</p>)}
+
+      {f.range ? (
+        <div class="range-box">
+          <span class="range-label">The range this site uses</span>
+          <span class="range-value">{rangeWords(f.range.low, f.range.high, f.unit)}</span>
+          <span class="range-status">{statusWords[f.range.status]}<br />set on {longDate(f.range.set_on)}</span>
+          <p class="range-shape">When the number on the home page is computed, a value for this piece is picked at random from this range each time, and {shapeWords[f.range.shape]}.</p>
+        </div>
+      ) : (
+        <div class="range-box">
+          <span class="range-label">The range this site uses</span>
+          <span class="range-value" style="font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--muted);">not set yet</span>
+        </div>
+      )}
+
+      {f.range && (
+        <>
+          <h2>Why that range</h2>
+          {paragraphs(f.range.why).map((p) => <p>{p}</p>)}
+          {f.range.sources.length > 0 && (
+            <p class="dim" style="font-size: 14.5px;">
+              <strong>Rests on:</strong> {f.range.sources.map((s, i) => (
+                <><a href={s.path}>{s.authors.length ? s.authors[0].split(' ').slice(-1)[0] + (s.authors.length > 1 ? ' and others' : '') : s.title}, {s.date.slice(0, 4)}</a>{i < f.range!.sources.length - 1 ? '; ' : '.'}</>
+              ))}
+            </p>
+          )}
+          {f.range.status === 'first-pass' && (
+            <p class="dim" style="font-size: 14.5px;">
+              A first pass means the range was set from the published estimates below and has not yet been through the outside review that every range gets before it is called settled. It may move.
+            </p>
+          )}
+        </>
+      )}
+
+      {f.exists && (
+        <>
+          <h2>The published estimates</h2>
+          <p style="font-size: 15px;">
+            {plural(f.estimates.length, 'estimate', 'estimates')} on the record, oldest first. Each says who made it, when, how, and where to find it. A range is set from these by hand, with the reason above, never computed from them: the reason is the arguable part.
+          </p>
+          <div class="table-scroll">
+            <table class="ptable">
+              <thead><tr><th class="when">When</th><th>Who</th><th>Estimate</th><th>How it was reached</th></tr></thead>
+              <tbody>
+                {f.estimates.map((e) => (
+                  <tr>
+                    <td class="when">{worldDate(e.when)}</td>
+                    <td>{e.who}<span class="src">{e.link ? <a href={e.link} rel="noopener">{e.source}</a> : e.source}{e.publication_brief && <> · <a href={e.publication_brief.path}>in the log</a></>}</span></td>
+                    <td class="num">{estimateWords(e, f.unit)}</td>
+                    <td>{e.method}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <h2>What would move this</h2>
+          <div class="move-this">
+            <p class="kicker">The discovery that would narrow the range</p>
+            {f.what_would_move_this}
+          </div>
+          <p style="font-size: 15px;">
+            When a paper or a survey of that kind is published, it is logged in <a href="/story/">the story so far</a> with a note saying whether it moved this range. A move is written as a dated revision below, with the old number, the new one and the reason.
+          </p>
+        </>
+      )}
+
+      {f.revisions.length > 0 && (
+        <>
+          <h2>How the range has moved</h2>
+          <div class="table-scroll">
+            <table class="ptable">
+              <thead><tr><th class="when">Date</th><th>What</th><th>From</th><th>To</th><th>Why</th></tr></thead>
+              <tbody>
+                {f.revisions.map((r) => (
+                  <tr>
+                    <td class="when">{longDate(r.date)}</td>
+                    <td>{r.field}</td>
+                    <td class="dim">{typeof r.old === 'number' ? plainNumber(r.old) : String(r.old ?? '')}</td>
+                    <td class="num">{typeof r.new === 'number' ? plainNumber(r.new) : String(r.new ?? '')}</td>
+                    <td>{r.why}{r.publication_brief && <span class="src">Because of <a href={r.publication_brief.path}>{r.publication_brief.title}</a>.</span>}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </>
+      )}
+      {f.exists && f.revisions.length === 0 && (
+        <p class="dim" style="font-size: 14.5px;">The range has not moved since it was set. When it does, the change is listed here with its date and reason.</p>
+      )}
+
+      <h2>The explanations that lean on this piece</h2>
+      {f.explanations.length === 0 ? (
+        <p class="empty-note">No explanation on the record bears on this piece yet.</p>
+      ) : (
+        <>
+          <p style="font-size: 15px;">
+            An explanation for the silence is, in the end, a claim about one or more of the seven pieces. {lowers.length > 0 && `${plural(lowers.length, 'explanation says', 'explanations say')} this piece is smaller than it looks`}{lowers.length > 0 && (raises.length > 0 || leaves.length > 0) ? '; ' : ''}{raises.length > 0 && `${plural(raises.length, 'says', 'say')} it is larger`}{raises.length > 0 && leaves.length > 0 ? '; ' : ''}{leaves.length > 0 && `${plural(leaves.length, 'leaves', 'leave')} it alone and ${leaves.length === 1 ? 'says' : 'say'} the silence is about us`}{f.explanations.length > 0 ? '.' : ''}
+          </p>
+          <ul class="watchlist">
+            {f.explanations.map((e) => (
+              <li>
+                <a class="wname" href={`/explanations/${e.id}/`}>{e.name}</a>
+                <span class="wworth">{records.families.find((x) => x.key === e.family)?.name}</span>
+                <span class="wno">{directionWords[e.direction].replace('this', 'this piece')}</span>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+
+      <h2>The papers that bear on it</h2>
+      {f.publications.length === 0 ? (
+        <p class="empty-note">No paper in the log bears on this piece yet.</p>
+      ) : (
+        <ul class="watchlist">
+          {f.publications.map((p) => (
+            <li>
+              <a class="wname" href={p.path}>{p.title}</a>
+              <span class="wworth">{worldDate(p.date)}</span>
+              <span class="wno">{p.authors.join(', ')} · {p.moved_range ? 'moved a range' : 'logged; moved no range'}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      {f.library.length > 0 && (
+        <>
+          <h2>Books and films that take it up</h2>
+          <ul class="watchlist">
+            {f.library.map((l) => (
+              <li>
+                <a class="wname" href={l.path}>{l.title}</a>
+                <span class="wworth">{l.year}</span>
+                <span class="wno">{l.kind_name} · {l.maker}</span>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+
+      {f.notes && (
+        <>
+          <h2>Notes</h2>
+          <p set:html={inline(f.notes)} />
+        </>
+      )}
+      {f.verify.length > 0 && (
+        <div class="callout verify-box">
+          <h3>Claims still to be checked</h3>
+          <p style="font-size: 14.5px;">These were written from memory and have not yet been checked against a source. A later pass clears each one.</p>
+          <ul>{f.verify.map((v) => <li>{v}</li>)}</ul>
+        </div>
+      )}
+
+      <hr />
+      <p class="dim record-foot">
+        Think the range should move? <a href={disagree} rel="noopener">Argue it, with a source</a>. Spotted an error on this page? <a href={error} rel="noopener">Say so</a>. Or read <a href="/disagree/">how disagreement gets folded in</a>.
+        {f.file && <> The record itself is <a href={recordUrl(f.file)} rel="noopener"><code>{f.file}</code></a> in the public repository.</>}
+      </p>
+    </div>
+
+    <aside class="record-aside">
+      <div class="rail">
+        <h4>This piece</h4>
+        <dl>
+          <dt>Symbol</dt><dd><span set:html={symbolHtml(f.symbol)}></span></dd>
+          <dt>Place</dt><dd>{f.order} of 7 in the equation</dd>
+          <dt>Measured in</dt><dd>{f.unit === 'fraction' ? 'a share, from 0 to 1' : f.unit}</dd>
+          <dt>Range</dt><dd>{f.range ? rangeWords(f.range.low, f.range.high, f.unit) : 'not set yet'}</dd>
+          {f.range && <><dt>Status</dt><dd>{statusWords[f.range.status]}</dd></>}
+          <dt>Estimates</dt><dd>{f.estimates.length}</dd>
+        </dl>
+      </div>
+      <div class="rail">
+        <h4>The other pieces</h4>
+        <ul>
+          {records.factors.filter((o) => o.id !== f.id).map((o) => (
+            <li><a href={o.path}><span set:html={symbolHtml(o.symbol)}></span> · {o.name}</a>{!o.exists && <span class="sub">not written up yet</span>}</li>
+          ))}
+        </ul>
+      </div>
+      <div class="rail">
+        <h4>Try it</h4>
+        <p class="dim">Move this piece and watch the answer change on <a href="/equation/#calculator">the calculator</a>.</p>
+      </div>
+    </aside>
+  </div>
+</Base>

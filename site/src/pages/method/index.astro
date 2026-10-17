@@ -1,0 +1,141 @@
+---
+// How the numbers are worked out: the plain account (tracker pattern, rule 4.5, and the design
+// standard's section 1a). The working documents are linked at the end, each with a preface saying
+// what it is, who it is for and where the plain account lives; the preface is copied from the AGI
+// Zeitgeist Tracker's document pages (scripts/site.py, `status`), the pattern's first
+// implementation of it. The method itself follows the 2018 paper by Sandberg, Drexler and Ord,
+// as the kickoff document settled; the parameters of the run belong to the session that writes
+// `compute.py run`, and this page reads what the run reports rather than asserting a count.
+import Base from '../../layouts/Base.astro';
+import { records, plainNumber, percent, longDate, REPO } from '../../lib/records';
+
+const head = records.headline;
+const c = records.counts;
+const docs = [
+  {
+    title: 'The record layout',
+    file: 'docs/record-schema.md',
+    what: 'It defines the four kinds of record (a piece of the equation, an explanation, a library entry, a publication), every field each may carry, and the rules the checking script enforces. It is for anyone adding or correcting a record.',
+  },
+  {
+    title: 'The kickoff document',
+    file: 'docs/2026-10-16-kickoff.md',
+    what: 'The plan the project started from on 16 October 2026: the question, the method, the four kinds of record, the name, and the weekend plan for the first version. It is kept as the record of where the project began, and it is not updated.',
+  },
+  {
+    title: 'The checking and computing script',
+    file: 'scripts/compute.py',
+    what: 'The code that checks every record against the layout and refuses to continue on any failure, and that runs the multiplication many thousands of times to produce the numbers. It is for anyone who wants to reproduce a figure.',
+  },
+  {
+    title: 'The changelog',
+    file: 'CHANGELOG.md',
+    what: 'Every change to a range, a record, the method or the site, with its date. A range change always names the publication that moved it and by how much.',
+  },
+];
+---
+
+<Base
+  title="How the numbers are worked out — The Quiet Galaxy"
+  description="How the number at the top of the site is computed: seven ranges drawn from published estimates, multiplied many thousands of times with a random pick from each, giving a spread rather than a point."
+>
+  <section class="hero">
+    <p class="eyebrow">Method</p>
+    <h1>How the numbers are worked out</h1>
+    <p class="lede">
+      The number at the top of the site is never typed in. It is worked out from the seven pieces of the equation, each carrying a range drawn from what has been published, by a method that anyone can run from the public repository.
+    </p>
+  </section>
+
+  <section class="section who" id="who">
+    <div>
+      <p class="kicker">Who is asking</p>
+      <p>I'm John, and I write about AI, sentience and the spread of conscious life beyond Earth at <a href="https://sentient-horizons.com" rel="noopener">Sentient Horizons</a>. This is the sister of <a href="https://beltequation.com" rel="noopener">The Belt Equation</a>, where I track the odds of leaving Earth myself. Here the question is older and larger: whether anyone else is out there, and why we cannot tell. I wanted a place where the argument is laid out piece by piece, every number carries its source, and a new discovery moves the answer in public.</p>
+    </div>
+    <div>
+      <p class="kicker">Why the name?</p>
+      <p>Because that is the observed fact. The sky is quiet. Every explanation on this site is an answer to that one observation, and the site does not presume which answer is right: it works out, from the published numbers, how surprised we should be.</p>
+    </div>
+  </section>
+
+  <section class="section narrow prose">
+    <h2>The multiplication</h2>
+    <p>
+      In 1961 the astronomer Frank Drake wrote down a way to organise the question "how many civilisations in our galaxy could we detect right now?" as a multiplication of seven quantities: how many stars are born each year; what share of them have planets; how many planets per star could support life; on what share of those life starts; on what share of those it becomes intelligent; what share of intelligent species make themselves detectable; and how long they stay detectable. Multiply the seven and you have N, the number of detectable civilisations. The equation is a way of dividing one unanswerable question into seven smaller ones, some of which can now be answered.
+    </p>
+
+    <h2>Why a spread, not a point</h2>
+    <p>
+      For decades people plugged a single favourite value into each piece and multiplied, and got whatever number they had hoped for. The trouble is that for most of the seven the honest answer is "somewhere between this and that", and the gap between this and that is often not a factor of two but a factor of a thousand, or a million, or far more. A single value hides that. In 2018 the researchers Anders Sandberg, Eric Drexler and Toby Ord, in a paper called "Dissolving the Fermi Paradox", showed what happens when you keep the uncertainty in: the answer is not a number but a wide spread, and a large part of that spread sits below one civilisation per galaxy. On their reading, the silence is not a paradox at all; it is roughly what you should expect given how little we know.
+    </p>
+    <p>
+      This site follows that method. Each of the seven pieces carries a range, set from the published estimates listed on its page, with a written reason. The multiplication is then run many thousands of times. Each time, a value is picked at random from every piece's range, the seven are multiplied, and the result is kept. The thousands of results are the spread.
+    </p>
+
+    <h2>How a value is picked from a range</h2>
+    <p>
+      For most pieces the range is drawn so that every tenfold step is equally likely: a pick between 0.001 and 1 is as likely to land between 0.001 and 0.01 as between 0.1 and 1. That is the right way to be uncertain about a quantity that could be any of several orders of magnitude, and it is what the 2018 paper did. A piece whose range is narrow enough that tenfold steps make no sense (a share of stars that is known to lie between 0.6 and 1, say) can instead be drawn so that every value is equally likely. Each piece's page says which.
+    </p>
+
+    <h2>The three numbers, and the width</h2>
+    <p>
+      From the spread come the three numbers on the home page. The first is the middle of the spread: the value of N such that half the results came out above it and half below. The second is the share of results that came out below one, which is the chance that we are the only detectable civilisation in the galaxy. The third is the same for the whole observable universe: the share of results so small that, even multiplied by the number of galaxies there are, they come to fewer than one.
+    </p>
+    <p>
+      Beside them sits the width of the argument. Take the most hopeful published estimate of every piece and multiply, then the most pessimistic and multiply. The two results are the ends of the argument as it has actually been made, and the gap between them is the thing a single number hides.
+    </p>
+    {head.available ? (
+      <p>
+        As the site stands, computed on {head.computed_on ? longDate(head.computed_on) : longDate(records.exported_on)}{head.runs ? ` from ${plainNumber(head.runs)} runs` : ''}: the middle of the spread is {plainNumber(head.median)}, the chance we are alone in the galaxy is {percent(head.alone_galaxy)}, and the chance we are alone in the observable universe is {percent(head.alone_universe)}.{head.note ? ` ${head.note}` : ''}
+      </p>
+    ) : (
+      <p class="dim">
+        The numbers are not computed yet. {head.reason} The method above is settled; the run's own settings, such as how many times the multiplication is repeated, are reported here once it exists, and the code is public.
+      </p>
+    )}
+
+    <h2>Where the ranges come from</h2>
+    <p>
+      The ranges are the least certain part of the method, and the rest of the method exists to correct them over time. Each piece's page lists every published estimate on the record, with who made it, when, how, and where to find it. The range is then set by hand from those estimates, with a reason written in plain words. It is not computed from them, because the judgement about which estimates to lean on is the arguable part, and it should be visible and arguable.
+    </p>
+    <p>
+      Every range starts life marked as a first pass. Before it is called settled, it goes through an outside review: the estimates and the reason are put to other readers, including other AI models, with a fixed brief to argue the range up or down, and I rule on every disagreement. Until that has happened for all seven, the home page says so. Each range was first drafted by Claude, the AI I build this project with, from the published estimates, and accepted or moved by me; every change since is a dated revision on the piece's page with the old number, the new one and the reason.
+    </p>
+
+    <h2>What moves a number, and what does not</h2>
+    <p>
+      Fixed, and changed only at a yearly review: the seven pieces, the method of picking from a range, and the rule for setting a range from estimates. Moved whenever the record moves, with a dated line: a piece's range, when a paper or a survey of the kind its page names under "what would move this" is published. Added at any time: a new explanation for the silence, a new paper in the log, a new work on the library shelf. Never changed once published: an explanation's address.
+    </p>
+    <p>
+      Each paper is logged in <a href="/story/">the story so far</a> whether or not it moved anything, and most do not. A paper that says it moved a range must be named by a dated revision on some piece, and the checking script refuses the record otherwise; that cross-check is what keeps the log honest.
+    </p>
+
+    <h2>What the explanations are, in this method</h2>
+    <p>
+      An explanation for the silence is, in the end, a claim about one or more of the seven pieces: that life is rarer than it looks, that civilisations do not last, or that the pieces are fine and we are failing to see what is there. Each explanation's page says which pieces it bears on and in which direction, and what evidence would strengthen or weaken it. The explanations are not given probabilities and are not multiplied into anything. They are the catalogue of arguments the ranges are read against.
+    </p>
+
+    <h2>What is not in the method</h2>
+    <p>
+      The seven pieces are drawn independently, as the 2018 paper's main text does; a world in which life starts easily may also be one in which it becomes intelligent easily, and the method does not yet allow for that. The explanations are not weighed against each other. There is no attempt to update the ranges on the silence itself, which the 2018 paper does in its later sections and which this site may add later with a note here. These are the known gaps, and the yearly review is where they are reconsidered.
+    </p>
+
+    <h2>The working documents</h2>
+    <p>
+      The documents below are published as they are written, because they are the record and rewriting them would change it. They use the project's own shorthand, and this page is the plain account of the same material.
+    </p>
+    <ul class="doc-list">
+      {docs.map((d) => (
+        <li class="doc-preface">
+          <strong>{d.title}</strong>
+          <p>A working document. {d.what} It is published as it is written for anyone checking the work, and it uses the project's own shorthand. The plain account is this page.</p>
+          <a class="doc-link" href={`${REPO}/blob/main/${d.file}`} rel="noopener">Read <code>{d.file}</code> in the repository</a>
+        </li>
+      ))}
+    </ul>
+
+    <p class="dim" style="font-size: 14.5px; margin-top: 1.6em;">
+      Built from {c.factors} of the equation's 7 pieces, {c.explanations} explanation{c.explanations === 1 ? '' : 's'}, {c.library} library entr{c.library === 1 ? 'y' : 'ies'} and {c.publications} publication{c.publications === 1 ? '' : 's'}, as of {longDate(records.exported_on)}. To cite the data: John Fredrickson, <em>The Quiet Galaxy</em>, Sentient Horizons, 2026. Version of {records.exported_on}{records.commit ? `, commit ${records.commit}` : ''}. https://thequietgalaxy.com.
+    </p>
+  </section>
+</Base>
