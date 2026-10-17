@@ -1,0 +1,70 @@
+# Explanation record: natural catastrophes. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address
+# (/explanations/natural-catastrophes/) and is never renamed.
+
+id = "natural-catastrophes"
+name = "Natural catastrophes: asteroid strikes, giant eruptions and nearby exploding stars end civilisations before they can last long enough to be noticed"
+family = "gone"
+proposed_by = "No single author; the modern treatment is due to Milan Ćirković and colleagues"
+proposed_in = 2004
+proposed_source = "Ćirković, 'Earths: rare in time, not space?', Journal of the British Interplanetary Society 57, 53–59 (2004); and the wider literature on mass extinctions since the Alvarez impact hypothesis of 1980"
+summary = """
+Earth's history is punctuated by disasters that killed most of the species alive at the
+time: the rock that ended the dinosaurs, the eruptions that caused the worst extinction
+of all, and perhaps the radiation from nearby dying stars. A civilisation is a far more
+fragile thing than a biosphere. If disasters of this kind strike every few tens of
+millions of years, and smaller ones far more often, then a civilisation needs not just to
+arise but to survive long enough between blows to be heard, and most may not. On this
+view the galaxy is quiet because the universe keeps knocking its inhabitants down."""
+body = """
+The idea that the natural world could end a civilisation is as old as the stories of
+floods and fires, but it became a scientific position in 1980, when Luis and Walter
+Alvarez showed that the extinction which ended the age of dinosaurs coincided with the
+impact of a large asteroid or comet. The fossil record has since been read as a series of
+such shocks: five great mass extinctions and many smaller ones, caused variously by
+impacts, by vast volcanic eruptions that poisoned the air and sea for thousands of years,
+by sudden changes of climate, and perhaps by bursts of radiation from exploding stars
+nearby. Each cleared the field and let something new grow in the space, which is why
+mammals, and eventually humans, exist at all. The same process, applied to a species that
+has only just learned to build telescopes, is less kind.
+
+The Serbian astronomer Milan Ćirković and his colleagues brought this to bear on the
+Fermi question in the 2000s. Their point was that habitability is not a fixed property of
+a planet but something that comes and goes, so that the right question is not whether
+Earth-like planets are rare in space but whether long, uninterrupted stretches of
+habitability are rare in time. A planet may be the right size, in the right orbit, with
+water and air, and still be hit hard enough every so often that nothing complicated lasts.
+The frequency of the blows sets a ceiling on how long a civilisation can expect to have.
+Ćirković argued that this ceiling, together with the galaxy's violent youth, explains why
+civilisations might all be young and few.
+
+The bearing on the Drake Equation is on the last factor, the detectable lifetime, which
+natural disasters would cut short. The sister explanation on this site, the hostile
+galaxy, applies the same disasters to the earlier steps, where they prevent intelligence
+from appearing at all; this page is about what they do to a civilisation that has already
+appeared.
+
+The main objection is that a civilisation at our level or beyond is less fragile than a
+species. Humans already track asteroids and could, with effort, deflect one. A
+civilisation spread across even a few worlds would survive any single disaster. And
+impacts large enough to end a civilisation are rare, roughly one every hundred million
+years for the dinosaur-killer class, which is long compared with the time it takes to get
+off a planet. The reply is that smaller events, a large volcanic eruption or a modest
+impact, could collapse a civilisation without ending its species, that recovery is not
+guaranteed, and that most of the galaxy's history was more violent than the recent past.
+Few researchers think disasters alone explain the silence, but most grant that they
+shorten the expected lifetime in the equation."""
+standing = "Accepted as a real contributor to a shorter average lifetime, and part of most serious discussions of the question; rarely offered as a full explanation on its own, because disasters large enough to end a spacefaring civilisation are rare."
+would_strengthen = "A better record of how often civilisation-ending events strike a typical planet, showing them to be more frequent than Earth's recent history suggests; geological evidence linking more of Earth's extinctions to astronomical causes; signs of a civilisation around another star that ended suddenly."
+would_weaken = "Evidence that most planetary systems are calmer than ours; a civilisation detected that has survived for millions of years; a demonstration that a civilisation at roughly our level can reliably protect itself against impacts and eruptions."
+related = ["hostile-galaxy", "self-destruction", "ships-in-the-night", "great-filter-ahead"]
+
+verify = [
+  "That Ćirković's 'Earths: rare in time, not space?' appeared in JBIS volume 57 in 2004 with those pages; check.",
+  "That a dinosaur-killer class impact is usually quoted at about one per hundred million years; check a standard impact-frequency source.",
+  "That the Alvarez paper is from 1980 (Science 208); check.",
+]
+
+[[bears_on]]
+factor = "lifetime"
+direction = "lowers"

@@ -1,0 +1,68 @@
+# Explanation record: we have not looked long enough. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address
+# (/explanations/not-looked-long-enough/) and is never renamed.
+
+id = "not-looked-long-enough"
+name = "We have not looked long enough: all the searching ever done amounts to a glass of water dipped from the ocean"
+family = "unseen"
+proposed_by = "Jill Tarter gave the image; Jason Wright, Shubham Kanodia and Emily Lubar put a number on it"
+proposed_in = 2010
+proposed_source = "Tarter's 'glass of water from the ocean' comparison, in talks and interviews from around 2010; Wright, Kanodia and Lubar, 'How Much SETI Has Been Done? Finding Needles in the n-dimensional Cosmic Haystack', The Astronomical Journal 156, 260 (2018)"
+summary = """
+The search for signals from other civilisations has been going for about sixty years,
+but for most of that time it looked at a few hundred stars, at a few frequencies, for a
+few minutes each. A proper search has to cover the whole sky, every frequency a signal
+could use, every moment a signal might arrive, every kind of signal, and every level of
+faintness. Measured against that, the astronomer Jill Tarter compared everything done so
+far to scooping one glass of water from the ocean and concluding there were no fish. A
+careful count in 2018 made it a small swimming pool instead of a glass, which does not
+change the point. The silence may simply mean we have hardly started listening."""
+body = """
+The first search for radio signals from another civilisation was Frank Drake's Project
+Ozma in 1960: two stars, one frequency band, a few weeks. The searches since have been
+larger, and the Breakthrough Listen programme that began in 2016 is larger than all its
+predecessors together, but the space to be searched is enormous in a way that is easy to
+underestimate. A signal could come from any direction, on any of billions of possible
+frequencies, at any time, with any pattern, and at any strength down to the limit of the
+telescope. A search covers a tiny box in that space, and a signal outside the box is
+invisible no matter how strong it is. The galaxy could contain a thousand civilisations
+transmitting steadily and the searches so far could easily have missed every one.
+
+Jill Tarter, who led the search for decades, made the comparison that stuck: all the
+searching ever done is a single glass of water from the ocean. In 2018 Jason Wright and
+two colleagues set out to check it. They defined the volume of the search space along
+eight or nine dimensions, worked out how much of it every published search had covered,
+and compared the total with the whole. Their answer, depending on the assumptions, was
+somewhere between a hot tub and a small swimming pool against the volume of Earth's
+oceans. The comparison is not a figure of speech: it is the fraction of the possible
+signals that could have been found if they existed.
+
+The bearing on the Drake Equation is that there is none. This explanation says the
+equation's factors may be anything, that the observation of silence is far weaker than
+it feels, and that the honest state of knowledge is "not yet searched". For the catalogue
+it leaves every factor unchanged and puts the silence down to our effort so far.
+
+The objections come from the strong form of the Fermi question. Even a weak search
+should have found something if the galaxy were settled on the scale Hart imagined,
+because a settled galaxy would look different as a whole, not just transmit. Wright and
+his colleagues agreed and noted that their count applies to signals, not to large-scale
+engineering, which other surveys have begun to rule out. A second objection is that the
+argument never ends: no finite search covers the ocean, so there is always room to say
+we have not looked enough. The reply is that this is a fact about the problem and not a
+flaw in the argument, and that the right response is to keep enlarging the pool. The
+searches now under way will multiply the fraction searched many times over in the next
+decade, and this explanation will weaken as they do, if nothing turns up."""
+standing = "The standard position of the researchers who run the searches, and uncontroversial as a statement about radio signals; it is not an explanation of why a settled galaxy would show no large-scale traces, and is usually paired with one."
+would_strengthen = "Nothing can strengthen it except the passage of time without a comprehensive search; a demonstration that past searches had systematic gaps, such as missing the most likely frequencies or signal types, would show how far from complete they were."
+would_weaken = "A comprehensive all-sky, all-frequency search over years with no detection, which is what the current generation of instruments is beginning to make possible; conversely, a detection would end it, since it would show the galaxy was never as silent as it seemed."
+related = ["listening-the-wrong-way", "shouting-is-costly", "everyone-listens-nobody-transmits", "ships-in-the-night", "no-paradox-just-wide-ranges"]
+
+verify = [
+  "When and where Tarter first used the glass-of-water comparison; around 2010 is from memory, and the proposed_in year should follow the first documented use.",
+  "That Wright, Kanodia and Lubar (2018) is in The Astronomical Journal volume 156, article 260, uses eight or nine dimensions, and gives the hot tub to small swimming pool range; check.",
+  "That Project Ozma observed two stars (Tau Ceti and Epsilon Eridani) for about six weeks in 1960; check.",
+]
+
+[[bears_on]]
+factor = "detectable"
+direction = "unchanged"

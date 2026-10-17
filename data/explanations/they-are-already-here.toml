@@ -1,0 +1,76 @@
+# Explanation record: they are already here. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address
+# (/explanations/they-are-already-here/) and is never renamed.
+
+id = "they-are-already-here"
+name = "They are already here: visitors or their machines have reached the solar system, now or long ago, and we have not recognised them"
+family = "unseen"
+proposed_by = "Many; the sober form is one Michael Hart listed and rejected in 1975, and Robert Freitas and others turned it into searches of the solar system in the 1980s"
+proposed_in = 1975
+proposed_source = "Hart, 'An Explanation for the Absence of Extraterrestrials on Earth', Quarterly Journal of the Royal Astronomical Society 16, 128–135 (1975); Freitas and Valdes, 'A search for natural or artificial objects located at the Earth-Moon libration points', Icarus 42, 442–447 (1980); Benford, 'Looking for Lurkers', The Astronomical Journal 158, 150 (2019)"
+summary = """
+The simplest answer to "where is everybody" is "here". It comes in several strengths. The
+weakest, and the one researchers take seriously, is that a probe sent long ago could be
+sitting quietly somewhere in the solar system, on the Moon, in one of the stable points
+where gravity holds objects in place, or among the asteroids, and that nobody has looked
+hard enough to find it. The middle version is that visitors came in the distant past and
+left traces we have misread or lost. The strongest, that they are visiting now and are the
+cause of unexplained sightings in the sky, has a long history of claims and no good
+evidence. The silence, on any of these, is a failure to notice rather than an absence."""
+body = """
+Enrico Fermi's original question, asked over lunch in 1950, was prompted by a cartoon
+about flying saucers, and the idea that the visitors are already here has been attached to
+the problem ever since. Michael Hart, whose 1975 paper made the question scientific,
+listed it among the possible explanations and set it aside: if the galaxy had been
+settled, he argued, Earth would have been settled too, not merely visited, and there is no
+sign of that. The serious form of the idea has been narrower ever since. It asks whether
+an artefact, rather than a population, might be in the solar system now.
+
+Robert Freitas and Francisco Valdes searched in 1980 and 1983 for objects at the points
+in the Earth-Moon system where an object can stay put without fuel, on the grounds that
+a probe meant to watch Earth for a long time would park there. They found nothing down to
+the size their telescopes could see, which left room for anything small. The idea has
+been revisited as instruments improved. In 2019 James Benford proposed searching the
+near-Earth asteroids that share Earth's orbit, which a long-term observer would find
+convenient, and coined the word lurkers for the probes such a search might find. The
+Galileo Project, begun in 2021, set out to look for artefacts in the solar system with
+purpose-built instruments. The passage through the solar system in 2017 of the first
+object known to have come from another star, named 'Oumuamua, with properties nobody
+fully explained, gave the question a brief public prominence, though most astronomers
+think it was a natural body.
+
+The ancient-visitor version, that someone came in the geological or human past and left
+signs, has a worse record. Claims that monuments or myths record visits do not survive
+scrutiny, and a 2018 study by Gavin Schmidt and Adam Frank asked, as a thought
+experiment, whether an industrial civilisation on Earth millions of years ago would even
+be detectable in the rock record now. Their answer was: barely, which cuts both ways.
+
+The strongest version, that unexplained objects in the sky are craft from elsewhere, has
+been investigated repeatedly, most recently by the United States government in a series of
+reports from 2021 onward. Those reports found many sightings unexplained for lack of data
+and none that required a visitor. Researchers on the Fermi question keep their distance
+from this version, because the evidence is anecdotal, the claims are extraordinary, and
+the subject has a long history of hoaxes and wishful thinking.
+
+The bearing on the Drake Equation is nil, which is why this explanation sits in the
+"unseen" family: it says the factors are whatever they are and the silence is a failure
+to notice what is near us. The honest statement of its standing is that the search of the
+solar system for artefacts is a legitimate and cheap scientific project with nothing to
+show yet, and that everything louder than that is unsupported."""
+standing = "The search for artefacts in the solar system is respectable, inexpensive and ongoing, and has found nothing. The claims of past or present visitation are not taken seriously by researchers on the question, for want of evidence that survives examination."
+would_strengthen = "Discovery of an artificial object in the solar system that could not have been made by humans; a clearly artificial feature on the Moon or an asteroid; an interstellar object whose behaviour cannot be explained by natural physics after close study."
+would_weaken = "Thorough surveys of the Earth-Moon stable points, the co-orbital asteroids and the lunar surface finding nothing artificial; natural explanations for the interstellar visitors and for the remaining unexplained sightings; the continued absence of any physical evidence after decades of looking."
+related = ["zoo-hypothesis", "berserkers", "not-looked-long-enough", "planetarium"]
+
+verify = [
+  "That Hart's 1975 paper lists 'they are here' among the explanations it rejects, and that the citation (QJRAS 16, 128–135) is right; check.",
+  "That Freitas and Valdes searched in 1980 and 1983 and that the first paper is in Icarus 42; check both papers.",
+  "That Benford's 2019 'Looking for Lurkers' is in The Astronomical Journal volume 158, article 150; check.",
+  "That Schmidt and Frank's 2018 paper (the 'Silurian hypothesis') reaches the 'barely detectable' conclusion as summarised; check.",
+  "That the United States government reports from 2021 onward concluded as described; check the 2021 preliminary assessment and the 2023 and 2024 follow-ups.",
+  "That the Galileo Project began in 2021; check.",
+]
+
+[[bears_on]]
+factor = "detectable"
+direction = "unchanged"

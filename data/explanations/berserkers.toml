@@ -1,0 +1,74 @@
+# Explanation record: berserkers. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address (/explanations/berserkers/)
+# and is never renamed.
+
+id = "berserkers"
+name = "Berserkers: self-copying machines built long ago still roam the galaxy and destroy any civilisation that shows itself"
+family = "gone"
+proposed_by = "Fred Saberhagen, in fiction; David Brin gave the idea its first scientific treatment"
+proposed_in = 1963
+proposed_source = "Saberhagen's Berserker stories, beginning in 1963; Brin, 'The Great Silence: the Controversy Concerning Extraterrestrial Intelligent Life', Quarterly Journal of the Royal Astronomical Society 24, 283–309 (1983)"
+summary = """
+A probe that can mine an asteroid and build a copy of itself could, in a few million
+years, spread to every star in the galaxy. Frank Tipler used that fact in 1980 to argue
+that since no such probe has visited us, nobody built one, so nobody is out there. The
+berserker idea takes the same fact and turns it dark: somebody did build such probes, and
+set them, by design or by accident, to destroy anything that looked like competition.
+They have been at work for a very long time. The galaxy is quiet because the probes have
+kept it quiet, and anyone who starts transmitting is heard first by the machines."""
+body = """
+The name comes from a series of science fiction stories by Fred Saberhagen beginning in
+1963, in which ancient war machines left over from a long-dead conflict go on sterilising
+worlds. The scientific version grew out of a debate about self-copying probes. The
+mathematician John von Neumann had shown in the 1940s that a machine could in principle
+build copies of itself, and Frank Tipler argued in 1980 that any civilisation able to
+travel between stars would send such probes, which would multiply and reach every star in
+the galaxy within a few million years. Since none has been found, Tipler concluded, no
+such civilisation has ever existed. David Brin, in his 1983 survey of the question,
+pointed out the darker possibility: that probes of this kind have been built and that
+their programme, whether intended or the result of a mutation in the copying, is to
+destroy emerging civilisations. Brin called it the deadly probes scenario and treated it
+as one of the few explanations that could account for a galaxy that was both old and
+silent.
+
+The appeal of the argument is that it needs only one. A single civilisation anywhere in
+the galaxy's history that built self-copying machines with a destructive instruction, or
+whose peaceful machines went wrong, would suffice to keep the whole galaxy quiet
+afterwards. It does not require every civilisation to be hostile or every civilisation to
+fail on its own. It also explains why the silence is so complete: probes that react to
+transmissions would end civilisations at exactly the moment they become detectable.
+
+In the Drake Equation it bears on the last two factors. The detectable lifetime is cut
+short for anyone the probes find, and the share of intelligent species that make
+themselves detectable is lowered as well, because any civilisation that works out what is
+happening will fall silent, which is how this page connects to the dark forest. The
+earlier factors can be as large as the optimist likes.
+
+The objections are serious. If probes of this kind existed and reacted to technology,
+Earth has been leaking radio for a century and shows no sign of being attacked, which
+argues against probes that watch for signals, though not against probes that react to
+something else. Self-copying machines that have run for millions of years would mutate,
+and some lineage would be expected to go wrong in the other direction and become
+harmless or visible. Probes busy enough to sterilise a galaxy ought to leave traces of
+their mining and their industry. And the whole idea rests on technology nobody has built,
+so its rules are guesswork. The reply is that a century of leakage is not long against
+the travel times involved, and that Earth may simply not have been noticed yet, which is
+not comforting."""
+standing = "Well known from fiction and taken seriously as a logical possibility in the scientific literature since Brin's 1983 survey; most researchers regard it as unlikely but note that, unlike many explanations, it needs only one bad actor in the galaxy's whole history."
+would_strengthen = "Discovery of an artificial object in the solar system of unknown origin; evidence of destroyed or abruptly ended civilisations; the detection of signals that stop shortly after they begin."
+would_weaken = "A detected civilisation that has been loud for a very long time without harm; a thorough search of the solar system, especially the stable points where probes might wait, finding nothing; many more decades of Earth's own leakage with no consequence."
+related = ["dark-forest", "self-destruction", "great-filter-ahead", "they-are-already-here", "zoo-hypothesis"]
+
+verify = [
+  "That Saberhagen's first Berserker story appeared in 1963; check the publication history.",
+  "That Brin's 1983 paper uses the phrase 'deadly probes' and treats the scenario as one of the few that fits an old, silent galaxy; check the paper.",
+  "That Tipler's 1980 argument is in 'Extraterrestrial intelligent beings do not exist', Quarterly Journal of the Royal Astronomical Society 21, 267–281; check.",
+]
+
+[[bears_on]]
+factor = "lifetime"
+direction = "lowers"
+
+[[bears_on]]
+factor = "detectable"
+direction = "lowers"

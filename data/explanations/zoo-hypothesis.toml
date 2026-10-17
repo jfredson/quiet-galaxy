@@ -1,0 +1,69 @@
+# Explanation record: the zoo hypothesis. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address (/explanations/zoo-hypothesis/)
+# and is never renamed.
+
+id = "zoo-hypothesis"
+name = "The zoo hypothesis: they know we are here and have agreed to leave us alone, the way a park leaves its wildlife undisturbed"
+family = "unseen"
+proposed_by = "John A. Ball"
+proposed_in = 1973
+proposed_source = "'The Zoo Hypothesis', Icarus 19, 347–349 (1973)"
+summary = """
+If the galaxy is old and civilisations spread, then the first ones are now unimaginably
+far ahead of us and have had time to decide, together, how to treat newcomers. The zoo
+hypothesis says they have decided to watch and not interfere: Earth is set aside as a
+reserve, a wilderness area or a zoo, and the rule is that nobody contacts the inhabitants
+until they are ready, or ever. The silence is deliberate and enforced. We hear nothing
+not because nobody is there but because everyone who is there has agreed we should not
+hear them."""
+body = """
+The radio astronomer John Ball proposed the idea in a two-page paper in 1973, as a
+deliberately unsettling alternative to the hopeful assumptions behind the early searches.
+His reasoning started from the age of the galaxy: if civilisations arise at all, the
+earliest should be billions of years older than ours, with technology we cannot picture,
+and the galaxy should belong to them. That they have not announced themselves must then
+be a choice. Ball suggested the choice was the same one a modern state makes about a
+wilderness: set it aside, watch it, and let it develop on its own. He noted that the
+hypothesis was, by construction, almost impossible to test, since any evidence of the
+watchers would be evidence they had failed at their one job, and he thought this a reason
+to take it seriously rather than to dismiss it.
+
+The idea was in the air before Ball named it. Science fiction had used it for decades,
+most famously in the Prime Directive of Star Trek from 1966, which forbids contact with
+civilisations that have not yet reached a certain level. Later writers refined it. Martyn
+Fogg's "interdict" scenario of 1987 argued that a galaxy settled long before Earth's
+biosphere matured would have reached a stable arrangement in which inhabited worlds were
+left alone by agreement. Others have proposed that the watchers are waiting for a
+threshold, such as a civilisation's first interstellar travel or its survival of a
+dangerous period, and that contact will come when it is passed.
+
+The bearing on the Drake Equation is on the share of intelligent civilisations that are
+detectable, which the zoo hypothesis lowers for a reason that has nothing to do with
+their technology: they could be seen and have chosen not to be. It makes no claim about
+any earlier factor and is compatible with a crowded galaxy.
+
+The main objection is that the arrangement requires everyone to agree and to keep
+agreeing for a very long time. A galaxy of many independent civilisations, each with its
+own factions and dissenters, would need only one to break the rule once. Duncan Forgan
+showed in 2011 and 2017 that for the agreement to hold, the first civilisation would have
+to have established it before any others arose and enforced it ever since, which narrows
+the hypothesis to a single ancient ruling power. A second objection is the one Ball
+himself raised: an explanation that predicts no evidence can never be checked. A third is
+that hiding a settled galaxy from a civilisation with telescopes may be impossible,
+because a galaxy full of industry would look different from an empty one whether or not
+anyone transmitted."""
+standing = "Famous, frequently raised, and regarded by most researchers as unfalsifiable rather than wrong; it is discussed seriously as a logical possibility and criticised for needing an improbable unanimity."
+would_strengthen = "Any sign of deliberate surveillance of Earth, such as an artificial object positioned to observe it; the discovery of a settled galaxy whose inhabitants have plainly avoided this region; a signal that arrives after humanity crosses some obvious threshold, such as interstellar flight."
+would_weaken = "A detected civilisation that is transmitting freely; evidence that the galaxy is not settled, which would leave nobody to keep the zoo; a demonstration that a settled galaxy could not be hidden from a civilisation with our telescopes."
+related = ["dark-forest", "planetarium", "no-interest-in-contact", "they-are-already-here", "berserkers"]
+
+verify = [
+  "That Ball's 1973 paper is in Icarus volume 19, pages 347–349; check.",
+  "That Fogg's 1987 paper uses the word 'interdict' and is in Icarus; check the citation.",
+  "That Forgan's papers on the zoo hypothesis are from 2011 (International Journal of Astrobiology) and 2017 (the 'cultural' or 'soft' zoo paper) and conclude as described; check.",
+  "That the Prime Directive dates from the original 1966–1969 series; check which episode first states it.",
+]
+
+[[bears_on]]
+factor = "detectable"
+direction = "lowers"

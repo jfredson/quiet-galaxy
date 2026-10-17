@@ -1,0 +1,75 @@
+# Explanation record: the inward turn. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address (/explanations/inward-turn/)
+# and is never renamed.
+
+id = "inward-turn"
+name = "The inward turn: once a civilisation can build worlds of its own, made to measure and always rewarding, it stops bothering with the real one"
+family = "unseen"
+proposed_by = "Geoffrey Miller"
+proposed_in = 2006
+proposed_source = "'Why we haven't met any aliens', Seed magazine, 2006"
+summary = """
+Minds evolved to chase things that once meant survival: food, status, company,
+curiosity. Technology learns to deliver the feeling of those things without the things
+themselves, and it gets better at it every year. The evolutionary psychologist Geoffrey
+Miller suggested in 2006 that this is where every technical civilisation goes: into
+entertainment, simulation and pleasure so well tuned to its makers' minds that the slow,
+difficult, unrewarding work of exploring space cannot compete. The few who keep looking
+outward are outbred and outvoted by those who do not. The galaxy is quiet because
+everybody is inside, and the inside is better."""
+body = """
+Geoffrey Miller's short essay made an argument from how minds work rather than from
+physics. Animals, including humans, are driven by rewards that evolution attached to
+useful behaviour: sugar tastes good because it was once rare fuel, company feels good
+because lone humans died, novelty is exciting because it once meant opportunity. A
+technology that can produce the reward without the behaviour short-circuits the system.
+Humans had already built such technologies, Miller noted, from sweets to pornography to
+video games, and the trend was toward ever more complete and absorbing versions. A
+civilisation a few centuries further along would be able to build experiences better than
+anything the real universe offers, and most of its members would prefer them. Miller
+suggested that the people who still cared about the real universe would be a shrinking
+minority, that the civilisation's energy and attention would go inward, and that
+interstellar exploration, which is slow, expensive and offers no reward in a lifetime,
+would simply stop. He added the evolutionary twist: in such a civilisation, the people who
+still reproduce would be those with some resistance to the artificial rewards, so the
+trend might eventually reverse, but by then the civilisation might be small, poor and
+quiet.
+
+The idea had been expressed in fiction many times before and has been since, and it has
+cousins elsewhere in the catalogue: transcension, where the inward turn is physical and
+final; aestivation, where the civilisation sleeps rather than plays; burn-out, where it
+stops expanding because it must. Miller's version is distinctive in making the turn a
+matter of psychology that every evolved mind is subject to, and so a prediction about
+aliens from a fact about us.
+
+The bearing on the Drake Equation is on the share of intelligent civilisations that are
+detectable, which this view lowers for every civilisation that reaches the stage of
+building its own worlds, and perhaps on the detectable lifetime, since the loud and
+expansive phase would end as soon as the better alternative arrived.
+
+The objections are the usual ones for a sociological explanation, with one of its own. It
+must apply to every civilisation, since one exception would be enough to break the
+silence, and a civilisation whose members are all absorbed in simulations still needs
+power, which means industry, which means waste heat that could in principle be seen. The
+objection of its own: a civilisation absorbed in artificial worlds would want ever more
+computing power to run them, and the obvious source of more power is the stars, so the
+inward turn might drive expansion rather than end it. Miller's reply, and that of the
+idea's later defenders, is that a civilisation content with its simulations has no need
+to grow, and that growth for its own sake is one of the drives the simulations would
+satisfy more cheaply than reality."""
+standing = "A popular and plausible-sounding idea, often raised in public discussion; it has had little formal development and researchers regard it as one more version of 'they lost interest', with the same difficulty that it has to hold for everyone."
+would_strengthen = "Evidence from Earth's own trajectory of declining interest in exploration as immersive technologies improve; a detected civilisation whose only signature is the waste heat of large-scale computing with no sign of expansion; a theoretical argument that evolved minds generally succumb to artificial reward."
+would_weaken = "A detected civilisation that is expanding; evidence that the demand for computing power drives civilisations to harvest the energy of stars, which would be visible; humanity's continued investment in exploration alongside ever better entertainment."
+related = ["transcension", "aestivation", "no-interest-in-contact", "civilisations-burn-out", "they-became-machines"]
+
+verify = [
+  "That Miller's essay appeared in Seed magazine in 2006 under the title 'Why we haven't met any aliens' and makes the evolutionary-reversal point about reproduction; check the text (the magazine is defunct and the essay is archived).",
+]
+
+[[bears_on]]
+factor = "detectable"
+direction = "lowers"
+
+[[bears_on]]
+factor = "lifetime"
+direction = "lowers"

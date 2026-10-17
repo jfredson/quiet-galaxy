@@ -1,0 +1,68 @@
+# Explanation record: shouting is costly. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address (/explanations/shouting-is-costly/)
+# and is never renamed.
+
+id = "shouting-is-costly"
+name = "Shouting is costly: a beacon that could be heard across the galaxy is expensive to run, so anyone sending one sends short pulses, rarely, and our searches almost never catch them"
+family = "unseen"
+proposed_by = "Gregory Benford, James Benford and Dominic Benford"
+proposed_in = 2010
+proposed_source = "'Messaging with Cost-Optimized Interstellar Beacons' and 'Searching for Cost-Optimized Interstellar Beacons', Astrobiology 10, 475–490 and 491–498 (2010)"
+summary = """
+The searches were designed to find a steady, powerful signal aimed at us or at
+everyone. But a transmitter that could be heard across thousands of light-years would
+cost a great deal to run, and any civilisation that counted the cost would do what
+lighthouses do: flash briefly, sweep the beam around, and repeat on a long cycle. A
+search that points at a star for a few minutes would almost never be looking at the
+moment the beam swept past. On this view the galaxy may contain beacons by the hundred,
+each announcing itself as cheaply as it can, and our searches have been looking for a
+light that is always on."""
+body = """
+Three members of the Benford family, two physicists and a NASA astronomer, published a
+pair of papers in 2010 asking a question the search community had mostly skipped: if you
+were building a beacon to announce yourself to the galaxy, and you had a budget, how
+would you build it? The answer, worked out from the physics of radio transmission and the
+economics of large projects on Earth, was nothing like the signal the searches look for.
+A continuous, all-directions signal strong enough to be heard across the galaxy would
+need power on the scale of a nation. The cheap alternative is a narrow beam, far more
+powerful for the same energy, swept across the sky so that each target gets a short
+pulse every so often. The pulse could be seconds long and the return interval months or
+years. The frequency would be higher than the searches had favoured, because higher
+frequencies carry further for the same cost. And the beacon would most likely be pointed
+along the plane of the galaxy, where the stars are, which is also where the searches have
+the most trouble with background noise.
+
+The consequence for the searches, worked out in the second paper, is that almost all of
+them would have missed such a beacon. A search that looks at a star for a few minutes
+and then moves on would catch the pulse only by luck. Even a long stare at one star would
+miss a beacon on a year-long cycle. The Benfords argued that the right strategy was to
+stare at the galactic plane for long stretches and look for brief, repeating pulses, and
+that the absence of detections so far said little about how many beacons existed.
+
+The bearing on the Drake Equation is on the share of intelligent civilisations that are
+detectable, which this explanation lowers in a specific sense: the civilisations are
+transmitting, but at a duty cycle so low that detection requires a different kind of
+search. It belongs with the explanations that say the silence is about how we listen.
+
+The objections: a civilisation that can afford interstellar beacons can probably afford
+a continuous one, so the cost argument may apply only to civilisations near our own
+level; beacons of the kind described would still be found eventually by the wide-field,
+long-duration searches now being built; and the argument assumes a civilisation wants to
+be found at all, which several other explanations deny. The Benfords accepted the first
+point and noted that it was a reason to expect young civilisations' beacons to be the
+first found, if any are. The argument's lasting effect has been on search design rather
+than on belief: surveys that watch large parts of the sky continuously for transient
+signals are now standard, and they are the test of this explanation."""
+standing = "Respected and influential on how searches are planned; as an explanation of the silence it is regarded as partial, applying to deliberate beacons from civilisations that count the cost, and testable by the long-stare surveys now running."
+would_strengthen = "Detection of a brief, repeating, artificial radio pulse by a long-stare survey of the galactic plane; a published count showing that past searches had almost no sensitivity to signals with low duty cycles."
+would_weaken = "Years of continuous wide-field monitoring of the galactic plane with no transient artificial signal; a detection of a continuous beacon, which would show that at least some civilisations do not economise."
+related = ["everyone-listens-nobody-transmits", "not-looked-long-enough", "listening-the-wrong-way", "dark-forest", "interstellar-travel-impractical"]
+
+verify = [
+  "That the two 2010 papers are in Astrobiology volume 10 with those page ranges, and that the recommended strategy and the high-frequency, galactic-plane conclusions are theirs; check both papers.",
+  "That the three authors are Gregory Benford and James Benford (physicists, twins) and Dominic Benford (NASA astronomer, James's son); check.",
+]
+
+[[bears_on]]
+factor = "detectable"
+direction = "lowers"

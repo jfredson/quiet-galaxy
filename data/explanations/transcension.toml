@@ -1,0 +1,74 @@
+# Explanation record: transcension. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address (/explanations/transcension/)
+# and is never renamed.
+
+id = "transcension"
+name = "Transcension: advanced civilisations shrink inward into ever denser, faster worlds of their own making, and leave the sky behind"
+family = "unseen"
+proposed_by = "John M. Smart"
+proposed_in = 2012
+proposed_source = "'The transcension hypothesis: sufficiently advanced civilizations invariably leave our universe, and implications for METI and SETI', Acta Astronautica 78, 55–68 (2012)"
+summary = """
+Every expectation that aliens would spread outward across the galaxy assumes that
+outward is where a civilisation wants to go. The transcension hypothesis says the
+opposite: the history of complexity on Earth, from cells to brains to computers, is a
+history of going smaller, denser and faster, and an advanced civilisation would continue
+that trend until it lived in something like the dense, compressed physics near a black
+hole, where it could think and build at speeds and scales the outside universe cannot
+match. Such a civilisation would have no reason to colonise and no way to be seen. The
+sky is quiet because everyone who grew up left, inward, and the door closed behind
+them."""
+body = """
+John Smart, a writer on technological change, published the idea in 2012. His starting
+observation is that the things that have grown most capable over Earth's history have done
+so by packing more activity into less space and time. A cell does more per gram than a
+rock; a brain does more than a cell; a computer chip does more than a brain, in the narrow
+sense of operations per second per unit of space and energy; and the trend shows no sign of
+stopping. Smart proposed that this is not an accident of our history but a general law of
+developing systems, and that a civilisation following it would keep compressing its own
+activity until it reached the physical limit, which is the density at which matter forms a
+black hole.
+
+On this picture, the end state of a civilisation is not a galaxy-spanning empire but a
+tiny, immensely dense object in which subjective time runs enormously fast relative to the
+outside universe, and from which, by the nature of black holes, nothing comes out. Such a
+civilisation would have no interest in the slow, thin universe outside, would not transmit,
+would not travel, and would be undetectable except perhaps as an unusual black hole. Smart
+suggested that black holes might even be the means by which civilisations eventually meet
+one another, in whatever lies beyond, and that the right place to look for signs of
+intelligence is among compact objects rather than among stars.
+
+The bearing on the Drake Equation is on the last two factors. The share of intelligent
+civilisations that are detectable is lowered because they turn inward long before they
+would spread out, and the detectable lifetime is short, because the inward turn is
+supposed to come quickly once a civilisation reaches our stage. Smart also argued that
+the hypothesis bears on whether humans should transmit: if everyone leaves, there is no
+one to hear.
+
+The objections are mostly about the law the argument rests on. That complexity has
+densified on Earth is true in some respects and not in others; living things also spread,
+and the trend toward density is a trend in some technologies rather than a rule of
+nature. There is no known physics by which a civilisation could enter a black hole and go
+on existing in any useful sense. And even if most civilisations turned inward, the
+argument needs all of them to do so, since a single exception would be enough to fill
+the galaxy; a civilisation that chose to leave a few outposts behind would break the
+silence. The hypothesis is best read as a thoughtful speculation about where development
+leads, and it is cited less as a candidate answer than as a reminder that outward
+expansion is an assumption rather than a law."""
+standing = "A speculative hypothesis from outside the scientific mainstream, cited in surveys of the question as a well-developed example of the 'they went somewhere we cannot see' family; few researchers treat it as likely."
+would_strengthen = "Evidence that the historical trend toward denser, faster computation continues to physical limits rather than levelling off; discovery of black holes with properties that cannot be explained by natural formation; any physics that allows structure to persist inside a black hole."
+would_weaken = "A detected civilisation that has expanded outward; evidence that technological development levels off well short of black-hole densities; a demonstration that no civilisation could survive its own compression."
+related = ["aestivation", "inward-turn", "they-became-machines", "simulation", "dark-forest"]
+
+verify = [
+  "That the Acta Astronautica citation is volume 78, pages 55–68, 2012; check.",
+  "That Smart proposes black holes as the end state and as a possible meeting place, rather than only as an analogy; check the paper's own wording.",
+]
+
+[[bears_on]]
+factor = "detectable"
+direction = "lowers"
+
+[[bears_on]]
+factor = "lifetime"
+direction = "lowers"

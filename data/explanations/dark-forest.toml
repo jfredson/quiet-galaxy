@@ -48,14 +48,14 @@ is nothing on these timescales."""
 standing = "Widely known from the novels and often raised in public discussion; among researchers it is treated as one of several 'they choose silence' explanations, and most consider the hiding it requires too hard to sustain. It is not a mainstream scientific position."
 would_strengthen = "Evidence of a civilisation deliberately suppressing its emissions; a result showing that an industrial civilisation can in fact hide its waste heat and atmosphere; a model showing that silence is the stable strategy under realistic costs of interstellar attack."
 would_weaken = "Any detected civilisation that broadcasts freely; a demonstration that the signatures of industry (waste heat, atmospheric change) cannot be hidden, so silence gains nothing; a long record of Earth's own leakage with no consequence."
-related = []
+related = ["zoo-hypothesis", "berserkers", "shouting-is-costly", "everyone-listens-nobody-transmits", "no-interest-in-contact", "aestivation"]
 
 verify = [
   "That Greg Bear's The Forge of God (1987) is a fair example of the 'punish the loud' idea and the year is right; check before the page goes live.",
   "That Brin's 1983 paper lists deliberate quiet out of fear among its explanations; check the paper's list.",
 ]
 
-notes = "Related explanations to add when their records exist (Saturday session B): the zoo hypothesis, berserker probes, the great silence as a survival strategy in general. Written 2026-10-16."
+notes = "Written 2026-10-16 as the schema's worked example; related ids filled in the same day once the rest of the catalogue existed."
 
 [[bears_on]]
 factor = "detectable"

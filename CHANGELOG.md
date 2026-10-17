@@ -2,6 +2,12 @@
 
 Every change to a range, a record, the method or the site, with absolute dates. Newest first. A range change always says which publication moved it and by how much.
 
+## 2026-10-16 (explanations session)
+
+- Thirty-one explanation records added under `data/explanations/`, alongside the existing dark forest, for the thirty ids the weekend plan fixed plus two more: a reader who has never heard of any of them gets, for each, a plain-words name, the family it belongs to, who proposed it and where, a one-paragraph summary, a longer account of the argument and its objections, which of the seven factors it bears on and in which direction, how seriously it is taken, what would strengthen or weaken it, and related explanations. **Never there** (the factors before the lifetime are small): rare Earth, rare life, complex cells are rare, rare intelligence, rare technology, we are early (with the grabby-aliens model), the Great Filter behind us, a hostile galaxy, and, added, there is no paradox once the ranges are honest (the 2018 method this site uses). **Gone** (the lifetime is short): self-destruction, the Great Filter ahead, berserkers, civilisations burn out, natural catastrophes, ships in the night. **Unseen** (the equation is fine and the silence is about us): the zoo hypothesis, the dark forest, aestivation, transcension, the simulation, interstellar travel is impractical, we have not looked long enough, we are listening the wrong way, they are already here, the planetarium, no interest in contact, the inward turn, they became machines, shouting is costly, everyone listens and nobody transmits, expansion stalls (the percolation model), and, added, life under ice. Every file passes the validator.
+- The dark forest record's related list filled in now that its neighbours exist.
+- Every citation, date and number written from memory is in the record's `verify` list: 87 claims across the 32 records, mostly journal volumes and page numbers, for a later session to check against the papers before the pages go live.
+
 ## 2026-10-16
 
 - Repository started (weekend step 2 of `docs/2026-10-16-kickoff.md`). README, CLAUDE.md (the two Belt Equation rules, adapted: commit on main and push; every design choice with confidence and an alternative), MIT licence for scripts and site, Creative Commons Attribution 4.0 for data, a commit-message date hook.

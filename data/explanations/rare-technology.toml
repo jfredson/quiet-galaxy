@@ -1,0 +1,70 @@
+# Explanation record: rare technology. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address (/explanations/rare-technology/)
+# and is never renamed.
+
+id = "rare-technology"
+name = "Rare technology: a world can be full of clever creatures that never build a radio, because minds and machines are different things"
+family = "never-there"
+proposed_by = "No single author; put sharply by Ernst Mayr in 1995 and developed in Stephen Webb's 2002 survey of the question"
+proposed_in = 1995
+proposed_source = "Ernst Mayr's exchange with Carl Sagan in Bioastronomy News (1995); Stephen Webb, If the Universe Is Teeming with Aliens... Where Is Everybody? (2002)"
+summary = """
+Being clever is not the same as building things that can be seen across space. Dolphins
+and whales have large brains and rich social lives and will never smelt iron, because they
+live in water and have no hands. An octopus can solve puzzles and dies before it can teach
+its young. Technology of the kind that shows up in a telescope needed hands, fire, a dry
+surface, a long life, teaching across generations, and a few thousand years of dense
+settled living. Most intelligent species, even if intelligence is common, may lack one or
+more of these for good, and a galaxy of thinkers could still be a galaxy of silence."""
+body = """
+The Drake Equation separates two things that everyday talk runs together: the appearance
+of intelligent life, and the appearance of technology that could be detected from another
+star. The separation matters because the second is not an automatic consequence of the
+first. Intelligence has arisen on Earth in several quite different animals; technology
+that leaves a mark beyond the planet has arisen once, and it depended on a long list of
+things that have nothing to do with how clever its owners were.
+
+The clearest case is the sea. Most of Earth's surface is ocean, and the oceans hold
+animals of great intelligence, but fire does not burn under water, metal cannot be worked,
+and there are no hands to work it with. A planet covered entirely in water, which the
+exoplanet record suggests may be common, could carry minds for a billion years and never
+produce a tool more complicated than a sponge held in the beak. The case is stronger still
+for worlds with oceans sealed under a shell of ice, which seem to be the most common kind
+of habitable world in our own solar system. The same point applies to any clever species
+that is short-lived, solitary, or unable to pass knowledge between generations: the
+octopus has all the brains it needs and none of the social arrangements.
+
+Even on land, technology needed a chain of accidents. Hands that could grip came from a
+life in trees. Fire needed a dry, oxygen-rich atmosphere and plants to burn. Farming,
+cities, writing and metallurgy came only in the last ten thousand years, after a hundred
+thousand years in which anatomically modern humans had the same brains and built nothing
+of the kind, and they may have depended on a stretch of unusually stable climate that is
+only now ending. Each link may be ordinary; the whole chain may not be.
+
+The bearing on the equation is on the share of intelligent species that become
+detectable. The argument is not that they choose silence, but that they never have the
+means to be loud. It is friendly to every optimistic assumption about life and minds and
+still ends in an empty-sounding sky.
+
+Objections: the argument proves that technology is not guaranteed, not that it is rare,
+and on a long enough timescale a species with hands and fire somewhere on a planet may be
+likely to appear. Intelligence in the human line was not a lucky extra but was actively
+selected for by social living and tool use, which suggests minds and tools tend to grow
+together once they start. And a species that cannot build radios may still change its
+planet's atmosphere or surface in ways that could one day be seen. The reply is that these
+are hopes about timescales and detection methods, and the one example we have took almost
+the entire habitable life of its planet to get to a radio."""
+standing = "Widely accepted as a real distinction and a real possibility, and usually discussed alongside rare intelligence rather than on its own; few researchers treat it as the whole answer."
+would_strengthen = "Evidence that most habitable worlds are ocean worlds or ice-covered oceans; further study of intelligent animals on Earth showing no drift toward cumulative tool use over millions of years; a detection of life or even complex life on a planet with no sign of technology."
+would_weaken = "A detected technological signal, which would show the step is at least sometimes taken; evidence that tool use and teaching are common among intelligent species on Earth and in principle lead on to technology; discovery that most habitable worlds have dry land and oxygen atmospheres."
+related = ["rare-intelligence", "life-under-ice", "complex-cells-are-rare", "no-interest-in-contact"]
+
+verify = [
+  "That Mayr's 1995 exchange with Sagan raises the point about intelligence not leading to technology, as distinct from the rarity of intelligence; check the text.",
+  "That Webb's 2002 book treats 'they lack the means' as a distinct solution; check the chapter list (and whether the 2015 second edition is the better citation).",
+  "The claim that ocean-covered planets may be common in the exoplanet record is from memory of population studies of small planets; check a source.",
+]
+
+[[bears_on]]
+factor = "detectable"
+direction = "lowers"
