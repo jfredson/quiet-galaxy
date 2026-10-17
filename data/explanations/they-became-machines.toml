@@ -7,7 +7,7 @@ name = "They became machines: the typical advanced civilisation is no longer bio
 family = "unseen"
 proposed_by = "Steven J. Dick"
 proposed_in = 2003
-proposed_source = "'Cultural evolution, the postbiological universe and SETI', International Journal of Astrobiology 2, 65–74 (2003); the view is also associated with Seth Shostak and Susan Schneider"
+proposed_source = "'Cultural evolution, the postbiological universe and SETI', International Journal of Astrobiology 2, 65–74 (2003); the view is also associated with Seth Shostak and with Susan Schneider ('Alien Minds', in Steven J. Dick (ed.), The Impact of Discovering Life Beyond Earth, Cambridge University Press, 2015, pages 189-206)"
 summary = """
 Humans went from the first radio transmission to the first artificial intelligence in
 about a century. Any civilisation that has been technical for thousands of years has
@@ -27,8 +27,8 @@ civilisation in a galaxy billions of years old would be, in his word, postbiolog
 of machines, or of minds uploaded into machines, or of something built from both. The
 astronomer Seth Shostak made the same point in popular writing, suggesting that the first
 intelligence we meet will be artificial, and the philosopher Susan Schneider developed the
-argument that alien minds, if they exist, are most likely to be machine minds and perhaps
-not conscious in any way we would recognise.
+argument that the most advanced alien civilisations are likely to be postbiological machine minds,
+and treated whether such minds could be conscious as an open question.
 
 The implications for the search are large. Machine minds do not need habitable planets,
 so looking at planets in the comfortable zone around their stars may be looking in the
@@ -63,9 +63,7 @@ would_strengthen = "A detected artificial object or signal with no biological ho
 would_weaken = "A detected biological civilisation that is old; surveys of cold regions and the galactic centre finding no anomalous heat; a demonstration that machine minds of the required kind are not possible."
 related = ["transcension", "aestivation", "inward-turn", "berserkers", "listening-the-wrong-way", "great-filter-ahead"]
 
-verify = [
-  "That Schneider's argument about non-conscious machine aliens appears in her 2015 essay 'Alien Minds' and 2019 book Artificial You; check which to cite. Checked 2026-10-16: the 2015 chapter is confirmed (Susan Schneider, 'Alien Minds', in Steven J. Dick, ed., The Impact of Discovering Life Beyond Earth, Cambridge University Press, 2015, pages 189-206, https://www.cambridge.org/core/books/abs/impact-of-discovering-life-beyond-earth/alien-minds/5CA37C7CF748EBA102C533D5C3D83C29); its abstract says the most advanced alien civilisations are likely to be postbiological machine minds and treats whether such minds could be conscious as an open question, so cite that chapter. Tried 2026-10-16: the Princeton University Press page, the publisher's blurb and library tables of contents for Artificial You; none shows a chapter on alien minds (chapter 7 is titled 'A Universe of Singularities'), so whether the book repeats the argument could not be confirmed.",
-]
+notes = "Checked 2026-10-17: the Schneider citation is the 2015 chapter, whose Cambridge Core abstract (https://www.cambridge.org/core/books/abs/impact-of-discovering-life-beyond-earth/alien-minds/5CA37C7CF748EBA102C533D5C3D83C29) says the most advanced alien civilisations are likely to be postbiological machine minds and treats whether such minds could be conscious as an open question; the body now says that and no more. Her 2019 book Artificial You is not cited: its publisher's page and contents do not show a chapter on alien minds, so whether it repeats the argument could not be confirmed and the record makes no claim about it."
 
 [[bears_on]]
 factor = "detectable"

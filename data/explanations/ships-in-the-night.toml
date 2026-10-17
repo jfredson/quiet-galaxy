@@ -59,7 +59,7 @@ would_weaken = "Any detected civilisation that is old; evidence of long-lived st
 related = ["self-destruction", "civilisations-burn-out", "natural-catastrophes", "interstellar-travel-impractical", "not-looked-long-enough"]
 
 verify = [
-  "That Shklovskii and Sagan's 1966 book discusses the overlap-in-time problem in those terms; check the chapter on the lifetime of civilisations. Tried 2026-10-16: the book's text is not freely available (the Internet Archive copy is lending-only), review pages and the book's contents were not reachable, and a 1980 summary by Peter Sturrock (https://ntrs.nasa.gov/citations/19800014518) confirms only that Sagan weighed a long and a short lifetime and typically put the number of communicating civilisations near a million; whether the book frames the overlap problem as described could not be confirmed.",
+  "That Shklovskii and Sagan's 1966 book discusses the overlap-in-time problem in those terms; check the chapter on the lifetime of civilisations. Tried 2026-10-16: the book's text is not freely available (the Internet Archive copy is lending-only), review pages and the book's contents were not reachable, and a 1980 summary by Peter Sturrock (https://ntrs.nasa.gov/citations/19800014518) confirms only that Sagan weighed a long and a short lifetime and typically put the number of communicating civilisations near a million; whether the book frames the overlap problem as described could not be confirmed. Awaiting the book, ordered 2026-10-17: Intelligent Life in the Universe (Shklovskii and Sagan, 1966); the next pass with the book in hand closes this entry.",
 ]
 
 notes = """
