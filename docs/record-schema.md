@@ -1,6 +1,6 @@
 # Record schema and data format
 
-Drafted 2026-10-16 (weekend step 2 of `docs/2026-10-16-kickoff.md`) and **PROPOSED, not yet ruled**: Claude proposed the layout below with a confidence level and the strongest alternative for each choice, recorded at the end under "Decisions". Nothing in it is settled until John says so. Once ruled, this document is the source of truth for the record layout, and `scripts/compute.py validate` refuses any file that does not follow it.
+Drafted 2026-10-16 (weekend step 2 of `docs/2026-10-16-kickoff.md`) and **DECIDED the same day**: Claude proposed the layout below with a confidence level and the strongest alternative for each choice, recorded at the end under "Decisions", and John accepted all twelve as proposed on 2026-10-16. This document is the source of truth for the record layout, and `scripts/compute.py validate` refuses any file that does not follow it. A change to the layout is a new proposal, made the same way.
 
 ## What a record is
 
@@ -267,9 +267,9 @@ The publications log is append-only: a record is added when a paper is read and 
 
 `python3 scripts/compute.py run` validates first, then refuses with a plain message until all seven factor records exist. The headline computation is Saturday session A's work.
 
-## Decisions (proposed 2026-10-16, awaiting John)
+## Decisions (2026-10-16)
 
-Proposed by Claude with a confidence level and the strongest alternative for each, per the ground rule of 2026-09-08. Recorded here so the reasoning is checkable later. Items 2 and 6 depart from the kickoff document and say why.
+Proposed by Claude with a confidence level and the strongest alternative for each, per the ground rule of 2026-09-08, and accepted by John as proposed on 2026-10-16. Recorded here so the reasoning is checkable later. Items 2 and 6 depart from the kickoff document and say why.
 
 1. **One TOML file per record, in four folders, named for the id.** High confidence: it is the Belt Equation's format, the standard-library reader exists, a one-line diff per change, and parallel sessions on Saturday can each write a folder without touching the others. Standard practice for a data-as-text project. Alternative: one file per kind (`explanations.toml` holding thirty records), which is fewer files but makes every Saturday session edit the same file and makes a page's source harder to find. The kickoff proposed one file per record for factors and explanations and left the library and papers open; this settles them the same way.
 2. **The explanations folder is `data/explanations/`, not `data/theories/` as the kickoff wrote.** Moderate confidence; a judgment call about words. The kickoff itself calls the records "explanations" everywhere else, including the page address `/explanations/dark-forest/`, and "theory" claims more than most of these ideas have earned. Alternative: keep `theories/` as written, which costs a mismatch between the folder, the record kind and the address.
