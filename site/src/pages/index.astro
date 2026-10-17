@@ -1,14 +1,15 @@
 ---
 // The home page: the trunk of the tracker (design/tracker-pattern.md, section 1, ruled by John
 // 2026-10-16). The first screen is built like The Belt Equation's (the ruled reference): two
-// columns on a desktop, stacked on a phone. Left, in the pattern's order (rule 1.3): the eyebrow;
-// the thing held, in the largest type on the site, which here is the chance that we are alone in
-// the galaxy, with the middle estimate and the chance we are alone in the observable universe in
-// smaller type beneath it (leading with the chance-alone figure is the master session's call on
-// 2026-10-16, within section 8's allowance for what a tracker holds at the top); the question as
-// the title; one paragraph for a newcomer; the width of the argument in one line; the last-checked
-// strip; two buttons. Right: the equation line as the trunk's picture, each term a link to its
-// piece's page with the range this site uses under it (rule 2.4). No control on the first screen:
+// columns on a desktop, stacked on a phone. Swapped on 2026-10-16 at John's asking: the equation
+// line, the trunk's picture, sits in the wide left column where its seven terms fit on one row,
+// each a link to its piece's page with a plain name and the range this site uses under it (rule
+// 2.4); the thing held sits in the box on the right, in the largest type on the site: the chance
+// that there are other detectable civilisations in the galaxy (John's wording, 2026-10-16; the
+// same chance the other way round from the earlier "alone" figure), with the observable-universe
+// chance and the middle estimate beneath it. Then, on the left: the question as the title; one
+// paragraph for a newcomer; the width of the argument in one line; the last-checked strip; two
+// buttons. On a phone the box comes first. No control on the first screen:
 // the calculator lives on the equation page (rule 1.4). Until the run exists, every number reads
 // "not computed yet" in words, never a placeholder digit. The big number, the strip and the
 // equation line are copied from The Belt Equation's home page (site/src/pages/index.astro there).
@@ -23,21 +24,43 @@ const width = head.available && head.optimist !== undefined && head.pessimist !=
   ? { optimist: head.optimist, pessimist: head.pessimist }
   : null;
 const NOT_YET = 'not computed yet';
+// Short plain names under each term of the equation on the first screen (the full names are on
+// the equation page and in each term's title).
+const SHORT: Record<string, string> = {
+  'star-formation': 'stars born each year',
+  'planets': 'share with planets',
+  'habitable-planets': 'planets that could host life',
+  'life': 'share where life starts',
+  'intelligence': 'share that gets intelligent',
+  'detectable': 'share that is detectable',
+  'lifetime': 'years it stays detectable',
+};
 ---
 
 <Base>
   <section class="home-hero">
     <div class="home-hero-main">
       <p class="eyebrow">A public explainer and tracker of the Fermi Paradox</p>
-      <p class={`big-number ${head.available ? '' : 'pending'}`}>{head.available ? percent(head.alone_galaxy) : NOT_YET}</p>
-      <p class="big-claim-line">The chance there is no other detectable civilisation in our galaxy right now.</p>
-      <p class="under-number">
-        <span>{head.available ? <><strong>{plainNumber(head.median)}</strong> detectable civilisations in our galaxy at the middle of the spread: {medianWords(head.median).replace(/^about one detectable civilisation/, 'one')}</> : <><strong>{NOT_YET}</strong> detectable civilisations in our galaxy at the middle of the spread</>}</span>
-        <span><strong>{head.available ? percent(head.alone_universe) : NOT_YET}</strong> the chance we are alone in the observable universe</span>
-      </p>
+      <div class="trunk" id="pieces">
+        <p class="trunk-label">The seven pieces the number comes from</p>
+        <p class="trunk-eq" aria-label="The equation">
+          <span class="trunk-n">N</span><span class="op">=</span>
+          {factors.map((f, i) => (
+            <>
+              <a class={`trunk-term ${f.range ? '' : 'missing'}`} href={f.path} title={f.name}>
+                <span class="trunk-sym" set:html={symbolHtml(f.symbol)}></span>
+                <span class="trunk-name">{SHORT[f.id] ?? f.name}</span>
+                <span class="trunk-range">{f.range ? rangeText(f.range, f.unit, true) : 'no range yet'}</span>
+              </a>
+              {i < factors.length - 1 && <span class="op">×</span>}
+            </>
+          ))}
+        </p>
+        <p class="trunk-foot">N is how many civilisations in our galaxy could be detected right now. Each piece is a range drawn from what has been published; the number on the right comes from multiplying the seven many thousands of times with a random pick from each, and is never typed in. <a href="/equation/#calculator">Try the numbers yourself</a>.</p>
+      </div>
       <h1 class="big-claim">Where is everybody?</h1>
       <p class="big-sub">
-        The physicist Enrico Fermi asked that over lunch in 1950: the galaxy is old enough and big enough that someone should have shown up by now, and nobody has. This site takes the question apart and keeps every serious answer to it on a page of its own. The number above is worked out from seven pieces, each with a range drawn from what has been published, and is never typed in.
+        The physicist Enrico Fermi asked that over lunch in 1950: the galaxy is old enough and big enough that someone should have shown up by now, and nobody has. This site takes the question apart, piece by piece, and keeps every serious answer to it on a page of its own.
       </p>
       <p class="width-line">
         {width
@@ -57,27 +80,16 @@ const NOT_YET = 'not computed yet';
       </div>
     </div>
 
-    <div class="trunk" id="pieces">
-      <p class="trunk-label">The seven pieces the number comes from</p>
-      <p class="trunk-eq" aria-label="The equation">
-        <span class="trunk-n">N</span><span class="op">=</span>
-        {factors.map((f, i) => (
-          <>
-            <a class={`trunk-term ${f.range ? '' : 'missing'}`} href={f.path} title={f.name}>
-              <span class="trunk-sym" set:html={symbolHtml(f.symbol)}></span>
-              <span class="trunk-range">{f.range ? rangeText(f.range, f.unit, true) : 'no range yet'}</span>
-            </a>
-            {i < factors.length - 1 && <span class="op">×</span>}
-          </>
-        ))}
+    <aside class="home-number" aria-label="The answer so far">
+      <p class="number-label">The answer so far</p>
+      <p class={`big-number ${head.available ? '' : 'pending'}`}>{head.available ? percent(1 - head.alone_galaxy) : NOT_YET}</p>
+      <p class="big-claim-line">The chance that there are other detectable civilisations in our galaxy right now.</p>
+      <p class="under-number">
+        <span><strong>{head.available ? percent(1 - head.alone_universe) : NOT_YET}</strong> the chance there are others somewhere in the observable universe</span>
+        <span>{head.available ? <><strong>{plainNumber(head.median)}</strong> detectable civilisations in our galaxy at the middle of the spread: {medianWords(head.median).replace(/^about one detectable civilisation/, 'one')}</> : <><strong>{NOT_YET}</strong> detectable civilisations in our galaxy at the middle of the spread</>}</span>
       </p>
-      <ul class="trunk-key">
-        {factors.map((f) => (
-          <li><span class="sym" set:html={symbolHtml(f.symbol)}></span><a href={f.path}>{f.name}</a></li>
-        ))}
-      </ul>
-      <p class="trunk-foot">N is how many civilisations in our galaxy could be detected right now. Each piece is a range; the number at the top comes from multiplying the seven many thousands of times with a random pick from each. <a href="/equation/#calculator">Try the numbers yourself</a>.</p>
-    </div>
+      <p class="number-foot">{head.available ? <>Played out {plainNumber(head.runs ?? 0)} times from the seven ranges. {head.any_range_first_pass ? 'Every range is a first pass until the outside review has run.' : ''}</> : <>The number appears once the seven pieces have ranges.</>}</p>
+    </aside>
   </section>
 
   <section class="section" id="explanations">
