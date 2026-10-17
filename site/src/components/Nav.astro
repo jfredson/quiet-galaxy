@@ -2,22 +2,31 @@
 // Site navigation, from the Sentient Horizons design standard (design/shell.html): the spine of
 // the site in heavier ink, the reference pages lighter, the theme toggle last; collapses to a menu
 // on small screens. Which page goes in which tier follows the tracker pattern
-// (design/tracker-pattern.md, rule 4.6, ruled by John 2026-10-16): the spine is the home page,
-// the equation, the explanations, the library, the story so far and this week's reading (added
-// 2026-10-16 with the weekly reading); the reference tier is how the numbers are worked out and the
-// disagree page, with the public names from the pattern's section 4.
+// (design/tracker-pattern.md, rule 4.6, ruled by John 2026-10-16), with the public names from the
+// pattern's section 4. Cut to the pattern's two tiers on 2026-10-16, after the family design review
+// of the same day found the site's name wrapping and the links spilling onto a second row at 1280
+// pixels: the spine is the equation and the explanations; the library, the story so far, how the
+// numbers are worked out and the disagree page sit behind the rule in the lighter tier (John's
+// ruling, 2026-10-16). There is no Home link: the site's name links home, as the standard's
+// section 6 says, and the bar has no room for a duplicate. The source link lives in the footer,
+// as the standard's section 7 says. The disagree page is labelled "Disagree" here and keeps its
+// full public name, "Disagree with something", as its title: with the full label the theme toggle
+// still wrapped onto a second row at 1280 pixels (a judgment call, 2026-10-16; the alternative was
+// tighter spacing on every link, three small departures from the standard's bar instead of one).
+// "This week's reading" (added 2026-10-16 with the weekly reading) sits in the lighter tier after
+// the story so far, not the heavier tier the pattern's rule 4.6 names, so the bar keeps to the
+// ruling above; a judgment call, for John to move if he wants it on the spine.
 const path = Astro.url.pathname;
 const primary = [
-  { href: '/', label: 'Home' },
   { href: '/equation/', label: 'The equation' },
   { href: '/explanations/', label: 'Explanations' },
+];
+const secondary = [
   { href: '/library/', label: 'Library' },
   { href: '/story/', label: 'The story so far' },
   { href: '/reading/', label: "This week's reading" },
-];
-const secondary = [
   { href: '/method/', label: 'How the numbers are worked out' },
-  { href: '/disagree/', label: 'Disagree with something' },
+  { href: '/disagree/', label: 'Disagree' },
 ];
 const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href) || (href === '/equation/' && path.startsWith('/factors/')));
 ---
@@ -37,7 +46,6 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
       {secondary.map((l) => (
         <a href={l.href} class={`nav-secondary ${isActive(l.href) ? 'active' : ''}`}>{l.label}</a>
       ))}
-      <a href="https://github.com/jfredson/quiet-galaxy" class="nav-secondary" rel="noopener">Source</a>
       <button type="button" class="theme-toggle" aria-label="Toggle light and dark theme" title="Toggle theme">
         <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="12" cy="12" r="4"></circle>
@@ -72,7 +80,7 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
     var btn = document.querySelector('.theme-toggle');
     if (!btn) return;
     var meta = document.getElementById('theme-color-meta');
-    var COLORS = { dark: '#08070f', light: '#faf9f7' };
+    var COLORS = { dark: '#05070a', light: '#f1f3f5' };
     function sync(theme) {
       document.documentElement.dataset.theme = theme;
       if (meta) meta.setAttribute('content', COLORS[theme] || COLORS.dark);

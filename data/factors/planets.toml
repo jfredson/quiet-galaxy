@@ -18,12 +18,10 @@ the bending of light from a background star, finds planets around most or all st
 what_would_move_this = "A survey that counts planets around a large, well-understood sample of stars, including the dim red dwarfs that make up most of the galaxy, and reports the share of stars with none."
 
 verify = [
-  "Drake's 1961 range of 0.2 to 0.5 for fp is quoted from the Wikipedia article on the Drake equation, which cites Drake and Sobel's 1992 book, pages 55 to 62; check it against the book or the 2015 Drake, Vakoch and Dowd volume.",
-  "Carl Sagan's value of one third in Cosmos (1980), chapter 12, is from memory; check it against the book.",
-  "Mayor and colleagues' 2011 finding that more than half of Sun-like stars host at least one planet with a period under 100 days is from memory of the HARPS survey paper (arXiv:1109.2497); check the figure and the period limit.",
+  "Drake's 1961 range of 0.2 to 0.5 for fp is quoted from the Wikipedia article on the Drake equation, which cites Drake and Sobel's 1992 book, pages 55 to 62; check it against the book or the 2015 Drake, Vakoch and Dowd volume. Tried 2026-10-16 and still open: neither book could be opened (restricted lending copy, no snippets); other secondary accounts give a single 0.5 for 1961 (Glade and colleagues 2012, Table 1; Scoles and Heatherly 2011 in the Astronomical Society of the Pacific's magazine), and the SETI Institute's page says attendees thought the share was close to 100 percent.",
 ]
 
-notes = "Saturday session C writes the publication records for the 2012 microlensing paper and the others cited here; when they exist, each estimate gets a 'publication' link to its record. Written 2026-10-16."
+notes = "Checked 2026-10-16 against the primary sources: Sagan's one third and the Mayor period limit of 100 days are borne out; Mayor's statistics use 822 stars, not 376 (corrected in the estimate and in a revision below). Drake's 1961 value of 0.2 to 0.5 could not be checked against Drake and Sobel or the 2015 volume tonight: other secondary accounts give a single 0.5 (Glade and colleagues 2012, arXiv:1112.1506, Table 1; the Astronomical Society of the Pacific article by Scoles and Heatherly, 2011), so the 1961 range is still unconfirmed; it has no weight in the range, which rests on the surveys. Saturday session C writes the publication records for the 2012 microlensing paper and the others cited here; when they exist, each estimate gets a 'publication' link to its record. Written 2026-10-16."
 
 [[estimate]]
 who = "Frank Drake and the Green Bank meeting"
@@ -56,7 +54,7 @@ low = 0.5
 high = 1.0
 source = "Mayor et al., 'The HARPS search for southern extra-solar planets XXXIV. Occurrence, mass distribution and orbital properties of super-Earths and Neptune-mass planets', arXiv:1109.2497 (2011)"
 link = "https://arxiv.org/abs/1109.2497"
-method = "Eight years of measuring the wobble of 376 Sun-like stars with the HARPS instrument; more than half were found to host at least one planet with an orbit shorter than 100 days, a lower limit since longer orbits and smaller planets were missed."
+method = "Eight years of measuring the wobble of 822 Sun-like stars (376 with the HARPS instrument, the rest from an earlier survey with the CORALIE instrument); 51 to 57 percent were found to host at least one planet with an orbit shorter than 100 days (50.6 plus or minus 7.4 percent counting published planets, 57.1 plus or minus 8.0 percent with candidates), after correcting for the planets missed. Planets on longer orbits were not counted, so the share with any planet is higher."
 
 [[estimate]]
 who = "Courtney Dressing and David Charbonneau"
@@ -100,3 +98,10 @@ field = "range.low"
 old = 0.1
 new = 0.5
 why = "The published record read in full the same day the worked example was written: no survey since 2011 finds fewer than half of stars with a planet (Cassan 2012, Mayor 2011, Dressing and Charbonneau 2015). The 2018 paper's floor of 0.1 covered an argument that the surveys have since closed."
+
+[[revision]]
+date = 2026-10-16
+field = "estimate (Michel Mayor and colleagues, 2011).method"
+old = "Eight years of measuring the wobble of 376 Sun-like stars with the HARPS instrument; more than half were found to host at least one planet with an orbit shorter than 100 days, a lower limit since longer orbits and smaller planets were missed."
+new = "822 Sun-like stars (376 with HARPS, the rest with CORALIE); 51 to 57 percent host at least one planet with an orbit shorter than 100 days. The estimate's low (0.5) and high (1.0) are unchanged and the range is untouched."
+why = "Checked against Mayor et al., arXiv:1109.2497, on 2026-10-16: the statistical sample is 822 stars, and the corrected share is 50.6 plus or minus 7.4 percent (published planets) to 57.1 plus or minus 8.0 percent (with candidates)."

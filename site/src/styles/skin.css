@@ -1,0 +1,82 @@
+/* ---------------------------------------------------------------
+   The Quiet Galaxy · skin "Hush", version 1.0.0 (2026-10-16)
+   A cold, near-empty sky. Proposed with pictures in
+   sentient-horizons/design/proposals/quiet-galaxy-skin-2026-10-17.md and
+   ruled by John on 2026-10-16 as proposed: dark by default, a light theme
+   kept (the same sky at dawn), a dozen still stars and no galaxy glow, a
+   pale ice-blue in place of amber, no display typeface. A skin supplies
+   every token the skeleton (sentient-horizons/design/shell.css) names, for
+   both themes, plus the backdrop (design standard, section 3a).
+   --------------------------------------------------------------- */
+:root {
+  --bg: #05070a;          /* blue-black, no violet cast */
+  --bg-soft: #080b10;
+  --panel: #0b0f15;
+  --text: #e8ecf1;        /* cold white */
+  --text-soft: #c2c9d2;
+  --muted: #7d8794;
+  --line: rgba(232, 236, 241, 0.10);
+  --line-strong: rgba(232, 236, 241, 0.20);
+  --accent: #a6d4ea;      /* pale ice-blue: links, the one action, the seven symbols */
+  --accent-2: #aeb4cf;    /* a second mark, cold silver */
+  --accent-3: #8fcdb4;    /* data: the range marks on the calculator */
+  --on-accent: #06111a;
+  --accent-hover: #bde0f1;
+  --link: #a6d4ea;
+  --link-hover: #bde0f1;
+  --glow: rgba(166, 212, 234, 0.10);
+  --header-bg: rgba(5, 7, 10, 0.74);
+  --hover-bg: rgba(232, 236, 241, 0.05);
+  --active-bg: rgba(232, 236, 241, 0.08);
+  --chip-bg: rgba(232, 236, 241, 0.03);
+  --callout-bg: rgba(166, 212, 234, 0.08);
+  --ok: #7fc48a;
+  --no: #d98a7a;
+  --star: #e8ecf1;
+  --radius: 6px;
+  --maxw: 1080px;
+  --serif: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+}
+
+/* Light: the same sky at dawn, cold grey-white, the accent deepened to sea blue. */
+:root[data-theme='light'] {
+  --bg: #f1f3f5;
+  --bg-soft: #e7eaee;
+  --panel: #fafbfc;
+  --text: #14181d;
+  --text-soft: #333a42;
+  --muted: #5f6a76;
+  --line: rgba(20, 24, 29, 0.12);
+  --line-strong: rgba(20, 24, 29, 0.22);
+  --accent: #1f5f7a;
+  --accent-2: #4f5b8a;
+  --accent-3: #1f7a62;
+  --on-accent: #f4f8fa;
+  --accent-hover: #2a7292;
+  --link: #1f5f7a;
+  --link-hover: #2a7292;
+  --glow: rgba(31, 95, 122, 0.10);
+  --header-bg: rgba(241, 243, 245, 0.88);
+  --hover-bg: rgba(20, 24, 29, 0.05);
+  --active-bg: rgba(20, 24, 29, 0.08);
+  --chip-bg: transparent;
+  --callout-bg: rgba(31, 95, 122, 0.07);
+  --ok: #2f7c4a;
+  --no: #a5432f;
+  --star: #9aa4b0;
+  --radius: 5px;
+}
+
+/* ---- the backdrop: a near-empty sky ----
+   A dozen still stars behind the top of the page, fading out within the first screen; no
+   glow, no core, no twinkle. The light theme keeps the same few stars in grey. */
+.space-bg {
+  position: absolute; top: 0; left: 0; right: 0; height: 760px; z-index: 0;
+  overflow: hidden; pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
+}
+.starfield { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.starfield span { position: absolute; border-radius: 50%; background: var(--star); }

@@ -22,7 +22,4 @@ factors = ["life", "intelligence", "detectable", "habitable-planets"]
 explanations = ["rare-intelligence", "we-are-early", "civilisations-burn-out"]
 moved_range = false
 
-verify = [
-  "The two thresholds (2.5 × 10^-24 and 1.7 × 10^-11); from memory of the abstract.",
-]
-notes = "Written 2026-10-16."
+notes = "Written 2026-10-16. Checked 2026-10-16 against the paper (arXiv:1510.08837): both thresholds are as written. They are set on different footing: 2.5 x 10^-24 is for a one-in-a-hundred chance that we are alone in the observable universe, and 1.7 x 10^-11 is for an expected one species in the Milky Way's history."

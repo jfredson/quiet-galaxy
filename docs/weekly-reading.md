@@ -49,7 +49,7 @@ One file per reading under `data/readings/`, named for the Pacific date it ran (
 ## What the reader sees
 
 - **The strip on the home page**, under the headline: "Last checked 16 October 2026: 39 records read, nothing moved, one left for me", linking to the reading page.
-- **The reading page** (`/reading/`, "This week's reading" in the top bar's heavier tier, as the tracker pattern's rule 4.6 asks): the latest reading at the top with its counts; a "waiting on me" list of flagged items nothing has picked up; every item grouped under the seven pieces and then the three families, each a card with the verdict as a badge, the found sentence, the publications it logged and the searches it ran; the key to the four verdicts at the foot; earlier readings collapsed below.
+- **The reading page** (`/reading/`, "This week's reading" in the top bar; the tracker pattern's rule 4.6 puts it in the heavier tier, but John cut this site's spine to two links on 2026-10-16 for fit, so it sits in the lighter tier after the story so far until he says otherwise): the latest reading at the top with its counts; a "waiting on me" list of flagged items nothing has picked up; every item grouped under the seven pieces and then the three families, each a card with the verdict as a badge, the found sentence, the publications it logged and the searches it ran; the key to the four verdicts at the foot; earlier readings collapsed below.
 - **On each factor and explanation page**, its last three readings, each a line that opens to the found sentence and the sources.
 
 The page, the strip, the badges and the last-three-readings list are copied from The Belt Equation's radar page, scan strip and node page, with a comment in each file saying so.

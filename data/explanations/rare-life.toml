@@ -29,12 +29,15 @@ The argument from the one example cuts in both directions, and that is the heart
 matter. Life on Earth appeared early, within a few hundred million years of the planet
 becoming habitable, which has long been read as a sign that it starts easily. But a
 planet where life started late might never have produced anyone to notice, because the
-Sun will make Earth uninhabitable in another billion years or so and complex life took
-most of the available time to appear. So the early start may say more about us than about life: we
+Sun's slow brightening is expected to end Earth's oxygen-rich air in about a billion years
+and complex life took most of the available time to appear. So the early start may say more about us than about life: we
 could only exist on a planet where life began promptly, whether or not that is typical.
-Careful statistical treatments of this point, in 2012 and again in 2020, found that the
-early start on Earth does favour life being common, but only mildly, and that the odds
-could still be very long.
+Two careful statistical treatments of this point differ in what they find. The one
+published in 2012 (David Spiegel and Edwin Turner) found the early start inconclusive: it
+fits an arbitrarily low chance of life starting, and a second, independent origin would tell
+us far more. The one published in 2020 (David Kipping) found that it mildly favours life
+starting quickly rather than slowly, at odds of a little better than three to one, and
+Kipping himself describes that as a gentle nudge.
 
 In the Drake Equation this is the factor for the share of suitable planets on which life
 actually starts. Every other factor can be large; if this one is tiny, the product is tiny.
@@ -58,12 +61,29 @@ would_strengthen = "Decades more of origin-of-life chemistry without a demonstra
 would_weaken = "A second, independent origin of life found anywhere, whether in the solar system or in the atmosphere of a planet around another star; a laboratory demonstration that self-copying chemistry arises readily under conditions common on young planets; evidence that life on Earth started more than once."
 related = ["rare-earth", "complex-cells-are-rare", "great-filter-behind-us", "no-paradox-just-wide-ranges", "life-under-ice"]
 
-verify = [
-  "That Monod's 1970 book contains the 'our number came up' phrasing and the 'not pregnant with life' claim; check the English translation.",
-  "That Crick's Life Itself (1981) uses the phrase 'almost a miracle' about the origin of life; check the book.",
-  "The two statistical treatments referred to are Spiegel and Turner (2012) and Kipping (2020); check their exact findings and that they are fairly described as 'mild' support for life being common.",
-  "The claim that the Sun makes Earth uninhabitable in roughly a billion years is a widely quoted figure; check against a standard source.",
-]
+notes = """
+Checked 2026-10-16. Monod's English translation (Chance and Necessity, Knopf, 1971, page
+180, as cited at https://en.wikiquote.org/wiki/Jacques_Monod) reads "The universe was not
+pregnant with life nor the biosphere with man. Our number came up in the Monte Carlo game."
+Crick's Life Itself (Simon and Schuster, 1981) is quoted as saying that the origin of life
+"appears at the moment to be almost a miracle" (quoted from the book at
+https://pic.hallikainen.org/piclist/2004/b/12/11/053909a.txt and summarised at
+https://www.sciencefriday.com/articles/origin-of-life-is-earth-exceptional-book/); no page
+number was found and the book itself was not reached. Corrected 2026-10-16, two points.
+(1) The body said both statistical treatments found the early start mildly favours life being
+common. Spiegel and Turner (Proceedings of the National Academy of Sciences 109, 395-400, 2012;
+https://arxiv.org/abs/1107.3835) found the early start inconclusive and consistent with an
+arbitrarily low chance of life starting; only Kipping (same journal, 117, 11995-12003, 2020;
+https://doi.org/10.1073/pnas.1921655117) found a mild preference, with betting odds above
+three to one that life starts quickly, and also odds of three to two that intelligence is
+rare. (2) The body said the Sun will make Earth uninhabitable in about a billion years. The
+sources give different figures for different things: Ozaki and Reinhard (Nature Geoscience 14,
+138-142, 2021, https://doi.org/10.1038/s41561-021-00693-5) put the end of Earth's oxygen-rich
+air at 1.08 billion years, give or take 0.14; Wolf and Toon (Geophysical Research Letters 41,
+2014, summarised at https://astrobiology.nasa.gov/news/under-the-bright-lights-of-an-aging-sun/)
+find Earth could keep its oceans for at least another 1.5 billion years. The body now says the
+oxygen-rich air.
+"""
 
 [[bears_on]]
 factor = "life"

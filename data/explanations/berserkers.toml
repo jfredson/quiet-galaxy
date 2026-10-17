@@ -5,9 +5,9 @@
 id = "berserkers"
 name = "Berserkers: self-copying machines built long ago still roam the galaxy and destroy any civilisation that shows itself"
 family = "gone"
-proposed_by = "Fred Saberhagen, in fiction; David Brin gave the idea its first scientific treatment"
+proposed_by = "Fred Saberhagen, in fiction; discussed in the scientific literature by Gregory Benford and David Brin"
 proposed_in = 1963
-proposed_source = "Saberhagen's Berserker stories, beginning in 1963; Brin, 'The Great Silence: the Controversy Concerning Extraterrestrial Intelligent Life', Quarterly Journal of the Royal Astronomical Society 24, 283–309 (1983)"
+proposed_source = "Saberhagen's Berserker stories, beginning with 'Fortress Ship' (If magazine, January 1963); Brin, 'The Great Silence: the Controversy Concerning Extraterrestrial Intelligent Life', Quarterly Journal of the Royal Astronomical Society 24, 283–309 (1983)"
 summary = """
 A probe that can mine an asteroid and build a copy of itself could, in a few million
 years, spread to every star in the galaxy. Frank Tipler used that fact in 1980 to argue
@@ -25,11 +25,13 @@ build copies of itself, and Frank Tipler argued in 1980 that any civilisation ab
 travel between stars would send such probes, which would multiply and reach every star in
 the galaxy within a few million years. Since none has been found, Tipler concluded, no
 such civilisation has ever existed. David Brin, in his 1983 survey of the question,
-pointed out the darker possibility: that probes of this kind have been built and that
+set out the darker possibility: that probes of this kind have been built and that
 their programme, whether intended or the result of a mutation in the copying, is to
-destroy emerging civilisations. Brin called it the deadly probes scenario and treated it
-as one of the few explanations that could account for a galaxy that was both old and
-silent.
+destroy emerging civilisations. Brin used the name "the Deadly Probes Scenario" and
+credited Saberhagen with broaching the idea and Gregory Benford with refining it. He
+counted it as one of only two explanations, the other being an ecological holocaust,
+that fit both the evidence and the assumption that many civilisations arise, an old and
+silent galaxy included.
 
 The appeal of the argument is that it needs only one. A single civilisation anywhere in
 the galaxy's history that built self-copying machines with a destructive instruction, or
@@ -59,11 +61,7 @@ would_strengthen = "Discovery of an artificial object in the solar system of unk
 would_weaken = "A detected civilisation that has been loud for a very long time without harm; a thorough search of the solar system, especially the stable points where probes might wait, finding nothing; many more decades of Earth's own leakage with no consequence."
 related = ["dark-forest", "self-destruction", "great-filter-ahead", "they-are-already-here", "zoo-hypothesis"]
 
-verify = [
-  "That Saberhagen's first Berserker story appeared in 1963; check the publication history.",
-  "That Brin's 1983 paper uses the phrase 'deadly probes' and treats the scenario as one of the few that fits an old, silent galaxy; check the paper.",
-  "That Tipler's 1980 argument is in 'Extraterrestrial intelligent beings do not exist', Quarterly Journal of the Royal Astronomical Society 21, 267–281; check.",
-]
+notes = "Checked 2026-10-16. Borne out: Saberhagen's first Berserker story is 'Fortress Ship', If magazine, January 1963, later retitled 'Without a Thought' (Science Fiction Encyclopedia, https://sf-encyclopedia.com/entry/Saberhagen_fred; Wikipedia, https://en.wikipedia.org/wiki/Berserker_(novel_series)). Tipler's paper is 'Extraterrestrial Intelligent Beings do not Exist', Quarterly Journal of the Royal Astronomical Society 21, 267-281 (1980), checked against the journal's scanned pages (https://articles.adsabs.harvard.edu/pdf/1980QJRAS..21..267T). Brin's paper (Quarterly Journal of the Royal Astronomical Society 24, 283-309, 1983; https://articles.adsabs.harvard.edu/pdf/1983QJRAS..24..283B) does use the phrase 'the Deadly Probes Scenario' and concludes that 'Deadly Probes' and 'Ecological Holocaust' are the only hypotheses it finds wholly consistent with observation and with the assumption that many civilisations arise. Corrected: the record said Brin gave the idea its first scientific treatment and that Brin called it the deadly probes scenario; Brin himself uses the name as an existing one and credits Saberhagen and Gregory Benford, so the 'proposed by' line and the body now say so, and the body says Brin counted it as one of two such explanations rather than one of a few."
 
 [[bears_on]]
 factor = "lifetime"

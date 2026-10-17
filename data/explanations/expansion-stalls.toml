@@ -57,8 +57,11 @@ longer.
 The objections: the model assumes that an expansionist settlement, once established,
 never later changes its mind and that a content one never later starts expanding, which
 over millions of years is a strong assumption; later simulations with more realistic
-assumptions, including the motion of stars over time, found that voids tend to fill in,
-since stars drift and bring settled and unsettled regions together. The model also says
+assumptions, including the motion of stars over time (Carroll-Nellenback, Frank, Wright
+and Scharf, 2019), found that stellar drift keeps a settlement front from stalling and
+fills in the systems behind it in less than the age of the galaxy, so the permanent voids
+of a fixed map do not last; they also found that unsettled regions can still exist at any
+one time if civilisations are short-lived or suitable worlds are clustered. The model also says
 nothing about why no settled region, anywhere, has produced a signal or a visible mark,
 which is a question about detectability rather than settlement. Landis's reply was that
 the model was meant to show that Hart's conclusion did not follow from Hart's premises,
@@ -68,11 +71,7 @@ would_strengthen = "Detection of settled or technological systems at a distance 
 would_weaken = "A galaxy-wide survey finding no settlement anywhere, which the model does not predict; simulations confirming that stellar motion erases voids on timescales short compared with the galaxy's age; a detected nearby civilisation, which would put us outside any void."
 related = ["interstellar-travel-impractical", "we-are-early", "civilisations-burn-out", "ships-in-the-night"]
 
-verify = [
-  "That Landis's 1998 paper is in JBIS volume 51, pages 163–166; check.",
-  "That Newman and Sagan (1981) is in Icarus volume 46, pages 293–327, and models settlement as slow diffusion; check.",
-  "That later simulations including stellar motion found voids tend to fill in (Carroll-Nellenback, Frank, Wright and Scharf, 2019, is the usual citation); check what they found about voids specifically.",
-]
+notes = "Checked 2026-10-16. Borne out: Landis, 'The Fermi Paradox: An Approach Based on Percolation Theory', Journal of the British Interplanetary Society 51, 163-166 (1998), per the society's own listing (https://bis-space.com/shop/?p=13987); Newman and Sagan, 'Galactic civilizations: Population dynamics and interstellar diffusion', Icarus 46, 293-327 (1981), https://doi.org/10.1016/0019-1035(81)90135-4, whose analysis the 2019 paper summarises as finding that the settlement wave could be slow, with the time to fill the galaxy approaching or exceeding its age. Carroll-Nellenback, Frank, Wright and Scharf, 'The Fermi Paradox and the Aurora Effect', Astronomical Journal 158, 117 (2019), https://arxiv.org/abs/1902.04450, say stellar motion stops settlement fronts from stalling, that systems behind a front fill in within less than the galaxy's age, and that earlier fixed-map models such as Landis's cannot support the persistence of large uninhabited regions over long times; but they also find that with finite civilisation lifetimes the galaxy may sit in a steady state with unsettled regions. Corrected: the body said only that voids fill in; it now states both findings. The standing and would_weaken lines were left as they were and still read correctly."
 
 [[bears_on]]
 factor = "detectable"

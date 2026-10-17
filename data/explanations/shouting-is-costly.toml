@@ -24,7 +24,7 @@ were building a beacon to announce yourself to the galaxy, and you had a budget,
 would you build it? The answer, worked out from the physics of radio transmission and the
 economics of large projects on Earth, was nothing like the signal the searches look for.
 A continuous, all-directions signal strong enough to be heard across the galaxy would
-need power on the scale of a nation. The cheap alternative is a narrow beam, far more
+be enormously powerful and expensive. The cheap alternative is a narrow beam, far more
 powerful for the same energy, swept across the sky so that each target gets a short
 pulse every so often. The pulse could be seconds long and the return interval months or
 years. The frequency would be higher than the searches had favoured, because higher
@@ -59,10 +59,23 @@ would_strengthen = "Detection of a brief, repeating, artificial radio pulse by a
 would_weaken = "Years of continuous wide-field monitoring of the plane of the galaxy with no brief artificial signal; a detection of a continuous beacon, which would show that at least some civilisations do not economise."
 related = ["everyone-listens-nobody-transmits", "not-looked-long-enough", "listening-the-wrong-way", "dark-forest", "interstellar-travel-impractical"]
 
-verify = [
-  "That the two 2010 papers are in Astrobiology volume 10 with those page ranges, and that the recommended strategy and the high-frequency, galactic-plane conclusions are theirs; check both papers.",
-  "That the three authors are Gregory Benford and James Benford (physicists, twins) and Dominic Benford (NASA astronomer, James's son); check.",
-]
+notes = """
+Checked 2026-10-16. Both papers are in Astrobiology 10 (5), June 2010: Messaging, pages
+475-490 (https://doi.org/10.1089/ast.2009.0393) and Searching, pages 491-498
+(https://doi.org/10.1089/ast.2009.0394). The preprints (https://arxiv.org/abs/0810.3964 and
+https://arxiv.org/abs/0810.3966) support the conclusions given: short dwell times and
+infrequent revisits, higher microwave frequencies near 10 gigahertz, and a strategy of
+watching the plane of the galaxy for years for brief repeating pulses. A galactic-scale beacon
+needs more than 10^17 watts of effective radiated power. Corrected 2026-10-16: the body had said a
+continuous all-directions signal would need power "on the scale of a nation"; that phrase is not in
+the papers, which call such a beacon enormously powerful and expensive (the second paper) and put
+the cost of beaming quasi-continuously into the whole sky at ten times that of the narrow-beam
+design (the first), so the body now uses their wording. Pulse lengths of about a second and
+revisit times of a day to a year are in the papers. The authors are Gregory Benford and
+James Benford (identical twins, both physicists) and Dominic Benford (James's eldest child,
+NASA's chief technologist for astrophysics): https://en.wikipedia.org/wiki/James_Benford and
+https://en.wikipedia.org/wiki/Gregory_Benford.
+"""
 
 [[bears_on]]
 factor = "detectable"

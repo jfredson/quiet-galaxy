@@ -6,7 +6,7 @@ date = "2025-04"
 added_on = 2026-10-16
 authors = ["Jake Taylor"]
 title = "Are there Spectral Features in the MIRI/LRS Transmission Spectrum of K2-18b?"
-venue = "Research Notes of the American Astronomical Society 9, 86 (2025); arXiv:2504.15916"
+venue = "Research Notes of the American Astronomical Society 9, 118 (2025); arXiv:2504.15916"
 link = "https://arxiv.org/abs/2504.15916"
 finding = """
 A short note, out within about a week of madhusudhan-2025, that tests the new data
@@ -20,7 +20,4 @@ factors = ["life"]
 explanations = ["rare-life"]
 moved_range = false
 
-verify = [
-  "The note's volume and number and its arXiv identifier; from memory.",
-]
-notes = "Written 2026-10-16."
+notes = "Written 2026-10-16. Corrected 2026-10-16 against Crossref: the note is volume 9, number 5, article 118 (published 2025-05-16), not 86; the arXiv identifier is right."

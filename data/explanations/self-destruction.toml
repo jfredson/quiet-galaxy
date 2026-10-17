@@ -20,10 +20,15 @@ briefly into a silence made of everyone else's ruins."""
 body = """
 This was the first explanation anyone took seriously, because it was born alongside the
 question. When Frank Drake wrote his equation in 1961 to organise the first meeting on
-searching for signals, the factor that worried everyone in the room was the last one: how
-long a civilisation stays detectable. The meeting took place at the height of the Cold
-War, and several of those present thought the honest answer might be a few decades. The
-German astronomer Sebastian von Hoerner, writing in Science the same year, worked
+searching for signals, the factor with the widest spread of guesses was the last one: how
+long a civilisation stays detectable. The meeting's own educated guesses ran from a
+thousand to a hundred million years, and Drake's own was about ten thousand. The meeting
+took place at the height of the Cold War, and the physicist Philip Morrison, who had
+worked on the first atomic bomb, worried that societies might become detectable at about the
+time they gained the power to destroy themselves: he reckoned that if a typical civilisation
+lasted only about a decade, there would be just one in the galaxy at any time. Sagan
+answered that some could reach stability and last hundreds of millions or billions of
+years. The German astronomer Sebastian von Hoerner, writing in Science the same year, worked
 through the ways a technical civilisation might end, destruction of all life, destruction
 of higher life only, physical or mental decline, and loss of interest in science, and put
 the average detectable lifetime at perhaps six and a half thousand years, with the outcome
@@ -58,11 +63,29 @@ would_strengthen = "Evidence of a civilisation that existed and ended, such as a
 would_weaken = "A detected civilisation that has been broadcasting for a very long time; a long run of human survival with nuclear and biological weapons under control; evidence that most civilisations that reach the technical stage expand off their home planet, which makes a single disaster less likely to end them."
 related = ["great-filter-ahead", "civilisations-burn-out", "natural-catastrophes", "ships-in-the-night", "berserkers"]
 
-verify = [
-  "That von Hoerner's 1961 Science paper lists those four ways a civilisation might end and gives an average lifetime near 6,500 years; check the paper.",
-  "That several participants at the 1961 Green Bank meeting put the lifetime at decades; check Drake's own accounts of the meeting.",
-  "That 'technological adolescence' is Sagan's phrase; check the source.",
-]
+notes = """
+Checked 2026-10-16. Von Hoerner's paper is correctly cited (Science 134 (3493), 1839-1843, 8
+December 1961, https://doi.org/10.1126/science.134.3493.1839). The Science page itself could not
+be opened, so the paper's contents were checked through two secondary accounts that agree:
+https://en.wikipedia.org/wiki/Sebastian_von_Hoerner (four causes of an end: wiping out all life,
+killing only the intelligent species, decline in mind or body, loss of interest in science;
+average duration 6,500 years) and
+https://www.universetoday.com/articles/beyond-fermis-paradox-ix-what-is-the-brief-window-hypothesis
+(6,500 years). "Technological adolescence" is Sagan's phrase: Discover magazine quotes his 1978
+Smithsonian piece, "A single message from space will show that it is possible to live through
+technological adolescence"
+(https://discovermagazine.com/the-sciences/how-advanced-are-we-earthlings-heres-a-cosmic-yardstick).
+Corrected 2026-10-16: the body said several people at the 1961 Green Bank meeting thought the
+lifetime might be a few decades, and that this factor worried everyone in the room. No source
+supports "several". The meeting's guesses for the lifetime ran from 1,000 to 100,000,000 years
+(summarised at https://en.wikipedia.org/wiki/Drake_equation; Drake's own account was not
+reached). The one documented short estimate is Philip Morrison's, about a decade, with Sagan's
+reply and Drake's own guess of 10,000 years, in Lee Billings's account
+(https://slate.com/technology/2013/09/green-bank-conference-seti-frank-drakes-equation-for-estimating-the-extraterrestrial-life.html,
+adapted from his book Five Billion Years of Solitude); that account also ties the "technological
+adolescence" worry to Morrison at the meeting. The body now says this. No change to the id,
+family, bears_on or the would_strengthen and would_weaken lines.
+"""
 
 [[bears_on]]
 factor = "lifetime"

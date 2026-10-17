@@ -26,10 +26,11 @@ settled, he argued, Earth would have been settled too, not merely visited, and t
 sign of that. The serious form of the idea has been narrower ever since. It asks whether
 an artefact, rather than a population, might be in the solar system now.
 
-Robert Freitas and Francisco Valdes searched in 1980 and 1983 for objects at the points
-in the Earth-Moon system where an object can stay put without fuel, on the grounds that
-a probe meant to watch Earth for a long time would park there. They found nothing down to
-the size their telescopes could see, which left room for anything small. The idea has
+Robert Freitas and Francisco Valdes reported searches in 1980 and 1983 (the telescope
+work was done in 1979 and in 1981 and 1982) for objects at the points in the Earth-Moon
+system where an object can stay put without fuel, on the grounds that a probe meant to
+watch Earth for a long time would park there. They found nothing down to the size their
+telescopes could see, which left room for anything small. The idea has
 been revisited as instruments improved. In 2019 James Benford proposed searching the
 near-Earth asteroids that share Earth's orbit, which a long-term observer would find
 convenient, and coined the word lurkers for the probes such a search might find. The
@@ -43,12 +44,18 @@ The ancient-visitor version, that someone came in the geological or human past a
 signs, has a worse record. Claims that monuments or myths record visits do not survive
 scrutiny, and a 2018 study by Gavin Schmidt and Adam Frank asked, as a thought
 experiment, whether an industrial civilisation on Earth millions of years ago would even
-be detectable in the rock record now. Their answer was: barely, which cuts both ways.
+be detectable in the rock record now. Their answer was that it would leave a trace, but
+one that does not differ greatly, in many respects, from natural events already in the
+record, so telling the two apart would be hard. That cuts both ways.
 
 The strongest version, that unexplained objects in the sky are craft from elsewhere, has
 been investigated repeatedly, most recently by the United States government in a series of
-reports from 2021 onward. Those reports found many sightings unexplained for lack of data
-and none that required a visitor. Researchers on the Fermi question keep their distance
+reports from 2021 onward. The first, in 2021, covered 144 reports made between 2004 and
+2021, mostly by Navy personnel; it could explain only one of them (a deflating balloon),
+said the rest lacked enough data to judge, and did not claim a visitor. The Defense
+Department's office set up for the question, the All-domain Anomaly Resolution Office,
+reported in 2024 that it had found no evidence of extraterrestrial beings, activity or
+technology, while a small number of cases stay unexplained for want of good data. Researchers on the Fermi question keep their distance
 from this version, because the evidence is anecdotal, the claims are extraordinary, and
 the subject has a long history of hoaxes and wishful thinking.
 
@@ -62,14 +69,33 @@ would_strengthen = "Discovery of an artificial object in the solar system that c
 would_weaken = "Thorough surveys of the Earth-Moon stable points, the asteroids that share Earth's orbit and the surface of the Moon finding nothing artificial; natural explanations for the interstellar visitors and for the remaining unexplained sightings; the continued absence of any physical evidence after decades of looking."
 related = ["zoo-hypothesis", "berserkers", "not-looked-long-enough", "planetarium"]
 
-verify = [
-  "That Hart's 1975 paper lists 'they are here' among the explanations it rejects, and that the citation (QJRAS 16, 128–135) is right; check.",
-  "That Freitas and Valdes searched in 1980 and 1983 and that the first paper is in Icarus 42; check both papers.",
-  "That Benford's 2019 'Looking for Lurkers' is in The Astronomical Journal volume 158, article 150; check.",
-  "That Schmidt and Frank's 2018 paper (the 'Silurian hypothesis') reaches the 'barely detectable' conclusion as summarised; check.",
-  "That the United States government reports from 2021 onward concluded as described; check the 2021 preliminary assessment and the 2023 and 2024 follow-ups.",
-  "That the Galileo Project began in 2021; check.",
-]
+notes = """
+Checked against sources on 2026-10-16. Corrected: (1) Schmidt and Frank, 'The Silurian
+hypothesis', International Journal of Astrobiology 18, 142-150 (online 2018,
+doi 10.1017/S1473550418000095, https://arxiv.org/abs/1804.03748): the authors say the geological
+signature of an industrial civilisation 'will not differ greatly in many respects from other known
+events in the geological record'; the text had said the answer was 'barely' detectable, and now
+says the trace would be hard to tell from natural events. (2) The United States government
+reports: the 2021 preliminary assessment
+(https://www.intelligence.gov/assets/documents/702%20Documents/declassified/Prelimary-Assessment-UAP-20210625.pdf)
+explained one report with high confidence (a deflating balloon), left the rest unexplained for lack
+of data, and did not address visitors; the 'no evidence of extraterrestrial beings, activity or
+technology' finding comes from the Defense Department's All-domain Anomaly Resolution Office in
+2024 (historical report of 2024-03, reported at https://digital-release.thehill.com/policy/defense/4519018-pentagon-report-ufos-alien-visits/; annual report of 2024-11, reported at
+https://abc7news.com/post/pentagon-ufo-report/15546396/). The text had said all the reports found
+none that required a visitor; it now says what each report said. The 2023 annual report was not read
+directly. (3) Freitas and Valdes: the papers are Icarus 42, 442-447 (1980) and Icarus 53, 453-457
+(1983) (http://rfreitas.com/Astro/SearchIcarus1980.htm and
+https://www.rfreitas.com/Astro/SearchIcarus1983.htm); the telescope work was done in 1979 and in
+1981 and 1982, so the text now says they reported searches in those years. Confirmed with no
+change: Hart, Quarterly Journal of the Royal Astronomical Society 16, 128-135 (1975), sorts the ways
+out into four kinds including that visitors came and were missed, and rejects them (listed in the
+SciSpace record and surveyed on https://en.wikipedia.org/wiki/Fermi_paradox; Hart's own text was not
+reachable tonight); Benford, 'Looking for Lurkers: Co-orbiters as SETI Observables', The
+Astronomical Journal 158, 150 (2019-09-20) (Crossref, doi 10.3847/1538-3881/ab3e35); the Galileo
+Project was announced in July 2021 (https://arxiv.org/abs/2209.02479, Harvard Center for
+Astrophysics project page).
+"""
 
 [[bears_on]]
 factor = "detectable"

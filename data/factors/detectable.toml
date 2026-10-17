@@ -17,20 +17,20 @@ where several of the explanations for the silence live. Nothing here is measured
 is an assumption."""
 what_would_move_this = "A survey result that bounds how many transmitters or technological signatures could be nearby (the Breakthrough Listen limits), or a published argument with a number on how often technological species stay quiet or go dark."
 
-verify = [
-  "Carl Sagan's value of one tenth in Cosmos (1980), chapter 12, is from memory; check it against the book.",
-  "That Westby and Conselice (2020) set this factor to 1 by assumption is taken from the Wikipedia article on the Drake equation; check the paper's method section.",
-  "That Forgan and Elvis (2011) and Tarter (2001) are the right citations for 'Earth is already detectable from about a light-year with today's telescopes' is taken from the Wikipedia article; check both.",
-]
-
 notes = """
 The founding pessimist papers, Hart (1975, hart-1975) and Tipler (1980, tipler-1980), do not
 estimate this factor; they argue from the absence of visitors and of self-copying probes that
 no detectable civilisation exists in the galaxy at all, and Brin's 1983 survey of the silence
-(brin-1983) collects the answers. Those are explanations and are written up as such. Forgan and
-Elvis (2011) and Tarter (2001) note that Earth's own emissions already count as detectable at
-short range, so by the broad reading this factor is at least the share of species that reach
-our level of technology and do not hide. Written 2026-10-16."""
+(brin-1983) collects the answers. Those are explanations and are written up as such. Tarter (2001, page 544)
+notes that searches at today's sensitivity could detect the equivalent of strong television
+transmitters at 1 light-year, military radars at 300 and the Arecibo planetary radar at 3,000,
+so by the broad reading this factor is at least the share of species that reach
+our level of technology and do not hide. Corrected 2026-10-16 against the sources: Carl Sagan's one tenth was removed (his
+Cosmos, chapter 12, gives only the product of the intelligence and detectable factors, one in a
+hundred, never this factor alone; see the revision below); Forgan and Elvis (2011) is a paper on
+asteroid mining as evidence of aliens and says nothing about Earth being detectable, so it is
+dropped; and the range's reason below still names 'Sagan's one in ten' and should be revisited at
+the outside review (the range is unchanged). Written 2026-10-16."""
 
 [[estimate]]
 who = "Frank Drake and the Green Bank meeting"
@@ -39,13 +39,6 @@ low = 0.1
 high = 0.2
 source = "Green Bank meeting of November 1961, as recorded in Drake and Sobel, Is Anyone Out There? (Delacorte, 1992), pages 55 to 62 (drake-1961)"
 method = "Educated guess: one in five to one in ten intelligent species would build radio and choose to signal."
-
-[[estimate]]
-who = "Carl Sagan"
-when = "1980"
-value = 0.1
-source = "Sagan, Cosmos (Random House, 1980), chapter 12, 'Encyclopaedia Galactica'"
-method = "A round guess, one tenth, in a worked example of the equation for a general audience."
 
 [[estimate]]
 who = "Anders Sandberg, Eric Drexler and Toby Ord"
@@ -60,7 +53,7 @@ method = "A span evenly spread across its powers of ten, from the published esti
 who = "Tom Westby and Christopher Conselice"
 when = "2020-06"
 value = 1
-source = "Westby and Conselice, 'The Astrobiological Copernican weak and strong limits for extraterrestrial intelligent life', Astrophysical Journal 896, 58 (2020) (westby-2020)"
+source = "Westby and Conselice, 'The Astrobiological Copernican Weak and Strong Limits for Intelligent Life', Astrophysical Journal 896, 58 (2020) (westby-2020)"
 link = "https://arxiv.org/abs/2004.03968"
 method = "Assumed: every civilisation that develops as ours did is taken to be communicating, for an average of 100 years."
 
@@ -77,3 +70,10 @@ Sagan's one in ten and Westby and Conselice's 1, and nothing has been measured t
 either end. The floor of 0.01 allows for species that never build radio, or build it and stay
 quiet, which several explanations (the dark forest, the zoo hypothesis) say is the norm. Evenly
 spread across its powers of ten, as in the 2018 paper."""
+
+[[revision]]
+date = 2026-10-16
+field = "estimate (Carl Sagan, 1980)"
+old = "value 0.1, 'a round guess, one tenth'"
+new = "removed"
+why = "Checked against Cosmos (1980), chapter 12, on 2026-10-16: Sagan writes 'let us choose fi x fc = 1/100' and gives no value for the detectable factor alone, so one tenth is not a published estimate of it. The range and its first-pass reasoning are untouched; the reasoning's mention of Sagan's one in ten should be revisited at the outside review."

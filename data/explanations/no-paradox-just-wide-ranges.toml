@@ -13,9 +13,10 @@ summary = """
 The Fermi question feels like a paradox because people multiply seven best guesses together
 and get a galaxy with thousands of civilisations, then look up and see none. But a best
 guess is the wrong thing to multiply. Several of the factors, above all the chance that
-life starts on a suitable planet, are uncertain not by a factor of a few but by a factor of one followed by a hundred
-zeros, and when you run the equation with honest ranges instead of single best guesses, a large share of the outcomes have the galaxy empty and a good share have the
-whole observable universe empty. On this view there was never anything to explain: the
+life starts on a suitable planet, are uncertain not by a factor of a few but by tens or
+even hundreds of powers of ten, and when you run the equation with honest ranges instead
+of single best guesses, a large share of the outcomes have the galaxy empty and a good
+share have the whole observable universe empty. On this view there was never anything to explain: the
 silence is what you should expect from what we actually know, and the surprise was an
 artefact of false precision."""
 body = """
@@ -23,15 +24,18 @@ The argument is a point about arithmetic, made by three researchers at Oxford's 
 Humanity Institute in 2018. The Drake Equation multiplies seven numbers. If each is
 uncertain, the right way to combine them is not to pick a middle value for each and
 multiply, but to let each vary across its plausible range, draw one value from each range
-many thousands of times, multiply each time, and look at the spread of results. When they
-did that with ranges drawn from the published literature, the middle outcome was a
-fraction of a civilisation per galaxy, and the chance that we are alone in the Milky Way
-came out above one half. The chance that we are alone in the entire observable universe
-came out around four in ten.
+many thousands of times, multiply each time, and look at the spread of results. They did
+it two ways. Resampling the estimates published in the literature, the middle outcome was
+about a hundred civilisations per galaxy, yet there was still about a 30% chance that we
+are alone in the Milky Way. With ranges set from their own reading of current knowledge,
+the middle outcome was a fraction of a civilisation per galaxy (0.32), the chance that we
+are alone in the Milky Way came out at 52%, and the chance that we are alone in the entire
+observable universe came out at 38%.
 
 The reason is that one or two of the factors dominate. The chance that life starts on a
-suitable planet could, on what is known, be anywhere from nearly certain to one in a
-trillion trillion trillion. When a factor can be that small, the product can be that small,
+suitable planet could, on what is known, be anywhere from nearly certain to smaller than
+anyone can name: the paper spreads it as a bell curve in powers of ten, fifty powers of ten
+wide and centred on one start per planet. When a factor can be that small, the product can be that small,
 and no amount of optimism about stars and planets can rescue it. A single best guess hides
 this by quietly choosing a value in the middle of the range, which is where the odds are
 least likely to lie. Multiplying middles gives a confident-looking number that no
@@ -51,25 +55,27 @@ equation is run many thousands of times, and what goes on the home page is the s
 That is the practical reason the explanation gets a page of its own.
 
 The main objection is that "dissolving" the paradox depends entirely on the ranges chosen,
-and the wide lower end for the origin of life is doing almost all the work. Critics argue
-that the lower bound of one in ten to the thirty-six is not an estimate anyone defends but
-a formal placeholder for ignorance, and that putting it in the range on equal terms with
-the rest guarantees the conclusion. The authors agree that the ranges are the argument,
+and the wide lower end for the origin of life is doing almost all the work. A natural objection
+is that the long low end of that spread is not an estimate anyone defends but a formal
+stand-in for ignorance, and that putting it into the range on equal terms with the rest
+nearly guarantees the conclusion; the paper itself says its conclusion can be driven by
+that one factor alone. The authors agree that the ranges are the argument,
 and reply that anyone who wants a crowded galaxy has to say which range is wrong and why,
 which is a better conversation than the one about paradoxes. A second objection is that
-the argument answers Drake's question (how many are detectable now) and not Hart's (why
-has nobody in ten billion years spread across the galaxy), and a single early civilisation
-anywhere in the galaxy's past would have been enough to fill it."""
+the first step of the argument answers Drake's question (how many are detectable now) and
+not Hart's (why has nobody in ten billion years spread across the galaxy). The authors take
+up Hart's question in a second step, where the absence of visible settlement counts as
+evidence; that step raises the chance that we are alone to between 53% and 99.6% for the
+galaxy and between 39% and 85% for the observable universe, but it depends on how fast
+settlement is assumed to spread, for which the paper cites estimates from under a million
+to ten billion years."""
 standing = "Widely read and influential; its method is now the standard way to present the equation, and this site uses it. The strength of its conclusion is disputed, mostly over how wide a range to allow for the origin of life."
 would_strengthen = "A published argument or measurement that narrows the lower end of the origin-of-life range downward, confirming that very small values are plausible; continued absence of detections in surveys of the atmospheres of planets around other stars consistent with an empty neighbourhood."
 would_weaken = "Any discovery of life beyond Earth, which would cut the origin-of-life range at the bottom and re-crowd the galaxy in the computation; a persuasive case that the lower bounds used were placeholders rather than estimates and should be dropped."
 related = ["rare-life", "great-filter-behind-us", "we-are-early", "not-looked-long-enough"]
 
-verify = [
-  "That the paper's headline figures are a median of about 0.3 civilisations in the galaxy, a 52% chance we are alone in the galaxy and a 38% chance we are alone in the observable universe; the publication record sandberg-2018 in data/papers carries the same numbers and should agree.",
-  "That the lower bound used for the origin-of-life factor was 10 to the minus 36 per planet; check the paper's table of ranges.",
-  "That the Hart-versus-Drake objection has been made in print (rather than only in discussion) and by whom; find a citation or soften the wording.",
-]
+notes = "Corrected 2026-10-16, against the paper itself (Sandberg, Drexler and Ord, 'Dissolving the Fermi Paradox', arXiv:1806.02404, read in full). Confirmed: median of 0.32 civilisations in the galaxy, 52% chance we are alone in the galaxy, 38% alone in the observable universe (sections 3.2 and the 'No update' row of Table 2), and 53%-99.6% and 39%-85% after the silence is counted (section 4). These agree with data/papers/sandberg-2018.toml and data/factors/life.toml. Wrong: (1) the claim that the lowest value used for the chance life starts was one in 10 to the 36. The paper has no such bound; it uses a bell curve in powers of ten, 50 powers of ten wide (standard deviation), centred on one start per planet, giving a mean chance of 0.5 and a median of 0.63 (section 3.1.1). The summary, body and objection text were rewritten to say that. (2) The body said the 0.32 median came from ranges drawn from the published literature; it came from the authors' own ranges (their Table 1). Resampling the literature gave a median of about 100, 30% alone in the galaxy and 10% alone in the observable universe (section 2). (3) The summary said the chance life starts was uncertain by 'a factor of one followed by a hundred zeros'; the paper says tens or hundreds of orders of magnitude (it takes 200 as a reference value), so the wording now says tens or even hundreds of powers of ten. (4) The Hart-versus-Drake objection: no published source for it was found, and the paper itself does address Hart's question in its section 4 (absence of settlement as evidence), so the sentence was reworded as an objection to the first step only and the 'critics argue' phrasing was dropped."
+
 
 [[bears_on]]
 factor = "life"

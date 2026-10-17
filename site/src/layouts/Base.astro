@@ -40,7 +40,7 @@ const currentYear = new Date().getFullYear();
         } catch (e) {}
       })();
     </script>
-    <meta id="theme-color-meta" name="theme-color" content="#08070f" />
+    <meta id="theme-color-meta" name="theme-color" content="#05070a" />
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="author" content="John Fredrickson" />
@@ -55,10 +55,9 @@ const currentYear = new Date().getFullYear();
     <meta name="twitter:card" content="summary" />
   </head>
   <body>
+    {/* The Hush skin's sky (ruled 2026-10-16): a dozen still stars, no glow, no core. */}
     <div class="space-bg" aria-hidden="true">
-      <div class="galaxy"></div>
-      <div class="core"></div>
-      <Starfield count={150} />
+      <Starfield count={12} />
     </div>
     <Nav />
     <main class="container">

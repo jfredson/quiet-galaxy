@@ -12,8 +12,10 @@ finding = """
 The paper that turned Fermi's lunchtime question into an argument. Hart starts from one
 observation, that there are no intelligent beings from elsewhere on Earth now, which he
 calls Fact A, and argues that a civilisation able to travel between stars at even a tenth
-of the speed of light would settle the whole galaxy in about two million years, a blink
-against the galaxy's age. He sorts every way out into four kinds (they cannot come, they
+of the speed of light would cross most of the galaxy in about 650,000 years (about twice
+that if there are pauses between voyages), so any civilisation that began exploring more
+than about 2 million years ago would already have reached us. That is a blink against the
+galaxy's age. He sorts every way out into four kinds (they cannot come, they
 chose not to, they have not had time, they came and we missed them) and rejects each, and
 concludes that we are the first civilisation in the galaxy and that searching for radio
 signals is probably a waste of time and money."""
@@ -21,7 +23,4 @@ factors = ["intelligence", "detectable", "lifetime"]
 explanations = ["we-are-early", "rare-intelligence", "interstellar-travel-impractical", "zoo-hypothesis", "they-are-already-here", "expansion-stalls"]
 moved_range = false
 
-verify = [
-  "That Hart's colonisation time is given as about two million years at a tenth of light speed; the figure is quoted from memory and the paper should be checked.",
-]
-notes = "The 'Fact A' framing is Hart's own and most later surveys cite it. Nearly every explanation in the catalogue's 'unseen' family is an answer to this paper."
+notes = "Corrected 2026-10-16 against the scanned paper (articles.adsabs.harvard.edu/pdf/1975QJRAS..16..128H; the ADS 'full' link returned an empty page): at a tenth of light speed most of the galaxy is crossed within 650,000 years; the two million years is the time since a civilisation would have had to start exploring to have reached us. The 'Fact A' framing is Hart's own and most later surveys cite it. Nearly every explanation in the catalogue's 'unseen' family is an answer to this paper."

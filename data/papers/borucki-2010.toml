@@ -21,7 +21,4 @@ factors = ["planets", "habitable-planets"]
 explanations = []
 moved_range = false
 
-verify = [
-  "The counts of about 150,000 stars watched and more than 2,600 confirmed planets; the first from the mission's design papers, the second from NASA's tally at the mission's end in 2018.",
-]
-notes = "Written 2026-10-16."
+notes = "Written 2026-10-16. Checked 2026-10-16: NASA's Kepler mission page gives more than 2,600 planet discoveries and a field of about 150,000 stars."

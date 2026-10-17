@@ -27,9 +27,12 @@ Ernst Mayr, another founder of the field, said the same thing more bluntly thirt
 later in a published argument with Carl Sagan. Of the roughly fifty billion species that
 Mayr estimated had lived on Earth, one had developed the kind of intelligence that could
 build a civilisation, and it had done so in the last few hundred thousand years. Sagan
-replied that intelligence had clear survival value and that on a long enough timescale
-something would find its way to it; Mayr answered that the dinosaurs had had a hundred
-and fifty million years and never did.
+replied that if Earth is a fair example, planets teem with species and, given enough time,
+at least one of them will reach intelligence and technology, and that Mayr could not count
+Earth as evidence for one point and set it aside for another. Mayr answered that life on
+Earth refutes the idea that being smarter is always better: bacteria, single-celled
+organisms with nuclei, fungi and plants have never needed intelligence, and among the many
+groups of animals it arose in only one.
 
 The modern form of the argument points at how slowly and narrowly intelligence appeared
 even once the ingredients were present. Large brains are expensive to run and risky to be
@@ -57,11 +60,21 @@ would_strengthen = "Discovery of a second living world whose life has stayed sim
 would_weaken = "A detected technological civilisation anywhere; evidence that intelligence on Earth arose independently in several lineages that were converging on tool use; a clear evolutionary argument that problem-solving intelligence is strongly favoured once animals exist."
 related = ["rare-technology", "complex-cells-are-rare", "rare-earth", "great-filter-behind-us"]
 
-verify = [
-  "That Simpson's 1964 Science paper is correctly titled and cited; check volume and pages.",
-  "That the Mayr and Sagan exchange took place in 1995 in the Planetary Society's Bioastronomy News and that Mayr's fifty-billion-species figure appears there; check.",
-  "That the dinosaur argument is Mayr's and not a later paraphrase; check the text of the exchange.",
-]
+notes = """
+Checked 2026-10-16. Simpson's paper is correctly cited: Science 143 (3608), 769-775, 21
+February 1964 (Crossref record for https://doi.org/10.1126/science.143.3608.769). The Mayr and
+Sagan exchange ran in 1995 in two consecutive issues of Bioastronomy News (the newsletter of
+the International Astronomical Union's commission on bioastronomy, published in the United
+States by The Planetary Society), volume 7, numbers 3 and 4, and Mayr's figure is there: "perhaps
+50,000 million" (fifty billion) species since life began (the Spanish reprint at
+https://arxiv.org/abs/1012.2591, which gives the original citation). Corrected 2026-10-16:
+the body had Mayr answering Sagan that the dinosaurs had a hundred and fifty million years and
+never became intelligent. That argument does not appear in the exchange as reprinted (the
+dinosaurs come up there only as victims of the end-of-Cretaceous impact, in Sagan's part); it
+has been replaced with the reply Mayr actually gave, and Sagan's reply is now stated as it
+appears in the text. No change to the id, family, bears_on or the would_strengthen and
+would_weaken lines.
+"""
 
 [[bears_on]]
 factor = "intelligence"

@@ -26,8 +26,9 @@ things that have nothing to do with how clever its owners were.
 
 The clearest case is the sea. Most of Earth's surface is ocean, and the oceans hold
 animals of great intelligence, but fire does not burn under water, metal cannot be worked,
-and there are no hands to work it with. A planet covered entirely in water, which the
-record of planets found around other stars suggests may be common, could carry minds for a billion years and never
+and there are no hands to work it with. A planet covered entirely in water, which studies of the sizes and weights of
+planets found around other stars suggest may be common (many seem to hold a large share of
+water, though whether they have open ocean is not known), could carry minds for a billion years and never
 produce a tool more complicated than a sponge held in the beak. The case is stronger still
 for worlds with oceans sealed under a shell of ice, which seem to be the most common kind
 of habitable world in our own solar system. The same point applies to any clever species
@@ -59,11 +60,23 @@ would_strengthen = "Evidence that most habitable worlds are ocean worlds or ice-
 would_weaken = "A detected technological signal, which would show the step is at least sometimes taken; evidence that tool use and teaching are common among intelligent species on Earth and in principle lead on to technology; discovery that most habitable worlds have dry land and oxygen atmospheres."
 related = ["rare-intelligence", "life-under-ice", "complex-cells-are-rare", "no-interest-in-contact"]
 
-verify = [
-  "That Mayr's 1995 exchange with Sagan raises the point about intelligence not leading to technology, as distinct from the rarity of intelligence; check the text.",
-  "That Webb's 2002 book treats 'they lack the means' as a distinct solution; check the chapter list (and whether the 2015 second edition is the better citation).",
-  "The claim that ocean-covered planets may be common among the planets found around other stars is from memory of population studies of small planets; check a source.",
-]
+notes = """
+Checked 2026-10-16. Mayr's side of the 1995 exchange with Sagan does separate intelligence
+from technology: he says that of at least twenty civilisations in the last ten thousand years
+only one reached the technical level of sending signals into space, and that the intelligence of
+crows, dolphins and monkeys falls short of what founding a civilisation takes (Spanish reprint,
+https://arxiv.org/abs/1012.2591). Webb's 2002 book (Copernicus/Praxis; 50 solutions) lists
+separate solutions "Toolmaking Species Are Rare", "Technological Progress Is Not Inevitable",
+"Intelligence at the Human Level Is Rare" and "Science Is Not Inevitable" (contents list at
+https://buechereien.wien.gv.at/Permalink.aspx?id=0588713); the 2015 second edition's contents
+were not reached, so the 2002 edition stays as the citation. Corrected 2026-10-16: the claim
+that ocean-covered planets may be common was softened. Zeng and colleagues (Proceedings of the
+National Academy of Sciences 116, 9723-9728, 2019, https://arxiv.org/abs/1906.04253) conclude
+that many planets two to four times Earth's width may be water worlds, and Luque and Palle
+(Science 377, 1211, 2022, https://arxiv.org/abs/2209.03871) find a water-rich group among small
+planets around dim red stars. Both are about water-rich planets, not confirmed open oceans, so
+the body now says that.
+"""
 
 [[bears_on]]
 factor = "detectable"

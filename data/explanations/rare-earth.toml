@@ -49,8 +49,9 @@ that stars and planets are plentiful.
 
 Each item on the list has been challenged in the years since. The sample is one planet, so
 every "requirement" is really an observation that Earth has the feature, not a proof that
-complex life needs it. Later work on Jupiter's role found that a giant planet sends almost
-as many objects inward as it deflects, so its value as a shield is unclear. Large moons
+complex life needs it. Later work on Jupiter's role (Horner and Jones, 2008) found that, for
+asteroids, a giant planet can significantly raise the rate of impacts on Earth rather than
+lower it, so its value as a shield is far from clear-cut. Large moons
 formed by collision may be ordinary, since collisions were ordinary when the planets were
 young. The thousands of planets found since 2000 have shown that the galaxy's planets are
 far more varied than the solar system suggested, which cuts both ways: more kinds of
@@ -64,11 +65,24 @@ would_strengthen = "Surveys of Earth-sized planets in the band around their star
 would_weaken = "A detection of oxygen or another gas tied to complex life in the atmosphere of a planet around another star; evidence of moving continents or long-lived magnetic fields on many rocky planets; simulations showing that a planet's climate can stay stable for billions of years without a large moon or giant outer neighbour."
 related = ["rare-life", "complex-cells-are-rare", "rare-intelligence", "hostile-galaxy", "great-filter-behind-us", "life-under-ice"]
 
-verify = [
-  "That the book's list of requirements is fairly summarised above, including the claim that moving continents act as a long-term thermostat; check against the book's own chapter list.",
-  "That later work (Horner and Jones, around 2008) found Jupiter sends roughly as many objects inward as it deflects; check the paper and its exact finding.",
-  "That Ward and Brownlee accepted simple life as probably common; check the book's framing.",
-]
+notes = """
+Checked 2026-10-16. The book's chapter list (Springer, listed through Crossref, e.g.
+https://api.crossref.org/works/10.1007/0-387-21848-3_9) runs: Why Life Might Be Widespread in
+the Universe; Habitable Zones of the Universe; Building a Habitable Earth; Life's First
+Appearance on Earth; How to Build Animals; Snowball Earth; The Enigma of the Cambrian
+Explosion; Mass Extinctions and the Rare Earth Hypothesis; The Surprising Importance of Plate
+Tectonics; The Moon, Jupiter, and Life on Earth; Testing the Rare Earth Hypothesis; Assessing
+the Odds. That fits the list in the body and the view that simple life is probably common.
+Ward describes moving continents as a long-term climate thermostat (carbon dioxide drawn
+down by weathering and put back by volcanoes) in his own words at
+https://bigthink.com/videos/the-oddest-little-planet-in-the-galaxy/. The book itself was not
+read page by page. Corrected 2026-10-16: the body said Horner and Jones found that Jupiter sends
+almost as many objects inward as it deflects. Their paper (Jupiter - friend or foe? I: the
+asteroids, International Journal of Astrobiology 7, 251-261, 2008,
+https://arxiv.org/abs/0806.2795) says the situation is far less clear-cut than assumed and that
+a giant planet can significantly increase the asteroid impact rate on Earth. The body now says
+that.
+"""
 
 [[bears_on]]
 factor = "habitable-planets"

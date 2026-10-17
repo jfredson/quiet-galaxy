@@ -4,7 +4,7 @@
 // columns on a desktop, stacked on a phone. Swapped on 2026-10-16 at John's asking: the equation
 // line, the trunk's picture, sits in the wide left column where its seven terms fit on one row,
 // each a link to its piece's page with a plain name and the range this site uses under it (rule
-// 2.4); the thing held sits in the box on the right, in the largest type on the site: the chance
+// 2.4), placed after the question and its paragraph at John's asking later the same evening; the thing held sits in the box on the right, in the largest type on the site: the chance
 // that there are other detectable civilisations in the galaxy (John's wording, 2026-10-16; the
 // same chance the other way round from the earlier "alone" figure), with the observable-universe
 // chance and the middle estimate beneath it. Then, on the left: the question as the title; one
@@ -46,6 +46,10 @@ const SHORT: Record<string, string> = {
   <section class="home-hero">
     <div class="home-hero-main">
       <p class="eyebrow">A public explainer and tracker of the Fermi Paradox</p>
+      <h1 class="big-claim">Where is everybody?</h1>
+      <p class="big-sub">
+        The physicist Enrico Fermi asked that over lunch in 1950: the galaxy is old enough and big enough that someone should have shown up by now, and nobody has. This site takes the question apart, piece by piece, and keeps every serious answer to it on a page of its own.
+      </p>
       <div class="trunk" id="pieces">
         <p class="trunk-label">The seven pieces the number comes from</p>
         <p class="trunk-eq" aria-label="The equation">
@@ -63,10 +67,6 @@ const SHORT: Record<string, string> = {
         </p>
         <p class="trunk-foot">N is how many civilisations in our galaxy could be detected right now. Each piece is a range drawn from what has been published; the number on the right comes from multiplying the seven many thousands of times with a random pick from each, and is never typed in. <a href="/equation/#calculator">Try the numbers yourself</a>.</p>
       </div>
-      <h1 class="big-claim">Where is everybody?</h1>
-      <p class="big-sub">
-        The physicist Enrico Fermi asked that over lunch in 1950: the galaxy is old enough and big enough that someone should have shown up by now, and nobody has. This site takes the question apart, piece by piece, and keeps every serious answer to it on a page of its own.
-      </p>
       <p class="width-line">
         {width
           ? <>Take every optimistic published estimate and you get <strong>{plainNumber(width.optimist)}</strong> civilisations in the galaxy; every pessimistic one and you get <strong>{plainNumber(width.pessimist)}</strong>. That gap is the argument.</>

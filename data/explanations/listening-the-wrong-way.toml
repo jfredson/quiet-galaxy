@@ -6,8 +6,8 @@ id = "listening-the-wrong-way"
 name = "We are listening the wrong way: an efficient message is indistinguishable from noise, and they may not be using radio at all"
 family = "unseen"
 proposed_by = "Michael Lachmann, Mark Newman and Cristopher Moore"
-proposed_in = 2004
-proposed_source = "'The physical limits of communication, or why any sufficiently advanced communication is indistinguishable from noise', American Journal of Physics 72, 1290–1293 (2004)"
+proposed_in = 1999
+proposed_source = "'The physical limits of communication, or why any sufficiently advanced technology is indistinguishable from noise', first posted as arXiv:cond-mat/9907500 on 1999-07-30; American Journal of Physics 72, 1290–1293 (2004)"
 summary = """
 The searches assume that a signal from another civilisation will look like a signal: a
 narrow tone, a regular pulse, something no natural process makes. But a message that is
@@ -17,7 +17,8 @@ lasers, with particles that pass through planets, or with methods nobody has tho
 On this view the galaxy may be full of conversation, and our radio telescopes are tuned
 to a kind of signal that only a very young civilisation would ever send."""
 body = """
-Three physicists made the sharpest version of the argument in 2004, starting from a
+Three physicists made the sharpest version of the argument, posted in 1999 and published
+in 2004, starting from a
 result in the theory of information. The most efficient way to send a message through a
 channel with limited power is to use every part of the channel equally, with no pattern
 that could be predicted; a message encoded that way has the statistical properties of
@@ -26,8 +27,9 @@ of our technology but a mathematical fact: the better the encoding, the more it 
 like noise. A civilisation sending information to itself across space, between colonies
 or probes, would use the best encoding it had, and its traffic would be indistinguishable
 from the natural background to anyone who did not already know the code. The authors
-drew the conclusion that a civilisation's ordinary communications would never be found by
-the methods the searches use, which look for artificial regularity.
+present this as a thought experiment: they show a limit and say they have not shown how
+to reach it. The consequence for the searches, which look for artificial regularity, is
+that a message packed that well would show none.
 
 The broader point predates the paper and has many forms. Earth's own radio leakage is
 falling as broadcasting moves to cables, satellites and tightly aimed beams, and the loud
@@ -48,12 +50,12 @@ down to the design of the search.
 The main objection is that the argument applies to a civilisation's private traffic, not
 to anything it might send on purpose to be found. A civilisation that wanted to be heard
 would send a signal that was obviously artificial precisely because an efficient one is
-not, and the searches are designed for that case. The authors of the 2004 paper accepted
-this; their point was that the hope of overhearing a civilisation going about its
-business is probably vain. A second objection is that waste heat cannot be encoded away:
+not, and the searches are designed for that case. The paper does not
+discuss deliberate beacons. A second objection is that waste heat cannot be encoded away:
 whatever a civilisation does with its signals, its industry warms its surroundings, and
-searches for that warmth, which have been run on tens of thousands of galaxies, have so
-far found nothing. The reply is that those searches also rest on assumptions about what
+searches for that warmth have covered about a hundred thousand galaxies, and the
+largest (Griffith and others, 2015) found none turning more than 85% of its starlight into
+heat. The reply is that those searches also rest on assumptions about what
 an advanced civilisation does with energy, and are themselves a bet on one kind of
 signal."""
 standing = "The core result about efficient encoding is accepted physics and has influenced how searches are designed; as an explanation of the silence it is considered partial, since it does not account for the absence of deliberate beacons or of waste heat."
@@ -61,10 +63,8 @@ would_strengthen = "A detected signal found by a new method after decades of rad
 would_weaken = "A detection by the standard radio or laser methods; evidence that advanced civilisations would have strong reasons to send recognisable beacons; surveys of waste heat around many stars and galaxies finding none, which would suggest nobody is out there to encode anything."
 related = ["not-looked-long-enough", "shouting-is-costly", "everyone-listens-nobody-transmits", "they-became-machines"]
 
-verify = [
-  "That the 2004 paper is in American Journal of Physics volume 72, pages 1290–1293, and that its argument is as stated; check.",
-  "That searches for waste heat have covered tens of thousands of galaxies (the usual citation is the Ĝ survey, Griffith and others, 2015, about 100,000 galaxies); check the number.",
-]
+notes = "Corrected 2026-10-16. (1) The title was given as 'why any sufficiently advanced communication is indistinguishable from noise'; the printed title ends 'technology', not 'communication' (American Journal of Physics 72(10), 1290-1293 (2004), https://pubs.aip.org/ajp/article/72/10/1290/1044411/The-physical-limits-of-communication-or-Why-any; volume and pages confirmed there and at https://arxiv.org/abs/cond-mat/9907500). (2) proposed_in was 2004, the year of the journal; the authors first posted the paper on 1999-07-30 (arXiv:cond-mat/9907500), so the year is now 1999, following the rule of first documented appearance. This is a judgment call; 2004 is the alternative. (3) The body said the authors 'accepted' that deliberate beacons would be recognisable and that overhearing is probably vain; the paper (read as the arXiv version) says nothing about beacons and calls its result a thought experiment, so those sentences were rewritten. (4) The body said waste-heat searches covered 'tens of thousands of galaxies'; the Ĝ survey covered about 100,000 galaxies and found none turning more than 85% of its starlight into mid-infrared heat (Griffith and others, Astrophysical Journal Supplement 217, 25 (2015), https://arxiv.org/abs/1504.03418)."
+
 
 [[bears_on]]
 factor = "detectable"
