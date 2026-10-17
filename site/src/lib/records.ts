@@ -259,6 +259,7 @@ export function plainNumber(x: number): string {
   const neg = x < 0 ? '−' : '';
   const v = Math.abs(x);
   if (v >= 1e4) {
+    if (v >= 1e15) return `${neg}a 1 followed by ${Math.round(Math.log10(v))} zeros`;
     for (const [unit, word] of WORDS) {
       if (v >= unit) {
         const q = v / unit;
@@ -268,6 +269,9 @@ export function plainNumber(x: number): string {
   }
   if (v < 1e-4) {
     const inv = 1 / v;
+    // Beyond the words we have (the pessimistic extreme is around 1 in 10 to the 65th):
+    // say how many zeros, which a reader can hold, rather than print a float.
+    if (inv >= 1e15) return `${neg}1 in a 1 followed by ${Math.round(Math.log10(inv))} zeros`;
     for (const [unit, word] of WORDS) {
       if (inv >= unit) {
         const q = inv / unit;

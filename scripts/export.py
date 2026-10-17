@@ -153,8 +153,8 @@ def load_headline(data_dir: Path, path: Path | None) -> dict | None:
         src = raw.get("headline", raw) if isinstance(raw, dict) else {}
         aliases = {
             "median": ("median", "median_n", "n_median"),
-            "alone_galaxy": ("alone_galaxy", "p_alone_galaxy", "chance_alone_galaxy"),
-            "alone_universe": ("alone_universe", "p_alone_universe", "chance_alone_universe"),
+            "alone_galaxy": ("alone_galaxy", "alone_in_galaxy", "p_alone_galaxy", "chance_alone_galaxy"),
+            "alone_universe": ("alone_universe", "alone_in_universe", "p_alone_universe", "chance_alone_universe"),
             "optimist": ("optimist", "optimistic", "n_optimist", "high"),
             "pessimist": ("pessimist", "pessimistic", "n_pessimist", "low"),
             "runs": ("runs", "draws", "samples"),
@@ -162,6 +162,11 @@ def load_headline(data_dir: Path, path: Path | None) -> dict | None:
             "seed": ("seed",),
             "note": ("note", "notes"),
         }
+        # compute.py run (2026-10-16) keeps the optimist-to-pessimist width under "extremes":
+        # "from_estimates" is every factor at its most hopeful or most pessimistic published
+        # estimate, which is the width the kickoff asks the home page to show.
+        if isinstance(src.get("extremes"), dict) and isinstance(src["extremes"].get("from_estimates"), dict):
+            src = {**src, **{k: v for k, v in src["extremes"]["from_estimates"].items() if k in ("optimist", "pessimist")}}
         out: dict = {}
         for key, names in aliases.items():
             for n in names:
