@@ -190,23 +190,11 @@ a.dim:hover { color: var(--accent); }
 .home-number { background: transparent; }
 :root[data-theme='light'] .home-number { background: var(--panel); }
 
-/* The top bar carries six links with the tracker pattern's long public names (section 4), so two
-   things differ from the standard's bar, both only here: the site's name never wraps (if the row
-   ever runs out of room, the links wrap, not the name), and the bar collapses behind the menu
-   button at 1080 pixels instead of the standard's 820. Checked at 1280 pixels on 2026-10-16, after
-   the family design review found the name wrapping and the links spilling onto a second row. The
-   rules in the media query repeat the standard's small-screen rules for the band between 820 and
-   1080 pixels and change nothing else. */
+/* The top bar (rule 4.7, ruled by John 2026-10-16): short handles (Equation · Explanations ·
+   Library · Reading · Story | Method · Disagree · Source), so the eight links sit on one line beside
+   the brand at 1280 pixels and the standard's own collapse at 820 is enough; the wider collapse
+   band added earlier the same evening for the long names is gone. The site's name never wraps. */
 .brand { white-space: nowrap; }
-@media (max-width: 1080px) {
-  .nav-toggle { display: inline-flex; }
-  .navlinks { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: flex-end; gap: 2px; margin: 0; padding: 8px 26px 16px; background: var(--header-bg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
-  .site-header.nav-open .navlinks { display: flex; }
-  .navlinks a { padding: 11px 6px; border-radius: 6px; font-size: 15px; text-align: right; }
-  .navlinks a.nav-secondary { font-size: 15px; }
-  .nav-divider { display: none; }
-  .theme-toggle { margin: 10px 0 0; }
-}
 
 /* Light-theme button text (2026-10-16). The standard's rule that colours links in the light theme
    (:root[data-theme='light'] a) outranks the button rule, so a solid button's text took the link
