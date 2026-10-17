@@ -4,6 +4,7 @@ Every change to a range, a record, the method or the site, with absolute dates. 
 
 ## 2026-10-17
 
+- **The sky gains its ripples.** Behind the top of the page, hairline rings spread from a point off the top right corner, each fainter than the last and gone by the fold: the ripples of our own century of broadcasting into a sky that has not answered, or the rings of a dish listening. Everything else of the Hush skin stays (the cold field, the dozen still stars, no glow, no core, the equation as the object); the rings are densest above the answer box and thin to nothing over the equation, nothing moves, and the light theme carries them in grey. One rule in the skin. Asked for by John on 2026-10-17 after he said he liked the Belt Equation's and the parent's backdrops and wanted one unique to this project; proposed with mock-ups in the Sentient Horizons design standard (`design/proposals/quiet-galaxy-backdrop-2026-10-17.md`) and ruled by him the same afternoon as proposed. With it, two small fixes of the same kind as yesterday's family cards: the story page's ledger card and the method page's document link no longer carry the skeleton's underline. **No number moved.**
 - The three family cards on the home page no longer underline their heading and description (the whole card is one link, so the skeleton's link underline ran through all of it); only the "N explanations" count keeps the underline, so the card reads as a card and the count as the link. Asked for by John 2026-10-17.
 
 ## 2026-10-17 (John's rulings on the outside review applied)

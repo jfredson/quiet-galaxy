@@ -521,7 +521,7 @@ table.ptable { width: 100%; border-collapse: collapse; font-family: var(--sans);
 .card-found { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--text-soft); }
 .card-john { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--text-soft); border-left: 2px solid var(--accent-2); padding-left: 10px; }
 .card-foot { display: flex; gap: 8px 14px; flex-wrap: wrap; align-items: baseline; font-family: var(--sans); font-size: 12.5px; margin-top: auto; padding-top: 4px; }
-.card-ledger { color: var(--accent); }
+.card-ledger { color: var(--accent); text-decoration: none; } /* a whole card as one link: no underline through it (2026-10-17) */
 .card-sources { display: flex; gap: 10px; flex-wrap: wrap; }
 .card-queries summary { cursor: pointer; color: var(--muted); }
 .card-queries summary:hover { color: var(--text); }
@@ -563,3 +563,6 @@ table.ptable { width: 100%; border-collapse: collapse; font-family: var(--sans);
   .verdict-key dl { grid-template-columns: 1fr; gap: 2px 0; }
   .verdict-key dd { margin-bottom: 10px; }
 }
+
+/* A link styled as a document, whole: no underline through it (2026-10-17). */
+.doc-link { text-decoration: none; }

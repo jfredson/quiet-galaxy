@@ -69,7 +69,23 @@
   --radius: 5px;
 }
 
-/* ---- the backdrop: a near-empty sky ----
+/* ---- the backdrop: a near-empty sky, and the ripples (ruled 2026-10-17) ----
+   The rings: from a point just off the top right corner, hairline rings spread across the first
+   screen, each fainter than the last, gone by the fold: the ripples of our own century of
+   broadcasting into a sky that has not answered, or the rings of a dish listening. Densest above
+   the answer box, thin to nothing over the equation. Nothing moves. 20% on the dark field is the
+   floor, not the ceiling (design/proposals/quiet-galaxy-backdrop-2026-10-17.md, decision 4). */
+.space-bg .rings {
+  position: absolute; inset: 0;
+  background: repeating-radial-gradient(circle at 92% -6%, transparent 0 46px, rgba(166, 212, 234, 0.20) 46px 47.5px, transparent 47.5px 94px);
+  -webkit-mask-image: radial-gradient(circle at 92% -6%, #000 0, rgba(0, 0, 0, 0.7) 40%, transparent 78%);
+  mask-image: radial-gradient(circle at 92% -6%, #000 0, rgba(0, 0, 0, 0.7) 40%, transparent 78%);
+}
+:root[data-theme='light'] .space-bg .rings {
+  background: repeating-radial-gradient(circle at 92% -6%, transparent 0 46px, rgba(20, 24, 29, 0.16) 46px 47.5px, transparent 47.5px 94px);
+}
+/* ---- a near-empty sky ----
+
    A dozen still stars behind the top of the page, fading out within the first screen; no
    glow, no core, no twinkle. The light theme keeps the same few stars in grey. */
 .space-bg {
