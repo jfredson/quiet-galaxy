@@ -23,7 +23,4 @@ factors = ["habitable-planets", "planets"]
 explanations = ["rare-earth"]
 moved_range = false
 
-verify = [
-  "The exact occurrence figures (0.37 and 0.60 for the conservative zone, 0.58 and 0.88 for the optimistic one) and the nearest-planet distance; from memory of the abstract, which should be checked before session A leans on them.",
-]
-notes = "Written 2026-10-16. The paper gives its results as a range between two statistical methods rather than a single number, which is why the finding quotes two figures for each zone."
+notes = "Written 2026-10-16. Checked 2026-10-16 against the paper: the four occurrence figures and the 0.16 to 0.85 range are as quoted, the nearest such planet is about 6 parsecs (about 20 light years), and the sample is G and K dwarfs rather than strictly Sun-like stars. The paper gives its results as a range between two statistical methods rather than a single number, which is why the finding quotes two figures for each zone."

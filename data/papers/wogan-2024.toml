@@ -21,7 +21,4 @@ factors = ["habitable-planets", "life"]
 explanations = ["rare-earth", "rare-life"]
 moved_range = false
 
-verify = [
-  "The month of publication and the volume and article numbers of both this paper and the Shorttle paper; from memory.",
-]
 notes = "Written 2026-10-16."

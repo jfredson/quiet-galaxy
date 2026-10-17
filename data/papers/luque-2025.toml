@@ -4,15 +4,15 @@
 id = "luque-2025"
 date = "2025-05"
 added_on = 2026-10-16
-authors = ["Rafael Luque", "Caroline Piaulet-Ghorayeb", "Matthew Radica", "and others"]
-title = "Insufficient evidence for DMS and DMDS in the atmosphere of K2-18 b"
-venue = "arXiv:2505.13407 (2025)"
+authors = ["Rafael Luque", "Caroline Piaulet-Ghorayeb", "Michael Radica", "and 5 others"]
+title = "Insufficient evidence for DMS and DMDS in the atmosphere of K2-18 b. From a joint analysis of JWST NIRISS, NIRSpec, and MIRI observations"
+venue = "Astronomy & Astrophysics 700, A284 (2025); arXiv:2505.13407"
 link = "https://arxiv.org/abs/2505.13407"
 finding = """
-The fullest of the reanalyses, combining all of Webb's observations of K2-18 b from both
-instruments and fitting them together. With the whole data set, the authors find no
+The fullest of the reanalyses, combining all of Webb's observations of K2-18 b from all
+three instruments and fitting them together. With the whole data set, the authors find no
 significant evidence for dimethyl sulfide or dimethyl disulfide; the feature in the 2025
-paper can be fitted as well or better by other gases, and the overall evidence for an
+paper can be fitted equally well by other gases, and the overall evidence for an
 ocean world remains weak. Their conclusion is not that the planet is lifeless but that
 the data cannot support the claim made for them. After this paper the working view
 among exoplanet astronomers was that K2-18 b has shown methane, probably carbon dioxide,
@@ -23,7 +23,4 @@ factors = ["life", "habitable-planets"]
 explanations = ["rare-life"]
 moved_range = false
 
-verify = [
-  "The author list beyond the first three and whether the paper has since been published in a journal; from memory of the preprint. A further reanalysis by Luis Welbanks and colleagues (arXiv, 2025-04) reached the same conclusion and could be logged separately.",
-]
-notes = "Written 2026-10-16."
+notes = "Written 2026-10-16. Corrected 2026-10-16 against the arXiv page and Crossref: eight authors (Rafael Luque, Caroline Piaulet-Ghorayeb, Michael Radica, Q. Xue, M. Zhang, Jacob Bean, D. Samra, M. E. Steinrueck), the analysis joins three instruments (NIRISS, NIRSpec and MIRI), the paper was published in Astronomy & Astrophysics 700, A284 (2025), and other gases fit equally well, not better. The Welbanks and colleagues paper (arXiv:2504.21788, 2025-04-30, 'Challenges in the detection of gases in exoplanet atmospheres') exists, but it is a methods paper that uses K2-18 b as a worked case, not a plain reanalysis; it could be logged separately."

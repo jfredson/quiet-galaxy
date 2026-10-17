@@ -16,15 +16,13 @@ billion years in. The authors' explanation is that some civilisations expand ('g
 ones), fill space at a good fraction of light speed, and make their volume uninhabitable
 for newcomers, so anyone who appears at all has to appear before the grabbers arrive. A
 three-parameter model fit to our own date gives their picture of the universe: grabby
-civilisations arise roughly once per million galaxies, are now expanding, and will
-typically become visible to us in something like 200 million to 2 billion years, at
-which point they will fill a large part of the sky. The title's point is that if this is
+civilisations already control about 40 to 50 percent of the universe's volume, each will
+eventually control roughly 100,000 to 30 million galaxies, and our descendants could meet
+them in something like 200 million to 2 billion years; the volumes they control would
+look very large in our sky. The title's point is that if this is
 right, quiet civilisations that never expand cannot be much more common than loud ones."""
 factors = ["intelligence", "lifetime", "detectable"]
 explanations = ["we-are-early", "expansion-stalls", "not-looked-long-enough"]
 moved_range = false
 
-verify = [
-  "The 'once per million galaxies' rate and the 200 million to 2 billion year window before a grabby civilisation becomes visible; quoted from memory of the paper and the authors' summaries.",
-]
-notes = "Written 2026-10-16."
+notes = "Written 2026-10-16. Corrected 2026-10-16 against the abstract (arXiv:2102.01522): the paper does not give a rate of one grabby civilisation per million galaxies (its 'one-in-a-million-galaxies' remark is about Earth being a rare Earth); the 200 million to 2 billion years is the time until we could meet them, not until they become visible."

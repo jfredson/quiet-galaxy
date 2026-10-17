@@ -22,7 +22,4 @@ factors = ["habitable-planets"]
 explanations = ["rare-earth"]
 moved_range = false
 
-verify = [
-  "The day-side temperature of about 500 kelvin (the paper gives 503 ± 26 K); from memory.",
-]
 notes = "Written 2026-10-16. TRAPPIST-1 b is too close to its star to be habitable in any case; it was measured first because it is the easiest, and as a test of whether rocky planets around red dwarfs keep atmospheres at all."

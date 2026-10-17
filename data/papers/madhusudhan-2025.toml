@@ -22,7 +22,4 @@ factors = ["life"]
 explanations = ["rare-life"]
 moved_range = false
 
-verify = [
-  "The confidence level of about three standard deviations and the volume and article number; from memory of the paper and its press release.",
-]
 notes = "Written 2026-10-16."

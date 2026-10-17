@@ -19,9 +19,6 @@ what_would_move_this = "A new count of rocky planets in the habitable zone per s
 
 verify = [
   "Drake's 1961 range of 1 to 5 planets per star is quoted from the Wikipedia article on the Drake equation, which cites Drake and Sobel 1992; the same article notes that Glade and colleagues' 2012 table of the 1961 values differs from the book.",
-  "Carl Sagan's value of two planets per star in Cosmos (1980), chapter 12, is from memory; check it against the book.",
-  "Petigura, Howard and Marcy's 22 plus or minus 8 percent is from memory of the paper's abstract, including its definition of Earth-size (one to two Earth radii) and of the habitable zone (a quarter to four times the light Earth receives); check both.",
-  "Ward and Brownlee's '1% to 0.001% of all stars' is quoted from the Wikipedia article on the Drake equation, which cites Rare Earth page 270; check the book.",
 ]
 
 notes = """
@@ -30,7 +27,7 @@ stars sit in a 'galactic habitable zone' with enough heavy elements and few enou
 supernovae for complex life; that is a multiplier on this factor rather than an estimate of
 it, and the surveys above count planets without it. The Rare Earth argument (Ward and Brownlee
 2000, ward-2000) is written up as an explanation in its own right; its number is recorded here
-because it is the published pessimistic extreme. Written 2026-10-16."""
+because it is the published pessimistic extreme. Checked 2026-10-16: the 1% to 0.001% is Ward and Brownlee's reading of the ordinary equation, before their further extras (pages 269 to 270; the extras come on page 271), so the range's reason below, which describes the one-in-a-hundred-thousand end as resting on the extras, was written before this was checked and should be revisited at the outside review; the range itself is unchanged. Drake's 1961 range of 1 to 5 could not be checked against the book tonight: other secondary accounts give a single 2 (Glade and colleagues 2012, Table 1; Scoles and Heatherly 2011) or 'approximately one' (SETI Institute). Written 2026-10-16."""
 
 [[estimate]]
 who = "Frank Drake and the Green Bank meeting"
@@ -52,8 +49,8 @@ who = "Peter Ward and Donald Brownlee"
 when = "2000"
 low = 0.00001
 high = 0.01
-source = "Ward and Brownlee, Rare Earth: Why Complex Life Is Uncommon in the Universe (Copernicus, 2000), page 270 (ward-2000)"
-method = "Argued that Earth-like habitats need a long list of extras beyond the right orbit (a large moon, plate tectonics, a giant planet in the right place, a quiet galactic neighbourhood) and that only between 1% and 0.001% of all stars might have planets with habitats similar to Earth's; taken here as planets per star, since nearly every star has planets."
+source = "Ward and Brownlee, Rare Earth: Why Complex Life Is Uncommon in the Universe (Copernicus, 2000), pages 269 to 270, chapter 'Assessing the Odds' (ward-2000)"
+method = "Said that, after allowing for how common planets are and for the location and lifetime of the habitable zone, the ordinary Drake equation suggests that only between 1% and 0.001% of all stars might have planets with habitats similar to Earth's, and that even these numbers are probably too high. They also ruled out red dwarfs as hosts. Their further extras (a large moon, plate tectonics, few mass extinctions) come after this passage and are not counted in the figure. Taken here as planets per star, since nearly every star has planets."
 
 [[estimate]]
 who = "Erik Petigura, Andrew Howard and Geoffrey Marcy"
@@ -62,7 +59,7 @@ low = 0.14
 high = 0.30
 source = "Petigura, Howard and Marcy, 'Prevalence of Earth-size planets orbiting Sun-like stars', Proceedings of the National Academy of Sciences 110, 19273–19278 (2013)"
 link = "https://arxiv.org/abs/1311.6806"
-method = "Kepler's count of planets crossing 42,000 Sun-like stars, corrected for the planets it would have missed by injecting fake ones into the data: 22 plus or minus 8 percent of Sun-like stars have a planet of one to two Earth radii receiving between a quarter and four times the light Earth gets."
+method = "Kepler's count of planets crossing 42,000 Sun-like stars, corrected for the planets it would have missed by injecting fake ones into the data: 22 plus or minus 8 percent of Sun-like stars have a planet of one to two Earth radii receiving between a quarter and four times the light Earth gets (the paper's abstract gives the directly measured 11 plus or minus 4 percent for one to four times the light Earth gets; the 22 percent extends that down to a quarter, assuming equal numbers of planets in each step of the logarithm of the light received)."
 
 [[estimate]]
 who = "Courtney Dressing and David Charbonneau"
@@ -109,3 +106,11 @@ atmosphere results of 2023 to 2025 show rocky planets around red dwarfs can lose
 It stops at 0.01 rather than following Ward and Brownlee down to one in a hundred thousand
 because their extras are an argument, not a count, and the explanation page carries it. Evenly
 spread across powers of ten, as in the 2018 paper."""
+
+[[revision]]
+date = 2026-10-16
+field = "estimate (Peter Ward and Donald Brownlee, 2000).method"
+old = "Argued that Earth-like habitats need a long list of extras beyond the right orbit (a large moon, plate tectonics, a giant planet in the right place, a quiet galactic neighbourhood) and that only between 1% and 0.001% of all stars might have planets with habitats similar to Earth's"
+new = "Said that, after allowing for how common planets are and for the location and lifetime of the habitable zone, the ordinary Drake equation suggests only 1% to 0.001% of stars might have such planets; their further extras come later and are not in the figure. Source page corrected from 270 to 269-270. The estimate's numbers and the range are unchanged."
+why = "Checked against Rare Earth (Copernicus, 2000), pages 269 to 271, on 2026-10-16: the figure is their reading of the ordinary equation, not of the extras."
+publication = "ward-2000"

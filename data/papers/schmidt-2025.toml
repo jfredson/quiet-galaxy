@@ -4,14 +4,14 @@
 id = "schmidt-2025"
 date = "2025-01-30"
 added_on = 2026-10-16
-authors = ["Stephen P. Schmidt", "Kevin B. Stevenson", "and others"]
-title = "A Comprehensive Reanalysis of K2-18 b's JWST NIRISS and NIRSpec Transmission Spectrum"
-venue = "arXiv:2501.18477 (2025); later published in The Astronomical Journal"
+authors = ["Stephen P. Schmidt", "Ryan J. MacDonald", "Shang-Min Tsai", "and 13 others"]
+title = "A Comprehensive Reanalysis of K2-18 b's JWST NIRISS+NIRSpec Transmission Spectrum"
+venue = "The Astronomical Journal 170, 298 (2025); arXiv:2501.18477"
 link = "https://arxiv.org/abs/2501.18477"
 finding = """
 An independent group reprocessed the 2023 Webb data on K2-18 b from the raw frames up,
 with several different pipelines, before the 2025 claim appeared. They confirm methane
-and find the evidence for carbon dioxide weaker than first reported, and they find no
+and find no statistically significant evidence for carbon dioxide, and no
 statistically significant sign of dimethyl sulfide: the hint in the original paper
 depends on choices made in reducing the data and does not survive other reasonable
 choices. The paper is the first of the reanalyses and set the pattern for the ones that
@@ -21,7 +21,4 @@ factors = ["life", "habitable-planets"]
 explanations = ["rare-life"]
 moved_range = false
 
-verify = [
-  "The paper's exact title, its author list beyond the first two, and where and when it was finally published; from memory of the preprint.",
-]
-notes = "Written 2026-10-16."
+notes = "Written 2026-10-16. Corrected 2026-10-16 against the paper and Crossref: Kevin Stevenson is not an author (the second author is Ryan MacDonald; sixteen authors in all); the title reads NIRISS+NIRSpec; it was published in The Astronomical Journal 170(6), 298, on 2025-11-05; and the final version finds no significant evidence for carbon dioxide, not weaker evidence."

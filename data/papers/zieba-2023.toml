@@ -21,7 +21,4 @@ factors = ["habitable-planets"]
 explanations = ["rare-earth"]
 moved_range = false
 
-verify = [
-  "The day-side temperature of about 380 kelvin (the paper gives 380 ± 31 K) and the author list beyond the first two; from memory.",
-]
 notes = "Written 2026-10-16."

@@ -10,7 +10,7 @@ explanations = ["rare-earth", "aestivation", "berserkers", "zoo-hypothesis", "in
 factors = ["detectable", "lifetime"]
 link = "https://www.youtube.com/@isaacarthurSFIA"
 how = """
-A long-running set of half-hour episodes, each taking one proposed explanation for the
+A long-running set of episodes, usually half an hour or more, each taking one proposed explanation for the
 silence and testing it against what we know about physics, engineering and how living
 things spread. Arthur's standing argument is that most 'they are hiding' and 'they all
 died' explanations fail the same test: they need every civilisation, without exception, to
@@ -19,9 +19,6 @@ He is therefore most sympathetic to the explanations that make us rare or early.
 series is the most thorough plain-spoken survey of the catalogue anywhere, and the place
 to go when a single explanation needs an hour rather than a paragraph. The year given is
 when the series began; it has continued since."""
-worth_the_time = "Yes, as a reference rather than a binge: pick the episode for the explanation you are weighing, and start with the 'Fermi Paradox Compendium' episode."
+worth_the_time = "Yes, as a reference rather than a binge: pick the episode for the explanation you are weighing, and start with the 'Fermi Paradox Compendium' episode (about 71 minutes)."
 
-verify = [
-  "That the series began in 2016 and that an episode titled 'Fermi Paradox Compendium' exists under that name; check against the channel's playlist.",
-]
-notes = "Written 2026-10-16."
+notes = "Written 2026-10-16. Checked 2026-10-16 against the channel: 'The Fermi Paradox Compendium' exists under that name (published 2016-04-29, 71 minutes) and is the earliest Fermi video found, so 2016 is supported but an earlier one cannot be ruled out; a later, longer 'Compendium of Solutions & Terms' also exists."

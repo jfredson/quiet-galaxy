@@ -22,7 +22,4 @@ factors = ["detectable"]
 explanations = ["aestivation", "they-became-machines", "inward-turn"]
 moved_range = false
 
-verify = [
-  "The factor of 10^30 for the gain from waiting; quoted from memory of the abstract.",
-]
 notes = "Charles Bennett, Robin Hanson and Jess Riedel replied in 'Comment on the aestivation hypothesis' (Foundations of Physics 49, 820–829, 2019), arguing that the thermodynamic saving is smaller than claimed because the cold-universe computation could be done later anyway while still using resources now."

@@ -12,8 +12,8 @@ finding = """
 Earth's life started quickly, within a few hundred million years of the planet becoming
 habitable, and intelligence took almost four billion years more. Kipping asks what those
 two dates say about how likely each step is on an Earth-like planet, taking care to
-assume as little as possible beforehand. He finds odds of at least 3 to 1 that life
-starts quickly when conditions allow, and weaker odds of about 3 to 2 that intelligence
+assume as little as possible beforehand. He finds odds of at least about 2.8 to 1 that life
+starts quickly when conditions allow (rising to 8.7 to 1 if a contested chemical trace in ancient mineral grains counts), and weaker odds of about 3 to 2 that intelligence
 is rare even when life is common. In plain terms: the record leans toward life being
 easy and minds being hard, but neither lean is strong, and the paper is explicit that a
 single example cannot settle it."""
@@ -21,7 +21,4 @@ factors = ["life", "intelligence"]
 explanations = ["rare-intelligence", "rare-life", "great-filter-behind-us"]
 moved_range = false
 
-verify = [
-  "The odds of 3 to 1 for rapid life and 3 to 2 for rare intelligence; from memory of the abstract.",
-]
-notes = "Spiegel and Turner reached a more cautious conclusion with the same kind of analysis in 2012 (in this log as spiegel-2012); the difference is mostly in how much the two papers assume before looking at the data."
+notes = "Corrected 2026-10-16 against the abstract: the odds for rapid life are at least 2.8 to 1 (8.7 to 1 with the disputed zircon evidence), not 3 to 1; the 3 to 2 for rare intelligence is as the abstract says. Spiegel and Turner reached a more cautious conclusion with the same kind of analysis in 2012 (in this log as spiegel-2012); the difference is mostly in how much the two papers assume before looking at the data."

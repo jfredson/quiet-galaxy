@@ -10,7 +10,7 @@ title = "The Drake Equation, as written for the Green Bank conference on extrate
 venue = "Order of Dolphin meeting, National Radio Astronomy Observatory, Green Bank, West Virginia, 1961-11-01 to 1961-11-03; first published account in J. P. T. Pearman, 'Extraterrestrial Intelligent Life and Interstellar Communication: An Informal Discussion', in Interstellar Communication, ed. A. G. W. Cameron (Benjamin, 1963), 287–293"
 link = "https://www.seti.org/drake-equation-index"
 finding = """
-Drake wrote the equation on a blackboard as the agenda for a three-day meeting of eleven
+Drake wrote the equation on a blackboard as the agenda for a three-day meeting of about ten
 people: the number of detectable civilisations in the galaxy equals the rate at which
 suitable stars form, times the share with planets, times the habitable planets per such
 star, times the share on which life starts, times the share where it becomes intelligent,
@@ -25,7 +25,7 @@ explanations = []
 moved_range = false
 
 verify = [
-  "The meeting's values for each factor are quoted from secondary accounts (Drake and Sobel, Is Anyone Out There?, 1992; Drake, Vakoch and Dowd, The Drake Equation, 2015); check against those books, and in particular whether the star-formation rate was given as 1 per year or as 1 to 10.",
-  "The exact dates of the meeting (1961-11-01 to 03) and the Pearman 1963 chapter's page numbers.",
+  "The meeting's values for each factor are quoted from secondary accounts (Drake and Sobel, Is Anyone Out There?, 1992; Drake, Vakoch and Dowd, The Drake Equation, 2015); check against those books, and in particular whether the star-formation rate was given as 1 per year or as 1 to 10. Checked 2026-10-16 and still open: neither book could be reached tonight. The Wikipedia article (secondary, citing Drake and Sobel pages 55 to 62) gives 1 per year; the Cambridge abstract of the star-formation chapter of the 2015 volume says 'The estimate given in 1961 was ten stars per year'; the other six values match the Wikipedia list. Arithmetic favours 10 (with 1, the product of the other factors times the lifetime is not roughly equal to the lifetime).",
+  "The Pearman 1963 chapter's page numbers (287 to 293). Checked 2026-10-16 and still open: the start page 287 appears in a citation list, the end page was not confirmed (ADS and WorldCat refused automated access). The meeting's dates are borne out by Drake's own account (Science News interview: it 'started on November 1' and ran three days); the Green Bank plaque gives the National Academy of Sciences conference as 1961-10-30 to 1961-11-03, which is the wider event.",
 ]
-notes = "Founding entry. There is no 1961 paper by Drake presenting the equation; the earliest printed version is Pearman's 1963 account, and Drake's own first published form is in his 1965 chapter 'The Radio Search for Intelligent Extraterrestrial Life' in Current Aspects of Exobiology. The link is the SETI Institute's page on the equation."
+notes = "Corrected 2026-10-16: the headcount in the finding was eleven; the author field names ten and the secondary accounts say about ten (Drake himself says he invited twelve). Founding entry. There is no 1961 paper by Drake presenting the equation; the earliest printed version is Pearman's 1963 account, and Drake's own first published form is in his 1965 chapter 'The Radio Search for Intelligent Extraterrestrial Life' in Current Aspects of Exobiology. The link is the SETI Institute's page on the equation."

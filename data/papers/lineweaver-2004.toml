@@ -23,7 +23,4 @@ factors = ["star-formation", "habitable-planets"]
 explanations = ["rare-earth", "natural-catastrophes", "we-are-early"]
 moved_range = false
 
-verify = [
-  "That the paper puts the ring at 7 to 9 kiloparsecs and three quarters of its stars older than the Sun by an average of a billion years; the numbers are from memory of the abstract.",
-]
-notes = "The idea of a galactic habitable zone was introduced by Gonzalez, Brownlee and Ward in Icarus 152, 185–200 (2001); this paper is the quantitative version."
+notes = "Checked 2026-10-16 against the abstract and text: the ring is between 7 and 9 kiloparsecs, 75 percent of its stars are older than the Sun, by about a billion years on average. The idea of a galactic habitable zone was introduced by Gonzalez, Brownlee and Ward in Icarus 152, 185–200 (2001); this paper is the quantitative version."
