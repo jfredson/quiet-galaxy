@@ -1,6 +1,6 @@
 # The website
 
-The public face of the records: thequietgalaxy.com once the domain is attached; until then the site lives at its preview address, https://quietgalaxy.jfredson.workers.dev (first deployed 2026-10-16). Built the same way as The Belt Equation's site, on the Sentient Horizons design standard (`sentient-horizons/design/`).
+The public face of the records: https://thequietgalaxy.com (domain registered by John and attached 2026-10-16), with a preview address at https://quietgalaxy.jfredson.workers.dev (first deployed 2026-10-16). Built the same way as The Belt Equation's site, on the Sentient Horizons design standard (`sentient-horizons/design/`).
 
 ## How it fits together
 
@@ -30,6 +30,6 @@ Run from `site/`. Needs Node (the Mac has 26) and Python 3.11 or later for the e
 
 The ordinary way to publish is not `npm run deploy` but `python3 scripts/publish.py --push` from the repository root: it validates, exports and builds everything, shows what changed, and pushes main, and the GitHub Action (`.github/workflows/deploy.yml`) builds and deploys from that push. That needs two repository secrets, `CLOUDFLARE_ACCOUNT_ID` (set 2026-10-16) and `CLOUDFLARE_API_TOKEN` (a token with Workers Scripts: Edit and, once the zone exists, Workers Routes: Edit; John creates it in the Cloudflare dashboard, as for The Belt Equation on 2026-09-25). `npm run deploy` stays for a deploy from this Mac by hand, which needs a Cloudflare login here (`npx wrangler login`). The Worker is named `quietgalaxy`.
 
-## Attaching the domain
+## The domain and the forwarding address
 
-Once thequietgalaxy.com is registered on the Cloudflare account: add the two custom-domain routes to `wrangler.jsonc` (`thequietgalaxy.com` and `www.thequietgalaxy.com`, `"custom_domain": true`, as in The Belt Equation's file), deploy, and set whereareallthealiens.com to forward to it with a redirect rule on its own zone.
+thequietgalaxy.com and www.thequietgalaxy.com are custom domains on the Worker (`routes` in `wrangler.jsonc`, attached by `wrangler deploy` from this Mac on 2026-10-16). `worker/redirect.js` runs in front of the static files (`run_worker_first`): a request that arrives at any address other than thequietgalaxy.com, apart from the workers.dev preview, is sent to the same page at thequietgalaxy.com with a permanent redirect, and everything else is served from `dist/`. That is how www forwards, and how whereareallthealiens.com will forward once John has registered it: add `{ "pattern": "whereareallthealiens.com", "custom_domain": true }` (and www) to `routes` and deploy; the worker already does the rest.

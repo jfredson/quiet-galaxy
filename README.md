@@ -2,7 +2,7 @@
 
 Where is everybody? The galaxy is old enough and big enough that, on most ways of counting, someone else should have shown up by now. Nobody has. The puzzle has a name, the Fermi Paradox, after the physicist Enrico Fermi, who asked the question over lunch in 1950.
 
-The Quiet Galaxy (thequietgalaxy.com, once it goes live; whereareallthealiens.com will forward to it) is a public explainer and tracker for that question. It does for the empty sky what The Belt Equation does for a settled solar system: it takes a question people file under science fiction and breaks it into factors anyone can argue about, with a number at the top that is computed from the pieces and never chosen by hand. It also keeps a catalogue of every serious explanation for the silence, each on its own page at a stable address, so that any of them can be linked to from a conversation online.
+The Quiet Galaxy (thequietgalaxy.com; whereareallthealiens.com forwards to it) is a public explainer and tracker for that question. It does for the empty sky what The Belt Equation does for a settled solar system: it takes a question people file under science fiction and breaks it into factors anyone can argue about, with a number at the top that is computed from the pieces and never chosen by hand. It also keeps a catalogue of every serious explanation for the silence, each on its own page at a stable address, so that any of them can be linked to from a conversation online.
 
 ## The equation
 
@@ -50,12 +50,12 @@ The links between the four are what make the site useful: a factor page lists th
 - `docs/` holds the plans and definitions. `docs/2026-10-16-kickoff.md` is the original outline, kept as the record of where the project started. `docs/record-schema.md` is the source of truth for the four record types.
 - `data/` holds the records, in the four folders above, plus `data/retired.toml`, the list of ids that once existed and were retired or replaced (an explanation id is a public address and is never renamed). Seeded with one worked example of each type; the full set lands over the weekend of 2026-10-18.
 - `scripts/` holds the code: `compute.py validate` checks every record against the schema and refuses to continue on any failure; `compute.py run` will compute the headline numbers once the seven factors are seeded; `export.py` writes the site's data; `publish.py` validates, builds and pushes in one command. `scripts/test_compute.py` checks the validator. Python standard library only.
-- `site/` holds the website: an Astro static site on the Sentient Horizons design standard, reading the exported records at build time. A holding version is live at quietgalaxy.jfredson.workers.dev; the domain is attached once registered. See `site/README.md`.
+- `site/` holds the website: an Astro static site on the Sentient Horizons design standard, reading the exported records at build time. Live at thequietgalaxy.com, with a preview address at quietgalaxy.jfredson.workers.dev. See `site/README.md`.
 - `CHANGELOG.md` records every change to a range, a record or the method, with absolute dates.
 
 ## Status
 
-Created 2026-10-16; the name was ruled by John the same day. The repository is public on GitHub, the record schema is ruled, the validator exists, and the factors, explanations, library and publications log are each seeded with one worked example. A holding version of the site is live at its preview address. The first public version is targeted for the weekend of 2026-10-18 and 2026-10-19.
+Created 2026-10-16; the name was ruled by John the same day. The repository is public on GitHub, the record schema is ruled, the validator exists, and the factors, explanations, library and publications log are each seeded with one worked example. A holding version of the site is live at thequietgalaxy.com. The first public version is targeted for the weekend of 2026-10-18 and 2026-10-19.
 
 ## Licences
 

@@ -1,12 +1,23 @@
 {
   // Cloudflare Workers config: a static-assets deployment, the same pattern as
-  // beltequation.com, sentient-horizons.com and hearthandvoid.com. The custom domains
-  // (thequietgalaxy.com and www) are added to "routes" once the domain is registered and
-  // its zone is on this account; until then the site lives at its workers.dev address.
+  // beltequation.com, sentient-horizons.com and hearthandvoid.com. thequietgalaxy.com and
+  // www were attached as custom domains on 2026-10-16, the day John registered the domain;
+  // the routes below keep the config in step with what is deployed so a deploy from a fresh
+  // machine does not drop them. whereareallthealiens.com is added the same way once its
+  // zone is on the account; worker/redirect.js already forwards it.
   "name": "quietgalaxy",
+  "main": "worker/redirect.js",
   "compatibility_date": "2026-10-01",
+  // Keep the workers.dev preview address alongside the custom domains, as The Belt Equation does.
+  "workers_dev": true,
+  "routes": [
+    { "pattern": "thequietgalaxy.com", "custom_domain": true },
+    { "pattern": "www.thequietgalaxy.com", "custom_domain": true }
+  ],
   "assets": {
     "directory": "./dist",
-    "not_found_handling": "404-page"
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": true
   }
 }
