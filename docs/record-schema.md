@@ -265,7 +265,7 @@ The publications log is append-only: a record is added when a paper is read and 
 9. A publication with `moved_range = true` is named by a revision on some factor.
 10. No id is renamed. The file name must equal the id; and a data file that was committed to the repository before and is now gone must have an entry in `data/retired.toml` (the script reads the repository's history for this, and skips the check with a note when the data folder is not in a git repository). A current record may not reuse a retired id.
 
-`python3 scripts/compute.py run` validates first, then refuses with a plain message until all seven factor records exist. The headline computation is Saturday session A's work.
+`python3 scripts/compute.py run` validates first, refuses with a plain message until all seven factor records exist, and otherwise plays the equation out and writes `data/headline.json`. How it does that, and the parameters proposed for it on 2026-10-16, are in `docs/method.md`.
 
 ## Decisions (2026-10-16)
 
@@ -286,6 +286,7 @@ Proposed by Claude with a confidence level and the strongest alternative for eac
 
 ## Known simplifications
 
-- **The headline is not computed yet.** `run` is a stub until Saturday session A seeds the seven factors. The kickoff's method (a random draw from each range, many thousands of times; the median, the chance of N below 1, the chance of N below one per observable universe, and the optimist-to-pessimist width) is settled; its parameters (how many runs, whether factors are drawn independently as the 2018 paper's main text does) are for that session to propose.
+- **The headline's parameters are proposed, not ruled.** `run` computes the headline since 2026-10-16 (Saturday session A). The kickoff's method (a random draw from each range, many thousands of times; the median, the chance of N below 1, the chance of N below one per observable universe, and the optimist-to-pessimist width) is settled; the parameters (200,000 runs, a fixed seed, independent draws, ten to the eleven galaxies for the observable universe, the result committed as `data/headline.json`) are proposed in `docs/method.md` with confidence and alternatives.
+- **The chance life starts has a stand-in shape.** The 2018 paper models it as a log-normal rate (half the weight near 1, half spread across fifty powers of ten); the layout allows only `log-uniform` and `uniform`, so the `life` record uses log-uniform from one in ten to the 22 to 1. `docs/method.md` proposal 7 (2026-10-16, not ruled) would add a third shape, `log-normal-rate`, with fields `median` and `spread_orders` in place of `low` and `high`, and shows how much the headline moves on the choice. The engine in `scripts/compute.py` already draws from that shape so the tests can reproduce the paper; the validator does not allow it in a record.
 - **Estimates are not weighted.** The range is set by hand from the estimates with a written reason, not computed from them. That is deliberate: the reason is the arguable part.
 - **A library entry has one `how` paragraph** even when it illustrates several explanations. If an entry needs a paragraph per explanation, split it or revisit.

@@ -1,6 +1,7 @@
 # Factor record: fp, the share of stars that have planets. Layout in docs/record-schema.md.
-# Written 2026-10-16 as the schema's worked example; Saturday session A revisits every
-# number here with the full published record.
+# Written 2026-10-16 as the schema's worked example; rewritten with the full published record
+# the same evening (Saturday session A, run early at John's ruling). Every range is a first
+# pass until the outside review of the seven ranges has run.
 
 id = "planets"
 symbol = "fp"
@@ -11,21 +12,25 @@ description = """
 Of all the stars in the galaxy, what fraction have at least one planet. In 1961 this was
 a guess; since the first exoplanet discoveries in the 1990s and the Kepler mission of 2009
 to 2018 it has become one of the two best-measured factors in the equation. The current
-reading is that planets are the rule, not the exception."""
+reading is that planets are the rule, not the exception: every method that counts them,
+whether by the dip in a star's light as a planet crosses it, by the wobble of the star, or by
+the bending of light from a background star, finds planets around most or all stars."""
 what_would_move_this = "A survey that counts planets around a large, well-understood sample of stars, including the dim red dwarfs that make up most of the galaxy, and reports the share of stars with none."
 
 verify = [
-  "Drake's 1961 range of 0.2 to 0.5 for fp is quoted from secondary accounts of the Green Bank meeting; check it against the 2015 Drake, Vakoch and Dowd book.",
+  "Drake's 1961 range of 0.2 to 0.5 for fp is quoted from the Wikipedia article on the Drake equation, which cites Drake and Sobel's 1992 book, pages 55 to 62; check it against the book or the 2015 Drake, Vakoch and Dowd volume.",
+  "Carl Sagan's value of one third in Cosmos (1980), chapter 12, is from memory; check it against the book.",
+  "Mayor and colleagues' 2011 finding that more than half of Sun-like stars host at least one planet with a period under 100 days is from memory of the HARPS survey paper (arXiv:1109.2497); check the figure and the period limit.",
 ]
 
-notes = "Saturday session C writes the publication record for the 2012 microlensing paper; when it exists, the estimate above gets a 'publication' link to it. Written 2026-10-16."
+notes = "Saturday session C writes the publication records for the 2012 microlensing paper and the others cited here; when they exist, each estimate gets a 'publication' link to its record. Written 2026-10-16."
 
 [[estimate]]
 who = "Frank Drake and the Green Bank meeting"
 when = "1961"
 low = 0.2
 high = 0.5
-source = "Green Bank meeting of November 1961, as recorded in Drake, Vakoch and Dowd, The Drake Equation: Estimating the Prevalence of Extraterrestrial Life through the Ages (Cambridge University Press, 2015)"
+source = "Green Bank meeting of November 1961, as recorded in Drake and Sobel, Is Anyone Out There? (Delacorte, 1992), pages 55 to 62, and in Drake, Vakoch and Dowd, The Drake Equation: Estimating the Prevalence of Extraterrestrial Life through the Ages (Cambridge University Press, 2015); the meeting's record is the founding entry of the publications log (drake-1961)"
 method = "Educated guess before any planet outside the solar system had been found."
 
 [[estimate]]
@@ -37,16 +42,61 @@ source = "Cassan et al., 'One or more bound planets per Milky Way star from micr
 link = "https://arxiv.org/abs/1202.0903"
 method = "Gravitational microlensing over six years of survey data; 62% of stars found to host a planet of a few Earth masses at 0.5 to 10 times the Earth-Sun distance, and the planets per star add to more than one, so the share of stars with any planet lies between the two."
 
-[range]
+[[estimate]]
+who = "Carl Sagan"
+when = "1980"
+value = 0.33
+source = "Sagan, Cosmos (Random House, 1980), chapter 12, 'Encyclopaedia Galactica'"
+method = "A round guess, one third, in a worked example of the equation written for a general audience before any exoplanet was known."
+
+[[estimate]]
+who = "Michel Mayor and colleagues"
+when = "2011-09"
+low = 0.5
+high = 1.0
+source = "Mayor et al., 'The HARPS search for southern extra-solar planets XXXIV. Occurrence, mass distribution and orbital properties of super-Earths and Neptune-mass planets', arXiv:1109.2497 (2011)"
+link = "https://arxiv.org/abs/1109.2497"
+method = "Eight years of measuring the wobble of 376 Sun-like stars with the HARPS instrument; more than half were found to host at least one planet with an orbit shorter than 100 days, a lower limit since longer orbits and smaller planets were missed."
+
+[[estimate]]
+who = "Courtney Dressing and David Charbonneau"
+when = "2015-07"
+low = 0.9
+high = 1.0
+source = "Dressing and Charbonneau, 'The occurrence of potentially habitable planets orbiting M dwarfs estimated from the full Kepler dataset and an empirical measurement of the detection sensitivity', Astrophysical Journal 807, 45 (2015)"
+link = "https://arxiv.org/abs/1501.01623"
+method = "Kepler's four-year count of planets crossing red dwarf stars, corrected for the ones it would have missed: 2.5 plus or minus 0.2 planets of one to four Earth radii per red dwarf with orbits under 200 days. Red dwarfs are three quarters of all stars, and with that many planets per star almost every one has at least one; the lower figure here allows for planets bunching around some stars."
+
+[[estimate]]
+who = "Anders Sandberg, Eric Drexler and Toby Ord"
+when = "2018-06"
 low = 0.1
+high = 1.0
+source = "Sandberg, Drexler and Ord, 'Dissolving the Fermi Paradox', arXiv:1806.02404 (2018), Table 1 (sandberg-2018)"
+link = "https://arxiv.org/abs/1806.02404"
+method = "A span evenly spread across its powers of ten, chosen to cover the published argument; the paper notes that 'different methods are converging on fp ≈ 1'."
+
+[range]
+low = 0.5
 high = 1.0
 shape = "log-uniform"
 status = "first-pass"
 set_on = 2026-10-16
 sources = ["sandberg-2018"]
 why = """
-Starts from the range Sandberg, Drexler and Ord used in 2018 ("log-uniform from 0.1 to 1",
-with the note that "different methods are converging on fp ≈ 1"). The lower bound of 0.1
-is almost certainly too low given the 2012 microlensing result and the Kepler record, which
-widens the spread toward pessimism; it is kept as a first pass until the full record is
-read on 2026-10-18 and the outside review has run."""
+Started on 2026-10-16 from the range Sandberg, Drexler and Ord used in 2018 (0.1 to 1) and
+raised the same evening once the full record was read: no survey since 2011 finds fewer than
+half of stars with a planet. The microlensing count (Cassan 2012) puts the floor at 0.62 for
+the stars it covers; the wobble survey (Mayor 2011) finds more than half of Sun-like stars
+with a close planet before counting the distant ones; the Kepler red-dwarf count (Dressing and
+Charbonneau 2015) finds two and a half planets per star for the three quarters of stars that
+are red dwarfs. The floor is rounded down to 0.5 to leave room for the kinds of star no survey
+covers well. Evenly spread across its powers of ten for consistency with the other factors; the
+span is so narrow that the shape barely matters."""
+
+[[revision]]
+date = 2026-10-16
+field = "range.low"
+old = 0.1
+new = 0.5
+why = "The published record read in full the same day the worked example was written: no survey since 2011 finds fewer than half of stars with a planet (Cassan 2012, Mayor 2011, Dressing and Charbonneau 2015). The 2018 paper's floor of 0.1 covered an argument that the surveys have since closed."

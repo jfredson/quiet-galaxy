@@ -1,0 +1,111 @@
+# Factor record: ne, planets per star that could support life. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session A, run early at John's ruling). Every range is a first
+# pass until the outside review of the seven ranges has run.
+
+id = "habitable-planets"
+symbol = "ne"
+order = 3
+name = "Planets per star that could support life"
+unit = "planets per star"
+description = """
+For a star with planets, how many of them could support life: in practice, how many rocky
+planets of roughly Earth's size orbit where water could be liquid on the surface. The Kepler
+mission turned this from a guess into a measurement for Sun-like stars and for red dwarfs,
+with the answer coming out between a tenth and one such planet per star. What the surveys
+cannot count is whether such a planet also has the other things Earth has, such as a large
+moon, moving continents and a quiet neighbourhood, which is where the argument over this
+factor now lives."""
+what_would_move_this = "A new count of rocky planets in the habitable zone per star from Kepler, TESS, Gaia or PLATO data, or a measurement of how often such planets keep an atmosphere and liquid water (the TRAPPIST-1 and K2-18b results bear on this)."
+
+verify = [
+  "Drake's 1961 range of 1 to 5 planets per star is quoted from the Wikipedia article on the Drake equation, which cites Drake and Sobel 1992; the same article notes that Glade and colleagues' 2012 table of the 1961 values differs from the book.",
+  "Carl Sagan's value of two planets per star in Cosmos (1980), chapter 12, is from memory; check it against the book.",
+  "Petigura, Howard and Marcy's 22 plus or minus 8 percent is from memory of the paper's abstract, including its definition of Earth-size (one to two Earth radii) and of the habitable zone (a quarter to four times the light Earth receives); check both.",
+  "Ward and Brownlee's '1% to 0.001% of all stars' is quoted from the Wikipedia article on the Drake equation, which cites Rare Earth page 270; check the book.",
+]
+
+notes = """
+Lineweaver, Fenner and Gibson (Science, 2004) argued that only about a tenth of the galaxy's
+stars sit in a 'galactic habitable zone' with enough heavy elements and few enough nearby
+supernovae for complex life; that is a multiplier on this factor rather than an estimate of
+it, and the surveys above count planets without it. The Rare Earth argument (Ward and Brownlee
+2000, ward-2000) is written up as an explanation in its own right; its number is recorded here
+because it is the published pessimistic extreme. Written 2026-10-16."""
+
+[[estimate]]
+who = "Frank Drake and the Green Bank meeting"
+when = "1961"
+low = 1
+high = 5
+source = "Green Bank meeting of November 1961, as recorded in Drake and Sobel, Is Anyone Out There? (Delacorte, 1992), pages 55 to 62 (drake-1961)"
+method = "Educated guess from the solar system, where Venus, Earth and Mars all orbit near the zone where water can be liquid."
+
+[[estimate]]
+who = "Carl Sagan"
+when = "1980"
+value = 2
+source = "Sagan, Cosmos (Random House, 1980), chapter 12, 'Encyclopaedia Galactica'"
+method = "A round guess in a worked example of the equation for a general audience, before any exoplanet was known."
+
+[[estimate]]
+who = "Peter Ward and Donald Brownlee"
+when = "2000"
+low = 0.00001
+high = 0.01
+source = "Ward and Brownlee, Rare Earth: Why Complex Life Is Uncommon in the Universe (Copernicus, 2000), page 270 (ward-2000)"
+method = "Argued that Earth-like habitats need a long list of extras beyond the right orbit (a large moon, plate tectonics, a giant planet in the right place, a quiet galactic neighbourhood) and that only between 1% and 0.001% of all stars might have planets with habitats similar to Earth's; taken here as planets per star, since nearly every star has planets."
+
+[[estimate]]
+who = "Erik Petigura, Andrew Howard and Geoffrey Marcy"
+when = "2013-11"
+low = 0.14
+high = 0.30
+source = "Petigura, Howard and Marcy, 'Prevalence of Earth-size planets orbiting Sun-like stars', Proceedings of the National Academy of Sciences 110, 19273–19278 (2013)"
+link = "https://arxiv.org/abs/1311.6806"
+method = "Kepler's count of planets crossing 42,000 Sun-like stars, corrected for the planets it would have missed by injecting fake ones into the data: 22 plus or minus 8 percent of Sun-like stars have a planet of one to two Earth radii receiving between a quarter and four times the light Earth gets."
+
+[[estimate]]
+who = "Courtney Dressing and David Charbonneau"
+when = "2015-07"
+low = 0.09
+high = 0.33
+source = "Dressing and Charbonneau, 'The occurrence of potentially habitable planets orbiting M dwarfs estimated from the full Kepler dataset and an empirical measurement of the detection sensitivity', Astrophysical Journal 807, 45 (2015)"
+link = "https://arxiv.org/abs/1501.01623"
+method = "Kepler's count of planets crossing red dwarf stars, the most common kind, corrected for the ones it would have missed: 0.16 (between 0.09 and 0.33) Earth-size planets per red dwarf in the strictly defined habitable zone, plus another 0.12 planets somewhat larger than Earth; the wider habitable zone that allows for early Venus and early Mars gives 0.24 and 0.21."
+
+[[estimate]]
+who = "Steve Bryson and 81 colleagues (the Kepler team)"
+when = "2020-11"
+low = 0.16
+high = 1.5
+source = "Bryson et al., 'The occurrence of rocky habitable zone planets around solar-like stars from Kepler data', Astronomical Journal 161, 36 (2021); posted 2020-10-28 (bryson-2020)"
+link = "https://arxiv.org/abs/2010.14812"
+method = "The Kepler mission's final planet catalogue combined with Gaia's measurements of the stars, corrected for what the catalogue missed and for false detections: between 0.37 (0.16 to 0.85) and 0.60 (0.24 to 1.50) planets of half to one and a half Earth radii per Sun-like star in the strictly defined habitable zone, the two figures reflecting two ways of extrapolating to orbits Kepler could not see; the generous habitable zone gives 0.58 to 0.88. The nearest such planet is estimated to be about 20 light-years away."
+
+[[estimate]]
+who = "Anders Sandberg, Eric Drexler and Toby Ord"
+when = "2018-06"
+low = 0.1
+high = 1.0
+source = "Sandberg, Drexler and Ord, 'Dissolving the Fermi Paradox', arXiv:1806.02404 (2018), Table 1 (sandberg-2018)"
+link = "https://arxiv.org/abs/1806.02404"
+method = "A span evenly spread across its powers of ten, taking an Earth-like planet to mean a rocky planet in the habitable zone; the paper notes that the published argument runs from below one in a trillion (the Rare Earth case) to more than one (counting icy moons)."
+
+[range]
+low = 0.01
+high = 1.0
+shape = "log-uniform"
+status = "first-pass"
+set_on = 2026-10-16
+sources = ["sandberg-2018"]
+why = """
+The Kepler counts (Petigura 2013, Dressing and Charbonneau 2015, Bryson 2020) put rocky
+planets in the habitable zone at between a tenth and one per star for both Sun-like stars and
+red dwarfs, with the most careful study's error bars reaching one and a half. The top of the
+range is 1, as in the 2018 paper. The floor is a tenth of theirs, 0.01, to leave room for the
+Rare Earth requirements (Ward and Brownlee 2000) that the surveys cannot count: a planet in the
+right orbit is not yet a planet that keeps liquid water for billions of years, and the TRAPPIST-1
+atmosphere results of 2023 to 2025 show rocky planets around red dwarfs can lose their air.
+It stops at 0.01 rather than following Ward and Brownlee down to one in a hundred thousand
+because their extras are an argument, not a count, and the explanation page carries it. Evenly
+spread across powers of ten, as in the 2018 paper."""

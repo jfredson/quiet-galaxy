@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Checks that the validator accepts the four worked examples and refuses what the schema forbids.
+"""Checks that the validator accepts the records and refuses what the schema forbids, and that the
+headline computation reproduces the 2018 paper given its ranges.
 
 Written 2026-10-16 with the validator (weekend step 2 of docs/2026-10-16-kickoff.md). Plain
 Python, standard library only, no dependencies:
@@ -57,7 +58,7 @@ def edit(path: Path, pattern: str, replacement: str, count: int = 1) -> None:
     path.write_text(new, encoding="utf-8")
 
 
-class TheFourExamples(unittest.TestCase):
+class TheRecords(unittest.TestCase):
     def test_examples_pass(self):
         self.assertEqual(problems_for(DATA), [])
 
@@ -67,10 +68,12 @@ class TheFourExamples(unittest.TestCase):
             self.skipTest("data/ is not in a git repository here")
         self.assertEqual(problems_for(DATA, seen), [])
 
-    def test_one_of_each_kind(self):
+    def test_at_least_one_of_each_kind_and_all_seven_factors(self):
         loaded = compute.load_records(DATA)
-        kinds = sorted(r["_kind"] for r in loaded["records"])
-        self.assertEqual(kinds, ["explanation", "factor", "library", "publication"])
+        kinds = {r["_kind"] for r in loaded["records"]}
+        self.assertEqual(kinds, {"explanation", "factor", "library", "publication"})
+        factors = sorted(r["id"] for r in loaded["records"] if r["_kind"] == "factor")
+        self.assertEqual(factors, sorted(compute.FACTORS))
 
     def test_validate_command_exits_zero(self):
         out = io.StringIO()
@@ -222,14 +225,115 @@ class RenamedIds(unittest.TestCase):
         self.assertTrue(any("retired but" in p and "never reused" in p for p in problems), problems)
 
 
-class RunStub(unittest.TestCase):
-    def test_run_says_factors_not_seeded(self):
-        out, err = io.StringIO(), io.StringIO()
-        with redirect_stdout(out), redirect_stderr(err):
-            code = compute.main(["--data", str(DATA), "run"])
+class TheHeadline(unittest.TestCase):
+    """The run command and the engine behind it (docs/method.md)."""
+
+    # Table 1 of Sandberg, Drexler and Ord 2018, as read from the arXiv text on 2026-10-16.
+    PAPER = [
+        {"shape": "log-uniform", "low": 1, "high": 100},          # stars per year
+        {"shape": "log-uniform", "low": 0.1, "high": 1},          # share with planets
+        {"shape": "log-uniform", "low": 0.1, "high": 1},          # habitable planets per star
+        {"shape": "log-normal-rate", "median": 1.0, "spread_orders": 50},  # chance life starts
+        {"shape": "log-uniform", "low": 0.001, "high": 1},        # intelligence
+        {"shape": "log-uniform", "low": 0.01, "high": 1},         # detectable
+        {"shape": "log-uniform", "low": 100, "high": 1e10},       # lifetime in years
+    ]
+
+    def test_reproduces_the_2018_paper(self):
+        """Their Table 2 'no update' row: median 0.32, 52% alone in the galaxy, 38% alone in the
+        observable universe (N below one in ten to the ten), mean 27 million."""
+        samples = compute.simulate(self.PAPER, runs=100_000, seed=1961)
+        r = compute.summarise(samples, galaxies=1e10)
+        self.assertGreater(r["median"], 0.2)
+        self.assertLess(r["median"], 0.5)
+        self.assertAlmostEqual(r["alone_in_galaxy"], 0.52, delta=0.02)
+        self.assertAlmostEqual(r["alone_in_universe"], 0.38, delta=0.02)
+        self.assertGreater(r["mean"], 1e6)
+        self.assertLess(r["mean"], 1e9)
+
+    def test_same_seed_same_numbers(self):
+        a = compute.simulate(self.PAPER, runs=2_000, seed=7)
+        b = compute.simulate(self.PAPER, runs=2_000, seed=7)
+        c = compute.simulate(self.PAPER, runs=2_000, seed=8)
+        self.assertEqual(a, b)
+        self.assertNotEqual(a, c)
+
+    def test_draws_stay_inside_their_range(self):
+        rng = compute.random.Random(1)
+        for _ in range(2_000):
+            x = compute.draw({"shape": "log-uniform", "low": 0.01, "high": 1}, rng)
+            self.assertTrue(0.01 <= x <= 1, x)
+            y = compute.draw({"shape": "uniform", "low": 2, "high": 5}, rng)
+            self.assertTrue(2 <= y <= 5, y)
+            z = compute.draw({"shape": "log-normal-rate", "median": 1.0, "spread_orders": 50}, rng)
+            self.assertTrue(0 <= z <= 1, z)
+
+    def test_log_uniform_spreads_evenly_across_powers_of_ten(self):
+        rng = compute.random.Random(3)
+        xs = [compute.draw({"shape": "log-uniform", "low": 1, "high": 1000}, rng) for _ in range(30_000)]
+        below_ten = sum(1 for x in xs if x < 10) / len(xs)
+        self.assertAlmostEqual(below_ten, 1 / 3, delta=0.02)
+
+    def test_unknown_shape_is_refused(self):
+        with self.assertRaises(ValueError):
+            compute.draw({"shape": "triangular", "low": 1, "high": 2}, compute.random.Random(0))
+
+    def test_quantile_and_share_below(self):
+        s = [1.0, 2.0, 3.0, 4.0]
+        self.assertEqual(compute.quantile(s, 0.5), 2.0)
+        self.assertEqual(compute.quantile(s, 1.0), 4.0)
+        self.assertEqual(compute.share_below(s, 2.5), 0.5)
+        self.assertEqual(compute.share_below(s, 0.5), 0.0)
+        self.assertEqual(compute.share_below(s, 10), 1.0)
+
+    def test_estimate_extremes(self):
+        factor = {"estimate": [{"value": 1}, {"low": 0.2, "high": 0.5}, {"value": 0.3}]}
+        self.assertEqual(compute.estimate_extremes(factor), (0.2, 1.0))
+
+    def test_headline_from_the_records(self):
+        loaded = compute.load_and_validate(DATA, history=False)
+        h = compute.headline(loaded, runs=20_000, seed=1)
+        self.assertEqual(len(h["ranges"]), 7)
+        self.assertEqual([r["id"] for r in h["ranges"]], compute.FACTOR_ORDER)
+        for key in ("median", "mean", "alone_in_galaxy", "alone_in_universe", "percentiles",
+                    "histogram", "extremes", "method", "computed_on"):
+            self.assertIn(key, h)
+        self.assertTrue(0 <= h["alone_in_galaxy"] <= 1)
+        self.assertTrue(0 <= h["alone_in_universe"] <= h["alone_in_galaxy"])
+        self.assertLess(h["extremes"]["from_estimates"]["pessimist"], h["extremes"]["from_estimates"]["optimist"])
+        self.assertLess(h["extremes"]["from_ranges"]["pessimist"], h["extremes"]["from_ranges"]["optimist"])
+        self.assertAlmostEqual(sum(b["share"] for b in h["histogram"]), 1.0, places=6)
+
+    def test_run_command_writes_the_json(self):
+        with TempData() as data:
+            out = data.parent / "headline.json"
+            o, e = io.StringIO(), io.StringIO()
+            with redirect_stdout(o), redirect_stderr(e):
+                code = compute.main(["--data", str(data), "run", "--runs", "5000", "--out", str(out)])
+            self.assertEqual(code, 0, e.getvalue())
+            self.assertIn("Chance we are alone in the galaxy", o.getvalue())
+            written = compute.json.loads(out.read_text(encoding="utf-8"))
+        self.assertEqual(written["runs"], 5000)
+        self.assertEqual(written["method"]["seed"], compute.SEED)
+
+    def test_run_writes_data_headline_json_by_default(self):
+        with TempData() as data:
+            o, e = io.StringIO(), io.StringIO()
+            with redirect_stdout(o), redirect_stderr(e):
+                code = compute.main(["--data", str(data), "run", "--runs", "2000"])
+            self.assertEqual(code, 0, e.getvalue())
+            self.assertTrue((data / "headline.json").exists())
+
+    def test_run_says_factors_not_seeded_when_one_is_missing(self):
+        with TempData() as data:
+            (data / "factors" / "lifetime.toml").unlink()
+            o, e = io.StringIO(), io.StringIO()
+            with redirect_stdout(o), redirect_stderr(e):
+                code = compute.main(["--data", str(data), "run"])
         self.assertEqual(code, 2)
-        self.assertIn("not seeded yet", out.getvalue())
-        self.assertIn("1 of 7", out.getvalue())
+        self.assertIn("not seeded yet", o.getvalue())
+        self.assertIn("6 of 7", o.getvalue())
+        self.assertIn("lifetime", o.getvalue())
 
     def test_run_refuses_invalid_data(self):
         with TempData() as data:
