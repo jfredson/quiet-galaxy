@@ -23,8 +23,8 @@ factor's range (after Sandberg, Drexler and Ord 2018) and reports the median num
 detectable civilisations in the galaxy, the chance we are alone in the galaxy, the chance we
 are alone in the observable universe, and the optimist-to-pessimist width. It writes the
 result to data/headline.json for scripts/export.py and the site. Until all seven factor
-records exist it says so and stops. The parameters (number of runs, seed, galaxy count) are
-proposed in docs/method.md and not yet ruled.
+records exist it says so and stops. The parameters (number of runs, seed, galaxy count) and
+the three range shapes are in docs/method.md; John ruled them on 2026-10-16.
 
 Written 2026-10-16 (weekend step 2 of docs/2026-10-16-kickoff.md); the headline computation
 added the same day (weekend step 3, Saturday session A).
@@ -66,7 +66,11 @@ FAMILIES: dict[str, str] = {
     "unseen": "They are there and we cannot see them",
 }
 DIRECTIONS = {"lowers", "raises", "unchanged"}
-SHAPES = {"log-uniform", "uniform"}
+# The shapes a range may have. "log-normal-rate" (ruled by John 2026-10-16; decision 4 of the record
+# layout anticipated it) is the 2018 paper's model for the chance life starts: the number of times
+# life starts per habitable planet is log-normal with a median and a spread in powers of ten, and
+# the chance is 1 - exp(-rate). It carries "median" and "spread_orders" instead of "low" and "high".
+SHAPES = {"log-uniform", "uniform", "log-normal-rate"}
 RANGE_STATUSES = {"first-pass", "reviewed"}
 LIBRARY_KINDS = {"book", "story", "film", "television", "game", "video", "essay"}
 RECORD_KINDS = {"factor", "explanation", "library", "publication"}
@@ -104,7 +108,7 @@ REQUIRED: dict[str, list[str]] = {
                     "moved_range"],
 }
 ESTIMATE_ALLOWED = {"who", "when", "value", "low", "high", "source", "method", "link", "publication"}
-RANGE_ALLOWED = {"low", "high", "shape", "status", "set_on", "why", "sources"}
+RANGE_ALLOWED = {"low", "high", "median", "spread_orders", "shape", "status", "set_on", "why", "sources"}
 REVISION_ALLOWED = {"date", "field", "old", "new", "why", "publication"}
 RETIRED_ALLOWED = {"id", "kind", "date", "replaced_by", "why"}
 
@@ -416,19 +420,40 @@ def _check_factor(r: dict, tag: str, publication_ids: set[str], problems: list[s
         else:
             for key in sorted(set(rng) - RANGE_ALLOWED):
                 problems.append(f"{tag}, range: unknown field {key!r}")
-            for key in ("low", "high", "shape", "status", "set_on", "why"):
+            rate_shape = rng.get("shape") == "log-normal-rate"
+            needed = ("shape", "status", "set_on", "why") + (("median", "spread_orders") if rate_shape else ("low", "high"))
+            for key in needed:
                 if key not in rng or _empty(rng[key]):
                     problems.append(f"{tag}, range: missing {key!r}")
-            lo, hi = rng.get("low"), rng.get("high")
-            if _is_number(lo) and _is_number(hi):
-                if lo > hi:
-                    problems.append(f"{tag}, range: low ({lo}) is above high ({hi})")
-                if rng.get("shape") == "log-uniform" and lo <= 0:
-                    problems.append(f"{tag}, range: a log-uniform range needs low > 0")
-                if fraction and not (0 <= lo and hi <= 1):
-                    problems.append(f"{tag}, range: a fraction's range must lie between 0 and 1")
-            elif "low" in rng or "high" in rng:
-                problems.append(f"{tag}, range: 'low' and 'high' must be numbers")
+            if rate_shape:
+                # The 2018 paper's shape for the chance life starts: set by the median number of
+                # starts per planet and the spread in powers of ten, never by low and high.
+                for key in ("low", "high"):
+                    if key in rng:
+                        problems.append(f"{tag}, range: a log-normal-rate range has no {key!r}; "
+                                        "it is set by 'median' and 'spread_orders'")
+                med, spread = rng.get("median"), rng.get("spread_orders")
+                if "median" in rng and (not _is_number(med) or med <= 0):
+                    problems.append(f"{tag}, range: 'median' must be a number above 0 (starts of life per planet over its life)")
+                if "spread_orders" in rng and (not _is_number(spread) or spread <= 0):
+                    problems.append(f"{tag}, range: 'spread_orders' must be a number above 0 (powers of ten)")
+                if not fraction:
+                    problems.append(f"{tag}, range: the log-normal-rate shape gives a chance between 0 and 1, "
+                                    "so it fits only a factor measured as a fraction")
+            else:
+                for key in ("median", "spread_orders"):
+                    if key in rng:
+                        problems.append(f"{tag}, range: {key!r} belongs only to the log-normal-rate shape")
+                lo, hi = rng.get("low"), rng.get("high")
+                if _is_number(lo) and _is_number(hi):
+                    if lo > hi:
+                        problems.append(f"{tag}, range: low ({lo}) is above high ({hi})")
+                    if rng.get("shape") == "log-uniform" and lo <= 0:
+                        problems.append(f"{tag}, range: a log-uniform range needs low > 0")
+                    if fraction and not (0 <= lo and hi <= 1):
+                        problems.append(f"{tag}, range: a fraction's range must lie between 0 and 1")
+                elif "low" in rng or "high" in rng:
+                    problems.append(f"{tag}, range: 'low' and 'high' must be numbers")
             if "shape" in rng and rng["shape"] not in SHAPES:
                 problems.append(f"{tag}, range: shape must be one of {sorted(SHAPES)}")
             if "status" in rng and rng["status"] not in RANGE_STATUSES:
@@ -577,20 +602,18 @@ def cmd_validate(args: argparse.Namespace) -> int:
 # values, each run draws one value from every factor's range and multiplies those; many
 # thousands of runs give a spread of N, and the headline numbers are read off the spread.
 # Method after Sandberg, Drexler and Ord 2018 ("Dissolving the Fermi Paradox"). The
-# parameters below are proposed in docs/method.md (2026-10-16) and not yet ruled.
+# parameters below were proposed in docs/method.md and ruled by John on 2026-10-16.
 
 RUNS = 200_000          # how many times the equation is played out
 SEED = 1961             # the year of the equation; fixed so the published numbers reproduce exactly
 GALAXIES = 100_000_000_000   # Milky-Way-sized galaxies' worth of stars in the observable universe
 TZ = ZoneInfo("America/Los_Angeles")
 
-# Shapes the engine can draw from. The two the record schema allows are "log-uniform" and
-# "uniform". "log-normal-rate" is the 2018 paper's model for the chance life starts (fl):
-# the number of times life starts per habitable planet over its lifetime is drawn from a
-# log-normal (median 1, spread 50 orders of magnitude), and fl = 1 - exp(-rate). The engine
-# supports it so the paper's result can be reproduced in the tests, and so that adding it to
-# the schema later is a one-line change; it is proposed in docs/method.md, not ruled.
-ENGINE_SHAPES = {"log-uniform", "uniform", "log-normal-rate"}
+# Shapes the engine can draw from: the same three the record layout allows. "log-normal-rate"
+# is the 2018 paper's model for the chance life starts (fl): the number of times life starts per
+# habitable planet over its lifetime is drawn from a log-normal (the paper: median 1, spread 50
+# orders of magnitude), and fl = 1 - exp(-rate). Ruled by John 2026-10-16 (docs/method.md, 7).
+ENGINE_SHAPES = SHAPES
 
 
 def draw(spec: dict, rng: random.Random) -> float:
@@ -678,7 +701,67 @@ def summarise(samples: list[float], galaxies: float = GALAXIES) -> dict:
 def range_spec(factor: dict) -> dict:
     """The engine spec for a factor record's [range]."""
     rng = factor["range"]
+    if rng["shape"] == "log-normal-rate":
+        return {"shape": "log-normal-rate", "median": float(rng["median"]), "spread_orders": float(rng["spread_orders"])}
     return {"shape": rng["shape"], "low": float(rng["low"]), "high": float(rng["high"])}
+
+
+def range_ends(rng: dict) -> tuple[float, float]:
+    """(pessimistic end, optimistic end) of a range, for the width from the ranges and for the
+    band on the calculator. A log-uniform or uniform range has its low and high. A log-normal-rate
+    range has no ends: the pessimistic end is taken as the chance when the rate is one spread
+    below its median (for the paper's shape, about one in ten to the fifty), and the optimistic
+    end is 1, which the chance approaches as the rate grows."""
+    if rng["shape"] == "log-normal-rate":
+        low_rate = float(rng["median"]) * 10 ** (-float(rng["spread_orders"]))
+        return -math.expm1(-low_rate), 1.0
+    return float(rng["low"]), float(rng["high"])
+
+
+def range_middle(rng: dict) -> float:
+    """Where a slider for this range should start: the chance at the median rate for a
+    log-normal-rate range (0.63 for the paper's), the geometric middle of a log-uniform range,
+    the arithmetic middle of a uniform one."""
+    if rng["shape"] == "log-normal-rate":
+        return -math.expm1(-float(rng["median"]))
+    if rng["shape"] == "uniform":
+        return (float(rng["low"]) + float(rng["high"])) / 2
+    return math.sqrt(float(rng["low"]) * float(rng["high"]))
+
+
+# The alternatives shown on the page for the chance life starts, so a reader can see how much
+# that one factor's shape moves the headline (docs/method.md). Each is run with the other six
+# factors as they are. Labels are plain words for the site; the factor's own range is marked.
+LIFE_ALTERNATIVES: list[tuple[str, dict]] = [
+    ("every power of ten from 0.001 up to 1 equally likely", {"shape": "log-uniform", "low": 1e-3, "high": 1.0}),
+    ("every power of ten from 1 in 100,000 up to 1 equally likely", {"shape": "log-uniform", "low": 1e-5, "high": 1.0}),
+    ("every power of ten from 1 in 10 to the 10 up to 1 equally likely", {"shape": "log-uniform", "low": 1e-10, "high": 1.0}),
+    ("every power of ten from 1 in 10 to the 22 (one start per observable universe) up to 1 equally likely",
+     {"shape": "log-uniform", "low": 1e-22, "high": 1.0}),
+    ("every power of ten from 1 in 10 to the 30 up to 1 equally likely", {"shape": "log-uniform", "low": 1e-30, "high": 1.0}),
+    ("every power of ten from 1 in 10 to the 50 up to 1 equally likely", {"shape": "log-uniform", "low": 1e-50, "high": 1.0}),
+    ("the 2018 paper's shape: a rate centred on one start per planet, spread over fifty orders of magnitude",
+     {"shape": "log-normal-rate", "median": 1.0, "spread_orders": 50.0}),
+]
+
+
+def life_sensitivity(specs: list[dict], runs: int, seed: int, galaxies: float) -> list[dict]:
+    """The headline under each alternative for the chance life starts (factor 4), the other six
+    factors unchanged. Returns one row per alternative with the three headline numbers."""
+    i = FACTOR_ORDER.index("life")
+    rows = []
+    for label, alt in LIFE_ALTERNATIVES:
+        trial = list(specs)
+        trial[i] = alt
+        r = summarise(simulate(trial, runs, seed), galaxies)
+        rows.append({
+            "label": label,
+            "in_use": alt == specs[i],
+            "median": r["median"],
+            "alone_in_galaxy": r["alone_in_galaxy"],
+            "alone_in_universe": r["alone_in_universe"],
+        })
+    return rows
 
 
 def estimate_extremes(factor: dict) -> tuple[float, float]:
@@ -718,8 +801,9 @@ def headline(loaded: dict, runs: int = RUNS, seed: int = SEED, galaxies: float =
         per_factor_est[f["id"]] = {"pessimist": lo, "optimist": hi}
         pess_est *= lo
         opt_est *= hi
-        pess_rng *= float(f["range"]["low"])
-        opt_rng *= float(f["range"]["high"])
+        lo_end, hi_end = range_ends(f["range"])
+        pess_rng *= lo_end
+        opt_rng *= hi_end
 
     return {
         "computed_on": dt.datetime.now(TZ).date().isoformat(),
@@ -729,14 +813,18 @@ def headline(loaded: dict, runs: int = RUNS, seed: int = SEED, galaxies: float =
             "seed": seed,
             "independent_draws": True,
             "galaxies": galaxies,
-            "status": "proposed 2026-10-16 in docs/method.md, not yet ruled",
+            "status": "ruled by John 2026-10-16 (docs/method.md)",
         },
         "ranges": [{
             "id": f["id"], "symbol": f["symbol"], "name": f["name"], "unit": f["unit"],
-            "shape": f["range"]["shape"], "low": f["range"]["low"], "high": f["range"]["high"],
+            "shape": f["range"]["shape"],
+            "low": range_ends(f["range"])[0], "high": range_ends(f["range"])[1],
+            "median": f["range"].get("median"), "spread_orders": f["range"].get("spread_orders"),
+            "middle": range_middle(f["range"]),
             "status": f["range"]["status"], "set_on": f["range"]["set_on"].isoformat(),
             "estimates": len(f.get("estimate") or []),
         } for f in ordered],
+        "life_sensitivity": life_sensitivity(specs, runs, seed, galaxies),
         "any_range_first_pass": any(f["range"]["status"] == "first-pass" for f in ordered),
         **result,
         "extremes": {

@@ -15,7 +15,7 @@ const docs = [
   {
     title: 'How the headline is computed',
     file: 'docs/method.md',
-    what: 'The settings of the run (how many times the equation is played out, the fixed seed, the independent draws, the galaxy count for the observable universe) with a confidence level and the strongest alternative for each, proposed on 16 October 2026 and not yet ruled; the check that the engine reproduces the 2018 paper; and how much the headline moves on the shape chosen for the chance life starts. It is for anyone who wants to know why the numbers are what they are.',
+    what: 'The settings of the run (how many times the equation is played out, the fixed seed, the independent draws, the galaxy count for the observable universe) with a confidence level and the strongest alternative for each, proposed and ruled on 16 October 2026; the check that the engine reproduces the 2018 paper; and how much the headline moves on the shape chosen for the chance life starts. It is for anyone who wants to know why the numbers are what they are.',
   },
   {
     title: 'The record layout',
@@ -79,7 +79,7 @@ const docs = [
 
     <h2>How a value is picked from a range</h2>
     <p>
-      For most pieces the range is drawn so that every tenfold step is equally likely: a pick between 0.001 and 1 is as likely to land between 0.001 and 0.01 as between 0.1 and 1. That is the right way to be uncertain about a quantity that could be any of several orders of magnitude, and it is what the 2018 paper did. A piece whose range is narrow enough that tenfold steps make no sense (a share of stars that is known to lie between 0.6 and 1, say) can instead be drawn so that every value is equally likely. Each piece's page says which.
+      For most pieces the range is drawn so that every tenfold step is equally likely: a pick between 0.001 and 1 is as likely to land between 0.001 and 0.01 as between 0.1 and 1. That is the right way to be uncertain about a quantity that could be any of several orders of magnitude, and it is what the 2018 paper did. A piece whose range is narrow enough that tenfold steps make no sense (a share of stars that is known to lie between 0.6 and 1, say) can instead be drawn so that every value is equally likely. One piece, the chance that life starts, has no two ends to draw between, and uses the 2018 paper's own shape: what is picked is the number of times life starts on such a planet over its life, from a bell curve in its powers of ten centred on one start and fifty powers of ten wide, and the chance is one minus e to the minus that number. About half the picks then land near 1 and the rest spread across fifty powers of ten below, which is the published argument in one curve: life is either easy or very hard, and nobody knows which. Each piece's page says which shape it uses.
     </p>
 
     <h2>The three numbers, and the width</h2>
@@ -98,7 +98,7 @@ const docs = [
           {head.note ? ` ${head.note}` : ''}
         </p>
         <p class="dim">
-          The run's own settings, {head.method?.runs ? `${plainNumber(head.method.runs)} plays of the equation` : 'the number of plays'}{head.method?.seed !== undefined ? `, a fixed starting point for the random picks (${head.method.seed}) so that the published numbers reproduce exactly` : ''}{head.method?.independent_draws ? ', each piece drawn on its own' : ''}{head.method?.galaxies ? `, and ${plainNumber(head.method.galaxies)} galaxies' worth of stars in the observable universe` : ''}, are proposed in the working document on how the headline is computed, linked below, and not yet ruled. The chance that life starts uses a stand-in range (every power of ten from one in ten to the 22 up to 1 equally likely) for the shape the 2018 paper used, which the record layout does not yet allow; the same document shows how far the headline moves on that one choice.
+          The run's own settings, {head.method?.runs ? `${plainNumber(head.method.runs)} plays of the equation` : 'the number of plays'}{head.method?.seed !== undefined ? `, a fixed starting point for the random picks (${head.method.seed}) so that the published numbers reproduce exactly` : ''}{head.method?.independent_draws ? ', each piece drawn on its own' : ''}{head.method?.galaxies ? `, and ${plainNumber(head.method.galaxies)} galaxies' worth of stars in the observable universe` : ''}, were proposed in the working document on how the headline is computed, linked below, and ruled on 16 October 2026. The chance that life starts uses the 2018 paper's own shape, described above; its page shows how far the headline moves on that one choice, which is further than on all the others together.
         </p>
       </>
     ) : (

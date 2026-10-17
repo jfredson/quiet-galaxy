@@ -8,8 +8,8 @@
 // is not written yet says so.
 import Base from '../../layouts/Base.astro';
 import {
-  records, rangeWords, estimateWords, plainNumber, worldDate, longDate, symbolHtml, shapeWords,
-  statusWords, directionWords, issueUrl, recordUrl, hostOf, inline, plural, paragraphs, type Factor,
+  records, rangeText, estimateWords, plainNumber, percent, worldDate, longDate, symbolHtml, shapeWords,
+  statusWords, directionWords, issueUrl, recordUrl, hostOf, inline, plural, paragraphs, medianWords, type Factor,
 } from '../../lib/records';
 
 export function getStaticPaths() {
@@ -29,6 +29,10 @@ const error = issueUrl('error-on-a-page.md', `Error on the page for ${f.name}`,
 const lowers = f.explanations.filter((e) => e.direction === 'lowers');
 const raises = f.explanations.filter((e) => e.direction === 'raises');
 const leaves = f.explanations.filter((e) => e.direction === 'unchanged');
+// The table of how much this one piece moves the headline, computed by scripts/compute.py run
+// for the chance life starts (docs/method.md). Shown only on that piece's page.
+const head = records.headline;
+const sensitivity = f.id === 'life' && head.available && head.life_sensitivity ? head.life_sensitivity : null;
 ---
 
 <Base title={title} description={description}>
@@ -49,9 +53,13 @@ const leaves = f.explanations.filter((e) => e.direction === 'unchanged');
       {f.range ? (
         <div class="range-box">
           <span class="range-label">The range this site uses</span>
-          <span class="range-value">{rangeWords(f.range.low, f.range.high, f.unit)}</span>
+          <span class="range-value">{rangeText(f.range, f.unit)}</span>
           <span class="range-status">{statusWords[f.range.status]}<br />set on {longDate(f.range.set_on)}</span>
-          <p class="range-shape">When the number on the home page is computed, a value for this piece is picked at random from this range each time, and {shapeWords[f.range.shape]}.</p>
+          {f.range.shape === 'log-normal-rate' ? (
+            <p class="range-shape">When the number on the home page is computed, {shapeWords[f.range.shape]}. The chance at the centre of the curve is {plainNumber(f.range.middle)}, which is where the calculator's slider for this piece starts.</p>
+          ) : (
+            <p class="range-shape">When the number on the home page is computed, a value for this piece is picked at random from this range each time, and {shapeWords[f.range.shape]}.</p>
+          )}
         </div>
       ) : (
         <div class="range-box">
@@ -76,6 +84,33 @@ const leaves = f.explanations.filter((e) => e.direction === 'unchanged');
               A first pass means the range was set from the published estimates below and has not yet been through the outside review that every range gets before it is called settled. It may move.
             </p>
           )}
+        </>
+      )}
+
+      {sensitivity && (
+        <>
+          <h2>How much this one piece moves the answer</h2>
+          <p style="font-size: 15px;">
+            The same six other pieces, the same number of runs; only the way this piece is picked changes. Each row is a position someone could argue, and the three columns are the three numbers on the home page. The row in use is marked.
+          </p>
+          <div class="table-scroll">
+            <table class="ptable">
+              <thead><tr><th>How the chance life starts is picked</th><th>Middle estimate</th><th>Alone in the galaxy</th><th>Alone in the observable universe</th></tr></thead>
+              <tbody>
+                {sensitivity.map((row) => (
+                  <tr>
+                    <td>{row.label}{row.in_use && <span class="src">The one this site uses.</span>}</td>
+                    <td class="num">{plainNumber(row.median)}</td>
+                    <td class="num">{percent(row.alone_in_galaxy)}</td>
+                    <td class="num">{percent(row.alone_in_universe)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p class="dim" style="font-size: 14.5px;">
+            The lesson is the one the 2018 paper drew: treat this piece as known and the silence looks like a paradox; carry the real uncertainty and it does not. The middle estimate in use, {plainNumber(head.available ? head.median : 0)}, is {medianWords(head.available ? head.median : 1)}.
+          </p>
         </>
       )}
 
@@ -215,7 +250,7 @@ const leaves = f.explanations.filter((e) => e.direction === 'unchanged');
           <dt>Symbol</dt><dd><span set:html={symbolHtml(f.symbol)}></span></dd>
           <dt>Place</dt><dd>{f.order} of 7 in the equation</dd>
           <dt>Measured in</dt><dd>{f.unit === 'fraction' ? 'a share, from 0 to 1' : f.unit}</dd>
-          <dt>Range</dt><dd>{f.range ? rangeWords(f.range.low, f.range.high, f.unit) : 'not set yet'}</dd>
+          <dt>Range</dt><dd>{f.range ? rangeText(f.range, f.unit, true) : 'not set yet'}</dd>
           {f.range && <><dt>Status</dt><dd>{statusWords[f.range.status]}</dd></>}
           <dt>Estimates</dt><dd>{f.estimates.length}</dd>
         </dl>

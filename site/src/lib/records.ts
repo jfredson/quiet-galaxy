@@ -70,9 +70,14 @@ export interface Estimate {
 }
 
 export interface Range {
-  low: number;
-  high: number;
-  shape: 'log-uniform' | 'uniform';
+  low: number;             // the pessimistic end; for a log-normal-rate range, the chance one spread below the centre
+  high: number;            // the optimistic end; 1 for a log-normal-rate range
+  shape: 'log-uniform' | 'uniform' | 'log-normal-rate';
+  median?: number;         // log-normal-rate only: starts of life per planet at the centre of the bell curve
+  spread_orders?: number;  // log-normal-rate only: the curve's spread, in powers of ten
+  middle: number;          // where a slider starts: the middle of the range, or the chance at the centre rate
+  words: string;           // the range in plain words (log-normal-rate only; else empty and rangeWords is used)
+  short: string;           // the same, short enough for the equation strip
   status: 'first-pass' | 'reviewed';
   set_on: string;
   why: string;
@@ -189,6 +194,7 @@ export type Headline =
       any_range_first_pass?: boolean;
       verify_open?: number;
       method?: { after?: string; runs?: number; seed?: number; independent_draws?: boolean; galaxies?: number; status?: string };
+      life_sensitivity?: { label: string; in_use: boolean; median: number; alone_in_galaxy: number; alone_in_universe: number }[];
     };
 
 export interface Records {
@@ -231,7 +237,16 @@ export const directionShort: Record<Direction, string> = {
 export const shapeWords: Record<Range['shape'], string> = {
   'log-uniform': 'every tenfold step between the two ends is equally likely',
   uniform: 'every value between the two ends is equally likely',
+  'log-normal-rate': 'what is picked is not the share itself but the number of times life starts on such a planet over its life, from a bell curve in its powers of ten; the share is then one minus e to the minus that number, so about half the picks land near 1 and the rest spread evenly across the powers of ten below',
 };
+
+/** The range in plain words: "0.1 to 1 planets per star", or for the shape with no ends,
+    the words the export wrote ("a rate centred on one start per planet, spread over fifty orders
+    of magnitude"). `short` picks the form for the equation strip. */
+export function rangeText(range: Range, unit: string, short = false): string {
+  if (range.shape === 'log-normal-rate' && range.words) return short ? range.short || range.words : range.words;
+  return rangeWords(range.low, range.high, unit);
+}
 export const statusWords: Record<Range['status'], string> = {
   'first-pass': 'first pass, not yet reviewed',
   reviewed: 'reviewed',

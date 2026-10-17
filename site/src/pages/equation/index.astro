@@ -7,7 +7,7 @@
 // estimate; the ranges come from the factor records. The sliders start at the middle of the
 // project's range, so the page opens on the project's own picture and the visitor moves it.
 import Base from '../../layouts/Base.astro';
-import { records, rangeWords, plainNumber, symbolHtml, plural, estimateWords } from '../../lib/records';
+import { records, rangeText, plainNumber, symbolHtml, plural, estimateWords } from '../../lib/records';
 
 const factors = records.factors;
 const written = factors.filter((f) => f.exists);
@@ -21,12 +21,14 @@ const calc = factors.map((f) => ({
   unit: f.unit,
   low: f.slider.low,
   high: f.slider.high,
-  range: f.range ? { low: f.range.low, high: f.range.high } : null,
+  range: f.range ? { low: f.range.low, high: f.range.high, middle: f.range.middle } : null,
 }));
 
+// Where a slider starts: the middle the export worked out for the range (for the shape with no
+// ends, the chance at the centre of its curve), or the middle of the slider's travel.
 function middle(f: typeof factors[number]): number {
-  const r = f.range ?? f.slider;
-  return Math.sqrt(r.low * r.high);
+  if (f.range) return f.range.middle;
+  return Math.sqrt(f.slider.low * f.slider.high);
 }
 const startN = factors.reduce((acc, f) => acc * middle(f), 1);
 
@@ -34,8 +36,9 @@ const startN = factors.reduce((acc, f) => acc * middle(f), 1);
 function bandStyle(f: typeof factors[number]): string {
   if (!f.range) return 'display:none';
   const span = Math.log10(f.slider.high) - Math.log10(f.slider.low);
-  const left = (Math.log10(f.range.low) - Math.log10(f.slider.low)) / span;
-  const right = (Math.log10(f.range.high) - Math.log10(f.slider.low)) / span;
+  // Clamped to the slider's travel: a range with no ends (the chance life starts) reaches far below it.
+  const left = Math.max(0, (Math.log10(f.range.low) - Math.log10(f.slider.low)) / span);
+  const right = Math.min(1, (Math.log10(f.range.high) - Math.log10(f.slider.low)) / span);
   return `left:${(left * 100).toFixed(2)}%;width:${Math.max(0.6, (right - left) * 100).toFixed(2)}%`;
 }
 function startPos(f: typeof factors[number]): number {
@@ -102,7 +105,9 @@ function startPos(f: typeof factors[number]): number {
             <span class="slider-cap">
               <span>{plainNumber(f.slider.low)}</span>
               {f.range
-                ? <span class="range-note">the band marks the range this site uses: {rangeWords(f.range.low, f.range.high, f.unit)}{f.range.status === 'first-pass' ? ', a first pass' : ''}</span>
+                ? <span class="range-note">{f.range.shape === 'log-normal-rate'
+                    ? `this site picks this piece from ${rangeText(f.range, f.unit)}, which can land anywhere on the slider; it starts at the chance at the centre of that curve, ${plainNumber(f.range.middle)}`
+                    : `the band marks the range this site uses: ${rangeText(f.range, f.unit)}`}{f.range.status === 'first-pass' ? ', a first pass' : ''}</span>
                 : <span class="range-note pending">no range set yet for this piece</span>}
               <span>{plainNumber(f.slider.high)}{f.unit === 'years' ? ' years' : ''}</span>
             </span>
@@ -128,7 +133,7 @@ function startPos(f: typeof factors[number]): number {
           {f.exists ? (
             <>
               <p>{f.description.split(/(?<=\.)\s/)[0]}</p>
-              <p class="fcount">{f.range ? `Range used: ${rangeWords(f.range.low, f.range.high, f.unit)}` : ''} · {plural(f.estimates.length, 'published estimate', 'published estimates')}{f.estimates.length ? `, from ${estimateWords(f.estimates[0], f.unit)} (${f.estimates[0].who}, ${f.estimates[0].when.slice(0, 4)}) onward` : ''}</p>
+              <p class="fcount">{f.range ? `Range used: ${rangeText(f.range, f.unit, true)}` : ''} · {plural(f.estimates.length, 'published estimate', 'published estimates')}{f.estimates.length ? `, from ${estimateWords(f.estimates[0], f.unit)} (${f.estimates[0].who}, ${f.estimates[0].when.slice(0, 4)}) onward` : ''}</p>
             </>
           ) : (
             <p class="fcount">Not written up yet. The published estimates for this piece are being gathered; until all seven are in, the number on the home page cannot be computed.</p>
@@ -226,8 +231,8 @@ function startPos(f: typeof factors[number]): number {
         factors.forEach(function (f) {
           var input = inputs[f.id];
           if (!input) return;
-          var r = f.range || { low: f.low, high: f.high };
-          input.value = posOf(f, Math.sqrt(r.low * r.high));
+          var start = f.range && f.range.middle ? f.range.middle : Math.sqrt(f.low * f.high);
+          input.value = posOf(f, start);
         });
         update();
       }

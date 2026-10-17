@@ -133,6 +133,65 @@ class FactorRules(unittest.TestCase):
         self.assertTrue(any("estimate 1" in p and "no source" in p for p in problems), problems)
 
 
+class TheThirdShape(unittest.TestCase):
+    """The log-normal-rate shape, ruled by John 2026-10-16: median and spread_orders in place of
+    low and high, for a fraction only (docs/record-schema.md, docs/method.md item 7)."""
+
+    def test_the_life_record_uses_it_and_passes(self):
+        loaded = compute.load_records(DATA)
+        life = next(r for r in loaded["records"] if r.get("id") == "life")
+        self.assertEqual(life["range"]["shape"], "log-normal-rate")
+        self.assertEqual(life["range"]["median"], 1.0)
+        self.assertEqual(life["range"]["spread_orders"], 50)
+        self.assertNotIn("low", life["range"])
+        self.assertEqual(problems_for(DATA), [])
+
+    def test_low_and_high_are_refused_with_it(self):
+        with TempData() as data:
+            edit(data / "factors" / "life.toml", r'^median = 1\.0\n', "median = 1.0\nlow = 0.001\n")
+            problems = problems_for(data)
+        self.assertTrue(any("has no 'low'" in p for p in problems), problems)
+
+    def test_median_and_spread_are_required_with_it(self):
+        with TempData() as data:
+            edit(data / "factors" / "life.toml", r'^spread_orders = 50\n', "")
+            problems = problems_for(data)
+        self.assertTrue(any("missing 'spread_orders'" in p for p in problems), problems)
+
+    def test_median_must_be_above_zero(self):
+        with TempData() as data:
+            edit(data / "factors" / "life.toml", r'^median = 1\.0', "median = 0")
+            problems = problems_for(data)
+        self.assertTrue(any("'median' must be a number above 0" in p for p in problems), problems)
+
+    def test_median_and_spread_belong_only_to_it(self):
+        with TempData() as data:
+            edit(data / "factors" / "planets.toml", r'^shape = "log-uniform"\n', 'shape = "log-uniform"\nmedian = 1.0\n')
+            problems = problems_for(data)
+        self.assertTrue(any("'median' belongs only to the log-normal-rate shape" in p for p in problems), problems)
+
+    def test_it_fits_only_a_fraction(self):
+        with TempData() as data:
+            path = data / "factors" / "lifetime.toml"
+            text = path.read_text(encoding="utf-8")
+            start = text.index("[range]")
+            text = text[:start] + ('[range]\nshape = "log-normal-rate"\nmedian = 1.0\nspread_orders = 50\n'
+                                   'status = "first-pass"\nset_on = 2026-10-16\nwhy = "Test."\n')
+            path.write_text(text, encoding="utf-8")
+            problems = problems_for(data)
+        self.assertTrue(any("fits only a factor measured as a fraction" in p for p in problems), problems)
+
+    def test_ends_and_middle_for_display(self):
+        rng = {"shape": "log-normal-rate", "median": 1.0, "spread_orders": 50}
+        lo, hi = compute.range_ends(rng)
+        self.assertAlmostEqual(lo, 1e-50, delta=1e-52)
+        self.assertEqual(hi, 1.0)
+        self.assertAlmostEqual(compute.range_middle(rng), 1 - compute.math.exp(-1), places=9)
+        self.assertEqual(compute.range_ends({"shape": "log-uniform", "low": 0.1, "high": 1}), (0.1, 1.0))
+        self.assertAlmostEqual(compute.range_middle({"shape": "log-uniform", "low": 0.01, "high": 1}), 0.1)
+        self.assertEqual(compute.range_middle({"shape": "uniform", "low": 2, "high": 4}), 3.0)
+
+
 class ExplanationRules(unittest.TestCase):
     def test_explanation_with_no_family_is_refused(self):
         with TempData() as data:
@@ -189,16 +248,16 @@ class Links(unittest.TestCase):
 
     def test_moved_range_needs_a_revision(self):
         with TempData() as data:
-            edit(data / "papers" / "sandberg-2018.toml", r"^moved_range = false", "moved_range = true")
+            edit(data / "papers" / "drake-1961.toml", r"^moved_range = false", "moved_range = true")
             problems = problems_for(data)
-        self.assertTrue(any("no factor has a revision naming 'sandberg-2018'" in p for p in problems), problems)
+        self.assertTrue(any("no factor has a revision naming 'drake-1961'" in p for p in problems), problems)
 
     def test_moved_range_backed_by_a_revision_passes(self):
         with TempData() as data:
-            edit(data / "papers" / "sandberg-2018.toml", r"^moved_range = false", "moved_range = true")
+            edit(data / "papers" / "drake-1961.toml", r"^moved_range = false", "moved_range = true")
             with (data / "factors" / "planets.toml").open("a", encoding="utf-8") as f:
                 f.write('\n[[revision]]\ndate = 2026-10-16\nfield = "range.low"\nold = 0.05\nnew = 0.1\n'
-                        'why = "Test revision."\npublication = "sandberg-2018"\n')
+                        'why = "Test revision."\npublication = "drake-1961"\n')
             problems = problems_for(data)
         self.assertEqual(problems, [])
 
@@ -316,6 +375,14 @@ class TheHeadline(unittest.TestCase):
         self.assertLess(h["extremes"]["from_estimates"]["pessimist"], h["extremes"]["from_estimates"]["optimist"])
         self.assertLess(h["extremes"]["from_ranges"]["pessimist"], h["extremes"]["from_ranges"]["optimist"])
         self.assertAlmostEqual(sum(b["share"] for b in h["histogram"]), 1.0, places=6)
+        rows = h["life_sensitivity"]
+        self.assertEqual(len(rows), len(compute.LIFE_ALTERNATIVES))
+        self.assertEqual(sum(1 for r in rows if r["in_use"]), 1)
+        in_use = next(r for r in rows if r["in_use"])
+        self.assertAlmostEqual(in_use["alone_in_galaxy"], h["alone_in_galaxy"])
+        life = next(r for r in h["ranges"] if r["id"] == "life")
+        self.assertEqual(life["shape"], "log-normal-rate")
+        self.assertAlmostEqual(life["middle"], 1 - compute.math.exp(-1), places=9)
 
     def test_run_command_writes_the_json(self):
         with TempData() as data:

@@ -83,22 +83,32 @@ link = "https://arxiv.org/abs/2004.03968"
 method = "Assumed: their 'Copernican' approach takes it that life, intelligence and communication follow on any Earth-like planet around a star of Sun-like composition that is old enough, so that the count of civilisations depends only on the galaxy's stars and their ages."
 
 [range]
-low = 1e-22
-high = 1.0
-shape = "log-uniform"
+shape = "log-normal-rate"
+median = 1.0
+spread_orders = 50
 status = "first-pass"
 set_on = 2026-10-16
 sources = ["sandberg-2018"]
 why = """
 The widest range in the equation, and the one that most decides the headline, so the reason
-matters most here. The top is 1: Drake's and Westby and Conselice's assumption, with Lineweaver
-and Davis's 95% floor of 0.13 and Kipping's three-to-one for 'life starts easily' close behind
-it. The floor is one in ten to the 22, which is one start per observable universe (about ten to
-the 22 stars, most with a planet): the mark below which the published pessimists (Koonin 2007,
-Totani 2020) place the chance, and the point past which a smaller number changes nothing the
-site reports, since the third headline figure is already 'alone in the observable universe'.
-Evenly spread across its powers of ten because no power of ten between the two is favoured by
-any evidence. This is a stand-in for the 2018 paper's shape, which the record layout does not yet
-allow: they put half the weight near 1 and spread the rest across fifty powers of ten. The
-difference the shape makes to the headline is computed in docs/method.md, where adding the
-paper's shape is proposed."""
+matters most here. The shape is the 2018 paper's (Sandberg, Drexler and Ord, section 3.1),
+which John ruled on 2026-10-16 should be used here: instead of a low and a high for the chance
+itself, the number of times life starts on a habitable planet over its life is given a bell curve
+in its powers of ten, centred on one start per planet and fifty powers of ten wide, and the chance
+is one minus e to the minus that number. Half the weight then sits near 1 (Drake's and Westby and
+Conselice's assumption, with Lineweaver and Davis's 95% floor of 0.13 and Kipping's three-to-one
+for 'life starts easily' close behind), and the other half is spread evenly across fifty powers
+of ten below, which is where the published pessimists (Koonin 2007, Totani 2020) place it without
+giving a usable number. The centre at one start per planet is the paper's, taken from life's early
+start on Earth; the fifty-power spread is the paper's reading of how little is known about the
+chemistry. A plain low-to-high range cannot carry this two-sided argument: the first pass used
+one (every power of ten from one in ten to the 22 up to 1), and docs/method.md shows that the
+choice between the two moved the chance we are alone in the galaxy between 88% and 59%."""
+
+[[revision]]
+date = 2026-10-16
+field = "range.shape"
+old = "every power of ten from 1 in 10 to the 22 up to 1 equally likely"
+new = "a rate centred on one start per planet, spread over fifty orders of magnitude"
+why = "John ruled on 2026-10-16: 'Use the 2018 paper's log-normal rate shape for the chance life starts, adding the third shape to the record layout.' The first pass had used a plain low-to-high range as a stand-in because the layout allowed nothing else; that stand-in put most of the weight on 'life is very rare', where the paper splits the weight evenly between 'life is easy' and 'life is hard'."
+publication = "sandberg-2018"

@@ -13,7 +13,7 @@
 // "not computed yet" in words, never a placeholder digit. The big number, the strip and the
 // equation line are copied from The Belt Equation's home page (site/src/pages/index.astro there).
 import Base from '../layouts/Base.astro';
-import { records, longDate, plainNumber, percent, rangeWords, plural, symbolHtml, medianWords } from '../lib/records';
+import { records, longDate, plainNumber, percent, rangeText, plural, symbolHtml, medianWords } from '../lib/records';
 
 const head = records.headline;
 const c = records.counts;
@@ -65,7 +65,7 @@ const NOT_YET = 'not computed yet';
           <>
             <a class={`trunk-term ${f.range ? '' : 'missing'}`} href={f.path} title={f.name}>
               <span class="trunk-sym" set:html={symbolHtml(f.symbol)}></span>
-              <span class="trunk-range">{f.range ? rangeWords(f.range.low, f.range.high, f.unit) : 'no range yet'}</span>
+              <span class="trunk-range">{f.range ? rangeText(f.range, f.unit, true) : 'no range yet'}</span>
             </a>
             {i < factors.length - 1 && <span class="op">×</span>}
           </>

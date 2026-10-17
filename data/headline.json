@@ -6,7 +6,7 @@
     "seed": 1961,
     "independent_draws": true,
     "galaxies": 100000000000,
-    "status": "proposed 2026-10-16 in docs/method.md, not yet ruled"
+    "status": "ruled by John 2026-10-16 (docs/method.md)"
   },
   "ranges": [
     {
@@ -15,8 +15,11 @@
       "name": "How many stars are born in the galaxy each year",
       "unit": "stars per year",
       "shape": "log-uniform",
-      "low": 1,
-      "high": 10,
+      "low": 1.0,
+      "high": 10.0,
+      "median": null,
+      "spread_orders": null,
+      "middle": 3.1622776601683795,
       "status": "first-pass",
       "set_on": "2026-10-16",
       "estimates": 4
@@ -29,6 +32,9 @@
       "shape": "log-uniform",
       "low": 0.5,
       "high": 1.0,
+      "median": null,
+      "spread_orders": null,
+      "middle": 0.7071067811865476,
       "status": "first-pass",
       "set_on": "2026-10-16",
       "estimates": 6
@@ -41,6 +47,9 @@
       "shape": "log-uniform",
       "low": 0.01,
       "high": 1.0,
+      "median": null,
+      "spread_orders": null,
+      "middle": 0.1,
       "status": "first-pass",
       "set_on": "2026-10-16",
       "estimates": 7
@@ -50,9 +59,12 @@
       "symbol": "fl",
       "name": "The share of planets that could support life on which life actually starts",
       "unit": "fraction",
-      "shape": "log-uniform",
-      "low": 1e-22,
+      "shape": "log-normal-rate",
+      "low": 1e-50,
       "high": 1.0,
+      "median": 1.0,
+      "spread_orders": 50,
+      "middle": 0.6321205588285577,
       "status": "first-pass",
       "set_on": "2026-10-16",
       "estimates": 5
@@ -65,6 +77,9 @@
       "shape": "log-uniform",
       "low": 0.0001,
       "high": 1.0,
+      "median": null,
+      "spread_orders": null,
+      "middle": 0.01,
       "status": "first-pass",
       "set_on": "2026-10-16",
       "estimates": 7
@@ -77,6 +92,9 @@
       "shape": "log-uniform",
       "low": 0.01,
       "high": 1.0,
+      "median": null,
+      "spread_orders": null,
+      "middle": 0.1,
       "status": "first-pass",
       "set_on": "2026-10-16",
       "estimates": 4
@@ -87,183 +105,917 @@
       "name": "How long a civilisation stays detectable, in years",
       "unit": "years",
       "shape": "log-uniform",
-      "low": 100,
-      "high": 10000000000,
+      "low": 100.0,
+      "high": 10000000000.0,
+      "median": null,
+      "spread_orders": null,
+      "middle": 1000000.0,
       "status": "first-pass",
       "set_on": "2026-10-16",
       "estimates": 6
     }
   ],
+  "life_sensitivity": [
+    {
+      "label": "every power of ten from 0.001 up to 1 equally likely",
+      "in_use": false,
+      "median": 6.799128775826175,
+      "alone_in_galaxy": 0.39779,
+      "alone_in_universe": 0.0
+    },
+    {
+      "label": "every power of ten from 1 in 100,000 up to 1 equally likely",
+      "in_use": false,
+      "median": 0.6881151299155421,
+      "alone_in_galaxy": 0.519545,
+      "alone_in_universe": 0.0
+    },
+    {
+      "label": "every power of ten from 1 in 10 to the 10 up to 1 equally likely",
+      "in_use": false,
+      "median": 0.0022575374110758092,
+      "alone_in_galaxy": 0.736495,
+      "alone_in_universe": 0.013035
+    },
+    {
+      "label": "every power of ten from 1 in 10 to the 22 (one start per observable universe) up to 1 equally likely",
+      "in_use": false,
+      "median": 2.204788262462625e-09,
+      "alone_in_galaxy": 0.878935,
+      "alone_in_universe": 0.39293
+    },
+    {
+      "label": "every power of ten from 1 in 10 to the 30 up to 1 equally likely",
+      "in_use": false,
+      "median": 2.219460908957356e-13,
+      "alone_in_galaxy": 0.911625,
+      "alone_in_universe": 0.555465
+    },
+    {
+      "label": "every power of ten from 1 in 10 to the 50 up to 1 equally likely",
+      "in_use": false,
+      "median": 2.2337963937283976e-23,
+      "alone_in_galaxy": 0.946915,
+      "alone_in_universe": 0.73258
+    },
+    {
+      "label": "the 2018 paper's shape: a rate centred on one start per planet, spread over fifty orders of magnitude",
+      "in_use": true,
+      "median": 0.015731707749317456,
+      "alone_in_galaxy": 0.5878,
+      "alone_in_universe": 0.39604
+    }
+  ],
   "any_range_first_pass": true,
   "runs": 200000,
-  "median": 2.204788262462625e-09,
-  "mean": 133980.98403420203,
-  "alone_in_galaxy": 0.878935,
-  "alone_in_universe": 0.39293,
+  "median": 0.015731707749317456,
+  "mean": 3834048.5644673905,
+  "alone_in_galaxy": 0.5878,
+  "alone_in_universe": 0.39604,
   "alone_in_universe_by_galaxy_count": {
-    "1e+10": 0.43828,
-    "1e+11": 0.39293,
-    "1e+12": 0.347335
+    "1e+10": 0.4039,
+    "1e+11": 0.39604,
+    "1e+12": 0.38813
   },
   "percentiles": {
-    "5": 1.839873398893456e-20,
-    "25": 7.14093314228941e-15,
-    "50": 2.204788262462625e-09,
-    "75": 0.0007162164535046117,
-    "95": 253.13230904209613
+    "5": 2.133710462626898e-80,
+    "25": 3.2583438175597334e-32,
+    "50": 0.015731707749317456,
+    "75": 299.3250020291281,
+    "95": 1010287.2468862182
   },
   "histogram": [
     {
-      "log10_from": -28,
+      "log10_from": -236,
       "share": 5e-06
     },
     {
-      "log10_from": -27,
+      "log10_from": -215,
+      "share": 5e-06
+    },
+    {
+      "log10_from": -209,
+      "share": 5e-06
+    },
+    {
+      "log10_from": -208,
+      "share": 5e-06
+    },
+    {
+      "log10_from": -203,
+      "share": 5e-06
+    },
+    {
+      "log10_from": -197,
+      "share": 5e-06
+    },
+    {
+      "log10_from": -196,
+      "share": 1e-05
+    },
+    {
+      "log10_from": -193,
+      "share": 1e-05
+    },
+    {
+      "log10_from": -192,
+      "share": 5e-06
+    },
+    {
+      "log10_from": -190,
+      "share": 5e-06
+    },
+    {
+      "log10_from": -189,
+      "share": 5e-06
+    },
+    {
+      "log10_from": -186,
+      "share": 5e-06
+    },
+    {
+      "log10_from": -185,
+      "share": 1.5e-05
+    },
+    {
+      "log10_from": -184,
+      "share": 1e-05
+    },
+    {
+      "log10_from": -183,
+      "share": 5e-06
+    },
+    {
+      "log10_from": -182,
+      "share": 2.5e-05
+    },
+    {
+      "log10_from": -181,
+      "share": 5e-06
+    },
+    {
+      "log10_from": -180,
+      "share": 2e-05
+    },
+    {
+      "log10_from": -179,
+      "share": 1.5e-05
+    },
+    {
+      "log10_from": -178,
+      "share": 2e-05
+    },
+    {
+      "log10_from": -177,
+      "share": 5e-06
+    },
+    {
+      "log10_from": -176,
+      "share": 1e-05
+    },
+    {
+      "log10_from": -175,
+      "share": 1e-05
+    },
+    {
+      "log10_from": -174,
+      "share": 3.5e-05
+    },
+    {
+      "log10_from": -173,
+      "share": 3e-05
+    },
+    {
+      "log10_from": -172,
+      "share": 1.5e-05
+    },
+    {
+      "log10_from": -171,
+      "share": 2e-05
+    },
+    {
+      "log10_from": -170,
+      "share": 4e-05
+    },
+    {
+      "log10_from": -169,
+      "share": 1.5e-05
+    },
+    {
+      "log10_from": -168,
+      "share": 3e-05
+    },
+    {
+      "log10_from": -167,
+      "share": 1.5e-05
+    },
+    {
+      "log10_from": -166,
+      "share": 2e-05
+    },
+    {
+      "log10_from": -165,
+      "share": 3.5e-05
+    },
+    {
+      "log10_from": -164,
+      "share": 3.5e-05
+    },
+    {
+      "log10_from": -163,
+      "share": 9.5e-05
+    },
+    {
+      "log10_from": -162,
       "share": 6.5e-05
     },
     {
-      "log10_from": -26,
-      "share": 0.0004
+      "log10_from": -161,
+      "share": 4e-05
     },
     {
-      "log10_from": -25,
-      "share": 0.00151
+      "log10_from": -160,
+      "share": 2e-05
     },
     {
-      "log10_from": -24,
-      "share": 0.00412
+      "log10_from": -159,
+      "share": 6e-05
     },
     {
-      "log10_from": -23,
-      "share": 0.007545
+      "log10_from": -158,
+      "share": 2.5e-05
     },
     {
-      "log10_from": -22,
-      "share": 0.01253
+      "log10_from": -157,
+      "share": 5.5e-05
     },
     {
-      "log10_from": -21,
-      "share": 0.017935
+      "log10_from": -156,
+      "share": 5e-05
     },
     {
-      "log10_from": -20,
-      "share": 0.02403
+      "log10_from": -155,
+      "share": 6e-05
     },
     {
-      "log10_from": -19,
-      "share": 0.02911
+      "log10_from": -154,
+      "share": 6.5e-05
     },
     {
-      "log10_from": -18,
-      "share": 0.034315
+      "log10_from": -153,
+      "share": 3.5e-05
     },
     {
-      "log10_from": -17,
-      "share": 0.03855
+      "log10_from": -152,
+      "share": 4e-05
     },
     {
-      "log10_from": -16,
-      "share": 0.042255
+      "log10_from": -151,
+      "share": 7.5e-05
     },
     {
-      "log10_from": -15,
-      "share": 0.044475
+      "log10_from": -150,
+      "share": 0.0001
     },
     {
-      "log10_from": -14,
-      "share": 0.045585
+      "log10_from": -149,
+      "share": 5.5e-05
     },
     {
-      "log10_from": -13,
-      "share": 0.044905
+      "log10_from": -148,
+      "share": 0.000105
     },
     {
-      "log10_from": -12,
-      "share": 0.045595
+      "log10_from": -147,
+      "share": 0.00013
     },
     {
-      "log10_from": -11,
-      "share": 0.04535
+      "log10_from": -146,
+      "share": 0.00013
     },
     {
-      "log10_from": -10,
-      "share": 0.046015
+      "log10_from": -145,
+      "share": 0.000125
     },
     {
-      "log10_from": -9,
-      "share": 0.04549
+      "log10_from": -144,
+      "share": 0.00015
     },
     {
-      "log10_from": -8,
-      "share": 0.04576
+      "log10_from": -143,
+      "share": 0.00011
     },
     {
-      "log10_from": -7,
-      "share": 0.04507
+      "log10_from": -142,
+      "share": 0.00014
     },
     {
-      "log10_from": -6,
-      "share": 0.04523
+      "log10_from": -141,
+      "share": 0.00013
     },
     {
-      "log10_from": -5,
-      "share": 0.04495
+      "log10_from": -140,
+      "share": 0.00015
     },
     {
-      "log10_from": -4,
-      "share": 0.04563
+      "log10_from": -139,
+      "share": 0.000205
     },
     {
-      "log10_from": -3,
-      "share": 0.043985
+      "log10_from": -138,
+      "share": 0.00023
     },
     {
-      "log10_from": -2,
-      "share": 0.040925
+      "log10_from": -137,
+      "share": 0.000135
     },
     {
-      "log10_from": -1,
-      "share": 0.0376
+      "log10_from": -136,
+      "share": 0.00019
     },
     {
-      "log10_from": 0,
-      "share": 0.033345
+      "log10_from": -135,
+      "share": 0.00014
     },
     {
-      "log10_from": 1,
-      "share": 0.028115
+      "log10_from": -134,
+      "share": 0.00017
     },
     {
-      "log10_from": 2,
-      "share": 0.021935
+      "log10_from": -133,
+      "share": 0.000205
     },
     {
-      "log10_from": 3,
-      "share": 0.016115
+      "log10_from": -132,
+      "share": 0.00023
     },
     {
-      "log10_from": 4,
-      "share": 0.010735
+      "log10_from": -131,
+      "share": 0.000205
     },
     {
-      "log10_from": 5,
-      "share": 0.006455
+      "log10_from": -130,
+      "share": 0.000265
     },
     {
-      "log10_from": 6,
-      "share": 0.00298
+      "log10_from": -129,
+      "share": 0.000235
     },
     {
-      "log10_from": 7,
-      "share": 0.00117
-    },
-    {
-      "log10_from": 8,
+      "log10_from": -128,
       "share": 0.0002
     },
     {
+      "log10_from": -127,
+      "share": 0.00029
+    },
+    {
+      "log10_from": -126,
+      "share": 0.00034
+    },
+    {
+      "log10_from": -125,
+      "share": 0.00034
+    },
+    {
+      "log10_from": -124,
+      "share": 0.000365
+    },
+    {
+      "log10_from": -123,
+      "share": 0.00037
+    },
+    {
+      "log10_from": -122,
+      "share": 0.000415
+    },
+    {
+      "log10_from": -121,
+      "share": 0.00031
+    },
+    {
+      "log10_from": -120,
+      "share": 0.0004
+    },
+    {
+      "log10_from": -119,
+      "share": 0.00041
+    },
+    {
+      "log10_from": -118,
+      "share": 0.00048
+    },
+    {
+      "log10_from": -117,
+      "share": 0.000385
+    },
+    {
+      "log10_from": -116,
+      "share": 0.000575
+    },
+    {
+      "log10_from": -115,
+      "share": 0.00049
+    },
+    {
+      "log10_from": -114,
+      "share": 0.00058
+    },
+    {
+      "log10_from": -113,
+      "share": 0.00053
+    },
+    {
+      "log10_from": -112,
+      "share": 0.00063
+    },
+    {
+      "log10_from": -111,
+      "share": 0.000645
+    },
+    {
+      "log10_from": -110,
+      "share": 0.000745
+    },
+    {
+      "log10_from": -109,
+      "share": 0.00064
+    },
+    {
+      "log10_from": -108,
+      "share": 0.000615
+    },
+    {
+      "log10_from": -107,
+      "share": 0.0007
+    },
+    {
+      "log10_from": -106,
+      "share": 0.000585
+    },
+    {
+      "log10_from": -105,
+      "share": 0.000775
+    },
+    {
+      "log10_from": -104,
+      "share": 0.000815
+    },
+    {
+      "log10_from": -103,
+      "share": 0.00084
+    },
+    {
+      "log10_from": -102,
+      "share": 0.00087
+    },
+    {
+      "log10_from": -101,
+      "share": 0.000905
+    },
+    {
+      "log10_from": -100,
+      "share": 0.00112
+    },
+    {
+      "log10_from": -99,
+      "share": 0.001095
+    },
+    {
+      "log10_from": -98,
+      "share": 0.001055
+    },
+    {
+      "log10_from": -97,
+      "share": 0.00123
+    },
+    {
+      "log10_from": -96,
+      "share": 0.001165
+    },
+    {
+      "log10_from": -95,
+      "share": 0.001265
+    },
+    {
+      "log10_from": -94,
+      "share": 0.00126
+    },
+    {
+      "log10_from": -93,
+      "share": 0.00118
+    },
+    {
+      "log10_from": -92,
+      "share": 0.001365
+    },
+    {
+      "log10_from": -91,
+      "share": 0.001515
+    },
+    {
+      "log10_from": -90,
+      "share": 0.001575
+    },
+    {
+      "log10_from": -89,
+      "share": 0.00139
+    },
+    {
+      "log10_from": -88,
+      "share": 0.0016
+    },
+    {
+      "log10_from": -87,
+      "share": 0.001565
+    },
+    {
+      "log10_from": -86,
+      "share": 0.00176
+    },
+    {
+      "log10_from": -85,
+      "share": 0.001665
+    },
+    {
+      "log10_from": -84,
+      "share": 0.001805
+    },
+    {
+      "log10_from": -83,
+      "share": 0.00197
+    },
+    {
+      "log10_from": -82,
+      "share": 0.00191
+    },
+    {
+      "log10_from": -81,
+      "share": 0.00193
+    },
+    {
+      "log10_from": -80,
+      "share": 0.00201
+    },
+    {
+      "log10_from": -79,
+      "share": 0.002295
+    },
+    {
+      "log10_from": -78,
+      "share": 0.00213
+    },
+    {
+      "log10_from": -77,
+      "share": 0.00248
+    },
+    {
+      "log10_from": -76,
+      "share": 0.00237
+    },
+    {
+      "log10_from": -75,
+      "share": 0.0025
+    },
+    {
+      "log10_from": -74,
+      "share": 0.00262
+    },
+    {
+      "log10_from": -73,
+      "share": 0.00267
+    },
+    {
+      "log10_from": -72,
+      "share": 0.002935
+    },
+    {
+      "log10_from": -71,
+      "share": 0.002665
+    },
+    {
+      "log10_from": -70,
+      "share": 0.002915
+    },
+    {
+      "log10_from": -69,
+      "share": 0.00291
+    },
+    {
+      "log10_from": -68,
+      "share": 0.003135
+    },
+    {
+      "log10_from": -67,
+      "share": 0.003085
+    },
+    {
+      "log10_from": -66,
+      "share": 0.00302
+    },
+    {
+      "log10_from": -65,
+      "share": 0.00318
+    },
+    {
+      "log10_from": -64,
+      "share": 0.003125
+    },
+    {
+      "log10_from": -63,
+      "share": 0.00345
+    },
+    {
+      "log10_from": -62,
+      "share": 0.003355
+    },
+    {
+      "log10_from": -61,
+      "share": 0.00391
+    },
+    {
+      "log10_from": -60,
+      "share": 0.00373
+    },
+    {
+      "log10_from": -59,
+      "share": 0.00392
+    },
+    {
+      "log10_from": -58,
+      "share": 0.00401
+    },
+    {
+      "log10_from": -57,
+      "share": 0.00417
+    },
+    {
+      "log10_from": -56,
+      "share": 0.00411
+    },
+    {
+      "log10_from": -55,
+      "share": 0.004055
+    },
+    {
+      "log10_from": -54,
+      "share": 0.00423
+    },
+    {
+      "log10_from": -53,
+      "share": 0.004745
+    },
+    {
+      "log10_from": -52,
+      "share": 0.004485
+    },
+    {
+      "log10_from": -51,
+      "share": 0.0045
+    },
+    {
+      "log10_from": -50,
+      "share": 0.004435
+    },
+    {
+      "log10_from": -49,
+      "share": 0.004715
+    },
+    {
+      "log10_from": -48,
+      "share": 0.004905
+    },
+    {
+      "log10_from": -47,
+      "share": 0.0048
+    },
+    {
+      "log10_from": -46,
+      "share": 0.00528
+    },
+    {
+      "log10_from": -45,
+      "share": 0.005225
+    },
+    {
+      "log10_from": -44,
+      "share": 0.005425
+    },
+    {
+      "log10_from": -43,
+      "share": 0.00536
+    },
+    {
+      "log10_from": -42,
+      "share": 0.005295
+    },
+    {
+      "log10_from": -41,
+      "share": 0.00568
+    },
+    {
+      "log10_from": -40,
+      "share": 0.00579
+    },
+    {
+      "log10_from": -39,
+      "share": 0.00576
+    },
+    {
+      "log10_from": -38,
+      "share": 0.006035
+    },
+    {
+      "log10_from": -37,
+      "share": 0.005725
+    },
+    {
+      "log10_from": -36,
+      "share": 0.006175
+    },
+    {
+      "log10_from": -35,
+      "share": 0.00613
+    },
+    {
+      "log10_from": -34,
+      "share": 0.00611
+    },
+    {
+      "log10_from": -33,
+      "share": 0.005905
+    },
+    {
+      "log10_from": -32,
+      "share": 0.00623
+    },
+    {
+      "log10_from": -31,
+      "share": 0.00658
+    },
+    {
+      "log10_from": -30,
+      "share": 0.00673
+    },
+    {
+      "log10_from": -29,
+      "share": 0.00634
+    },
+    {
+      "log10_from": -28,
+      "share": 0.006365
+    },
+    {
+      "log10_from": -27,
+      "share": 0.00663
+    },
+    {
+      "log10_from": -26,
+      "share": 0.006775
+    },
+    {
+      "log10_from": -25,
+      "share": 0.006975
+    },
+    {
+      "log10_from": -24,
+      "share": 0.00713
+    },
+    {
+      "log10_from": -23,
+      "share": 0.007125
+    },
+    {
+      "log10_from": -22,
+      "share": 0.0071
+    },
+    {
+      "log10_from": -21,
+      "share": 0.00735
+    },
+    {
+      "log10_from": -20,
+      "share": 0.007265
+    },
+    {
+      "log10_from": -19,
+      "share": 0.00725
+    },
+    {
+      "log10_from": -18,
+      "share": 0.007045
+    },
+    {
+      "log10_from": -17,
+      "share": 0.007515
+    },
+    {
+      "log10_from": -16,
+      "share": 0.00766
+    },
+    {
+      "log10_from": -15,
+      "share": 0.007805
+    },
+    {
+      "log10_from": -14,
+      "share": 0.0079
+    },
+    {
+      "log10_from": -13,
+      "share": 0.00751
+    },
+    {
+      "log10_from": -12,
+      "share": 0.00791
+    },
+    {
+      "log10_from": -11,
+      "share": 0.00786
+    },
+    {
+      "log10_from": -10,
+      "share": 0.00743
+    },
+    {
+      "log10_from": -9,
+      "share": 0.0078
+    },
+    {
+      "log10_from": -8,
+      "share": 0.00751
+    },
+    {
+      "log10_from": -7,
+      "share": 0.007985
+    },
+    {
+      "log10_from": -6,
+      "share": 0.007705
+    },
+    {
+      "log10_from": -5,
+      "share": 0.00947
+    },
+    {
+      "log10_from": -4,
+      "share": 0.01458
+    },
+    {
+      "log10_from": -3,
+      "share": 0.02681
+    },
+    {
+      "log10_from": -2,
+      "share": 0.040545
+    },
+    {
+      "log10_from": -1,
+      "share": 0.054065
+    },
+    {
+      "log10_from": 0,
+      "share": 0.06361
+    },
+    {
+      "log10_from": 1,
+      "share": 0.06732
+    },
+    {
+      "log10_from": 2,
+      "share": 0.066345
+    },
+    {
+      "log10_from": 3,
+      "share": 0.06316
+    },
+    {
+      "log10_from": 4,
+      "share": 0.056695
+    },
+    {
+      "log10_from": 5,
+      "share": 0.04483
+    },
+    {
+      "log10_from": 6,
+      "share": 0.029835
+    },
+    {
+      "log10_from": 7,
+      "share": 0.01501
+    },
+    {
+      "log10_from": 8,
+      "share": 0.004665
+    },
+    {
       "log10_from": 9,
-      "share": 1.5e-05
+      "share": 0.00071
+    },
+    {
+      "log10_from": 10,
+      "share": 2e-05
     }
   ],
   "extremes": {
@@ -302,7 +1054,7 @@
       }
     },
     "from_ranges": {
-      "pessimist": 5.0000000000000015e-29,
+      "pessimist": 5e-57,
       "optimist": 100000000000.0
     }
   },

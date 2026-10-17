@@ -124,6 +124,35 @@ def text(value) -> str:
     return value.strip() if isinstance(value, str) else ""
 
 
+SMALL_NUMBERS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+                 "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen",
+                 "nineteen"]
+TENS = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
+
+
+def number_words(x: float) -> str:
+    """A whole number up to 99 in words ("fifty", "twenty-two"); anything else as digits."""
+    if float(x).is_integer() and 0 <= x < 100:
+        n = int(x)
+        if n < 20:
+            return SMALL_NUMBERS[n]
+        return TENS[n // 10] + ("" if n % 10 == 0 else "-" + SMALL_NUMBERS[n % 10])
+    return f"{x:g}"
+
+
+def range_words(rng: dict) -> tuple[str, str]:
+    """(long, short) plain words for a range with no ends, the log-normal-rate shape: "a rate
+    centred on one start per planet, spread over fifty orders of magnitude". Empty for the other
+    shapes, whose words the site builds from low, high and the unit."""
+    if rng.get("shape") != "log-normal-rate":
+        return "", ""
+    med = float(rng["median"])
+    centre = "one start per planet" if med == 1 else f"{med:g} starts per planet"
+    spread = number_words(rng["spread_orders"])
+    return (f"a rate centred on {centre}, spread over {spread} orders of magnitude",
+            f"centred on {centre}, {spread} orders of magnitude wide")
+
+
 # ---------------------------------------------------------------- the headline
 
 
@@ -134,7 +163,8 @@ def load_headline(data_dir: Path, path: Path | None) -> dict | None:
     (or --headline FILE) and keeps: median (detectable civilisations in the galaxy, the middle of
     the spread), alone_in_galaxy and alone_in_universe (0 to 1), runs, computed_on, mean,
     percentiles, any_range_first_pass, verify_open, the method block (runs, seed, independent
-    draws, galaxy count, and its status line saying the parameters are proposed and not ruled),
+    draws, galaxy count, and its status line), life_sensitivity (the headline under each
+    alternative for the chance life starts, for that factor's page),
     and the width of the argument from extremes.from_estimates (optimist and pessimist: N with
     every factor at its most hopeful and its most pessimistic published estimate) with the same
     from the ranges' ends beside it. The older key names alone_galaxy and alone_universe are
@@ -165,6 +195,7 @@ def load_headline(data_dir: Path, path: Path | None) -> dict | None:
             "percentiles": ("percentiles",),
             "any_range_first_pass": ("any_range_first_pass",),
             "verify_open": ("verify_open",),
+            "life_sensitivity": ("life_sensitivity",),
         }
         out: dict = {}
         for key, names in aliases.items():
@@ -327,7 +358,14 @@ def build_export(loaded: dict, headline: dict | None = None) -> dict:
             "what_would_move_this": text(f["what_would_move_this"]),
             "estimates": estimates,
             "range": {
-                "low": rng["low"], "high": rng["high"], "shape": rng["shape"], "status": rng["status"],
+                # low and high are the range's ends; for the shape with no ends (log-normal-rate)
+                # they are display conveniences from compute.range_ends, and words carries the
+                # plain description the site shows instead.
+                "low": compute.range_ends(rng)[0], "high": compute.range_ends(rng)[1],
+                "shape": rng["shape"], "status": rng["status"],
+                "median": rng.get("median"), "spread_orders": rng.get("spread_orders"),
+                "middle": compute.range_middle(rng),
+                "words": range_words(rng)[0], "short": range_words(rng)[1],
                 "set_on": rng["set_on"].isoformat(), "why": text(rng["why"]),
                 "sources": [pub_brief(s) for s in rng.get("sources") or []],
             },
