@@ -3,11 +3,11 @@
 # Publication records are appended and never edited except to fix an error, with a changelog line.
 
 id = "gianni-2026"
-date = "2026-02-13"
+date = "2026-02-12"
 added_on = 2026-10-16
-authors = ["Edoardo Gianni", "James Attwater", "Philipp Holliger"]
+authors = ["Edoardo Gianni", "Samantha L. Y. Kwok", "Christopher J. K. Wan", "Kevin Goeij", "Bryce E. Clifton", "Enrico S. Colizzi", "James Attwater", "Philipp Holliger"]
 title = "A small polymerase ribozyme that can synthesize itself and its complementary strand"
-venue = "Science (2026), doi 10.1126/science.adt2760; MRC Laboratory of Molecular Biology, Cambridge"
+venue = "Science 391 (6789), 1022-1028 (2026), doi 10.1126/science.adt2760; MRC Laboratory of Molecular Biology, Cambridge"
 link = "https://www.science.org/doi/10.1126/science.adt2760"
 finding = """
 Reports QT45, an RNA molecule only 45 building blocks long, found by searching random sequences, that
@@ -21,8 +21,4 @@ factors = ["life"]
 explanations = ["rare-life", "great-filter-behind-us", "no-paradox-just-wide-ranges"]
 moved_range = false
 
-verify = [
-  "The author list is partial: Edoardo Gianni (lead) is named by the UKRI press release of 2026-02-13 and James Attwater by secondary coverage; Philipp Holliger is given from memory as the group head. Check the paper's byline and the Science volume and page.",
-]
-
-notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict. Checked 2026-10-17 against the Crossref record, PubMed and Europe PMC: eight authors (now given in full), Science 391 (6789), 1022-1028, issue dated 2026-03-05. Corrected: the date field was 2026-02-13, the date of the press coverage; PubMed and Europe PMC give the paper's first online publication as 2026-02-12, and that is now the date. The first weekly reading (data/readings/2026-10-16.toml, never edited) still says 2026-02-13. The record no longer says anything about Philipp Holliger's role in the group; he is the paper's last author."

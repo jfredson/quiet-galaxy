@@ -3,9 +3,9 @@
 # Publication records are appended and never edited except to fix an error, with a changelog line.
 
 id = "rueda-alana-2025"
-date = "2025-02-13"
+date = "2025-02-14"
 added_on = 2026-10-16
-authors = ["Eneritz Rueda-Alaña", "Fernando García-Moreno", "and colleagues"]
+authors = ["Eneritz Rueda-Alaña", "Rodrigo Senovilla-Ganzo", "Marco Grillo", "Enrique Vázquez", "Sergio Marco-Salas", "Tatiana Gallego-Flores", "Aitor Ordeñana-Manso", "Artemis Ftara", "Laura Escobar", "Alberto Benguría", "Ana Quintas", "Ana Dopazo", "Miriam Rábano", "María dM Vivanco", "Ana María Aransay", "Daniel Garrigos", "Ángel Toval", "José Luis Ferrán", "Mats Nilsson", "Juan Manuel Encinas-Pérez", "Maurizio De Pittà", "Fernando García-Moreno"]
 title = "Evolutionary convergence of sensory circuits in the pallium of amniotes"
 venue = "Science 387 (6735), eadp3411 (2025)"
 link = "https://doi.org/10.1126/science.adp3411"
@@ -20,8 +20,4 @@ factors = ["intelligence"]
 explanations = ["rare-intelligence"]
 moved_range = false
 
-verify = [
-  "The full author list, the exact publication date (one catalogue gives 2025-01-02, press coverage 2025-02-13) and the companion paper's citation (Zaremba and others, doi 10.1126/science.adp5182) are from press releases and catalogue records, not the paper; check them.",
-]
-
-notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict. Checked 2026-10-17 against the Crossref record, PubMed and Europe PMC: 22 authors (now given in full); Science 387 (6735), eadp3411, issue dated 2025-02-14. Corrected: the date field was 2025-02-13, the date of the press coverage; the three catalogues give 2025-02-14, and the 2025-01-02 that one catalogue shows is a placeholder for the volume, not the paper's date. The companion paper is confirmed in Crossref: Zaremba and 15 others, 'Developmental origins and evolution of pallial cell types and structures in birds', Science 387 (6735), eadp5182, doi 10.1126/science.adp5182, same issue. The first weekly reading (never edited) still says 2025-02-13."

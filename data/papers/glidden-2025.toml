@@ -5,7 +5,7 @@
 id = "glidden-2025"
 date = "2025-09-05"
 added_on = 2026-10-16
-authors = ["Ana Glidden", "Sukrit Ranjan", "Sara Seager", "Néstor Espinoza", "Ryan J. MacDonald", "Natalie H. Allen", "Caleb I. Cañas", "David Grant", "Amélie Gressier", "Kevin B. Stevenson", "Natasha E. Batalha", "Nikole K. Lewis", "and 16 others"]
+authors = ["Ana Glidden", "Sukrit Ranjan", "Sara Seager", "Néstor Espinoza", "Ryan J. MacDonald", "Natalie H. Allen", "Caleb I. Cañas", "David Grant", "Amélie Gressier", "Kevin B. Stevenson", "Natasha E. Batalha", "Nikole K. Lewis", "Douglas Long", "Hannah R. Wakeford", "Lili Alderson", "Ryan C. Challener", "Knicole Colón", "Jingcheng Huang", "Zifan Lin", "Dana R. Louie", "Elijah Mullens", "Kristin S. Sotzen", "Jeff A. Valenti", "Daniel Valentine", "Mark Clampin", "C. Matt Mountain", "Marshall Perrin", "Roeland P. van der Marel"]
 title = "JWST-TST DREAMS: Secondary Atmosphere Constraints for the Habitable Zone Planet TRAPPIST-1 e"
 venue = "Astrophysical Journal Letters (2025), doi 10.3847/2041-8213/adf62e; arXiv:2509.05407"
 link = "https://arxiv.org/abs/2509.05407"
@@ -21,8 +21,4 @@ factors = ["habitable-planets"]
 explanations = ["rare-earth", "we-are-early"]
 moved_range = false
 
-verify = [
-  "The author list is 28 names; the first twelve are given here and the count is from the arXiv page.",
-]
-
-notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict. Checked 2026-10-17 against the arXiv listing (https://arxiv.org/abs/2509.05407, submitted 2025-09-05): the author list is 28 names and is now given in full, in the listing's order; title, date and DOI match."

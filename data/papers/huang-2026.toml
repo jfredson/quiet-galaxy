@@ -3,11 +3,11 @@
 # Publication records are appended and never edited except to fix an error, with a changelog line.
 
 id = "huang-2026"
-date = "2026-01"
+date = "2026-01-12"
 added_on = 2026-10-16
-authors = ["Huang", "Tao", "Zhang"]
+authors = ["Bo-Lun Huang", "Zhen-Zhao Tao", "Tong-Jie Zhang"]
 title = "WISE/CatWISE Constraints on Dysonian Waste-Heat Technosignatures in Nearby Galaxies"
-venue = "arXiv:2601.07297; accepted for publication in the Astronomical Journal"
+venue = "The Astronomical Journal 171 (3), 131 (2026), doi 10.3847/1538-3881/ae31e9; arXiv:2601.07297"
 link = "https://arxiv.org/abs/2601.07297"
 finding = """
 Looks for the infrared glow of waste heat at the scale of whole galaxies, using the WISE all-sky
@@ -20,8 +20,4 @@ factors = ["detectable"]
 explanations = ["they-became-machines", "listening-the-wrong-way", "inward-turn"]
 moved_range = false
 
-verify = [
-  "The authors' given names and the exact submission date are not in the sources read (the arXiv listing and astrobiology.com's post of 2026-01-17); check the arXiv page for the full names, the date and the Astronomical Journal citation.",
-]
-
-notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict. Checked 2026-10-17 against the arXiv listing (https://arxiv.org/abs/2601.07297, submitted 2026-01-12) and the Crossref record: full names given; published in The Astronomical Journal 171 (3), 131 (online 2026-02-05, issue 2026-03-02). The date field was 2026-01 and is now the submission date, 2026-01-12."
