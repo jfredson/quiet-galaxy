@@ -1,0 +1,21 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "wilman-2026"
+date = "2026-01-20"
+added_on = 2026-10-16
+authors = ["Richard J. Wilman", "Arwen E. Nicholson", "Jacob Haqq-Misra"]
+title = "The Great Filter – Is it just a matter of time?"
+venue = "Proceedings of the International Astronomical Union 20 (S387), 178–192 (2026), Cambridge University Press"
+link = "https://doi.org/10.1017/s1743921324001352"
+finding = """
+A summary of the symposium's discussion of the Great Filter some twenty-five years after Hanson
+proposed it: whether the idea is still useful, whether current thinking places the improbable step
+in our past or our future, and what each placement means for the search for life. No new evidence;
+a statement of where the argument stands."""
+factors = []
+explanations = ["great-filter-ahead", "great-filter-behind-us"]
+moved_range = false
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

@@ -1,0 +1,24 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "bernabeu-2026"
+date = "2026-06-10"
+added_on = 2026-10-16
+authors = ["Moisès Bernabeu", "Saioa Manzano-Morales", "Marina Marcet-Houben", "Toni Gabaldón"]
+title = "Gene ancestries reveal diverse microbial associations during eukaryogenesis"
+venue = "Nature 656, 399–405 (2026)"
+link = "https://doi.org/10.1038/s41586-026-10639-9"
+finding = """
+Reconstructs the gene set of the last common ancestor of complex cells from thousands of genomes and
+finds its genes came from several bacterial partners beyond the archaeal host and the ancestor of
+mitochondria: Myxococcota (3.9% of the ancestral proteome) and Planctomycetota (2.2%) alongside the
+Alphaproteobacteria (4.0%) and Asgard archaea (3.3%), with giant viruses ferrying genes, and with the
+mitochondrion acquired late in a protracted process rather than in one founding event. The origin of
+complex cells looks less like a single freak capture and more like a long succession of associations
+inside a microbial community."""
+factors = ["intelligence"]
+explanations = ["complex-cells-are-rare"]
+moved_range = false
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

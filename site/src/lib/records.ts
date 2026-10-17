@@ -202,7 +202,17 @@ export interface Records {
   commit: string;        // short code of the source version, or ""
   counts: Counts;
   headline: Headline;
-  reading: null;         // the latest weekly reading, once the weekly scan exists
+  /** The latest weekly reading of the records against the news, for the home page's strip, or
+      null until the first has run; the full readings are typed in lib/readings.ts. */
+  reading: {
+    id: string; date: string; ran_at: string; run_by: 'scheduled' | 'hand'; records_read: number; searches: number;
+    counts: Record<'quiet' | 'noted' | 'moved' | 'flagged', number>;
+    moved: { record: string; name: string; path: string }[]; open_flags: number; path: string; file: string;
+  } | null;
+  readings: any[];                       // typed as Reading[] in lib/readings.ts
+  readings_by_record: Record<string, any[]>;
+  readings_waiting: any[];
+  readings_counts: { readings: number; items: number; waiting: number; by_hand: number };
   factors: Factor[];     // all seven, in equation order; `exists` says whether the record is written
   families: Family[];
   explanations: Explanation[];

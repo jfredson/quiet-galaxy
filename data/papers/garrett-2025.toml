@@ -1,0 +1,23 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "garrett-2025"
+date = "2025-09-28"
+added_on = 2026-10-16
+authors = ["Michael Garrett"]
+title = "Blink and you'll miss it: How Technological Acceleration Shrinks SETI's Narrow Detection Window"
+venue = "arXiv:2509.23632 (astro-ph.IM), 15 pages; accepted by Acta Astronautica"
+link = "https://arxiv.org/abs/2509.23632"
+finding = """
+Proposes that civilisations may advance so fast after reaching our stage that the phase in which
+their technology is detectable to us lasts mere decades, so the overlap between their signals and
+our instruments is tiny even if they are common and long-lived. On this view the silence says
+nothing about how many there are. The paper argues for searches that do not assume a technology:
+persistent large-scale traces such as waste heat and broadband leakage, and anomaly detection across
+many kinds of data."""
+factors = ["lifetime", "detectable"]
+explanations = ["ships-in-the-night", "listening-the-wrong-way", "they-became-machines"]
+moved_range = false
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

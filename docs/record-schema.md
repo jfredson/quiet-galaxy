@@ -13,7 +13,9 @@ The data is the project. There are four kinds of record, one TOML file per recor
 | library | `data/library/` | One book, film, show, game or video that dramatises a factor or an explanation | the library entry's address |
 | publication | `data/papers/` | One scientific paper or discovery that bears on the calculation, in an append-only log | the citation key other records link with |
 
-A fifth file, `data/retired.toml`, lists ids that once existed and were retired or replaced. It is how an id is taken out of service without ever being renamed.
+A fifth kind, the **weekly reading** (`data/readings/`, one file per run, named for the date it ran), was added on the evening of 2026-10-16 with the weekly reading itself (`docs/weekly-reading.md`); its layout is under "The reading record" below, and the choice to make it a kind rather than a file outside the kinds is decision 13. **Proposed, not yet ruled.**
+
+A further file, `data/retired.toml`, lists ids that once existed and were retired or replaced. It is how an id is taken out of service without ever being renamed.
 
 The links between the four kinds point one way. A library entry says which explanations and factors it illustrates; a publication says which factors and explanations it bears on; a factor's estimates may name the publication they come from; an explanation names the factors it bears on and the explanations related to it. A page for a factor or an explanation gathers the papers and library entries that point at it. Nothing is stored in two places.
 
@@ -246,9 +248,59 @@ The publications log is append-only: a record is added when a paper is read and 
     explanations = []
     moved_range = false
 
+## The reading record
+
+Added 2026-10-16 (proposed, not yet ruled; decision 13). One file per weekly reading of the records against the news, under `data/readings/`, written once and never edited. The procedure that writes it, the four verdicts and the limits on what a reading may do are in `docs/weekly-reading.md`.
+
+| Field | Required | Meaning |
+|---|---|---|
+| `id` | yes | The Pacific date the reading ran, `2026-10-16`, with `-2`, `-3` on a second or third run the same day. The file is named for it. |
+| `date` | yes | The same date, as a TOML date. |
+| `ran_at` | yes | When the reading finished, universal time, as text: `"2026-10-17T03:44:50Z"`. |
+| `run_by` | yes | `"scheduled"` (the weekly cloud task) or `"hand"` (a session a person started). |
+| `window` | yes | One line saying what period the searches covered. |
+| `records_read` | yes | How many records were read; must equal the number of items. |
+| `searches` | yes | How many distinct searches were run across all items; the validator counts them. |
+| `commit_before` | yes | The short commit the records were read at. |
+| `notes` | no | Anything else about the run. |
+| `[[item]]` | at least one | One per record read, in the order read. Fields: `record` (yes; a factor or explanation id, once per reading), `verdict` (yes; `quiet`, `noted`, `moved` or `flagged`), `queries` (yes; at least two searches, each a line of text, including any listed again from another record), `reused` (no; one line per search first run for another record, quoting it as written in `queries`, naming that record and saying why it bears on this one), `found` (yes; one to three plain sentences on what was found and why it got this verdict), `sources` (required for every verdict but quiet; links to public records), `publications` (required for noted and moved; ids of the publication records logged, which must exist), `for_john` (required for flagged, and only there; the move the reading would have made and why it was not its to make). |
+
+### Worked example: `data/readings/2026-10-16.toml`
+
+Abridged; the file in `data/` is the first reading, with 39 items.
+
+    id = "2026-10-16"
+    date = 2026-10-16
+    ran_at = "2026-10-17T03:44:50Z"
+    run_by = "hand"
+    window = "The first reading: nothing had been read before, so the searches reached back over 2025 and 2026 ..."
+    records_read = 39
+    searches = 78
+    commit_before = "9bc994a"
+
+    [[item]]
+    record = "lifetime"
+    verdict = "noted"
+    queries = [
+      "how long technological civilizations last Drake equation L new estimate 2026 paper",
+      "civilisation lifetime existential risk estimate Fermi paradox study 2026",
+    ]
+    found = "Four published arguments with a number or a reinterpretation, none in the log: Rahvar and Rouhani (2026-02-24) turn the silence into an upper bound of about 5,000 years ... the range of 100 to 10 billion years stays."
+    sources = ["https://arxiv.org/abs/2602.22252", "https://arxiv.org/abs/2604.13774"]
+    publications = ["rahvar-2026", "blanco-2026", "garrett-2025", "bertolami-2025"]
+
+    [[item]]
+    record = "star-formation"
+    verdict = "flagged"
+    queries = ["...", "..."]
+    found = "..."
+    sources = ["https://arxiv.org/abs/2301.10192"]
+    publications = ["siegert-2023", "quintana-2025"]
+    for_john = "The reading would have raised the range's top from 10 to 20 stars a year on the 2023 aluminium-26 result ... Your call."
+
 ## The retired list
 
-`data/retired.toml` holds a list `retired`, each entry with `id`, `kind` (`factor`, `explanation`, `library` or `publication`), `date`, `why`, and optionally `replaced_by` (an id that must exist). To retire a record: delete its file, add the entry, and update every record that linked to it. The validator refuses a new record that reuses a retired id.
+`data/retired.toml` holds a list `retired`, each entry with `id`, `kind` (`factor`, `explanation`, `library`, `publication` or `reading`), `date`, `why`, and optionally `replaced_by` (an id that must exist). To retire a record: delete its file, add the entry, and update every record that linked to it. The validator refuses a new record that reuses a retired id.
 
 ## Rules the validator enforces
 
@@ -264,6 +316,7 @@ The publications log is append-only: a record is added when a paper is read and 
 8. Every library entry and every publication names at least one factor or explanation.
 9. A publication with `moved_range = true` is named by a revision on some factor.
 10. No id is renamed. The file name must equal the id; and a data file that was committed to the repository before and is now gone must have an entry in `data/retired.toml` (the script reads the repository's history for this, and skips the check with a note when the data folder is not in a git repository). A current record may not reuse a retired id.
+11. (Added 2026-10-16, proposed.) Every reading's id is a date and matches its `date`; every item names a factor or explanation that exists, once; every verdict is one of the four; every item lists at least two searches, and a `reused` line quotes one of them and gives a reason; every verdict but quiet cites a source; a noted or moved item names a publication that exists; a moved item is a factor whose record carries a revision dated the reading's day naming one of those publications, and that publication says `moved_range = true`; a flagged item has a `for_john` line and no other item does; `records_read` equals the number of items and `searches` the number of distinct searches.
 
 `python3 scripts/compute.py run` validates first, refuses with a plain message until all seven factor records exist, and otherwise plays the equation out and writes `data/headline.json`. How it does that, and the parameters proposed for it on 2026-10-16, are in `docs/method.md`.
 
@@ -283,6 +336,10 @@ Proposed by Claude with a confidence level and the strongest alternative for eac
 10. **A publication that says it moved a range must be named by a revision on a factor.** High confidence; it is the cross-check that keeps the log honest, and the weekly scan's "moved a range" verdict is only true when the factor file changed.
 11. **Unknown fields are refused.** High confidence; standard practice for a strict validator. Alternative: ignore them, which lets a misspelt `source` become a factor with no source that passes.
 12. **The `verify` list is carried over from The Belt Equation.** High confidence; it is the mechanism behind the ground rule that facts from memory are marked for checking.
+
+## Decision 13 (2026-10-16, evening; proposed, not ruled)
+
+**The weekly reading's record is a fifth kind of record in `data/readings/`, validated by `compute.py` with the other four, rather than a file outside the kinds checked by the export script as The Belt Equation does.** High confidence. The validator already refuses any folder of TOML it does not know; the reading has an id, a file named for it, links to records and publications that must resolve, and a history check (a reading that disappears must be retired), all of which the existing machinery gives for free, and "every record passes `compute.py validate`" stays true. Standard practice: one validator for all the data. Alternative: a file outside the kinds checked by `scripts/export.py`, which keeps `compute.py` smaller at the cost of two validators and a reading that the validate command would not see. The other choices behind the reading (the cap, the schedule, every record every week) are in `docs/weekly-reading.md`.
 
 ## Known simplifications
 

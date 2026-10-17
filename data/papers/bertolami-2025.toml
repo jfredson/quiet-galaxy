@@ -1,0 +1,22 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "bertolami-2025"
+date = "2025-10-08"
+added_on = 2026-10-16
+authors = ["Orfeu Bertolami"]
+title = "On Bayesian inference considerations and other issues concerning Drake's equation of Astrosociobiology"
+venue = "arXiv:2511.11582 (physics.hist-ph, with astro-ph.EP), 15 pages"
+link = "https://arxiv.org/abs/2511.11582"
+finding = """
+Reviews the equation and proposes replacing its last piece, the lifetime, with a term built from the
+energy a civilisation can spend, the area it can search and the entropy it generates, framed as the
+capacity needed to get past a civilisation's own climate and related crises. Concludes that a
+typical search spans a couple of decades, so a systematic search of about a hundred stars would take
+a few thousand years."""
+factors = ["lifetime"]
+explanations = ["no-paradox-just-wide-ranges"]
+moved_range = false
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

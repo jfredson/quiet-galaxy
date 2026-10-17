@@ -1,0 +1,24 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "reiss-2025"
+date = "2025-10-01"
+added_on = 2026-10-16
+authors = ["Chris Reiss", "Justin C. Feng"]
+title = "Redshifted civilizations, galactic empires, and the Fermi paradox"
+venue = "Acta Astronautica 246, 114–128 (September 2026); arXiv:2510.00377 (gr-qc)"
+link = "https://arxiv.org/abs/2510.00377"
+finding = """
+Works out, within ordinary general relativity, what it would take for a civilisation to live in a
+frame where time runs slowly: orbits near the photon radius of the galaxy's central black hole are
+tolerable at biologically bearable accelerations and within reach of a civilisation well below the
+level of harnessing a whole star, and one civilisation at that level could keep a galaxy-spanning
+society running with a time-dilation factor of ten thousand, so a trip across the galaxy fits in a
+lifetime as its citizens count it. Signals from such orbits would drift down in frequency. The
+authors also argue that fast ships are so vulnerable that the dark forest's caution has a basis."""
+factors = []
+explanations = ["inward-turn", "transcension", "dark-forest"]
+moved_range = false
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

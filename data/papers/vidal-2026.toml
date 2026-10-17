@@ -1,0 +1,27 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "vidal-2026"
+date = "2026-05-20"
+added_on = 2026-10-16
+authors = ["Clément Vidal", "Benji L. Fields", "Damian R. Sowinski", "Stuart Bartlett", "Richard J. Terrile", "Alex Ellery", "Daliah Bibas", "Armando M. Mastrogiovanni", "Niklas Döbler", "Manika Singla", "Julia DeMarines", "Theresa Fisher", "and 7 others"]
+title = "The Search for Technosignatures: a Review of Possibilities"
+venue = "arXiv:2605.21093 (astro-ph.EP, with astro-ph.IM), 118 pages; from a workshop at the Penn State SETI Symposium 2023"
+link = "https://arxiv.org/abs/2605.21093"
+finding = """
+A long review of every kind of technological trace that has been proposed, ordered by scale from the
+solar system to the edge of the observable universe: planetary surfaces and atmospheres, stellar
+energy use, compact objects, communication, travel, and galaxy-scale engineering, including
+neutrinos and gravitational waves as carriers. It argues for searches that combine biosignatures with
+technosignatures and for looking for anomalies without assuming a technology. A map of what has and
+has not been searched for."""
+factors = ["detectable"]
+explanations = ["not-looked-long-enough", "listening-the-wrong-way"]
+moved_range = false
+
+verify = [
+  "The author list is 19 names; the first twelve are given here and the count is from the arXiv page.",
+]
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

@@ -1,0 +1,30 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "quintana-2025"
+date = "2025-03-11"
+added_on = 2026-10-16
+authors = ["Alexis L. Quintana", "Nicholas J. Wright", "Juan Martínez García"]
+title = "A census of OB stars within 1 kpc and the star formation and core collapse supernova rates of the Milky Way"
+venue = "Monthly Notices of the Royal Astronomical Society 538, 1367 (2025); arXiv:2503.08286"
+link = "https://arxiv.org/abs/2503.08286"
+finding = """
+Maps 24,706 hot, massive stars within a kiloparsec of the Sun and from their numbers and ages works
+out how fast such stars form and how often they explode. Scaled to the whole galaxy that gives a
+star formation rate of 0.67 solar masses a year and a core-collapse supernova rate of 0.4 to 0.5
+per century, both lower than earlier estimates, which the authors put down to a better census and
+newer models of how stars evolve. Nearby supernovae come about 2.5 times per billion years, close
+to the rate at which Earth has suffered mass extinctions with no settled cause, which the authors
+take as support for a supernova behind one or more of them (the late Devonian and late Ordovician
+are named in the press release)."""
+factors = ["star-formation"]
+explanations = ["hostile-galaxy", "natural-catastrophes"]
+moved_range = false
+
+verify = [
+  "The third author's name and the journal page number are from the arXiv listing and a catalogue record (2025MNRAS.538.1367Q), not from the paper; check them.",
+  "That the press release names the late Devonian and late Ordovician extinctions is from Keele University's news item of 2025-03-13; the paper's own wording was not read.",
+]
+
+notes = "Logged by the first weekly reading, 2026-10-16. The star-formation figure here (0.67 solar masses a year, roughly 2 to 3 stars a year at Siegert 2023's conversion) sits inside the range this site uses, on its low side; Siegert 2023's figure sits above it. The two together are the spread of the current measurements."

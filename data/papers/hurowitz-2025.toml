@@ -1,0 +1,28 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "hurowitz-2025"
+date = "2025-09-10"
+added_on = 2026-10-16
+authors = ["Joel A. Hurowitz", "M. M. Tice", "A. C. Allwood", "M. L. Cable", "K. P. Hand", "A. E. Murphy", "K. Uckert", "J. F. Bell III", "T. Bosak", "A. P. Broz", "E. Clavé", "A. Cousin", "and 77 others"]
+title = "Redox-driven mineral and organic associations in Jezero Crater, Mars"
+venue = "Nature 645, 332–340 (2025)"
+link = "https://doi.org/10.1038/s41586-025-09413-0"
+finding = """
+The Perseverance rover found, in a mudstone called Cheyava Falls in an old river channel on Mars,
+organic carbon together with tiny nodules and millimetre-scale reaction fronts of iron phosphate and
+iron sulfide, the minerals that form on Earth when organic matter feeds reactions at low temperature,
+most often with microbes involved. The team found no strong evidence for a non-biological route and
+no sign of the heating that one would need, but cannot rule it out: the paper calls the features
+potential biosignatures and says the drilled sample must be examined on Earth to settle it. The
+sample is sealed on the rover, and the mission to bring it back is unfunded."""
+factors = ["life"]
+explanations = ["rare-life", "great-filter-behind-us"]
+moved_range = false
+
+verify = [
+  "The author list is 89 names; the first twelve are given here and the count was read from the paper's byline.",
+]
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

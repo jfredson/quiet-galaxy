@@ -1,0 +1,24 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "finke-2024"
+date = "2024-07-22"
+added_on = 2026-10-16
+authors = ["Justin Finke", "Soebur Razzaque"]
+title = "Is Gamma-ray Burst 221009A Really a Once-in-10,000 Year Event?"
+venue = "arXiv:2407.15940 (astro-ph.HE), 15 pages; submitted to the AAS journals"
+link = "https://arxiv.org/abs/2407.15940"
+finding = """
+The brightest gamma-ray burst ever recorded had been called a once-in-ten-thousand-years event by
+extrapolating the known population; the authors argue it may instead belong to a separate population
+of narrow-jet bursts, in which case such bursts could come as often as one in 200 years across the
+sky. For our own galaxy that gives a burst bright enough to cause a mass extinction on Earth about
+once per 500 million years, from anywhere in the galaxy, which would make the galaxy a more sterile
+place than the earlier reckoning. Confirming the population would take more than a century of
+monitoring."""
+factors = []
+explanations = ["hostile-galaxy", "natural-catastrophes"]
+moved_range = false
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

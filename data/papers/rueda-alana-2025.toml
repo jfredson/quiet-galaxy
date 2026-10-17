@@ -1,0 +1,27 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "rueda-alana-2025"
+date = "2025-02-13"
+added_on = 2026-10-16
+authors = ["Eneritz Rueda-Alaña", "Fernando García-Moreno", "and colleagues"]
+title = "Evolutionary convergence of sensory circuits in the pallium of amniotes"
+venue = "Science 387 (6735), eadp3411 (2025)"
+link = "https://doi.org/10.1126/science.adp3411"
+finding = """
+Compares how the sensory parts of the forebrain are built in a chick, a gecko and a mouse, by
+birth-dating neurons and mapping their genes, and finds that birds and mammals reach similar circuits
+by different developmental routes: the neurons are not inherited from a common ancestor but arrived
+at separately. One of a set of papers in the same issue (Zaremba and others on the bird forebrain's
+cell types) read together as showing that complex cognition evolved at least twice among
+vertebrates."""
+factors = ["intelligence"]
+explanations = ["rare-intelligence"]
+moved_range = false
+
+verify = [
+  "The full author list, the exact publication date (one catalogue gives 2025-01-02, press coverage 2025-02-13) and the companion paper's citation (Zaremba and others, doi 10.1126/science.adp5182) are from press releases and catalogue records, not the paper; check them.",
+]
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

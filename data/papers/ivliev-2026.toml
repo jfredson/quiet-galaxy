@@ -1,0 +1,23 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "ivliev-2026"
+date = "2026-06-11"
+added_on = 2026-10-16
+authors = ["Sergey Ivliev"]
+title = "Autonomous AI-Cosmoindustry and the Quiet Expansion Filter: A Threshold-Based Resolution of the Fermi Paradox"
+venue = "arXiv:2606.13914 (astro-ph.IM, with physics.soc-ph), 28 pages; submitted to Acta Astronautica"
+link = "https://arxiv.org/abs/2606.13914"
+finding = """
+Proposes that once a civilisation's industry runs itself off its planet, spreading between stars
+becomes too cheap and useful to refuse, but it spreads quietly: small probes, robotic seed factories
+and slow replication rather than star-harvesting empires. One such civilisation would saturate its
+reachable neighbourhood within about ten million years, so the fact that none has reached us means
+none arose within reach. The traces to look for are weak artefacts and local probes, not galaxy-scale
+energy use. A preprint, not yet reviewed."""
+factors = []
+explanations = ["no-interest-in-contact", "expansion-stalls", "they-became-machines"]
+moved_range = false
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

@@ -1,0 +1,28 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "glidden-2025"
+date = "2025-09-05"
+added_on = 2026-10-16
+authors = ["Ana Glidden", "Sukrit Ranjan", "Sara Seager", "Néstor Espinoza", "Ryan J. MacDonald", "Natalie H. Allen", "Caleb I. Cañas", "David Grant", "Amélie Gressier", "Kevin B. Stevenson", "Natasha E. Batalha", "Nikole K. Lewis", "and 16 others"]
+title = "JWST-TST DREAMS: Secondary Atmosphere Constraints for the Habitable Zone Planet TRAPPIST-1 e"
+venue = "Astrophysical Journal Letters (2025), doi 10.3847/2041-8213/adf62e; arXiv:2509.05407"
+link = "https://arxiv.org/abs/2509.05407"
+finding = """
+Four transits of TRAPPIST-1 e, an Earth-sized planet in the habitable zone of a red dwarf 40
+light-years away, observed with JWST, with the star's own variability contaminating every visit.
+The data give no strong evidence for or against an atmosphere: a bare rock fits, and so does a
+nitrogen-rich atmosphere with traces of carbon dioxide and methane; hydrogen-rich atmospheres are
+excluded and thick carbon dioxide atmospheres like Venus's or Mars's are weakly disfavoured. A
+follow-up campaign of fifteen more transits, paired with transits of the airless inner planet to
+cancel the star, is under way; its result had not been published by 2026-10-16."""
+factors = ["habitable-planets"]
+explanations = ["rare-earth", "we-are-early"]
+moved_range = false
+
+verify = [
+  "The author list is 28 names; the first twelve are given here and the count is from the arXiv page.",
+]
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

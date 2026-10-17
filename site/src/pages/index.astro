@@ -15,6 +15,7 @@
 // equation line are copied from The Belt Equation's home page (site/src/pages/index.astro there).
 import Base from '../layouts/Base.astro';
 import { records, longDate, plainNumber, percent, rangeText, plural, symbolHtml, medianWords } from '../lib/records';
+import { latestReading, readingSummary } from '../lib/readings';
 
 const head = records.headline;
 const c = records.counts;
@@ -24,6 +25,10 @@ const width = head.available && head.optimist !== undefined && head.pessimist !=
   ? { optimist: head.optimist, pessimist: head.pessimist }
   : null;
 const NOT_YET = 'not computed yet';
+// The last-checked strip (tracker pattern, rule 5.2; copied from The Belt Equation's scan strip):
+// one line saying when the records were last read against the news and what came of it. When
+// exactly one range moved, the line names the piece; otherwise the reading page has the detail.
+const loneMover = latestReading && latestReading.moved.length === 1 ? latestReading.moved[0] : null;
 // Short plain names under each term of the equation on the first screen (the full names are on
 // the equation page and in each term's title).
 const SHORT: Record<string, string> = {
@@ -69,10 +74,18 @@ const SHORT: Record<string, string> = {
       </p>
       <p class="scan-strip">
         <span class="strip-dot" aria-hidden="true"></span>
-        <span>
-          No weekly reading of the records against the news has run yet. The records were last changed on {longDate(records.exported_on)}: {written} of the seven pieces written up, {plural(c.explanations, 'explanation', 'explanations')}, {plural(c.publications, 'paper logged', 'papers logged')}.
-          {' '}<a href="/story/">See the story so far</a>.
-        </span>
+        {latestReading ? (
+          <span>
+            Last checked {longDate(latestReading.date)}: {readingSummary(latestReading)}{loneMover ? <>: <a href={loneMover.path}>{loneMover.name}</a></> : ''}.
+            {' '}<a href="/reading/">See the week's reading</a>.
+            {latestReading.run_by === 'hand' && <span class="strip-test">This one was run by hand, before the weekly task started.</span>}
+          </span>
+        ) : (
+          <span>
+            No weekly reading of the records against the news has run yet. The records were last changed on {longDate(records.exported_on)}: {written} of the seven pieces written up, {plural(c.explanations, 'explanation', 'explanations')}, {plural(c.publications, 'paper logged', 'papers logged')}.
+            {' '}<a href="/story/">See the story so far</a>.
+          </span>
+        )}
       </p>
       <div class="ctas">
         <a class="btn" href="/equation/">Why so uncertain?</a>

@@ -1,0 +1,23 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "mills-2025"
+date = "2025-02-14"
+added_on = 2026-10-16
+authors = ["Daniel B. Mills", "Jennifer L. Macalady", "Adam Frank", "Jason T. Wright"]
+title = "A reassessment of the \"hard-steps\" model for the evolution of intelligent life"
+venue = "Science Advances 11, eads5698 (2025); arXiv:2408.10293"
+link = "https://doi.org/10.1126/sciadv.ads5698"
+finding = """
+Re-examines the model, going back to Carter 1983, on which the long wait for intelligence on Earth
+shows that several steps on the way were intrinsically improbable, and argues the record is explained
+without any hard step: the major transitions (complex cells, animals, and so on) waited for global
+environmental windows of habitability to open, so humans arrived on time relative to the biosphere's
+lifespan rather than early or late. If so, the argument that intelligence must be rare because it
+took so long here loses its force."""
+factors = ["intelligence"]
+explanations = ["great-filter-behind-us", "we-are-early", "rare-intelligence"]
+moved_range = false
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

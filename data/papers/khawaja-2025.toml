@@ -1,0 +1,23 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "khawaja-2025"
+date = "2025-10-01"
+added_on = 2026-10-16
+authors = ["Nozair Khawaja", "Frank Postberg", "Thomas R. O'Sullivan", "Maryse Napoleoni", "Sascha Kempf", "Fabian Klenner", "Yasuhito Sekine", "Maxwell Craddock", "Jon Hillier", "Jonas Simolka", "Lucía Hortal Sánchez", "Ralf Srama"]
+title = "Detection of organic compounds in freshly ejected ice grains from Enceladus's ocean"
+venue = "Nature Astronomy 9, 1662–1671 (2025)"
+link = "https://doi.org/10.1038/s41550-025-02655-y"
+finding = """
+Re-analyses Cassini's 2008 flight through the plume of Saturn's moon Enceladus, when it hit ice grains
+only minutes out of the moon's ocean, and finds organic compounds in them: aromatic and oxygen-bearing
+groups already known from the older ring grains, and newly aliphatic and ring-shaped esters, alkenes
+and ethers, with nitrogen- and oxygen-bearing compounds tentatively. Because the grains are fresh,
+the chemistry comes from the ocean, pointing to hydrothermal organic chemistry under the ice. Not
+life, but the ingredients and the conditions, confirmed in a second ocean."""
+factors = ["life"]
+explanations = ["life-under-ice", "rare-life"]
+moved_range = false
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

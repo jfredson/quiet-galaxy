@@ -11,9 +11,9 @@ Plain Python, standard library only. Run from anywhere:
                                                    JSON goes (--out - prints it instead)
     python3 scripts/compute.py --data DIR ...      use a different data folder (for tests)
 
-"validate" reads every TOML file under data/factors, data/explanations, data/library and
-data/papers, plus data/retired.toml, and lists everything that breaks a rule in plain
-language: a factor with no source, an explanation with no family or no factor, a link to a
+"validate" reads every TOML file under data/factors, data/explanations, data/library,
+data/papers and data/readings, plus data/retired.toml, and lists everything that breaks a rule
+in plain language: a factor with no source, an explanation with no family or no factor, a link to a
 record that does not exist, a file whose name and id disagree, an id that was committed
 before and has disappeared without an entry in data/retired.toml. It exits non-zero on any
 failure, and nothing downstream runs until it passes.
@@ -27,7 +27,8 @@ records exist it says so and stops. The parameters (number of runs, seed, galaxy
 the three range shapes are in docs/method.md; John ruled them on 2026-10-16.
 
 Written 2026-10-16 (weekend step 2 of docs/2026-10-16-kickoff.md); the headline computation
-added the same day (weekend step 3, Saturday session A).
+added the same day (weekend step 3, Saturday session A); the fifth kind of record, the weekly
+reading (data/readings/, docs/weekly-reading.md), added the same evening.
 """
 
 from __future__ import annotations
@@ -73,7 +74,20 @@ DIRECTIONS = {"lowers", "raises", "unchanged"}
 SHAPES = {"log-uniform", "uniform", "log-normal-rate"}
 RANGE_STATUSES = {"first-pass", "reviewed"}
 LIBRARY_KINDS = {"book", "story", "film", "television", "game", "video", "essay"}
-RECORD_KINDS = {"factor", "explanation", "library", "publication"}
+RECORD_KINDS = {"factor", "explanation", "library", "publication", "reading"}
+
+# The four verdicts a weekly reading may give a record (docs/weekly-reading.md). "moved" is only
+# ever given to a factor, since only a factor carries a range.
+VERDICTS = ("quiet", "noted", "moved", "flagged")
+READING_RUN_BY = {"scheduled", "hand"}
+# A reading's id is the Pacific date it ran, with -2, -3 ... on a second run the same day.
+READING_ID_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})(-\d+)?$")
+# Words that do not count toward the reason on a reused-search line (copied from The Belt
+# Equation's export script, where the rule was ruled by John on 2026-10-06).
+REUSED_FILLER = {"the", "a", "an", "of", "for", "to", "and", "or", "in", "on", "at", "it", "its",
+                 "this", "that", "was", "is", "first", "run", "search", "searched", "reused",
+                 "record", "same", "also", "because", "since", "so", "as", "from", "with"}
+REUSED_REASON_WORDS = 5
 
 # Folder under data/ -> record kind.
 FOLDERS: dict[str, str] = {
@@ -81,6 +95,7 @@ FOLDERS: dict[str, str] = {
     "explanations": "explanation",
     "library": "library",
     "papers": "publication",
+    "readings": "reading",
 }
 
 ID_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
@@ -97,6 +112,8 @@ ALLOWED: dict[str, set[str]] = {
                 "worth_the_time", "link", "verify", "notes"},
     "publication": {"id", "date", "added_on", "authors", "title", "venue", "link", "finding",
                     "factors", "explanations", "moved_range", "verify", "notes"},
+    "reading": {"id", "date", "ran_at", "run_by", "window", "records_read", "searches",
+                "commit_before", "item", "notes"},
 }
 REQUIRED: dict[str, list[str]] = {
     "factor": ["id", "symbol", "order", "name", "unit", "description", "what_would_move_this",
@@ -106,7 +123,11 @@ REQUIRED: dict[str, list[str]] = {
     "library": ["id", "title", "maker", "year", "kind", "how", "worth_the_time"],
     "publication": ["id", "date", "added_on", "authors", "title", "venue", "link", "finding",
                     "moved_range"],
+    "reading": ["id", "date", "ran_at", "run_by", "window", "records_read", "searches",
+                "commit_before", "item"],
 }
+READING_ITEM_ALLOWED = {"record", "verdict", "queries", "reused", "found", "sources", "publications",
+                        "for_john"}
 ESTIMATE_ALLOWED = {"who", "when", "value", "low", "high", "source", "method", "link", "publication"}
 RANGE_ALLOWED = {"low", "high", "median", "spread_orders", "shape", "status", "set_on", "why", "sources"}
 REVISION_ALLOWED = {"date", "field", "old", "new", "why", "publication"}
@@ -146,7 +167,9 @@ def load_records(data_dir: Path) -> dict:
     for folder, kind in FOLDERS.items():
         sub = data_dir / folder
         if not sub.is_dir():
-            problems.append(f"{folder}/ is missing from {data_dir}")
+            # The readings folder is created by the first reading; the other four must exist.
+            if folder != "readings":
+                problems.append(f"{folder}/ is missing from {data_dir}")
             continue
         for path in sorted(sub.glob("*.toml")):
             table = read(path)
@@ -159,7 +182,7 @@ def load_records(data_dir: Path) -> dict:
     # Any other folder holding TOML is a mistake: a record in the wrong place is never read.
     for sub in sorted(p for p in data_dir.iterdir() if p.is_dir()):
         if sub.name not in FOLDERS and any(sub.rglob("*.toml")):
-            problems.append(f"{sub.name}/ is not one of the four record folders "
+            problems.append(f"{sub.name}/ is not one of the five record folders "
                             f"({', '.join(FOLDERS)}) but holds TOML files")
 
     retired: list[dict] = []
@@ -223,6 +246,9 @@ def validate(loaded: dict, previously_seen: set[tuple[str, str]] | None = None) 
 
     def where(r: dict) -> str:
         return f"{r['_kind']} {r['_path'].name}"
+
+    # Readings come last so that every other id is known when their items are checked.
+    records = sorted(records, key=lambda r: r["_kind"] == "reading")
 
     # ---- ids: shape, uniqueness, file name
     by_kind: dict[str, dict[str, dict]] = {k: {} for k in RECORD_KINDS}
@@ -302,6 +328,8 @@ def validate(loaded: dict, previously_seen: set[tuple[str, str]] | None = None) 
             _check_library(r, tag, explanation_ids, problems)
         elif kind == "publication":
             _check_publication(r, tag, explanation_ids, by_kind["factor"], problems)
+        elif kind == "reading":
+            _check_reading(r, tag, by_kind["factor"], explanation_ids, by_kind["publication"], problems)
 
     return problems
 
@@ -321,7 +349,10 @@ def _check_text_fields(r: dict, tag: str, problems: list[str]) -> None:
     text_fields = {"id", "symbol", "name", "unit", "description", "what_would_move_this", "family",
                    "proposed_by", "proposed_source", "summary", "body", "standing",
                    "would_strengthen", "would_weaken", "title", "maker", "kind", "how",
-                   "worth_the_time", "link", "date", "venue", "finding", "notes"}
+                   "worth_the_time", "link", "venue", "finding", "notes", "ran_at", "run_by",
+                   "window", "commit_before"}
+    if r["_kind"] != "reading":
+        text_fields.add("date")   # a world date, as text; a reading's date is a TOML date
     for key in text_fields & set(r):
         if not isinstance(r[key], str):
             problems.append(f"{tag}: {key!r} must be text")
@@ -550,11 +581,152 @@ def _check_publication(r: dict, tag: str, explanation_ids: set[str], factors: di
             problems.append(f"{tag}: says it moved a range, but no factor has a revision naming {rid!r}")
 
 
+def _check_reading(r: dict, tag: str, factors: dict[str, dict], explanation_ids: set[str],
+                   publications: dict[str, dict], problems: list[str]) -> None:
+    """A weekly reading of the records against the news (docs/weekly-reading.md).
+
+    The rules: the id is the Pacific date the reading ran (with -2 on a second run the same day)
+    and the file is named for it; `date` is that date; every item names a factor or an
+    explanation, once; every verdict is one of the four; every item lists at least two searches
+    it ran, and a search borrowed from another record carries a reused line with a reason; every
+    verdict but quiet cites a source; a noted or moved item names the publication it logged; a
+    moved item is a factor whose record carries a revision dated the reading's day naming that
+    publication; a flagged item says what it leaves for John; the counts in the header match the
+    items.
+    """
+    rid = r.get("id")
+    m = READING_ID_RE.match(rid) if isinstance(rid, str) else None
+    if not m:
+        problems.append(f"{tag}: a reading's id is the date it ran, like 2026-10-16 (or 2026-10-16-2 "
+                        f"for a second run that day), not {rid!r}")
+    date = r.get("date")
+    if "date" in r and not isinstance(date, dt.date):
+        problems.append(f"{tag}: date must be a TOML date like 2026-10-16")
+    elif m and isinstance(date, dt.date) and date.isoformat() != m.group(1):
+        problems.append(f"{tag}: the date in the record ({date.isoformat()}) is not the date in the id "
+                        f"({m.group(1)})")
+    if "run_by" in r and r["run_by"] not in READING_RUN_BY:
+        problems.append(f"{tag}: run_by must be 'scheduled' (the weekly cloud task) or 'hand' (a session a "
+                        f"person started), not {r.get('run_by')!r}")
+    for key in ("records_read", "searches"):
+        if key in r and (not isinstance(r[key], int) or isinstance(r[key], bool) or r[key] < 0):
+            problems.append(f"{tag}: {key!r} must be a whole number")
+
+    items = r.get("item", [])
+    if not isinstance(items, list):
+        problems.append(f"{tag}: 'item' must be a list of [[item]] tables")
+        items = []
+    seen: set[str] = set()
+    all_queries: set[str] = set()
+    for i, item in enumerate(items, 1):
+        itag = f"{tag}, item {i}"
+        if not isinstance(item, dict):
+            problems.append(f"{itag}: must be a table")
+            continue
+        for key in sorted(set(item) - READING_ITEM_ALLOWED):
+            problems.append(f"{itag}: unknown field {key!r}")
+        rec = item.get("record")
+        is_factor = rec in factors
+        if not isinstance(rec, str) or not rec:
+            problems.append(f"{itag}: every item names the record it read ('record')")
+        elif not is_factor and rec not in explanation_ids:
+            problems.append(f"{itag}: record {rec!r} is not a factor or an explanation that exists")
+        elif rec in seen:
+            problems.append(f"{itag}: record {rec!r} is read twice in the same reading")
+        if isinstance(rec, str):
+            seen.add(rec)
+            itag = f"{tag}, item {i} ({rec})"
+
+        verdict = item.get("verdict")
+        if verdict not in VERDICTS:
+            problems.append(f"{itag}: verdict must be one of {', '.join(VERDICTS)}, not {verdict!r}")
+        found = item.get("found")
+        if not isinstance(found, str) or not found.strip():
+            problems.append(f"{itag}: 'found' says in plain words what was found and why it got this verdict, "
+                            "and is required on every verdict")
+
+        queries = item.get("queries")
+        if not isinstance(queries, list) or not queries or any(not isinstance(q, str) or not q.strip() for q in queries):
+            problems.append(f"{itag}: 'queries' lists the searches that were run, each a line of text")
+            queries = []
+        elif len(queries) < 2:
+            problems.append(f"{itag}: one search is not enough to call a week: list at least two, worded "
+                            "differently (one aimed at the kind of source the record names, one at wider "
+                            "reporting)")
+        all_queries.update(q.strip() for q in queries)
+        reused = item.get("reused")
+        if reused is not None:
+            if not isinstance(reused, list) or any(not isinstance(x, str) or not x.strip() for x in reused):
+                problems.append(f"{itag}: 'reused' lists the searches first run for another record, each a line "
+                                "naming the search, that record, and why it bears on this one")
+            else:
+                for line in reused:
+                    named = [q for q in queries if q.strip() and q.strip().lower() in line.lower()]
+                    if not named:
+                        problems.append(f"{itag}: the reused line {line.strip()[:60]!r} does not quote any search in "
+                                        "this item's 'queries'")
+                        continue
+                    rest = line.lower().replace(max(named, key=len).strip().lower(), " ")
+                    words = [w for w in re.findall(r"[a-z0-9][a-z0-9'-]*", rest)
+                             if w not in REUSED_FILLER and w != (rec or "").lower()]
+                    if len(words) < REUSED_REASON_WORDS:
+                        problems.append(f"{itag}: the reused search {max(named, key=len).strip()[:60]!r} carries no "
+                                        "reason; say in one line why it bears on this record's test")
+
+        sources = item.get("sources") or []
+        if not isinstance(sources, list) or any(not isinstance(x, str) or not x.strip() for x in sources):
+            problems.append(f"{itag}: 'sources' must be a list of links to public records")
+        elif verdict in ("noted", "moved", "flagged") and not sources:
+            problems.append(f"{itag}: a verdict of {verdict!r} cites the record it read; only 'quiet' may go "
+                            "without a source")
+
+        pubs = item.get("publications")
+        if pubs is not None and (not isinstance(pubs, list) or any(not isinstance(x, str) for x in pubs)):
+            problems.append(f"{itag}: 'publications' must be a list of publication ids")
+            pubs = []
+        for pid in pubs or []:
+            if pid not in publications:
+                problems.append(f"{itag}: publication {pid!r} is not a publication record that exists")
+        if verdict in ("noted", "moved") and not pubs:
+            problems.append(f"{itag}: a verdict of {verdict!r} means a publication was logged; name it in "
+                            "'publications'")
+        if verdict == "moved":
+            if not is_factor:
+                problems.append(f"{itag}: only a factor has a range, so only a factor can be 'moved'")
+            elif isinstance(date, dt.date):
+                revs = [rev for rev in (factors[rec].get("revision") or []) if isinstance(rev, dict)]
+                named = any(rev.get("date") == date and rev.get("publication") in (pubs or []) for rev in revs)
+                if not named:
+                    problems.append(f"{itag}: says the range moved, but the factor carries no revision dated "
+                                    f"{date.isoformat()} naming one of its publications")
+                for pid in pubs or []:
+                    if pid in publications and publications[pid].get("moved_range") is not True:
+                        problems.append(f"{itag}: the range moved on {pid!r}, but that publication says "
+                                        "moved_range = false")
+        if verdict == "flagged":
+            fj = item.get("for_john")
+            if not isinstance(fj, str) or not fj.strip():
+                problems.append(f"{itag}: a flagged item needs 'for_john': what it would have done and why it "
+                                "was not the reading's to do")
+        elif "for_john" in item:
+            problems.append(f"{itag}: 'for_john' belongs only to a flagged item")
+
+    if not items:
+        problems.append(f"{tag}: a reading needs at least one [[item]]")
+    n = r.get("records_read")
+    if isinstance(n, int) and items and n != len(items):
+        problems.append(f"{tag}: the header says {n} records were read and the file holds {len(items)} item(s)")
+    k = r.get("searches")
+    if isinstance(k, int) and items and k != len(all_queries):
+        problems.append(f"{tag}: the header says {k} searches and the items list {len(all_queries)} distinct "
+                        "searches; the count is the number of different searches run")
+
+
 # ---------------------------------------------------------------- commands
 
 
 def summary(loaded: dict) -> str:
-    counts = {k: 0 for k in ("factor", "explanation", "library", "publication")}
+    counts = {k: 0 for k in ("factor", "explanation", "library", "publication", "reading")}
     verify = 0
     for r in loaded["records"]:
         counts[r["_kind"]] += 1
@@ -563,7 +735,8 @@ def summary(loaded: dict) -> str:
     lines = [
         f"{counts['factor']} of {len(FACTORS)} factors ({', '.join(seeded) or 'none'}), "
         f"{counts['explanation']} explanations, {counts['library']} library entries, "
-        f"{counts['publication']} publications, {len(loaded['retired'])} retired ids",
+        f"{counts['publication']} publications, {counts['reading']} weekly readings, "
+        f"{len(loaded['retired'])} retired ids",
         f"{verify} claim(s) marked to verify",
     ]
     return "\n".join(lines)

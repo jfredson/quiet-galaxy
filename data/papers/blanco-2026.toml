@@ -1,0 +1,24 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "blanco-2026"
+date = "2026-04-15"
+added_on = 2026-10-16
+authors = ["Celia Blanco", "Jacob Haqq-Misra", "George Profitiliotis"]
+title = "Projections of Earth's Technosphere: Civilization Collapse-Recovery Dynamics and Detectability"
+venue = "arXiv:2604.13774 (physics.soc-ph, with astro-ph.IM)"
+link = "https://arxiv.org/abs/2604.13774"
+finding = """
+Simulates ten plausible futures for an Earth-born civilisation over a thousand years with a model
+that lets it collapse and recover, and finds the share of its life spent technologically active
+ranges from about 0.38 to 1.00 depending on governance, resource pressure and hazards. The most
+influential levers are the rate of resource depletion and how much recovers after a collapse. The
+authors derive an effective detectable duration for a civilisation that is only sometimes active
+and argue that the silence may reflect many low-duty-cycle civilisations rather than rare ones, so
+that the lifetime term is better read as the average time a civilisation stays detectable."""
+factors = ["lifetime"]
+explanations = ["civilisations-burn-out", "ships-in-the-night"]
+moved_range = false
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

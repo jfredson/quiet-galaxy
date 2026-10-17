@@ -1,0 +1,23 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "crawford-2026"
+date = "2026-05-30"
+added_on = 2026-10-16
+authors = ["Ian A. Crawford"]
+title = "Some Thoughts on the Future of Technosignature Searches: Constraining the Fermi Paradox"
+venue = "arXiv:2606.00463 (astro-ph.IM); for Advancing the Search for Technosignatures, Proceedings of IAU Symposium 404 (forthcoming)"
+link = "https://arxiv.org/abs/2606.00463"
+finding = """
+Asks how future searches could tell apart the explanations for the silence, above all whether
+technological civilisations are rare or hidden, and proposes a programme that pairs expanded radio
+and optical listening with searches for artefacts in the solar system. The artefact searches have a
+time advantage: they probe evidence that accumulated over the solar system's history rather than
+needing a civilisation to be active at the same moment as us. In particular, micron-scale
+technological debris in lunar and planetary soils could constrain past activity in the galaxy."""
+factors = ["detectable"]
+explanations = ["not-looked-long-enough", "they-are-already-here"]
+moved_range = false
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

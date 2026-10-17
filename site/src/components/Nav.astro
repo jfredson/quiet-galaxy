@@ -3,8 +3,9 @@
 // the site in heavier ink, the reference pages lighter, the theme toggle last; collapses to a menu
 // on small screens. Which page goes in which tier follows the tracker pattern
 // (design/tracker-pattern.md, rule 4.6, ruled by John 2026-10-16): the spine is the home page,
-// the equation, the explanations, the library and the story so far; the reference tier is how the
-// numbers are worked out and the disagree page, with the public names from the pattern's section 4.
+// the equation, the explanations, the library, the story so far and this week's reading (added
+// 2026-10-16 with the weekly reading); the reference tier is how the numbers are worked out and the
+// disagree page, with the public names from the pattern's section 4.
 const path = Astro.url.pathname;
 const primary = [
   { href: '/', label: 'Home' },
@@ -12,6 +13,7 @@ const primary = [
   { href: '/explanations/', label: 'Explanations' },
   { href: '/library/', label: 'Library' },
   { href: '/story/', label: 'The story so far' },
+  { href: '/reading/', label: "This week's reading" },
 ];
 const secondary = [
   { href: '/method/', label: 'How the numbers are worked out' },

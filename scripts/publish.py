@@ -6,6 +6,10 @@ Plain Python, standard library only. Run from anywhere:
     python3 scripts/publish.py                 validate, export and build, then stop and show what changed
     python3 scripts/publish.py --push          the same, then commit everything and push main
     python3 scripts/publish.py --push --message "2026-10-18: ..."   with your own commit message
+    python3 scripts/publish.py --push --fallback-branch claude/reading-2026-10-24
+                                               if the push to main is refused, push the same commit
+                                               once to that branch instead (the weekly reading's
+                                               way home from a cloud session; docs/weekly-reading.md)
 
 What it does, in order, stopping at the first thing that fails:
 
@@ -21,7 +25,8 @@ What it does, in order, stopping at the first thing that fails:
 
 Adapted 2026-10-16 from The Belt Equation's publish script (its 2026-09-25 version, with the
 behind-origin check of 2026-10-12), without the snapshot, picture and story steps that project
-has and this one does not yet.
+has and this one does not yet. The fallback branch (also the Belt Equation's, from its scan
+procedure) was added the same evening for the weekly reading.
 """
 
 from __future__ import annotations
@@ -49,6 +54,8 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Validate, export, build, and optionally commit and push.")
     parser.add_argument("--push", action="store_true", help="commit everything and push main after building")
     parser.add_argument("--message", help="the commit message (default: a dated 'site regenerated' line)")
+    parser.add_argument("--fallback-branch", default=None,
+                        help="if the push to main is refused, push the same commit once to this branch and say so")
     args = parser.parse_args(argv)
 
     try:
@@ -81,8 +88,22 @@ def main(argv: list[str] | None = None) -> int:
     message = args.message or f"Publish {today}: site regenerated"
     run(["git", "add", "-A"])
     run(["git", "commit", "-m", message])
-    run(["git", "push", "origin", "main"])
-    print("Pushed. The deploy workflow builds and publishes the site from this push.")
+    pushed = run(["git", "push", "origin", "main"], check=False)
+    if pushed.returncode == 0:
+        print("Pushed. The deploy workflow builds and publishes the site from this push.")
+        return 0
+    if not args.fallback_branch:
+        print("The push to main was refused. Nothing else was tried; the commit is on main here.", file=sys.stderr)
+        return pushed.returncode or 1
+    # A cloud session's push to main can be refused (no permission, or main moved while the
+    # reading ran). Park the same commit on a branch once, so the work is not lost and John can
+    # merge it with one click; the site does not change until he does.
+    print(f"The push to main was refused; pushing the same commit once to {args.fallback_branch}.", file=sys.stderr)
+    fallback = run(["git", "push", "origin", f"HEAD:refs/heads/{args.fallback_branch}"], check=False)
+    if fallback.returncode != 0:
+        print("That push was refused too. Stop here and put the record's contents in the report.", file=sys.stderr)
+        return fallback.returncode or 1
+    print(f"Parked on {args.fallback_branch}. The site does not update until it is merged into main.")
     return 0
 
 

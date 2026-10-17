@@ -1,0 +1,23 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "mason-2025"
+date = "2025-11-25"
+added_on = 2026-10-16
+authors = ["Louisa A. Mason", "Michael A. Garrett", "Andrew P. V. Siemion"]
+title = "Simulating the Stellar Bycatch: Constraining the Prevalence of Extraterrestrial Transmitters within Radio SETI Surveys"
+venue = "arXiv:2511.20231 (astro-ph.IM, with astro-ph.GA), 8 pages"
+link = "https://arxiv.org/abs/2511.20231"
+finding = """
+Counts every star that fell inside a radio telescope's beam during a large Breakthrough Listen
+survey, not just the stars it was pointed at, by simulating the galaxy's stellar population: about
+6.2 million stars across 1,229 pointings out to 25 kiloparsecs. From the lack of detections it bounds
+continuously transmitting beacons of at least five times ten to the sixteen watts to fewer than about
+one in a hundred thousand stellar systems within 2.5 kiloparsecs, and argues that past surveys were
+less narrowly aimed than often claimed."""
+factors = ["detectable"]
+explanations = ["not-looked-long-enough"]
+moved_range = false
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

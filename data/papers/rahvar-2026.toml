@@ -1,0 +1,23 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "rahvar-2026"
+date = "2026-02-24"
+added_on = 2026-10-16
+authors = ["Sohrab Rahvar", "Shahin Rouhani"]
+title = "Constraining the Lifespan of Intelligent Technological Civilization in the Galaxy"
+venue = "arXiv:2602.22252 (astro-ph.GA), 4 pages; accepted in Monthly Notices of the Royal Astronomical Society Letters"
+link = "https://arxiv.org/abs/2602.22252"
+finding = """
+Turns the silence into a bound on the last piece of the equation: if life and intelligence arise as
+readily as the optimists assume on Earth-like planets, then the absence of any contact means
+technological civilisations last no more than about 5,000 years in the most optimistic case. The
+authors stress that this is an upper bound derived from the silence itself, not a prediction of how
+long civilisations actually last, and that our light cone already covers the whole galaxy's history
+over the past hundred thousand years."""
+factors = ["lifetime"]
+explanations = ["ships-in-the-night", "self-destruction"]
+moved_range = false
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict. The bound is conditional on the other six pieces being large, so using it to narrow the lifetime range would count the silence twice; the headline deliberately does not update on the silence (docs/method.md), and the reading left the range alone."

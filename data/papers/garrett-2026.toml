@@ -1,0 +1,24 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "garrett-2026"
+date = "2026-08-31"
+added_on = 2026-10-16
+authors = ["Michael Garrett"]
+title = "Slysh haloes: the waste heat of cold computing as a submillimetre technosignature"
+venue = "arXiv:2608.31153 (astro-ph.IM), 14 pages; submitted to Monthly Notices of the Royal Astronomical Society"
+link = "https://arxiv.org/abs/2608.31153"
+finding = """
+Argues that a civilisation that does mostly computing would shed its waste heat as cold as it can,
+far below the 100 to 600 kelvin that searches for Dyson spheres look for, because the cost of a
+computation falls with temperature; a cold structure needs a vast radiating area, so it would be
+conspicuous at submillimetre wavelengths rather than hidden. Existing far-infrared surveys could
+already bound such cold waste heat at about ten to the twenty watts around nearby stars, several
+orders of magnitude below past infrared limits, and red dwarfs are the best targets. The paper also
+notes such civilisations may simply be asleep instead."""
+factors = ["detectable"]
+explanations = ["they-became-machines", "aestivation", "inward-turn", "listening-the-wrong-way", "dark-forest"]
+moved_range = false
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

@@ -1,0 +1,28 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "gianni-2026"
+date = "2026-02-13"
+added_on = 2026-10-16
+authors = ["Edoardo Gianni", "James Attwater", "Philipp Holliger"]
+title = "A small polymerase ribozyme that can synthesize itself and its complementary strand"
+venue = "Science (2026), doi 10.1126/science.adt2760; MRC Laboratory of Molecular Biology, Cambridge"
+link = "https://www.science.org/doi/10.1126/science.adt2760"
+finding = """
+Reports QT45, an RNA molecule only 45 building blocks long, found by searching random sequences, that
+copies RNA from three-letter pieces in slightly alkaline ice: it made its own complementary strand
+from a random pool at 94.1% accuracy per letter and a copy of itself from defined pieces, each at a
+yield of about 0.2% over 72 days. The authors argue that so small a copying machine means such
+molecules are far commoner in the space of possible RNA sequences than assumed, which bears on how
+improbable the first self-copying step was. The two halves of the cycle have not yet been joined
+into full self-replication."""
+factors = ["life"]
+explanations = ["rare-life", "great-filter-behind-us", "no-paradox-just-wide-ranges"]
+moved_range = false
+
+verify = [
+  "The author list is partial: Edoardo Gianni (lead) is named by the UKRI press release of 2026-02-13 and James Attwater by secondary coverage; Philipp Holliger is given from memory as the group head. Check the paper's byline and the Science volume and page.",
+]
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

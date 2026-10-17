@@ -1,0 +1,22 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "roudenko-2024"
+date = "2024-10-31"
+added_on = 2026-10-16
+authors = ["Gregory Roudenko", "Yurrian Pierre-Boyer"]
+title = "Exploring Fermi's Paradox using an Intragalactic Colonization Model"
+venue = "arXiv:2411.00061 (physics.soc-ph, with q-bio.PE)"
+link = "https://arxiv.org/abs/2411.00061"
+finding = """
+Simulates competing civilisations spreading between stars, each with a population, an environment
+and a technology level that grow at their own rates, and with battles when they meet. Civilisations
+whose three rates are out of balance collapse; balanced ones can come to dominate, but even the
+largest leave big gaps between their colonies, so small civilisations survive in the gaps. A model
+result in favour of settlement that spreads unevenly and leaves regions unreached."""
+factors = []
+explanations = ["expansion-stalls"]
+moved_range = false
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

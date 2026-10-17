@@ -1,0 +1,22 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "edge-2026"
+date = "2026-04-21"
+added_on = 2026-10-16
+authors = ["Eliott Edge", "Chad Ashton Brown"]
+title = "Commentary: Astrophysical constraints on the simulation hypothesis for this Universe: why it is (nearly) impossible that we live in a simulation"
+venue = "Frontiers in Physics 14, 1808725 (2026)"
+link = "https://doi.org/10.3389/fphy.2026.1808725"
+finding = """
+A reply to Vazza's 2025 argument that simulating our universe, or even the Earth, is impossible on
+energy grounds. The authors answer that Vazza refutes a stronger claim than the one Bostrom made:
+the hypothesis needs only a rendering of coherent experience with no detectable seams, not a
+bottom-up simulation of all physics, so resource-based refutations miss their target. No new
+evidence either way and no probability offered."""
+factors = []
+explanations = ["simulation"]
+moved_range = false
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

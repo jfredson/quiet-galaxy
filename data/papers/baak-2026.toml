@@ -1,0 +1,23 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "baak-2026"
+date = "2026-03-02"
+added_on = 2026-10-16
+authors = ["Max Baak", "Hella Snoek"]
+title = "Implications of the Pessimistic Lower Limit on the Drake Equation"
+venue = "arXiv:2603.02372 (stat.OT, with physics.pop-ph), 8 pages"
+link = "https://arxiv.org/abs/2603.02372"
+finding = """
+Treats humanity as one data point in a counting experiment and asks what the most pessimistic
+reading of that one count allows: at least 0.051 communicating civilisations in the observable
+universe at 95% confidence, or at least 8 in ten trillion for the galaxy. From that bound the chance
+that the observable universe holds more than one is 97.6%, so solitude in the observable universe is
+disfavoured, while for the galaxy the bound says almost nothing. It is an argument about what the
+lower ends of the ranges may honestly be, which is where the headline's answer is decided."""
+factors = []
+explanations = ["no-paradox-just-wide-ranges"]
+moved_range = false
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

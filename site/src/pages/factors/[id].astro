@@ -5,8 +5,10 @@
 // says about it (the papers that bear on it). The layout, with the record's details in a rail
 // beside the text, is copied from The Belt Equation's event page (site/src/pages/tree/[factor]/[id].astro).
 // All seven pieces get a page, so no link on the equation page leads nowhere; a piece whose record
-// is not written yet says so.
+// is not written yet says so. The last three weekly readings of the piece (docs/weekly-reading.md)
+// sit between "what would move this" and the revisions, copied from The Belt Equation's node page.
 import Base from '../../layouts/Base.astro';
+import { readingsFor, verdictLabel } from '../../lib/readings';
 import {
   records, rangeText, estimateWords, plainNumber, percent, worldDate, longDate, symbolHtml, shapeWords,
   statusWords, directionWords, issueUrl, recordUrl, hostOf, inline, plural, paragraphs, medianWords, type Factor,
@@ -33,6 +35,7 @@ const leaves = f.explanations.filter((e) => e.direction === 'unchanged');
 // for the chance life starts (docs/method.md). Shown only on that piece's page.
 const head = records.headline;
 const sensitivity = f.id === 'life' && head.available && head.life_sensitivity ? head.life_sensitivity : null;
+const lastReadings = readingsFor(f.id).slice(0, 3);
 ---
 
 <Base title={title} description={description}>
@@ -144,6 +147,43 @@ const sensitivity = f.id === 'life' && head.available && head.life_sensitivity ?
           <p style="font-size: 15px;">
             When a paper or a survey of that kind is published, it is logged in <a href="/story/">the story so far</a> with a note saying whether it moved this range. A move is written as a dated revision below, with the old number, the new one and the reason.
           </p>
+        </>
+      )}
+
+      {lastReadings.length > 0 && (
+        <>
+          <h2>The last {lastReadings.length === 1 ? 'reading' : `${lastReadings.length} readings`}</h2>
+          <p style="font-size: 15px;">
+            Once a week the records are read against the news, each against the test above. Open a line to see what that week held. Every reading ever made of this record is on <a href="/reading/">the reading page</a>.
+          </p>
+          <ul class="checks">
+            {lastReadings.map((r) => (
+              <li>
+                <details>
+                  <summary>
+                    <span class="check-date">{r.date}</span>
+                    <span class={`badge v-${r.verdict}`}>{r.picked_up ? 'Ruled' : verdictLabel[r.verdict]}</span>
+                    {r.run_by === 'hand' && <span class="badge v-test">By hand</span>}
+                  </summary>
+                  <div class="check-body">
+                    <p>{r.found}</p>
+                    {r.for_john && <p><strong>For me:</strong> {r.for_john}</p>}
+                    {r.picked_up && <p class="dim">Taken off my list on {r.picked_up.on}, by {r.picked_up.how}.</p>}
+                    {(r.publications.length > 0 || r.sources.length > 0) && (
+                      <p class="dim">
+                        {r.publications.map((p) => (
+                          <a href={p.path}>{p.authors.length ? p.authors[0].split(' ').slice(-1)[0] : p.title}, {p.date.slice(0, 4)}</a>
+                        ))}
+                        {r.sources.map((s, i) => (
+                          <a href={s} rel="noopener nofollow">source {r.sources.length > 1 ? i + 1 : ''}</a>
+                        ))}
+                      </p>
+                    )}
+                  </div>
+                </details>
+              </li>
+            ))}
+          </ul>
         </>
       )}
 

@@ -1,0 +1,23 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "korn-2026"
+date = "2026-07-28"
+added_on = 2026-10-16
+authors = ["Andreas J. Korn", "Matías Suazo", "Erik Zackrisson", "Pía Cortés-Zuleta", "Adam D. Rains", "Armin Nabizadeh"]
+title = "Project Hephaistos III. Characterizing Anomalous Infrared Sources Identified As Dyson-sphere Candidates"
+venue = "arXiv:2607.25701 (astro-ph.SR, with astro-ph.GA), 11 pages"
+link = "https://arxiv.org/abs/2607.25701"
+finding = """
+Follows up the seven red dwarf stars within 300 parsecs that the 2024 Hephaistos search flagged for
+unexplained infrared excess, plus three similar objects. Their stellar properties are ordinary and
+the excess still has no clear explanation; it resembles the glow of a disk around a young star, but
+the stars show no signs of youth. For two of the seven, new JWST images show a very red background
+galaxy sitting behind the star, which explains their excess without any structure around the star.
+No candidate is confirmed as artificial."""
+factors = ["detectable"]
+explanations = ["they-became-machines", "inward-turn"]
+moved_range = false
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

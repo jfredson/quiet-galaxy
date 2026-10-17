@@ -1,0 +1,26 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "seligman-2025"
+date = "2025-07-03"
+added_on = 2026-10-16
+authors = ["Darryl Z. Seligman", "Marco Micheli", "Davide Farnocchia", "Larry Denneau", "John W. Noonan", "Henry H. Hsieh", "Toni Santana-Ros", "John Tonry", "Katie Auchettl", "Luca Conversi", "Maxime Devogèle", "Laura Faggioli", "and 35 others"]
+title = "Discovery and Preliminary Characterization of a Third Interstellar Object: 3I/ATLAS"
+venue = "arXiv:2507.02757 (astro-ph.EP); accepted for publication in the Astrophysical Journal Letters"
+link = "https://arxiv.org/abs/2507.02757"
+finding = """
+Reports the third object ever seen passing through the solar system from another star, found on
+2025-07-01: an orbit far too open to be bound (eccentricity about 6.1), arriving at about 58
+kilometres a second, with a compact cloud of dust around it and a colour like other primitive small
+bodies. Everything measured fits a natural comet. Later work and the 2025 observations treated it as
+such; a minority argued for an artificial origin, and no evidence for one has been found."""
+factors = []
+explanations = ["they-are-already-here", "berserkers"]
+moved_range = false
+
+verify = [
+  "The author list is 47 names; the first twelve are given here and the count is from the arXiv page. Check nothing else is needed.",
+]
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

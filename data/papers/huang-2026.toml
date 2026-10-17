@@ -1,0 +1,27 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the first weekly reading of the
+# records against the news on 2026-10-16 (docs/weekly-reading.md; data/readings/2026-10-16.toml).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "huang-2026"
+date = "2026-01"
+added_on = 2026-10-16
+authors = ["Huang", "Tao", "Zhang"]
+title = "WISE/CatWISE Constraints on Dysonian Waste-Heat Technosignatures in Nearby Galaxies"
+venue = "arXiv:2601.07297; accepted for publication in the Astronomical Journal"
+link = "https://arxiv.org/abs/2601.07297"
+finding = """
+Looks for the infrared glow of waste heat at the scale of whole galaxies, using the WISE all-sky
+survey on the galaxies of the 2MASS Redshift Survey with active nuclei and starbursts removed. No
+galaxy shows it: the typical limit per galaxy is about five to nine hundred million times the Sun's
+luminosity of waste heat at 150 to 600 kelvin, and no more than about one in 6,500 nearby galaxies
+can host such heat at the thresholds the sample can test. For a civilisation using a galaxy's worth
+of starlight at 300 kelvin the limit is about one galaxy in 6,000."""
+factors = ["detectable"]
+explanations = ["they-became-machines", "listening-the-wrong-way", "inward-turn"]
+moved_range = false
+
+verify = [
+  "The authors' given names and the exact submission date are not in the sources read (the arXiv listing and astrobiology.com's post of 2026-01-17); check the arXiv page for the full names, the date and the Astronomical Journal citation.",
+]
+
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."

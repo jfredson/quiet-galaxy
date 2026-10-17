@@ -28,7 +28,12 @@ of docs/2026-10-16-kickoff.md):
   were logged, which is the order the "story so far" page reads them in;
 - the calculator's slider travel for each factor (how far the slider can go, not an estimate);
 - the headline numbers, read from the output of `compute.py run` when it exists (see
-  load_headline below), otherwise a plain reason that they are not computed yet.
+  load_headline below), otherwise a plain reason that they are not computed yet;
+- every weekly reading of the records against the news (data/readings/, docs/weekly-reading.md),
+  newest first, each item carrying the record it read with its name and page, the publications it
+  logged, and whether a flagged item has since been picked up; the latest reading's summary for the
+  home page's strip; and each record's own readings, newest first, for its page. Added 2026-10-16
+  with the weekly reading; the shape is The Belt Equation's `export_scans`, adapted.
 
 The one-way links between records (docs/record-schema.md: a library entry names its
 explanations, a publication names its factors, nothing links back) are turned into both-way
@@ -441,6 +446,10 @@ def build_export(loaded: dict, headline: dict | None = None) -> dict:
         "days": len({p["added_on"] for p in publications}),
     }
 
+    # ---- the weekly readings (docs/weekly-reading.md), newest first
+    readings, readings_by_record, waiting = export_readings(by_kind["reading"], factors_by_id, explanations_by_id, pub_brief)
+    latest = readings[0] if readings else None
+
     # ---- the headline
     have = {f["id"] for f in factors if f["exists"]}
     if headline:
@@ -466,10 +475,20 @@ def build_export(loaded: dict, headline: dict | None = None) -> dict:
             "estimates": sum(len(f["estimates"]) for f in factors),
         },
         "headline": head,
-        # No weekly reading of the records against the news has run yet; the strip on the home
-        # page says so in words (tracker pattern, rule 5.2). When the weekly scan exists, its
-        # latest reading goes here.
-        "reading": None,
+        # The latest weekly reading of the records against the news, for the strip on the home
+        # page (tracker pattern, rule 5.2), or null until the first has run. The full list is
+        # under "readings"; each record's own readings are under "readings_by_record".
+        "reading": {k: latest[k] for k in ("id", "date", "ran_at", "run_by", "records_read", "searches",
+                                           "counts", "moved", "open_flags", "path", "file")} if latest else None,
+        "readings": readings,
+        "readings_by_record": readings_by_record,
+        "readings_waiting": waiting,
+        "readings_counts": {
+            "readings": len(readings),
+            "items": sum(len(r["items"]) for r in readings),
+            "waiting": len(waiting),
+            "by_hand": sum(1 for r in readings if r["run_by"] == "hand"),
+        },
         "factors": factors,
         "families": families,
         "explanations": explanations,
@@ -479,6 +498,96 @@ def build_export(loaded: dict, headline: dict | None = None) -> dict:
         "story_totals": story_totals,
         "retired": clean(list(loaded.get("retired") or [])),
     }
+
+
+# ---------------------------------------------------------------- the weekly readings
+
+VERDICT_ORDER = ["moved", "flagged", "noted", "quiet"]
+
+
+def export_readings(raw: list[dict], factors_by_id: dict, explanations_by_id: dict, pub_brief) -> tuple[list[dict], dict, list[dict]]:
+    """The weekly readings as the site reads them (docs/weekly-reading.md; the shape is The Belt
+    Equation's export_scans, adapted).
+
+    Returns the readings newest first, each item carrying the record it read (kind, name, page,
+    family or place in the equation), the publications it logged as briefs, and `picked_up` on a
+    flagged item that something has since taken off John's list; `by_record`, every record's own
+    readings newest first, for its page; and `waiting`, the flagged items nothing has picked up. A
+    flagged item counts as picked up when a later reading reads the record again, or when the
+    factor carries a revision dated on or after the reading whose reason names the reading's date
+    (the Belt Equation's rule of 2026-10-12)."""
+    readings = []
+    for r in sorted(raw, key=lambda x: (x["date"].isoformat(), x["id"]), reverse=True):
+        items = []
+        for it in r.get("item") or []:
+            rid = it["record"]
+            if rid in factors_by_id:
+                f = factors_by_id[rid]
+                order, symbol, unit = compute.FACTORS[rid]
+                who = {"kind": "factor", "name": f["name"], "path": f"/factors/{rid}/", "order": order,
+                       "symbol": symbol, "family": None, "family_name": "The seven pieces"}
+            else:
+                e = explanations_by_id[rid]
+                who = {"kind": "explanation", "name": e["name"], "path": f"/explanations/{rid}/", "order": None,
+                       "symbol": None, "family": e["family"], "family_name": compute.FAMILIES[e["family"]]}
+            items.append({
+                "record": rid, **who,
+                "verdict": it["verdict"],
+                "queries": [q.strip() for q in it.get("queries") or []],
+                "reused": [x.strip() for x in it.get("reused") or []],
+                "found": text(it.get("found")),
+                "sources": [x.strip() for x in it.get("sources") or []],
+                "publications": [pub_brief(pid) for pid in it.get("publications") or []],
+                "for_john": text(it.get("for_john")) or None,
+                "picked_up": None,
+            })
+        counts = {v: sum(1 for it in items if it["verdict"] == v) for v in VERDICT_ORDER}
+        readings.append({
+            "id": r["id"], "date": r["date"].isoformat(), "ran_at": r["ran_at"], "run_by": r["run_by"],
+            "window": text(r.get("window")), "records_read": r["records_read"], "searches": r["searches"],
+            "commit_before": r["commit_before"], "notes": text(r.get("notes")),
+            "file": f"data/readings/{r['id']}.toml", "path": f"/reading/#{r['id']}",
+            "counts": counts,
+            "moved": [{"record": it["record"], "name": it["name"], "path": it["path"]} for it in items if it["verdict"] == "moved"],
+            "items": items,
+        })
+
+    def ruled_on_the_record(rid: str, reading_date: str):
+        f = factors_by_id.get(rid)
+        for rev in (f.get("revision") or []) if f else []:
+            rev_date = rev["date"].isoformat()
+            if rev_date >= reading_date and reading_date in " ".join(str(rev.get(k) or "") for k in ("why", "new")):
+                return rev_date
+        return None
+
+    waiting = []
+    for r in readings:
+        for it in r["items"]:
+            if it["verdict"] != "flagged":
+                continue
+            later = sorted(x["date"] for x in readings if x["date"] > r["date"] and any(y["record"] == it["record"] for y in x["items"]))
+            candidates = []
+            ruled = ruled_on_the_record(it["record"], r["date"])
+            if ruled:
+                candidates.append((ruled, "a ruling recorded on the record"))
+            if later:
+                candidates.append((later[0], "a later reading"))
+            if candidates:
+                on, how = min(candidates)
+                it["picked_up"] = {"on": on, "how": how}
+            else:
+                waiting.append({"reading_date": r["date"], "reading_path": r["path"], "run_by": r["run_by"], **it})
+        r["open_flags"] = sum(1 for it in r["items"] if it["verdict"] == "flagged" and not it["picked_up"])
+
+    by_record: dict[str, list[dict]] = {}
+    for r in readings:
+        for it in r["items"]:
+            by_record.setdefault(it["record"], []).append({
+                "date": r["date"], "run_by": r["run_by"], "file": r["file"], "path": r["path"],
+                "verdict": it["verdict"], "found": it["found"], "sources": it["sources"],
+                "publications": it["publications"], "for_john": it["for_john"], "picked_up": it["picked_up"],
+            })
+    return readings, by_record, waiting
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -502,9 +611,11 @@ def main(argv: list[str] | None = None) -> int:
     headline = load_headline(data_dir, Path(args.headline).resolve() if args.headline else None)
     export = build_export(loaded, headline)
     c = export["counts"]
+    rc = export["readings_counts"]
     print(f"{c['factors']} of {c['factors_expected']} factors ({c['estimates']} published estimates), "
           f"{c['explanations']} explanations, {c['library']} library entries, {c['publications']} publications; "
           f"{c['verify']} claim(s) to verify; headline {'computed' if export['headline']['available'] else 'not computed'}; "
+          f"{rc['readings']} weekly reading(s), {rc['waiting']} flagged item(s) waiting; "
           f"version {export['commit'] or 'unknown'}")
     if args.check:
         return 0

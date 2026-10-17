@@ -62,6 +62,11 @@ def forget(data: Path, id_: str) -> None:
     """Remove every link to an id from every record, so a test can delete that record cleanly.
     Added 2026-10-16 when the real explanations arrived and the dark forest gained neighbours."""
     pat = re.escape(id_)
+    for path in sorted((data / "readings").glob("*.toml")) if (data / "readings").is_dir() else []:
+        # A weekly reading that read this record would be left naming it; the test is about the
+        # record, not the reading, so the reading goes too (added 2026-10-16 with the readings).
+        if f'record = "{id_}"' in path.read_text(encoding="utf-8"):
+            path.unlink()
     for path in sorted(data.rglob("*.toml")):
         text = path.read_text(encoding="utf-8")
         new = re.sub(rf'"{pat}",\s*', "", text)
@@ -84,7 +89,7 @@ class TheRecords(unittest.TestCase):
     def test_at_least_one_of_each_kind_and_all_seven_factors(self):
         loaded = compute.load_records(DATA)
         kinds = {r["_kind"] for r in loaded["records"]}
-        self.assertEqual(kinds, {"explanation", "factor", "library", "publication"})
+        self.assertEqual(kinds, {"explanation", "factor", "library", "publication", "reading"})
         factors = sorted(r["id"] for r in loaded["records"] if r["_kind"] == "factor")
         self.assertEqual(factors, sorted(compute.FACTORS))
 
@@ -297,6 +302,92 @@ class RenamedIds(unittest.TestCase):
         self.assertTrue(any("retired but" in p and "never reused" in p for p in problems), problems)
 
 
+class TheReading(unittest.TestCase):
+    """The fifth kind of record: a weekly reading of the records against the news
+    (docs/weekly-reading.md; added 2026-10-16). Each test breaks the first reading's file."""
+
+    FILE = Path("readings") / "2026-10-16.toml"
+
+    def test_the_first_reading_passes(self):
+        loaded = compute.load_records(DATA)
+        readings = [r for r in loaded["records"] if r["_kind"] == "reading"]
+        self.assertEqual([r["id"] for r in readings], ["2026-10-16"])
+        self.assertEqual(readings[0]["records_read"], len(readings[0]["item"]))
+        self.assertEqual(problems_for(DATA), [])
+
+    def test_unknown_verdict_is_refused(self):
+        with TempData() as data:
+            edit(data / self.FILE, r'verdict = "quiet"', 'verdict = "maybe"')
+            problems = problems_for(data)
+        self.assertTrue(any("verdict must be one of quiet, noted, moved, flagged" in p for p in problems), problems)
+
+    def test_noted_needs_a_publication(self):
+        with TempData() as data:
+            edit(data / self.FILE, r'^publications = \["glidden-2025"\]\n', "")
+            problems = problems_for(data)
+        self.assertTrue(any("habitable-planets" in p and "name it in 'publications'" in p for p in problems), problems)
+
+    def test_publication_must_exist(self):
+        with TempData() as data:
+            edit(data / self.FILE, r'"glidden-2025"', '"nobody-2099"')
+            problems = problems_for(data)
+        self.assertTrue(any("'nobody-2099' is not a publication record that exists" in p for p in problems), problems)
+
+    def test_one_search_is_not_enough(self):
+        with TempData() as data:
+            edit(data / self.FILE, r'  "Gaia DR4 exoplanet census planets per star 2026",\n', "")
+            problems = problems_for(data)
+        self.assertTrue(any("(planets)" in p and "one search is not enough" in p for p in problems), problems)
+
+    def test_header_counts_must_match(self):
+        with TempData() as data:
+            edit(data / self.FILE, r'^records_read = 39', "records_read = 38")
+            edit(data / self.FILE, r'^searches = (\d+)', "searches = 3")
+            problems = problems_for(data)
+        self.assertTrue(any("says 38 records were read" in p for p in problems), problems)
+        self.assertTrue(any("says 3 searches" in p for p in problems), problems)
+
+    def test_moved_needs_a_factor_with_a_revision(self):
+        with TempData() as data:
+            # An explanation cannot move; a factor can, but only with a revision naming the publication.
+            edit(data / self.FILE, r'(record = "zoo-hypothesis"\nverdict = )"quiet"', r'\1"moved"')
+            edit(data / self.FILE, r'(record = "lifetime"\nverdict = )"noted"', r'\1"moved"')
+            problems = problems_for(data)
+        self.assertTrue(any("zoo-hypothesis" in p and "only a factor can be 'moved'" in p for p in problems), problems)
+        self.assertTrue(any("lifetime" in p and "no revision dated 2026-10-16" in p for p in problems), problems)
+        self.assertTrue(any("lifetime" in p and "moved_range = false" in p for p in problems), problems)
+
+    def test_flagged_needs_for_john_and_nothing_else_may_carry_it(self):
+        with TempData() as data:
+            edit(data / self.FILE, r'^for_john = ', "found_extra = ")
+            problems = problems_for(data)
+        self.assertTrue(any("star-formation" in p and "needs 'for_john'" in p for p in problems), problems)
+        self.assertTrue(any("unknown field 'found_extra'" in p for p in problems), problems)
+
+    def test_reused_line_must_quote_a_search_and_give_a_reason(self):
+        with TempData() as data:
+            edit(data / self.FILE, r'was first run for we-are-early: how often[^"]*', "was first run for we-are-early")
+            problems = problems_for(data)
+        self.assertTrue(any("habitable-planets" in p and "carries no reason" in p for p in problems), problems)
+        with TempData() as data:
+            edit(data / self.FILE, r'"\\"hard steps model evolution intelligence reanalysis 2026\\" was first run',
+                 '"the hard-steps search was first run')
+            problems = problems_for(data)
+        self.assertTrue(any("(intelligence)" in p and "does not quote any search" in p for p in problems), problems)
+
+    def test_file_name_is_the_date(self):
+        with TempData() as data:
+            (data / self.FILE).rename(data / "readings" / "first.toml")
+            problems = problems_for(data)
+        self.assertTrue(any("named 'first' but its id is '2026-10-16'" in p for p in problems), problems)
+
+    def test_date_must_match_the_id(self):
+        with TempData() as data:
+            edit(data / self.FILE, r'^date = 2026-10-16', "date = 2026-10-17")
+            problems = problems_for(data)
+        self.assertTrue(any("is not the date in the id" in p for p in problems), problems)
+
+
 class TheHeadline(unittest.TestCase):
     """The run command and the engine behind it (docs/method.md)."""
 
@@ -407,6 +498,8 @@ class TheHeadline(unittest.TestCase):
     def test_run_says_factors_not_seeded_when_one_is_missing(self):
         with TempData() as data:
             (data / "factors" / "lifetime.toml").unlink()
+            for reading in (data / "readings").glob("*.toml"):
+                reading.unlink()   # the first reading read the lifetime; without the record it cannot pass
             o, e = io.StringIO(), io.StringIO()
             with redirect_stdout(o), redirect_stderr(e):
                 code = compute.main(["--data", str(data), "run"])

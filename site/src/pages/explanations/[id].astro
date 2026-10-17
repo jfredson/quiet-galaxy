@@ -12,6 +12,9 @@ import {
   records, directionWords, issueUrl, recordUrl, inline, worldDate, symbolHtml, paragraphs, plural,
   type Explanation,
 } from '../../lib/records';
+// The last three weekly readings of the explanation (docs/weekly-reading.md), after the test they
+// were read against; copied from The Belt Equation's node page (its "last checks").
+import { readingsFor, verdictLabel } from '../../lib/readings';
 
 export function getStaticPaths() {
   return records.explanations.map((e) => ({ params: { id: e.id }, props: { explanation: e } }));
@@ -23,6 +26,7 @@ const description = e.summary.length > 200 ? e.summary.slice(0, 197) + '…' : e
 const disagree = issueUrl('error-on-a-page.md', `Error on the page for: ${e.name}`,
   `Page: ${Astro.site}explanations/${e.id}/\n\nWhat is wrong:\n\nWhat it should say, with a source:\n`);
 const related = [...e.related, ...e.related_in];
+const lastReadings = readingsFor(e.id).slice(0, 3);
 ---
 
 <Base title={`${e.name} — The Quiet Galaxy`} description={description}>
@@ -62,6 +66,43 @@ const related = [...e.related, ...e.related_in];
       <p class="dim" style="font-size: 14.5px;">
         These two lines are what the record is read against when a new paper or discovery is logged. A result of the kind named here, published with its evidence, is what would settle it; a press claim on its own settles nothing.
       </p>
+
+      {lastReadings.length > 0 && (
+        <>
+          <h2>The last {lastReadings.length === 1 ? 'reading' : `${lastReadings.length} readings`}</h2>
+          <p style="font-size: 15px;">
+            Once a week the records are read against the news, each against the test above. Open a line to see what that week held. Every reading ever made of this record is on <a href="/reading/">the reading page</a>.
+          </p>
+          <ul class="checks">
+            {lastReadings.map((r) => (
+              <li>
+                <details>
+                  <summary>
+                    <span class="check-date">{r.date}</span>
+                    <span class={`badge v-${r.verdict}`}>{r.picked_up ? 'Ruled' : verdictLabel[r.verdict]}</span>
+                    {r.run_by === 'hand' && <span class="badge v-test">By hand</span>}
+                  </summary>
+                  <div class="check-body">
+                    <p>{r.found}</p>
+                    {r.for_john && <p><strong>For me:</strong> {r.for_john}</p>}
+                    {r.picked_up && <p class="dim">Taken off my list on {r.picked_up.on}, by {r.picked_up.how}.</p>}
+                    {(r.publications.length > 0 || r.sources.length > 0) && (
+                      <p class="dim">
+                        {r.publications.map((p) => (
+                          <a href={p.path}>{p.authors.length ? p.authors[0].split(' ').slice(-1)[0] : p.title}, {p.date.slice(0, 4)}</a>
+                        ))}
+                        {r.sources.map((s, i) => (
+                          <a href={s} rel="noopener nofollow">source {r.sources.length > 1 ? i + 1 : ''}</a>
+                        ))}
+                      </p>
+                    )}
+                  </div>
+                </details>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
 
       {e.standing && (
         <>

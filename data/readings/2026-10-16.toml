@@ -1,0 +1,492 @@
+# The first weekly reading of the records against the news (docs/weekly-reading.md). One file per
+# reading, named for the Pacific date it ran, written once and never edited. Run by hand in the
+# session that built the weekly reading, before the scheduled task existed, so that the site had a
+# real reading to show; later readings are made by the scheduled cloud task. Layout in
+# docs/record-schema.md.
+
+id = "2026-10-16"
+date = 2026-10-16
+ran_at = "2026-10-17T03:44:50Z"
+run_by = "hand"
+window = "The first reading: nothing had been read before, so the searches reached back over 2025 and 2026 as far as they could, against the log as founded on 2026-10-16. Later readings cover the week since the last one."
+records_read = 39
+searches = 78
+commit_before = "9bc994a"
+notes = """
+The reading moved no range. One item is flagged for John (the star-formation rate). Twenty-seven
+publications were logged, all with moved_range false, most of them from 2025 and 2026 that the
+founding log of 2026-10-16 did not carry. The factor and explanation records were not edited: other
+sessions held them on the evening this ran, and nothing found met a factor's test closely enough to
+move a range inside the cap in any case."""
+
+[[item]]
+record = "star-formation"
+verdict = "flagged"
+queries = [
+  "Milky Way star formation rate new measurement 2026 solar masses per year",
+  "Milky Way star formation history Gaia study October 2026",
+  "Quintana Wright 2025 MNRAS census OB stars within 1 kpc supernova rate Milky Way arXiv",
+]
+found = "No new measurement of the galaxy's star-formation rate appeared in the window. Two measurements the record does not carry were found: Siegert and others (2023, from the gamma-ray glow of radioactive aluminium) give 4 to 8 solar masses a year, about 10 to 20 stars a year, above the range's top of 10; Quintana and others (2025, from a census of massive stars within a kiloparsec) give 0.67 solar masses a year, inside the range on its low side. Both are logged."
+sources = ["https://arxiv.org/abs/2301.10192", "https://arxiv.org/abs/2503.08286"]
+publications = ["siegert-2023", "quintana-2025"]
+for_john = "The reading would have raised the range's top from 10 to 20 stars a year on the 2023 aluminium-26 result, which is inside the cap of one tenfold step, but did not: the paper is from 2023, not this window, it is one method against several that agree on 1 to 4 stars a year, and the session that ran this reading was told not to edit the factor records while other sessions hold them. Your call whether the top rises to 20 (the 2018 paper's own range runs to 100), and whether the two measurements go into the record's estimate list."
+
+[[item]]
+record = "planets"
+verdict = "quiet"
+queries = [
+  "fraction of stars with planets red dwarfs occurrence rate survey 2026",
+  "Gaia DR4 exoplanet census planets per star 2026",
+]
+found = "No survey in the window reports the share of stars with no planet. The red dwarf occurrence work found is from 2013 to 2022 and already consistent with the range; Gaia's fourth data release, expected in December 2026, is forecast to add about 7,500 planets, mostly giants, and is the next thing to read for this piece."
+
+[[item]]
+record = "habitable-planets"
+verdict = "noted"
+queries = [
+  "habitable zone rocky planet occurrence rate eta Earth new estimate 2026",
+  "TRAPPIST-1 e atmosphere JWST result 2026",
+  "TRAPPIST-1 e JWST 15 transits new results atmosphere 2026 Espinoza",
+  "red dwarf planets atmosphere retention JWST 2026 result rocky worlds survey",
+]
+reused = [
+  "\"red dwarf planets atmosphere retention JWST 2026 result rocky worlds survey\" was first run for we-are-early: how often rocky planets round red dwarfs keep an atmosphere is the second half of this piece's test, and that search covers the JWST survey measuring it",
+]
+found = "No new count of rocky planets in the habitable zone. On whether such planets keep an atmosphere: the JWST DREAMS team's four transits of TRAPPIST-1 e (Glidden and others, 2025-09-05) give no strong evidence for or against an atmosphere, with a bare rock and a nitrogen-rich atmosphere both fitting; the fifteen-transit follow-up has no published result as of 2026-10-16. A press claim (2026-07-09) that the JWST Rocky Worlds programme found GJ 3929 b airless is not on the programme's own site, which on 2026-07-10 still said the analysis was ongoing, so it is not counted. Logged: Glidden 2025."
+sources = ["https://arxiv.org/abs/2509.05407", "https://rockyworlds.stsci.edu/"]
+publications = ["glidden-2025"]
+
+[[item]]
+record = "life"
+verdict = "noted"
+queries = [
+  "K2-18b dimethyl sulfide new analysis 2026",
+  "Enceladus plume organic molecules new study 2026",
+  "Mars Perseverance Cheyava Falls potential biosignature 2026 update",
+  "origin of life self-replicating RNA laboratory demonstration 2026",
+  "QT45 ribozyme RNA self-replication Science 2026 Holliger paper",
+]
+found = "No evidence of life beyond Earth in the window, and three results the log did not yet carry that bear on this piece's test: the Perseverance rover's potential biosignature in a Martian mudstone (Hurowitz and others, Nature, 2025-09-10; the sample stays on Mars), complex organic compounds confirmed in ice grains fresh from Enceladus's ocean (Khawaja and others, Nature Astronomy, 2025-10-01), and a 45-letter RNA molecule that copies itself and its complement in ice, at 94.1% accuracy and 0.2% yield over 72 days (Gianni and others, Science, 2026-02-13), the kind of laboratory demonstration the test names. None settles how improbable the first step is; the K2-18 b dispute stands where the 2025 reanalyses already in the log left it. The range was left alone: the shape is John's ruling, and the ingredients of life are not life."
+sources = ["https://doi.org/10.1038/s41586-025-09413-0", "https://doi.org/10.1038/s41550-025-02655-y", "https://www.science.org/doi/10.1126/science.adt2760"]
+publications = ["hurowitz-2025", "khawaja-2025", "gianni-2026"]
+
+[[item]]
+record = "intelligence"
+verdict = "noted"
+queries = [
+  "origin of complex cells eukaryotes new study October 2026",
+  "probability intelligence evolves Drake equation new analysis 2026",
+  "hard steps model evolution intelligence reanalysis 2026",
+]
+reused = [
+  "\"hard steps model evolution intelligence reanalysis 2026\" was first run for great-filter-behind-us: the hard-steps reassessment is a published analysis of how often intelligence follows from life, which is this piece's test",
+]
+found = "No second example of intelligent life and no new number for this piece. Three results bear on its test and were not in the log: Mills and others (Science Advances, 2025-02-14) argue the long wait for intelligence on Earth needs no improbable steps, only windows of habitability opening in turn; Bernabeu and others (Nature, 2026-06-10) find the complex cell arose through a long succession of microbial partnerships rather than one freak capture; and Rueda-Alaña and others (Science, 2025-02-13) find birds and mammals built similar sensory brain circuits by separate routes, read as complex cognition evolving at least twice. All three lean toward the optimistic end of a range that already reaches 1; none gives a number, so the range stays."
+sources = ["https://doi.org/10.1126/sciadv.ads5698", "https://doi.org/10.1038/s41586-026-10639-9", "https://doi.org/10.1126/science.adp3411"]
+publications = ["mills-2025", "bernabeu-2026", "rueda-alana-2025"]
+
+[[item]]
+record = "detectable"
+verdict = "noted"
+queries = [
+  "Breakthrough Listen 2026 technosignature survey limits transmitters result",
+  "SETI technosignature search result published October 2026",
+  "CatWISE AllWISE waste heat nearby galaxies upper limits technosignature 2026 arXiv",
+]
+reused = [
+  "\"CatWISE AllWISE waste heat nearby galaxies upper limits technosignature 2026 arXiv\" was first run for listening-the-wrong-way: a survey bound on waste heat is a bound on technological signatures, which is this piece's test",
+]
+found = "No detection. Four new bounds and follow-ups: Mason, Garrett and Siemion (2025-11-25) limit steady beacons of at least five times ten to the sixteen watts to fewer than about one in a hundred thousand stellar systems within 2.5 kiloparsecs, by counting every star that fell in the beam of a Breakthrough Listen survey; Huang, Tao and Zhang (2026-01) find no galaxy-scale waste heat in nearby galaxies, with at most about one in 6,500 able to host it; Korn and others (2026-07-28) find two of the seven Dyson-sphere candidates of 2024 are background galaxies and none confirmed; Garrett (2026-08-31) proposes a search for cold waste heat at submillimetre wavelengths. The bounds are on strong, steady transmitters, which the range's low end of 0.01 already allows to be rare, so the range stays."
+sources = ["https://arxiv.org/abs/2511.20231", "https://arxiv.org/abs/2601.07297", "https://arxiv.org/abs/2607.25701", "https://arxiv.org/abs/2608.31153"]
+publications = ["mason-2025", "huang-2026", "korn-2026", "garrett-2026"]
+
+[[item]]
+record = "lifetime"
+verdict = "noted"
+queries = [
+  "how long technological civilizations last Drake equation L new estimate 2026 paper",
+  "civilisation lifetime existential risk estimate Fermi paradox study 2026",
+]
+found = "Four published arguments with a number or a reinterpretation, none in the log: Rahvar and Rouhani (2026-02-24, accepted in MNRAS Letters) turn the silence into an upper bound of about 5,000 years if life and intelligence are common; Blanco, Haqq-Misra and Profitiliotis (2026-04-15) simulate collapse and recovery and find civilisations active for 38% to 100% of their span, so the piece is better read as time spent detectable; Garrett (2025-09-28) argues the detectable phase may last mere decades; Bertolami (2025-10-08) proposes replacing the piece with an energy-and-search term. The 5,000-year bound is conditional on the other pieces being large, so narrowing the range on it would count the silence twice; the range of 100 to 10 billion years stays."
+sources = ["https://arxiv.org/abs/2602.22252", "https://arxiv.org/abs/2604.13774", "https://arxiv.org/abs/2509.23632", "https://arxiv.org/abs/2511.11582"]
+publications = ["rahvar-2026", "blanco-2026", "garrett-2025", "bertolami-2025"]
+
+[[item]]
+record = "complex-cells-are-rare"
+verdict = "noted"
+queries = [
+  "second independent origin of eukaryotes mitochondria study 2026",
+  "origin of complex cells eukaryotes new study October 2026",
+]
+reused = [
+  "\"origin of complex cells eukaryotes new study October 2026\" was first run for intelligence: the record's test turns on whether complex cells arose more than once and how, and that search found the newest study of their origin",
+]
+found = "No second origin of complex cells, living or fossil. Bernabeu and others (Nature, 2026-06-10) reconstruct the ancestor of all complex cells and find its genes came from at least four microbial partners plus giant viruses over a long period, with the mitochondrion acquired late: the step still happened once, but it looks like a drawn-out association rather than a single unlikely capture, which bears on the argument that the one step was a freak. Logged."
+sources = ["https://doi.org/10.1038/s41586-026-10639-9"]
+publications = ["bernabeu-2026"]
+
+[[item]]
+record = "great-filter-behind-us"
+verdict = "noted"
+queries = [
+  "hard steps model evolution intelligence reanalysis 2026",
+  "Great Filter paper 2026 arXiv Fermi paradox",
+]
+reused = [
+  "\"Great Filter paper 2026 arXiv Fermi paradox\" was first run for great-filter-ahead: the same Great Filter papers argue whether the improbable step is past or future, which is this explanation's claim",
+]
+found = "Mills and others (Science Advances, 2025-02-14) argue the hard-steps reading of Earth's history is unnecessary, which weakens the case that a filter lies behind us; Wilman, Nicholson and Haqq-Misra (2026-01-20) summarise the symposium debate on past versus future filter without new evidence. Against that, the Mars potential biosignature and the Enceladus organics (read under the chance life starts) would, if confirmed as life, push the filter forward. Both papers logged; nothing settled."
+sources = ["https://doi.org/10.1126/sciadv.ads5698", "https://doi.org/10.1017/s1743921324001352"]
+publications = ["mills-2025", "wilman-2026"]
+
+[[item]]
+record = "hostile-galaxy"
+verdict = "noted"
+queries = [
+  "gamma-ray burst galactic habitability sterilisation new estimate 2026",
+  "supernova mass extinction Earth evidence study 2026",
+]
+found = "Two papers the log did not carry, both toward the explanation: Finke and Razzaque (2024-07-22) argue the brightest burst ever seen may belong to a population of narrow-jet bursts that would hit Earth with a mass-extinction dose about once per 500 million years from anywhere in the galaxy; Quintana, Wright and Martínez García (MNRAS, 2025-03-11) find nearby supernovae come about 2.5 times per billion years, matching the rate of Earth's unexplained extinctions. Neither is a new burst-rate estimate for the whole galaxy's history, and neither finds life or its absence in the inner galaxy."
+sources = ["https://arxiv.org/abs/2407.15940", "https://arxiv.org/abs/2503.08286"]
+publications = ["finke-2024", "quintana-2025"]
+
+[[item]]
+record = "no-paradox-just-wide-ranges"
+verdict = "noted"
+queries = [
+  "\"Dissolving the Fermi paradox\" critique lower bound origin of life 2026",
+  "Drake equation Bayesian uncertainty new paper 2026 arXiv",
+]
+found = "Two arguments about the lower ends of the ranges: Baak and Snoek (2026-03-02) treat humanity as one count and derive that at least 0.051 communicating civilisations in the observable universe is allowed at 95% confidence, making solitude in the observable universe disfavoured at 97.6%, while for the galaxy the bound says almost nothing; Bertolami (2025-10-08) proposes replacing the lifetime term. Neither moves the origin-of-life range's low end up or down. Logged both."
+sources = ["https://arxiv.org/abs/2603.02372", "https://arxiv.org/abs/2511.11582"]
+publications = ["baak-2026", "bertolami-2025"]
+
+[[item]]
+record = "rare-earth"
+verdict = "noted"
+queries = [
+  "JWST rocky exoplanet atmosphere oxygen detection result 2026",
+  "plate tectonics exoplanets how common study 2026",
+  "red dwarf planets atmosphere retention JWST 2026 result rocky worlds survey",
+]
+reused = [
+  "\"red dwarf planets atmosphere retention JWST 2026 result rocky worlds survey\" was first run for we-are-early: thin or absent atmospheres on habitable-zone rocky planets is this explanation's first test, and the red dwarf atmosphere survey is where that is being measured",
+]
+found = "No detection of oxygen or any gas tied to complex life around another star, and no new result on how common moving continents are. TRAPPIST-1 e's four JWST transits (Glidden and others, 2025-09-05) neither find nor exclude an atmosphere. A July 2026 press claim of a biosignature on a rocky planet 40 light-years away names no paper and is not counted."
+sources = ["https://arxiv.org/abs/2509.05407"]
+publications = ["glidden-2025"]
+
+[[item]]
+record = "rare-intelligence"
+verdict = "noted"
+queries = [
+  "convergent evolution of intelligence independent lineages study 2026",
+  "Rueda-Alaña Zaremba Science February 2025 bird mammal pallium convergent evolution papers citation",
+]
+found = "Rueda-Alaña and others (Science, 2025-02-13), with companion papers in the same issue, find that birds and mammals built similar brain circuits for complex cognition by separate developmental routes, which is the weakening test's 'intelligence arose independently in several lineages', with the caveat that the two share deep ancestry and common pressures. Mills and others (2025) remove the hard-steps support for the explanation. Logged both; the argument that no other Earth species built technology is untouched."
+sources = ["https://doi.org/10.1126/science.adp3411", "https://doi.org/10.1126/sciadv.ads5698"]
+publications = ["rueda-alana-2025", "mills-2025"]
+
+[[item]]
+record = "rare-life"
+verdict = "noted"
+queries = [
+  "did life start more than once on Earth second origin shadow biosphere study 2026",
+  "origin of life breakthrough 2026 prebiotic chemistry self-replication",
+  "QT45 ribozyme RNA self-replication Science 2026 Holliger paper",
+]
+reused = [
+  "\"QT45 ribozyme RNA self-replication Science 2026 Holliger paper\" was first run for life: a laboratory demonstration of self-copying chemistry is this explanation's weakening test, and that search was aimed at the one reported in 2026",
+]
+found = "No second origin of life anywhere, and no evidence that life on Earth started more than once. Toward weakening: a 45-letter RNA molecule that copies itself and its complement (Gianni and others, Science, 2026-02-13), far smaller than the copying machines studied for thirty years, which the authors read as such molecules being commoner in sequence space than assumed; the Mars potential biosignature (Hurowitz and others, 2025-09-10) and Enceladus's ocean organics (Khawaja and others, 2025-10-01) are ingredients and conditions, not life. The Europa and Enceladus oceans have not been shown sterile. Logged."
+sources = ["https://www.science.org/doi/10.1126/science.adt2760", "https://doi.org/10.1038/s41586-025-09413-0", "https://doi.org/10.1038/s41550-025-02655-y"]
+publications = ["gianni-2026", "hurowitz-2025", "khawaja-2025"]
+
+[[item]]
+record = "rare-technology"
+verdict = "quiet"
+queries = [
+  "cumulative culture tool use animals study 2026 chimpanzee crow",
+  "ocean worlds technological civilisation impossible Fermi paradox paper 2026",
+]
+found = "Nothing in the window. The newest work on cumulative culture in animals is the 2024 finding of a tiny degree of it in wild chimpanzees, already before the record's founding, and no paper on whether ocean worlds can produce technology appeared."
+
+[[item]]
+record = "we-are-early"
+verdict = "noted"
+queries = [
+  "grabby aliens Hanson model 2026 update paper",
+  "red dwarf planets atmosphere retention JWST 2026 result rocky worlds survey",
+]
+found = "No update to the grabby-aliens model. On red dwarf planets holding atmospheres, the strengthening test: TRAPPIST-1 e is unresolved (Glidden and others, 2025-09-05) and the Rocky Worlds programme's GJ 3929 b result is unpublished on its own site. Against the hard-steps picture the explanation leans on, Mills and others (2025-02-14) argue the steps were not hard. Both logged."
+sources = ["https://arxiv.org/abs/2509.05407", "https://doi.org/10.1126/sciadv.ads5698"]
+publications = ["glidden-2025", "mills-2025"]
+
+[[item]]
+record = "berserkers"
+verdict = "quiet"
+queries = [
+  "von Neumann probe self-replicating machines galaxy search paper 2026",
+  "search for artificial objects Earth-Moon Lagrange points co-orbital asteroids 2026 survey",
+  "3I/ATLAS interstellar object latest study natural explanation 2026",
+]
+reused = [
+  "\"3I/ATLAS interstellar object latest study natural explanation 2026\" was first run for they-are-already-here: an artificial interstellar object would be the first sign of a berserker probe, and that search covers the newest interstellar object",
+]
+found = "No artificial object in the solar system. The third interstellar object, 3I/ATLAS (found 2025-07-01), is a natural comet on every measurement; no survey of the Earth-Moon stable points has been published since 1980, and a May 2026 review only notes that they are the places to look. No signal that stopped shortly after it began."
+
+[[item]]
+record = "civilisations-burn-out"
+verdict = "noted"
+queries = [
+  "civilization planet feedback model collapse sustainability astrobiology paper 2026",
+  "atmospheric technosignature industrial pollution exoplanet search 2026",
+]
+found = "Blanco, Haqq-Misra and Profitiliotis (2026-04-15) simulate an Earth-born civilisation collapsing and recovering over a thousand years and find the rate of resource depletion the most influential lever, with a civilisation technologically active for as little as 38% of its span: a model of the coupled civilisation-and-planet kind the test names, though it finds intermittent activity rather than final collapse to be the usual outcome. No atmosphere bearing the traces of industry has been found; the instruments that could see one are still being planned. Logged."
+sources = ["https://arxiv.org/abs/2604.13774"]
+publications = ["blanco-2026"]
+
+[[item]]
+record = "great-filter-ahead"
+verdict = "noted"
+queries = [
+  "Great Filter paper 2026 arXiv Fermi paradox",
+  "artificial intelligence Great Filter Fermi paradox paper 2026",
+]
+found = "Wilman, Nicholson and Haqq-Misra (2026-01-20) summarise the symposium debate on whether the filter is past or future, with no new evidence, and is logged. A preprint by Dougan (2026-02-09) proposes falling birth rates as a new filter, with an argument and no evidence, and is not logged. No signs of civilisations that existed and ended; the Mars and Enceladus results (read under the chance life starts) would strengthen this explanation only if confirmed as life."
+sources = ["https://doi.org/10.1017/s1743921324001352", "https://arxiv.org/abs/2602.08188"]
+publications = ["wilman-2026"]
+
+[[item]]
+record = "natural-catastrophes"
+verdict = "noted"
+queries = [
+  "asteroid impact frequency civilization-ending events estimate study 2026",
+  "planetary defense asteroid deflection capability 2026 study",
+  "supernova mass extinction Earth evidence study 2026",
+]
+reused = [
+  "\"supernova mass extinction Earth evidence study 2026\" was first run for hostile-galaxy: geological evidence linking an extinction to a nearby exploding star is this explanation's test as well",
+]
+found = "No new estimate of how often civilisation-ending events strike a typical planet. Quintana, Wright and Martínez García (2025-03-11) find the nearby supernova rate matches the rate of Earth's unexplained extinctions, and Finke and Razzaque (2024-07-22) raise the possible rate of extinction-level gamma-ray bursts; both logged. On the weakening side, the 2022 DART impact remains the one demonstration of deflection, with China's first test planned before 2030."
+sources = ["https://arxiv.org/abs/2503.08286", "https://arxiv.org/abs/2407.15940"]
+publications = ["quintana-2025", "finke-2024"]
+
+[[item]]
+record = "self-destruction"
+verdict = "quiet"
+queries = [
+  "Doomsday Clock 2026 setting nuclear risk",
+  "civilisation self-destruction Fermi paradox paper 2026 nuclear biological",
+]
+found = "No paper in the window with evidence of a civilisation that ended, and no demonstration about a technology that is both cheap and hard to control. The Doomsday Clock was set to 85 seconds to midnight on 2026-01-27, the closest ever, citing the lapse of the last US-Russia arms treaty; it is a judgment, not a record, and is noted here only."
+
+[[item]]
+record = "ships-in-the-night"
+verdict = "noted"
+queries = [
+  "transient technosignature candidate signal stopped repeating 2026",
+  "how long technological civilizations last Drake equation L new estimate 2026 paper",
+]
+reused = [
+  "\"how long technological civilizations last Drake equation L new estimate 2026 paper\" was first run for lifetime: a well-founded argument that civilisations stop being detectable within thousands of years is this explanation's test, and that search found the 2026 papers making it",
+]
+found = "Three arguments toward the explanation: Rahvar and Rouhani (2026-02-24) bound the lifetime at about 5,000 years if civilisations are common; Garrett (2025-09-28) argues the detectable phase may be mere decades; Blanco and others (2026-04-15) find civilisations detectable for only part of their span. No signal or trace that has already stopped has been found. Logged."
+sources = ["https://arxiv.org/abs/2602.22252", "https://arxiv.org/abs/2509.23632", "https://arxiv.org/abs/2604.13774"]
+publications = ["rahvar-2026", "garrett-2025", "blanco-2026"]
+
+[[item]]
+record = "aestivation"
+verdict = "noted"
+queries = [
+  "aestivation hypothesis advanced civilisations paper 2026",
+  "dormant civilisation artificial structures search universe cooling paper 2026",
+]
+found = "No evidence of suppressed stellar death or dormant structures. Garrett (2026-08-31) works out what the waste heat of a civilisation computing in the cold would look like and proposes a submillimetre search for it, noting that such civilisations may instead be asleep; that is the first concrete observational test near this explanation since the 2017 paper. Logged."
+sources = ["https://arxiv.org/abs/2608.31153"]
+publications = ["garrett-2026"]
+
+[[item]]
+record = "dark-forest"
+verdict = "noted"
+queries = [
+  "dark forest hypothesis game theory paper 2026 interstellar silence",
+  "can a civilisation hide its waste heat technosignature thermodynamics study 2026",
+]
+found = "No detected civilisation either way. Reiss and Feng (Acta Astronautica, 2026) argue that fast ships are so vulnerable in transit that the dark forest's caution has a physical basis; Garrett (2026-08-31) argues cold waste heat would be conspicuous, not hidden, which cuts against the hiding the explanation needs. No peer-reviewed game-theory treatment appeared; two unreviewed preprints propose cooperative equilibria instead. Logged the two papers."
+sources = ["https://arxiv.org/abs/2510.00377", "https://arxiv.org/abs/2608.31153"]
+publications = ["reiss-2025", "garrett-2026"]
+
+[[item]]
+record = "everyone-listens-nobody-transmits"
+verdict = "quiet"
+queries = [
+  "Earth radio leakage detectability from nearest stars study 2026",
+  "METI deliberate message transmission to stars 2026",
+]
+found = "No new study of Earth's own detectability since the 2023 finding that mobile-tower leakage would be invisible within ten light-years, no deliberate beacon detected, and no new transmission from Earth announced."
+
+[[item]]
+record = "expansion-stalls"
+verdict = "noted"
+queries = [
+  "galactic settlement simulation percolation voids stellar motion 2026 paper",
+  "galactic settlement front simulation interstellar expansion paper 2026",
+]
+found = "Two models with settlement that leaves gaps: Roudenko and Pierre-Boyer (2024-10-31) simulate competing civilisations and find even dominant ones leave large gaps between colonies; Ivliev (2026-06-11, unreviewed) argues expansion past a threshold is quiet and saturates a neighbourhood within ten million years, so none has reached us. No simulation on whether stellar motion erases voids. Logged both."
+sources = ["https://arxiv.org/abs/2411.00061", "https://arxiv.org/abs/2606.13914"]
+publications = ["roudenko-2024", "ivliev-2026"]
+
+[[item]]
+record = "interstellar-travel-impractical"
+verdict = "quiet"
+queries = [
+  "interstellar probe interstellar medium dust damage shielding study 2026",
+  "Breakthrough Starshot 2026 status interstellar probe",
+]
+found = "No physical result showing a barrier. A 2026 preprint on shield materials carries affiliations that could not be confirmed and is not counted; the 2023 analysis found a few millimetres of shielding enough for a gram-scale probe. Breakthrough Starshot has been paused since 2024 to restructure, with no launch date. The third interstellar object was a natural comet."
+
+[[item]]
+record = "inward-turn"
+verdict = "noted"
+queries = [
+  "virtual worlds civilisations stop exploring Fermi paradox paper 2026",
+  "Dyson sphere infrared excess survey technosignature result 2026",
+]
+reused = [
+  "\"Dyson sphere infrared excess survey technosignature result 2026\" was first run for they-became-machines: a civilisation whose only visible trace is the waste heat of computing would show as an infrared excess, which is what that survey hunts",
+]
+found = "No civilisation whose only trace is computing's waste heat: two of the seven Dyson-sphere candidates are background galaxies (Korn and others, 2026-07-28) and nearby galaxies show no galaxy-scale waste heat (Huang and others, 2026-01). Reiss and Feng (2026) describe a civilisation withdrawing into slow time near the galaxy's central black hole, a cousin of the inward turn. Logged."
+sources = ["https://arxiv.org/abs/2607.25701", "https://arxiv.org/abs/2601.07297", "https://arxiv.org/abs/2510.00377"]
+publications = ["korn-2026", "huang-2026", "reiss-2025"]
+
+[[item]]
+record = "life-under-ice"
+verdict = "noted"
+queries = [
+  "Europa Clipper mission update October 2026",
+  "subsurface ocean worlds energy habitability limits study 2026",
+  "Enceladus plume organic molecules new study 2026",
+]
+reused = [
+  "\"Enceladus plume organic molecules new study 2026\" was first run for life: life found in the ocean of Enceladus is this explanation's first test, and that search covers the newest plume chemistry",
+]
+found = "Khawaja and others (Nature Astronomy, 2025-10-01) confirm complex organic compounds in ice grains fresh from Enceladus's ocean, pointing to hydrothermal chemistry under the ice: conditions, not life. Europa Clipper flies past Earth on 2026-12-03 and reaches Jupiter in 2030. No new census of interior-ocean worlds. Logged."
+sources = ["https://doi.org/10.1038/s41550-025-02655-y"]
+publications = ["khawaja-2025"]
+
+[[item]]
+record = "listening-the-wrong-way"
+verdict = "noted"
+queries = [
+  "optical SETI laser technosignature search result 2026",
+  "neutrino gravitational wave technosignature search 2026",
+  "CatWISE AllWISE waste heat nearby galaxies upper limits technosignature 2026 arXiv",
+]
+found = "No detection by any method. Toward the explanation: Garrett (2025-09-28) argues the loud phase may last decades; Garrett (2026-08-31) argues the standard infrared searches look at the wrong temperature; Vidal and others (2026-05-20) map every proposed kind of trace, including neutrinos and gravitational waves. Toward weakening it: Huang and others (2026-01) find no galaxy-scale waste heat in nearby galaxies. Optical laser searches with new spectrographs are proposed for 2026 onward, with no result yet. Logged four."
+sources = ["https://arxiv.org/abs/2509.23632", "https://arxiv.org/abs/2608.31153", "https://arxiv.org/abs/2605.21093", "https://arxiv.org/abs/2601.07297"]
+publications = ["garrett-2025", "garrett-2026", "vidal-2026", "huang-2026"]
+
+[[item]]
+record = "no-interest-in-contact"
+verdict = "noted"
+queries = [
+  "interstellar expansion inevitable competition civilisations model Fermi paradox 2026",
+  "Dyson sphere infrared excess survey technosignature result 2026",
+]
+reused = [
+  "\"Dyson sphere infrared excess survey technosignature result 2026\" was first run for they-became-machines: the test asks for a civilisation able to transmit that does not, and a Dyson-sphere survey is where a silent industrial civilisation would show as waste heat",
+]
+found = "No detected civilisation, transmitting or silent. Ivliev (2026-06-11, unreviewed) argues the opposite of the explanation, that expansion becomes too cheap to refuse once industry runs itself, but quietly; the Hephaistos follow-up (Korn and others, 2026-07-28) confirms no candidate. Logged Ivliev."
+sources = ["https://arxiv.org/abs/2606.13914", "https://arxiv.org/abs/2607.25701"]
+publications = ["ivliev-2026"]
+
+[[item]]
+record = "not-looked-long-enough"
+verdict = "noted"
+queries = [
+  "SETI completeness cosmic haystack fraction searched 2026",
+  "all-sky technosignature survey COSMIC VLA SKA results 2026",
+]
+found = "No comprehensive all-sky, all-frequency search is complete; the COSMIC survey on the Very Large Array had passed 950,000 pointings by September 2024 with no detection. Mason, Garrett and Siemion (2025-11-25) show past surveys covered far more stars than their target lists suggest, which shrinks the glass-of-water argument a little; Crawford (2026-05-30) argues for artefact searches that probe accumulated time; Vidal and others (2026-05-20) map what has and has not been searched. Logged three."
+sources = ["https://arxiv.org/abs/2511.20231", "https://arxiv.org/abs/2606.00463", "https://arxiv.org/abs/2605.21093"]
+publications = ["mason-2025", "crawford-2026", "vidal-2026"]
+
+[[item]]
+record = "planetarium"
+verdict = "quiet"
+queries = [
+  "planetarium hypothesis Baxter Fermi paradox 2026",
+  "New Horizons Kuiper belt outer solar system measurements 2026 results",
+]
+found = "Nothing. New Horizons, at about 65 astronomical units in mid-2026, keeps measuring a sky consistent with what was predicted from inside, with dust beyond the Kuiper belt's expected edge the only surprise, and that is a natural one. No new writing on the hypothesis itself."
+
+[[item]]
+record = "shouting-is-costly"
+verdict = "quiet"
+queries = [
+  "galactic plane transient radio technosignature survey pulse 2026 result",
+  "beacon duty cycle SETI survey sensitivity intermittent signals paper 2026",
+]
+found = "No brief repeating artificial pulse from the plane of the galaxy, and no published count of past searches' sensitivity to intermittent signals beyond the 2023 Galactic Centre fast-folding search. The LOFAR weekly technosignature survey has a conference abstract and no results."
+
+[[item]]
+record = "simulation"
+verdict = "noted"
+queries = [
+  "simulation hypothesis physics test paper 2026",
+  "simulation hypothesis new argument paper 2026 Bostrom probability",
+]
+found = "No physical finding of a discrete computation or a seam. Edge and Brown (Frontiers in Physics, 2026-04-21) answer Vazza's 2025 impossibility argument by saying it refutes a stronger claim than the one made, so the 'proof of impossibility' the weakening test names has not been given; a revised Wolpert preprint (2026-03-19) argues the question turns on the Church-Turing thesis. Logged Edge and Brown."
+sources = ["https://doi.org/10.3389/fphy.2026.1808725", "https://arxiv.org/abs/2404.16050v5"]
+publications = ["edge-2026"]
+
+[[item]]
+record = "they-are-already-here"
+verdict = "noted"
+queries = [
+  "3I/ATLAS interstellar object latest study natural explanation 2026",
+  "search for artificial objects Earth-Moon Lagrange points co-orbital asteroids 2026 survey",
+]
+reused = [
+  "\"search for artificial objects Earth-Moon Lagrange points co-orbital asteroids 2026 survey\" was first run for berserkers: a thorough survey of the Earth-Moon stable points is this explanation's weakening test",
+]
+found = "The third interstellar object, 3I/ATLAS (Seligman and others, 2025-07-03, found 2025-07-01), is a natural comet on every measurement, with a minority arguing otherwise and no evidence for it: a natural explanation for an interstellar visitor, which is on the weakening side. Crawford (2026-05-30) proposes looking for microscopic technological debris in lunar soil, a search that has not been done. No artificial object found. Logged both."
+sources = ["https://arxiv.org/abs/2507.02757", "https://arxiv.org/abs/2606.00463"]
+publications = ["seligman-2025", "crawford-2026"]
+
+[[item]]
+record = "they-became-machines"
+verdict = "noted"
+queries = [
+  "postbiological civilisation machine intelligence Fermi paradox paper 2026",
+  "Dyson sphere infrared excess survey technosignature result 2026",
+  "galactic center infrared anomalous heat technosignature survey 2026",
+]
+found = "No artificial object or signal, and no anomalous heat found: the Dyson-sphere candidates of 2024 are unconfirmed with two explained as background galaxies (Korn and others, 2026-07-28), nearby galaxies show no galaxy-scale waste heat (Huang and others, 2026-01), and no Galactic Centre heat survey appeared. On the argument's side, Garrett (2025, 2026) and Ivliev (2026) each describe machine civilisations our searches would miss, and Garrett's cold-computing paper gives the first concrete test. Logged five."
+sources = ["https://arxiv.org/abs/2607.25701", "https://arxiv.org/abs/2601.07297", "https://arxiv.org/abs/2608.31153", "https://arxiv.org/abs/2509.23632", "https://arxiv.org/abs/2606.13914"]
+publications = ["korn-2026", "huang-2026", "garrett-2026", "garrett-2025", "ivliev-2026"]
+
+[[item]]
+record = "transcension"
+verdict = "noted"
+queries = [
+  "transcension hypothesis Smart black holes 2026",
+  "transcension hypothesis Fermi paradox new paper 2026 compression inward civilisations",
+]
+found = "No black hole with properties that natural formation cannot explain. Reiss and Feng (Acta Astronautica, 2026) show that a civilisation could live on tolerable orbits near the galaxy's central black hole in a frame where time runs ten thousand times slower, a worked-out version of the inward withdrawal this explanation describes; a July 2026 unreviewed preprint restates the idea in formal logic and is not logged. Logged Reiss and Feng."
+sources = ["https://arxiv.org/abs/2510.00377"]
+publications = ["reiss-2025"]
+
+[[item]]
+record = "zoo-hypothesis"
+verdict = "quiet"
+queries = [
+  "zoo hypothesis galactic club paper 2026",
+  "search for artificial objects Earth-Moon Lagrange points co-orbital asteroids 2026 survey",
+]
+reused = [
+  "\"search for artificial objects Earth-Moon Lagrange points co-orbital asteroids 2026 survey\" was first run for berserkers: an artificial object positioned to observe Earth is this explanation's first test, and the stable points are where it would be found",
+]
+found = "No sign of surveillance, no settled galaxy found, and no new paper; the newest model of whether a galaxy-wide agreement could hold is still Forgan's of 2016, which found cliques likelier than one club."
