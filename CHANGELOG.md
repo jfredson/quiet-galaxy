@@ -2,6 +2,10 @@
 
 Every change to a range, a record, the method or the site, with absolute dates. Newest first. A range change always says which publication moved it and by how much.
 
+## 2026-10-16 (the site's own skin, Hush)
+
+- **The site wears its own skin, "Hush": a cold, near-empty sky.** Blue-black with no violet cast, cold white text, a pale ice-blue in place of amber, a dozen still stars and no galaxy glow; the equation on the first screen comes out of its card and stands on the sky with a hairline under it, its symbols a size larger, so the seven pieces are the first thing on the page; the answer box keeps its edge and takes the sky's own black; dark by default, with the light theme the same sky at dawn. Proposed with mock-ups in the Sentient Horizons design standard (`design/proposals/quiet-galaxy-skin-2026-10-17.md`) and ruled by John on 2026-10-16 as proposed, after the standard split into a shared skeleton and a skin per site. The stylesheet is now `skin.css` (this site's tokens and backdrop) plus the shared `shell.css` 2.0.1 plus the site's own rules; the starfield asks for twelve stars and no longer twinkles; the term links in the equation are no longer underlined; the favicon and the browser's theme colour take the blue-black and the ice-blue. Pictures in `docs/site-2026-10-16-hush-*.jpg`.
+
 ## 2026-10-16 (claims written from memory checked against sources: factors, library, papers)
 
 - **56 claims marked `verify` in `data/factors/`, `data/library/` and `data/papers/` were checked against the papers, books and channel pages themselves: 28 cleared (borne out), 22 corrected, 6 left open.** Left open, with what was tried written into each entry: Drake's 1961 values for the share of stars with planets and for planets per star, and his star-formation rate and the Pearman page range (the two Drake books could not be opened; other accounts disagree), Grinspoon's lifetime (the book could not be read), and Pascal Lee's 0.0002 (the talk could not be reached). One new open item was added: the description of what each chapter of Life Beyond covers.

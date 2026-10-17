@@ -8,7 +8,7 @@ The public face of the records: https://thequietgalaxy.com (domain registered by
 
 - **Python owns the data.** `scripts/export.py` reads the records with the same loader and validator as `scripts/compute.py`, so the site can never show a record that fails the schema. It writes `src/data/records.json`. That file is generated, not committed: every `npm run build` and `npm run dev` runs the export first (`prebuild`, `predev`), so the site always reflects the records in `data/`.
 - **Astro owns the pages.** Astro 5, fully static, same generator and folder layout as the sister sites. `src/lib/records.ts` is the typed view of the JSON; every page reads from it.
-- **The styles are the standard's.** `src/styles/global.css` is `deep-field.css` copied unchanged (version 1.3.0 of 2026-10-08) with this site's own styles below the marked line. `Base.astro` and `Nav.astro` express the standard's shell: the theme script, the top bar with the two tiers and the toggle, the footer with the four lines and the parent line.
+- **The styles are the family's skeleton with this site's own skin.** `src/styles/skin.css` is the "Hush" skin (a cold, near-empty sky: blue-black, cold white, a pale ice-blue, a dozen still stars and no glow; dark by default; ruled by John 2026-10-16), every token for both themes plus the backdrop. `src/styles/global.css` imports it, then carries `sentient-horizons/design/shell.css` copied unchanged (version noted at the marked line), then this site's own rules, which take the equation out of its card so it stands as the object. `Base.astro` and `Nav.astro` express the standard's shell: the theme script, the top bar with the two tiers and the toggle, the footer with the four lines and the parent line.
 
 ## Pages
 

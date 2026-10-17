@@ -1,70 +1,24 @@
 /* ---------------------------------------------------------------
-   Sentient Horizons design standard · "Deep Field"
-   deep-field.css version 1.3.0 (2026-10-08): the "with Claude" link style removed with the link itself
-   Canonical copy: sentient-horizons/design/deep-field.css. Sites copy this
-   file unchanged and add their own styles below it; see design/README.md.
-   Near-black cosmic field, warm-white serif, amber accent; a warm-paper
-   light theme ("Day Field") with the accents deepened.
+   The Quiet Galaxy · stylesheet (2026-10-16)
+   Three parts, in order: the skin (skin.css, this site's own tokens for
+   both themes and its backdrop, ruled 2026-10-16), the skeleton (shell.css
+   version 2.0.1 from sentient-horizons/design, copied unchanged below), and
+   this site's own rules after the marked line. Never edit the skeleton
+   here; update the copy when the standard changes.
    --------------------------------------------------------------- */
-:root {
-  --bg: #08070f;
-  --bg-soft: #0c0b16;
-  --panel: #110f20;
-  --text: #f2eee7;
-  --text-soft: #d7d2c7;
-  --muted: #968fa3;
-  --line: rgba(255, 255, 255, 0.10);
-  --line-strong: rgba(255, 255, 255, 0.18);
-  --accent: #e3a96b;      /* galaxy-core amber */
-  --accent-2: #9b7bc0;    /* nebula violet */
-  --accent-3: #6fb6c9;    /* cool arm / data */
-  --on-accent: #1a1206;
-  --accent-hover: #efb87d;
-  --glow: rgba(155, 123, 192, 0.45);
-  --header-bg: rgba(8, 7, 15, 0.72);
-  --hover-bg: rgba(255, 255, 255, 0.06);
-  --active-bg: rgba(255, 255, 255, 0.08);
-  --chip-bg: rgba(255, 255, 255, 0.03);
-  --callout-bg: rgba(155, 123, 192, 0.10);
-  --ok: #7fc48a;
-  --no: #d98a7a;
-  --star: #fff;
-  --radius: 11px;
-  --maxw: 1080px;
-  --serif: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
-  --sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
-}
+@import './skin.css';
 
-/* Light mode — "Day Field": warm paper, near-black ink, deepened accents. */
-:root[data-theme='light'] {
-  --bg: #faf9f7;
-  --bg-soft: #f1efea;
-  --panel: #ffffff;
-  --text: #1a1916;
-  --text-soft: #34322d;
-  --muted: #6b665e;
-  --line: rgba(23, 21, 18, 0.11);
-  --line-strong: rgba(23, 21, 18, 0.18);
-  --accent: #4a4566;
-  --accent-2: #6d4f96;
-  --accent-3: #2f7c90;
-  --on-accent: #fbfaf8;
-  --accent-hover: #5b5580;
-  --link: #5b4a7e;
-  --link-hover: #6d4f96;
-  --glow: rgba(74, 69, 102, 0.16);
-  --header-bg: rgba(250, 249, 247, 0.86);
-  --hover-bg: rgba(23, 21, 18, 0.05);
-  --active-bg: rgba(23, 21, 18, 0.08);
-  --chip-bg: transparent;
-  --callout-bg: rgba(74, 69, 102, 0.06);
-  --ok: #2f7c4a;
-  --no: #a5432f;
-  --star: #c9bfa8;
-  --radius: 5px;
-}
-
+/* ---------------------------------------------------------------
+   Sentient Horizons design standard · the skeleton
+   shell.css version 2.0.1 (2026-10-16): split out of deep-field.css 1.3.0; light-theme button text fixed.
+   What every site shares and a reader learns once: the base, the links,
+   the page width, the top bar, the type roles and heading scale, the
+   layout helpers, buttons, chips, callouts, tables, the footer and the
+   responsive rules. It defines no colour: every colour here is a token
+   that the site's skin (design/skins/<name>.css) supplies. A site copies
+   this file and one skin, in that order, into its own stylesheet and adds
+   its own rules below a marked line; see design/README.md.
+   --------------------------------------------------------------- */
 * { box-sizing: border-box; }
 /* The hidden attribute must win over component display rules (e.g. .run-out { display: flex }). */
 [hidden] { display: none !important; }
@@ -94,32 +48,6 @@ code { font-family: var(--mono); font-size: 0.88em; color: var(--text-soft); bac
 .container { max-width: var(--maxw); margin: 0 auto; padding: 0 26px; position: relative; z-index: 1; }
 .narrow { max-width: 760px; }
 
-/* ---- cosmic backdrop (top band; scrolls away so reading is calm) ---- */
-.space-bg {
-  position: absolute; top: 0; left: 0; right: 0; height: 760px; z-index: 0;
-  overflow: hidden; pointer-events: none;
-  -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
-}
-.space-bg .galaxy {
-  position: absolute; inset: 0;
-  background:
-    radial-gradient(46% 58% at 80% 26%, rgba(227, 169, 107, 0.22), transparent 46%),
-    radial-gradient(62% 78% at 76% 25%, rgba(155, 123, 192, 0.24), transparent 60%),
-    radial-gradient(100% 120% at 72% 22%, rgba(70, 105, 165, 0.16), transparent 78%);
-}
-.space-bg .core {
-  position: absolute; right: 7%; top: 90px; width: 400px; height: 400px; border-radius: 50%;
-  filter: blur(34px); opacity: 0.6;
-  background: conic-gradient(from 210deg,
-    rgba(227, 169, 107, 0.20), rgba(155, 123, 192, 0.12),
-    rgba(70, 105, 165, 0.06), rgba(155, 123, 192, 0.12), rgba(227, 169, 107, 0.20));
-}
-.starfield { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
-.starfield span { position: absolute; border-radius: 50%; background: var(--star); }
-@keyframes twk { 0%, 100% { opacity: 0.14; } 50% { opacity: 0.95; } }
-@media (prefers-reduced-motion: reduce) { .starfield span { animation: none !important; } }
-:root[data-theme='light'] .space-bg { display: none; }
 
 /* ---- header / nav ---- */
 .site-header { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid var(--line); background: var(--header-bg); backdrop-filter: blur(10px); }
@@ -188,6 +116,10 @@ a.dim:hover { color: var(--accent); }
 .btn:hover { color: var(--on-accent); filter: brightness(1.08); }
 .btn.ghost { background: transparent; color: var(--accent); }
 .btn.ghost:hover { background: var(--accent); color: var(--on-accent); }
+/* the light theme's link colour must not reach into buttons (the rule above for `a` outranks .btn) */
+:root[data-theme='light'] a.btn { color: var(--on-accent); }
+:root[data-theme='light'] a.btn.ghost { color: var(--accent); }
+:root[data-theme='light'] a.btn.ghost:hover { color: var(--on-accent); }
 .ctas { display: flex; gap: 9px; flex-wrap: wrap; margin-top: 4px; }
 .chips { display: flex; gap: 8px; flex-wrap: wrap; }
 .chip { display: inline-block; font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.02em; border: 1px solid var(--line); border-radius: 20px; padding: 3px 10px; color: var(--muted); background: var(--chip-bg); white-space: nowrap; }
@@ -237,10 +169,26 @@ a.dim:hover { color: var(--accent); }
 }
 
 /* ===============================================================
-   The Quiet Galaxy's own styles. Everything above this line is the Sentient Horizons
-   design standard's deep-field.css, copied unchanged (version 1.3.0, 2026-10-08; canonical
-   copy: sentient-horizons/design/deep-field.css). Nothing below redefines a token.
+   Everything above this line is shell.css version 2.0.1 (2026-10-16), copied
+   unchanged from sentient-horizons/design/shell.css on 2026-10-16; the tokens it
+   uses come from skin.css. Everything below is The Quiet Galaxy's own. Every
+   colour is a token; data is coloured with --accent-3 (design standard, sections
+   3a, 4 and 9).
    =============================================================== */
+
+/* ---- the equation as the object (the Hush skin, ruled 2026-10-16) ----
+   The equation line comes out of its card and stands on the sky: no fill, no border, a
+   hairline under it; the symbols a size larger. The answer box keeps its edge and, in the
+   dark theme, takes the sky's own black. The term links are not underlined. */
+.home-hero-main .trunk { background: transparent; border: none; border-radius: 0; padding: 0; gap: 10px; }
+.home-hero-main .trunk-eq { padding-bottom: 14px; border-bottom: 1px solid var(--line-strong); }
+.home-hero-main .trunk-sym { font-size: 36px; }
+.home-hero-main .trunk-n { font-size: 32px; padding-top: 2px; }
+.home-hero-main .trunk-eq .op { font-size: 20px; padding-top: 9px; }
+.home-hero-main .trunk-foot { border-top: none; padding-top: 0; }
+.trunk-term { text-decoration: none; }
+.home-number { background: transparent; }
+:root[data-theme='light'] .home-number { background: var(--panel); }
 
 /* The top bar carries six links with the tracker pattern's long public names (section 4), so two
    things differ from the standard's bar, both only here: the site's name never wraps (if the row
@@ -264,10 +212,6 @@ a.dim:hover { color: var(--accent); }
    (:root[data-theme='light'] a) outranks the button rule, so a solid button's text took the link
    colour on the button's own background and was unreadable on every site in the family; found on
    theupgradetree.com on 2026-10-16. The skeleton carries the fix from shell.css 2.0.1; these three
-   lines stand in until this site next copies the stylesheet. */
-:root[data-theme='light'] a.btn { color: var(--on-accent); }
-:root[data-theme='light'] a.btn.ghost { color: var(--accent); }
-:root[data-theme='light'] a.btn.ghost:hover { color: var(--on-accent); }
 
 /* ---- home: the thing held, then the question (tracker pattern, section 1) ----
    The first screen is built like The Belt Equation's home page (site/src/pages/index.astro and

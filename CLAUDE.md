@@ -23,6 +23,17 @@ is one click.
 Until the repository has a GitHub remote, say so in the closing message and leave the
 commits on `main`. Creating a public repository is John's call.
 
+## Design
+
+The site wears its own skin, "Hush" (a cold, near-empty sky; ruled by John 2026-10-16 from the
+proposal in `sentient-horizons/design/proposals/quiet-galaxy-skin-2026-10-17.md`), on the family's
+shared skeleton (design standard, section 3a). `site/src/styles/skin.css` holds this site's tokens
+for both themes and its backdrop (a dozen still stars, no glow); `site/src/styles/global.css`
+imports it, then carries `sentient-horizons/design/shell.css` copied unchanged with the version
+noted, then this site's own rules below the marked line. Never edit the skeleton here; update the
+copy when the standard changes. Dark is the default theme. Every colour is a token; data is
+coloured with `--accent-3`. No web fonts.
+
 ## Every design choice comes with confidence and an alternative
 
 Ruled by John 2026-09-08. Before asking John to accept any design choice (a record field, a
