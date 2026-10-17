@@ -60,11 +60,6 @@ would_strengthen = "Evidence that the historical trend toward denser, faster com
 would_weaken = "A detected civilisation that has expanded outward; evidence that technological development levels off well short of black-hole densities; a demonstration that no civilisation could survive its own compression."
 related = ["aestivation", "inward-turn", "they-became-machines", "simulation", "dark-forest"]
 
-verify = [
-  "That the Acta Astronautica citation is volume 78, pages 55–68, 2012; check.",
-  "That Smart proposes black holes as the end state and as a possible meeting place, rather than only as an analogy; check the paper's own wording.",
-]
-
 [[bears_on]]
 factor = "detectable"
 direction = "lowers"

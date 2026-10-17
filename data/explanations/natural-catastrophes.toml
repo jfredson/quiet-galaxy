@@ -7,7 +7,7 @@ name = "Natural catastrophes: asteroid strikes, giant eruptions and nearby explo
 family = "gone"
 proposed_by = "No single author; the modern treatment is due to Milan Ćirković and colleagues"
 proposed_in = 2004
-proposed_source = "Ćirković, 'Earths: rare in time, not space?', Journal of the British Interplanetary Society 57, 53–59 (2004); and the wider literature on mass extinctions since the Alvarez impact hypothesis of 1980"
+proposed_source = "Ćirković, 'Earths – Rare in Time, Not in Space', Journal of the British Interplanetary Society 57, 53–59 (2004); and the wider literature on mass extinctions since the Alvarez impact hypothesis of 1980"
 summary = """
 Earth's history is punctuated by disasters that killed most of the species alive at the
 time: the rock that ended the dinosaurs, the eruptions that caused the worst extinction
@@ -48,7 +48,7 @@ The main objection is that a civilisation at our level or beyond is less fragile
 species. Humans already track asteroids and could, with effort, deflect one. A
 civilisation spread across even a few worlds would survive any single disaster. And
 impacts large enough to end a civilisation are rare, roughly one every hundred million
-years for the dinosaur-killer class, which is long compared with the time it takes to get
+to a few hundred million years for the dinosaur-killer class, which is long compared with the time it takes to get
 off a planet. The reply is that smaller events, a large volcanic eruption or a modest
 impact, could collapse a civilisation without ending its species, that recovery is not
 guaranteed, and that most of the galaxy's history was more violent than the recent past.
@@ -59,10 +59,10 @@ would_strengthen = "A better record of how often civilisation-ending events stri
 would_weaken = "Evidence that most planetary systems are calmer than ours; a civilisation detected that has survived for millions of years; a demonstration that a civilisation at roughly our level can reliably protect itself against impacts and eruptions."
 related = ["hostile-galaxy", "self-destruction", "ships-in-the-night", "great-filter-ahead"]
 
+notes = "Corrected 2026-10-16. (1) The title of Ćirković's paper was given as 'Earths: rare in time, not space?'; the British Interplanetary Society's catalogue lists it as 'Earths – Rare in Time, Not in Space', Journal of the British Interplanetary Society 57, 53-59 (2004), reference 2004.57.53 (https://bis-space.com/shop/?p=7666). (2) The text put the dinosaur-killer impact rate at about one per hundred million years. A NASA Jet Propulsion Laboratory briefing gives 'every 100 million years (or so)' (Chodas, https://kiss.caltech.edu/workshops/neo/presentations/ShortCourse_Chodas-Protecting_Earth.pdf) and a 2022 National Academies workshop gives 'every few hundred million years' (https://www.nationalacademies.org/read/26698/chapter/9), so the text now gives that range. Confirmed unchanged: Alvarez, Alvarez, Asaro and Michel, Science 208, 1095-1108 (1980-06-06). Not changed but flagged in verify: the paper's abstract describes a comparison of the rare-Earth idea with Annis's phase-transition idea, which is about timing across the whole galaxy, not about disasters ending civilisations."
+
 verify = [
-  "That Ćirković's 'Earths: rare in time, not space?' appeared in JBIS volume 57 in 2004 with those pages; check.",
-  "That a dinosaur-killer class impact is usually quoted at about one per hundred million years; check a standard impact-frequency source.",
-  "That the Alvarez paper is from 1980 (Science 208); check.",
+  "That Ćirković's 2004 paper argues what the body says it does: that natural disasters set a ceiling on how long a civilisation lasts, and that this explains why civilisations may be young and few. Checked 2026-10-16: the paper's abstract (British Interplanetary Society catalogue, https://bis-space.com/shop/?p=7666) says only that it compares Ward and Brownlee's rare-Earth idea with Annis's phase-transition scenario, examines how long the galaxy stays habitable and a four-dimensional galactic habitable zone, and slightly favours the phase-transition picture. The full text was not reached, so whether it makes the civilisation-lifetime argument is unconfirmed, and the attribution to Ćirković in proposed_by and the body may overstate.",
 ]
 
 [[bears_on]]

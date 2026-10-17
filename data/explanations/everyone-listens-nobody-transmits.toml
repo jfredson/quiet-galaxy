@@ -10,8 +10,9 @@ proposed_in = 2006
 proposed_source = "'The SETI Paradox', arXiv:physics/0611283 (2006)"
 summary = """
 Humanity has spent sixty years listening for signals from other civilisations and almost
-no effort sending any; the handful of deliberate messages ever transmitted add up to a
-few hours. The reasons are familiar: sending is expensive, the reply would take centuries,
+no effort sending any; the handful of deliberate messages ever transmitted were brief,
+from the 1974 Arecibo message of under three minutes to a 2008 transmission of about four
+and a half hours. The reasons are familiar: sending is expensive, the reply would take centuries,
 and some people think announcing ourselves is dangerous. If every civilisation reasons
 the same way, every one of them is sitting in silence waiting for someone else to speak
 first. The Russian radio astronomer Alexander Zaitsev called this the SETI paradox,
@@ -20,8 +21,9 @@ intelligence): a search that assumes others transmit, run by a species that does
 then be a coordination failure on a galactic scale."""
 body = """
 Alexander Zaitsev was one of the few people who ever sent deliberate messages toward
-other stars, from the large radar dish at Yevpatoria in Crimea, in 1999, 2001, 2003 and
-2008. He was also the sharpest critic of the asymmetry at the heart of the search. In a
+other stars. The messages went out from the large radar dish at Yevpatoria in Crimea in
+1999, 2001, 2003 and 2008; he supervised the 1999 and 2003 transmissions, helped design
+the 2001 teenagers' message, and advised on the 2008 one. He was also the sharpest critic of the asymmetry at the heart of the search. In a
 2006 paper he pointed out that the search for extraterrestrial intelligence rests on an
 assumption its own practitioners decline to satisfy: that somewhere out there a
 civilisation has decided to transmit, steadily and strongly, for long enough to be found.
@@ -58,11 +60,7 @@ would_strengthen = "A detected civilisation found by its faint leakage rather th
 would_weaken = "Detection of a deliberate beacon; evidence that civilisations generally expand and settle other stars, which would make their silence in the radio bands beside the point; a strong case that long-lived civilisations eventually transmit."
 related = ["shouting-is-costly", "dark-forest", "not-looked-long-enough", "listening-the-wrong-way", "no-interest-in-contact"]
 
-verify = [
-  "That Zaitsev's 'The SETI Paradox' is arXiv:physics/0611283 from 2006; check.",
-  "That the Yevpatoria transmissions were in 1999, 2001, 2003 and 2008 and that Zaitsev led them; check.",
-  "That the total duration of all deliberate interstellar messages ever sent is on the order of hours; check against a list of messages sent.",
-]
+notes = "Checked 2026-10-16. Borne out: Zaitsev, 'The SETI Paradox', arXiv:physics/0611283, submitted 2006-11-29; its abstract says people seek signals yet resist sending them, and that if this is typical the search is pointless (https://arxiv.org/abs/physics/0611283). The Yevpatoria dish (RT-70) sent Cosmic Call in 1999 and 2003 (https://en.wikipedia.org/wiki/Cosmic_Call), the Teen Age Message in August to September 2001 (https://en.wikipedia.org/wiki/Teen_Age_Message) and A Message From Earth on 2008-10-09 (https://www.universetoday.com/19335/messages-from-earth-beamed-to-alien-world). Corrected: the page said Zaitsev sent all four; sources say he supervised the 1999 and 2003 transmissions (https://en.wikipedia.org/wiki/Alexander_Zaitsev_(scientist)), proposed the structure of the 2001 message, and was a consultant on the 2008 one, so the body now says that. The claim that all deliberate messages ever sent add up to a few hours could not be confirmed and looks too low: the 2008 message alone lasted about four and a half hours and Cosmic Call 2 is listed at about 12 hours (Wikipedia, whose figures do not quite match its own stated bit rates). The summary now gives only the two durations that sources support: the 1974 Arecibo message under three minutes (https://en.wikipedia.org/wiki/Arecibo_message) and the 2008 message about four and a half hours. Not checked: that Zaitsev answered the silence problem by transmitting, which the last paragraph of the body states."
 
 [[bears_on]]
 factor = "detectable"

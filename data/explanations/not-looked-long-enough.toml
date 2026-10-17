@@ -7,7 +7,7 @@ name = "We have not looked long enough: all the searching ever done amounts to a
 family = "unseen"
 proposed_by = "Jill Tarter gave the image; Jason Wright, Shubham Kanodia and Emily Lubar put a number on it"
 proposed_in = 2010
-proposed_source = "Tarter's 'glass of water from the ocean' comparison, in talks and interviews from around 2010; Wright, Kanodia and Lubar, 'How Much SETI Has Been Done? Finding Needles in the n-dimensional Cosmic Haystack', The Astronomical Journal 156, 260 (2018)"
+proposed_source = "Tarter and colleagues' 2010 comparison of all searching to a drinking glass of seawater taken from Earth's oceans (Proceedings of SPIE volume 7819, as cited by Wright and others), repeated in Tarter's own writing and interviews from 2010; Wright, Kanodia and Lubar, 'How Much SETI Has Been Done? Finding Needles in the n-dimensional Cosmic Haystack', The Astronomical Journal 156, 260 (2018)"
 summary = """
 The search for signals from other civilisations has been going for about sixty years,
 but for most of that time it looked at a few hundred stars, at a few frequencies, for a
@@ -15,11 +15,11 @@ few minutes each. A proper search has to cover the whole sky, every frequency a 
 could use, every moment a signal might arrive, every kind of signal, and every level of
 faintness. Measured against that, the astronomer Jill Tarter compared everything done so
 far to scooping one glass of water from the ocean and concluding there were no fish. A
-careful count in 2018 made it a small swimming pool instead of a glass, which does not
+careful count in 2018 made it a large hot tub or a small swimming pool instead of a glass, which does not
 change the point. The silence may simply mean we have hardly started listening."""
 body = """
 The first search for radio signals from another civilisation was Frank Drake's Project
-Ozma in 1960: two stars, one frequency band, a few weeks. The searches since have been
+Ozma in 1960: two stars, one frequency, six hours a day from April to July 1960. The searches since have been
 larger, and the Breakthrough Listen programme that began in 2016 is larger than all its
 predecessors together, but the space to be searched is enormous in a way that is easy to
 underestimate. A signal could come from any direction, on any of billions of possible
@@ -31,9 +31,10 @@ transmitting steadily and the searches so far could easily have missed every one
 Jill Tarter, who led the search for decades, made the comparison that stuck: all the
 searching ever done is a single glass of water from the ocean. In 2018 Jason Wright and
 two colleagues set out to check it. They defined the volume of the search space along
-eight or nine dimensions, worked out how much of it every published search had covered,
+eight dimensions (a refinement of an earlier nine-dimensional description by Tarter and
+colleagues), worked out how much of it every published search had covered,
 and compared the total with the whole. Their answer, depending on the assumptions, was
-somewhere between a hot tub and a small swimming pool against the volume of Earth's
+somewhere between a large hot tub and a small swimming pool against the volume of Earth's
 oceans. The comparison is not a figure of speech: it is the fraction of the possible
 signals that could have been found if they existed.
 
@@ -57,11 +58,8 @@ would_strengthen = "Nothing can strengthen it except the passage of time without
 would_weaken = "A comprehensive all-sky, all-frequency search over years with no detection, which is what the current generation of instruments is beginning to make possible; conversely, a detection would end it, since it would show the galaxy was never as silent as it seemed."
 related = ["listening-the-wrong-way", "shouting-is-costly", "everyone-listens-nobody-transmits", "ships-in-the-night", "no-paradox-just-wide-ranges"]
 
-verify = [
-  "When and where Tarter first used the glass-of-water comparison; around 2010 is from memory, and the proposed_in year should follow the first documented use.",
-  "That Wright, Kanodia and Lubar (2018) is in The Astronomical Journal volume 156, article 260, uses eight or nine dimensions, and gives the hot tub to small swimming pool range; check.",
-  "That Project Ozma observed two stars (Tau Ceti and Epsilon Eridani) for about six weeks in 1960; check.",
-]
+notes = "Corrected 2026-10-16. (1) Project Ozma: the text said it lasted 'a few weeks' (and the check note said about six weeks). The SETI Institute gives observations from April to July 1960, six hours a day, at the 21-centimetre hydrogen-line frequency (https://seti.org/project-ozma), and Britannica gives about 150 hours over four months (https://www.britannica.com/event/Project-Ozma); the two stars, Tau Ceti and Epsilon Eridani, were right. (2) Dimensions: Wright, Kanodia and Lubar's abstract describes an eight-dimensional model, which refines the nine-dimensional description of Tarter and colleagues; the text said 'eight or nine'. Their result is 'a large hot tub or small swimming pool' compared with Earth's oceans (The Astronomical Journal 156, 260 (2018), https://arxiv.org/abs/1809.07252; the volume, article number and year are confirmed). (3) The glass-of-water comparison: the earliest documented use found is Tarter and others, Proceedings of SPIE 7819 (2010), which Wright, Kanodia and Lubar cite for it (section 1), and Tarter's own 2010 commentary on CNN (search listing only; the page itself could not be opened). So proposed_in stays 2010, but no earlier use was ruled out."
+
 
 [[bears_on]]
 factor = "detectable"

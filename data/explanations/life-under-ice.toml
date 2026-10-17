@@ -55,11 +55,6 @@ would_strengthen = "Life found in the ocean of Europa or Enceladus; a census of 
 would_weaken = "Sterile oceans under the ice of Europa and Enceladus despite suitable chemistry; evidence that interior oceans have too little energy to support anything beyond microbes; a detected technological civilisation, showing that at least some life does reach the sky."
 related = ["rare-technology", "rare-earth", "rare-life", "no-interest-in-contact"]
 
-verify = [
-  "That Stern presented this at the 2017 Division for Planetary Sciences meeting and that the title is roughly as given; check the abstract listing.",
-  "That Europa's ocean is usually said to hold more water than Earth's oceans; check the standard estimate.",
-  "That Europa Clipper arrives in the early 2030s; check the mission's current schedule.",
-]
 
 [[bears_on]]
 factor = "detectable"

@@ -30,10 +30,10 @@ Shklovskii and Sagan drew out the consequence in their 1966 book, which did more
 other to bring the question to a wide audience. If the typical civilisation is detectable
 for a few thousand years, then the galaxy's whole history is a sequence of brief flashes,
 each gone before its light has crossed much of the galaxy, and two flashes close enough
-in both space and time to notice one another would be rare. The picture has been run as a
-simulation many times since, notably by Duncan Forgan in 2009, with the same result: for
-short lifetimes, the chance that any two civilisations ever make contact is small even
-when the galaxy produces many of them.
+in both space and time to notice one another would be rare. The picture has been
+tried out in computer models since, among them a random-trial model of the whole galaxy built
+by Duncan Forgan in 2009, in which signal lifetime is one of the inputs and the number of
+civilisations on the air at any moment is something the model counts rather than assumes.
 
 The point is sharper when distance is included. A signal from a civilisation ten thousand
 light-years away shows us that civilisation as it was ten thousand years ago. For a signal
@@ -59,9 +59,22 @@ would_weaken = "Any detected civilisation that is old; evidence of long-lived st
 related = ["self-destruction", "civilisations-burn-out", "natural-catastrophes", "interstellar-travel-impractical", "not-looked-long-enough"]
 
 verify = [
-  "That Forgan's 2009 paper is in the International Journal of Astrobiology volume 8, pages 121–131, and that it reports the small chance of contact for short lifetimes; check.",
-  "That Shklovskii and Sagan's 1966 book discusses the overlap-in-time problem in those terms; check the chapter on the lifetime of civilisations.",
+  "That Shklovskii and Sagan's 1966 book discusses the overlap-in-time problem in those terms; check the chapter on the lifetime of civilisations. Tried 2026-10-16: the book's text is not freely available (the Internet Archive copy is lending-only), review pages and the book's contents were not reachable, and a 1980 summary by Peter Sturrock (https://ntrs.nasa.gov/citations/19800014518) confirms only that Sagan weighed a long and a short lifetime and typically put the number of communicating civilisations near a million; whether the book frames the overlap problem as described could not be confirmed.",
 ]
+
+notes = """
+Checked 2026-10-16. Forgan's paper is correctly cited: International Journal of Astrobiology 8
+(2), 121-131, published online 23 January 2009
+(https://doi.org/10.1017/S1473550408004321; preprint https://arxiv.org/abs/0810.2222).
+Corrected 2026-10-16: the body said the paper reports that, for short lifetimes, the chance of
+any two civilisations making contact is small. The paper is a method paper: it sets out a
+random-trial model of the galaxy and reports counts of inhabited planets, civilisations that
+destroy themselves and the distribution of signal lifetimes under three hypotheses. I found no
+contact-probability result in it (the full text was searched, not read line by line). The body now
+describes what it does. The sentence about Shklovskii and Sagan's discussion stays in the
+verify list.
+"""
+
 
 [[bears_on]]
 factor = "lifetime"

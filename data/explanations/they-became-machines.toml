@@ -64,8 +64,7 @@ would_weaken = "A detected biological civilisation that is old; surveys of cold 
 related = ["transcension", "aestivation", "inward-turn", "berserkers", "listening-the-wrong-way", "great-filter-ahead"]
 
 verify = [
-  "That Dick's 2003 paper is in the International Journal of Astrobiology volume 2, pages 65–74, and uses the word 'postbiological'; check.",
-  "That Schneider's argument about non-conscious machine aliens appears in her 2015 essay 'Alien Minds' and 2019 book Artificial You; check which to cite.",
+  "That Schneider's argument about non-conscious machine aliens appears in her 2015 essay 'Alien Minds' and 2019 book Artificial You; check which to cite. Checked 2026-10-16: the 2015 chapter is confirmed (Susan Schneider, 'Alien Minds', in Steven J. Dick, ed., The Impact of Discovering Life Beyond Earth, Cambridge University Press, 2015, pages 189-206, https://www.cambridge.org/core/books/abs/impact-of-discovering-life-beyond-earth/alien-minds/5CA37C7CF748EBA102C533D5C3D83C29); its abstract says the most advanced alien civilisations are likely to be postbiological machine minds and treats whether such minds could be conscious as an open question, so cite that chapter. Tried 2026-10-16: the Princeton University Press page, the publisher's blurb and library tables of contents for Artificial You; none shows a chapter on alien minds (chapter 7 is titled 'A Universe of Singularities'), so whether the book repeats the argument could not be confirmed.",
 ]
 
 [[bears_on]]

@@ -19,8 +19,9 @@ this view the galaxy is quiet the way a library is quiet: everyone is busy with 
 else."""
 body = """
 Michael Hart, in the 1975 paper that made the question scientific, sorted the possible
-explanations into physical, sociological, temporal and "they have been here", and the
-sociological group was the one he found hardest to dismiss and easiest to doubt. The
+explanations into physical, sociological, temporal, and "perhaps they have come" (the
+Earth was visited, though they are not here now). The sociological group was the one he
+said most proposed explanations belong to, and he rejected it. The
 sociological explanations say that civilisations exist and could travel or transmit and
 choose not to. Hart's objection was that such explanations have to apply to every
 civilisation that has ever existed, without exception, because a single one with the
@@ -55,9 +56,8 @@ would_strengthen = "A detected civilisation that is clearly capable of transmitt
 would_weaken = "Any detected civilisation that is transmitting or expanding, since one exception is enough; evidence that expansion is a near-universal consequence of competition among civilisations; humanity's own continued interest in space over the coming centuries."
 related = ["zoo-hypothesis", "inward-turn", "dark-forest", "civilisations-burn-out", "rare-technology", "life-under-ice"]
 
-verify = [
-  "That Hart's 1975 paper sorts explanations into physical, sociological, temporal and 'they have been here'; check the paper's own categories.",
-]
+notes = "Corrected 2026-10-16. Hart's four categories are as the record says, apart from the name of the fourth: his paper calls it 'Perhaps They Have Come' and defines it as the view that the Earth has been visited by extraterrestrials though we do not observe them here now; the physical, sociological and temporal groups are named and defined as in the text (Quarterly Journal of the Royal Astronomical Society 16, 128-135 (1975), read as the scanned original at https://articles.adsabs.harvard.edu/pdf/1975QJRAS..16..128H; page range confirmed). The body also said the sociological group was the one Hart found 'hardest to dismiss and easiest to doubt'; the paper says instead that most proposed explanations fall in that group and rejects it for two reasons (it must hold for every civilisation at every time, and it cannot be tested), which is what the body goes on to say, so the earlier phrase was removed."
+
 
 [[bears_on]]
 factor = "detectable"

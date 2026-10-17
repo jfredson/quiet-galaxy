@@ -33,8 +33,8 @@ sterile to potentially crowded in a relatively short window, and we may be livin
 Tsvi Piran and Raul Jimenez revisited the calculation in 2014 with better data and found
 the picture largely held: a planet in the inner part of the galaxy would almost certainly
 have suffered a lethal burst in the last billion years, the outer parts are much safer,
-and the universe as a whole was too dangerous for complex life until it was about five
-billion years old. Earlier, in 2001 and 2004, other groups had argued for a "galactic
+and life like ours could not have lasted anywhere in the universe earlier than about five
+billion years ago, because bursts were then more common and galaxies smaller. Earlier, in 2001 and 2004, other groups had argued for a "galactic
 habitable zone", a ring of the galaxy far enough from the centre to avoid the worst of
 the explosions and dense enough in heavy elements to build rocky planets, and found that
 most of the galaxy's stars lie outside it.
@@ -59,11 +59,10 @@ would_strengthen = "Better estimates of the rate and lethal reach of gamma-ray b
 would_weaken = "Evidence that complex life survives bursts under water or ice, so that resets do not stop the clock; discovery of life or civilisations in the inner galaxy; a lower revised rate of nearby bursts over the galaxy's history."
 related = ["we-are-early", "rare-earth", "natural-catastrophes", "great-filter-behind-us"]
 
+notes = "Corrected 2026-10-16: the text said Piran and Jimenez found the universe 'too dangerous for complex life until it was about five billion years old'. Their paper says Earth-like life could not exist at redshifts above 0.5, which is earlier than about five billion years ago (Piran and Jimenez, Physical Review Letters 113, 231102 (2014), https://arxiv.org/abs/1409.2506). Checked against the sources and found correct on 2026-10-16: Piran and Jimenez's 95% chance of a lethal burst within about 13,000 light-years (4 kiloparsecs) of the galactic centre; Gonzalez, Brownlee and Ward, Icarus 152, 185 (2001) (https://arxiv.org/abs/astro-ph/0103165); Lineweaver, Fenner and Gibson, Science 303, 59-62 (2004), whose zone holds less than about 10% of the stars ever formed in the Milky Way (https://arxiv.org/abs/astro-ph/0401024); Melott and others, International Journal of Astrobiology 3, 55-61 (2004), a hypothesis and not an established finding (https://arxiv.org/abs/astro-ph/0309415)."
+
 verify = [
-  "That Annis's 1999 paper is in JBIS volume 52, pages 19–22, and that it uses the phrase 'phase transition'; check.",
-  "That Piran and Jimenez (2014) conclude the universe was too dangerous for complex life until it was about five billion years old and that the inner galaxy has very likely suffered a lethal burst in the last billion years; check their numbers.",
-  "That the galactic habitable zone papers are Gonzalez, Brownlee and Ward (Icarus, 2001) and Lineweaver, Fenner and Gibson (Science, 2004), and that the latter puts most stars outside the zone; check.",
-  "The link between a gamma-ray burst and the late Ordovician extinction is a hypothesis (Melott and others, 2004), not an established finding; the record says 'evidence tying' as a thing that would strengthen, which is correct, but check no stronger claim slipped in.",
+  "That Annis's 1999 paper is on pages 19 to 22 of volume 52 of the Journal of the British Interplanetary Society. Checked 2026-10-16: the Society's own catalogue lists it under reference 1999.52.19 (volume 52, first page 19), and the arXiv abstract says it appeared in January 1999 and uses the phrase 'phase transition', but neither gives the last page; '19-22' rests so far on a 1999 mailing-list post by Robin Hanson alone. Tried 2026-10-16: the NASA ADS record (blocked by a bot check) and a Crossref search (no record).",
 ]
 
 [[bears_on]]

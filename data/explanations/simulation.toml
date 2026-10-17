@@ -31,10 +31,12 @@ A simulator interested in us, or in a civilisation like us, would have every rea
 leave the rest of the galaxy as scenery: real enough to look at, empty of anyone who
 might answer.
 
-The idea has an older cousin in the planetarium hypothesis, which has its own page: there
-the sky is faked by an outside civilisation to deceive us, whereas here the whole of our
-reality is a model and the empty galaxy is simply a feature of its design. The two make
-the same prediction about the silence and differ about what lies behind it.
+The idea has an older cousin in the planetarium hypothesis, which has its own page. In
+Stephen Baxter's version of it the universe is itself an artificial one, so the two overlap;
+the difference is in purpose. A planetarium is built on purpose to show us an empty sky,
+whereas in the general simulation argument the empty galaxy is simply a feature of the model's
+design, with no one hiding anything. The two make the same prediction about the silence and
+differ about what lies behind it.
 
 The bearing on the Drake Equation is unusual. The explanation does not say any factor is
 small. It says the equation describes a model rather than a universe, and that the model
@@ -44,9 +46,12 @@ puts the silence down to our situation, which is why it sits in the "unseen" fam
 
 The objections are of two kinds. Against the simulation argument itself: it assumes that
 simulated minds are possible and would be conscious, which is unknown; it assumes
-advanced civilisations would want to run such simulations; and some physicists argue that
-simulating physics at the level we observe would take more computation than any physical
-computer could provide. Against its use as an answer to the silence: it is not an
+advanced civilisations would want to run such simulations; and some physicists have
+argued that simulating quantum physics is beyond ordinary computers. The paper most often
+cited for that, by Ringel and Kovrizhin in 2017, shows something much narrower: its abstract
+says that one common computing method cannot be made to work for certain quantum systems, and
+does not mention simulating the universe. The reading that it rules out a simulated universe
+came from press coverage and has been disputed. Against its use as an answer to the silence: it is not an
 explanation so much as a way of making the question go away, since a simulator could
 have included aliens as easily as not, and nothing about the simulation argument predicts
 an empty galaxy rather than a full one. An explanation that is compatible with every
@@ -58,10 +63,25 @@ would_strengthen = "A physical finding that the universe behaves as a discrete c
 would_weaken = "A proof that simulating minds or physics at our level is impossible in principle; a detected civilisation, which would at least show the model included one; strong arguments that advanced civilisations would not run such simulations."
 related = ["planetarium", "zoo-hypothesis", "transcension", "not-looked-long-enough"]
 
-verify = [
-  "That Bostrom's paper is in Philosophical Quarterly volume 53, pages 243–255, 2003; check.",
-  "That there is published physics arguing simulation of our universe is computationally infeasible (Ringel and Kovrizhin, 2017, is the usual citation); check what it actually shows.",
-]
+notes = """
+Checked 2026-10-16. Bostrom's paper is in The Philosophical Quarterly 53, issue 211, pages
+243-255 (April 2003), confirmed on Oxford's journal page
+(https://academic.oup.com/pq/article/53/211/243/1610975) and Bostrom's own site
+(https://simulation-argument.com/simulation/). Oxford lists the title as "Are We Living in a
+Computer Simulation?" while Bostrom's site uses "Are You Living in a Computer Simulation?";
+this record keeps the author's. Corrected 2026-10-16: the body said some physicists argue
+that simulating our physics would need more computing than any physical computer could
+supply, with the 2017 paper by Ringel and Kovrizhin as the usual citation. That paper
+(Science Advances 3, e1701758, https://arxiv.org/abs/1704.03880) shows only that quantized
+gravitational responses block a particular computing method (a random-sampling method for
+simulating quantum systems)
+for certain systems of bosons; its abstract does not address simulating the universe, and Scott
+Aaronson explains why the press claim overreaches
+(https://scottaaronson.blog/?p=3482). The body now says so. Also reworded the sentence
+contrasting this idea with the planetarium page, because Baxter's planetarium paper is itself
+about an artificial universe (see the planetarium record's notes). No change to the id,
+family, bears_on or the would_strengthen and would_weaken lines.
+"""
 
 [[bears_on]]
 factor = "detectable"
