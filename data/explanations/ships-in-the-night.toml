@@ -1,0 +1,68 @@
+# Explanation record: ships in the night. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address
+# (/explanations/ships-in-the-night/) and is never renamed.
+
+id = "ships-in-the-night"
+name = "Ships in the night: civilisations are common but short-lived against the age of the galaxy, so almost none are alive at the same time"
+family = "gone"
+proposed_by = "Implicit in Frank Drake's equation of 1961; set out plainly by Iosif Shklovskii and Carl Sagan in 1966, with modern treatments by Duncan Forgan and others"
+proposed_in = 1961
+proposed_source = "Drake's equation at the Green Bank meeting of 1961; Shklovskii and Sagan, Intelligent Life in the Universe (1966); Forgan, 'A numerical testbed for hypotheses of extraterrestrial life and intelligence', International Journal of Astrobiology 8, 121–131 (2009)"
+summary = """
+The galaxy is about thirteen billion years old. Suppose it has produced many thousands of
+civilisations in that time, and suppose each one is detectable for ten thousand years,
+which is longer than human civilisation has existed. Then at any given moment, only a
+handful are alive, scattered across a hundred thousand light-years, with their signals
+arriving at each other long after the senders are gone. On this view the question is not
+why nobody is out there but why anyone expected the timing to work. Civilisations could
+be as common as the optimists hope and still almost never overlap."""
+body = """
+This explanation is built into the Drake Equation itself. The equation counts
+civilisations detectable right now, and the way it gets there is to multiply the rate at
+which they appear by how long each one lasts. Drake noticed at once that the whole result
+hangs on the last factor: if civilisations appear once a century somewhere in the galaxy
+and each lasts a thousand years, there are about ten alive at a time; if each lasts a
+million years, there are ten thousand. The number of civilisations the galaxy has ever
+produced is not what matters. What matters is how many of their lifetimes overlap with
+ours.
+
+Shklovskii and Sagan drew out the consequence in their 1966 book, which did more than any
+other to bring the question to a wide audience. If the typical civilisation is detectable
+for a few thousand years, then the galaxy's whole history is a sequence of brief flashes,
+each gone before its light has crossed much of the galaxy, and two flashes close enough
+in both space and time to notice one another would be rare. The picture has been run as a
+simulation many times since, notably by Duncan Forgan in 2009, with the same result: for
+short lifetimes, the chance that any two civilisations ever make contact is small even
+when the galaxy produces many of them.
+
+The point is sharper when distance is included. A signal from a civilisation ten thousand
+light-years away shows us that civilisation as it was ten thousand years ago. For a signal
+to be received, the sender has to have been transmitting when the light left, and the
+receiver has to be listening when it arrives, and the two windows have to be lined up
+across the gap. Short lifetimes make that alignment unlikely.
+
+The bearing on the Drake Equation is on the last factor only: the explanation is a
+statement about what a short detectable lifetime implies, not a claim about why it would
+be short. The pages on self-destruction, burn-out and natural catastrophes offer the
+reasons; this page is about the arithmetic. If the lifetime is long, in the millions of
+years, the explanation fails and the silence needs another answer.
+
+The main objection is Hart's argument of 1975: a single civilisation with a long lifetime
+would spread across the galaxy and leave a mark everywhere, so the ships-in-the-night
+picture requires that no civilisation ever lasts long or expands, which brings the
+question back to why. It also assumes that detectability ends when a civilisation ends,
+whereas a civilisation that built things in space might leave traces for far longer than
+it lived."""
+standing = "Universally accepted as a correct piece of arithmetic and the reason the lifetime factor is the one everyone argues about; as an explanation it stands or falls with the claim that lifetimes are short, which is the subject of its sister pages."
+would_strengthen = "Evidence that detectable lifetimes are short, such as detected signals or traces that have already stopped; a well-founded argument that civilisations stop being detectable within thousands of years even when they survive."
+would_weaken = "Any detected civilisation that is old; evidence of long-lived structures or activity around other stars; a persuasive case that civilisations which survive their first few thousand years go on for millions."
+related = ["self-destruction", "civilisations-burn-out", "natural-catastrophes", "interstellar-travel-impractical", "not-looked-long-enough"]
+
+verify = [
+  "That Forgan's 2009 paper is in the International Journal of Astrobiology volume 8, pages 121–131, and that it reports the small chance of contact for short lifetimes; check.",
+  "That Shklovskii and Sagan's 1966 book discusses the overlap-in-time problem in those terms; check the chapter on the lifetime of civilisations.",
+]
+
+[[bears_on]]
+factor = "lifetime"
+direction = "lowers"

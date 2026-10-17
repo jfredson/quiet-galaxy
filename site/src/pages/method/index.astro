@@ -7,11 +7,16 @@
 // as the kickoff document settled; the parameters of the run belong to the session that writes
 // `compute.py run`, and this page reads what the run reports rather than asserting a count.
 import Base from '../../layouts/Base.astro';
-import { records, plainNumber, percent, longDate, REPO } from '../../lib/records';
+import { records, plainNumber, percent, longDate, medianWords, REPO } from '../../lib/records';
 
 const head = records.headline;
 const c = records.counts;
 const docs = [
+  {
+    title: 'How the headline is computed',
+    file: 'docs/method.md',
+    what: 'The settings of the run (how many times the equation is played out, the fixed seed, the independent draws, the galaxy count for the observable universe) with a confidence level and the strongest alternative for each, proposed on 16 October 2026 and not yet ruled; the check that the engine reproduces the 2018 paper; and how much the headline moves on the shape chosen for the chance life starts. It is for anyone who wants to know why the numbers are what they are.',
+  },
   {
     title: 'The record layout',
     file: 'docs/record-schema.md',
@@ -85,9 +90,17 @@ const docs = [
       Beside them sits the width of the argument. Take the most hopeful published estimate of every piece and multiply, then the most pessimistic and multiply. The two results are the ends of the argument as it has actually been made, and the gap between them is the thing a single number hides.
     </p>
     {head.available ? (
-      <p>
-        As the site stands, computed on {head.computed_on ? longDate(head.computed_on) : longDate(records.exported_on)}{head.runs ? ` from ${plainNumber(head.runs)} runs` : ''}: the middle of the spread is {plainNumber(head.median)}, the chance we are alone in the galaxy is {percent(head.alone_galaxy)}, and the chance we are alone in the observable universe is {percent(head.alone_universe)}.{head.note ? ` ${head.note}` : ''}
-      </p>
+      <>
+        <p>
+          As the site stands, computed on {head.computed_on ? longDate(head.computed_on) : longDate(records.exported_on)}{head.runs ? ` from ${plainNumber(head.runs)} runs` : ''}: the middle of the spread is {plainNumber(head.median)}, which is {medianWords(head.median)}; the chance we are alone in the galaxy is {percent(head.alone_galaxy)}; and the chance we are alone in the observable universe is {percent(head.alone_universe)}.
+          {head.optimist !== undefined && head.pessimist !== undefined && <> With every piece at its most optimistic published estimate the multiplication gives {plainNumber(head.optimist)}; at its most pessimistic, {plainNumber(head.pessimist)}.</>}
+          {head.optimist_from_ranges !== undefined && head.pessimist_from_ranges !== undefined && <> Taking the ends of the ranges this site uses instead of the published extremes, the two figures are {plainNumber(head.optimist_from_ranges)} and {plainNumber(head.pessimist_from_ranges)}.</>}
+          {head.note ? ` ${head.note}` : ''}
+        </p>
+        <p class="dim">
+          The run's own settings, {head.method?.runs ? `${plainNumber(head.method.runs)} plays of the equation` : 'the number of plays'}{head.method?.seed !== undefined ? `, a fixed starting point for the random picks (${head.method.seed}) so that the published numbers reproduce exactly` : ''}{head.method?.independent_draws ? ', each piece drawn on its own' : ''}{head.method?.galaxies ? `, and ${plainNumber(head.method.galaxies)} galaxies' worth of stars in the observable universe` : ''}, are proposed in the working document on how the headline is computed, linked below, and not yet ruled. The chance that life starts uses a stand-in range (every power of ten from one in ten to the 22 up to 1 equally likely) for the shape the 2018 paper used, which the record layout does not yet allow; the same document shows how far the headline moves on that one choice.
+        </p>
+      </>
     ) : (
       <p class="dim">
         The numbers are not computed yet. {head.reason} The method above is settled; the run's own settings, such as how many times the multiplication is repeated, are reported here once it exists, and the code is public.

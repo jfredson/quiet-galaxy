@@ -1,0 +1,28 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "wlodarczyk-sroka-2020"
+date = "2020-09"
+added_on = 2026-10-16
+authors = ["Bart S. Wlodarczyk-Sroka", "Michael A. Garrett", "Andrew P. V. Siemion"]
+title = "Extending the Breakthrough Listen nearby star survey to other stellar objects in the field"
+venue = "Monthly Notices of the Royal Astronomical Society 498, 5720–5729 (2020)"
+link = "https://doi.org/10.1093/mnras/staa2672"
+finding = """
+A radio telescope pointed at one star also hears every other star in its beam. Using the
+Gaia catalogue of star positions and distances, the authors count how many stars were in
+the beams of price-2020's 1,327 pointings: more than 288,000, out to thousands of light
+years, most of them far more distant than the targets. Because a transmitter at a greater
+distance has to be more powerful to be heard, the limits are weaker for those stars, but
+there are two hundred times more of them. The paper's result is that fewer than about
+0.04 percent of stars within 1,000 light years host a very powerful narrow-band
+transmitter, the first limit of its kind on a sample that large, and a reminder that the
+sky has been searched less than it feels."""
+factors = ["detectable"]
+explanations = ["not-looked-long-enough", "everyone-listens-nobody-transmits"]
+moved_range = false
+
+verify = [
+  "The count of 288,000 stars and the 0.04 percent limit and its distance; from memory of the abstract.",
+]
+notes = "Written 2026-10-16."

@@ -1,0 +1,24 @@
+# Library record: Kubrick's film and Clarke's novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "2001-a-space-odyssey"
+title = "2001: A Space Odyssey"
+maker = "Stanley Kubrick (film); Arthur C. Clarke (novel and the 1951 story 'The Sentinel')"
+year = 1968
+kind = "film"
+explanations = ["zoo-hypothesis", "they-became-machines", "transcension"]
+factors = ["intelligence"]
+link = "https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(film)"
+how = """
+A black slab nudges a band of ape-men toward tools, another waits buried on the Moon to
+report when someone digs it up, and a third hangs by Jupiter as a doorway. The makers of
+the slabs never appear. Clarke's novel says what the film leaves to the images: they were
+once flesh, moved their minds into machines, and then out of machines into something that
+needs no body at all. The film is the founding picture of the watcher civilisation, old
+beyond counting, that leaves instruments rather than messages and takes an interest in
+whether a young species' intelligence will grow. It is also the earliest widely seen
+statement of the idea that the oldest civilisations would not be detectable because they
+would no longer be anything we would recognise as a civilisation."""
+worth_the_time = "Yes, for anyone, and read the novel alongside it: the film gives the awe and the book gives the argument."
+
+notes = "Written 2026-10-16."

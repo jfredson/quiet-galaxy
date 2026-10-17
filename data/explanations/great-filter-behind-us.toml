@@ -1,0 +1,73 @@
+# Explanation record: the Great Filter is behind us. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address
+# (/explanations/great-filter-behind-us/) and is never renamed.
+
+id = "great-filter-behind-us"
+name = "The Great Filter is behind us: somewhere on the road from dead matter to a galaxy-spanning civilisation there is a step almost nothing passes, and we have already passed it"
+family = "never-there"
+proposed_by = "Robin Hanson"
+proposed_in = 1998
+proposed_source = "'The Great Filter — Are We Almost Past It?', essay published online, 1998"
+summary = """
+Think of the road from a lifeless planet to a civilisation that spreads across its galaxy
+as a series of steps: the right planet, the first life, complex cells, animals, minds,
+technology, and finally expansion into space. The fact that the sky shows no sign of
+anyone having finished the road means that, somewhere along it, there must be a step so
+hard that almost no planet gets past it. Robin Hanson called that step the Great Filter.
+The hopeful version is that the hard step is one we have already taken, most likely the
+origin of life or the origin of complex cells. If so, the galaxy is silent because almost
+nothing gets as far as we have, and our future is open."""
+body = """
+Robin Hanson's 1998 essay did not propose a new answer to the Fermi question so much as a
+new way to organise all of them. Start from the observation: nothing in the sky looks like
+the work of a civilisation that has expanded across many stars. Combine it with the number
+of planets in the galaxy that have had time to produce one, which is enormous. The
+conclusion is that the chance of any one planet making it all the way is tiny, which means
+that at least one of the steps along the way must be tiny too. Hanson's contribution was
+to point out that it matters enormously which step it is, and that we do not know.
+
+If the hard step is behind us, we are a rare success. The candidates are the ones this
+catalogue lists under the "never there" family: a planet with the right long-term climate,
+life starting at all, the single merger that made complex cells, animals, intelligence,
+technology. Each has a case. The origin of life has never been reproduced and happened
+once as far as we know. Complex cells appeared once in four billion years. Intelligence of
+our kind appeared once among billions of species. If any of these has odds of one in a
+trillion, the Filter is found and the rest of the road may be easy.
+
+If the hard step is ahead of us, the news is bad, and that version has its own page. The
+two readings are not alternatives one can choose between on taste: the whole weight of
+the argument is that the silence proves there is a Filter somewhere, and the evidence for
+where it lies has to come from elsewhere. That is why Hanson, and later the philosopher
+Nick Bostrom, argued that finding simple life on Mars or on an icy moon would be terrible
+news: every early step shown to be easy pushes the Filter later, toward us.
+
+The bearing on the Drake Equation is wherever the Filter sits. On this page it lowers the
+share of suitable planets on which life starts and the share of living planets on which
+intelligence appears, since those are the leading candidates. The argument makes no claim
+about the number of stars or planets.
+
+The main objection is to the premise that any civilisation that could expand would, and
+would do so visibly. Every explanation in the "unseen" family of this catalogue denies
+exactly that, and if any of them is right, the silence proves nothing about a Filter. A
+second objection is that the Filter need not be one step: the overall odds could be the
+product of many steps each merely unlikely, in which case there is no single hard step to
+find behind or ahead of us. Hanson accepted both points; the Filter is a way of counting,
+not a mechanism, and its value is in making clear what the silence does and does not
+imply about our own chances."""
+standing = "The Great Filter is the standard frame for discussing the Fermi question among researchers and writers; that the hard step is behind us is the view most astrobiologists lean toward, with the origin of life and the origin of complex cells as the usual candidates. It is a frame rather than a testable claim on its own."
+would_strengthen = "Decades of origin-of-life research without a demonstrated path to self-copying chemistry; a survey of nearby planets in the band where water stays liquid finding no life at all; evidence that complex cells or intelligence depended on freak events on Earth."
+would_weaken = "Simple life found elsewhere in the solar system, which would show the first steps are easy and push the hard step later; complex or intelligent life found anywhere; a convincing explanation from the 'unseen' family, which would remove the need for a Filter at all."
+related = ["great-filter-ahead", "rare-life", "complex-cells-are-rare", "rare-intelligence", "rare-earth", "we-are-early"]
+
+verify = [
+  "That Hanson's essay was first published online in 1998 (it was revised afterwards; check the date on the current version and whether 1996 is the first draft).",
+  "That Bostrom's 2008 argument that finding life on Mars would be bad news appeared in MIT Technology Review under the title 'Where Are They?'; check.",
+]
+
+[[bears_on]]
+factor = "life"
+direction = "lowers"
+
+[[bears_on]]
+factor = "intelligence"
+direction = "lowers"

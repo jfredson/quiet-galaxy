@@ -1,0 +1,30 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "hanson-2021-grabby"
+date = "2021-12"
+added_on = 2026-10-16
+authors = ["Robin Hanson", "Daniel Martin", "Calvin McCarter", "Jonathan Paulson"]
+title = "If Loud Aliens Explain Human Earliness, Quiet Aliens Are Also Rare"
+venue = "The Astrophysical Journal 922, 182 (2021); arXiv:2102.01522"
+link = "https://arxiv.org/abs/2102.01522"
+finding = """
+The puzzle the paper starts from is that humans seem to have arrived early: most of the
+universe's habitable time lies ahead, around small stars that will burn for trillions of
+years, so an observer picked at random should expect to appear much later than 13.8
+billion years in. The authors' explanation is that some civilisations expand ('grabby'
+ones), fill space at a good fraction of light speed, and make their volume uninhabitable
+for newcomers, so anyone who appears at all has to appear before the grabbers arrive. A
+three-parameter model fit to our own date gives their picture of the universe: grabby
+civilisations arise roughly once per million galaxies, are now expanding, and will
+typically become visible to us in something like 200 million to 2 billion years, at
+which point they will fill a large part of the sky. The title's point is that if this is
+right, quiet civilisations that never expand cannot be much more common than loud ones."""
+factors = ["intelligence", "lifetime", "detectable"]
+explanations = ["we-are-early", "expansion-stalls", "not-looked-long-enough"]
+moved_range = false
+
+verify = [
+  "The 'once per million galaxies' rate and the 200 million to 2 billion year window before a grabby civilisation becomes visible; quoted from memory of the paper and the authors' summaries.",
+]
+notes = "Written 2026-10-16."

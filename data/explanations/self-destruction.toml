@@ -1,0 +1,69 @@
+# Explanation record: self-destruction. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address (/explanations/self-destruction/)
+# and is never renamed.
+
+id = "self-destruction"
+name = "Self-destruction: civilisations destroy themselves soon after they learn to build the weapons that make them detectable"
+family = "gone"
+proposed_by = "Sebastian von Hoerner"
+proposed_in = 1961
+proposed_source = "'The Search for Signals from Other Civilizations', Science 134, 1839–1843 (1961); the same worry runs through Shklovskii and Sagan, Intelligent Life in the Universe (1966), and Sagan's later writing"
+summary = """
+The technology that lets a civilisation be heard across space, radio, rockets and the
+physics behind them, arrives in the same package as the technology that can end it.
+Humans learned to send radio signals into space and to build hydrogen bombs within a
+few years of each other. If most civilisations that reach this point destroy themselves
+within a few centuries, through war, engineered plagues or a machine that gets out of
+hand, then at any given moment almost none are left to be heard. The galaxy may have
+produced thousands of civilisations and have only a handful alive at once, each shouting
+briefly into a silence made of everyone else's ruins."""
+body = """
+This was the first explanation anyone took seriously, because it was born alongside the
+question. When Frank Drake wrote his equation in 1961 to organise the first meeting on
+searching for signals, the factor that worried everyone in the room was the last one: how
+long a civilisation stays detectable. The meeting took place at the height of the Cold
+War, and several of those present thought the honest answer might be a few decades. The
+German astronomer Sebastian von Hoerner, writing in Science the same year, worked
+through the ways a technical civilisation might end, destruction of all life, destruction
+of higher life only, physical or mental decline, and loss of interest in science, and put
+the average detectable lifetime at perhaps six and a half thousand years, with the outcome
+dominated by how many destroyed themselves early. Carl Sagan made the idea famous: in his
+telling, the whole search for other civilisations was also a test of whether anyone
+survives what he called technological adolescence.
+
+The argument depends on a coincidence that may not be one. The energy needed to be heard
+across interstellar distances, and the knowledge needed to build nuclear weapons, come
+from the same physics at the same stage of development. A species that can do one can do
+the other. Later writers added other ways out: engineered diseases, climate change driven
+by the same industry that powers the transmitters, nanotechnology, and artificial
+intelligence that replaces or discards its makers. The common thread is that the ability
+to destroy grows faster than the wisdom to refrain.
+
+The bearing on the Drake Equation is entirely on the last factor, the detectable lifetime,
+which this view sets at centuries rather than the millions of years the optimists hoped
+for. Since the number of civilisations detectable at once is roughly the rate at which
+they appear multiplied by how long each lasts, a lifetime of a few hundred years leaves
+the galaxy nearly empty however often civilisations arise.
+
+Objections: it requires almost every civilisation to fail, not most, because a single
+survivor with a long life would eventually dominate the count and could spread across
+the galaxy; humanity has had nuclear weapons for eighty years without using them again,
+which is weak evidence but not nothing; and a civilisation that destroys itself may leave
+ruins, changed atmospheres or stray probes that could still be found, so self-destruction
+does not entirely explain a clean silence. The reply is that eighty years is nothing, that
+the weapons keep getting cheaper and the failure modes more numerous, and that ruins on
+another planet would be far harder to see than a working transmitter."""
+standing = "The oldest and still one of the most widely held explanations among the public and among many scientists; its weakness, that it needs nearly everyone to fail, is well known and has pushed much of the research community toward other answers."
+would_strengthen = "Evidence of a civilisation that existed and ended, such as an atmosphere bearing the traces of industry around a star with no present signal; a demonstration that some dangerous technology is both cheap and hard to control; further close calls in humanity's own record."
+would_weaken = "A detected civilisation that has been broadcasting for a very long time; a long run of human survival with nuclear and biological weapons under control; evidence that most civilisations that reach the technical stage expand off their home planet, which makes a single disaster less likely to end them."
+related = ["great-filter-ahead", "civilisations-burn-out", "natural-catastrophes", "ships-in-the-night", "berserkers"]
+
+verify = [
+  "That von Hoerner's 1961 Science paper lists those four ways a civilisation might end and gives an average lifetime near 6,500 years; check the paper.",
+  "That several participants at the 1961 Green Bank meeting put the lifetime at decades; check Drake's own accounts of the meeting.",
+  "That 'technological adolescence' is Sagan's phrase; check the source.",
+]
+
+[[bears_on]]
+factor = "lifetime"
+direction = "lowers"

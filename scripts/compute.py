@@ -5,8 +5,10 @@ the headline numbers.
 Plain Python, standard library only. Run from anywhere:
 
     python3 scripts/compute.py validate            check every record against docs/record-schema.md
-    python3 scripts/compute.py run                 compute the headline numbers (a stub until the
-                                                   seven factor records exist)
+    python3 scripts/compute.py run                 compute the headline numbers and write data/headline.json
+    python3 scripts/compute.py run --runs N --seed S --out FILE
+                                                   change the number of runs, the seed, or where the
+                                                   JSON goes (--out - prints it instead)
     python3 scripts/compute.py --data DIR ...      use a different data folder (for tests)
 
 "validate" reads every TOML file under data/factors, data/explanations, data/library and
@@ -16,24 +18,31 @@ record that does not exist, a file whose name and id disagree, an id that was co
 before and has disappeared without an entry in data/retired.toml. It exits non-zero on any
 failure, and nothing downstream runs until it passes.
 
-"run" will play the Drake Equation out many thousands of times with a random draw from each
-factor's range (after Sandberg, Drexler and Ord 2018) and report the median number of
+"run" plays the Drake Equation out many thousands of times with a random draw from each
+factor's range (after Sandberg, Drexler and Ord 2018) and reports the median number of
 detectable civilisations in the galaxy, the chance we are alone in the galaxy, the chance we
-are alone in the observable universe, and the optimist-to-pessimist width. Until all seven
-factor records exist it says so and stops.
+are alone in the observable universe, and the optimist-to-pessimist width. It writes the
+result to data/headline.json for scripts/export.py and the site. Until all seven factor
+records exist it says so and stops. The parameters (number of runs, seed, galaxy count) are
+proposed in docs/method.md and not yet ruled.
 
-Written 2026-10-16 (weekend step 2 of docs/2026-10-16-kickoff.md).
+Written 2026-10-16 (weekend step 2 of docs/2026-10-16-kickoff.md); the headline computation
+added the same day (weekend step 3, Saturday session A).
 """
 
 from __future__ import annotations
 
 import argparse
 import datetime as dt
+import json
+import math
+import random
 import re
 import subprocess
 import sys
 import tomllib
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -562,6 +571,211 @@ def cmd_validate(args: argparse.Namespace) -> int:
     return 0
 
 
+# ---------------------------------------------------------------- the headline
+#
+# The equation is N = R* x fp x ne x fl x fi x fc x L. Instead of multiplying seven single
+# values, each run draws one value from every factor's range and multiplies those; many
+# thousands of runs give a spread of N, and the headline numbers are read off the spread.
+# Method after Sandberg, Drexler and Ord 2018 ("Dissolving the Fermi Paradox"). The
+# parameters below are proposed in docs/method.md (2026-10-16) and not yet ruled.
+
+RUNS = 200_000          # how many times the equation is played out
+SEED = 1961             # the year of the equation; fixed so the published numbers reproduce exactly
+GALAXIES = 100_000_000_000   # Milky-Way-sized galaxies' worth of stars in the observable universe
+TZ = ZoneInfo("America/Los_Angeles")
+
+# Shapes the engine can draw from. The two the record schema allows are "log-uniform" and
+# "uniform". "log-normal-rate" is the 2018 paper's model for the chance life starts (fl):
+# the number of times life starts per habitable planet over its lifetime is drawn from a
+# log-normal (median 1, spread 50 orders of magnitude), and fl = 1 - exp(-rate). The engine
+# supports it so the paper's result can be reproduced in the tests, and so that adding it to
+# the schema later is a one-line change; it is proposed in docs/method.md, not ruled.
+ENGINE_SHAPES = {"log-uniform", "uniform", "log-normal-rate"}
+
+
+def draw(spec: dict, rng: random.Random) -> float:
+    """One random value from a range spec: {"shape": ..., "low": ..., "high": ...} or, for
+    log-normal-rate, {"shape": "log-normal-rate", "median": 1.0, "spread_orders": 50}."""
+    shape = spec["shape"]
+    if shape == "log-uniform":
+        return 10 ** rng.uniform(math.log10(spec["low"]), math.log10(spec["high"]))
+    if shape == "uniform":
+        return rng.uniform(spec["low"], spec["high"])
+    if shape == "log-normal-rate":
+        rate = 10 ** rng.gauss(math.log10(spec["median"]), spec["spread_orders"])
+        return -math.expm1(-rate)   # 1 - exp(-rate), exact for very small rates
+    raise ValueError(f"unknown shape {shape!r}; the engine knows {sorted(ENGINE_SHAPES)}")
+
+
+def simulate(specs: list[dict], runs: int = RUNS, seed: int = SEED) -> list[float]:
+    """Play the equation out `runs` times: one independent draw per factor per run, multiplied.
+    Returns the list of N values, one per run, in the order they were drawn."""
+    rng = random.Random(seed)
+    out: list[float] = []
+    for _ in range(runs):
+        n = 1.0
+        for spec in specs:
+            n *= draw(spec, rng)
+        out.append(n)
+    return out
+
+
+def quantile(sorted_values: list[float], q: float) -> float:
+    """The q-th quantile (0 to 1) of an already sorted list, by nearest rank."""
+    if not sorted_values:
+        raise ValueError("no values")
+    i = min(len(sorted_values) - 1, max(0, math.ceil(q * len(sorted_values)) - 1))
+    return sorted_values[i]
+
+
+def share_below(sorted_values: list[float], threshold: float) -> float:
+    """What fraction of the sorted values lie below the threshold."""
+    lo, hi = 0, len(sorted_values)
+    while lo < hi:
+        mid = (lo + hi) // 2
+        if sorted_values[mid] < threshold:
+            lo = mid + 1
+        else:
+            hi = mid
+    return lo / len(sorted_values)
+
+
+def summarise(samples: list[float], galaxies: float = GALAXIES) -> dict:
+    """The headline numbers from a list of N values.
+
+    median: the middle estimate of detectable civilisations in the galaxy now.
+    alone_in_galaxy: the share of runs with N below 1.
+    alone_in_universe: the share of runs with N below 1 / galaxies, i.e. fewer than one
+      civilisation across all the Milky-Way-sized galaxies' worth of stars we can see.
+    Also the mean (dominated by the rare very optimistic runs, as the paper notes), a few
+    percentiles, and a histogram of N by power of ten for the site to draw.
+    """
+    s = sorted(samples)
+    runs = len(s)
+    hist: dict[int, int] = {}
+    for n in s:
+        if n <= 0:
+            key = -999
+        else:
+            key = math.floor(math.log10(n))
+        hist[key] = hist.get(key, 0) + 1
+    histogram = [{"log10_from": k if k != -999 else None, "share": c / runs}
+                 for k, c in sorted(hist.items())]
+    return {
+        "runs": runs,
+        "median": quantile(s, 0.5),
+        "mean": sum(s) / runs,
+        "alone_in_galaxy": share_below(s, 1.0),
+        "alone_in_universe": share_below(s, 1.0 / galaxies),
+        "alone_in_universe_by_galaxy_count": {
+            f"{g:.0e}": share_below(s, 1.0 / g) for g in (1e10, 1e11, 1e12)
+        },
+        "percentiles": {str(p): quantile(s, p / 100) for p in (5, 25, 50, 75, 95)},
+        "histogram": histogram,
+    }
+
+
+def range_spec(factor: dict) -> dict:
+    """The engine spec for a factor record's [range]."""
+    rng = factor["range"]
+    return {"shape": rng["shape"], "low": float(rng["low"]), "high": float(rng["high"])}
+
+
+def estimate_extremes(factor: dict) -> tuple[float, float]:
+    """(most pessimistic, most optimistic) value among a factor's published estimates:
+    the smallest low or value, and the largest high or value."""
+    lows, highs = [], []
+    for e in factor.get("estimate") or []:
+        if "value" in e:
+            lows.append(float(e["value"]))
+            highs.append(float(e["value"]))
+        else:
+            lows.append(float(e["low"]))
+            highs.append(float(e["high"]))
+    return min(lows), max(highs)
+
+
+def headline(loaded: dict, runs: int = RUNS, seed: int = SEED, galaxies: float = GALAXIES) -> dict:
+    """Compute the headline from validated records (all seven factors must exist).
+
+    The result is what data/headline.json holds and what scripts/export.py hands the site.
+    """
+    factors = {r["id"]: r for r in loaded["records"] if r["_kind"] == "factor"}
+    missing = [f for f in FACTOR_ORDER if f not in factors]
+    if missing:
+        raise RecordError(f"the headline needs all seven factors; missing: {', '.join(missing)}")
+    ordered = [factors[f] for f in FACTOR_ORDER]
+
+    specs = [range_spec(f) for f in ordered]
+    samples = simulate(specs, runs, seed)
+    result = summarise(samples, galaxies)
+
+    pess_est, opt_est = 1.0, 1.0
+    pess_rng, opt_rng = 1.0, 1.0
+    per_factor_est: dict[str, dict] = {}
+    for f in ordered:
+        lo, hi = estimate_extremes(f)
+        per_factor_est[f["id"]] = {"pessimist": lo, "optimist": hi}
+        pess_est *= lo
+        opt_est *= hi
+        pess_rng *= float(f["range"]["low"])
+        opt_rng *= float(f["range"]["high"])
+
+    return {
+        "computed_on": dt.datetime.now(TZ).date().isoformat(),
+        "method": {
+            "after": "sandberg-2018",
+            "runs": runs,
+            "seed": seed,
+            "independent_draws": True,
+            "galaxies": galaxies,
+            "status": "proposed 2026-10-16 in docs/method.md, not yet ruled",
+        },
+        "ranges": [{
+            "id": f["id"], "symbol": f["symbol"], "name": f["name"], "unit": f["unit"],
+            "shape": f["range"]["shape"], "low": f["range"]["low"], "high": f["range"]["high"],
+            "status": f["range"]["status"], "set_on": f["range"]["set_on"].isoformat(),
+            "estimates": len(f.get("estimate") or []),
+        } for f in ordered],
+        "any_range_first_pass": any(f["range"]["status"] == "first-pass" for f in ordered),
+        **result,
+        "extremes": {
+            "from_estimates": {"pessimist": pess_est, "optimist": opt_est, "factors": per_factor_est},
+            "from_ranges": {"pessimist": pess_rng, "optimist": opt_rng},
+        },
+        "verify_open": sum(len(r.get("verify") or []) for r in loaded["records"] if r["_kind"] == "factor"),
+    }
+
+
+def plain_number(x: float) -> str:
+    """A number for the terminal: ordinary when it is between 0.001 and a million, else a power of ten."""
+    if x == 0:
+        return "0"
+    if 0.001 <= abs(x) < 1e6:
+        return f"{x:,.3g}" if abs(x) < 100 else f"{x:,.0f}"
+    return f"{x:.2g}"
+
+
+def describe(h: dict) -> str:
+    lines = [
+        f"Played out {h['runs']:,} times (seed {h['method']['seed']}), one independent draw per factor per run.",
+        f"  Middle estimate of detectable civilisations in the galaxy now: {plain_number(h['median'])}",
+        f"  Chance we are alone in the galaxy: {h['alone_in_galaxy']:.0%}",
+        f"  Chance we are alone in the observable universe: {h['alone_in_universe']:.0%}"
+        f" (taking {h['method']['galaxies']:.0e} Milky-Way-sized galaxies' worth of stars)",
+        f"  Mean (pulled up by the rare optimistic runs): {plain_number(h['mean'])}",
+        f"  Spread from the 5th to the 95th percentile: {plain_number(h['percentiles']['5'])} to "
+        f"{plain_number(h['percentiles']['95'])}",
+        f"  Most pessimistic published estimate of every factor at once: {plain_number(h['extremes']['from_estimates']['pessimist'])}",
+        f"  Most optimistic published estimate of every factor at once: {plain_number(h['extremes']['from_estimates']['optimist'])}",
+    ]
+    if h["any_range_first_pass"]:
+        lines.append("  Every range is a first pass; the outside review has not run.")
+    if h["verify_open"]:
+        lines.append(f"  {h['verify_open']} claim(s) in the factor records are still marked to verify.")
+    return "\n".join(lines)
+
+
 def cmd_run(args: argparse.Namespace) -> int:
     data_dir = Path(args.data).resolve()
     try:
@@ -577,12 +791,19 @@ def cmd_run(args: argparse.Namespace) -> int:
         print(f"The factors are not seeded yet: {len(have)} of {len(FACTORS)} factor records exist"
               f" ({', '.join(sorted(have)) or 'none'}).")
         print(f"Missing: {', '.join(missing)}.")
-        print("The headline needs all seven; Saturday session A writes them "
-              "(docs/2026-10-16-kickoff.md, weekend step 3).")
+        print("The headline needs all seven.")
         return 2
-    print("All seven factors exist, but the headline computation is not written yet "
-          "(Saturday session A, docs/2026-10-16-kickoff.md, weekend step 3).")
-    return 2
+    h = headline(loaded, runs=args.runs, seed=args.seed, galaxies=args.galaxies)
+    print(describe(h))
+    text = json.dumps(h, indent=2, ensure_ascii=False) + "\n"
+    if args.out == "-":
+        print(text, end="")
+    else:
+        out = Path(args.out) if args.out else data_dir / "headline.json"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(text, encoding="utf-8")
+        print(f"wrote {out}")
+    return 0
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -590,7 +811,12 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--data", default=str(ROOT / "data"), help="data folder (default: the repository's data/)")
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("validate", help="check every record against docs/record-schema.md")
-    sub.add_parser("run", help="compute the headline numbers (a stub until the factors are seeded)")
+    run = sub.add_parser("run", help="compute the headline numbers and write data/headline.json")
+    run.add_argument("--runs", type=int, default=RUNS, help=f"how many times to play the equation out (default {RUNS:,})")
+    run.add_argument("--seed", type=int, default=SEED, help=f"random seed (default {SEED})")
+    run.add_argument("--galaxies", type=float, default=GALAXIES,
+                     help="Milky-Way-sized galaxies' worth of stars in the observable universe (default 1e11)")
+    run.add_argument("--out", default=None, help="where to write the JSON (default DATA/headline.json; '-' prints it)")
     args = parser.parse_args(argv)
     if args.command == "validate":
         return cmd_validate(args)

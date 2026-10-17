@@ -1,0 +1,26 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "cirkovic-2009"
+date = "2009-06"
+added_on = 2026-10-16
+authors = ["Milan M. Ćirković"]
+title = "Fermi's Paradox: The Last Challenge for Copernicanism?"
+venue = "Serbian Astronomical Journal 178, 1–20 (2009); arXiv:0907.3432"
+link = "https://arxiv.org/abs/0907.3432"
+finding = """
+The most careful modern survey of the explanations, by the astronomer who later wrote
+the book-length version (The Great Silence, Oxford University Press, 2018). Ćirković
+argues that the paradox has grown sharper, not weaker, since 1975, because we now know
+that planets are common, that the galaxy's habitable stars are mostly older than the Sun,
+and that spreading through it is cheap on cosmic timescales. He sorts the explanations
+into four families: solipsist (they are here and we are wrong about what we see), rare
+Earth (we are alone or nearly), neocatastrophic (civilisations keep being reset by
+disasters, natural or self-made), and logistic (there are limits on expansion or
+communication we do not yet understand). He rates most of the familiar explanations
+poorly and argues the catastrophic and logistic families deserve more work."""
+factors = ["detectable", "lifetime", "intelligence"]
+explanations = ["rare-earth", "natural-catastrophes", "self-destruction", "expansion-stalls", "zoo-hypothesis", "planetarium", "simulation", "aestivation", "interstellar-travel-impractical"]
+moved_range = false
+
+notes = "The catalogue's three families (never there, gone, unseen) are a plainer cut of the same material; Ćirković's four map onto them with his 'solipsist' and 'logistic' both falling under 'unseen'."

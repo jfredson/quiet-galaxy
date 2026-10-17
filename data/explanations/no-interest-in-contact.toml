@@ -1,0 +1,64 @@
+# Explanation record: no interest in contact. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address
+# (/explanations/no-interest-in-contact/) and is never renamed.
+
+id = "no-interest-in-contact"
+name = "No interest in contact: they exist, they could reach us, and they simply do not care to"
+family = "unseen"
+proposed_by = "Listed among the 'sociological' explanations by Michael Hart in 1975 and developed by many since"
+proposed_in = 1975
+proposed_source = "Hart, 'An Explanation for the Absence of Extraterrestrials on Earth', Quarterly Journal of the Royal Astronomical Society 16, 128–135 (1975), and the reply literature"
+summary = """
+Every argument that aliens should be here or should be heard assumes that they want to
+explore, expand, or talk. Perhaps they do not. A civilisation that has solved its material
+problems may have no more interest in crossing the galaxy than most people have in
+crossing a desert on foot. It may regard a species at our stage the way we regard an
+anthill: real, mildly interesting, not worth a conversation. It may have turned to its own
+concerns, its art, its philosophy, its internal politics, and left the sky to itself. On
+this view the galaxy is quiet the way a library is quiet: everyone is busy with something
+else."""
+body = """
+Michael Hart, in the 1975 paper that made the question scientific, sorted the possible
+explanations into physical, sociological, temporal and "they have been here", and the
+sociological group was the one he found hardest to dismiss and easiest to doubt. The
+sociological explanations say that civilisations exist and could travel or transmit and
+choose not to. Hart's objection was that such explanations have to apply to every
+civilisation that has ever existed, without exception, because a single one with the
+ordinary urge to expand would have filled the galaxy. The reply, made many times since,
+is that we are generalising from the one civilisation we know, which happens to be in its
+restless, expansive youth, and that there is no reason to think the urge lasts.
+
+The idea has many forms. A civilisation might lose interest in space once it has looked
+and found nothing it needs. It might regard interference with younger species as
+pointless or distasteful. It might have no concept of contact as we understand it, because
+its minds are organised differently. It might find the prospect of contact unattractive
+for the same reason many humans do: nothing to gain, something to risk. Or it might simply
+be too old and too settled to bother, in the way that the long-settled civilisations of
+Earth's history mostly did not send out explorers until something forced them to.
+
+The explanation bears on the Drake Equation at the share of intelligent civilisations
+that are detectable, which it lowers for a reason of temperament rather than capacity.
+It is the plainest member of a family that includes the zoo hypothesis, where the
+disinterest is a policy; the inward turn, where it is an addiction; and the dark forest,
+where it is fear. This page is for the version with no particular reason at all.
+
+The objection is Hart's, and it is strong: disinterest has to be universal, and
+universal disinterest among independent civilisations across billions of years is hard
+to credit. It is also hard to square with the fact that life expands into every available
+space given the chance, which is not a cultural choice but a consequence of what living
+things are. A single faction of a single civilisation that kept the old urge would be
+enough. The reply is that the urge to expand may not survive the transition to minds that
+are designed rather than evolved, and that nothing about the one example we have tells us
+what a civilisation a million years older wants."""
+standing = "Raised in every survey of the question since Hart, and regarded by most researchers as the weakest kind of answer precisely because it has to hold for everyone; it is nonetheless the explanation many people find most natural."
+would_strengthen = "A detected civilisation that is clearly capable of transmitting and is not doing so; evidence from Earth's own trajectory that interest in space exploration fades as a civilisation matures; a strong argument that designed minds would lack the drive to expand."
+would_weaken = "Any detected civilisation that is transmitting or expanding, since one exception is enough; evidence that expansion is a near-universal consequence of competition among civilisations; humanity's own continued interest in space over the coming centuries."
+related = ["zoo-hypothesis", "inward-turn", "dark-forest", "civilisations-burn-out", "rare-technology", "life-under-ice"]
+
+verify = [
+  "That Hart's 1975 paper sorts explanations into physical, sociological, temporal and 'they have been here'; check the paper's own categories.",
+]
+
+[[bears_on]]
+factor = "detectable"
+direction = "lowers"

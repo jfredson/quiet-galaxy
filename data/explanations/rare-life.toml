@@ -1,0 +1,70 @@
+# Explanation record: rare life. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address (/explanations/rare-life/)
+# and is never renamed.
+
+id = "rare-life"
+name = "Rare life: getting from chemistry to the first living cell may be so unlikely that it almost never happens"
+family = "never-there"
+proposed_by = "Jacques Monod"
+proposed_in = 1970
+proposed_source = "Chance and Necessity (Le Hasard et la Nécessité, 1970), with Francis Crick's Life Itself (1981) making the same point about the origin of life"
+summary = """
+Nobody knows how life started on Earth. It happened at least once, fairly early, but no
+one has made it happen in a laboratory, and no one can say how probable it was. If the
+step from ordinary chemistry to a self-copying cell is extremely unlikely, then most
+planets that could carry life never do, however comfortable they are. On this view the
+galaxy is full of warm, wet, lifeless worlds, and Earth is the one in many billions where
+the dice came up right. The silence is the sound of a lot of empty oceans."""
+body = """
+The idea is old and has no single owner. The French biologist Jacques Monod gave it a
+famous form in 1970, writing that the universe was not pregnant with life and that our
+number came up in a game of chance. Francis Crick, who shared the Nobel prize for the
+structure of DNA, wrote in 1981 that the origin of life looked almost like a miracle,
+given how many conditions had to be met, and went so far as to suggest life had been sent
+to Earth deliberately. Few scientists went that far, but the underlying worry has never
+gone away: we have one example of life starting, and one example tells you nothing about
+the odds.
+
+The argument from the one example cuts in both directions, and that is the heart of the
+matter. Life on Earth appeared early, within a few hundred million years of the planet
+becoming habitable, which has long been read as a sign that it starts easily. But a
+planet where life started late might never have produced anyone to notice, because the
+Sun will make Earth uninhabitable in another billion years or so and complex life took
+most of the available time to appear. So the early start may say more about us than about life: we
+could only exist on a planet where life began promptly, whether or not that is typical.
+Careful statistical treatments of this point, in 2012 and again in 2020, found that the
+early start on Earth does favour life being common, but only mildly, and that the odds
+could still be very long.
+
+In the Drake Equation this is the factor for the share of suitable planets on which life
+actually starts. Every other factor can be large; if this one is tiny, the product is tiny.
+It is also the factor about which the least is known. Estimates in the literature run from
+nearly one, on the view that life is a natural consequence of chemistry given time, to
+numbers so small that life would be expected only once in the whole observable universe.
+
+The objections are mostly about ignorance rather than evidence. The chemistry of life's
+beginnings is better understood every decade: the building blocks of proteins and of the
+genetic code form readily in conditions found on the young Earth and in space, and
+laboratories have shown several plausible routes toward self-copying molecules, though not
+yet the whole path. The discovery that the same building blocks fall from the sky in
+meteorites suggests the raw material is everywhere. Defenders of the rare-life view reply
+that raw material is not the problem; the problem is the enormous number of steps between
+raw material and a cell, and nothing yet shows that any of them is easy. The question will
+be settled by evidence, not argument: a second origin of life, in the oceans of an icy
+moon in our own solar system or in the atmosphere of a planet around another star, would
+end the debate overnight."""
+standing = "A respectable minority position among origin-of-life researchers and a common view among physicists who write about the Fermi question; most biologists lean toward life being at least moderately common but admit the evidence is thin."
+would_strengthen = "Decades more of origin-of-life chemistry without a demonstrated path from simple molecules to a self-copying system; a survey of many planets in the band around their stars where water stays liquid finding no gases that life produces; the oceans of Europa or Enceladus turning out to be sterile despite having water, warmth and the right chemistry."
+would_weaken = "A second, independent origin of life found anywhere, whether in the solar system or in the atmosphere of a planet around another star; a laboratory demonstration that self-copying chemistry arises readily under conditions common on young planets; evidence that life on Earth started more than once."
+related = ["rare-earth", "complex-cells-are-rare", "great-filter-behind-us", "no-paradox-just-wide-ranges", "life-under-ice"]
+
+verify = [
+  "That Monod's 1970 book contains the 'our number came up' phrasing and the 'not pregnant with life' claim; check the English translation.",
+  "That Crick's Life Itself (1981) uses the phrase 'almost a miracle' about the origin of life; check the book.",
+  "The two statistical treatments referred to are Spiegel and Turner (2012) and Kipping (2020); check their exact findings and that they are fairly described as 'mild' support for life being common.",
+  "The claim that the Sun makes Earth uninhabitable in roughly a billion years is a widely quoted figure; check against a standard source.",
+]
+
+[[bears_on]]
+factor = "life"
+direction = "lowers"

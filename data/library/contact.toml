@@ -1,0 +1,23 @@
+# Library record: Carl Sagan's novel (and the 1997 film). Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "contact"
+title = "Contact"
+maker = "Carl Sagan (novel); Robert Zemeckis (film, 1997)"
+year = 1985
+kind = "book"
+explanations = ["not-looked-long-enough", "listening-the-wrong-way"]
+factors = ["detectable", "lifetime"]
+link = "https://en.wikipedia.org/wiki/Contact_(novel)"
+how = """
+Sagan was one of the people at the 1961 meeting where the Drake Equation was first written
+down, and the novel is the equation told as a story. Its heroine spends years listening to
+the sky with radio telescopes and almost loses her funding before a signal arrives from the
+star Vega; the plot that follows is about how a civilisation that lasts long enough to be
+heard (the last factor, L) would choose to say hello, and about how little of the sky anyone
+had actually listened to before the message came. The film keeps the listening and the
+argument about faith and evidence; the book goes further into what a very old civilisation
+might have left in the structure of the universe itself. The year given is the novel's."""
+worth_the_time = "Yes, for anyone who wants the hopeful version of the search told by someone who did it; the film is the quicker route and loses little."
+
+notes = "Written 2026-10-16."

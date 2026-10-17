@@ -1,0 +1,24 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "ball-1973"
+date = "1973-07"
+added_on = 2026-10-16
+authors = ["John A. Ball"]
+title = "The Zoo Hypothesis"
+venue = "Icarus 19, 347–349 (1973)"
+link = "https://doi.org/10.1016/0019-1035(73)90111-5"
+finding = """
+A three-page note from a radio astronomer at Harvard's observatory proposing that the
+galaxy may hold civilisations far older than ours that have deliberately set our region
+aside, as a wilderness or a zoo, and avoid any contact that would disturb it. Ball's
+point is that this is the only explanation he can find that fits both a galaxy old enough
+to have been settled many times over and the fact that nobody is here; he admits it is
+unfalsifiable and unpleasant, and says so. The paper named the idea that Star Trek had
+already put on television as the Prime Directive, and it remains the reference every
+later 'they are watching' explanation cites."""
+factors = ["detectable"]
+explanations = ["zoo-hypothesis", "planetarium", "no-interest-in-contact"]
+moved_range = false
+
+notes = "Ball returned to the idea in 'Extraterrestrial Intelligence: Where Is Everybody?' (American Scientist 68, 656–663, 1980)."

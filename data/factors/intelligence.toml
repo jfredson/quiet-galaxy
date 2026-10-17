@@ -1,0 +1,108 @@
+# Factor record: fi, the share of planets with life on which it becomes intelligent.
+# Layout in docs/record-schema.md. Written 2026-10-16 (Saturday session A, run early at John's
+# ruling). Every range is a first pass until the outside review of the seven ranges has run.
+
+id = "intelligence"
+symbol = "fi"
+order = 5
+name = "The share of planets with life on which it becomes intelligent"
+unit = "fraction"
+description = """
+Given a planet with life, how likely it is that some of that life eventually becomes
+intelligent in the sense that matters here: able to build technology. On Earth it took about
+four billion years, most of it spent as single cells, and happened in one lineage out of
+billions of species, which the biologist Ernst Mayr took as proof that it is a fluke. Others
+read the steady rise in the complexity of life as a sign that intelligence is close to
+inevitable given time. There is no second example, and the only new evidence is statistical:
+reasoning from how late in Earth's habitable life we arrived."""
+what_would_move_this = "A second example of complex or intelligent life anywhere, a change in the fossil record's timeline for the major steps (complex cells, animals, brains), or a published analysis that puts a new number on how often intelligence follows from life."
+
+verify = [
+  "Carl Sagan's value of one tenth in Cosmos (1980), chapter 12, is from memory; check it against the book.",
+  "The value of one in a billion attributed to Ernst Mayr is the Wikipedia article's rendering of his 1995 argument (one intelligent species among billions), citing The Planetary Society's 'Ernst Mayr on SETI'; Mayr gave an argument, not this number, so check the wording of the original.",
+  "Pascal Lee's figure of 0.0002, from a 2020 talk, is quoted from the Wikipedia article on the Drake equation, which cites recordings of the talks; check it.",
+  "That Westby and Conselice (2020) set this factor to 1 by assumption is taken from the Wikipedia article, not from the paper.",
+  "Lineweaver's 2008 argument that human-like intelligence is not a convergent feature of evolution (the 'Planet of the Apes' hypothesis) is from memory; check the citation before adding it as an estimate.",
+]
+
+notes = """
+Kipping's 2020 Bayesian analysis (kipping-2020) found a weak preference, three-to-two, for
+intelligence rarely emerging, from the fact that it took almost all of Earth's habitable
+lifetime to appear; the paper strongly excludes intelligence arising quickly (in much less than
+a billion years) on an Earth-like world, and gives no single value for this factor. Frank and
+Sullivan (2016, Astrobiology 16, 359) turned the question round: for Earth to be the only
+technological species ever in the observable universe, the combined chance of life, intelligence
+and technology per habitable planet would have to be below 2.5 in ten to the 24, and below 1.7
+in ten to the 11 for the galaxy. Hanson and colleagues' 2021 'grabby aliens' model
+(hanson-2021-grabby) constrains the product of this factor and the next from the other end: if
+expanding civilisations exist and we are early among them, quiet civilisations that never expand
+can be at most a few thousand times as common as loud ones, else we would have seen a loud one
+by now. Written 2026-10-16."""
+
+[[estimate]]
+who = "Frank Drake and the Green Bank meeting"
+when = "1961"
+value = 1
+source = "Green Bank meeting of November 1961, as recorded in Drake and Sobel, Is Anyone Out There? (Delacorte, 1992), pages 55 to 62 (drake-1961)"
+method = "Assumed: the meeting took it that intelligence follows from life given enough time."
+
+[[estimate]]
+who = "Carl Sagan"
+when = "1980"
+value = 0.1
+source = "Sagan, Cosmos (Random House, 1980), chapter 12, 'Encyclopaedia Galactica'"
+method = "A round guess, one tenth, in a worked example of the equation for a general audience."
+
+[[estimate]]
+who = "Ernst Mayr"
+when = "1995"
+value = 1e-9
+source = "Mayr, in his 1995 exchange with Carl Sagan published in Bioastronomy News and reproduced by The Planetary Society as 'Ernst Mayr on SETI'; the value is the Wikipedia article's rendering of his argument"
+method = "Argued from the fossil record: of the billions of species that have lived on Earth, exactly one developed the kind of intelligence that builds radio telescopes, so the chance per planet should be put at something like one in a billion. A count of species, not of planets, which is why it is recorded but not used for the range's floor."
+
+[[estimate]]
+who = "Simon Conway Morris, as reviewed by Campbell"
+when = "2005"
+value = 1
+source = "Conway Morris, Life's Solution: Inevitable Humans in a Lonely Universe (Cambridge University Press, 2003), as reviewed by Campbell, 'Human-like intelligence is inevitable' (2005); and Bonner, The Evolution of Complexity by Means of Natural Selection (Princeton, 1988)"
+method = "Argued that evolution keeps finding the same solutions (eyes, flight, social behaviour) so that something like human intelligence is close to inevitable wherever complex life has time; a direction rather than a value, recorded as 'approaching 1'."
+
+[[estimate]]
+who = "Anders Sandberg, Eric Drexler and Toby Ord"
+when = "2018-06"
+low = 0.001
+high = 1.0
+source = "Sandberg, Drexler and Ord, 'Dissolving the Fermi Paradox', arXiv:1806.02404 (2018), Table 1 (sandberg-2018)"
+link = "https://arxiv.org/abs/1806.02404"
+method = "A span evenly spread across its powers of ten, taken from the published estimates of 0.001 to 1, with the paper's note that this treats the previous factor as the chance of 'evolutionarily competent' life rather than life of any kind."
+
+[[estimate]]
+who = "Tom Westby and Christopher Conselice"
+when = "2020-06"
+value = 1
+source = "Westby and Conselice, 'The Astrobiological Copernican weak and strong limits for extraterrestrial intelligent life', Astrophysical Journal 896, 58 (2020) (westby-2020)"
+link = "https://arxiv.org/abs/2004.03968"
+method = "Assumed: in their approach intelligence follows on any planet with life after four and a half to five and a half billion years, as on Earth."
+
+[[estimate]]
+who = "Pascal Lee"
+when = "2020-10"
+value = 0.0002
+source = "Lee, 'N ~ 1: Alone in the Milky Way', talk to the Mount Tamalpais astronomy programme, 2020-10-24, and to the Kalamazoo Astronomical Society, 2021-03-06"
+method = "Took the one million years since the first humans against the four and a half billion years since Earth formed as the share of a planet's life during which intelligence is present, about 0.0002, and read it as the chance."
+
+[range]
+low = 0.0001
+high = 1.0
+shape = "log-uniform"
+status = "first-pass"
+set_on = 2026-10-16
+sources = ["sandberg-2018"]
+why = """
+Starts from the 2018 paper's span of 0.001 to 1, which they took from the published estimates,
+and lowers the floor one power of ten to 0.0001 so that Pascal Lee's 0.0002 falls inside it.
+The top is 1, Drake's and Westby and Conselice's assumption and Conway Morris's direction of
+travel. Mayr's one in a billion is recorded but not used for the floor: it counts species, not
+planets, and no one has turned it into a chance per living world. Kipping's weak three-to-two
+for 'intelligence is rare' argues against bunching the weight at the top but does not say how far
+down to go. Evenly spread across its powers of ten, as in the 2018 paper."""

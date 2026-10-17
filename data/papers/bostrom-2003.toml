@@ -1,0 +1,24 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "bostrom-2003"
+date = "2003-04"
+added_on = 2026-10-16
+authors = ["Nick Bostrom"]
+title = "Are You Living in a Computer Simulation?"
+venue = "Philosophical Quarterly 53 (211), 243–255 (2003)"
+link = "https://www.simulation-argument.com/simulation.pdf"
+finding = """
+Bostrom argues that at least one of three things is true: almost no civilisation reaches
+the point of being able to run detailed simulations of its ancestors; almost none that
+reach it choose to; or we are almost certainly living in such a simulation, because the
+simulated people would vastly outnumber the real ones. The paper is not about the Fermi
+question, but it is the source of the simulation explanation for the silence: if our
+universe is a simulation, the sky may be empty because the simulators did not fill it,
+or because rendering other civilisations was not worth the cost. The argument's first
+two horns are themselves versions of the Great Filter and the inward turn."""
+factors = ["detectable"]
+explanations = ["simulation", "planetarium", "inward-turn"]
+moved_range = false
+
+notes = "Written 2026-10-16."

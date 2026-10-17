@@ -1,0 +1,83 @@
+# Factor record: R*, how many stars are born in the galaxy each year. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session A, run early at John's ruling). Every range is a first
+# pass until the outside review of the seven ranges has run.
+
+id = "star-formation"
+symbol = "R*"
+order = 1
+name = "How many stars are born in the galaxy each year"
+unit = "stars per year"
+description = """
+The rate at which the Milky Way makes new stars, averaged over the time it takes a star to
+grow a civilisation. It is the best-measured factor in the equation: the galaxy's output of
+new stars is read from the glow of young stars and the gas they heat, and comes to roughly one
+and a half to two solar masses a year, which is three or four stars a year once the many small
+stars are counted. The one real argument is over which rate to use: today's, or the higher
+average over the galaxy's whole life, since the stars that could host a civilisation today
+were mostly born billions of years ago."""
+what_would_move_this = "A new measurement of the Milky Way's present star-formation rate, or of its star-formation history, that falls outside one to ten stars a year."
+
+verify = [
+  "Robitaille and Whitney's 2010 rate of 0.68 to 1.45 solar masses a year is quoted from the Wikipedia article on the Drake equation (read 2026-10-16), not from the paper itself; check the paper's abstract.",
+  "The conversion of 0.5 solar masses per new star on average is attributed to Kennicutt and Evans 2012 by the same Wikipedia article; check that the paper says it.",
+  "Licquia and Newman's 2015 rate of 1.65 plus or minus 0.19 solar masses a year is quoted from papers that cite it (read 2026-10-16), not from the paper's own abstract.",
+  "The Milky Way's total mass in stars of about six times ten to the tenth solar masses, used in the range's reason for the lifetime-average rate, is from memory of Licquia and Newman 2015; check it.",
+]
+
+notes = """
+Carl Sagan's version of the equation in Cosmos (1980) replaces this factor with the total number
+of stars in the galaxy and asks what fraction of a planet's life a civilisation lasts, so his
+numbers do not translate to a rate per year and are not listed here. Westby and Conselice (2020)
+likewise work from the galaxy's star-formation history rather than a single rate. Written
+2026-10-16."""
+
+[[estimate]]
+who = "Frank Drake and the Green Bank meeting"
+when = "1961"
+value = 1
+source = "Green Bank meeting of November 1961, as recorded in Drake and Sobel, Is Anyone Out There? (Delacorte, 1992), pages 55 to 62; the meeting's record is the founding entry of the publications log (drake-1961)"
+method = "One star a year on average over the life of the galaxy, which the meeting regarded as conservative."
+
+[[estimate]]
+who = "Thomas Robitaille and Barbara Whitney"
+when = "2010-02"
+low = 1.4
+high = 2.9
+source = "Robitaille and Whitney, 'The present-day star formation rate of the Milky Way determined from Spitzer-detected young stellar objects', Astrophysical Journal Letters 710, L11 (2010)"
+link = "https://arxiv.org/abs/1001.3672"
+method = "Counted the young stars the Spitzer space telescope sees across the galactic plane and compared the count with a model of how such stars form and fade; 0.68 to 1.45 solar masses of new stars a year, which is 1.4 to 2.9 stars a year at the usual average of half a solar mass per new star."
+
+[[estimate]]
+who = "Timothy Licquia and Jeffrey Newman"
+when = "2015-06"
+low = 2.9
+high = 3.7
+source = "Licquia and Newman, 'Improved estimates of the Milky Way's stellar mass and star formation rate from hierarchical Bayesian meta-analysis', Astrophysical Journal 806, 96 (2015)"
+link = "https://arxiv.org/abs/1407.1078"
+method = "Combined every earlier measurement of the galaxy's star-formation rate, allowing for the chance that any one of them is wrong; 1.65 plus or minus 0.19 solar masses a year, which is 2.9 to 3.7 stars a year at half a solar mass per star."
+
+[[estimate]]
+who = "Anders Sandberg, Eric Drexler and Toby Ord"
+when = "2018-06"
+low = 1
+high = 100
+source = "Sandberg, Drexler and Ord, 'Dissolving the Fermi Paradox', arXiv:1806.02404 (2018), Table 1 (sandberg-2018)"
+link = "https://arxiv.org/abs/1806.02404"
+method = "A deliberately wide span, evenly spread across its powers of ten, meant to cover the whole published argument rather than to measure anything; the paper itself notes that the real uncertainty is about one power of ten."
+
+[range]
+low = 1
+high = 10
+shape = "log-uniform"
+status = "first-pass"
+set_on = 2026-10-16
+sources = ["sandberg-2018"]
+why = """
+Narrower than the 2018 paper's 1 to 100: the top of their span is far above any measurement of
+this galaxy. Measurements of today's rate (Robitaille and Whitney 2010, Licquia and Newman
+2015) cluster between 1.4 and 3.7 stars a year. The range reaches up to 10 because the stars
+that could host a civilisation today were mostly born long ago, when the galaxy made stars
+faster: spreading its roughly six times ten to the tenth solar masses of stars over its ten
+billion years gives an average of about six solar masses, or ten stars, a year. Drake's 1961
+value of one star a year is the floor. Evenly spread across powers of ten, the same shape the
+2018 paper used, because the question is which power of ten, not which digit."""

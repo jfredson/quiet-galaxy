@@ -1,0 +1,28 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "price-2020"
+date = "2020-01-21"
+added_on = 2026-10-16
+authors = ["Danny C. Price", "J. Emilio Enriquez", "Bryan Brzycki", "Steve Croft", "Daniel Czech", "David DeBoer", "Julia DeMarines", "Griffin Foster", "Vishal Gajjar", "Nectaria Gizani", "Greg Hellbourg", "Howard Isaacson", "Brian Lacki", "Matt Lebofsky", "David H. E. MacMahon", "Imke de Pater", "Andrew P. V. Siemion", "Dan Werthimer", "and others"]
+title = "The Breakthrough Listen Search for Intelligent Life: Observations of 1327 Nearby Stars over 1.10–3.45 GHz"
+venue = "The Astronomical Journal 159, 86 (2020)"
+link = "https://doi.org/10.3847/1538-3881/ab65f1"
+finding = """
+Breakthrough Listen, the privately funded ten-year radio search begun in 2016, reports
+its first large survey: 1,327 stars within about 160 light years, observed with the
+Green Bank and Parkes telescopes across a wide band of radio frequencies, with no signal
+found that could not be traced to human interference. The authors turn the silence into
+a limit: fewer than about 0.1 percent of stars within 50 parsecs host a transmitter as
+powerful as Earth's strongest radar beamed our way at these frequencies, and no star
+observed hosts anything a few times more powerful. The limits apply only to the narrow
+kind of signal searched for, as the paper says, and to the moments the telescope was
+looking."""
+factors = ["detectable"]
+explanations = ["not-looked-long-enough", "everyone-listens-nobody-transmits", "shouting-is-costly"]
+moved_range = false
+
+verify = [
+  "The 0.1 percent within 50 parsecs figure and the transmitter power it refers to; from memory of the abstract. The author list is long and partial here.",
+]
+notes = "Written 2026-10-16. Supersedes Enriquez and colleagues' 2017 survey of 692 stars (The Astrophysical Journal 849, 104)."

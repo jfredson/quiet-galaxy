@@ -1,0 +1,28 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "wright-2018"
+date = "2018-11"
+added_on = 2026-10-16
+authors = ["Jason T. Wright", "Shubham Kanodia", "Emily Lubar"]
+title = "How Much SETI Has Been Done? Finding Needles in the n-dimensional Cosmic Haystack"
+venue = "The Astronomical Journal 156, 260 (2018)"
+link = "https://doi.org/10.3847/1538-3881/aae099"
+finding = """
+The authors define the space a radio search has to cover (where on the sky, how far,
+which frequencies, how strong, how often, when, and how the signal is shaped) as a
+many-dimensional haystack, and add up how much of it every search to date had looked
+through. The total comes to about one part in 10 to the power 17 of the plausible
+volume, which they compare to a hot tub's worth of water drawn from all the Earth's
+oceans; Jill Tarter's earlier comparison was a single glass. The paper is the standard
+answer to 'we have searched and found nothing': in a precise sense, we have hardly
+searched at all, and the silence so far is a weak constraint on the number of
+civilisations."""
+factors = ["detectable"]
+explanations = ["not-looked-long-enough", "listening-the-wrong-way"]
+moved_range = false
+
+verify = [
+  "The one part in 10^17 figure and the hot-tub comparison; from memory of the paper and its press coverage.",
+]
+notes = "Written 2026-10-16."

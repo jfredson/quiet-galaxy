@@ -1,0 +1,23 @@
+# Library record: Stanisław Lem's novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "solaris"
+title = "Solaris"
+maker = "Stanisław Lem (novel); films by Andrei Tarkovsky (1972) and Steven Soderbergh (2002)"
+year = 1961
+kind = "book"
+explanations = ["listening-the-wrong-way"]
+factors = ["intelligence", "detectable"]
+link = "https://en.wikipedia.org/wiki/Solaris_(novel)"
+how = """
+A planet covered by a single living ocean that may be a mind, studied for a century by a
+science that has filled libraries and understood nothing. The ocean responds to the
+scientists by building people out of their memories, and nobody can tell whether that is
+a message, an experiment or a reflex. Lem's argument, made across most of his work, is
+that the search for intelligence assumes a mind like ours and that the universe owes us
+no such thing. For the equation this is a quiet attack on the factor for detectable
+civilisations: a world can hold an intelligence and still give us nothing we could ever
+recognise as a signal. Published the same year the equation was written."""
+worth_the_time = "Yes, for anyone who wants the deepest version of the question 'what if they are nothing like us'; read the 2011 direct translation, and treat the films as their own works."
+
+notes = "Written 2026-10-16."

@@ -1,0 +1,28 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "frank-2016"
+date = "2016-05"
+added_on = 2026-10-16
+authors = ["Adam Frank", "Woodruff T. Sullivan III"]
+title = "A New Empirical Constraint on the Prevalence of Technological Species in the Universe"
+venue = "Astrobiology 16, 359–362 (2016)"
+link = "https://doi.org/10.1089/ast.2015.1418"
+finding = """
+The authors drop the lifetime factor and ask a different question: not how many
+civilisations exist now, but how many have ever existed. With the exoplanet record
+fixing the first three factors, the product of the remaining biological ones would have
+to be below about 2.5 in 10 to the power 24 for humanity to be the only technological
+species the observable universe has ever produced, and below about 1.7 in 10 to the
+power 11 for us to be the only one in the Milky Way's history. In plain terms, unless
+the chance of a habitable planet producing a technological species is almost
+unimaginably small, we are not the first. The paper does not say anyone is out there
+now; it says the pessimists need a very strong claim to say nobody ever was."""
+factors = ["life", "intelligence", "detectable", "habitable-planets"]
+explanations = ["rare-intelligence", "we-are-early", "civilisations-burn-out"]
+moved_range = false
+
+verify = [
+  "The two thresholds (2.5 × 10^-24 and 1.7 × 10^-11); from memory of the abstract.",
+]
+notes = "Written 2026-10-16."

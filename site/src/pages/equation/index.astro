@@ -160,10 +160,16 @@ function startPos(f: typeof factors[number]): number {
         return Math.round(((Math.log10(value) - lo) / (hi - lo)) * STEPS);
       }
       var WORDS = [[1e12, 'trillion'], [1e9, 'billion'], [1e6, 'million'], [1e3, 'thousand']];
-      function trim(v, places) { return v.toFixed(places).replace(/\.?0+$/, ''); }
+      function trim(v, places) { var t = v.toFixed(places); return t.indexOf('.') >= 0 ? t.replace(/\.?0+$/, '') : t; }
       function plain(x) {
         if (!isFinite(x)) return 'no number';
         if (x === 0) return '0';
+        if (x >= 1e15 || x < 1e-15) {
+          var inv = x < 1 ? 1 / x : x;
+          var exp = Math.floor(Math.log10(inv) + 1e-9);
+          var about = inv / Math.pow(10, exp) > 1.05 ? 'about ' : '';
+          return x < 1 ? about + '1 in 10 to the ' + exp : about + '10 to the ' + exp;
+        }
         if (x >= 1e4) {
           for (var i = 0; i < WORDS.length; i++) {
             if (x >= WORDS[i][0]) { var q = x / WORDS[i][0]; return trim(q, q >= 100 ? 0 : q >= 10 ? 1 : 2) + ' ' + WORDS[i][1]; }
@@ -194,7 +200,8 @@ function startPos(f: typeof factors[number]): number {
         if (n >= 2) return 'With these settings there would be about ' + plain(n) + ' detectable civilisations in the galaxy right now, us among them. Not crowded, but not alone.';
         if (n >= 0.5) return 'With these settings there would be about one detectable civilisation in the galaxy right now. That could be us, and the silence would be exactly what you would expect.';
         if (n >= 0.01) return 'With these settings, fewer than one detectable civilisation per galaxy: about ' + plain(n) + '. You would expect one in roughly every ' + plain(1 / n) + ' galaxies, and the silence here would be no puzzle at all.';
-        return 'With these settings, about ' + plain(n) + ' detectable civilisations per galaxy: one in roughly every ' + plain(1 / n) + ' galaxies. On these numbers we would be alone across a large part of the observable universe.';
+        if (n >= 1e-11) return 'With these settings, about ' + plain(n) + ' detectable civilisations per galaxy: one in roughly every ' + plain(1 / n) + ' galaxies. On these numbers we would be alone across a large part of the observable universe.';
+        return 'With these settings, about ' + plain(n) + ' detectable civilisations per galaxy: one in roughly every ' + plain(1 / n) + ' galaxies, which is more galaxies than we can see. On these numbers we would be alone in the observable universe.';
       }
 
       var inputs = {};

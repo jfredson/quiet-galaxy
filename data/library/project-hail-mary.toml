@@ -1,0 +1,24 @@
+# Library record: Andy Weir's novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "project-hail-mary"
+title = "Project Hail Mary"
+maker = "Andy Weir"
+year = 2021
+kind = "book"
+explanations = ["rare-life", "natural-catastrophes"]
+factors = ["life", "intelligence"]
+link = "https://en.wikipedia.org/wiki/Project_Hail_Mary"
+how = """
+A single-celled organism that lives in space and eats starlight is dimming the Sun, and
+the lone survivor of a desperate mission meets, at another star, the lone survivor of
+another species' identical mission. The two work out how to talk, and then how to save
+both their worlds. Weir's book is the optimist's case on two factors at once. Life, in
+his universe, is common because it spreads between stars on its own; and intelligence
+arises in a body nothing like ours, from a world nothing like ours, and still ends up
+building ships and doing arithmetic. It is also, in passing, a natural-catastrophe story,
+with the catastrophe alive. The argument is light, the engineering is the point, and the
+friendship between the two engineers is why people love it."""
+worth_the_time = "Yes, as the cheerful counterweight to Blindsight and Fiasco; it is a fast, warm book and the best recent first-contact story for a reader who does not usually read science fiction."
+
+notes = "Written 2026-10-16."

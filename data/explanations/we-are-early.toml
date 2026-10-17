@@ -1,0 +1,84 @@
+# Explanation record: we are early. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address (/explanations/we-are-early/)
+# and is never renamed.
+
+id = "we-are-early"
+name = "We are early: the universe has barely started making civilisations, and we are among the first"
+family = "never-there"
+proposed_by = "Robin Hanson, Daniel Martin, Calvin McCarter and Jonathan Paulson, with an earlier version by Abraham Loeb, Rafael Batista and David Sloan"
+proposed_in = 2021
+proposed_source = "'If Loud Aliens Explain Human Earliness, Quiet Aliens Are Also Rare', The Astrophysical Journal 922, 182 (2021); Loeb, Batista and Sloan, 'Relative likelihood for life as a function of cosmic time', Journal of Cosmology and Astroparticle Physics (2016)"
+summary = """
+The universe is about 13.8 billion years old, but most of the stars that will ever shine
+have not yet been born, and the small, dim, long-lived stars that make up most of the
+galaxy will keep their planets warm for trillions of years. Measured against that span,
+we have arrived absurdly early. One reading is simple: civilisations are something the
+universe will do mostly in the future, and we are the first in our neighbourhood because
+there has not yet been time for many. A sharper reading, the "grabby aliens" model of
+2021, says our earliness is itself a clue: we are early because if we were any later,
+someone expanding fast would already have filled our part of the sky and taken our place.
+Either way, the sky is quiet because the party has not started."""
+body = """
+Two arguments share this page because they reach the same conclusion by different roads.
+
+The first is a matter of timescales. Star formation in the universe peaked about ten
+billion years ago and has been declining since, but the stars being made now, and most
+stars already made, are small red dwarfs that will burn for hundreds of billions to
+trillions of years. If planets around such stars can carry life, then almost all the
+life-years the universe will ever offer lie far in the future. Abraham Loeb and his
+colleagues worked this through in 2016 and found that, counted that way, a typical
+civilisation should appear in the far future around a small star, and a civilisation
+appearing now around a star like the Sun is early by a factor of a thousand or more.
+Either red dwarfs are poor homes, which would make us typical, or we are among the first.
+
+The second argument, from the economist Robin Hanson and three collaborators in 2021,
+starts from the same puzzle and adds the idea that advanced civilisations, once they
+appear, tend to expand and keep expanding, grabbing every star they reach and changing
+its appearance so that later observers can see where they have been. The authors call such
+civilisations grabby. If grabby civilisations exist, they set a deadline: any planet they
+reach stops producing new civilisations. The reason we see no grabby civilisations yet,
+and the reason we arrived so early in the universe's life, are then the same fact seen
+from two sides. We are early because the deadline is coming. The model fits three numbers
+together, how fast expansion goes, how many hard steps evolution must pass, and how early
+we are, and the fit says grabby civilisations appear about once per million galaxies,
+expand at a large fraction of the speed of light, and will fill the universe within a few
+hundred million to a billion years. Loud civilisations are thus rare, and the paper's title
+notes that quiet ones must then be rare too, since otherwise the loud ones would not be so
+few.
+
+The bearing on the Drake Equation is through the factors that govern how often life and
+intelligence appear per planet per unit of time. The model does not say those steps are
+impossible, only that the whole chain is slow enough that very few planets have finished
+it yet. In the equation's terms it lowers the share of suitable planets on which life has
+started so far, and the share on which intelligence has appeared, while leaving open that
+both will be much higher a few billion years from now.
+
+The objections are of two kinds. Against the timescale argument: red dwarfs flare,
+strip atmospheres, and lock their planets' rotation, so they may be poor homes, in which
+case we are not early but ordinary. Against the grabby model: it rests on the assumption
+that advanced civilisations expand and stay visible, which every explanation in the
+"unseen" family of this catalogue denies, and it uses the hard-steps picture of evolution,
+which is itself an argument from Earth's single history. The grabby model's defenders
+reply that the assumptions are explicit and the numbers that come out are testable, which
+is more than most explanations offer. The model also makes a striking prediction: when we
+do see a grabby civilisation, it will already be enormous, filling a large part of the
+sky, because anything smaller would be too young for its light to have reached us."""
+standing = "The timescale puzzle is widely accepted as real. The grabby aliens model is recent, discussed seriously, and admired for being precise and testable; it is not a consensus view, and critics question its assumption that civilisations expand and stay visible."
+would_strengthen = "Evidence that planets around red dwarf stars can hold atmospheres and water, which makes our early arrival harder to explain by chance; a deep survey finding no large-scale engineering anywhere in the visible universe, consistent with grabby civilisations not yet in view; further support for the hard-steps picture of the timing of evolution on Earth."
+would_weaken = "Evidence that red dwarf planets are generally uninhabitable, which would make us typical rather than early; the discovery of an old civilisation nearby; the detection of a distant region of sky altered by an expanding civilisation that is small, which the model says should not be seen."
+related = ["great-filter-behind-us", "hostile-galaxy", "rare-intelligence", "expansion-stalls", "no-paradox-just-wide-ranges"]
+
+verify = [
+  "That the 2021 paper's headline numbers are roughly as stated: about one grabby civilisation per million galaxies, expansion at a large fraction of light speed, filling the universe within a few hundred million to a billion years; check the paper's abstract and figures.",
+  "That the Loeb, Batista and Sloan 2016 paper finds civilisations around Sun-like stars to be early by a factor of about a thousand relative to red dwarfs; check the number.",
+  "That star formation in the universe peaked about ten billion years ago; check a standard source.",
+  "The Astrophysical Journal volume and article number for Hanson and colleagues (922, 182); check.",
+]
+
+[[bears_on]]
+factor = "life"
+direction = "lowers"
+
+[[bears_on]]
+factor = "intelligence"
+direction = "lowers"

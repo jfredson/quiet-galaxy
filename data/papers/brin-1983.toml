@@ -1,0 +1,25 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "brin-1983"
+date = "1983"
+added_on = 2026-10-16
+authors = ["Glen David Brin"]
+title = "The 'Great Silence': the Controversy Concerning Extraterrestrial Intelligent Life"
+venue = "Quarterly Journal of the Royal Astronomical Society 24, 283–309 (1983)"
+link = "https://adsabs.harvard.edu/full/1983QJRAS..24..283B"
+finding = """
+The first full survey of the question, written by an astrophysicist who went on to be a
+novelist. Brin coins 'the Great Silence' for the fact that needs explaining, lays out
+the two camps (those who say the galaxy should be full and conclude it is empty, and
+those who say the search has barely started), and then catalogues the explanations
+offered to that point: colonisation that stalls, deadly self-replicating probes, worlds
+covered by water whose inhabitants never build radios, civilisations that keep quiet out
+of fear, zoos, and self-destruction. He does not pick one. His own contribution is the
+observation that a galaxy with even one dangerous species in it would teach every other
+species to be quiet, which is the dark forest argument twenty-five years early."""
+factors = ["detectable", "lifetime", "intelligence"]
+explanations = ["zoo-hypothesis", "berserkers", "self-destruction", "dark-forest", "expansion-stalls", "rare-earth", "shouting-is-costly"]
+moved_range = false
+
+notes = "Most of the catalogue's explanations that predate 1983 are gathered here, and the paper is the usual starting point for any later survey."

@@ -1,0 +1,310 @@
+{
+  "computed_on": "2026-10-16",
+  "method": {
+    "after": "sandberg-2018",
+    "runs": 200000,
+    "seed": 1961,
+    "independent_draws": true,
+    "galaxies": 100000000000,
+    "status": "proposed 2026-10-16 in docs/method.md, not yet ruled"
+  },
+  "ranges": [
+    {
+      "id": "star-formation",
+      "symbol": "R*",
+      "name": "How many stars are born in the galaxy each year",
+      "unit": "stars per year",
+      "shape": "log-uniform",
+      "low": 1,
+      "high": 10,
+      "status": "first-pass",
+      "set_on": "2026-10-16",
+      "estimates": 4
+    },
+    {
+      "id": "planets",
+      "symbol": "fp",
+      "name": "The share of stars that have planets",
+      "unit": "fraction",
+      "shape": "log-uniform",
+      "low": 0.5,
+      "high": 1.0,
+      "status": "first-pass",
+      "set_on": "2026-10-16",
+      "estimates": 6
+    },
+    {
+      "id": "habitable-planets",
+      "symbol": "ne",
+      "name": "Planets per star that could support life",
+      "unit": "planets per star",
+      "shape": "log-uniform",
+      "low": 0.01,
+      "high": 1.0,
+      "status": "first-pass",
+      "set_on": "2026-10-16",
+      "estimates": 7
+    },
+    {
+      "id": "life",
+      "symbol": "fl",
+      "name": "The share of planets that could support life on which life actually starts",
+      "unit": "fraction",
+      "shape": "log-uniform",
+      "low": 1e-22,
+      "high": 1.0,
+      "status": "first-pass",
+      "set_on": "2026-10-16",
+      "estimates": 5
+    },
+    {
+      "id": "intelligence",
+      "symbol": "fi",
+      "name": "The share of planets with life on which it becomes intelligent",
+      "unit": "fraction",
+      "shape": "log-uniform",
+      "low": 0.0001,
+      "high": 1.0,
+      "status": "first-pass",
+      "set_on": "2026-10-16",
+      "estimates": 7
+    },
+    {
+      "id": "detectable",
+      "symbol": "fc",
+      "name": "The share of intelligent species that make themselves detectable",
+      "unit": "fraction",
+      "shape": "log-uniform",
+      "low": 0.01,
+      "high": 1.0,
+      "status": "first-pass",
+      "set_on": "2026-10-16",
+      "estimates": 4
+    },
+    {
+      "id": "lifetime",
+      "symbol": "L",
+      "name": "How long a civilisation stays detectable, in years",
+      "unit": "years",
+      "shape": "log-uniform",
+      "low": 100,
+      "high": 10000000000,
+      "status": "first-pass",
+      "set_on": "2026-10-16",
+      "estimates": 6
+    }
+  ],
+  "any_range_first_pass": true,
+  "runs": 200000,
+  "median": 2.204788262462625e-09,
+  "mean": 133980.98403420203,
+  "alone_in_galaxy": 0.878935,
+  "alone_in_universe": 0.39293,
+  "alone_in_universe_by_galaxy_count": {
+    "1e+10": 0.43828,
+    "1e+11": 0.39293,
+    "1e+12": 0.347335
+  },
+  "percentiles": {
+    "5": 1.839873398893456e-20,
+    "25": 7.14093314228941e-15,
+    "50": 2.204788262462625e-09,
+    "75": 0.0007162164535046117,
+    "95": 253.13230904209613
+  },
+  "histogram": [
+    {
+      "log10_from": -28,
+      "share": 5e-06
+    },
+    {
+      "log10_from": -27,
+      "share": 6.5e-05
+    },
+    {
+      "log10_from": -26,
+      "share": 0.0004
+    },
+    {
+      "log10_from": -25,
+      "share": 0.00151
+    },
+    {
+      "log10_from": -24,
+      "share": 0.00412
+    },
+    {
+      "log10_from": -23,
+      "share": 0.007545
+    },
+    {
+      "log10_from": -22,
+      "share": 0.01253
+    },
+    {
+      "log10_from": -21,
+      "share": 0.017935
+    },
+    {
+      "log10_from": -20,
+      "share": 0.02403
+    },
+    {
+      "log10_from": -19,
+      "share": 0.02911
+    },
+    {
+      "log10_from": -18,
+      "share": 0.034315
+    },
+    {
+      "log10_from": -17,
+      "share": 0.03855
+    },
+    {
+      "log10_from": -16,
+      "share": 0.042255
+    },
+    {
+      "log10_from": -15,
+      "share": 0.044475
+    },
+    {
+      "log10_from": -14,
+      "share": 0.045585
+    },
+    {
+      "log10_from": -13,
+      "share": 0.044905
+    },
+    {
+      "log10_from": -12,
+      "share": 0.045595
+    },
+    {
+      "log10_from": -11,
+      "share": 0.04535
+    },
+    {
+      "log10_from": -10,
+      "share": 0.046015
+    },
+    {
+      "log10_from": -9,
+      "share": 0.04549
+    },
+    {
+      "log10_from": -8,
+      "share": 0.04576
+    },
+    {
+      "log10_from": -7,
+      "share": 0.04507
+    },
+    {
+      "log10_from": -6,
+      "share": 0.04523
+    },
+    {
+      "log10_from": -5,
+      "share": 0.04495
+    },
+    {
+      "log10_from": -4,
+      "share": 0.04563
+    },
+    {
+      "log10_from": -3,
+      "share": 0.043985
+    },
+    {
+      "log10_from": -2,
+      "share": 0.040925
+    },
+    {
+      "log10_from": -1,
+      "share": 0.0376
+    },
+    {
+      "log10_from": 0,
+      "share": 0.033345
+    },
+    {
+      "log10_from": 1,
+      "share": 0.028115
+    },
+    {
+      "log10_from": 2,
+      "share": 0.021935
+    },
+    {
+      "log10_from": 3,
+      "share": 0.016115
+    },
+    {
+      "log10_from": 4,
+      "share": 0.010735
+    },
+    {
+      "log10_from": 5,
+      "share": 0.006455
+    },
+    {
+      "log10_from": 6,
+      "share": 0.00298
+    },
+    {
+      "log10_from": 7,
+      "share": 0.00117
+    },
+    {
+      "log10_from": 8,
+      "share": 0.0002
+    },
+    {
+      "log10_from": 9,
+      "share": 1.5e-05
+    }
+  ],
+  "extremes": {
+    "from_estimates": {
+      "pessimist": 1.0000000000000001e-65,
+      "optimist": 5000000000000.0,
+      "factors": {
+        "star-formation": {
+          "pessimist": 1.0,
+          "optimist": 100.0
+        },
+        "planets": {
+          "pessimist": 0.1,
+          "optimist": 1.0
+        },
+        "habitable-planets": {
+          "pessimist": 1e-05,
+          "optimist": 5.0
+        },
+        "life": {
+          "pessimist": 1e-50,
+          "optimist": 1.0
+        },
+        "intelligence": {
+          "pessimist": 1e-09,
+          "optimist": 1.0
+        },
+        "detectable": {
+          "pessimist": 0.01,
+          "optimist": 1.0
+        },
+        "lifetime": {
+          "pessimist": 100.0,
+          "optimist": 10000000000.0
+        }
+      }
+    },
+    "from_ranges": {
+      "pessimist": 5.0000000000000015e-29,
+      "optimist": 100000000000.0
+    }
+  },
+  "verify_open": 27
+}

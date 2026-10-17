@@ -1,0 +1,23 @@
+# Library record: Pellegrino and Zebrowski's novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "the-killing-star"
+title = "The Killing Star"
+maker = "Charles Pellegrino and George Zebrowski"
+year = 1995
+kind = "book"
+explanations = ["dark-forest", "shouting-is-costly", "self-destruction"]
+factors = ["lifetime", "detectable"]
+link = "https://en.wikipedia.org/wiki/The_Killing_Star"
+how = """
+Humanity is wiped out in the first chapter by projectiles fired at close to the speed of
+light from a civilisation that had listened to our broadcasts and reasoned that anyone
+who could build a starship could build such a weapon. The novel states the argument as
+three rules: a species will put its own survival first; a species that has reached the
+stars will have done the same; and nobody can be sure of a stranger's intentions, so the
+only safe move is to strike first. That is the dark forest logic, stated in full thirteen
+years before The Dark Forest, with the extra point that our own radio and television
+leakage had already given us away. The rest of the book follows the few survivors."""
+worth_the_time = "For readers who want the strike-first argument at its starkest in a short book; the opening is the reason to read it and the rest is ordinary."
+
+notes = "Written 2026-10-16."

@@ -1,0 +1,26 @@
+# Library record: Kurzgesagt's two Fermi Paradox videos. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "kurzgesagt-fermi-paradox"
+title = "The Fermi Paradox: Where Are All The Aliens? (parts 1 and 2) and The Great Filter"
+maker = "Kurzgesagt – In a Nutshell (YouTube channel)"
+year = 2015
+kind = "video"
+explanations = ["great-filter-behind-us", "great-filter-ahead", "rare-earth", "self-destruction", "zoo-hypothesis"]
+factors = ["habitable-planets", "lifetime"]
+link = "https://www.youtube.com/watch?v=sNhhvQGsMEc"
+how = """
+Two animated videos of about six minutes each, and a later one on the Great Filter, that
+have been watched tens of millions of times and are how most people under thirty first met
+the question. The first lays out the scale of the problem (the number of stars, the age of
+the galaxy, how fast a species could spread) and the second runs through the explanations,
+sorting them into filters behind us and filters ahead. The videos simplify hard, and they
+present the single-value version of the equation rather than the spread this project uses,
+but as a first five minutes on the subject nothing else is as clear. The year given is for
+the first two videos; the Great Filter video followed in 2018."""
+worth_the_time = "Yes, as the thing to send someone who asks what the fuss is about; it takes twelve minutes and leaves them with the right questions."
+
+verify = [
+  "The release years of the two-part video (2015) and the Great Filter video (2018), and that the link points at part 1; check against the channel.",
+]
+notes = "Written 2026-10-16."

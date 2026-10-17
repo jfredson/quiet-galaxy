@@ -1,0 +1,23 @@
+# Library record: the Strugatsky brothers' novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "roadside-picnic"
+title = "Roadside Picnic"
+maker = "Arkady and Boris Strugatsky"
+year = 1972
+kind = "book"
+explanations = ["no-interest-in-contact", "ships-in-the-night"]
+factors = ["detectable", "intelligence"]
+link = "https://en.wikipedia.org/wiki/Roadside_Picnic"
+how = """
+Aliens visited Earth, stayed briefly in six places, and left. Nobody saw them; what they
+left behind are zones of lethal physics and inexplicable objects that people called
+stalkers risk their lives to collect. The title is the book's whole argument, made by one
+character in a bar: imagine a picnic by a roadside, the people drive off, and the ants and
+insects come out afterwards to puzzle over the wrappers and the oil stain. Contact
+happened, and we were not the point of it. The book is the source of the idea that the
+most likely visitors would neither hide from us nor speak to us, because we would not
+register as anyone to speak to. Tarkovsky's film Stalker (1979) comes from it."""
+worth_the_time = "Yes, for anyone who wants the humbling version of contact in a short, sharp novel; the picnic speech alone is worth the read."
+
+notes = "Written 2026-10-16."

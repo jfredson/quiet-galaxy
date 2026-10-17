@@ -1,0 +1,29 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "westby-2020"
+date = "2020-06-15"
+added_on = 2026-10-16
+authors = ["Tom Westby", "Christopher J. Conselice"]
+title = "The Astrobiological Copernican Weak and Strong Limits for Intelligent Life"
+venue = "The Astrophysical Journal 896, 58 (2020)"
+link = "https://doi.org/10.3847/1538-4357/ab8225"
+finding = """
+Instead of guessing the biological factors, the authors assume Earth is typical: under
+their 'strong' assumption, intelligent life appears on a suitable planet between 4.5 and
+5.5 billion years after the planet forms, as it did here, and only around stars with at
+least the Sun's share of heavy elements. Combined with the galaxy's star-formation
+history and a communicating lifetime of 100 years (ours so far), that gives about 36
+communicating civilisations in the galaxy now, with a range of roughly 4 to 211, and a
+nearest neighbour around 17,000 light years away, too far to talk to within a lifetime
+at radio speeds. Under the weaker assumption (any time after 5 billion years) the count
+rises to hundreds or more. The headline number was widely reported; the paper's own point
+is that the answer hinges almost entirely on how long civilisations last."""
+factors = ["life", "intelligence", "lifetime", "star-formation"]
+explanations = ["interstellar-travel-impractical", "not-looked-long-enough"]
+moved_range = false
+
+verify = [
+  "The range of 4 to 211 around the central 36 and the 17,000 light-year nearest-neighbour distance; quoted from memory of the abstract and press coverage.",
+]
+notes = "Written 2026-10-16."

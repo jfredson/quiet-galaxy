@@ -1,0 +1,25 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "cassan-2012"
+date = "2012-01-12"
+added_on = 2026-10-16
+authors = ["Arnaud Cassan", "Daniel Kubas", "Jean-Philippe Beaulieu", "and the PLANET collaboration"]
+title = "One or more bound planets per Milky Way star from microlensing observations"
+venue = "Nature 481, 167–169 (2012)"
+link = "https://arxiv.org/abs/1202.0903"
+finding = """
+When one star passes in front of a more distant one, its gravity briefly brightens the
+background star, and a planet around the nearer star adds a blip. Six years of watching
+for such blips, including the ones that did not happen, let the authors estimate how
+many planets stars have on average: about 1.6 planets per star in the range from five
+Earth masses to ten Jupiter masses at distances of half to ten times the Earth-Sun
+distance, and 62 percent of stars with a planet of a few Earth masses in that range.
+Because microlensing works for the dim red stars that make up most of the galaxy, which
+other methods miss, it was the first measurement that could fairly be said to cover the
+whole Milky Way: planets are the rule."""
+factors = ["planets"]
+explanations = []
+moved_range = false
+
+notes = "Written 2026-10-16. This is the source the planets factor's second estimate cites, and the schema's own example of a revision names this id; logged so that session A's factor file can link to it."

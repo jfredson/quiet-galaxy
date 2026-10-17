@@ -1,0 +1,23 @@
+# Library record: Arthur C. Clarke's novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "childhoods-end"
+title = "Childhood's End"
+maker = "Arthur C. Clarke"
+year = 1953
+kind = "book"
+explanations = ["transcension", "zoo-hypothesis", "rare-intelligence"]
+factors = ["intelligence", "lifetime"]
+link = "https://en.wikipedia.org/wiki/Childhood%27s_End"
+how = """
+Ships appear over every city and the Overlords, who will not show themselves for fifty
+years, end war and want and gently stop humanity from going into space. The reason comes
+out at the end: they are midwives, serving something larger, and the human species is
+about to stop being a species. Clarke's book is the first clear statement of the idea
+that the oldest minds in the galaxy would not be civilisations at all in any sense we
+could detect, and that a young species' time as a radio-using, planet-bound culture might
+be a brief passage rather than a destination. It is also a watcher story, with the
+watchers very much present and still unknowable."""
+worth_the_time = "Yes, for anyone; it is short, strange, and the ending is the one Clarke spent the rest of his career circling back to."
+
+notes = "Written 2026-10-16."

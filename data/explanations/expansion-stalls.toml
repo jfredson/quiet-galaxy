@@ -1,0 +1,79 @@
+# Explanation record: expansion stalls. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address (/explanations/expansion-stalls/)
+# and is never renamed.
+
+id = "expansion-stalls"
+name = "Expansion stalls: civilisations do spread between stars, but settlement spreads like a stain, not a flood, and leaves large regions, perhaps ours, never reached"
+family = "unseen"
+proposed_by = "Geoffrey A. Landis"
+proposed_in = 1998
+proposed_source = "'The Fermi Paradox: An Approach Based on Percolation Theory', Journal of the British Interplanetary Society 51, 163–166 (1998); earlier related work by Newman and Sagan, Icarus 46, 293–327 (1981)"
+summary = """
+The argument that someone should already be here assumes that once a civilisation starts
+settling other stars it keeps going until it has settled them all. Geoffrey Landis
+pointed out that this is not how spreading works. If each new settlement has some chance
+of becoming the kind that sends out more ships and some chance of becoming the kind that
+does not, then the mathematics of how things spread through a network, called
+percolation, says the result depends on that chance. Below a threshold, settlement
+fizzles out in a small cluster. Just above it, settlement spreads but leaves large
+unsettled holes. Earth could sit in one of the holes, with settled stars a few hundred
+light-years away in several directions and none nearby."""
+body = """
+Geoffrey Landis, a NASA scientist who also writes science fiction, published the idea in
+1998 as a direct answer to Hart's argument that any interstellar civilisation would have
+settled the whole galaxy. He made three assumptions. First, interstellar travel is
+possible but difficult, so a civilisation settles only nearby stars, within a few tens of
+light-years. Second, a new settlement is in effect a new civilisation, with its own
+culture, because the distances prevent any central control. Third, each new settlement
+has some probability of being expansionist, sending out ships of its own, and otherwise is
+content to stay put. Under these assumptions, settlement spreads through the network of
+stars the way water spreads through coffee grounds or a disease spreads through a
+population, and the theory of that process was already well developed.
+
+The result has a sharp threshold. If the probability of a settlement being expansionist
+is below a critical value, every expansion dies out after a few generations and the
+civilisation stays in a small cluster around its home star. Above the value, expansion
+goes on without limit, but it does not fill space evenly: it leaves voids, regions
+surrounded by settlements but never entered, because the settlements at the edge of the
+void all happened to be the non-expanding kind. Near the threshold the voids are large,
+and a planet in one could be hundreds of light-years from the nearest settled star while
+the galaxy as a whole was well occupied. Landis argued that Earth may be in such a void,
+and that the silence is a local fact about our neighbourhood rather than a global fact
+about the galaxy.
+
+William Newman and Carl Sagan had argued along related lines in 1981, modelling
+settlement as a slow diffusion rather than a rapid wave and concluding that a galaxy
+could take far longer to fill than Hart assumed, especially if populations grew slowly.
+Landis's contribution was the threshold and the voids.
+
+The bearing on the Drake Equation is nil, in the sense that the explanation says nothing
+about how many civilisations exist or how long they last; it answers Hart's question about
+settlement rather than Drake's about detectability. For the catalogue the factors are left
+unchanged and the silence is put down to geography. If the galaxy is settled with voids,
+there may be many civilisations within radio range beyond the void's edge, and the
+explanation predicts that they will be found by looking farther rather than by looking
+longer.
+
+The objections: the model assumes that an expansionist settlement, once established,
+never later changes its mind and that a content one never later starts expanding, which
+over millions of years is a strong assumption; later simulations with more realistic
+assumptions, including the motion of stars over time, found that voids tend to fill in,
+since stars drift and bring settled and unsettled regions together. The model also says
+nothing about why no settled region, anywhere, has produced a signal or a visible mark,
+which is a question about detectability rather than settlement. Landis's reply was that
+the model was meant to show that Hart's conclusion did not follow from Hart's premises,
+and on that narrow point it is generally agreed to succeed."""
+standing = "Widely cited and accepted as a valid answer to the strong form of Hart's argument; later work suggests voids are not permanent when stars move, so most researchers see it as weakening Hart's case rather than resolving the question."
+would_strengthen = "Detection of settled or technological systems at a distance of a few hundred light-years with none nearer, which is the pattern the model predicts; evidence from Earth's own future settlement of the solar system that daughter settlements often stop expanding."
+would_weaken = "A galaxy-wide survey finding no settlement anywhere, which the model does not predict; simulations confirming that stellar motion erases voids on timescales short compared with the galaxy's age; a detected nearby civilisation, which would put us outside any void."
+related = ["interstellar-travel-impractical", "we-are-early", "civilisations-burn-out", "ships-in-the-night"]
+
+verify = [
+  "That Landis's 1998 paper is in JBIS volume 51, pages 163–166; check.",
+  "That Newman and Sagan (1981) is in Icarus volume 46, pages 293–327, and models settlement as slow diffusion; check.",
+  "That later simulations including stellar motion found voids tend to fill in (Carroll-Nellenback, Frank, Wright and Scharf, 2019, is the usual citation); check what they found about voids specifically.",
+]
+
+[[bears_on]]
+factor = "detectable"
+direction = "unchanged"

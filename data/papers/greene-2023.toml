@@ -1,0 +1,28 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "greene-2023"
+date = "2023-03-27"
+added_on = 2026-10-16
+authors = ["Thomas P. Greene", "Taylor J. Bell", "Elsa Ducrot", "Achrène Dyrek", "Pierre-Olivier Lagage", "Jonathan J. Fortney"]
+title = "Thermal emission from the Earth-sized exoplanet TRAPPIST-1 b using JWST"
+venue = "Nature 618, 39–42 (2023)"
+link = "https://doi.org/10.1038/s41586-023-05951-7"
+finding = """
+The first measurement of heat from an Earth-sized rocky planet around another star. The
+James Webb Space Telescope watched the innermost of the seven planets of the red dwarf
+TRAPPIST-1 pass behind its star and measured the drop in infrared light. The planet's
+day side is about 500 kelvin (around 230 degrees Celsius), which is what bare rock
+heated by the star would be with no atmosphere moving heat around, and rules out a thick
+carbon-dioxide atmosphere like Venus's. For the equation this matters because most stars
+are red dwarfs and most habitable-zone planets orbit them; whether such planets can keep
+an atmosphere against their star's flares is the main open question about the third
+factor, and this was the first hard data point."""
+factors = ["habitable-planets"]
+explanations = ["rare-earth"]
+moved_range = false
+
+verify = [
+  "The day-side temperature of about 500 kelvin (the paper gives 503 ± 26 K); from memory.",
+]
+notes = "Written 2026-10-16. TRAPPIST-1 b is too close to its star to be habitable in any case; it was measured first because it is the easiest, and as a test of whether rocky planets around red dwarfs keep atmospheres at all."

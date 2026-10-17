@@ -1,0 +1,24 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "mayor-1995"
+date = "1995-11-23"
+added_on = 2026-10-16
+authors = ["Michel Mayor", "Didier Queloz"]
+title = "A Jupiter-mass companion to a solar-type star"
+venue = "Nature 378, 355–359 (1995)"
+link = "https://doi.org/10.1038/378355a0"
+finding = """
+The first planet found around an ordinary star other than the Sun: a body of at least
+half Jupiter's mass circling the star 51 Pegasi every 4.2 days, closer to its star than
+Mercury is to ours, found from the small back-and-forth wobble it gives the star's light.
+Nobody had predicted a giant planet so close in, and the discovery showed both that
+planets exist elsewhere and that other planetary systems need not look like ours. Until
+this paper the share of stars with planets, the second factor in the equation, was a
+guess; after it, it was a measurement waiting to be made. The authors shared the 2019
+Nobel Prize in Physics for it."""
+factors = ["planets"]
+explanations = []
+moved_range = false
+
+notes = "Written 2026-10-16. Planets around a pulsar, a dead star, had been found by Wolszczan and Frail in 1992; this was the first around a star like the Sun."

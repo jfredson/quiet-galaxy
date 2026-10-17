@@ -1,0 +1,24 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "spiegel-2012"
+date = "2012-01-10"
+added_on = 2026-10-16
+authors = ["David S. Spiegel", "Edwin L. Turner"]
+title = "Bayesian analysis of the astrobiological implications of life's early emergence on Earth"
+venue = "Proceedings of the National Academy of Sciences 109, 395–400 (2012)"
+link = "https://doi.org/10.1073/pnas.1111694108"
+finding = """
+The common argument that life must be easy because it started so soon on Earth is
+weaker than it looks, the authors show, because we could only be here to notice if life
+had started early enough to leave time for us to evolve. Once that selection is taken
+into account, the early start is consistent with life being common and also with life
+being very rare, and which you conclude depends mostly on what you believed before
+looking. Their conclusion is that one planet's history cannot tell us the chance life
+starts elsewhere, and that finding a second, independent origin of life, on Mars or
+Europa, is the only thing that would."""
+factors = ["life"]
+explanations = ["rare-life", "great-filter-behind-us"]
+moved_range = false
+
+notes = "The paper is the usual caution against reading a large value for the life factor off Earth's early fossils; Kipping 2020 (kipping-2020) is the main reply."

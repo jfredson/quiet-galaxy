@@ -75,7 +75,7 @@ SLIDERS: dict[str, tuple[float, float]] = {
     "star-formation": (0.1, 1000.0),
     "planets": (0.001, 1.0),
     "habitable-planets": (0.001, 100.0),
-    "life": (1e-9, 1.0),
+    "life": (1e-24, 1.0),
     "intelligence": (1e-9, 1.0),
     "detectable": (1e-4, 1.0),
     "lifetime": (10.0, 1e10),
@@ -130,14 +130,16 @@ def text(value) -> str:
 def load_headline(data_dir: Path, path: Path | None) -> dict | None:
     """Read the headline numbers written by `compute.py run`, if they exist.
 
-    `compute.py run` is Saturday session A's work. This reads its output from
-    data/headline.json (or --headline FILE) and accepts these keys, every one optional except the
-    first three: median (detectable civilisations in the galaxy, the middle of the spread),
-    alone_galaxy (chance we are the only one in the galaxy, 0 to 1), alone_universe (the same for
-    the observable universe), optimist and pessimist (N with every factor at its most hopeful and
-    its most pessimistic published estimate), runs (how many draws), computed_on (year-month-day),
-    seed, note. A file that lacks the first three is reported and ignored, so a half-written run
-    never puts a number on the home page.
+    `compute.py run` (Saturday session A, 2026-10-16) writes data/headline.json. This reads it
+    (or --headline FILE) and keeps: median (detectable civilisations in the galaxy, the middle of
+    the spread), alone_in_galaxy and alone_in_universe (0 to 1), runs, computed_on, mean,
+    percentiles, any_range_first_pass, verify_open, the method block (runs, seed, independent
+    draws, galaxy count, and its status line saying the parameters are proposed and not ruled),
+    and the width of the argument from extremes.from_estimates (optimist and pessimist: N with
+    every factor at its most hopeful and its most pessimistic published estimate) with the same
+    from the ranges' ends beside it. The older key names alone_galaxy and alone_universe are
+    accepted too. A file that lacks the median and the two chances is reported and ignored, so a
+    half-written run never puts a number on the home page.
     """
     candidates = [path] if path else [data_dir / "headline.json", ROOT / "data" / "headline.json"]
     for cand in candidates:
@@ -153,14 +155,16 @@ def load_headline(data_dir: Path, path: Path | None) -> dict | None:
         src = raw.get("headline", raw) if isinstance(raw, dict) else {}
         aliases = {
             "median": ("median", "median_n", "n_median"),
-            "alone_galaxy": ("alone_galaxy", "p_alone_galaxy", "chance_alone_galaxy"),
-            "alone_universe": ("alone_universe", "p_alone_universe", "chance_alone_universe"),
-            "optimist": ("optimist", "optimistic", "n_optimist", "high"),
-            "pessimist": ("pessimist", "pessimistic", "n_pessimist", "low"),
+            "alone_galaxy": ("alone_in_galaxy", "alone_galaxy", "p_alone_galaxy"),
+            "alone_universe": ("alone_in_universe", "alone_universe", "p_alone_universe"),
+            "mean": ("mean",),
             "runs": ("runs", "draws", "samples"),
             "computed_on": ("computed_on", "date", "run_on"),
             "seed": ("seed",),
             "note": ("note", "notes"),
+            "percentiles": ("percentiles",),
+            "any_range_first_pass": ("any_range_first_pass",),
+            "verify_open": ("verify_open",),
         }
         out: dict = {}
         for key, names in aliases.items():
@@ -168,6 +172,24 @@ def load_headline(data_dir: Path, path: Path | None) -> dict | None:
                 if n in src and src[n] is not None:
                     out[key] = src[n]
                     break
+        extremes = src.get("extremes") or {}
+        from_estimates = extremes.get("from_estimates") or {}
+        from_ranges = extremes.get("from_ranges") or {}
+        if "optimist" in from_estimates and "pessimist" in from_estimates:
+            out["optimist"] = from_estimates["optimist"]
+            out["pessimist"] = from_estimates["pessimist"]
+        elif "optimist" in src and "pessimist" in src:
+            out["optimist"], out["pessimist"] = src["optimist"], src["pessimist"]
+        if "optimist" in from_ranges and "pessimist" in from_ranges:
+            out["optimist_from_ranges"] = from_ranges["optimist"]
+            out["pessimist_from_ranges"] = from_ranges["pessimist"]
+        method = src.get("method") or {}
+        if isinstance(method, dict):
+            out["method"] = {k: method[k] for k in ("after", "runs", "seed", "independent_draws", "galaxies", "status") if k in method}
+            if "runs" not in out and "runs" in method:
+                out["runs"] = method["runs"]
+            if "seed" not in out and "seed" in method:
+                out["seed"] = method["seed"]
         if not all(k in out for k in ("median", "alone_galaxy", "alone_universe")):
             print(f"note: {cand} has no median, alone_galaxy and alone_universe; the headline is left uncomputed",
                   file=sys.stderr)

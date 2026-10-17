@@ -1,0 +1,27 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "wogan-2024"
+date = "2024-03"
+added_on = 2026-10-16
+authors = ["Nicholas F. Wogan", "Natasha E. Batalha", "Kevin J. Zahnle", "Joshua Krissansen-Totton", "Shang-Min Tsai", "Renyu Hu"]
+title = "JWST Observations of K2-18b Can Be Explained by a Gas-rich Mini-Neptune with No Habitable Surface"
+venue = "The Astrophysical Journal Letters 963, L7 (2024)"
+link = "https://doi.org/10.3847/2041-8213/ad2616"
+finding = """
+The first substantial reply to madhusudhan-2023 on the question of the ocean rather than
+the life. The authors model the planet's chemistry and find that the same mix of methane
+and carbon dioxide with no ammonia comes out naturally from a small, gas-rich Neptune-like
+planet with a thick hydrogen envelope and no surface anyone could stand on, and that an
+ocean world would in fact be expected to show more ammonia, not less. If so, the
+planet is not a candidate for life as we know it, whatever gases it has. A companion
+paper by Oliver Shorttle and colleagues (The Astrophysical Journal Letters 962, L8, 2024)
+argued the surface could as easily be magma as water."""
+factors = ["habitable-planets", "life"]
+explanations = ["rare-earth", "rare-life"]
+moved_range = false
+
+verify = [
+  "The month of publication and the volume and article numbers of both this paper and the Shorttle paper; from memory.",
+]
+notes = "Written 2026-10-16."

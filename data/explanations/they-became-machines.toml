@@ -1,0 +1,77 @@
+# Explanation record: they became machines. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address
+# (/explanations/they-became-machines/) and is never renamed.
+
+id = "they-became-machines"
+name = "They became machines: the typical advanced civilisation is no longer biological, and machine minds live, think and travel in ways our searches do not expect"
+family = "unseen"
+proposed_by = "Steven J. Dick"
+proposed_in = 2003
+proposed_source = "'Cultural evolution, the postbiological universe and SETI', International Journal of Astrobiology 2, 65–74 (2003); the view is also associated with Seth Shostak and Susan Schneider"
+summary = """
+Humans went from the first radio transmission to the first artificial intelligence in
+about a century. Any civilisation that has been technical for thousands of years has
+probably gone much further and handed its future to minds it built rather than minds it
+grew. Machine minds need no water, no air, no warmth and no hurry. They may prefer the
+cold outer reaches of a galaxy or the dense energy near its centre, may think in ways that
+produce nothing we would recognise as a signal, and may have no interest in the warm, wet,
+short-lived creatures the searches were designed to find. The galaxy may be full of
+minds, none of them alive in our sense, and our searches are looking for the wrong kind
+of neighbour in the wrong kind of place."""
+body = """
+Steven Dick, a historian of science and later the chief historian of NASA, argued in
+2003 that the search for other civilisations had overlooked the most likely form they
+would take. If civilisations last long, cultural and technological change will carry
+them far past the stage of biological bodies and brains, and the typical advanced
+civilisation in a galaxy billions of years old would be, in his word, postbiological: made
+of machines, or of minds uploaded into machines, or of something built from both. The
+astronomer Seth Shostak made the same point in popular writing, suggesting that the first
+intelligence we meet will be artificial, and the philosopher Susan Schneider developed the
+argument that alien minds, if they exist, are most likely to be machine minds and perhaps
+not conscious in any way we would recognise.
+
+The implications for the search are large. Machine minds do not need habitable planets,
+so looking at planets in the comfortable zone around their stars may be looking in the
+wrong place; they might prefer places with abundant energy, such as the galactic centre, or
+places that are cold, where computing is cheaper. They need not communicate by radio or
+at all, since a single machine civilisation might be one mind with nothing outside itself
+to talk to. They need not expand on any timescale that matters to us, since they can wait.
+They might regard biological species as a passing stage not worth engaging, or might not
+notice us as the kind of thing one engages. And they might be very hard to see: an object
+that computes efficiently in the cold gives off little and resembles nothing astronomers
+usually look for.
+
+The bearing on the Drake Equation is on the share of intelligent civilisations that are
+detectable, which this view lowers by changing what "detectable" would mean, and perhaps
+also raises the detectable lifetime, since machines are not subject to most of the things
+that end a biological civilisation; but a long lifetime is no help if nothing in it is
+visible. The explanation is an umbrella for several others in the catalogue: transcension
+and aestivation are both things a machine civilisation might do, and the dark forest and
+the berserkers are things it might fear or become.
+
+The objections: a machine civilisation still uses energy and still produces waste heat,
+and surveys for that heat around other stars and galaxies have so far found nothing, so
+the shift from biology to machines does not by itself explain the silence. A machine
+civilisation that wanted resources would be, if anything, a more efficient expander than a
+biological one, so the argument needs machines to want nothing, which is a claim about
+their psychology we cannot check. And the whole picture rests on the assumption that
+artificial minds are possible and will supersede their makers, which is a forecast about
+our own future rather than a fact about the galaxy. The reply is that the forecast is
+widely shared and may be tested within this century."""
+standing = "Taken seriously and increasingly mainstream among researchers who think about what long-lived civilisations become; it reshapes what the search should look for rather than explaining the silence on its own, since machines would still use energy and could still be seen."
+would_strengthen = "A detected artificial object or signal with no biological home; evidence of large-scale computing in cold regions of the galaxy, such as sources of heat with an artificial-looking pattern far from any star; humanity's own development of artificial minds that surpass their makers within this century."
+would_weaken = "A detected biological civilisation that is old; surveys of cold regions and the galactic centre finding no anomalous heat; a demonstration that machine minds of the required kind are not possible."
+related = ["transcension", "aestivation", "inward-turn", "berserkers", "listening-the-wrong-way", "great-filter-ahead"]
+
+verify = [
+  "That Dick's 2003 paper is in the International Journal of Astrobiology volume 2, pages 65–74, and uses the word 'postbiological'; check.",
+  "That Schneider's argument about non-conscious machine aliens appears in her 2015 essay 'Alien Minds' and 2019 book Artificial You; check which to cite.",
+]
+
+[[bears_on]]
+factor = "detectable"
+direction = "lowers"
+
+[[bears_on]]
+factor = "lifetime"
+direction = "raises"

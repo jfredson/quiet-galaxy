@@ -1,0 +1,23 @@
+# Library record: Mary Doria Russell's novel. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md).
+
+id = "the-sparrow"
+title = "The Sparrow"
+maker = "Mary Doria Russell"
+year = 1996
+kind = "book"
+explanations = ["listening-the-wrong-way", "hostile-galaxy"]
+factors = ["detectable", "intelligence"]
+link = "https://en.wikipedia.org/wiki/The_Sparrow_(novel)"
+how = """
+A radio telescope picks up singing from a planet of Alpha Centauri, and the Jesuits,
+moving faster than any government, send a small expedition. The book is told from after
+the disaster, by the one who came back. The mission fails not through malice on either
+side but through misreading: the visitors see a gentle farming people and never
+understand that they are livestock for a second species, and every kind act the humans do
+has a consequence they could not have predicted. For the catalogue it is the detection
+side done right, a signal found by ordinary astronomy, followed by the contact side done
+wrong. It is also a reminder that a detectable civilisation is not a safe one to visit."""
+worth_the_time = "Yes, for readers who want contact treated as a moral and anthropological problem; it is harrowing and the companion, Children of God (1998), is for those who need to know what happened next."
+
+notes = "Written 2026-10-16."

@@ -1,0 +1,29 @@
+# Publication record. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Append-only.
+
+id = "lineweaver-2004"
+date = "2004-01-02"
+added_on = 2026-10-16
+authors = ["Charles H. Lineweaver", "Yeshe Fenner", "Brad K. Gibson"]
+title = "The Galactic Habitable Zone and the Age Distribution of Complex Life in the Milky Way"
+venue = "Science 303, 59–62 (2004)"
+link = "https://doi.org/10.1126/science.1092322"
+finding = """
+Using models of how the galaxy built up its heavy elements and how often nearby stars
+explode, the authors map where and when in the Milky Way a planet could have held complex
+life long enough for it to matter. The answer is a ring between about 7 and 9
+kiloparsecs from the centre (the Sun sits at about 8), which has been slowly widening as
+the galaxy aged: too close in and supernovae sterilise planets too often; too far out and
+there were not enough heavy elements to build rocky planets. Within that ring, three
+quarters of the stars that could host complex life are older than the Sun, by about a
+billion years on average. The paper is the standard reference for the idea that only part
+of the galaxy counts, and for the uncomfortable corollary that most habitable worlds had
+a head start on us."""
+factors = ["star-formation", "habitable-planets"]
+explanations = ["rare-earth", "natural-catastrophes", "we-are-early"]
+moved_range = false
+
+verify = [
+  "That the paper puts the ring at 7 to 9 kiloparsecs and three quarters of its stars older than the Sun by an average of a billion years; the numbers are from memory of the abstract.",
+]
+notes = "The idea of a galactic habitable zone was introduced by Gonzalez, Brownlee and Ward in Icarus 152, 185–200 (2001); this paper is the quantitative version."

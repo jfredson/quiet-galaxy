@@ -1,0 +1,79 @@
+# Explanation record: rare Earth. Layout in docs/record-schema.md.
+# Written 2026-10-16. The id is this page's public address (/explanations/rare-earth/)
+# and is never renamed.
+
+id = "rare-earth"
+name = "Rare Earth: simple life may be common, but a planet that can carry complex life needs a long list of lucky breaks"
+family = "never-there"
+proposed_by = "Peter Ward and Donald Brownlee"
+proposed_in = 2000
+proposed_source = "Rare Earth: Why Complex Life Is Uncommon in the Universe (Copernicus Books, 2000)"
+summary = """
+Microbes may turn up wherever there is water and warmth, but animals, plants and anything
+that could one day build a radio telescope need far more: a planet of the right size, in
+the right orbit, around the right kind of star, in the right part of the galaxy, with a
+large moon to steady its tilt, moving continents to recycle its air, a magnetic field to
+hold on to that air, and a giant outer planet to sweep up the worst of the incoming
+rocks. Each of these may be ordinary on its own. Needing all of them at once, for billions
+of years, may make a planet like Earth very rare indeed. If so, the galaxy is full of slime
+and empty of neighbours."""
+body = """
+The argument was laid out by two scientists at the University of Washington, the
+palaeontologist Peter Ward and the astronomer Donald Brownlee, in a 2000 book written for
+a general reader. It came at a moment of optimism: the first planets around other stars had
+been found a few years earlier, and the popular view, shaped by Carl Sagan, was that life
+and minds were probably everywhere. Ward and Brownlee agreed that simple life, single cells
+of the kind that ruled Earth for its first three billion years, might well be common. Their
+claim was about the next step. Complex life, the kind made of many cells that can grow
+large and eventually clever, needed a planet to stay comfortable for a very long time, and
+they listed the things Earth had going for it that most planets would not.
+
+The list, in plain words: a star that is steady and lives long enough, which rules out the
+largest stars and perhaps the dim red ones that flare; an orbit in the narrow band where
+water stays liquid; a planet heavy enough to keep an atmosphere and light enough not to
+become a gas giant; a large moon, formed by a freak collision, that keeps the planet's tilt
+from wandering and so keeps the seasons mild; moving continents, which Earth has and no
+other planet we know of does, that bury carbon and release it again and so act as a
+thermostat over millions of years; a molten iron core that makes a magnetic field and
+shields the air from the solar wind; a giant outer planet like Jupiter in a circular orbit,
+which they argued deflects comets that would otherwise strike the inner planets; a quiet
+neighbourhood in the galaxy, far enough from the crowded centre to avoid exploding stars
+and close enough in to have the heavy elements planets are made of; and simple good luck in
+avoiding the handful of mass extinctions that would have ended the story.
+
+In the language of the Drake Equation, the argument lowers the number of planets per star
+that could carry life, if "life" means anything beyond microbes, and it lowers the share of
+living planets on which intelligence appears, because it says most living planets never
+get past single cells. It leaves the first steps alone: Ward and Brownlee did not doubt
+that stars and planets are plentiful.
+
+Each item on the list has been challenged in the years since. The sample is one planet, so
+every "requirement" is really an observation that Earth has the feature, not a proof that
+complex life needs it. Later work on Jupiter's role found that a giant planet sends almost
+as many objects inward as it deflects, so its value as a shield is unclear. Large moons
+formed by collision may be ordinary, since collisions were ordinary when the planets were
+young. The thousands of planets found since 2000 have shown that the galaxy's planets are
+far more varied than the solar system suggested, which cuts both ways: more kinds of
+world, but few that look like ours. The argument's defenders reply that the discovery of
+many planets has not yet turned up one with Earth's full set of features, and that the
+long stable climate complex life needs is still the hardest thing to explain. Rare Earth
+remains the best-known version of the view that we are alone because the ingredients of a
+home like ours seldom come together."""
+standing = "Taken seriously by many planetary scientists and geologists, and treated as the standard pessimistic position on complex life; most astronomers regard the individual requirements as unproven and the overall case as plausible but unsettled."
+would_strengthen = "Surveys of Earth-sized planets in the band around their stars where water stays liquid (the habitable zone) that find thin or absent atmospheres on most of them; evidence that moving continents are unusual among rocky planets; a planet-formation model showing that large moons and circular giant planets are rare outcomes; a long run of exoplanet atmosphere measurements with no sign of oxygen or other gases that complex life would produce."
+would_weaken = "A detection of oxygen or another gas tied to complex life in the atmosphere of a planet around another star; evidence of moving continents or long-lived magnetic fields on many rocky planets; simulations showing that a planet's climate can stay stable for billions of years without a large moon or giant outer neighbour."
+related = ["rare-life", "complex-cells-are-rare", "rare-intelligence", "hostile-galaxy", "great-filter-behind-us", "life-under-ice"]
+
+verify = [
+  "That the book's list of requirements is fairly summarised above, including the claim that moving continents act as a long-term thermostat; check against the book's own chapter list.",
+  "That later work (Horner and Jones, around 2008) found Jupiter sends roughly as many objects inward as it deflects; check the paper and its exact finding.",
+  "That Ward and Brownlee accepted simple life as probably common; check the book's framing.",
+]
+
+[[bears_on]]
+factor = "habitable-planets"
+direction = "lowers"
+
+[[bears_on]]
+factor = "intelligence"
+direction = "lowers"

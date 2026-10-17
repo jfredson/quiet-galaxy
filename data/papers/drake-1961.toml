@@ -1,0 +1,31 @@
+# Publication record: the meeting where the equation was written. Layout in docs/record-schema.md.
+# Written 2026-10-16 (Saturday session C of docs/2026-10-16-kickoff.md). Publication records are
+# appended and never edited except to fix an error, with a changelog line.
+
+id = "drake-1961"
+date = "1961-11"
+added_on = 2026-10-16
+authors = ["Frank Drake", "and the Green Bank meeting: Dana Atchley, Melvin Calvin, Su-Shu Huang, John Lilly, Philip Morrison, Bernard Oliver, Carl Sagan, Otto Struve, J. Peter Pearman"]
+title = "The Drake Equation, as written for the Green Bank conference on extraterrestrial intelligent life"
+venue = "Order of Dolphin meeting, National Radio Astronomy Observatory, Green Bank, West Virginia, 1961-11-01 to 1961-11-03; first published account in J. P. T. Pearman, 'Extraterrestrial Intelligent Life and Interstellar Communication: An Informal Discussion', in Interstellar Communication, ed. A. G. W. Cameron (Benjamin, 1963), 287–293"
+link = "https://www.seti.org/drake-equation-index"
+finding = """
+Drake wrote the equation on a blackboard as the agenda for a three-day meeting of eleven
+people: the number of detectable civilisations in the galaxy equals the rate at which
+suitable stars form, times the share with planets, times the habitable planets per such
+star, times the share on which life starts, times the share where it becomes intelligent,
+times the share that become detectable, times how long they stay so. The meeting's own
+values, as later recounted, were about 1 to 10 stars a year, 0.2 to 0.5, 1 to 5, 1, 1, 0.1
+to 0.2, and a lifetime of 1,000 to 100,000,000 years, which made the number of
+civilisations roughly equal to the lifetime in years: somewhere between 1,000 and 100
+million. The equation was never meant as a calculation; it was a way to organise an
+argument, and it has done that job for sixty-five years."""
+factors = ["star-formation", "planets", "habitable-planets", "life", "intelligence", "detectable", "lifetime"]
+explanations = []
+moved_range = false
+
+verify = [
+  "The meeting's values for each factor are quoted from secondary accounts (Drake and Sobel, Is Anyone Out There?, 1992; Drake, Vakoch and Dowd, The Drake Equation, 2015); check against those books, and in particular whether the star-formation rate was given as 1 per year or as 1 to 10.",
+  "The exact dates of the meeting (1961-11-01 to 03) and the Pearman 1963 chapter's page numbers.",
+]
+notes = "Founding entry. There is no 1961 paper by Drake presenting the equation; the earliest printed version is Pearman's 1963 account, and Drake's own first published form is in his 1965 chapter 'The Radio Search for Intelligent Extraterrestrial Life' in Current Aspects of Exobiology. The link is the SETI Institute's page on the equation."
