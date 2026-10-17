@@ -1,0 +1,24 @@
+# Publication record. Layout in docs/record-schema.md. Logged on 2026-10-17 after the outside review of the
+# seven ranges (docs/reviews/2026-10-17-rulings.md; ruled by John the same day). Append-only.
+
+id = "shostak-2015"
+date = "2015-07"
+added_on = 2026-10-17
+authors = ["Seth Shostak"]
+title = "Fraction of civilizations that develop a technology that releases detectable signs of their existence into space, fc, 1961 to the present"
+venue = "chapter 12 in Douglas A. Vakoch and Matthew F. Dowd (eds.), The Drake Equation: Estimating the Prevalence of Extraterrestrial Life through the Ages (Cambridge University Press, 2015), pp. 227-240"
+link = "https://doi.org/10.1017/cbo9781139683593.015"
+finding = """
+Shostak's chapter on the detectable factor from 1961 to the present, which the abstract says
+considers estimates of the share of intelligent species that can make themselves visible to other
+societies, using the recent capabilities of terrestrial technology. The chapter's own figure
+has not been read, so it is logged without an estimate."""
+factors = ["detectable"]
+explanations = []
+moved_range = false
+
+verify = [
+  "The outside reviewer said the chapter gives 1 for the detectable factor; the chapter's text could not be read (the book is behind a paywall), and its abstract gives no number. Until it is read, the chapter is logged without an estimate.",
+]
+
+notes = "Logged 2026-10-17 on the outside review's item 16 (accepted by John once the figure is read). That chapter 12 is Shostak's, on the detectable factor, and its title and pages were checked on 2026-10-17 against the book's contents page and the Crossref record."

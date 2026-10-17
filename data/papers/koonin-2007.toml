@@ -1,0 +1,22 @@
+# Publication record. Layout in docs/record-schema.md. Logged on 2026-10-17 after the outside review of the
+# seven ranges (docs/reviews/2026-10-17-rulings.md; ruled by John the same day). Append-only.
+
+id = "koonin-2007"
+date = "2007-05-31"
+added_on = 2026-10-17
+authors = ["Eugene V. Koonin"]
+title = "The cosmological model of eternal inflation and the transition from chance to biological evolution in the history of life"
+venue = "Biology Direct 2, 15 (2007); arXiv:q-bio/0701023"
+link = "https://doi.org/10.1186/1745-6150-2-15"
+finding = """
+Estimates how unlikely it is that a system able to copy itself and translate its code arises by
+chance, and puts the chance in one observable region of the universe below one in ten to the 1,018,
+a deliberately generous upper bound. His conclusion is not that life is absent but that, if the
+universe is infinite and keeps inflating, such a chance event happens somewhere, so life needs a far
+larger universe than the one we can see. A bound on one mechanism, not a chance of life starting per
+planet."""
+factors = ["life"]
+explanations = ["rare-life"]
+moved_range = false
+
+notes = "Logged 2026-10-17 on the outside review's item 10 (accepted in part by John: a publication record linked from the chance-life-starts factor, kept in that factor's notes and not in its estimate list, because a chance of one in ten to the 1,018 is not a number the computer can hold). Venue, volume, article number and date checked on 2026-10-17 against Crossref; the figure is as the factor's notes already described it after the check of 2026-10-16."

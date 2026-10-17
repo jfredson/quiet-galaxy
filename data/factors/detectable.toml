@@ -1,6 +1,7 @@
 # Factor record: fc, the share of intelligent species that make themselves detectable.
 # Layout in docs/record-schema.md. Written 2026-10-16 (Saturday session A, run early at John's
-# ruling). Every range is a first pass until the outside review of the seven ranges has run.
+# ruling). The outside review of the seven ranges ran on 2026-10-17 and John ruled on it
+# the same day; this range is "reviewed".
 
 id = "detectable"
 symbol = "fc"
@@ -15,7 +16,7 @@ television and city lights have made Earth detectable to a neighbour with a good
 telescope without our choosing it. The factor also covers the choice not to be found, which is
 where several of the explanations for the silence live. Nothing here is measured; every figure
 is an assumption."""
-what_would_move_this = "A survey result that bounds how many transmitters or technological signatures could be nearby (the Breakthrough Listen limits), or a published argument with a number on how often technological species stay quiet or go dark."
+what_would_move_this = "A published argument with a number on how often technological species stay quiet or go dark and that isolates this factor; survey limits on how many transmitters or technological signatures could be nearby (the Breakthrough Listen limits) are logged here too, but they bound the product of all seven factors and move this range only together with such an argument."
 
 notes = """
 The founding pessimist papers, Hart (1975, hart-1975) and Tipler (1980, tipler-1980), do not
@@ -30,7 +31,7 @@ Cosmos, chapter 12, gives only the product of the intelligence and detectable fa
 hundred, never this factor alone; see the revision below); Forgan and Elvis (2011) is a paper on
 asteroid mining as evidence of aliens and says nothing about Earth being detectable, so it is
 dropped; and the range's reason below still names 'Sagan's one in ten' and should be revisited at
-the outside review (the range is unchanged). Written 2026-10-16."""
+the outside review (the range is unchanged). Written 2026-10-16. Outside review, 2026-10-17, ruled by John the same day: lowering the floor from 0.01 to 0.0001 (item 15) was accepted only if De Visscher (2020, de-visscher-2020) gives a range reaching 0.0001 for this factor, and the condition was not met, so the floor stays at 0.01. The paper does print 0.0001 to 1, but for a different quantity: the chance that an intelligent biological species goes on to build a machine intelligence able to communicate across space, which the author sets by assuming the extra step is as selective as the first, so that it is the first one squared. For the biological route, this factor's own subject, the paper takes the 2018 paper's 0.01 to 1 as it stands, which is the range used here. The figure is an assumption for a different thing, and it cannot lower the floor of a share that is already counted over either route (at 0.0001 the scratch headline was 65% alone in the galaxy against 59%). If John reads the paper otherwise, the change is one line and a revision. The reviewer's second paper (item 16), Shostak's chapter 12 in the 2015 Cambridge volume, is in the log (shostak-2015) with its figure left out because the chapter could not be read. The test line was reworded to say survey limits are logged but move the range only with an argument that isolates this factor (item 17)."""
 
 [[estimate]]
 who = "Frank Drake and the Green Bank meeting"
@@ -57,11 +58,21 @@ source = "Westby and Conselice, 'The Astrobiological Copernican Weak and Strong 
 link = "https://arxiv.org/abs/2004.03968"
 method = "Assumed: every civilisation that develops as ours did is taken to be communicating, for an average of 100 years."
 
+[[estimate]]
+who = "Alex De Visscher"
+when = "2020-06"
+low = 0.01
+high = 1.0
+source = "De Visscher, 'Artificial versus biological intelligence in the Cosmos: clues from a stochastic analysis of the Drake equation', International Journal of Astrobiology 19(5), 353-359 (2020) (de-visscher-2020)"
+link = "https://arxiv.org/abs/2001.11644"
+publication = "de-visscher-2020"
+method = "For intelligent biological species able to communicate across space, took the 2018 paper's span of 0.01 to 1 as it stands, so it is not an independent estimate. The paper also assumes 0.0001 to 1 for the further chance that such a species builds a machine intelligence able to communicate, as the first chance squared; that is a figure for a different thing and is not used here. Added on 2026-10-17 (outside review, item 16)."
+
 [range]
 low = 0.01
 high = 1.0
 shape = "log-uniform"
-status = "first-pass"
+status = "reviewed"
 set_on = 2026-10-16
 sources = ["sandberg-2018"]
 why = """
@@ -77,3 +88,25 @@ field = "estimate (Carl Sagan, 1980)"
 old = "value 0.1, 'a round guess, one tenth'"
 new = "removed"
 why = "Checked against Cosmos (1980), chapter 12, on 2026-10-16: Sagan writes 'let us choose fi x fc = 1/100' and gives no value for the detectable factor alone, so one tenth is not a published estimate of it. The range and its first-pass reasoning are untouched; the reasoning's mention of Sagan's one in ten should be revisited at the outside review."
+
+[[revision]]
+date = 2026-10-17
+field = "what_would_move_this"
+old = "A survey result that bounds how many transmitters or technological signatures could be nearby (the Breakthrough Listen limits), or a published argument with a number on how often technological species stay quiet or go dark."
+new = "A published argument with a number on how often technological species stay quiet or go dark and that isolates this factor; survey limits ... are logged here too, but they bound the product of all seven factors and move this range only together with such an argument."
+why = "Ruled by John 2026-10-17 on the outside review (item 17, accepted in part): the reviewer rightly said a radio search bounds the product of all seven factors and not this one alone, but the line also drives the weekly reading's searches and survey limits are worth logging here, so the survey half stays with that warning."
+
+[[revision]]
+date = 2026-10-17
+field = "estimate"
+old = "three published estimates"
+new = "four: De Visscher (2020), 0.01 to 1 for the biological route, added; Shostak's chapter (2015) logged as a publication without an estimate"
+why = "Ruled by John 2026-10-17 on the outside review (item 16). The figures the reviewer attributed to the two papers could not be confirmed as estimates of this factor: De Visscher's 0.0001 is for the machine route, and Shostak's chapter could not be read. The range is unchanged."
+publication = "de-visscher-2020"
+
+[[revision]]
+date = 2026-10-17
+field = "range.status"
+old = "first-pass"
+new = "reviewed"
+why = "The outside review of the seven ranges ran on 2026-10-17 and John ruled on every item the same day (docs/reviews/2026-10-17-rulings.md)."

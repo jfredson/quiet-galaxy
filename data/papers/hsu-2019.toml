@@ -1,0 +1,21 @@
+# Publication record. Layout in docs/record-schema.md. Logged on 2026-10-17 after the outside review of the
+# seven ranges (docs/reviews/2026-10-17-rulings.md; ruled by John the same day). Append-only.
+
+id = "hsu-2019"
+date = "2019-08-14"
+added_on = 2026-10-17
+authors = ["Danley C. Hsu", "Eric B. Ford", "Darin Ragozzine", "Keir Ashby"]
+title = "Occurrence Rates of Planets Orbiting FGK Stars: Combining Kepler DR25, Gaia DR2, and Bayesian Inference"
+venue = "The Astronomical Journal 158, 109 (2019); arXiv:1902.01417"
+link = "https://arxiv.org/abs/1902.01417"
+finding = """
+Combines the Kepler mission's final planet catalogue with Gaia's measurements of the stars and finds,
+for planets of 0.75 to 1.5 Earth radii on orbits of 237 to 500 days around Sun-like stars, a rate of
+less than 0.27 planets per star (the 84th percentile), which could be lower by a factor of about two
+because some candidates are false alarms. For planning missions to find rocky planets in or near the
+habitable zone, the authors recommend allowing for a true rate anywhere from 0.03 to 0.40."""
+factors = ["habitable-planets"]
+explanations = []
+moved_range = false
+
+notes = "Logged 2026-10-17 on the outside review's item 8 (accepted by John). The reviewer's 'about 0.2' is a fair summary but not the paper's statement; the figures above are the abstract's own, checked on 2026-10-17 against the arXiv record."

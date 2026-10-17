@@ -1,7 +1,7 @@
 # Factor record: fp, the share of stars that have planets. Layout in docs/record-schema.md.
 # Written 2026-10-16 as the schema's worked example; rewritten with the full published record
-# the same evening (Saturday session A, run early at John's ruling). Every range is a first
-# pass until the outside review of the seven ranges has run.
+# the same evening (Saturday session A, run early at John's ruling). The outside review of the seven ranges ran on 2026-10-17 and John ruled on it
+# the same day; this range is "reviewed".
 
 id = "planets"
 symbol = "fp"
@@ -18,10 +18,11 @@ the bending of light from a background star, finds planets around most or all st
 what_would_move_this = "A survey that counts planets around a large, well-understood sample of stars, including the dim red dwarfs that make up most of the galaxy, and reports the share of stars with none."
 
 verify = [
+  "Zhu and Dong (2021, zhu-2021), the Annual Review of Astronomy and Astrophysics survey of planet statistics, is logged for this factor, but the reviewer's statement that it concludes the share of stars with planets is close to 100 percent was not found in its abstract or in coverage, and the full text has not been read for it; until it is, there is no estimate to add. Raised 2026-10-17 by the outside review (item 6); open.",
   "Drake's 1961 range of 0.2 to 0.5 for fp is quoted from the Wikipedia article on the Drake equation, which cites Drake and Sobel's 1992 book, pages 55 to 62; check it against the book or the 2015 Drake, Vakoch and Dowd volume. Tried 2026-10-16 and still open: neither book could be opened (restricted lending copy, no snippets); other secondary accounts give a single 0.5 for 1961 (Glade and colleagues 2012, Table 1; Scoles and Heatherly 2011 in the Astronomical Society of the Pacific's magazine), and the SETI Institute's page says attendees thought the share was close to 100 percent.",
 ]
 
-notes = "Checked 2026-10-16 against the primary sources: Sagan's one third and the Mayor period limit of 100 days are borne out; Mayor's statistics use 822 stars, not 376 (corrected in the estimate and in a revision below). Drake's 1961 value of 0.2 to 0.5 could not be checked against Drake and Sobel or the 2015 volume tonight: other secondary accounts give a single 0.5 (Glade and colleagues 2012, arXiv:1112.1506, Table 1; the Astronomical Society of the Pacific article by Scoles and Heatherly, 2011), so the 1961 range is still unconfirmed; it has no weight in the range, which rests on the surveys. Saturday session C writes the publication records for the 2012 microlensing paper and the others cited here; when they exist, each estimate gets a 'publication' link to its record. Written 2026-10-16."
+notes = "Checked 2026-10-16 against the primary sources: Sagan's one third and the Mayor period limit of 100 days are borne out; Mayor's statistics use 822 stars, not 376 (corrected in the estimate and in a revision below). Drake's 1961 value of 0.2 to 0.5 could not be checked against Drake and Sobel or the 2015 volume tonight: other secondary accounts give a single 0.5 (Glade and colleagues 2012, arXiv:1112.1506, Table 1; the Astronomical Society of the Pacific article by Scoles and Heatherly, 2011), so the 1961 range is still unconfirmed; it has no weight in the range, which rests on the surveys. Saturday session C writes the publication records for the 2012 microlensing paper and the others cited here; when they exist, each estimate gets a 'publication' link to its record. Written 2026-10-16. Outside review, 2026-10-17: the proposal to change the shape to uniform (item 5) was declined for consistency with the other log-uniform ranges, the headline being the same within noise either way (58.7% against 58.8% alone in the galaxy on a scratch copy); the range is unchanged. Ruled by John 2026-10-17."
 
 [[estimate]]
 who = "Frank Drake and the Green Bank meeting"
@@ -78,7 +79,7 @@ method = "A span evenly spread across its powers of ten, chosen to cover the pub
 low = 0.5
 high = 1.0
 shape = "log-uniform"
-status = "first-pass"
+status = "reviewed"
 set_on = 2026-10-16
 sources = ["sandberg-2018"]
 why = """
@@ -105,3 +106,10 @@ field = "estimate (Michel Mayor and colleagues, 2011).method"
 old = "Eight years of measuring the wobble of 376 Sun-like stars with the HARPS instrument; more than half were found to host at least one planet with an orbit shorter than 100 days, a lower limit since longer orbits and smaller planets were missed."
 new = "822 Sun-like stars (376 with HARPS, the rest with CORALIE); 51 to 57 percent host at least one planet with an orbit shorter than 100 days. The estimate's low (0.5) and high (1.0) are unchanged and the range is untouched."
 why = "Checked against Mayor et al., arXiv:1109.2497, on 2026-10-16: the statistical sample is 822 stars, and the corrected share is 50.6 plus or minus 7.4 percent (published planets) to 57.1 plus or minus 8.0 percent (with candidates)."
+
+[[revision]]
+date = 2026-10-17
+field = "range.status"
+old = "first-pass"
+new = "reviewed"
+why = "The outside review of the seven ranges ran on 2026-10-17 and John ruled on every item the same day (docs/reviews/2026-10-17-rulings.md)."

@@ -1,6 +1,6 @@
 # Factor record: ne, planets per star that could support life. Layout in docs/record-schema.md.
-# Written 2026-10-16 (Saturday session A, run early at John's ruling). Every range is a first
-# pass until the outside review of the seven ranges has run.
+# Written 2026-10-16 (Saturday session A, run early at John's ruling). The outside review of the seven ranges ran on 2026-10-17 and John ruled on it
+# the same day; this range is "reviewed".
 
 id = "habitable-planets"
 symbol = "ne"
@@ -27,7 +27,7 @@ stars sit in a 'galactic habitable zone' with enough heavy elements and few enou
 supernovae for complex life; that is a multiplier on this factor rather than an estimate of
 it, and the surveys above count planets without it. The Rare Earth argument (Ward and Brownlee
 2000, ward-2000) is written up as an explanation in its own right; its number is recorded here
-because it is the published pessimistic extreme. Checked 2026-10-16: the 1% to 0.001% is Ward and Brownlee's reading of the ordinary equation, before their further extras (pages 269 to 270; the extras come on page 271), so the range's reason below, which describes the one-in-a-hundred-thousand end as resting on the extras, was written before this was checked and should be revisited at the outside review; the range itself is unchanged. Drake's 1961 range of 1 to 5 could not be checked against the book tonight: other secondary accounts give a single 2 (Glade and colleagues 2012, Table 1; Scoles and Heatherly 2011) or 'approximately one' (SETI Institute). Written 2026-10-16."""
+because it is the published pessimistic extreme. Checked 2026-10-16: the 1% to 0.001% is Ward and Brownlee's reading of the ordinary equation, before their further extras (pages 269 to 270; the extras come on page 271), so the range's reason below, which describes the one-in-a-hundred-thousand end as resting on the extras, was written before this was checked and should be revisited at the outside review; the range itself is unchanged. Drake's 1961 range of 1 to 5 could not be checked against the book tonight: other secondary accounts give a single 2 (Glade and colleagues 2012, Table 1; Scoles and Heatherly 2011) or 'approximately one' (SETI Institute). Written 2026-10-16. Outside review, 2026-10-17: the proposal to lower the floor from 0.01 to 0.00001 to match Ward and Brownlee (item 7) was declined and the reason in the range rewritten, as this note had asked; the headline at 0.00001 on a scratch copy was 69% alone in the galaxy against 59%. Ruled by John 2026-10-17."""
 
 [[estimate]]
 who = "Frank Drake and the Green Bank meeting"
@@ -71,6 +71,16 @@ link = "https://arxiv.org/abs/1501.01623"
 method = "Kepler's count of planets crossing red dwarf stars, the most common kind, corrected for the ones it would have missed: 0.16 (between 0.09 and 0.33) Earth-size planets per red dwarf in the strictly defined habitable zone, plus another 0.12 planets somewhat larger than Earth; the wider habitable zone that allows for early Venus and early Mars gives 0.24 and 0.21."
 
 [[estimate]]
+who = "Danley Hsu, Eric Ford, Darin Ragozzine and Keir Ashby"
+when = "2019-08"
+low = 0.03
+high = 0.40
+source = "Hsu, Ford, Ragozzine and Ashby, 'Occurrence Rates of Planets Orbiting FGK Stars: Combining Kepler DR25, Gaia DR2, and Bayesian Inference', Astronomical Journal 158, 109 (2019) (hsu-2019)"
+link = "https://arxiv.org/abs/1902.01417"
+publication = "hsu-2019"
+method = "Kepler's final planet catalogue combined with Gaia's measurements of the stars: for planets of 0.75 to 1.5 Earth radii on orbits of 237 to 500 days around Sun-like stars, a rate of less than 0.27 per star, which could be lower by a factor of about two because some candidates are false alarms; the authors recommend planning for a true rate anywhere from 0.03 to 0.40, which is the span used here. Added on 2026-10-17 (outside review, item 8)."
+
+[[estimate]]
 who = "Steve Bryson and 81 colleagues (the Kepler team)"
 when = "2020-11"
 low = 0.16
@@ -92,20 +102,26 @@ method = "A span evenly spread across its powers of ten, taking an Earth-like pl
 low = 0.01
 high = 1.0
 shape = "log-uniform"
-status = "first-pass"
+status = "reviewed"
 set_on = 2026-10-16
-sources = ["sandberg-2018"]
+sources = ["sandberg-2018", "ward-2000"]
 why = """
-The Kepler counts (Petigura 2013, Dressing and Charbonneau 2015, Bryson 2020) put rocky
-planets in the habitable zone at between a tenth and one per star for both Sun-like stars and
-red dwarfs, with the most careful study's error bars reaching one and a half. The top of the
-range is 1, as in the 2018 paper. The floor is a tenth of theirs, 0.01, to leave room for the
-Rare Earth requirements (Ward and Brownlee 2000) that the surveys cannot count: a planet in the
-right orbit is not yet a planet that keeps liquid water for billions of years, and the TRAPPIST-1
-atmosphere results of 2023 to 2025 show rocky planets around red dwarfs can lose their air.
-It stops at 0.01 rather than following Ward and Brownlee down to one in a hundred thousand
-because their extras are an argument, not a count, and the explanation page carries it. Evenly
-spread across powers of ten, as in the 2018 paper."""
+The Kepler counts (Petigura 2013, Dressing and Charbonneau 2015, Hsu and others 2019, Bryson 2020)
+put rocky planets in the habitable zone at between a tenth and one per star for both Sun-like
+stars and red dwarfs, with the most careful study's error bars reaching one and a half. The top of
+the range is 1, as in the 2018 paper. The floor is a tenth of theirs, 0.01, to leave room for the
+requirements the surveys cannot count: a planet in the right orbit is not yet a planet that keeps
+liquid water for billions of years, and the TRAPPIST-1 atmosphere results of 2023 to 2025 show rocky
+planets around red dwarfs can lose their air. It stops at 0.01 and does not follow Ward and
+Brownlee down to one in a hundred thousand, and the reason is not that their figure rests on the
+extras: it does not. Their one percent to one thousandth of a percent (Rare Earth, 2000, pages 269
+to 270) is the share of all stars with an Earth-like habitat, their own reading of the ordinary
+equation, written before any count of habitable-zone planets existed. The Kepler counts since have
+overtaken the part of it that counts orbits, and what survives of Rare Earth is the argument about
+extras (a large moon, plate tectonics, a quiet neighbourhood), which is an argument and not a count,
+and which the explanation page carries. Evenly spread across powers of ten, as in the 2018 paper.
+The reason was rewritten on 2026-10-17 (ruled by John 2026-10-17 on the outside review, item 7); the
+number was not changed."""
 
 [[revision]]
 date = 2026-10-16
@@ -114,3 +130,26 @@ old = "Argued that Earth-like habitats need a long list of extras beyond the rig
 new = "Said that, after allowing for how common planets are and for the location and lifetime of the habitable zone, the ordinary Drake equation suggests only 1% to 0.001% of stars might have such planets; their further extras come later and are not in the figure. Source page corrected from 270 to 269-270. The estimate's numbers and the range are unchanged."
 why = "Checked against Rare Earth (Copernicus, 2000), pages 269 to 271, on 2026-10-16: the figure is their reading of the ordinary equation, not of the extras."
 publication = "ward-2000"
+
+[[revision]]
+date = 2026-10-17
+field = "range.why"
+old = "described the one-in-a-hundred-thousand end as resting on Ward and Brownlee's extras"
+new = "describes Ward and Brownlee's figure as their reading of the ordinary equation (the share of all stars with Earth-like habitats, written before any count of habitable-zone planets), overtaken in its orbit-counting part by the Kepler counts, and keeps the argument about extras as the reason the floor sits at 0.01"
+why = "Ruled by John 2026-10-17 on the outside review (item 7: decline the lower floor, accept the corrected reason); the 2026-10-16 check of pages 269 to 271 of Rare Earth had found the old wording wrong. The range itself is unchanged."
+publication = "ward-2000"
+
+[[revision]]
+date = 2026-10-17
+field = "estimate"
+old = "seven published estimates"
+new = "eight: Hsu, Ford, Ragozzine and Ashby (2019), 0.03 to 0.40 per Sun-like star, added"
+why = "Ruled by John 2026-10-17 on the outside review (item 8): the paper's own planning range, not the reviewer's 'about 0.2'. The range is unchanged."
+publication = "hsu-2019"
+
+[[revision]]
+date = 2026-10-17
+field = "range.status"
+old = "first-pass"
+new = "reviewed"
+why = "The outside review of the seven ranges ran on 2026-10-17 and John ruled on every item the same day (docs/reviews/2026-10-17-rulings.md)."
