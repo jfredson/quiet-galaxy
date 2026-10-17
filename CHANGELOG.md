@@ -39,6 +39,7 @@ Every change to a range, a record, the method or the site, with absolute dates. 
 
 ## 2026-10-16
 
+- Home page left column reordered at John's asking: the question "Where is everybody?" and its paragraph lead, the seven-piece equation follows, then the width line, the strip and the buttons.
 - The ruled shape for the chance life starts merged into main and deployed: the headline is now a 41% chance of other detectable civilisations in the galaxy (59% alone), 60% somewhere in the observable universe, a middle estimate of one civilisation per 64 galaxies like ours; the count of galaxies in that line is rounded to a whole number.
 - Home page first screen swapped at John's asking: the equation line sits in the wide left column with a plain name and the range under each term, and the headline sits in a box on the right, now stated the other way round as the chance that there are other detectable civilisations in our galaxy (12% from the first-pass ranges), with the observable-universe chance flipped to match. On a phone the box comes first.
 - The four weekend branches merged into main and the full site deployed: the export now reads the headline file as `compute.py run` writes it (`alone_in_galaxy`, `alone_in_universe`, the extremes under `extremes.from_estimates`), the middle estimate is written as one civilisation per so many galaxies like ours when it is below one, and a number beyond the words we have is written as a 1 followed by so many zeros. Merged by the master session on John's instruction to run the weekend's work on 2026-10-16.
