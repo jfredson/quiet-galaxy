@@ -19,17 +19,21 @@ chance of life starting."""
 what_would_move_this = "A published argument with a number on how long technological civilisations last (from history, from risk studies of our own prospects, or from the physics of long-lived machines), or a detection whose age bounds it."
 
 verify = [
-  "Michael Shermer's 420 years (sixty historical civilisations) and 304 years (twenty-eight civilisations since Rome) are quoted from the Wikipedia article on the Drake equation, which cites Scientific American 287(2), 21 (2002); check the column.",
-  "David Grinspoon's 'potentially billions of years' is quoted from the Wikipedia article, which cites Lonely Planets (2004); check the book, and whether a billion is his figure or the article's rounding.",
-  "That Westby and Conselice (2020) report 36 (between 4 and 211) communicating civilisations under their strong condition and about 17,000 light-years to the nearest is checked against their abstract on 2026-10-16; their weak-condition count and their statement on how long we would need to survive for a detection to be likely are not in the abstract and are not recorded here.",
+  "David Grinspoon's 'potentially billions of years' is quoted from the Wikipedia article, which cites Lonely Planets (2004); check the book, and whether a billion is his figure or the article's rounding. Tried 2026-10-16 and still open: the Internet Archive copy is not readable (lending only) and Google Books refused the query. Second-hand only: a Drake-equation paper (arXiv:1705.07816) says Grinspoon replaces the factor by the share of civilisations that become immortal times how long that has been going on, which 'may approach the age of the universe'; so the structure in the method line holds, but a figure of one billion is not confirmed, and the book's first publication was 2003 (the record says 2004, the paperback).",
 ]
 
 notes = """
 Westby and Conselice (2020, westby-2020) make this the deciding factor explicitly: taking our own
 century as the average lifetime of a communicating civilisation, and life and intelligence as
 following on any suitable planet, they get at least 36 (between 4 and 211) communicating
-civilisations in the galaxy, the nearest about 17,000 light-years away, which is to say far
-beyond the reach of any present search. The 'they are gone' family of explanations (the Great
+civilisations in the galaxy, the nearest at most about 17,000 light-years away, which is to say far
+beyond the reach of any present search. Their weaker assumption (intelligence at any age after 5
+billion years; the paper's 'Weak Copernican' case) gives 928 civilisations, the nearest at most about 3,300
+light-years away. They say a search is expected to succeed if civilisations last on average
+about 3,060 years under the strong condition and about 1,030 years under the weak one (read
+from the arXiv version of the paper, 2026-10-16). Checked 2026-10-16 against the primary
+sources: Shermer's two figures are in his column (reprinted on his own site); Grinspoon's could
+not be checked (see the open item above). The 'they are gone' family of explanations (the Great
 Filter ahead of us, Hanson 1998, hanson-1998; self-destruction) are arguments that this factor
 is short; the founding pessimist papers (Hart 1975, hart-1975; Tipler 1980, tipler-1980) argue
 instead that no civilisation has lasted long enough to spread here, which bounds this factor and
@@ -59,7 +63,7 @@ when = "2002-08"
 low = 304
 high = 420
 source = "Shermer, 'Why ET hasn't called', Scientific American 287(2), 21 (2002)"
-method = "Averaged the recorded lifetimes of sixty historical civilisations on Earth, 420 years, and of the twenty-eight since the Roman Empire, 304 years, and took that as the likely lifetime of a technological civilisation."
+method = "Averaged the recorded lifetimes of sixty historical civilisations on Earth, 420 years, and of the twenty-eight since the fall of Rome, 304 years (the column gives 420.6 and 304.5), and took that as the likely lifetime of a technological civilisation."
 
 [[estimate]]
 who = "David Grinspoon"
@@ -81,7 +85,7 @@ method = "A span evenly spread across its powers of ten, from the published esti
 who = "Tom Westby and Christopher Conselice"
 when = "2020-06"
 value = 100
-source = "Westby and Conselice, 'The Astrobiological Copernican weak and strong limits for extraterrestrial intelligent life', Astrophysical Journal 896, 58 (2020) (westby-2020)"
+source = "Westby and Conselice, 'The Astrobiological Copernican Weak and Strong Limits for Intelligent Life', Astrophysical Journal 896, 58 (2020) (westby-2020)"
 link = "https://arxiv.org/abs/2004.03968"
 method = "Assumed: the average lifetime of a communicating civilisation is taken to be 100 years, 'based on our own at present', and their count of 36 scales with it."
 

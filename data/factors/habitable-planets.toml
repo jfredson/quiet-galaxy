@@ -18,7 +18,7 @@ factor now lives."""
 what_would_move_this = "A new count of rocky planets in the habitable zone per star from Kepler, TESS, Gaia or PLATO data, or a measurement of how often such planets keep an atmosphere and liquid water (the TRAPPIST-1 and K2-18b results bear on this)."
 
 verify = [
-  "Drake's 1961 range of 1 to 5 planets per star is quoted from the Wikipedia article on the Drake equation, which cites Drake and Sobel 1992; the same article notes that Glade and colleagues' 2012 table of the 1961 values differs from the book.",
+  "Drake's 1961 range of 1 to 5 planets per star is quoted from the Wikipedia article on the Drake equation, which cites Drake and Sobel 1992; the same article notes that Glade and colleagues' 2012 table of the 1961 values differs from the book. Tried 2026-10-16 and still open: neither book could be opened; other secondary accounts give a single 2 (Glade and colleagues 2012, Table 1; Scoles and Heatherly 2011) or 'approximately one' (SETI Institute).",
 ]
 
 notes = """

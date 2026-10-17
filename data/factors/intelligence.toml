@@ -18,11 +18,7 @@ reasoning from how late in Earth's habitable life we arrived."""
 what_would_move_this = "A second example of complex or intelligent life anywhere, a change in the fossil record's timeline for the major steps (complex cells, animals, brains), or a published analysis that puts a new number on how often intelligence follows from life."
 
 verify = [
-  "Carl Sagan's value of one tenth in Cosmos (1980), chapter 12, is from memory; check it against the book.",
-  "The value of one in a billion attributed to Ernst Mayr is the Wikipedia article's rendering of his 1995 argument (one intelligent species among billions), citing The Planetary Society's 'Ernst Mayr on SETI'; Mayr gave an argument, not this number, so check the wording of the original.",
-  "Pascal Lee's figure of 0.0002, from a 2020 talk, is quoted from the Wikipedia article on the Drake equation, which cites recordings of the talks; check it.",
-  "That Westby and Conselice (2020) set this factor to 1 by assumption is taken from the Wikipedia article, not from the paper.",
-  "Lineweaver's 2008 argument that human-like intelligence is not a convergent feature of evolution (the 'Planet of the Apes' hypothesis) is from memory; check the citation before adding it as an estimate.",
+  "Pascal Lee's figure of 0.0002, from a 2020 talk, is quoted from the Wikipedia article on the Drake equation, which cites recordings of the talks; check it. Tried 2026-10-16 and still open: the recordings could not be reached. The only source found is a Centauri Dreams post (2023-10-18) reporting a talk at the Interstellar Research Group symposium in Montreal, which gives 0.0002 and derives it from the median duration of Homo erectus (about a million years) over the age of Earth, not from 'the first humans', and also gives his detectable factor as 0.1 and his lifetime as 10,000 years; so the number is supported second-hand but the talk, date and derivation in the record are not confirmed.",
 ]
 
 notes = """
@@ -37,7 +33,16 @@ in ten to the 11 for the galaxy. Hanson and colleagues' 2021 'grabby aliens' mod
 (hanson-2021-grabby) constrains the product of this factor and the next from the other end: if
 expanding civilisations exist and we are early among them, quiet civilisations that never expand
 can be at most a few thousand times as common as loud ones, else we would have seen a loud one
-by now. Written 2026-10-16."""
+by now. Checked 2026-10-16 against the sources: Carl Sagan's one tenth was removed (Cosmos,
+chapter 12, gives only the product of this factor and the next, one in a hundred); Mayr's point
+value of one in a billion was replaced by the span his own counts give, 2 in 100 billion to 1 in a
+billion (the range is unchanged, and its floor of 0.0001 stays well above it); Westby and
+Conselice's assumption of 1 is borne out (their section 2.2; the strong version only requires
+4.5 to 5.5 billion years). Lineweaver (2009, 'Paleontological tests: human-like intelligence is not a
+convergent feature of evolution', in From Fossils to Astrobiology, arXiv:0711.1751) argues from the
+fossil record that human-like intelligence is not convergent, and gives no number, so it is not an
+estimate; the 'Planet of the Apes' label belongs to the opposite view, which he argues against.
+Written 2026-10-16."""
 
 [[estimate]]
 who = "Frank Drake and the Green Bank meeting"
@@ -47,18 +52,12 @@ source = "Green Bank meeting of November 1961, as recorded in Drake and Sobel, I
 method = "Assumed: the meeting took it that intelligence follows from life given enough time."
 
 [[estimate]]
-who = "Carl Sagan"
-when = "1980"
-value = 0.1
-source = "Sagan, Cosmos (Random House, 1980), chapter 12, 'Encyclopaedia Galactica'"
-method = "A round guess, one tenth, in a worked example of the equation for a general audience."
-
-[[estimate]]
 who = "Ernst Mayr"
 when = "1995"
-value = 1e-9
-source = "Mayr, in his 1995 exchange with Carl Sagan published in Bioastronomy News and reproduced by The Planetary Society as 'Ernst Mayr on SETI'; the value is the Wikipedia article's rendering of his argument"
-method = "Argued from the fossil record: of the billions of species that have lived on Earth, exactly one developed the kind of intelligence that builds radio telescopes, so the chance per planet should be put at something like one in a billion. A count of species, not of planets, which is why it is recorded but not used for the range's floor."
+low = 2e-11
+high = 1e-9
+source = "Mayr, 'Can SETI Succeed? Not Likely', Bioastronomy News 7(3) (1995), and his reply to Carl Sagan, reprinted by The Planetary Society as 'Ernst Mayr on SETI' (text read in a blog reproduction on 2026-10-16; the Planetary Society page was not reached). Mayr gives a count, not a chance: the span here is our reading of it"
+method = "Argued from the fossil record: of the billions of species that have lived on Earth, perhaps as many as 50 billion, exactly one developed the kind of intelligence that builds radio telescopes, so the chance per planet is read as between one in 50 billion and one in a billion. A count of species, not of planets, which is why it is recorded but not used for the range's floor."
 
 [[estimate]]
 who = "Simon Conway Morris, as reviewed by Campbell"
@@ -80,7 +79,7 @@ method = "A span evenly spread across its powers of ten, taken from the publishe
 who = "Tom Westby and Christopher Conselice"
 when = "2020-06"
 value = 1
-source = "Westby and Conselice, 'The Astrobiological Copernican weak and strong limits for extraterrestrial intelligent life', Astrophysical Journal 896, 58 (2020) (westby-2020)"
+source = "Westby and Conselice, 'The Astrobiological Copernican Weak and Strong Limits for Intelligent Life', Astrophysical Journal 896, 58 (2020) (westby-2020)"
 link = "https://arxiv.org/abs/2004.03968"
 method = "Assumed: in their approach intelligence follows on any planet with life after four and a half to five and a half billion years, as on Earth."
 
@@ -106,3 +105,17 @@ travel. Mayr's one in a billion is recorded but not used for the floor: it count
 planets, and no one has turned it into a chance per living world. Kipping's weak three-to-two
 for 'intelligence is rare' argues against bunching the weight at the top but does not say how far
 down to go. Evenly spread across its powers of ten, as in the 2018 paper."""
+
+[[revision]]
+date = 2026-10-16
+field = "estimate (Carl Sagan, 1980)"
+old = "value 0.1, 'a round guess, one tenth'"
+new = "removed"
+why = "Checked against Cosmos (1980), chapter 12, on 2026-10-16: Sagan writes 'let us choose fi x fc = 1/100' and gives no value for the intelligence factor alone. The range is untouched."
+
+[[revision]]
+date = 2026-10-16
+field = "estimate (Ernst Mayr, 1995)"
+old = "value 1e-9 (the Wikipedia article's rendering)"
+new = "low 2e-11, high 1e-9"
+why = "Checked on 2026-10-16 against a reproduction of Mayr's essay and reply: he counts billions of species, perhaps as many as 50 billion, one of them intelligent, and gives no chance of his own. The range is untouched (its floor is 0.0001); the published pessimistic extreme in the headline's estimate table moves with this."

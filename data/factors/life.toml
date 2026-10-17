@@ -18,29 +18,33 @@ answer most depends. A second, independent origin of life anywhere (Mars, an icy
 exoplanet atmosphere) would settle it."""
 what_would_move_this = "Evidence of life, or of its chemical signatures, anywhere beyond Earth (Mars samples, Enceladus or Europa plumes, exoplanet atmospheres such as K2-18b), or a laboratory demonstration of how a self-copying molecule arises and how improbable the step is."
 
-verify = [
-  "Carl Sagan's value of one third in Cosmos (1980), chapter 12, is from memory; check it against the book.",
-  "That Westby and Conselice (2020) set this factor to 1 by assumption is taken from the Wikipedia article on the Drake equation, not from the paper; check the paper's method section.",
-  "Spiegel and Turner's 2012 conclusion that life's early start on Earth tells us little about its chance elsewhere is from memory of their PNAS paper (109, 395); check the citation.",
-  "Koonin's 2007 figure, a chance of about one in ten to the 1,018 for a self-copying molecular system arising by chance in the observable universe, is from memory of his Biology Direct paper (2:15); check the number and the paper's framing.",
-  "Totani's 2020 argument that random chemistry in the observable universe's ten to the 22 stars produces RNA chains of only about 20 units, against the 40 to 100 needed, is taken from press coverage of the Scientific Reports paper (10, 1671), not from the paper; check it.",
-]
-
 notes = """
 Two lines of argument carry no number and so are not estimates but matter for the range. On
 the pessimistic side, Koonin (2007) and Totani (2020) argue from the chemistry that a self-copying
-molecule is so unlikely to form by chance that life should start less than once in the
-observable universe; their figures are so small that no computation can use them, and the range
+system is so unlikely to form by chance that it would not start even once in the observable
+universe (Koonin puts the chance below one in ten to the 1,018 for a coupled copying-and-translating
+system in one observable region, a deliberately generous upper bound; Totani finds random chemistry in
+the observable universe's ten to the 22 stars makes RNA chains of about 32 units, against the 40 to 100
+needed); both then conclude that life can still arise somewhere in a far larger, unobservable
+universe (Koonin's infinite multiverse; Totani's inflated universe of more than ten to the 100
+stars). Their figures are so small that no computation can use them, and the range
 treats 'once per observable universe' as the floor they imply. On the optimistic side, Kipping's
 2020 Bayesian analysis of when life and intelligence appeared on Earth (kipping-2020) finds that
-life starting quickly is at least three times more likely than life starting slowly, nine times if
+life starting quickly is at least 2.8 times more likely than life starting slowly, 8.7 times if
 disputed 4.1-billion-year-old carbon traces are accepted, while cautioning that the analysis
 concerns Earth and says nothing about planets unlike it. Spiegel and Turner (2012) had argued the
 opposite from the same evidence: that with one example and the fact that we must exist to ask,
 the early start tells us little. The 'hard steps' argument (Carter 1983; Hanson 1998 on the Great
 Filter, hanson-1998; Hanson and colleagues 2021, hanson-2021-grabby, who put the number of hard
 steps at about six) says that whichever steps between chemistry and a spacefaring species are
-the hard ones, Earth's history fits a world that got lucky several times. Written 2026-10-16."""
+the hard ones, Earth's history fits a world that got lucky several times. Checked 2026-10-16
+against the papers: Sagan's one third, Westby and Conselice's assumption that this factor is 1
+(their section 2.2), and Spiegel and Turner's conclusion (PNAS 109, 395; the choice of prior
+dominates, and the evidence is consistent with an arbitrarily low chance) are borne out; the
+Koonin and Totani figures are as described above, which differs from the first draft. The range's
+reason below, written earlier, says Kipping's 'three-to-one' (the paper gives 2.8 to 1) and
+that Koonin and Totani place the chance 'without giving a usable number'; neither changes the
+range, but both should be revisited at the outside review. Written 2026-10-16."""
 
 [[estimate]]
 who = "Frank Drake and the Green Bank meeting"
@@ -78,7 +82,7 @@ method = "Not a value but a spread: the number of times life starts per habitabl
 who = "Tom Westby and Christopher Conselice"
 when = "2020-06"
 value = 1
-source = "Westby and Conselice, 'The Astrobiological Copernican weak and strong limits for extraterrestrial intelligent life', Astrophysical Journal 896, 58 (2020) (westby-2020)"
+source = "Westby and Conselice, 'The Astrobiological Copernican Weak and Strong Limits for Intelligent Life', Astrophysical Journal 896, 58 (2020) (westby-2020)"
 link = "https://arxiv.org/abs/2004.03968"
 method = "Assumed: their 'Copernican' approach takes it that life, intelligence and communication follow on any Earth-like planet around a star of Sun-like composition that is old enough, so that the count of civilisations depends only on the galaxy's stars and their ages."
 

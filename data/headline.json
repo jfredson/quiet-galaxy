@@ -82,7 +82,7 @@
       "middle": 0.01,
       "status": "first-pass",
       "set_on": "2026-10-16",
-      "estimates": 7
+      "estimates": 6
     },
     {
       "id": "detectable",
@@ -97,7 +97,7 @@
       "middle": 0.1,
       "status": "first-pass",
       "set_on": "2026-10-16",
-      "estimates": 4
+      "estimates": 3
     },
     {
       "id": "lifetime",
@@ -1020,7 +1020,7 @@
   ],
   "extremes": {
     "from_estimates": {
-      "pessimist": 1.0000000000000001e-65,
+      "pessimist": 2.0000000000000002e-67,
       "optimist": 5000000000000.0,
       "factors": {
         "star-formation": {
@@ -1040,7 +1040,7 @@
           "optimist": 1.0
         },
         "intelligence": {
-          "pessimist": 1e-09,
+          "pessimist": 2e-11,
           "optimist": 1.0
         },
         "detectable": {
@@ -1058,5 +1058,5 @@
       "optimist": 100000000000.0
     }
   },
-  "verify_open": 27
+  "verify_open": 4
 }

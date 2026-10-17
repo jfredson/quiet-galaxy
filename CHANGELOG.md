@@ -2,6 +2,13 @@
 
 Every change to a range, a record, the method or the site, with absolute dates. Newest first. A range change always says which publication moved it and by how much.
 
+## 2026-10-16 (claims written from memory checked against sources: factors, library, papers)
+
+- **56 claims marked `verify` in `data/factors/`, `data/library/` and `data/papers/` were checked against the papers, books and channel pages themselves: 28 cleared (borne out), 22 corrected, 6 left open.** Left open, with what was tried written into each entry: Drake's 1961 values for the share of stars with planets and for planets per star, and his star-formation rate and the Pearman page range (the two Drake books could not be opened; other accounts disagree), Grinspoon's lifetime (the book could not be read), and Pascal Lee's 0.0002 (the talk could not be reached). One new open item was added: the description of what each chapter of Life Beyond covers.
+- Corrections to estimates: Carl Sagan's one tenth for the intelligence factor and for the detectable factor was removed (his chapter gives only the two multiplied together, one in a hundred); Ernst Mayr's one in a billion became a span of 2 in 100 billion to 1 in a billion, from his own count of species; Mayor's 2011 planet survey used 822 stars, not 376; Ward and Brownlee's 1% to 0.001% is their reading of the ordinary equation, not of their extra conditions; Koonin's and Totani's figures were restated as the papers give them. Each has a dated revision on the factor. **No range was changed.** The notes on the life, detectable, habitable-planets and intelligence factors say where a range's written reason still repeats an earlier claim, for the outside review.
+- Corrections to publication records: 12 (authors, titles, venues, dates and figures, each noted on the record) and to library entries: 1 (a dead link to Life Beyond chapter 1, and the third chapter's year).
+- `data/headline.json` recomputed: the middle estimate (0.016), the chance of being alone in the galaxy (59%) and in the observable universe (40%) are unchanged; the most pessimistic published estimate of every factor at once moved from 1e-65 to 2e-67 (Mayr's span), and the open-claims count went from 27 to 4.
+
 ## 2026-10-16 (the headline's parameters ruled)
 
 - **John ruled on the seven parameters proposed in `docs/method.md`**, in his words: "Use the 2018 paper's log-normal rate shape for the chance life starts, adding the third shape to the record layout; accept the other six parameters as proposed." The method note marks every row ruled and the schema's known simplifications say so.
