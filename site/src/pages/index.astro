@@ -1,0 +1,95 @@
+---
+// The home page, holding version (2026-10-16): the question, the equation in plain words, the
+// three numbers the site will show once the seven factors are seeded, and the four kinds of
+// record. Written for a reader who has never heard of any of this (design standard, section 1a).
+import Base from '../layouts/Base.astro';
+import { records, longDate } from '../lib/records';
+
+const c = records.counts;
+const terms = [
+  { sym: 'R*', words: 'how many stars are born in our galaxy each year' },
+  { sym: 'fp', words: 'what share of those stars have planets' },
+  { sym: 'ne', words: 'how many planets, per star with planets, could support life' },
+  { sym: 'fl', words: 'on what share of those planets life actually starts' },
+  { sym: 'fi', words: 'on what share of those it becomes intelligent' },
+  { sym: 'fc', words: 'what share of intelligent species make themselves detectable' },
+  { sym: 'L', words: 'how long they stay detectable, in years' },
+];
+---
+
+<Base>
+  <section class="hero">
+    <p class="eyebrow">A public explainer and tracker · first version coming 19 October 2026</p>
+    <h1 class="question">Where is everybody?</h1>
+    <p class="lede">
+      The galaxy is old enough and big enough that, on most ways of counting, someone else should have shown up by now. Nobody has.
+    </p>
+  </section>
+
+  <div class="prose narrow">
+    <p>
+      The physicist Enrico Fermi asked that question over lunch in 1950, and the puzzle has carried his name ever since: the Fermi Paradox. This site takes it apart. It breaks the question into seven pieces anyone can argue about, puts a number at the top that is computed from the pieces and never chosen by hand, and keeps every serious explanation for the silence on a page of its own, so you can point to one from anywhere.
+    </p>
+
+    <h2>The equation</h2>
+    <p>
+      In 1961 the astronomer Frank Drake wrote the pieces down as a multiplication, to organise the first scientific meeting on searching for other civilisations. Multiply seven quantities and you get N, the number of civilisations in our galaxy that could be detected right now.
+    </p>
+    <p class="equation">N = R<sub>*</sub> × f<sub>p</sub> × n<sub>e</sub> × f<sub>l</sub> × f<sub>i</sub> × f<sub>c</sub> × L</p>
+    <ul class="terms">
+      {terms.map((t) => (
+        <li><span class="sym">{t.sym}</span><span>{t.words}</span></li>
+      ))}
+    </ul>
+    <p>
+      The honest answer to most of these is "somewhere between this and that", across a range so wide that a single multiplied-out number misleads. So this site does what a 2018 paper by the researchers Anders Sandberg, Eric Drexler and Toby Ord did: each piece carries a range drawn from the published estimates, the multiplication is run many thousands of times with a random pick from each range, and the result is a spread of answers rather than one.
+    </p>
+
+    <h2>What the top of this page will show</h2>
+    <div class="numbers">
+      <div class="number">
+        <div class="value pending">not yet computed</div>
+        <p class="what">The middle estimate of how many detectable civilisations are in our galaxy right now.</p>
+      </div>
+      <div class="number">
+        <div class="value pending">not yet computed</div>
+        <p class="what">The chance that we are the only one in the galaxy.</p>
+      </div>
+      <div class="number">
+        <div class="value pending">not yet computed</div>
+        <p class="what">The chance that we are the only one in the whole observable universe.</p>
+      </div>
+    </div>
+    <p>
+      {records.headline.reason} Beside the three numbers will sit a fourth: what you get if you take the most hopeful published estimate of every piece, and then the most pessimistic. That is the width of the argument, and it is the thing most people have never seen.
+    </p>
+
+    <h2>Four kinds of record</h2>
+    <div class="records">
+      <div class="record">
+        <h3>The seven pieces</h3>
+        <p>Each with every published estimate, who made it and when, and the range this site uses now and why. When a discovery changes the record, the range moves, the number at the top recomputes, and the change is logged with its reason.</p>
+        <span class="count">{c.factors} of {c.factors_expected} written so far</span>
+      </div>
+      <div class="record">
+        <h3>The explanations</h3>
+        <p>Every serious answer to the silence, in three families: they were never there; they are gone; they are there and we cannot see them. Each on its own page, at an address that never changes.</p>
+        <span class="count">{c.explanations} written so far</span>
+      </div>
+      <div class="record">
+        <h3>The library</h3>
+        <p>Books, films, shows, games and videos that bring one of the explanations to life, with a line on whether each is worth your time.</p>
+        <span class="count">{c.library} written so far</span>
+      </div>
+      <div class="record">
+        <h3>The publications log</h3>
+        <p>A dated list of the scientific papers and discoveries that bear on the numbers, from the founding papers to the newest results, each saying what it changed.</p>
+        <span class="count">{c.publications} written so far</span>
+      </div>
+    </div>
+
+    <p class="status-line">
+      Records as of {longDate(records.exported_on)}. Everything on this site is built from a public repository, <a href="https://github.com/jfredson/quiet-galaxy" rel="noopener">on GitHub</a>, where every number carries its source and every change its date.
+    </p>
+  </div>
+</Base>
