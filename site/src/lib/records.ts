@@ -175,13 +175,20 @@ export type Headline =
       median: number;
       alone_galaxy: number;
       alone_universe: number;
-      optimist?: number;
-      pessimist?: number;
+      optimist?: number;          // N with every piece at its most hopeful published estimate
+      pessimist?: number;         // and at its most pessimistic
+      optimist_from_ranges?: number;
+      pessimist_from_ranges?: number;
+      mean?: number;
       runs?: number;
       computed_on?: string;
       seed?: number | string;
       note?: string;
       file?: string;
+      percentiles?: Record<string, number>;
+      any_range_first_pass?: boolean;
+      verify_open?: number;
+      method?: { after?: string; runs?: number; seed?: number; independent_draws?: boolean; galaxies?: number; status?: string };
     };
 
 export interface Records {
@@ -252,12 +259,21 @@ export function symbolHtml(symbol: string): string {
 
 const WORDS: [number, string][] = [[1e12, 'trillion'], [1e9, 'billion'], [1e6, 'million'], [1e3, 'thousand']];
 
-/** A number in plain words: 0.62, 1, 2.5, "10 billion", "1 in a million". Never scientific notation. */
+/** A number in plain words: 0.62, 1, 2.5, "10 billion", "1 in a million". Never scientific
+    notation. Beyond a thousand trillion either way, the power of ten written out in words, as the
+    project's own documents do ("one in ten to the 22"). */
 export function plainNumber(x: number): string {
   if (!Number.isFinite(x)) return 'no number';
   if (x === 0) return '0';
   const neg = x < 0 ? '−' : '';
   const v = Math.abs(x);
+  if (v >= 1e15 || v < 1e-15) {
+    const inv = v < 1 ? 1 / v : v;
+    const exp = Math.floor(Math.log10(inv) + 1e-9);
+    const mant = inv / 10 ** exp;
+    const about = mant > 1.05 ? 'about ' : '';
+    return v < 1 ? `${about}1 in 10 to the ${exp}` : `${neg}${about}10 to the ${exp}`;
+  }
   if (v >= 1e4) {
     if (v >= 1e15) return `${neg}a 1 followed by ${Math.round(Math.log10(v))} zeros`;
     for (const [unit, word] of WORDS) {
@@ -287,12 +303,24 @@ export function plainNumber(x: number): string {
 }
 
 function trim(v: number, places: number): string {
-  return v.toFixed(places).replace(/\.?0+$/, '');
+  const t = v.toFixed(places);
+  return t.includes('.') ? t.replace(/\.?0+$/, '') : t;
 }
 
-/** "0.1 to 1", "100 to 10 billion years". */
+/** "0.1 to 1", "100 to 10 billion years"; "from 1 in 10 to the 22 up to 1" when an end is a power of ten in words. */
 export function rangeWords(low: number, high: number, unit: string): string {
-  return `${plainNumber(low)} to ${plainNumber(high)}${unitWords(unit)}`;
+  const a = plainNumber(low), b = plainNumber(high);
+  if (a.includes(' to the ') || b.includes(' to the ')) return `from ${a} up to ${b}${unitWords(unit)}`;
+  return `${a} to ${b}${unitWords(unit)}`;
+}
+
+/** The middle estimate of detectable civilisations, said so that a number below one reads
+    plainly: "about one detectable civilisation per 450 million galaxies like ours". */
+export function medianWords(n: number): string {
+  if (n >= 1.5) return `about ${plainNumber(n)} detectable civilisations in our galaxy`;
+  if (n >= 0.5) return 'about one detectable civilisation in our galaxy';
+  const per = 1 / n;
+  return `about one detectable civilisation per ${plainNumber(per).replace(/^about /, '')} galaxies like ours`;
 }
 
 /** An estimate's number: a single value or a range, in the factor's unit. */

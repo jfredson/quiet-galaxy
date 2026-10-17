@@ -13,7 +13,7 @@
 // "not computed yet" in words, never a placeholder digit. The big number, the strip and the
 // equation line are copied from The Belt Equation's home page (site/src/pages/index.astro there).
 import Base from '../layouts/Base.astro';
-import { records, longDate, plainNumber, percent, rangeWords, plural, symbolHtml } from '../lib/records';
+import { records, longDate, plainNumber, percent, rangeWords, plural, symbolHtml, medianWords } from '../lib/records';
 
 const head = records.headline;
 const c = records.counts;
@@ -32,9 +32,7 @@ const NOT_YET = 'not computed yet';
       <p class={`big-number ${head.available ? '' : 'pending'}`}>{head.available ? percent(head.alone_galaxy) : NOT_YET}</p>
       <p class="big-claim-line">The chance there is no other detectable civilisation in our galaxy right now.</p>
       <p class="under-number">
-        {head.available && head.median < 1
-          ? <span>the middle estimate: <strong>one</strong> detectable civilisation for every <strong>{plainNumber(1 / head.median)}</strong> galaxies like ours</span>
-          : <span><strong>{head.available ? plainNumber(head.median) : NOT_YET}</strong> detectable civilisations in the galaxy, the middle estimate</span>}
+        <span>{head.available ? <><strong>{plainNumber(head.median)}</strong> detectable civilisations in our galaxy at the middle of the spread: {medianWords(head.median).replace(/^about one detectable civilisation/, 'one')}</> : <><strong>{NOT_YET}</strong> detectable civilisations in our galaxy at the middle of the spread</>}</span>
         <span><strong>{head.available ? percent(head.alone_universe) : NOT_YET}</strong> the chance we are alone in the observable universe</span>
       </p>
       <h1 class="big-claim">Where is everybody?</h1>
@@ -43,7 +41,7 @@ const NOT_YET = 'not computed yet';
       </p>
       <p class="width-line">
         {width
-          ? <>Take every optimistic published estimate and you get <strong>{plainNumber(width.optimist)}</strong> civilisations; every pessimistic one and the number falls to <strong>{plainNumber(width.pessimist)}</strong>. That gap is the argument.</>
+          ? <>Take every optimistic published estimate and you get <strong>{plainNumber(width.optimist)}</strong> civilisations in the galaxy; every pessimistic one and you get <strong>{plainNumber(width.pessimist)}</strong>. That gap is the argument.</>
           : <>Take every optimistic published estimate and you get one number; every pessimistic one and you get another. That gap is the argument, and both numbers are {NOT_YET}.</>}
       </p>
       <p class="scan-strip">
@@ -78,7 +76,7 @@ const NOT_YET = 'not computed yet';
           <li><span class="sym" set:html={symbolHtml(f.symbol)}></span><a href={f.path}>{f.name}</a></li>
         ))}
       </ul>
-      <p class="trunk-foot">N is the number of civilisations in our galaxy that could be detected right now. Each piece is a range, not a value; the number at the top is the result of multiplying the seven many thousands of times with a random pick from each range. <a href="/equation/#calculator">Try the numbers yourself</a>.</p>
+      <p class="trunk-foot">N is how many civilisations in our galaxy could be detected right now. Each piece is a range; the number at the top comes from multiplying the seven many thousands of times with a random pick from each. <a href="/equation/#calculator">Try the numbers yourself</a>.</p>
     </div>
   </section>
 
