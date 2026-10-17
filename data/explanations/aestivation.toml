@@ -47,7 +47,7 @@ zoo hypothesis and the dark forest, belongs to the family of explanations in whi
 galaxy may be full and chooses to look empty.
 
 The main objection came in 2019 from the physicist Charles Bennett, Robin Hanson and
-Jess Riedel, who argued that the thermodynamic reasoning is mistaken: the computations
+Jess Riedel, who argued that the energy accounting is mistaken: the computations
 that matter can be done now and their results stored, the energy-cost advantage of waiting
 is smaller than claimed once the full accounting is done, and a civilisation waiting
 trillions of years forgoes everything that could be done in the meantime, including
@@ -57,8 +57,8 @@ the sleepers value late computation highly enough. A second objection is the one
 applies to the whole family: sleeping civilisations that nevertheless guard their
 resources would still have to prevent newcomers from spending them, and there is no sign
 anyone is preventing us."""
-standing = "A recent and much-discussed idea from serious researchers, admired for making a definite physical argument; its thermodynamic core was challenged in print in 2019 and most physicists regard the challenge as substantially correct, leaving the hypothesis as an interesting possibility rather than a strong contender."
-would_strengthen = "Evidence that large-scale wasteful processes in the universe are being suppressed, such as an unexplained shortage of certain kinds of stellar death; discovery of dormant artificial structures; a resolution of the thermodynamic debate in the original authors' favour."
+standing = "A recent and much-discussed idea from serious researchers, admired for making a definite physical argument; its energy argument was challenged in print in 2019 and most physicists regard the challenge as substantially correct, leaving the hypothesis as an interesting possibility rather than a strong contender."
+would_strengthen = "Evidence that large-scale wasteful processes in the universe are being suppressed, such as an unexplained shortage of certain kinds of stellar death; discovery of dormant artificial structures; a resolution of the energy-accounting debate in the original authors' favour."
 would_weaken = "Detection of an old civilisation that is active and expanding now; confirmation that the computational advantage of waiting is small or negative; evidence that the universe's resources are being consumed freely without interference."
 related = ["transcension", "zoo-hypothesis", "dark-forest", "they-became-machines", "inward-turn"]
 

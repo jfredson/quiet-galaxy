@@ -59,7 +59,7 @@ solar system for artefacts is a legitimate and cheap scientific project with not
 show yet, and that everything louder than that is unsupported."""
 standing = "The search for artefacts in the solar system is respectable, inexpensive and ongoing, and has found nothing. The claims of past or present visitation are not taken seriously by researchers on the question, for want of evidence that survives examination."
 would_strengthen = "Discovery of an artificial object in the solar system that could not have been made by humans; a clearly artificial feature on the Moon or an asteroid; an interstellar object whose behaviour cannot be explained by natural physics after close study."
-would_weaken = "Thorough surveys of the Earth-Moon stable points, the co-orbital asteroids and the lunar surface finding nothing artificial; natural explanations for the interstellar visitors and for the remaining unexplained sightings; the continued absence of any physical evidence after decades of looking."
+would_weaken = "Thorough surveys of the Earth-Moon stable points, the asteroids that share Earth's orbit and the surface of the Moon finding nothing artificial; natural explanations for the interstellar visitors and for the remaining unexplained sightings; the continued absence of any physical evidence after decades of looking."
 related = ["zoo-hypothesis", "berserkers", "not-looked-long-enough", "planetarium"]
 
 verify = [

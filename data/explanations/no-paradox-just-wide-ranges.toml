@@ -13,9 +13,8 @@ summary = """
 The Fermi question feels like a paradox because people multiply seven best guesses together
 and get a galaxy with thousands of civilisations, then look up and see none. But a best
 guess is the wrong thing to multiply. Several of the factors, above all the chance that
-life starts on a suitable planet, are uncertain across not a few times but a hundred
-orders of magnitude, and when you run the equation with honest ranges instead of point
-values, a large share of the outcomes have the galaxy empty and a good share have the
+life starts on a suitable planet, are uncertain not by a factor of a few but by a factor of one followed by a hundred
+zeros, and when you run the equation with honest ranges instead of single best guesses, a large share of the outcomes have the galaxy empty and a good share have the
 whole observable universe empty. On this view there was never anything to explain: the
 silence is what you should expect from what we actually know, and the surprise was an
 artefact of false precision."""
@@ -33,7 +32,7 @@ came out around four in ten.
 The reason is that one or two of the factors dominate. The chance that life starts on a
 suitable planet could, on what is known, be anywhere from nearly certain to one in a
 trillion trillion trillion. When a factor can be that small, the product can be that small,
-and no amount of optimism about stars and planets can rescue it. A point estimate hides
+and no amount of optimism about stars and planets can rescue it. A single best guess hides
 this by quietly choosing a value in the middle of the range, which is where the odds are
 least likely to lie. Multiplying middles gives a confident-looking number that no
 individual step justifies.
@@ -62,7 +61,7 @@ the argument answers Drake's question (how many are detectable now) and not Hart
 has nobody in ten billion years spread across the galaxy), and a single early civilisation
 anywhere in the galaxy's past would have been enough to fill it."""
 standing = "Widely read and influential; its method is now the standard way to present the equation, and this site uses it. The strength of its conclusion is disputed, mostly over how wide a range to allow for the origin of life."
-would_strengthen = "A published argument or measurement that narrows the lower end of the origin-of-life range downward, confirming that very small values are plausible; continued null results from exoplanet atmosphere surveys consistent with an empty neighbourhood."
+would_strengthen = "A published argument or measurement that narrows the lower end of the origin-of-life range downward, confirming that very small values are plausible; continued absence of detections in surveys of the atmospheres of planets around other stars consistent with an empty neighbourhood."
 would_weaken = "Any discovery of life beyond Earth, which would cut the origin-of-life range at the bottom and re-crowd the galaxy in the computation; a persuasive case that the lower bounds used were placeholders rather than estimates and should be dropped."
 related = ["rare-life", "great-filter-behind-us", "we-are-early", "not-looked-long-enough"]
 

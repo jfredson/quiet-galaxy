@@ -41,7 +41,8 @@ that the absence of detections so far said little about how many beacons existed
 
 The bearing on the Drake Equation is on the share of intelligent civilisations that are
 detectable, which this explanation lowers in a specific sense: the civilisations are
-transmitting, but at a duty cycle so low that detection requires a different kind of
+transmitting, but switched on toward any one listener for so small a share of the time
+that detection requires a different kind of
 search. It belongs with the explanations that say the silence is about how we listen.
 
 The objections: a civilisation that can afford interstellar beacons can probably afford
@@ -51,11 +52,11 @@ long-duration searches now being built; and the argument assumes a civilisation 
 be found at all, which several other explanations deny. The Benfords accepted the first
 point and noted that it was a reason to expect young civilisations' beacons to be the
 first found, if any are. The argument's lasting effect has been on search design rather
-than on belief: surveys that watch large parts of the sky continuously for transient
+than on belief: surveys that watch large parts of the sky continuously for brief
 signals are now standard, and they are the test of this explanation."""
 standing = "Respected and influential on how searches are planned; as an explanation of the silence it is regarded as partial, applying to deliberate beacons from civilisations that count the cost, and testable by the long-stare surveys now running."
-would_strengthen = "Detection of a brief, repeating, artificial radio pulse by a long-stare survey of the galactic plane; a published count showing that past searches had almost no sensitivity to signals with low duty cycles."
-would_weaken = "Years of continuous wide-field monitoring of the galactic plane with no transient artificial signal; a detection of a continuous beacon, which would show that at least some civilisations do not economise."
+would_strengthen = "Detection of a brief, repeating, artificial radio pulse by a long-stare survey of the plane of the galaxy, where most of its stars lie; a published count showing that past searches had almost no sensitivity to signals that are switched on only a small share of the time."
+would_weaken = "Years of continuous wide-field monitoring of the plane of the galaxy with no brief artificial signal; a detection of a continuous beacon, which would show that at least some civilisations do not economise."
 related = ["everyone-listens-nobody-transmits", "not-looked-long-enough", "listening-the-wrong-way", "dark-forest", "interstellar-travel-impractical"]
 
 verify = [

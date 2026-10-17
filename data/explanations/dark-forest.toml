@@ -47,7 +47,7 @@ about a century without visible consequence, which is weak evidence either way: 
 is nothing on these timescales."""
 standing = "Widely known from the novels and often raised in public discussion; among researchers it is treated as one of several 'they choose silence' explanations, and most consider the hiding it requires too hard to sustain. It is not a mainstream scientific position."
 would_strengthen = "Evidence of a civilisation deliberately suppressing its emissions; a result showing that an industrial civilisation can in fact hide its waste heat and atmosphere; a model showing that silence is the stable strategy under realistic costs of interstellar attack."
-would_weaken = "Any detected civilisation that broadcasts freely; a demonstration that the signatures of industry (waste heat, atmospheric change) cannot be hidden, so silence gains nothing; a long record of Earth's own leakage with no consequence."
+would_weaken = "Any detected civilisation that broadcasts freely; a demonstration that the traces of industry (waste heat, atmospheric change) cannot be hidden, so silence gains nothing; a long record of Earth's own leakage with no consequence."
 related = ["zoo-hypothesis", "berserkers", "shouting-is-costly", "everyone-listens-nobody-transmits", "no-interest-in-contact", "aestivation"]
 
 verify = [
