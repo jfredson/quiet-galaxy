@@ -260,6 +260,15 @@ a.dim:hover { color: var(--accent); }
   .theme-toggle { margin: 10px 0 0; }
 }
 
+/* Light-theme button text (2026-10-16). The standard's rule that colours links in the light theme
+   (:root[data-theme='light'] a) outranks the button rule, so a solid button's text took the link
+   colour on the button's own background and was unreadable on every site in the family; found on
+   theupgradetree.com on 2026-10-16. The skeleton carries the fix from shell.css 2.0.1; these three
+   lines stand in until this site next copies the stylesheet. */
+:root[data-theme='light'] a.btn { color: var(--on-accent); }
+:root[data-theme='light'] a.btn.ghost { color: var(--accent); }
+:root[data-theme='light'] a.btn.ghost:hover { color: var(--on-accent); }
+
 /* ---- home: the thing held, then the question (tracker pattern, section 1) ----
    The first screen is built like The Belt Equation's home page (site/src/pages/index.astro and
    global.css there: home-hero, big-number, big-claim, big-sub), the pattern's first implementation
