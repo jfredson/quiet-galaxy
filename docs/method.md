@@ -28,17 +28,19 @@ The kickoff set one test for this step: given the paper's own ranges, the number
 
 The median, the galaxy figure and the mean match. The observable-universe figure is 1.4 points above theirs, more than our run-to-run noise (0.2 points); the paper does not state how many runs it used, so the gap is most likely their noise, and the test in `scripts/test_compute.py` allows two points. Reading the fifty orders of magnitude as natural-log units instead of powers of ten gives 1.8, 49% and 27%, which does not match, so powers of ten is the right reading.
 
-## What the first-pass ranges give
+## What the ranges give
 
-With the seven first-pass ranges as ruled on 2026-10-16 (seed 1961, 200,000 runs, ten to the eleven galaxies; the chance life starts in the paper's shape):
+With the seven ranges as reviewed and ruled on 2026-10-17 (seed 1961, 200,000 runs, ten to the eleven galaxies; the chance life starts in the paper's shape), against the first-pass ranges of 2026-10-16 and the 2018 paper:
 
-| | First-pass ranges | The 2018 paper |
-|---|---|---|
-| Median N | 0.016 | 0.32 |
-| Chance alone in the galaxy | 59% | 52% |
-| Chance alone in the observable universe | 40% | 38% |
+| | Reviewed ranges (2026-10-17) | First-pass ranges (2026-10-16) | The 2018 paper |
+|---|---|---|---|
+| Median N | 0.021 | 0.016 | 0.32 |
+| Chance alone in the galaxy | 58% | 59% | 52% |
+| Chance alone in the observable universe | 39% | 40% | 38% |
 
-The site is a little more pessimistic than the paper because two of its six log-uniform ranges are narrower on the optimistic side (stars per year 1 to 10 against their 1 to 100) or wider on the pessimistic side (habitable planets 0.01 to 1 against their 0.1 to 1; intelligence 0.0001 to 1 against their 0.001 to 1), and a little more optimistic in one (share with planets 0.5 to 1 against 0.1 to 1). Before the ruling, with a plain low-to-high stand-in for the chance life starts (every power of ten from one in ten to the 22 up to 1), the figures were a median of about 2 in a billion, 88% and 39%; the sensitivity table under item 7 shows why.
+The only range that moved in the review was the top of stars born each year, from 10 to 20 (`docs/reviews/2026-10-17-rulings.md`).
+
+The site is a little more pessimistic than the paper because two of its six log-uniform ranges are narrower on the optimistic side (stars per year 1 to 20 against their 1 to 100) or wider on the pessimistic side (habitable planets 0.01 to 1 against their 0.1 to 1; intelligence 0.0001 to 1 against their 0.001 to 1), and a little more optimistic in one (share with planets 0.5 to 1 against 0.1 to 1). Before the ruling, with a plain low-to-high stand-in for the chance life starts (every power of ten from one in ten to the 22 up to 1), the figures were a median of about 2 in a billion, 88% and 39%; the sensitivity table under item 7 shows why (its figures were recomputed on 2026-10-17 with the reviewed ranges; on the first-pass ranges the paper's shape gave 0.016, 59% and 40%).
 
 ## The parameters (proposed and ruled 2026-10-16)
 
@@ -58,13 +60,13 @@ Same six other ranges, seed and runs; only the shape or floor of the chance life
 
 | Chance life starts | Median N | Alone in the galaxy | Alone in the observable universe |
 |---|---|---|---|
-| Log-uniform 0.001 to 1 | 6.8 | 40% | 0% |
-| Log-uniform 0.00001 to 1 | 0.69 | 52% | 0% |
-| Log-uniform 1 in 10^10 to 1 | 0.002 | 74% | 1% |
-| Log-uniform 1 in 10^22 to 1 (the first pass before the ruling) | 2 in 10^9 | 88% | 39% |
-| Log-uniform 1 in 10^30 to 1 | 2 in 10^13 | 91% | 56% |
-| Log-uniform 1 in 10^50 to 1 | 2 in 10^23 | 95% | 73% |
-| **The 2018 paper's shape (item 7, ruled; in use)** | **0.016** | **59%** | **40%** |
+| Log-uniform 0.001 to 1 | 9.7 | 38% | 0% |
+| Log-uniform 0.00001 to 1 | 0.97 | 50% | 0% |
+| Log-uniform 1 in 10^10 to 1 | 0.003 | 72% | 1% |
+| Log-uniform 1 in 10^22 to 1 (the first pass before the ruling) | 3 in 10^9 | 87% | 39% |
+| Log-uniform 1 in 10^30 to 1 | 3 in 10^13 | 91% | 55% |
+| Log-uniform 1 in 10^50 to 1 | 3 in 10^23 | 94% | 73% |
+| **The 2018 paper's shape (item 7, ruled; in use)** | **0.021** | **58%** | **39%** |
 
 The lesson for the factor page is the one the 2018 paper drew: the paradox is an artefact of treating this factor as known. `compute.py run` recomputes this table on every run and writes it to `data/headline.json` as `life_sensitivity`, and the page for the chance life starts shows it.
 
@@ -74,6 +76,6 @@ Four seeds at 200,000 runs with the paper's ranges spread the galaxy figure over
 
 ## What is not done
 
-- The ranges are a first pass. The outside-model review of the seven ranges (kickoff, after-the-weekend item 2) has not run, and every range carries `status = "first-pass"`. The ruling of 2026-10-16 settled the shape of the chance life starts, not its centre or spread, which the review may argue.
+- The outside-model review of the seven ranges (kickoff, after-the-weekend item 2) ran on 2026-10-17 and John ruled on its twenty items the same day, so every range carries `status = "reviewed"`. The review argued the centre and spread of the chance life starts (a spread of at least 1,000 powers of ten) and John declined it, so the centre of one start per planet and the spread of fifty stand. The review used one outside reviewer; the protocol marks a second reviewer on three items (the intelligence floor, the detectable floor and the shape of the share with planets) as the thing to revisit.
 - Twenty-nine claims in the factor records are marked `verify`: mostly numbers quoted through the Wikipedia article on the Drake equation (read 2026-10-16) rather than from the paper or book itself, and Carl Sagan's Cosmos values from memory.
 - The publication records for most of the estimates' sources are Saturday session C's; the estimates name them in their `source` text and will get `publication` links once the records exist.
