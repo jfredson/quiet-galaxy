@@ -1,3 +1,6 @@
-# The site is public. Crawling is allowed; a sitemap comes with the first full version.
+# The site is public. Crawling is allowed. The sitemap is built from the records at every build
+# (site/src/pages/sitemap.xml.ts) and lists every page at its stable address.
 User-agent: *
 Allow: /
+
+Sitemap: https://thequietgalaxy.com/sitemap.xml
