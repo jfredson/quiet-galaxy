@@ -1,6 +1,6 @@
 # Factor record: L, how long a civilisation stays detectable, in years. Layout in docs/record-schema.md.
-# Written 2026-10-16 (Saturday session A, run early at John's ruling). Every range is a first
-# pass until the outside review of the seven ranges has run.
+# Written 2026-10-16 (Saturday session A, run early at John's ruling). The outside review of the seven ranges ran on 2026-10-17 and John ruled on it
+# the same day; this range is "reviewed".
 
 id = "lifetime"
 symbol = "L"
@@ -38,7 +38,7 @@ Filter ahead of us, Hanson 1998, hanson-1998; self-destruction) are arguments th
 is short; the founding pessimist papers (Hart 1975, hart-1975; Tipler 1980, tipler-1980) argue
 instead that no civilisation has lasted long enough to spread here, which bounds this factor and
 the previous one together. The 2018 paper cuts its span off at ten billion years because a
-civilisation older than the galaxy cannot have appeared at a steady rate. Written 2026-10-16."""
+civilisation older than the galaxy cannot have appeared at a steady rate. Written 2026-10-16. Outside review, 2026-10-17, ruled by John the same day: lowering the floor from 100 to 10 years (item 18) was declined, narrowly: the only measured case, ours, has been detectable for about ninety years and counting, and the figures below a century are arguments and not measurements. Garrett (2025, garrett-2025) argues the detectable phase may last 'mere decades'; it is now in the estimate list (item 19) with the span of 10 to 100 years as how 'decades' reads, the paper giving no number of its own. To revisit if a paper gives a figure below 100 with a method behind it. Rahvar and Rouhani (2026, rahvar-2026) stay in the log and linked from this factor but are not an estimate (item 20): their 5,000 years is an upper bound derived from the silence if the other six factors are generous, and using it would count the silence twice."""
 
 [[estimate]]
 who = "Frank Drake and the Green Bank meeting"
@@ -89,18 +89,45 @@ source = "Westby and Conselice, 'The Astrobiological Copernican Weak and Strong 
 link = "https://arxiv.org/abs/2004.03968"
 method = "Assumed: the average lifetime of a communicating civilisation is taken to be 100 years, 'based on our own at present', and their count of 36 scales with it."
 
+[[estimate]]
+who = "Michael Garrett"
+when = "2025-09"
+low = 10
+high = 100
+source = "Garrett, 'Blink and you'll miss it: How Technological Acceleration Shrinks SETI's Narrow Detection Window', arXiv:2509.23632 (2025), accepted by Acta Astronautica (garrett-2025)"
+link = "https://arxiv.org/abs/2509.23632"
+publication = "garrett-2025"
+method = "Argued from a simple model that a civilisation whose technology accelerates fast, as a machine-based one might, passes through the phase in which we could detect it in 'mere decades' (the paper's abstract); the paper gives no number in its abstract, and 10 to 100 years is how 'decades' is read here. Added on 2026-10-17 (outside review, item 19); it lies below the range's floor of 100, which item 18 left where it is."
+
 [range]
 low = 100
 high = 10000000000
 shape = "log-uniform"
-status = "first-pass"
+status = "reviewed"
 set_on = 2026-10-16
 sources = ["sandberg-2018"]
 why = """
-The 2018 paper's span of 100 to ten billion years, kept as it is. The floor is the shortest
-published figure, Westby and Conselice's century, which is how long our own civilisation has
-been detectable so far; Shermer's three to four hundred years sits just above it. The ceiling is
-the age of the galaxy, past which the equation's assumption of a steady rate of appearance
-breaks down, and it covers Grinspoon's billion years and Drake's hundred million. Evenly spread
-across its powers of ten because nothing favours any power of ten between the two: the argument
-is between 'civilisations burn out' and 'civilisations become permanent', and both are published."""
+The 2018 paper's span of 100 to ten billion years, kept as it is. The floor is Westby and Conselice's century, which is how long our own civilisation has been detectable so far; Shermer's three to four hundred years sits just above it. Garrett's 'mere decades' (2025) is shorter, but it is a model of what might happen to a machine-based civilisation and not a measurement, and the one measured case has already lasted about ninety years, so the floor was left at 100 (ruled by John 2026-10-17 on the outside review, item 18). The ceiling is the age of the galaxy, past which the equation's assumption of a steady rate of appearance breaks down, and it covers Grinspoon's billion years and Drake's hundred million. Evenly spread across its powers of ten because nothing favours any power of ten between the two: the argument is between 'civilisations burn out' and 'civilisations become permanent', and both are published."""
+
+[[revision]]
+date = 2026-10-17
+field = "range.why"
+old = "The floor is the shortest published figure, Westby and Conselice's century"
+new = "The floor is Westby and Conselice's century; Garrett's 'mere decades' is shorter but is a model and not a measurement, so the floor stays"
+why = "Ruled by John 2026-10-17 on the outside review (item 18, declined): the old wording called the century the shortest published figure, which stopped being true once Garrett's paper (2025) was added as an estimate. The range itself is unchanged."
+publication = "garrett-2025"
+
+[[revision]]
+date = 2026-10-17
+field = "estimate"
+old = "six published estimates"
+new = "seven: Garrett (2025), 10 to 100 years, added"
+why = "Ruled by John 2026-10-17 on the outside review (item 19). Rahvar and Rouhani's 5,000-year bound (item 20) was declined as an estimate and stays in the log. The range is unchanged."
+publication = "garrett-2025"
+
+[[revision]]
+date = 2026-10-17
+field = "range.status"
+old = "first-pass"
+new = "reviewed"
+why = "The outside review of the seven ranges ran on 2026-10-17 and John ruled on every item the same day (docs/reviews/2026-10-17-rulings.md)."

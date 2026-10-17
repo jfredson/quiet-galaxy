@@ -1,0 +1,21 @@
+# Publication record. Layout in docs/record-schema.md. Logged on 2026-10-17 after the outside review of the
+# seven ranges (docs/reviews/2026-10-17-rulings.md; ruled by John the same day). Append-only.
+
+id = "totani-2020"
+date = "2020-02-03"
+added_on = 2026-10-17
+authors = ["Tomonori Totani"]
+title = "Emergence of life in an inflationary universe"
+venue = "Scientific Reports 10, 1671 (2020); arXiv:1911.08092"
+link = "https://doi.org/10.1038/s41598-020-58060-0"
+finding = """
+Asks how many copying molecules random chemistry could assemble among the stars of the observable
+universe (about ten to the 22) and finds chains of about 32 units, against the 40 to 100 that a
+copying molecule needs, so life would not arise in the observable universe by chance alone. His way
+out is the far larger universe that inflation implies, with more than ten to the 100 stars, where it
+would. Like Koonin's, a bound on one mechanism and a count of stars needed, not a chance per planet."""
+factors = ["life"]
+explanations = ["rare-life"]
+moved_range = false
+
+notes = "Logged 2026-10-17 on the outside review's item 10 (accepted in part by John: a publication record linked from the chance-life-starts factor, kept in that factor's notes and not in its estimate list, because the paper gives a count of stars needed, not a chance). Venue, volume, article number and date checked on 2026-10-17 against Crossref and the arXiv record; the figures are as the factor's notes already described them after the check of 2026-10-16."

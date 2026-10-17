@@ -1,6 +1,7 @@
 # Factor record: fi, the share of planets with life on which it becomes intelligent.
 # Layout in docs/record-schema.md. Written 2026-10-16 (Saturday session A, run early at John's
-# ruling). Every range is a first pass until the outside review of the seven ranges has run.
+# ruling). The outside review of the seven ranges ran on 2026-10-17 and John ruled on it
+# the same day; this range is "reviewed".
 
 id = "intelligence"
 symbol = "fi"
@@ -18,6 +19,7 @@ reasoning from how late in Earth's habitable life we arrived."""
 what_would_move_this = "A second example of complex or intelligent life anywhere, a change in the fossil record's timeline for the major steps (complex cells, animals, brains), or a published analysis that puts a new number on how often intelligence follows from life."
 
 verify = [
+  "Barrow and Tipler (The Anthropic Cosmological Principle, Oxford University Press, 1986) are said, second-hand only, to put the chance of the human genome evolving at about one in ten to the 24 million; the book has not been read, and the figure, if it is theirs, counts one genome and is not a chance of intelligence per living planet. Raised 2026-10-17 by the outside review (item 13); open.",
   "Pascal Lee's figure of 0.0002, from a 2020 talk, is quoted from the Wikipedia article on the Drake equation, which cites recordings of the talks; check it. Tried 2026-10-16 and still open: the recordings could not be reached. The only source found is a Centauri Dreams post (2023-10-18) reporting a talk at the Interstellar Research Group symposium in Montreal, which gives 0.0002 and derives it from the median duration of Homo erectus (about a million years) over the age of Earth, not from 'the first humans', and also gives his detectable factor as 0.1 and his lifetime as 10,000 years; so the number is supported second-hand but the talk, date and derivation in the record are not confirmed.",
 ]
 
@@ -42,7 +44,7 @@ Conselice's assumption of 1 is borne out (their section 2.2; the strong version 
 convergent feature of evolution', in From Fossils to Astrobiology, arXiv:0711.1751) argues from the
 fossil record that human-like intelligence is not convergent, and gives no number, so it is not an
 estimate; the 'Planet of the Apes' label belongs to the opposite view, which he argues against.
-Written 2026-10-16."""
+Written 2026-10-16. Outside review, 2026-10-17, ruled by John the same day: lowering the floor from 0.0001 to one in 10 billion or below, to include the hard-steps conclusions (item 12), was declined. The hard-steps papers (Carter 1983; Snyder-Beattie and colleagues 2021) conclude that intelligence is rare but give no chance per planet, so there is no published number to put the floor at; the only published figure below 0.0001 is Mayr's count of species, which is kept above and not used. Worth keeping visible because the floor is the one place the site's judgment, not a measurement, decides the headline: at one in 10 billion the chance we are alone in the galaxy would be 77% (scratch copy) against 59%, and if the published pessimist is to be covered the principled step is Mayr's top, one in a billion (75%), not one in 10 billion. The reviewer's suggestion to add Barrow and Tipler (1986) as an estimate (item 13) was declined: their figure counts one genome rather than giving a chance of intelligence per living planet, and is named here among the arguments without a usable number. A survey of living planets against a silent sky (item 14) bounds this factor only together with its neighbours and is not added to the test line."""
 
 [[estimate]]
 who = "Frank Drake and the Green Bank meeting"
@@ -94,7 +96,7 @@ method = "Took the one million years since the first humans against the four and
 low = 0.0001
 high = 1.0
 shape = "log-uniform"
-status = "first-pass"
+status = "reviewed"
 set_on = 2026-10-16
 sources = ["sandberg-2018"]
 why = """
@@ -119,3 +121,10 @@ field = "estimate (Ernst Mayr, 1995)"
 old = "value 1e-9 (the Wikipedia article's rendering)"
 new = "low 2e-11, high 1e-9"
 why = "Checked on 2026-10-16 against a reproduction of Mayr's essay and reply: he counts billions of species, perhaps as many as 50 billion, one of them intelligent, and gives no chance of his own. The range is untouched (its floor is 0.0001); the published pessimistic extreme in the headline's estimate table moves with this."
+
+[[revision]]
+date = 2026-10-17
+field = "range.status"
+old = "first-pass"
+new = "reviewed"
+why = "The outside review of the seven ranges ran on 2026-10-17 and John ruled on every item the same day (docs/reviews/2026-10-17-rulings.md)."

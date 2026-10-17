@@ -1,0 +1,22 @@
+# Publication record. Layout in docs/record-schema.md. Logged on 2026-10-17 after the outside review of the
+# seven ranges (docs/reviews/2026-10-17-rulings.md; ruled by John the same day). Append-only.
+
+id = "de-visscher-2020"
+date = "2020-06-23"
+added_on = 2026-10-17
+authors = ["Alex De Visscher"]
+title = "Artificial versus biological intelligence in the Cosmos: clues from a stochastic analysis of the Drake equation"
+venue = "International Journal of Astrobiology 19(5), 353-359 (2020); arXiv:2001.11644"
+link = "https://arxiv.org/abs/2001.11644"
+finding = """
+Runs the Drake Equation as the 2018 Oxford paper did, with a range for each factor, and splits the
+detectable factor in two: the chance that an intelligent biological species can communicate across
+space (taken as that paper's 0.01 to 1) and the chance that it goes on to build a machine
+intelligence that can (taken as 0.0001 to 1, by assuming the extra step is as selective as the
+first, so the chance is the first one squared). Finds that detectable machine intelligences
+are about as numerous as detectable biological ones, and that machines dominate the universe as a whole."""
+factors = ["detectable"]
+explanations = ["they-became-machines"]
+moved_range = false
+
+notes = "Logged 2026-10-17 on the outside review's item 16 (accepted by John). The reviewer gave the arXiv number as 2001.11822, which is a paper on a different subject; the right number is 2001.11644. The 0.0001 to 1 in the paper is the range for the machine route, an assumption, and not an estimate of the share of intelligent species that become detectable, which for biological species the paper takes as 0.01 to 1; so it did not meet the condition John attached to item 15 (see the detectable factor's notes). Venue, volume, pages and the two ranges checked on 2026-10-17 against the arXiv full text and Crossref."
