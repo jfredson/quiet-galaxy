@@ -2,6 +2,10 @@
 
 Every change to a range, a record, the method or the site, with absolute dates. Newest first. A range change always says which publication moved it and by how much.
 
+## 2026-10-17
+
+- The three family cards on the home page no longer underline their heading and description (the whole card is one link, so the skeleton's link underline ran through all of it); only the "N explanations" count keeps the underline, so the card reads as a card and the count as the link. Asked for by John 2026-10-17.
+
 ## 2026-10-17 (John's rulings on the outside review applied)
 
 John ruled on the twenty items of the outside review the same day, "accept all", meaning every recommended ruling in `docs/reviews/2026-10-17-rulings.md` stands as written. They are applied to the records, each as a dated revision on the factor naming the review. The weekly reading's cap on moving a range does not apply: this is John's ruling.
