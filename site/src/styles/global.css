@@ -242,9 +242,14 @@ a.dim:hover { color: var(--accent); }
    copy: sentient-horizons/design/deep-field.css). Nothing below redefines a token.
    =============================================================== */
 
-/* The top bar carries seven links with long public names (tracker pattern, section 4), so it
-   collapses behind the menu button earlier than the standard's 820 pixels. These rules repeat the
-   standard's small-screen rules for the band between 820 and 1080 pixels, the page width and change nothing else. */
+/* The top bar carries six links with the tracker pattern's long public names (section 4), so two
+   things differ from the standard's bar, both only here: the site's name never wraps (if the row
+   ever runs out of room, the links wrap, not the name), and the bar collapses behind the menu
+   button at 1080 pixels instead of the standard's 820. Checked at 1280 pixels on 2026-10-16, after
+   the family design review found the name wrapping and the links spilling onto a second row. The
+   rules in the media query repeat the standard's small-screen rules for the band between 820 and
+   1080 pixels and change nothing else. */
+.brand { white-space: nowrap; }
 @media (max-width: 1080px) {
   .nav-toggle { display: inline-flex; }
   .navlinks { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: flex-end; gap: 2px; margin: 0; padding: 8px 26px 16px; background: var(--header-bg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
