@@ -1,0 +1,66 @@
+# Explanation record: the dark forest. Layout in docs/record-schema.md.
+# Written 2026-10-16 as the schema's worked example. The id is this page's public address
+# (/explanations/dark-forest/) and is never renamed.
+
+id = "dark-forest"
+name = "The dark forest: everyone is hiding, because announcing yourself gets you killed"
+family = "unseen"
+proposed_by = "Liu Cixin"
+proposed_in = 2008
+proposed_source = "The Dark Forest (黑暗森林), the second novel of the Remembrance of Earth's Past trilogy, 2008; English translation by Joel Martinsen, 2015"
+summary = """
+The galaxy may be full of civilisations that all keep quiet, because the safest thing to
+do when you cannot know a stranger's intentions, and cannot talk to them fast enough to find
+out, is to say nothing and destroy anyone who speaks. On this view the silence is not
+evidence of an empty galaxy but of a crowded one in which every inhabitant has worked out
+the same grim rule. We hear nothing because broadcasting is the mistake, and anyone who
+made it is already gone."""
+body = """
+The argument runs in three steps. First, every civilisation wants to survive, and the
+resources of the galaxy are finite, so any other civilisation is a possible rival. Second,
+the distances are so great that two civilisations cannot build trust: a message takes
+centuries, and in the meantime the other side may have grown far stronger or decided to
+strike first. The novel calls this the chain of suspicion. Third, technology advances in
+leaps, so a weaker neighbour today may be a stronger one by the time your reply arrives.
+Put together, the only safe move is to stay silent and, if you learn where someone else
+lives, to destroy them before they can do the same to you. The galaxy becomes a dark forest
+in which every hunter moves without a sound.
+
+The idea has antecedents. David Brin's 1983 survey of the silence, "The Great Silence",
+listed deliberate quiet out of fear as one possible answer, and Greg Bear's 1987 novel
+The Forge of God imagined a galaxy policed by self-replicating killers that punish any
+species loud enough to be noticed. Liu Cixin gave the reasoning its name and its most
+complete form.
+
+It bears on the equation at the last two factors. It says the share of intelligent
+species that make themselves detectable is very small, not because they cannot but because
+they choose not to, and that any species that does broadcast has a short detectable
+lifetime. The other factors can be as large as the optimists want.
+
+The main objection is that hiding may be impossible for an industrial civilisation: waste
+heat, changed atmospheres and the ordinary leakage of radio and radar are hard to suppress
+without giving up the technology that makes a species dangerous in the first place. If
+hiding does not work, silence buys nothing, and the strategy collapses. A second objection
+is that attacking across interstellar distances is itself slow, expensive and uncertain,
+which weakens the threat the whole argument rests on. Earth has been leaking radio for
+about a century without visible consequence, which is weak evidence either way: a century
+is nothing on these timescales."""
+standing = "Widely known from the novels and often raised in public discussion; among researchers it is treated as one of several 'they choose silence' explanations, and most consider the hiding it requires too hard to sustain. It is not a mainstream scientific position."
+would_strengthen = "Evidence of a civilisation deliberately suppressing its emissions; a result showing that an industrial civilisation can in fact hide its waste heat and atmosphere; a model showing that silence is the stable strategy under realistic costs of interstellar attack."
+would_weaken = "Any detected civilisation that broadcasts freely; a demonstration that the signatures of industry (waste heat, atmospheric change) cannot be hidden, so silence gains nothing; a long record of Earth's own leakage with no consequence."
+related = []
+
+verify = [
+  "That Greg Bear's The Forge of God (1987) is a fair example of the 'punish the loud' idea and the year is right; check before the page goes live.",
+  "That Brin's 1983 paper lists deliberate quiet out of fear among its explanations; check the paper's list.",
+]
+
+notes = "Related explanations to add when their records exist (Saturday session B): the zoo hypothesis, berserker probes, the great silence as a survival strategy in general. Written 2026-10-16."
+
+[[bears_on]]
+factor = "detectable"
+direction = "lowers"
+
+[[bears_on]]
+factor = "lifetime"
+direction = "lowers"

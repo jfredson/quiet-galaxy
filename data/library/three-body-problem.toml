@@ -1,0 +1,22 @@
+# Library record: Liu Cixin's trilogy. Layout in docs/record-schema.md.
+# Written 2026-10-16 as the schema's worked example.
+
+id = "three-body-problem"
+title = "Remembrance of Earth's Past (The Three-Body Problem, The Dark Forest, Death's End)"
+maker = "Liu Cixin"
+year = 2008
+kind = "book"
+explanations = ["dark-forest"]
+factors = ["detectable"]
+link = "https://en.wikipedia.org/wiki/Remembrance_of_Earth%27s_Past"
+how = """
+The trilogy is the source of the dark forest idea rather than an illustration of it. The
+first book (2006 in Chinese, 2014 in English) opens with a message sent to the stars and
+the reply that comes back: do not answer. The second, The Dark Forest (2008), lays out the
+whole argument in a single conversation and then builds a plot on it, in which the only
+defence against a stronger neighbour is the threat to reveal both your addresses to the
+rest of the galaxy. The third, Death's End, follows the consequences across cosmic time. The
+year given is for The Dark Forest, where the idea is stated."""
+worth_the_time = "Yes, and start with the first book: it is the most complete dramatisation of the silence as a survival strategy, and the second book is where the idea everyone quotes is actually laid out."
+
+notes = "Written 2026-10-16."

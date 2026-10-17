@@ -1,0 +1,52 @@
+# Factor record: fp, the share of stars that have planets. Layout in docs/record-schema.md.
+# Written 2026-10-16 as the schema's worked example; Saturday session A revisits every
+# number here with the full published record.
+
+id = "planets"
+symbol = "fp"
+order = 2
+name = "The share of stars that have planets"
+unit = "fraction"
+description = """
+Of all the stars in the galaxy, what fraction have at least one planet. In 1961 this was
+a guess; since the first exoplanet discoveries in the 1990s and the Kepler mission of 2009
+to 2018 it has become one of the two best-measured factors in the equation. The current
+reading is that planets are the rule, not the exception."""
+what_would_move_this = "A survey that counts planets around a large, well-understood sample of stars, including the dim red dwarfs that make up most of the galaxy, and reports the share of stars with none."
+
+verify = [
+  "Drake's 1961 range of 0.2 to 0.5 for fp is quoted from secondary accounts of the Green Bank meeting; check it against the 2015 Drake, Vakoch and Dowd book.",
+]
+
+notes = "Saturday session C writes the publication record for the 2012 microlensing paper; when it exists, the estimate above gets a 'publication' link to it. Written 2026-10-16."
+
+[[estimate]]
+who = "Frank Drake and the Green Bank meeting"
+when = "1961"
+low = 0.2
+high = 0.5
+source = "Green Bank meeting of November 1961, as recorded in Drake, Vakoch and Dowd, The Drake Equation: Estimating the Prevalence of Extraterrestrial Life through the Ages (Cambridge University Press, 2015)"
+method = "Educated guess before any planet outside the solar system had been found."
+
+[[estimate]]
+who = "Arnaud Cassan and colleagues"
+when = "2012-01-12"
+low = 0.62
+high = 1.0
+source = "Cassan et al., 'One or more bound planets per Milky Way star from microlensing observations', Nature 481, 167–169 (2012)"
+link = "https://arxiv.org/abs/1202.0903"
+method = "Gravitational microlensing over six years of survey data; 62% of stars found to host a planet of a few Earth masses at 0.5 to 10 times the Earth-Sun distance, and the planets per star add to more than one, so the share of stars with any planet lies between the two."
+
+[range]
+low = 0.1
+high = 1.0
+shape = "log-uniform"
+status = "first-pass"
+set_on = 2026-10-16
+sources = ["sandberg-2018"]
+why = """
+Starts from the range Sandberg, Drexler and Ord used in 2018 ("log-uniform from 0.1 to 1",
+with the note that "different methods are converging on fp ≈ 1"). The lower bound of 0.1
+is almost certainly too low given the 2012 microlensing result and the Kepler record, which
+widens the spread toward pessimism; it is kept as a first pass until the full record is
+read on 2026-10-18 and the outside review has run."""

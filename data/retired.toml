@@ -1,0 +1,15 @@
+# Ids that once existed under data/ and were retired or replaced. An explanation id is a
+# public page address and is never renamed; a factor, library or publication id is a link
+# target for the other records. To retire one: delete its file, add an entry here, and
+# update every record that pointed at it. The validator refuses a data file that
+# disappears from the repository's history without an entry here, and refuses a new record
+# that reuses a retired id. Layout in docs/record-schema.md. Started 2026-10-16, empty.
+#
+# [[retired]]
+# id = "old-id"
+# kind = "explanation"          # factor, explanation, library or publication
+# date = 2026-10-16
+# replaced_by = "new-id"        # optional; must exist
+# why = "One line on why."
+
+retired = []

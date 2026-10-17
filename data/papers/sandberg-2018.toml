@@ -1,0 +1,23 @@
+# Publication record: the paper this project's method comes from. Layout in docs/record-schema.md.
+# Written 2026-10-16 as the schema's worked example. Publication records are appended and
+# never edited except to fix an error, with a changelog line.
+
+id = "sandberg-2018"
+date = "2018-06-06"
+added_on = 2026-10-16
+authors = ["Anders Sandberg", "Eric Drexler", "Toby Ord"]
+title = "Dissolving the Fermi Paradox"
+venue = "arXiv:1806.02404 (physics.pop-ph), Future of Humanity Institute, Oxford; submitted to Proceedings of the Royal Society A"
+link = "https://arxiv.org/abs/1806.02404"
+finding = """
+Run with a range for each factor instead of a single value, the Drake Equation gives a
+median of 0.32 detectable civilisations in the galaxy, a 52% chance that we are alone in
+the galaxy and a 38% chance that we are alone in the observable universe (their Table 2,
+'no update' row). Taking the silence itself into account raises those to between 53% and
+99.6%, and between 39% and 85%, depending on what the silence is taken to show. The paper's
+point is that the paradox comes from treating very uncertain factors as if they were known."""
+factors = ["star-formation", "planets", "habitable-planets", "life", "intelligence", "detectable", "lifetime"]
+explanations = []
+moved_range = false
+
+notes = "Founding entry. The project's method and its first-pass ranges start from this paper's Table 1 (log-uniform ranges for six factors and a very wide log-normal for the chance life starts). No range 'moved' because none existed before it. Figures checked against the paper's text on 2026-10-16."
