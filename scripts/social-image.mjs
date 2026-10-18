@@ -79,5 +79,39 @@ ${domainLine({ domain: 'thequietgalaxy.com', x: 72, y: 560, fill: muted })}`);
 
 
 const out = fileURLToPath(new URL('../site/public/social-preview.png', import.meta.url));
-await sharp(Buffer.from(buildQuiet())).png({ compressionLevel: 9 }).toFile(out);
-console.log('wrote', out);
+// ---- the news posts' cards (tracker pattern, rule 4.15; John 2026-10-18), copied from Outrunning Ageing's ----
+import { readdirSync, readFileSync, mkdirSync } from 'node:fs';
+import { basename, join } from 'node:path';
+const KIND_LABEL = { 'start-here': 'start here', 'rung-reached': 'a rung reached', 'estimate-revised': 'a range revised', 'flagged-item-ruled': 'a flagged item ruled', 'claim': 'a claim settled', 'headline-moved': 'the headline moved', 'method-changed': 'the method changed' };
+function fm(text) { const m = text.match(/^---\n([\s\S]*?)\n---/); const d = {}; if (!m) return d; for (const line of m[1].split('\n')) { const k = line.match(/^([a-z_]+):\s*(.*)$/); if (k) d[k[1]] = k[2].trim().replace(/^"|"$/g, ''); } return d; }
+function longDate(iso) { const d = new Date(iso + 'T12:00:00Z'); return `${d.getUTCDate()} ${d.toLocaleString('en-GB', { month: 'long', timeZone: 'UTC' })} ${d.getUTCFullYear()}`; }
+function wrapWords(text, max) { const lines = []; let cur = ''; for (const w of text.split(/\s+/)) { const t = (cur + ' ' + w).trim(); if (t.length <= max) cur = t; else { lines.push(cur); cur = w; } } if (cur) lines.push(cur); return lines; }
+function buildPostCard(post) {
+  const bg = '#05070a', text = '#e8ecf1', soft = '#b9c2cc', muted = '#7d8794', accent = '#a6d4ea';
+  let lines = wrapWords(post.title, 30); let size = 56, lead = 68;
+  if (lines.length > 3) { lines = wrapWords(post.title, 38); size = 46; lead = 56; }
+  lines = lines.slice(0, 4);
+  const kicker = `NEWS · ${longDate(post.date).toUpperCase()} · ${(KIND_LABEL[post.kind] || post.kind).toUpperCase()}`;
+  const numbers = wrapWords(post.before && post.after ? `${post.before} to ${post.after}` : (post.after || ''), 74).slice(0, 2);
+  const esc = (t) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+  return wrap(`<rect width="${W}" height="${H}" fill="${bg}"/>
+${nameLine({ name: 'The Quiet Galaxy', x: 72, y: 116, fill: accent })}
+<text x="${W - 72}" y="116" text-anchor="end" font-family="${MONO}" font-size="26" fill="${muted}">thequietgalaxy.com</text>
+${textBlock({ lines: lines.map(esc), x: 72, y: 232, size, lead, fill: text, spacing: -1 })}
+<text x="72" y="${H - 132}" font-family="${SANS}" font-size="20" font-weight="600" letter-spacing="2" fill="${muted}">${esc(kicker)}</text>
+${numbers.map((ln, i) => `<text x="72" y="${H - 96 + i * 32}" font-family="${SANS}" font-size="24" fill="${soft}">${esc(ln)}</text>`).join('')}`);
+}
+const argv = process.argv.slice(2);
+if (argv[0] === '--posts') {
+  const dir = fileURLToPath(new URL('../site/src/content/news/', import.meta.url));
+  const outDir = fileURLToPath(new URL('../site/public/news/', import.meta.url)); mkdirSync(outDir, { recursive: true });
+  const files = argv.length > 1 ? argv.slice(1).map((f) => basename(f)) : readdirSync(dir).filter((f) => f.endsWith('.md'));
+  for (const f of files) {
+    const post = fm(readFileSync(join(dir, f), 'utf8')); const slug = f.replace(/\.md$/, '');
+    await sharp(Buffer.from(buildPostCard(post))).png({ compressionLevel: 9 }).toFile(join(outDir, `${slug}-card.png`));
+    console.log('wrote', join(outDir, `${slug}-card.png`));
+  }
+} else {
+  await sharp(Buffer.from(buildQuiet())).png({ compressionLevel: 9 }).toFile(out);
+  console.log('wrote', out);
+}

@@ -7,6 +7,9 @@
 // copied from The Belt Equation's story page (site/src/pages/story.astro: `entries`, `entry`).
 import Base from '../../layouts/Base.astro';
 import { records, longDate, worldDate, symbolHtml, plainNumber, plural, recordUrl } from '../../lib/records';
+import { datedPosts, postPath } from '../../lib/news';
+const newsPosts = await datedPosts();
+const postsFor = (date: string) => newsPosts.filter((p) => p.data.date === date); // rule 4.14
 
 const pubs = records.publications;
 const totals = records.story_totals;
@@ -47,7 +50,8 @@ for (const p of pubs) {
       <p class="empty-note">Nothing has been logged yet.</p>
     ) : days.map((day) => (
       <div class="day">
-        <h2>Logged {longDate(day.date)}</h2>
+        <h2 id={`logged-${day.date}`}>Logged {longDate(day.date)}</h2>
+        {postsFor(day.date).map((p) => <p class="in-the-news-line">In the news: <a href={postPath(p)}>{p.data.title}</a>.</p>)}
         <div class="entries">
           {day.entries.map((p) => (
             <details class="entry" id={p.id}>

@@ -8,17 +8,19 @@ interface Props {
   title?: string;
   description?: string;
   noindex?: boolean;
+  image?: string; // a page's own preview picture (a news post's card); the site's otherwise
 }
 
 const {
   title = 'The Quiet Galaxy',
   description = 'Where is everybody? A public explainer and tracker for the Fermi Paradox: the Drake Equation run as a spread of published estimates, every explanation for the silence on its own page, and a dated log of the science that moves the numbers.',
   noindex = false,
+  image,
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 // The preview picture link cards show (site/public/social-preview.png, made by scripts/social-image.mjs); an absolute address, as the tags require.
-const socialImage = new URL('/social-preview.png', Astro.site).href;
+const socialImage = new URL(image ?? '/social-preview.png', Astro.site).href;
 const currentYear = new Date().getFullYear();
 ---
 
@@ -49,6 +51,7 @@ const currentYear = new Date().getFullYear();
     {noindex && <meta name="robots" content="noindex, nofollow" />}
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate" type="application/rss+xml" title="The Quiet Galaxy · News" href="/news/feed.xml" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="The Quiet Galaxy" />
     <meta property="og:url" content={canonical} />

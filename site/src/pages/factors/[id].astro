@@ -9,6 +9,7 @@
 // sit between "what would move this" and the revisions, copied from The Belt Equation's node page.
 import Base from '../../layouts/Base.astro';
 import { readingsFor, verdictLabel } from '../../lib/readings';
+import { postsAbout, postPath } from '../../lib/news';
 import {
   records, rangeText, estimateWords, plainNumber, percent, worldDate, longDate, symbolHtml, shapeWords,
   statusWords, directionWords, issueUrl, recordUrl, hostOf, inline, plural, paragraphs, medianWords, type Factor,
@@ -36,6 +37,7 @@ const leaves = f.explanations.filter((e) => e.direction === 'unchanged');
 const head = records.headline;
 const sensitivity = f.id === 'life' && head.available && head.life_sensitivity ? head.life_sensitivity : null;
 const lastReadings = readingsFor(f.id).slice(0, 3);
+const inTheNews = await postsAbout(f.id); // rule 4.14: computed from the posts, never written into the record
 ---
 
 <Base title={title} description={description}>
@@ -48,6 +50,10 @@ const lastReadings = readingsFor(f.id).slice(0, 3);
       <p class="lede">The record for this piece is not written up yet. The published estimates are being gathered, and until all seven pieces have a range the number on the home page cannot be computed.</p>
     )}
   </section>
+
+  {inTheNews.length > 0 && (
+    <div class="in-the-news"><span class="k">In the news</span>{inTheNews.map((p, i) => <>{i > 0 ? <br /> : ''}<a href={postPath(p)}>{p.data.title}</a> · {longDate(p.data.date)}</>)}</div>
+  )}
 
   <div class="record">
     <div class="prose">
