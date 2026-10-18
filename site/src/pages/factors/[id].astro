@@ -20,7 +20,7 @@ export function getStaticPaths() {
 
 const { factor } = Astro.props as { factor: Factor };
 const f = factor;
-const title = `${f.name} — The Quiet Galaxy`;
+const title = `${f.name} · The Quiet Galaxy`;
 const description = f.exists
   ? f.description.split(/(?<=\.)\s/)[0]
   : `Piece ${f.order} of the equation, ${f.symbol}. The published estimates for it are still being gathered.`;

@@ -29,7 +29,7 @@ const related = [...e.related, ...e.related_in];
 const lastReadings = readingsFor(e.id).slice(0, 3);
 ---
 
-<Base title={`${e.name} — The Quiet Galaxy`} description={description}>
+<Base title={`${e.name} · The Quiet Galaxy`} description={description}>
   <section class="hero wide">
     <p class="eyebrow"><a href="/explanations/">Explanations</a> · <a href={`/explanations/#${family.key}`}>{family.name}</a></p>
     <h1>{e.name}</h1>
