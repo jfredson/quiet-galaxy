@@ -390,6 +390,57 @@ class TheReading(unittest.TestCase):
         self.assertTrue(any("is not the date in the id" in p for p in problems), problems)
 
 
+class TheStricterReading(unittest.TestCase):
+    """Rules added on 2026-10-18 after the audit of the first scheduled reading
+    (docs/readings/audit-2026-10-17.md). They apply to readings dated 2026-10-19 or later, so
+    each test copies the 2026-10-17 reading (which breaks all of them) to a later date."""
+
+    def _later(self, data: Path) -> Path:
+        later = data / "readings" / "2026-10-24.toml"
+        (data / "readings" / "2026-10-17.toml").rename(later)
+        edit(later, r'^id = "2026-10-17"', 'id = "2026-10-24"')
+        edit(later, r'^date = 2026-10-17', "date = 2026-10-24")
+        return later
+
+    def test_the_two_earlier_readings_stay_valid(self):
+        self.assertEqual(problems_for(DATA), [])
+
+    def test_header_must_say_what_could_not_be_seen(self):
+        with TempData() as data:
+            self._later(data)
+            problems = problems_for(data)
+        self.assertTrue(any("needs 'pages_opened'" in p for p in problems), problems)
+        self.assertTrue(any("needs 'limits'" in p for p in problems), problems)
+
+    def test_every_record_needs_a_search_of_its_own(self):
+        with TempData() as data:
+            self._later(data)
+            problems = problems_for(data)
+        self.assertTrue(any("(zoo-hypothesis)" in p and "borrows all of its searches" in p for p in problems), problems)
+
+    def test_only_one_borrowed_search_per_record(self):
+        with TempData() as data:
+            self._later(data)
+            problems = problems_for(data)
+        self.assertTrue(any("(zoo-hypothesis)" in p and "at most one search may be borrowed" in p for p in problems), problems)
+
+    def test_a_search_listed_twice_must_be_marked_reused(self):
+        with TempData() as data:
+            later = self._later(data)
+            # The search first run for the star-formation item, listed bare under the planets item.
+            edit(later, r'"fraction of stars with planets survey red dwarfs occurrence rate arXiv October 2026"',
+                 '"Milky Way star formation rate new measurement October 2026"')
+            problems = problems_for(data)
+        self.assertTrue(any("without a reused line" in p and "star-formation" in p for p in problems), problems)
+
+    def test_the_same_reason_or_found_sentence_twice_is_refused(self):
+        with TempData() as data:
+            self._later(data)
+            problems = problems_for(data)
+        self.assertTrue(any("same reason for borrowing a search" in p for p in problems), problems)
+        self.assertTrue(any("same 'found' sentence" in p for p in problems), problems)
+
+
 class TheHeadline(unittest.TestCase):
     """The run command and the engine behind it (docs/method.md)."""
 

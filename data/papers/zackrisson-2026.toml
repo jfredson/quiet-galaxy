@@ -1,0 +1,26 @@
+# Publication record. Layout in docs/record-schema.md. Logged by hand on 2026-10-18 after the audit
+# of the first scheduled weekly reading (docs/readings/audit-2026-10-17.md) found it missing from the log.
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "zackrisson-2026"
+date = "2026-07-10"
+added_on = 2026-10-18
+authors = ["Erik Zackrisson", "Arjan Bik", "Anita Ali Asgar", "Olivia Curtis", "Jason T. Wright", "Tongtian Ren", "Roberto J. Assef", "Andrew Blain", "Alexis Brandeker", "Michael A. Garrett", "Uma Gorti", "Andreas J. Korn", "Priyatam K. Mahto", "Armin Nabizadeh"]
+title = "Project Hephaistos -- IV. James Webb Space Telescope Observations of Two Dyson Sphere Candidates"
+venue = "arXiv:2607.09460 (astro-ph.GA), 13 pages, 9 figures; a preprint (version 1, 2026-07-10), not yet found in a journal"
+link = "https://arxiv.org/abs/2607.09460"
+finding = """
+James Webb Space Telescope infrared images and spectra of two of the seven red dwarf stars that the
+2024 Hephaistos search flagged as possible Dyson-sphere hosts (candidates D and E) show that the
+infrared excess comes from background galaxies about one arcsecond away, not from anything at the
+stars: candidate D's is at redshift about 0.9 and looks like a hot-dust-obscured galaxy, candidate
+E's at redshift about 0.4 and looks like a dusty starburst. The authors find no excess from
+regions a few astronomical units from either star, which rules out both a Dyson sphere and an
+extreme debris disk there. They conclude that the 2024 estimate of how often such a chance
+alignment would happen was too low, and that future searches for Dyson spheres by mid-infrared
+excess need sharper images than the all-sky survey provides."""
+factors = ["detectable"]
+explanations = ["they-became-machines", "inward-turn"]
+moved_range = false
+
+notes = "Logged by hand on 2026-10-18, not by a reading: the audit of the 2026-10-17 reading found that the log carried the follow-up that mentions this result (Korn and others, 2026) but not this paper. Read on arXiv's own page on 2026-10-18 (abstract, introduction, sections 5 and 6). It removes two candidates; it gives no number for any of the seven factors, so no range is argued for."

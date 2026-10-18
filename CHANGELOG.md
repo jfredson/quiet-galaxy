@@ -2,6 +2,10 @@
 
 Every change to a range, a record, the method or the site, with absolute dates. Newest first. A range change always says which publication moved it and by how much.
 
+## 2026-10-18 (the weekly reading's procedure revised after its first scheduled run)
+
+John ruled on 2026-10-18 on the audit of the first scheduled reading (`docs/readings/audit-2026-10-17.md`): the procedure (`docs/weekly-reading.md`) now asks each record for a search of its own and at most one borrowed, a preprint-listing query by date, pages opened and a page test on the first line, a `found` sentence that names something seen, a count of the run's own searches, a 14-day window, and no editing of tests or scripts by a reading; the routine's prompt text in `docs/weekly-reading-prompt.md` says web search finds and `WebFetch` opens. The reading record gains two header lines, `pages_opened` and `limits`, which the reading page prints; `scripts/compute.py` checks the new rules for readings dated 2026-10-19 or later and leaves the two earlier readings valid as written. The home page strip for the 2026-10-17 reading now says it was checked by a news-style web search of the window, not the preprint listing. Two papers the readings missed are logged, by hand, as publications: Zackrisson and others (2026-07-10, Project Hephaistos IV: the Webb telescope shows the infrared excess of two Dyson-sphere candidates comes from background galaxies) and Curtis and others (2026-08-12, the Ĝ search V: none of 129 nearby galaxies shows waste heat, with upper limits). **No range, shape, status or test line was changed, and the headline did not move.**
+
 ## 2026-10-17 (weekly reading)
 
 Weekly reading (scheduled task, 2026-10-17): 39 records read, 0 ranges moved, 0 logged, 0 flagged for John; record at data/readings/2026-10-17.toml. Nothing in the one-day window bore on any test; the headline did not move.

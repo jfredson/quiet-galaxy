@@ -556,6 +556,7 @@ def export_readings(raw: list[dict], factors_by_id: dict, explanations_by_id: di
             "id": r["id"], "date": r["date"].isoformat(), "ran_at": r["ran_at"], "run_by": r["run_by"],
             "window": text(r.get("window")), "records_read": r["records_read"], "searches": r["searches"],
             "commit_before": r["commit_before"], "notes": text(r.get("notes")),
+            "pages_opened": text(r.get("pages_opened")), "limits": text(r.get("limits")),
             "file": f"data/readings/{r['id']}.toml", "path": f"/reading/#{r['id']}",
             "counts": counts,
             "moved": [{"record": it["record"], "name": it["name"], "path": it["path"]} for it in items if it["verdict"] == "moved"],

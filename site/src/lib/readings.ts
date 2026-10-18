@@ -36,6 +36,10 @@ export interface Reading {
   records_read: number;
   searches: number;
   commit_before: string;
+  /** Added 2026-10-18: how many pages the run opened beyond its search tool ("none" and why), and
+      what it could not see; both empty on the two readings that came before the rule. */
+  pages_opened: string;
+  limits: string;
   notes: string;
   file: string;
   path: string;
