@@ -1,0 +1,27 @@
+# Publication record. Layout in docs/record-schema.md. Logged by hand on 2026-10-18 after the audit
+# of the first scheduled weekly reading (docs/readings/audit-2026-10-17.md) found it missing from the log.
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "curtis-2026"
+date = "2026-08-12"
+added_on = 2026-10-18
+authors = ["Olivia Curtis", "Aidan J. Rowland", "Jason T. Wright", "Caryl Gronwall", "Jakob M. Helton", "Joel Leja"]
+title = "The Ĝ Infrared Search for Extraterrestrial Civilizations with Large Energy Supplies. V. When Galaxies Glow with Industry"
+venue = "arXiv:2608.12458 (astro-ph.GA, with astro-ph.SR), 34 pages, 16 figures, 4 tables; submitted to The Astrophysical Journal (preprint version 1, 2026-08-12)"
+link = "https://arxiv.org/abs/2608.12458"
+finding = """
+Searches 129 nearby galaxies for the waste heat that swarms of starlight collectors would shed,
+fitting each galaxy's light from ultraviolet to infrared with and without such a swarm; tests with
+1,419 injected fake swarms show the method finds swarms taking as little as 4 to 5 percent of the
+starlight in old, quiet galaxies. None of the 129 galaxies prefers a swarm. The per-galaxy 95
+percent upper limit is under 0.3 percent of the starlight for the median quiet galaxy without a
+bright active nucleus, and the zero detections bound the population: fewer than 2.6 percent of
+such galaxies can host swarms taking 25 percent of their starlight, and fewer than 14.6 percent
+swarms at 300 kelvin taking 5 percent (each at 95 percent confidence). The authors say the
+dusty and active galaxies cannot be separated from waste heat by survey colours alone, and
+propose cheaper archival screens and a future far-infrared mission to follow up."""
+factors = ["detectable"]
+explanations = ["they-became-machines", "aestivation", "expansion-stalls"]
+moved_range = false
+
+notes = "Logged by hand on 2026-10-18, not by a reading: the audit of the 2026-10-17 reading found it missing from the log. Read on arXiv's own page on 2026-10-18 (abstract, discussion, conclusions). The title is as arXiv lists it; the paper's own title line drops the word Infrared. A limit on other galaxies' waste heat, not on any of the seven factors: it bounds the product of all of them and moves no range on its own (the detectable record's test says so)."

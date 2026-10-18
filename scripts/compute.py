@@ -113,7 +113,7 @@ ALLOWED: dict[str, set[str]] = {
     "publication": {"id", "date", "added_on", "authors", "title", "venue", "link", "finding",
                     "factors", "explanations", "moved_range", "verify", "notes"},
     "reading": {"id", "date", "ran_at", "run_by", "window", "records_read", "searches",
-                "commit_before", "item", "notes"},
+                "commit_before", "pages_opened", "limits", "item", "notes"},
 }
 REQUIRED: dict[str, list[str]] = {
     "factor": ["id", "symbol", "order", "name", "unit", "description", "what_would_move_this",
@@ -126,6 +126,10 @@ REQUIRED: dict[str, list[str]] = {
     "reading": ["id", "date", "ran_at", "run_by", "window", "records_read", "searches",
                 "commit_before", "item"],
 }
+# Rules added on 2026-10-18 after the audit of the first scheduled reading
+# (docs/readings/audit-2026-10-17.md) apply to readings dated on or after this day, so the two
+# readings that came before stay valid as they were written (a reading is never edited).
+READING_RULES_FROM = dt.date(2026, 10, 19)
 READING_ITEM_ALLOWED = {"record", "verdict", "queries", "reused", "found", "sources", "publications",
                         "for_john"}
 ESTIMATE_ALLOWED = {"who", "when", "value", "low", "high", "source", "method", "link", "publication"}
@@ -612,12 +616,25 @@ def _check_reading(r: dict, tag: str, factors: dict[str, dict], explanation_ids:
         if key in r and (not isinstance(r[key], int) or isinstance(r[key], bool) or r[key] < 0):
             problems.append(f"{tag}: {key!r} must be a whole number")
 
+    stricter = isinstance(date, dt.date) and date >= READING_RULES_FROM
+    if stricter:
+        # What the run could and could not see, said in the record so the page can print it.
+        for key, what in (("pages_opened", "how many pages the run opened beyond its search tool, or 'none' "
+                                           "and why"),
+                          ("limits", "what the run could not see (for example that the search tool cannot "
+                                     "filter by date, or that the preprint listing was not checked)")):
+            if not isinstance(r.get(key), str) or not r[key].strip():
+                problems.append(f"{tag}: a reading needs '{key}': {what}")
+
     items = r.get("item", [])
     if not isinstance(items, list):
         problems.append(f"{tag}: 'item' must be a list of [[item]] tables")
         items = []
     seen: set[str] = set()
     all_queries: set[str] = set()
+    owners: dict[str, list[str]] = {}    # a search -> the records that list it without marking it reused
+    reasons: dict[str, list[str]] = {}   # the reason on a reused line -> the records that gave it
+    founds: dict[str, list[str]] = {}    # a found sentence -> the records that carry it
     for i, item in enumerate(items, 1):
         itag = f"{tag}, item {i}"
         if not isinstance(item, dict):
@@ -655,6 +672,30 @@ def _check_reading(r: dict, tag: str, factors: dict[str, dict], explanation_ids:
                             "reporting)")
         all_queries.update(q.strip() for q in queries)
         reused = item.get("reused")
+        if stricter and isinstance(reused, list):
+            quoted = {q.strip() for q in queries
+                      if any(isinstance(x, str) and q.strip().lower() in x.lower() for x in reused)}
+            own = [q.strip() for q in queries if q.strip() not in quoted]
+            if len(reused) > 1:
+                problems.append(f"{itag}: at most one search may be borrowed from another record; run "
+                                f"another aimed at this one instead of a second reused line")
+        else:
+            own = [q.strip() for q in queries]
+        if stricter:
+            if not own:
+                problems.append(f"{itag}: every record needs at least one search run for it alone; this "
+                                "one borrows all of its searches")
+            for q in own:
+                owners.setdefault(q, []).append(rec if isinstance(rec, str) else f"item {i}")
+            if isinstance(reused, list):
+                for line in reused:
+                    if not isinstance(line, str):
+                        continue
+                    named = [q for q in queries if q.strip() and q.strip().lower() in line.lower()]
+                    if named:
+                        rest = line.lower().replace(max(named, key=len).strip().lower(), " ")
+                        reason = re.sub(r"\s+", " ", rest.split(":", 1)[-1]).strip()
+                        reasons.setdefault(reason, []).append(rec if isinstance(rec, str) else f"item {i}")
         if reused is not None:
             if not isinstance(reused, list) or any(not isinstance(x, str) or not x.strip() for x in reused):
                 problems.append(f"{itag}: 'reused' lists the searches first run for another record, each a line "
@@ -672,6 +713,9 @@ def _check_reading(r: dict, tag: str, factors: dict[str, dict], explanation_ids:
                     if len(words) < REUSED_REASON_WORDS:
                         problems.append(f"{itag}: the reused search {max(named, key=len).strip()[:60]!r} carries no "
                                         "reason; say in one line why it bears on this record's test")
+
+        if stricter and isinstance(found, str) and found.strip():
+            founds.setdefault(re.sub(r"\s+", " ", found.strip().lower()), []).append(rec if isinstance(rec, str) else f"item {i}")
 
         sources = item.get("sources") or []
         if not isinstance(sources, list) or any(not isinstance(x, str) or not x.strip() for x in sources):
@@ -710,6 +754,22 @@ def _check_reading(r: dict, tag: str, factors: dict[str, dict], explanation_ids:
                                 "was not the reading's to do")
         elif "for_john" in item:
             problems.append(f"{itag}: 'for_john' belongs only to a flagged item")
+
+    if stricter:
+        for q, who in owners.items():
+            if len(who) > 1:
+                problems.append(f"{tag}: the search {q[:60]!r} is listed as run for {', '.join(who)} without a "
+                                "reused line; a search first run for one record is quoted, with a reason, "
+                                "on the others")
+        for reason, who in reasons.items():
+            if len(who) > 1 and reason:
+                problems.append(f"{tag}: the same reason for borrowing a search ({reason[:60]!r}) is given for "
+                                f"{', '.join(who)}; say what is specific to each record's test")
+        for sentence, who in founds.items():
+            if len(who) > 1:
+                problems.append(f"{tag}: the same 'found' sentence ({sentence[:60]!r}...) is given for "
+                                f"{', '.join(who)}; say what was seen for each record, with a title and a "
+                                "date, or that its searches returned nothing relevant")
 
     if not items:
         problems.append(f"{tag}: a reading needs at least one [[item]]")

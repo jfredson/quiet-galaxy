@@ -74,6 +74,8 @@ const description = latestReading
             {latestReading.searches} searches across {latestReading.records_read} record{latestReading.records_read === 1 ? '' : 's'},
             read against the records as they stood that day (<a href={`https://github.com/jfredson/quiet-galaxy/tree/${latestReading.commit_before}`} rel="noopener">this version</a>). The run finished {ranAtLabel(latestReading)}.
             {latestReading.window && <> Window: {latestReading.window}</>}
+            {latestReading.pages_opened && <> Pages opened: {latestReading.pages_opened}</>}
+            {latestReading.limits && <> What it could not see: {latestReading.limits}</>}
             {' '}The record is <code>{latestReading.file}</code>.
           </p>
         </div>

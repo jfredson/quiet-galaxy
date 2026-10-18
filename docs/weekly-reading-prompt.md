@@ -11,7 +11,11 @@ Written 2026-10-16. This is the text the scheduled cloud task (a Claude Code rou
 > 3. If the push to main is refused, the publish command parks the commit on a branch named claude/reading-YYYY-MM-DD and says so; report the branch name and do not retry or look for another route. If that push is refused too, put the reading record's contents in your final report and stop.
 > 4. Finish with the report format the procedure specifies: a short numbered list, John's action items first. No prose beyond that.
 >
-> Get the date in John's time zone first (`TZ=America/Los_Angeles date +%F`); all dates you write are absolute, year-month-day. Web search is your main tool; use it for every record. Plain language throughout, and never a bare id: every publication id carries the paper's first author and year in words beside it.
+> Get the date in John's time zone first (`TZ=America/Los_Angeles date +%F`); all dates you write are absolute, year-month-day. Web search finds and WebFetch opens: use WebSearch to find candidates and the arXiv listing the procedure names to see what was submitted in the window, and use WebFetch to open the page behind anything you write down (a title, a date, a number). If a page will not open, say so in the record's `pages_opened` and `limits` lines and write only what the search extract shows, labelled as such; never write as if you had read a page you did not open. Do not edit scripts, tests, the site or documents; if a test fails for a reason the reading did not cause, the procedure says to park the reading on a branch and report. Plain language throughout, and never a bare id: every publication id carries the paper's first author and year in words beside it.
+
+## What the routine holds (revised 2026-10-18)
+
+The text above is the copy in this repository. The routine itself holds its own copy of the prompt (visible with `RemoteTrigger` `get`), and the routine reads the procedure fresh from the repository at every run, so a change to `docs/weekly-reading.md` needs no change to the routine. A change to the prompt does: on 2026-10-18 only the sentence beginning "Web search finds and WebFetch opens" (the last paragraph of the quoted prompt) is new, and until John pastes it into the routine's prompt at claude.ai/code/routines the routine still says "Web search is your main tool; use it for every record." in that place. The procedure carries the same instruction in its own words (steps 0 and 1), so the run is covered either way.
 
 ## How the routine was created
 

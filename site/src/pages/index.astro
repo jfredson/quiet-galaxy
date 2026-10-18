@@ -76,7 +76,7 @@ const SHORT: Record<string, string> = {
         <span class="strip-dot" aria-hidden="true"></span>
         {latestReading ? (
           <span>
-            Last checked {longDate(latestReading.date)}: {readingSummary(latestReading)}{loneMover ? <>: <a href={loneMover.path}>{loneMover.name}</a></> : ''}.
+            Last checked {longDate(latestReading.date)}{!latestReading.pages_opened && ', by a news-style web search of the window (the preprint listing was not checked)'}: {readingSummary(latestReading)}{loneMover ? <>: <a href={loneMover.path}>{loneMover.name}</a></> : ''}.
             {' '}<a href="/reading/">See the week's reading</a>.
             {latestReading.run_by === 'hand' && <span class="strip-test">This one was run by hand, before the weekly task started.</span>}
           </span>
