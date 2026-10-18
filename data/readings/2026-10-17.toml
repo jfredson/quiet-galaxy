@@ -1,0 +1,484 @@
+# The weekly reading of 2026-10-17 (docs/weekly-reading.md). Written once and never edited.
+
+id = "2026-10-17"
+date = 2026-10-17
+ran_at = "2026-10-18T02:10:44Z"
+run_by = "scheduled"
+window = "The day since the first reading (2026-10-16, which ran at 2026-10-17T03:44:50Z): searches asked for 2026-10-16 to 2026-10-17, and the results were also checked against the log as it stood on 2026-10-17."
+records_read = 39
+searches = 27
+commit_before = "13401ab"
+
+[[item]]
+record = "star-formation"
+verdict = "quiet"
+queries = [
+  "Milky Way star formation rate new measurement October 2026",
+  "Milky Way star formation history rate Gaia aluminium-26 gamma-ray 2026 stars per year",
+]
+found = "No new measurement of the Milky Way's star-formation rate in the window. The Herschel result of 2.0 plus or minus 0.7 solar masses a year (2022) and the aluminium-26 estimate already in the log are the newest numbers found; nothing falls outside one to twenty stars a year."
+
+[[item]]
+record = "planets"
+verdict = "quiet"
+queries = [
+  "fraction of stars with planets survey red dwarfs occurrence rate arXiv October 2026",
+  "Gaia astrometry planet census frequency of stars with planets new catalogue 2026",
+]
+found = "No new survey counting planets around a large sample of stars in the window. Gaia's fourth data release, which will carry the first giant-planet census, is scheduled for December 2026, so it is a plan and not a result; the red-dwarf occurrence papers that came back are from 2022 and 2023."
+
+[[item]]
+record = "habitable-planets"
+verdict = "quiet"
+queries = [
+  "habitable zone Earth-sized planets per star eta-Earth new estimate TESS Kepler Gaia October 2026",
+  "K2-18b TRAPPIST-1 atmosphere JWST new result October 2026",
+]
+found = "No new count of habitable-zone rocky planets per star in the window. On atmospheres, the K2-18 b papers found (March and July 2026 preprints) favour a hazy hydrogen-rich atmosphere and call the dimethyl sulfide signal not robust, all before the window; nothing in the window."
+
+[[item]]
+record = "life"
+verdict = "quiet"
+queries = [
+  "second origin of life evidence biosignature Mars Enceladus Europa October 2026",
+  "origin of life self-replicating RNA laboratory demonstration new paper October 2026",
+  "K2-18b TRAPPIST-1 atmosphere JWST new result October 2026",
+]
+reused = [
+  "\"K2-18b TRAPPIST-1 atmosphere JWST new result October 2026\" was first run for habitable-planets: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "No second origin of life and no biosignature confirmed in the window. A report of potential biosignatures on a rocky habitable-zone planet 40 light-years away (dated 2026-07-25, from a single secondary source, not found on NASA's pages) is before the window and unconfirmed, so it is not counted; no laboratory step in the window either."
+
+[[item]]
+record = "intelligence"
+verdict = "quiet"
+queries = [
+  "complex life origin fossil record eukaryotes animals earliest new discovery October 2026",
+  "animal tool use cumulative culture intelligence evolution independent lineages new study October 2026",
+]
+found = "No second example of complex life and no new fossil timeline in the window. The newest items found (a May 2026 McGill and UC Santa Barbara study on early eukaryotes in shallow oxygenated water; late-May 2026 Ediacaran fossils from Canada's Northwest Territories) are before the window, give no number for how often intelligence follows from life, and are not logged."
+
+[[item]]
+record = "detectable"
+verdict = "quiet"
+queries = [
+  "technosignature search results Breakthrough Listen SETI new paper October 2026",
+  "SETI search announcement alien signal candidate astronomers October 17 2026",
+]
+found = "No detection and no argument isolating this factor in the window. The Breakthrough Listen papers that came back (Painter and others, 2025; the FAST search toward 3I/ATLAS, 2026) are older and bound the product of the factors, which the test says does not move this range on its own."
+
+[[item]]
+record = "lifetime"
+verdict = "quiet"
+queries = [
+  "Fermi paradox new paper civilization lifetime existential risk estimate October 2026",
+  "nuclear war risk pandemic AI existential risk assessment civilization collapse new study October 2026",
+]
+found = "Nothing new inside the window. The Lancet Commission on 21st Century Global Threats to Health (launched 2026-10-11, so before the window) names malicious use of AI and nuclear conflict as the two extinction-level threats and rates both unlikely, but gives no number for how long a technological civilisation lasts, so it falls short of this piece's test. Rahvar and Rouhani (2026-02-24) is already in the log."
+
+[[item]]
+record = "complex-cells-are-rare"
+verdict = "quiet"
+queries = [
+  "complex life origin fossil record eukaryotes animals earliest new discovery October 2026",
+  "second origin of life evidence biosignature Mars Enceladus Europa October 2026",
+]
+reused = [
+  "\"complex life origin fossil record eukaryotes animals earliest new discovery October 2026\" was first run for intelligence: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+  "\"second origin of life evidence biosignature Mars Enceladus Europa October 2026\" was first run for life: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "great-filter-behind-us"
+verdict = "quiet"
+queries = [
+  "second origin of life evidence biosignature Mars Enceladus Europa October 2026",
+  "origin of life self-replicating RNA laboratory demonstration new paper October 2026",
+]
+reused = [
+  "\"second origin of life evidence biosignature Mars Enceladus Europa October 2026\" was first run for life: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+  "\"origin of life self-replicating RNA laboratory demonstration new paper October 2026\" was first run for life: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "hostile-galaxy"
+verdict = "quiet"
+queries = [
+  "gamma-ray burst supernova mass extinction habitability galaxy new study October 2026",
+  "technosignature search results Breakthrough Listen SETI new paper October 2026",
+]
+reused = [
+  "\"technosignature search results Breakthrough Listen SETI new paper October 2026\" was first run for detectable: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "No new gamma-ray-burst rate, no new link of an Earth extinction to a burst, and nothing from the inner galaxy in the window. Only older burst-habitability papers came back."
+
+[[item]]
+record = "no-paradox-just-wide-ranges"
+verdict = "quiet"
+queries = [
+  "second origin of life evidence biosignature Mars Enceladus Europa October 2026",
+  "origin of life self-replicating RNA laboratory demonstration new paper October 2026",
+  "rocky exoplanet atmosphere detected habitable zone JWST oxygen biosignature news October 2026",
+]
+reused = [
+  "\"second origin of life evidence biosignature Mars Enceladus Europa October 2026\" was first run for life: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+  "\"origin of life self-replicating RNA laboratory demonstration new paper October 2026\" was first run for life: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "rare-earth"
+verdict = "quiet"
+queries = [
+  "rocky exoplanet atmosphere detected habitable zone JWST oxygen biosignature news October 2026",
+  "plate tectonics rocky exoplanets large moon climate stability new study October 2026",
+  "K2-18b TRAPPIST-1 atmosphere JWST new result October 2026",
+]
+reused = [
+  "\"rocky exoplanet atmosphere detected habitable zone JWST oxygen biosignature news October 2026\" was first run for no-paradox-just-wide-ranges: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+  "\"K2-18b TRAPPIST-1 atmosphere JWST new result October 2026\" was first run for habitable-planets: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "rare-intelligence"
+verdict = "quiet"
+queries = [
+  "animal tool use cumulative culture intelligence evolution independent lineages new study October 2026",
+  "technosignature search results Breakthrough Listen SETI new paper October 2026",
+]
+reused = [
+  "\"animal tool use cumulative culture intelligence evolution independent lineages new study October 2026\" was first run for intelligence: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+  "\"technosignature search results Breakthrough Listen SETI new paper October 2026\" was first run for detectable: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "rare-life"
+verdict = "quiet"
+queries = [
+  "second origin of life evidence biosignature Mars Enceladus Europa October 2026",
+  "origin of life self-replicating RNA laboratory demonstration new paper October 2026",
+  "Europa Clipper Enceladus ocean habitability energy new result October 2026",
+]
+reused = [
+  "\"second origin of life evidence biosignature Mars Enceladus Europa October 2026\" was first run for life: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+  "\"origin of life self-replicating RNA laboratory demonstration new paper October 2026\" was first run for life: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "rare-technology"
+verdict = "quiet"
+queries = [
+  "animal tool use cumulative culture intelligence evolution independent lineages new study October 2026",
+  "technosignature search results Breakthrough Listen SETI new paper October 2026",
+]
+reused = [
+  "\"animal tool use cumulative culture intelligence evolution independent lineages new study October 2026\" was first run for intelligence: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+  "\"technosignature search results Breakthrough Listen SETI new paper October 2026\" was first run for detectable: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "we-are-early"
+verdict = "quiet"
+queries = [
+  "K2-18b TRAPPIST-1 atmosphere JWST new result October 2026",
+  "grabby civilizations OR large-scale engineering galaxies survey search paper October 2026",
+]
+reused = [
+  "\"K2-18b TRAPPIST-1 atmosphere JWST new result October 2026\" was first run for habitable-planets: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "berserkers"
+verdict = "quiet"
+queries = [
+  "Earth-Moon Lagrange points asteroid search artificial probe Lunar surface anomaly survey October 2026",
+  "interstellar object 3I/ATLAS artificial or natural new analysis October 2026",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "civilisations-burn-out"
+verdict = "quiet"
+queries = [
+  "nuclear war risk pandemic AI existential risk assessment civilization collapse new study October 2026",
+  "Dyson sphere waste heat infrared survey candidates new study October 2026",
+]
+reused = [
+  "\"nuclear war risk pandemic AI existential risk assessment civilization collapse new study October 2026\" was first run for lifetime: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "No atmosphere carrying industrial traces and no collapse model in the window. The Lancet Commission report of 2026-10-11 lists climate change among its 17 threats but is a health-risk ranking for Earth, not a model of coupled civilisation and planet, so it does not meet the test."
+
+[[item]]
+record = "great-filter-ahead"
+verdict = "quiet"
+queries = [
+  "second origin of life evidence biosignature Mars Enceladus Europa October 2026",
+  "Europa Clipper Enceladus ocean habitability energy new result October 2026",
+]
+reused = [
+  "\"second origin of life evidence biosignature Mars Enceladus Europa October 2026\" was first run for life: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+  "\"Europa Clipper Enceladus ocean habitability energy new result October 2026\" was first run for rare-life: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "natural-catastrophes"
+verdict = "quiet"
+queries = [
+  "gamma-ray burst supernova mass extinction habitability galaxy new study October 2026",
+  "nuclear war risk pandemic AI existential risk assessment civilization collapse new study October 2026",
+]
+reused = [
+  "\"gamma-ray burst supernova mass extinction habitability galaxy new study October 2026\" was first run for hostile-galaxy: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+  "\"nuclear war risk pandemic AI existential risk assessment civilization collapse new study October 2026\" was first run for lifetime: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "No new count of civilisation-ending natural events in the window. The searches turned up only older gamma-ray-burst work (Li and Zhang, 2015; Quintana and others, 2025 is already in the log) and no new geological link of an extinction to an astronomical cause."
+
+[[item]]
+record = "self-destruction"
+verdict = "quiet"
+queries = [
+  "nuclear war risk pandemic AI existential risk assessment civilization collapse new study October 2026",
+  "Dyson sphere waste heat infrared survey candidates new study October 2026",
+]
+reused = [
+  "\"nuclear war risk pandemic AI existential risk assessment civilization collapse new study October 2026\" was first run for lifetime: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+  "\"Dyson sphere waste heat infrared survey candidates new study October 2026\" was first run for civilisations-burn-out: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window shows a civilisation that ended or a newly cheap, uncontrollable technology. The Lancet Commission report (launched 2026-10-11, before the window) rates nuclear conflict and malicious AI as extinction-level but unlikely, an assessment of our own risks and not new evidence about other worlds, so nothing is logged."
+
+[[item]]
+record = "ships-in-the-night"
+verdict = "quiet"
+queries = [
+  "Fermi paradox new paper civilization lifetime existential risk estimate October 2026",
+  "technosignature search results Breakthrough Listen SETI new paper October 2026",
+]
+reused = [
+  "\"Fermi paradox new paper civilization lifetime existential risk estimate October 2026\" was first run for lifetime: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+  "\"technosignature search results Breakthrough Listen SETI new paper October 2026\" was first run for detectable: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "aestivation"
+verdict = "quiet"
+queries = [
+  "Dyson sphere waste heat infrared survey candidates new study October 2026",
+  "grabby civilizations OR large-scale engineering galaxies survey search paper October 2026",
+]
+reused = [
+  "\"Dyson sphere waste heat infrared survey candidates new study October 2026\" was first run for civilisations-burn-out: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+  "\"grabby civilizations OR large-scale engineering galaxies survey search paper October 2026\" was first run for we-are-early: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "dark-forest"
+verdict = "quiet"
+queries = [
+  "Dyson sphere waste heat infrared survey candidates new study October 2026",
+  "technosignature search results Breakthrough Listen SETI new paper October 2026",
+]
+reused = [
+  "\"Dyson sphere waste heat infrared survey candidates new study October 2026\" was first run for civilisations-burn-out: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+  "\"technosignature search results Breakthrough Listen SETI new paper October 2026\" was first run for detectable: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "everyone-listens-nobody-transmits"
+verdict = "quiet"
+queries = [
+  "technosignature search results Breakthrough Listen SETI new paper October 2026",
+  "SETI search announcement alien signal candidate astronomers October 17 2026",
+]
+reused = [
+  "\"technosignature search results Breakthrough Listen SETI new paper October 2026\" was first run for detectable: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+  "\"SETI search announcement alien signal candidate astronomers October 17 2026\" was first run for detectable: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "expansion-stalls"
+verdict = "quiet"
+queries = [
+  "grabby civilizations OR large-scale engineering galaxies survey search paper October 2026",
+  "SETI search announcement alien signal candidate astronomers October 17 2026",
+]
+reused = [
+  "\"grabby civilizations OR large-scale engineering galaxies survey search paper October 2026\" was first run for we-are-early: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+  "\"SETI search announcement alien signal candidate astronomers October 17 2026\" was first run for detectable: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "interstellar-travel-impractical"
+verdict = "quiet"
+queries = [
+  "interstellar travel interstellar medium damage probe Breakthrough Starshot study October 2026",
+  "interstellar object 3I/ATLAS artificial or natural new analysis October 2026",
+]
+reused = [
+  "\"interstellar object 3I/ATLAS artificial or natural new analysis October 2026\" was first run for berserkers: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "inward-turn"
+verdict = "quiet"
+queries = [
+  "Dyson sphere waste heat infrared survey candidates new study October 2026",
+  "black hole primordial or anomalous formation computation limits civilization technological singularity paper October 2026",
+]
+reused = [
+  "\"Dyson sphere waste heat infrared survey candidates new study October 2026\" was first run for civilisations-burn-out: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "life-under-ice"
+verdict = "quiet"
+queries = [
+  "Europa Clipper Enceladus ocean habitability energy new result October 2026",
+  "second origin of life evidence biosignature Mars Enceladus Europa October 2026",
+]
+reused = [
+  "\"Europa Clipper Enceladus ocean habitability energy new result October 2026\" was first run for rare-life: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+  "\"second origin of life evidence biosignature Mars Enceladus Europa October 2026\" was first run for life: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "listening-the-wrong-way"
+verdict = "quiet"
+queries = [
+  "fast radio burst or narrowband radio technosignature galactic plane survey transient new October 2026",
+  "technosignature search results Breakthrough Listen SETI new paper October 2026",
+]
+reused = [
+  "\"technosignature search results Breakthrough Listen SETI new paper October 2026\" was first run for detectable: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "no-interest-in-contact"
+verdict = "quiet"
+queries = [
+  "technosignature search results Breakthrough Listen SETI new paper October 2026",
+  "SETI search announcement alien signal candidate astronomers October 17 2026",
+]
+reused = [
+  "\"technosignature search results Breakthrough Listen SETI new paper October 2026\" was first run for detectable: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+  "\"SETI search announcement alien signal candidate astronomers October 17 2026\" was first run for detectable: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "not-looked-long-enough"
+verdict = "quiet"
+queries = [
+  "technosignature search results Breakthrough Listen SETI new paper October 2026",
+  "fast radio burst or narrowband radio technosignature galactic plane survey transient new October 2026",
+]
+reused = [
+  "\"technosignature search results Breakthrough Listen SETI new paper October 2026\" was first run for detectable: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+  "\"fast radio burst or narrowband radio technosignature galactic plane survey transient new October 2026\" was first run for listening-the-wrong-way: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "planetarium"
+verdict = "quiet"
+queries = [
+  "Voyager heliopause measurements anomaly edge of solar system boundary new result 2026",
+  "SETI search announcement alien signal candidate astronomers October 17 2026",
+]
+reused = [
+  "\"SETI search announcement alien signal candidate astronomers October 17 2026\" was first run for detectable: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "shouting-is-costly"
+verdict = "quiet"
+queries = [
+  "fast radio burst or narrowband radio technosignature galactic plane survey transient new October 2026",
+  "technosignature search results Breakthrough Listen SETI new paper October 2026",
+]
+reused = [
+  "\"fast radio burst or narrowband radio technosignature galactic plane survey transient new October 2026\" was first run for listening-the-wrong-way: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+  "\"technosignature search results Breakthrough Listen SETI new paper October 2026\" was first run for detectable: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "simulation"
+verdict = "quiet"
+queries = [
+  "simulation hypothesis OR computational limits universe discrete spacetime experiment October 2026",
+  "black hole primordial or anomalous formation computation limits civilization technological singularity paper October 2026",
+]
+reused = [
+  "\"black hole primordial or anomalous formation computation limits civilization technological singularity paper October 2026\" was first run for inward-turn: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "they-are-already-here"
+verdict = "quiet"
+queries = [
+  "interstellar object 3I/ATLAS artificial or natural new analysis October 2026",
+  "Earth-Moon Lagrange points asteroid search artificial probe Lunar surface anomaly survey October 2026",
+]
+reused = [
+  "\"interstellar object 3I/ATLAS artificial or natural new analysis October 2026\" was first run for berserkers: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+  "\"Earth-Moon Lagrange points asteroid search artificial probe Lunar surface anomaly survey October 2026\" was first run for berserkers: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "they-became-machines"
+verdict = "quiet"
+queries = [
+  "Dyson sphere waste heat infrared survey candidates new study October 2026",
+  "black hole primordial or anomalous formation computation limits civilization technological singularity paper October 2026",
+]
+reused = [
+  "\"Dyson sphere waste heat infrared survey candidates new study October 2026\" was first run for civilisations-burn-out: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+  "\"black hole primordial or anomalous formation computation limits civilization technological singularity paper October 2026\" was first run for inward-turn: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "transcension"
+verdict = "quiet"
+queries = [
+  "black hole primordial or anomalous formation computation limits civilization technological singularity paper October 2026",
+  "Dyson sphere waste heat infrared survey candidates new study October 2026",
+]
+reused = [
+  "\"black hole primordial or anomalous formation computation limits civilization technological singularity paper October 2026\" was first run for inward-turn: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+  "\"Dyson sphere waste heat infrared survey candidates new study October 2026\" was first run for civilisations-burn-out: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."
+
+[[item]]
+record = "zoo-hypothesis"
+verdict = "quiet"
+queries = [
+  "Earth-Moon Lagrange points asteroid search artificial probe Lunar surface anomaly survey October 2026",
+  "SETI search announcement alien signal candidate astronomers October 17 2026",
+]
+reused = [
+  "\"Earth-Moon Lagrange points asteroid search artificial probe Lunar surface anomaly survey October 2026\" was first run for berserkers: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+  "\"SETI search announcement alien signal candidate astronomers October 17 2026\" was first run for detectable: its topic is the same kind of evidence this piece names in its test, so the same results answer it",
+]
+found = "Nothing in the window (2026-10-16 to 2026-10-17) bears on this piece's test: no result of the kind it names was found, and the older items that came back are either already in the log or are plans, preprints before the window or press claims with no paper behind them."

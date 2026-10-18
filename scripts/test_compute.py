@@ -312,8 +312,9 @@ class TheReading(unittest.TestCase):
     def test_the_first_reading_passes(self):
         loaded = compute.load_records(DATA)
         readings = [r for r in loaded["records"] if r["_kind"] == "reading"]
-        self.assertEqual([r["id"] for r in readings], ["2026-10-16"])
-        self.assertEqual(readings[0]["records_read"], len(readings[0]["item"]))
+        self.assertEqual([r["id"] for r in readings][0], "2026-10-16")
+        for r in readings:
+            self.assertEqual(r["records_read"], len(r["item"]))
         self.assertEqual(problems_for(DATA), [])
 
     def test_unknown_verdict_is_refused(self):

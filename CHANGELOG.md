@@ -2,6 +2,10 @@
 
 Every change to a range, a record, the method or the site, with absolute dates. Newest first. A range change always says which publication moved it and by how much.
 
+## 2026-10-17 (weekly reading)
+
+Weekly reading (scheduled task, 2026-10-17): 39 records read, 0 ranges moved, 0 logged, 0 flagged for John; record at data/readings/2026-10-17.toml. Nothing in the one-day window bore on any test; the headline did not move.
+
 ## 2026-10-17 (every open claim checked against a source)
 
 John ruled on 2026-10-17, for every project: nothing should be "from memory"; everything must be verified and sourced; a fact that cannot be sourced is removed from the record rather than shown as unverified; and nothing is promoted (the introducing essay, a public post) while entries stay open. This is the pass that applied it to the 27 open claims in 23 records. Done on a branch by a session reporting to the master session, not on main, because the weekly reading pushes to main on Saturdays at 19:00 Pacific. **No range, shape, status or test line was changed, and the headline did not move** (middle estimate 0.021, 58% alone in the galaxy, 39% in the observable universe; only the count of open factor claims in the headline file fell from 7 to 1). 25 of the 27 are closed; 2 wait on books John ordered on 2026-10-17.
