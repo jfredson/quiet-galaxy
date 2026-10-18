@@ -9,6 +9,7 @@
 // adapted: four verdicts, items grouped under the seven pieces and then the three families.
 import Base from '../../layouts/Base.astro';
 import { records, longDate, symbolHtml } from '../../lib/records';
+import { datedPosts, postPath } from '../../lib/news';
 import {
   readings, latestReading, waitingOnMe, readingCounts, verdictLabel, verdictMeaning, readingSummary,
   plainCount, ranAtLabel, runByLabel, VERDICT_ORDER, type Reading, type ReadingItem,
@@ -34,6 +35,9 @@ const groups = latestReading ? groupItems(latestReading) : [];
 const description = latestReading
   ? `The Quiet Galaxy's weekly reading of its records against the news: ${readingSummary(latestReading)} on ${longDate(latestReading.date)}. Every record read, what was searched, what was found, and the verdict.`
   : "The Quiet Galaxy's weekly reading of its records against the news. The first reading has not run yet.";
+
+const newsPosts = await datedPosts();
+const postFor = (recordId: string) => newsPosts.find((p) => p.data.records.includes(recordId)) ?? null; // rule 4.14
 ---
 
 <Base title="This week's reading · The Quiet Galaxy" description={description}>
@@ -124,6 +128,9 @@ const description = latestReading
                 )}
                 {item.picked_up && (
                   <p class="card-john dim">Taken off my list on {item.picked_up.on}, by {item.picked_up.how}.</p>
+                )}
+                {item.picked_up && postFor(item.record) && (
+                  <p class="card-john">In the news: <a href={postPath(postFor(item.record)!)}>{postFor(item.record)!.data.title}</a>.</p>
                 )}
                 <div class="card-foot">
                   {item.publications.length > 0 && (
