@@ -17,7 +17,7 @@ sources:
 
 ## What happened
 
-On 17 October 2026 an outside model, Google's Gemini 3.1 Pro, was asked to argue with every one of the seven ranges under the site's review protocol, and filed twenty items; John ruled on all of them the same day, accepting every recommended ruling ([the rulings](https://github.com/jfredson/quiet-galaxy/blob/main/docs/reviews/2026-10-17-rulings.md)). One item changed a number. The [first weekly reading](/reading/), on 16 October, had found a 2023 measurement from the gamma-ray glow of radioactive aluminium that works out to 8 to 16 stars born in the galaxy each year, above the top of the range, which was 10; the range was held until the review could weigh it. The review recommended raising the top to 20, and John accepted.
+On 17 October 2026 an outside reviewer was asked to argue with every one of the seven ranges under the site's review protocol, and filed twenty items; John ruled on all of them the same day, accepting every recommended ruling ([the rulings](https://github.com/jfredson/quiet-galaxy/blob/main/docs/reviews/2026-10-17-rulings.md)). One item changed a number. The [first weekly reading](/reading/), on 16 October, had found a 2023 measurement from the gamma-ray glow of radioactive aluminium that works out to 8 to 16 stars born in the galaxy each year, above the top of the range, which was 10; the range was held until the review could weigh it. The review recommended raising the top to 20, and John accepted.
 
 ## What it changes here
 
