@@ -2,6 +2,14 @@
 
 Every change to a range, a record, the method or the site, with absolute dates. Newest first. A range change always says which publication moved it and by how much.
 
+## 2026-10-20 (four papers read in full against the record)
+
+Four papers bought for the record were read in full against the records that cite them, by a session reporting to the master session; the papers stay private and only short phrases are used. **No range, shape, status or test line was changed, and the headline did not move.** Nothing was posted or shared about them, since the two records they serve are still open.
+- Hurowitz and others 2025 (the Cheyava Falls rock on Mars): the finding said the team found no strong evidence for a route without life; the paper says organic compounds could have made the iron minerals without life at low temperature, and that the hard part for a route without life is the iron sulfide, which would need strong heating or a volcanic source of sulfide, neither seen. Corrected, with the paper's own meaning of "potential biosignature". The unsourced closing sentence about the sample is replaced by a sourced one (Congress declined to fund Mars Sample Return for 2026). No record says "evidence of life" about the rock.
+- Bernabeu and others 2026 (where the genes of the first complex cell came from): the percentages are right. The finding now gives the genome counts, says the timing is relative with no dates, and states the paper's own limit that it cannot name the host.
+- The complex-cells explanation now gives both gene-based readings of the merger: Betts and others 2018 (a quick origin driven by the mitochondrion, dated about 2.05 to 1.21 billion years ago) and Bernabeu and others 2026 (a gradual process with several partners). Its date range was already right.
+- Ozaki and Reinhard 2021 (how long Earth's oxygen-rich air lasts): 1.08 billion years, give or take 0.14, is borne out; the note in the rare-life explanation now says what the number measures and what drives it. The page text is unchanged.
+
 ## 2026-10-19 (the news posts rewritten as stories)
 
 John ruled on 2026-10-19 that every news post on every tracker site is a short story for a reader who has never seen the site (tracker pattern rule 4.19). Both live posts are rewritten to it on a branch, for John to read before anything goes live: the opener is now "Start here: is anyone out there, and how this site keeps count", and the star-formation post "Our galaxy may make more new stars than I allowed for, and it barely changes the answer". Addresses, dates and records are unchanged and **no figure changed**; one sentence in the star-formation post (that 58.8 to 58.0 percent is "inside the day-to-day noise") is dropped because the record does not support it. The plain reading pass, the cold-reader check, the opener's full source list and the items for John are in `docs/news/2026-10-19-rewrites.md`. Both preview cards redrawn.
