@@ -31,4 +31,4 @@ Doubling the top of one range moved the answer by less than one point, and that 
 
 It does not mean the galaxy has more civilisations in it than it did before. A range on this site is a statement about what the published work supports, and this one got wider. Nor does it mean the review found the other six ranges right. It argued with each of them, and I declined the other changes it proposed, several because they would have let one paper's outer limit carry a large share of the whole answer ([the rulings](https://github.com/jfredson/quiet-galaxy/blob/main/docs/reviews/2026-10-17-rulings.md)).
 
-*Rewritten on 19 October 2026 so that a reader new to the site can follow it; no figure changed ([the earlier version](https://github.com/jfredson/quiet-galaxy/blob/db3ede5/site/src/content/news/2026-10-18-the-star-formation-range-widens.md)).*
+*I rewrote this post on 19 October 2026 so that a reader new to the site can follow it; no figure changed ([the earlier version](https://github.com/jfredson/quiet-galaxy/blob/db3ede5/site/src/content/news/2026-10-18-the-star-formation-range-widens.md)).*

@@ -62,4 +62,4 @@ On the calendar, the European Space Agency's [Gaia mission](https://www.esa.int/
 
 *Every fact in this post links to its source in the sentence that states it, checked on 19 October 2026; the full list, with the page or file each figure comes from, is [in the site's repository](https://github.com/jfredson/quiet-galaxy/blob/main/docs/news/2026-10-19-rewrites.md#sources-for-the-start-here-post).*
 
-*Rewritten on 19 October 2026 so that a reader new to the site can follow it; no figure changed ([the earlier version](https://github.com/jfredson/quiet-galaxy/blob/db3ede5/site/src/content/news/2026-10-18-start-here.md)).*
+*I rewrote this post on 19 October 2026 so that a reader new to the site can follow it; no figure changed ([the earlier version](https://github.com/jfredson/quiet-galaxy/blob/db3ede5/site/src/content/news/2026-10-18-start-here.md)).*
