@@ -1,5 +1,5 @@
 # Publication record. Layout in docs/record-schema.md. Logged on 2026-10-17 after the outside review of the
-# seven ranges (docs/reviews/2026-10-17-rulings.md; ruled by John the same day). Append-only.
+# seven ranges (docs/reviews/2026-10-17-rulings.md; I ruled the same day). Append-only.
 
 id = "hsu-2019"
 date = "2019-08-14"
@@ -18,4 +18,4 @@ factors = ["habitable-planets"]
 explanations = []
 moved_range = false
 
-notes = "Logged 2026-10-17 on the outside review's item 8 (accepted by John). The reviewer's 'about 0.2' is a fair summary but not the paper's statement; the figures above are the abstract's own, checked on 2026-10-17 against the arXiv record."
+notes = "Logged 2026-10-17 on the outside review's item 8 (I accepted). The reviewer's 'about 0.2' is a fair summary but not the paper's statement; the figures above are the abstract's own, checked on 2026-10-17 against the arXiv record."

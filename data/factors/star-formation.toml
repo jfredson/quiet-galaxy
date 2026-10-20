@@ -1,6 +1,6 @@
 # Factor record: R*, how many stars are born in the galaxy each year. Layout in docs/record-schema.md.
-# Written 2026-10-16 (Saturday session A, run early at John's ruling). The outside review of the
-# seven ranges ran on 2026-10-17 and John ruled on it the same day; this range is "reviewed".
+# Written 2026-10-16 (Saturday session A, run early at my ruling). The outside review of the
+# seven ranges ran on 2026-10-17 and I ruled on it the same day; this range is "reviewed".
 
 id = "star-formation"
 symbol = "R*"
@@ -27,7 +27,7 @@ likewise work from the galaxy's star-formation history rather than a single rate
 reviewer's proposal to change the shape to uniform (item 1) was declined because a uniform span from 1
 to 20 puts more than half its weight above 10, where one method sits and five do not, whereas the
 question is still which power of ten (headline with a uniform shape on a scratch copy: 56% alone in
-the galaxy); ruled by John 2026-10-17."""
+the galaxy); decided 2026-10-17."""
 
 [[estimate]]
 who = "Frank Drake and the Green Bank meeting"
@@ -71,7 +71,7 @@ high = 16
 source = "Siegert and others, 'Galactic Population Synthesis of Radioactive Nucleosynthesis Ejecta', Astronomy and Astrophysics 672, A54 (2023) (siegert-2023)"
 link = "https://arxiv.org/abs/2301.10192"
 publication = "siegert-2023"
-method = "Measured the gamma-ray glow of radioactive aluminium made by massive stars across the galaxy and worked back to how fast stars must be forming to keep it topped up; 4 to 8 solar masses of new stars a year (the paper's figure, in solar masses only), which is 8 to 16 stars a year at half a solar mass per star (this site's conversion; Science News's reading of the paper converted it to 10 to 20). One method, and above the several that agree on 1 to 4; added at John's ruling on 2026-10-16 after the first weekly reading found it."
+method = "Measured the gamma-ray glow of radioactive aluminium made by massive stars across the galaxy and worked back to how fast stars must be forming to keep it topped up; 4 to 8 solar masses of new stars a year (the paper's figure, in solar masses only), which is 8 to 16 stars a year at half a solar mass per star (this site's conversion; Science News's reading of the paper converted it to 10 to 20). One method, and above the several that agree on 1 to 4; added at my ruling on 2026-10-16 after the first weekly reading found it."
 
 [[estimate]]
 who = "Alexis Quintana and others"
@@ -80,7 +80,7 @@ value = 1.3
 source = "Quintana and others, 'A census of OB stars within 1 kpc and the star formation and core collapse supernova rates of the Milky Way', Monthly Notices of the Royal Astronomical Society (2025) (quintana-2025)"
 link = "https://arxiv.org/abs/2503.08286"
 publication = "quintana-2025"
-method = "Counted the massive, short-lived stars within about three thousand light years of the Sun and scaled the count to the whole galaxy; 0.67 solar masses a year, which is 1.3 stars a year at half a solar mass per star. Added at John's ruling on 2026-10-16 after the first weekly reading found it."
+method = "Counted the massive, short-lived stars within about three thousand light years of the Sun and scaled the count to the whole galaxy; 0.67 solar masses a year, which is 1.3 stars a year at half a solar mass per star. Added at my ruling on 2026-10-16 after the first weekly reading found it."
 
 [range]
 low = 1
@@ -102,14 +102,14 @@ method, and its authors flag a possible foreground that could make the true figu
 a round step, is used rather than 16. Drake's 1961 value of one star a year is the floor, and the
 2025 census (1.3) sits just above it. Evenly spread across powers of ten, the same shape the 2018
 paper used, because the question is which power of ten, not which digit. The top was 10 until
-2026-10-17, when it rose to 20 (ruled by John 2026-10-17 on the outside review, items 2 and 4)."""
+2026-10-17, when it rose to 20 (decided 2026-10-17 on the outside review, items 2 and 4)."""
 
 [[revision]]
 date = 2026-10-16
 field = "estimate"
 old = "four published estimates"
 new = "six published estimates: the 2023 aluminium-26 measurement (8 to 16 stars a year) and the 2025 massive-star census (1.3 a year) added"
-why = "The weekly reading of 2026-10-16 found two measurements the record did not carry and flagged the range for John. He ruled on 2026-10-16: add both to the estimate list and leave the range's top at 10 until the outside review of the seven ranges."
+why = "The weekly reading of 2026-10-16 found two measurements the record did not carry and flagged the range for me. He ruled on 2026-10-16: add both to the estimate list and leave the range's top at 10 until the outside review of the seven ranges."
 publication = "siegert-2023"
 
 [[revision]]
@@ -117,7 +117,7 @@ date = 2026-10-17
 field = "range.high"
 old = 10
 new = 20
-why = "Ruled by John 2026-10-17 on the outside review (items 2 and 4 of docs/reviews/2026-10-17-rulings.md): the 2023 aluminium-26 measurement gives 8 to 16 stars a year, above the old top of 10, and the weekly reading of 2026-10-16 had flagged the same. The floor of 1 holds (the 2025 census gives 1.3) and the shape stays log-uniform."
+why = "Decided 2026-10-17 on the outside review (items 2 and 4 of docs/reviews/2026-10-17-rulings.md): the 2023 aluminium-26 measurement gives 8 to 16 stars a year, above the old top of 10, and the weekly reading of 2026-10-16 had flagged the same. The floor of 1 holds (the 2025 census gives 1.3) and the shape stays log-uniform."
 publication = "siegert-2023"
 
 [[revision]]
@@ -125,14 +125,14 @@ date = 2026-10-17
 field = "what_would_move_this"
 old = "falls outside one to ten stars a year"
 new = "falls outside one to twenty stars a year"
-why = "Ruled by John 2026-10-17 on the outside review (item 4): the test line names the range's ends, so it follows the top."
+why = "Decided 2026-10-17 on the outside review (item 4): the test line names the range's ends, so it follows the top."
 
 [[revision]]
 date = 2026-10-17
 field = "range.status"
 old = "first-pass"
 new = "reviewed"
-why = "The outside review of the seven ranges ran on 2026-10-17 and John ruled on every item the same day (docs/reviews/2026-10-17-rulings.md)."
+why = "The outside review of the seven ranges ran on 2026-10-17 and I ruled on every item the same day (docs/reviews/2026-10-17-rulings.md)."
 
 [[revision]]
 date = 2026-10-17

@@ -1,5 +1,5 @@
 # Factor record: ne, planets per star that could support life. Layout in docs/record-schema.md.
-# Written 2026-10-16 (Saturday session A, run early at John's ruling). The outside review of the seven ranges ran on 2026-10-17 and John ruled on it
+# Written 2026-10-16 (Saturday session A, run early at my ruling). The outside review of the seven ranges ran on 2026-10-17 and I ruled on it
 # the same day; this range is "reviewed".
 
 id = "habitable-planets"
@@ -23,7 +23,7 @@ stars sit in a 'galactic habitable zone' with enough heavy elements and few enou
 supernovae for complex life; that is a multiplier on this factor rather than an estimate of
 it, and the surveys above count planets without it. The Rare Earth argument (Ward and Brownlee
 2000, ward-2000) is written up as an explanation in its own right; its number is recorded here
-because it is the published pessimistic extreme. Checked 2026-10-16: the 1% to 0.001% is Ward and Brownlee's reading of the ordinary equation, before their further extras (pages 269 to 270; the extras come on page 271), so the range's reason below, which describes the one-in-a-hundred-thousand end as resting on the extras, was written before this was checked and should be revisited at the outside review; the range itself is unchanged. Drake's 1961 range of 1 to 5 was checked on 2026-10-17 against Pearman's 1963 account of the meeting, page 290: 'For the galaxy in general a value for n_e of 1 to 5 was postulated'; the secondary accounts that give a single 2 (Glade and colleagues 2012, Table 1; Scoles and Heatherly 2011) or 'approximately one' (SETI Institute) are other readings of the same meeting. Written 2026-10-16. Outside review, 2026-10-17: the proposal to lower the floor from 0.01 to 0.00001 to match Ward and Brownlee (item 7) was declined and the reason in the range rewritten, as this note had asked; the headline at 0.00001 on a scratch copy was 69% alone in the galaxy against 59%. Ruled by John 2026-10-17."""
+because it is the published pessimistic extreme. Checked 2026-10-16: the 1% to 0.001% is Ward and Brownlee's reading of the ordinary equation, before their further extras (pages 269 to 270; the extras come on page 271), so the range's reason below, which describes the one-in-a-hundred-thousand end as resting on the extras, was written before this was checked and should be revisited at the outside review; the range itself is unchanged. Drake's 1961 range of 1 to 5 was checked on 2026-10-17 against Pearman's 1963 account of the meeting, page 290: 'For the galaxy in general a value for n_e of 1 to 5 was postulated'; the secondary accounts that give a single 2 (Glade and colleagues 2012, Table 1; Scoles and Heatherly 2011) or 'approximately one' (SETI Institute) are other readings of the same meeting. Written 2026-10-16. Outside review, 2026-10-17: the proposal to lower the floor from 0.01 to 0.00001 to match Ward and Brownlee (item 7) was declined and the reason in the range rewritten, as this note had asked; the headline at 0.00001 on a scratch copy was 69% alone in the galaxy against 59%. Decided 2026-10-17."""
 
 [[estimate]]
 who = "Frank Drake and the Green Bank meeting"
@@ -116,7 +116,7 @@ equation, written before any count of habitable-zone planets existed. The Kepler
 overtaken the part of it that counts orbits, and what survives of Rare Earth is the argument about
 extras (a large moon, plate tectonics, a quiet neighbourhood), which is an argument and not a count,
 and which the explanation page carries. Evenly spread across powers of ten, as in the 2018 paper.
-The reason was rewritten on 2026-10-17 (ruled by John 2026-10-17 on the outside review, item 7); the
+The reason was rewritten on 2026-10-17 (decided 2026-10-17 on the outside review, item 7); the
 number was not changed."""
 
 [[revision]]
@@ -132,7 +132,7 @@ date = 2026-10-17
 field = "range.why"
 old = "described the one-in-a-hundred-thousand end as resting on Ward and Brownlee's extras"
 new = "describes Ward and Brownlee's figure as their reading of the ordinary equation (the share of all stars with Earth-like habitats, written before any count of habitable-zone planets), overtaken in its orbit-counting part by the Kepler counts, and keeps the argument about extras as the reason the floor sits at 0.01"
-why = "Ruled by John 2026-10-17 on the outside review (item 7: decline the lower floor, accept the corrected reason); the 2026-10-16 check of pages 269 to 271 of Rare Earth had found the old wording wrong. The range itself is unchanged."
+why = "Decided 2026-10-17 on the outside review (item 7: decline the lower floor, accept the corrected reason); the 2026-10-16 check of pages 269 to 271 of Rare Earth had found the old wording wrong. The range itself is unchanged."
 publication = "ward-2000"
 
 [[revision]]
@@ -140,7 +140,7 @@ date = 2026-10-17
 field = "estimate"
 old = "seven published estimates"
 new = "eight: Hsu, Ford, Ragozzine and Ashby (2019), 0.03 to 0.40 per Sun-like star, added"
-why = "Ruled by John 2026-10-17 on the outside review (item 8): the paper's own planning range, not the reviewer's 'about 0.2'. The range is unchanged."
+why = "Decided 2026-10-17 on the outside review (item 8): the paper's own planning range, not the reviewer's 'about 0.2'. The range is unchanged."
 publication = "hsu-2019"
 
 [[revision]]
@@ -148,7 +148,7 @@ date = 2026-10-17
 field = "range.status"
 old = "first-pass"
 new = "reviewed"
-why = "The outside review of the seven ranges ran on 2026-10-17 and John ruled on every item the same day (docs/reviews/2026-10-17-rulings.md)."
+why = "The outside review of the seven ranges ran on 2026-10-17 and I ruled on every item the same day (docs/reviews/2026-10-17-rulings.md)."
 
 [[revision]]
 date = 2026-10-17

@@ -1,6 +1,6 @@
 # Factor record: fc, the share of intelligent species that make themselves detectable.
 # Layout in docs/record-schema.md. Written 2026-10-16 (Saturday session A, run early at John's
-# ruling). The outside review of the seven ranges ran on 2026-10-17 and John ruled on it
+# ruling). The outside review of the seven ranges ran on 2026-10-17 and I ruled on it
 # the same day; this range is "reviewed".
 
 id = "detectable"
@@ -31,7 +31,7 @@ Cosmos, chapter 12, gives only the product of the intelligence and detectable fa
 hundred, never this factor alone; see the revision below); Forgan and Elvis (2011) is a paper on
 asteroid mining as evidence of aliens and says nothing about Earth being detectable, so it is
 dropped; and the range's reason below still names 'Sagan's one in ten' and should be revisited at
-the outside review (the range is unchanged). Written 2026-10-16. Outside review, 2026-10-17, ruled by John the same day: lowering the floor from 0.01 to 0.0001 (item 15) was accepted only if De Visscher (2020, de-visscher-2020) gives a range reaching 0.0001 for this factor, and the condition was not met, so the floor stays at 0.01. The paper does print 0.0001 to 1, but for a different quantity: the chance that an intelligent biological species goes on to build a machine intelligence able to communicate across space, which the author sets by assuming the extra step is as selective as the first, so that it is the first one squared. For the biological route, this factor's own subject, the paper takes the 2018 paper's 0.01 to 1 as it stands, which is the range used here. The figure is an assumption for a different thing, and it cannot lower the floor of a share that is already counted over either route (at 0.0001 the scratch headline was 65% alone in the galaxy against 59%). If John reads the paper otherwise, the change is one line and a revision. The reviewer's second paper (item 16), Shostak's chapter 12 in the 2015 Cambridge volume, is in the log (shostak-2015) with its figure left out because the chapter could not be read. The test line was reworded to say survey limits are logged but move the range only with an argument that isolates this factor (item 17)."""
+the outside review (the range is unchanged). Written 2026-10-16. Outside review, 2026-10-17, I ruled the same day: lowering the floor from 0.01 to 0.0001 (item 15) was accepted only if De Visscher (2020, de-visscher-2020) gives a range reaching 0.0001 for this factor, and the condition was not met, so the floor stays at 0.01. The paper does print 0.0001 to 1, but for a different quantity: the chance that an intelligent biological species goes on to build a machine intelligence able to communicate across space, which the author sets by assuming the extra step is as selective as the first, so that it is the first one squared. For the biological route, this factor's own subject, the paper takes the 2018 paper's 0.01 to 1 as it stands, which is the range used here. The figure is an assumption for a different thing, and it cannot lower the floor of a share that is already counted over either route (at 0.0001 the scratch headline was 65% alone in the galaxy against 59%). If I read the paper otherwise, the change is one line and a revision. The reviewer's second paper (item 16), Shostak's chapter 12 in the 2015 Cambridge volume, is in the log (shostak-2015) with its figure left out because the chapter could not be read. The test line was reworded to say survey limits are logged but move the range only with an argument that isolates this factor (item 17)."""
 
 [[estimate]]
 who = "Frank Drake and the Green Bank meeting"
@@ -94,14 +94,14 @@ date = 2026-10-17
 field = "what_would_move_this"
 old = "A survey result that bounds how many transmitters or technological signatures could be nearby (the Breakthrough Listen limits), or a published argument with a number on how often technological species stay quiet or go dark."
 new = "A published argument with a number on how often technological species stay quiet or go dark and that isolates this factor; survey limits ... are logged here too, but they bound the product of all seven factors and move this range only together with such an argument."
-why = "Ruled by John 2026-10-17 on the outside review (item 17, accepted in part): the reviewer rightly said a radio search bounds the product of all seven factors and not this one alone, but the line also drives the weekly reading's searches and survey limits are worth logging here, so the survey half stays with that warning."
+why = "Decided 2026-10-17 on the outside review (item 17, accepted in part): the reviewer rightly said a radio search bounds the product of all seven factors and not this one alone, but the line also drives the weekly reading's searches and survey limits are worth logging here, so the survey half stays with that warning."
 
 [[revision]]
 date = 2026-10-17
 field = "estimate"
 old = "three published estimates"
 new = "four: De Visscher (2020), 0.01 to 1 for the biological route, added; Shostak's chapter (2015) logged as a publication without an estimate"
-why = "Ruled by John 2026-10-17 on the outside review (item 16). The figures the reviewer attributed to the two papers could not be confirmed as estimates of this factor: De Visscher's 0.0001 is for the machine route, and Shostak's chapter could not be read. The range is unchanged."
+why = "Decided 2026-10-17 on the outside review (item 16). The figures the reviewer attributed to the two papers could not be confirmed as estimates of this factor: De Visscher's 0.0001 is for the machine route, and Shostak's chapter could not be read. The range is unchanged."
 publication = "de-visscher-2020"
 
 [[revision]]
@@ -109,7 +109,7 @@ date = 2026-10-17
 field = "range.status"
 old = "first-pass"
 new = "reviewed"
-why = "The outside review of the seven ranges ran on 2026-10-17 and John ruled on every item the same day (docs/reviews/2026-10-17-rulings.md)."
+why = "The outside review of the seven ranges ran on 2026-10-17 and I ruled on every item the same day (docs/reviews/2026-10-17-rulings.md)."
 
 [[revision]]
 date = 2026-10-17

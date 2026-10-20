@@ -1,5 +1,5 @@
 # Publication record. Layout in docs/record-schema.md. Logged on 2026-10-17 after the outside review of the
-# seven ranges (docs/reviews/2026-10-17-rulings.md; ruled by John the same day). Append-only.
+# seven ranges (docs/reviews/2026-10-17-rulings.md; I ruled the same day). Append-only.
 
 id = "totani-2020"
 date = "2020-02-03"
@@ -18,4 +18,4 @@ factors = ["life"]
 explanations = ["rare-life"]
 moved_range = false
 
-notes = "Logged 2026-10-17 on the outside review's item 10 (accepted in part by John: a publication record linked from the chance-life-starts factor, kept in that factor's notes and not in its estimate list, because the paper gives a count of stars needed, not a chance). Venue, volume, article number and date checked on 2026-10-17 against Crossref and the arXiv record; the figures are as the factor's notes already described them after the check of 2026-10-16."
+notes = "Logged 2026-10-17 on the outside review's item 10 (I accepted in part: a publication record linked from the chance-life-starts factor, kept in that factor's notes and not in its estimate list, because the paper gives a count of stars needed, not a chance). Venue, volume, article number and date checked on 2026-10-17 against Crossref and the arXiv record; the figures are as the factor's notes already described them after the check of 2026-10-16."

@@ -1,5 +1,5 @@
 # Publication record. Layout in docs/record-schema.md. Logged on 2026-10-17 after the outside review of the
-# seven ranges (docs/reviews/2026-10-17-rulings.md; ruled by John the same day). Append-only.
+# seven ranges (docs/reviews/2026-10-17-rulings.md; I ruled the same day). Append-only.
 
 id = "koonin-2007"
 date = "2007-05-31"
@@ -19,4 +19,4 @@ factors = ["life"]
 explanations = ["rare-life"]
 moved_range = false
 
-notes = "Logged 2026-10-17 on the outside review's item 10 (accepted in part by John: a publication record linked from the chance-life-starts factor, kept in that factor's notes and not in its estimate list, because a chance of one in ten to the 1,018 is not a number the computer can hold). Venue, volume, article number and date checked on 2026-10-17 against Crossref; the figure is as the factor's notes already described it after the check of 2026-10-16."
+notes = "Logged 2026-10-17 on the outside review's item 10 (I accepted in part: a publication record linked from the chance-life-starts factor, kept in that factor's notes and not in its estimate list, because a chance of one in ten to the 1,018 is not a number the computer can hold). Venue, volume, article number and date checked on 2026-10-17 against Crossref; the figure is as the factor's notes already described it after the check of 2026-10-16."
