@@ -20,4 +20,4 @@ factors = ["star-formation", "planets", "habitable-planets", "life", "intelligen
 explanations = []
 moved_range = true
 
-notes = "Founding entry. The project's method and its first-pass ranges start from this paper's Table 1 (log-uniform ranges for six factors and a very wide log-normal for the chance life starts). On 2026-10-16 John ruled that the chance life starts (data/factors/life.toml) takes this paper's shape instead of the first pass's plain low-to-high range, so the paper is named by a revision there and 'moved a range' is true. Figures checked against the paper's text on 2026-10-16."
+notes = "Founding entry. The project's method and its first-pass ranges start from this paper's Table 1 (log-uniform ranges for six factors and a very wide log-normal for the chance life starts). On 2026-10-16 I ruled that the chance life starts (data/factors/life.toml) takes this paper's shape instead of the first pass's plain low-to-high range, so the paper is named by a revision there and 'moved a range' is true. Figures checked against the paper's text on 2026-10-16."

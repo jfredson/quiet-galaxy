@@ -1,6 +1,6 @@
 # Factor record: fl, the share of planets that could support life on which life starts.
 # Layout in docs/record-schema.md. Written 2026-10-16 (Saturday session A, run early at John's
-# ruling). The outside review of the seven ranges ran on 2026-10-17 and John ruled on it
+# ruling). The outside review of the seven ranges ran on 2026-10-17 and I ruled on it
 # the same day; this range is "reviewed".
 
 id = "life"
@@ -45,7 +45,7 @@ dominates, and the evidence is consistent with an arbitrarily low chance) are bo
 Koonin and Totani figures are as described above, which differs from the first draft. The range's
 reason below, written earlier, says Kipping's 'three-to-one' (the paper gives 2.8 to 1) and
 that Koonin and Totani place the chance 'without giving a usable number'; neither changes the
-range, but both should be revisited at the outside review. Written 2026-10-16. Outside review, 2026-10-17, ruled by John the same day: widening the spread from 50 to at least 1,000 powers of ten (item 9) was declined, because Koonin's and Totani's figures bound one mechanism and would, as a spread, put nearly half the weight below one start per observable universe; the engine also cannot draw a spread above about 80 (the draw overflows), which is a limit for the method's own review. Koonin (2007) and Totani (2020) now have records in the publications log (koonin-2007, totani-2020) and are linked from this factor, but stay in these notes and not in the estimate list (item 10), since an estimate here is a number the width can use and a chance of one in ten to the 1,018 is not one. The test line now asks for a second, independent origin (item 11). The reviewer's proposal to add a survey of exoplanets showing life but no technology to this line (item 14) was declined: that bounds the product of this factor, the next and the lifetime, not this one alone."""
+range, but both should be revisited at the outside review. Written 2026-10-16. Outside review, 2026-10-17, I ruled the same day: widening the spread from 50 to at least 1,000 powers of ten (item 9) was declined, because Koonin's and Totani's figures bound one mechanism and would, as a spread, put nearly half the weight below one start per observable universe; the engine also cannot draw a spread above about 80 (the draw overflows), which is a limit for the method's own review. Koonin (2007) and Totani (2020) now have records in the publications log (koonin-2007, totani-2020) and are linked from this factor, but stay in these notes and not in the estimate list (item 10), since an estimate here is a number the width can use and a chance of one in ten to the 1,018 is not one. The test line now asks for a second, independent origin (item 11). The reviewer's proposal to add a survey of exoplanets showing life but no technology to this line (item 14) was declined: that bounds the product of this factor, the next and the lifetime, not this one alone."""
 
 [[estimate]]
 who = "Frank Drake and the Green Bank meeting"
@@ -97,7 +97,7 @@ sources = ["sandberg-2018", "koonin-2007", "totani-2020"]
 why = """
 The widest range in the equation, and the one that most decides the headline, so the reason
 matters most here. The shape is the 2018 paper's (Sandberg, Drexler and Ord, section 3.1),
-which John ruled on 2026-10-16 should be used here: instead of a low and a high for the chance
+which I ruled on 2026-10-16 should be used here: instead of a low and a high for the chance
 itself, the number of times life starts on a habitable planet over its life is given a bell curve
 in its powers of ten, centred on one start per planet and fifty powers of ten wide, and the chance
 is one minus e to the minus that number. Half the weight then sits near 1 (Drake's and Westby and
@@ -115,7 +115,7 @@ date = 2026-10-16
 field = "range.shape"
 old = "every power of ten from 1 in 10 to the 22 up to 1 equally likely"
 new = "a rate centred on one start per planet, spread over fifty orders of magnitude"
-why = "John ruled on 2026-10-16: 'Use the 2018 paper's log-normal rate shape for the chance life starts, adding the third shape to the record layout.' The first pass had used a plain low-to-high range as a stand-in because the layout allowed nothing else; that stand-in put most of the weight on 'life is very rare', where the paper splits the weight evenly between 'life is easy' and 'life is hard'."
+why = "I ruled on 2026-10-16: 'Use the 2018 paper's log-normal rate shape for the chance life starts, adding the third shape to the record layout.' The first pass had used a plain low-to-high range as a stand-in because the layout allowed nothing else; that stand-in put most of the weight on 'life is very rare', where the paper splits the weight evenly between 'life is easy' and 'life is hard'."
 publication = "sandberg-2018"
 
 [[revision]]
@@ -123,14 +123,14 @@ date = 2026-10-17
 field = "what_would_move_this"
 old = "Evidence of life, or of its chemical signatures, anywhere beyond Earth"
 new = "Evidence of a second, independent origin of life (not sharing Earth life's chemistry) or of its chemical signatures anywhere beyond Earth"
-why = "Ruled by John 2026-10-17 on the outside review (item 11): microbes on Mars that share Earth life's chemistry would show only that rocks travel between planets. The factor's own description already said 'a second, independent origin'; the test line now matches it."
+why = "Decided 2026-10-17 on the outside review (item 11): microbes on Mars that share Earth life's chemistry would show only that rocks travel between planets. The factor's own description already said 'a second, independent origin'; the test line now matches it."
 
 [[revision]]
 date = 2026-10-17
 field = "range.sources"
 old = "sandberg-2018"
 new = "sandberg-2018, koonin-2007, totani-2020"
-why = "Ruled by John 2026-10-17 on the outside review (item 10): the two pessimistic papers the range's reason already names now have records in the publications log. The range itself is unchanged."
+why = "Decided 2026-10-17 on the outside review (item 10): the two pessimistic papers the range's reason already names now have records in the publications log. The range itself is unchanged."
 publication = "koonin-2007"
 
 [[revision]]
@@ -138,7 +138,7 @@ date = 2026-10-17
 field = "range.status"
 old = "first-pass"
 new = "reviewed"
-why = "The outside review of the seven ranges ran on 2026-10-17 and John ruled on every item the same day (docs/reviews/2026-10-17-rulings.md)."
+why = "The outside review of the seven ranges ran on 2026-10-17 and I ruled on every item the same day (docs/reviews/2026-10-17-rulings.md)."
 
 [[revision]]
 date = 2026-10-17

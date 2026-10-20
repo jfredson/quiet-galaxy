@@ -1,5 +1,5 @@
 # Publication record. Layout in docs/record-schema.md. Logged on 2026-10-17 after the outside review of the
-# seven ranges (docs/reviews/2026-10-17-rulings.md; ruled by John the same day). Append-only.
+# seven ranges (docs/reviews/2026-10-17-rulings.md; I ruled the same day). Append-only.
 
 id = "zhu-2021"
 date = "2021-03-03"
@@ -20,4 +20,4 @@ factors = ["planets"]
 explanations = []
 moved_range = false
 
-notes = "Logged 2026-10-17 on the outside review's item 6 (accepted in part by John: logged as a publication, added as an estimate if the full text gives the figure). Authors, title, venue, pages and date checked on 2026-10-17 against the arXiv record and Crossref. Read in full 2026-10-17 (arXiv HTML version of 2103.02127): the outside reviewer's statement that the review concludes the share of stars with planets is close to 100 percent is not in the paper and is not made in this record. The paper's first summary point gives about 30 percent of Sun-like stars with inner planets (inside about 1 AU, down to Earth mass), its section 3.1 gives about 10 percent with cold giant planets, and its section 1.1 explains why a planets-per-star figure is not the share of stars with planets. A figure for part of the parameter space is not an estimate of this factor, so none is added. Flagged for John in the changelog: whether the 30 percent belongs in the factor's notes."
+notes = "Logged 2026-10-17 on the outside review's item 6 (I accepted in part: logged as a publication, added as an estimate if the full text gives the figure). Authors, title, venue, pages and date checked on 2026-10-17 against the arXiv record and Crossref. Read in full 2026-10-17 (arXiv HTML version of 2103.02127): the outside reviewer's statement that the review concludes the share of stars with planets is close to 100 percent is not in the paper and is not made in this record. The paper's first summary point gives about 30 percent of Sun-like stars with inner planets (inside about 1 AU, down to Earth mass), its section 3.1 gives about 10 percent with cold giant planets, and its section 1.1 explains why a planets-per-star figure is not the share of stars with planets. A figure for part of the parameter space is not an estimate of this factor, so none is added. Flagged for me in the changelog: whether the 30 percent belongs in the factor's notes."

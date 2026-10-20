@@ -1,5 +1,5 @@
 # Publication record. Layout in docs/record-schema.md. Logged on 2026-10-17 after the outside review of the
-# seven ranges (docs/reviews/2026-10-17-rulings.md; ruled by John the same day). Append-only.
+# seven ranges (docs/reviews/2026-10-17-rulings.md; I ruled the same day). Append-only.
 
 id = "ruiz-lara-2020"
 date = "2020-05-25"
@@ -18,4 +18,4 @@ factors = ["star-formation"]
 explanations = []
 moved_range = false
 
-notes = "Logged 2026-10-17 on the outside review's item 3 (accepted in part by John: logged as a publication, added as an estimate only if the full text gives a galaxy-wide rate). Authors, title, venue, pages and the three burst ages checked on 2026-10-17 against the Crossref record and the paper's abstract as carried by the Instituto de Astrofisica de Canarias page. Read in full 2026-10-17 (arXiv HTML version of 2003.12577): the paper's figures plot a normalised star formation rate against lookback time and give no absolute rate, in solar masses or in stars a year, for the whole galaxy or for the region; the bursts are dated 5.7, 1.9 and 1.0 billion years ago with durations of 0.8, 0.2 and 0.1 billion years and decreasing strength, and the phrase 'four times' appears nowhere in it. The outside reviewer's remark is therefore not supported and is not made in this record; no estimate is added."
+notes = "Logged 2026-10-17 on the outside review's item 3 (I accepted in part: logged as a publication, added as an estimate only if the full text gives a galaxy-wide rate). Authors, title, venue, pages and the three burst ages checked on 2026-10-17 against the Crossref record and the paper's abstract as carried by the Instituto de Astrofisica de Canarias page. Read in full 2026-10-17 (arXiv HTML version of 2003.12577): the paper's figures plot a normalised star formation rate against lookback time and give no absolute rate, in solar masses or in stars a year, for the whole galaxy or for the region; the bursts are dated 5.7, 1.9 and 1.0 billion years ago with durations of 0.8, 0.2 and 0.1 billion years and decreasing strength, and the phrase 'four times' appears nowhere in it. The outside reviewer's remark is therefore not supported and is not made in this record; no estimate is added."

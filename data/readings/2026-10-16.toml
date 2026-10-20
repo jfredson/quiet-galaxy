@@ -13,7 +13,7 @@ records_read = 39
 searches = 78
 commit_before = "9bc994a"
 notes = """
-The reading moved no range. One item is flagged for John (the star-formation rate). Twenty-seven
+The reading moved no range. One item is flagged for me (the star-formation rate). Twenty-seven
 publications were logged, all with moved_range false, most of them from 2025 and 2026 that the
 founding log of 2026-10-16 did not carry. The factor and explanation records were not edited: other
 sessions held them on the evening this ran, and nothing found met a factor's test closely enough to
@@ -67,7 +67,7 @@ queries = [
   "origin of life self-replicating RNA laboratory demonstration 2026",
   "QT45 ribozyme RNA self-replication Science 2026 Holliger paper",
 ]
-found = "No evidence of life beyond Earth in the window, and three results the log did not yet carry that bear on this piece's test: the Perseverance rover's potential biosignature in a Martian mudstone (Hurowitz and others, Nature, 2025-09-10; the sample stays on Mars), complex organic compounds confirmed in ice grains fresh from Enceladus's ocean (Khawaja and others, Nature Astronomy, 2025-10-01), and a 45-letter RNA molecule that copies itself and its complement in ice, at 94.1% accuracy and 0.2% yield over 72 days (Gianni and others, Science, 2026-02-13), the kind of laboratory demonstration the test names. None settles how improbable the first step is; the K2-18 b dispute stands where the 2025 reanalyses already in the log left it. The range was left alone: the shape is John's ruling, and the ingredients of life are not life."
+found = "No evidence of life beyond Earth in the window, and three results the log did not yet carry that bear on this piece's test: the Perseverance rover's potential biosignature in a Martian mudstone (Hurowitz and others, Nature, 2025-09-10; the sample stays on Mars), complex organic compounds confirmed in ice grains fresh from Enceladus's ocean (Khawaja and others, Nature Astronomy, 2025-10-01), and a 45-letter RNA molecule that copies itself and its complement in ice, at 94.1% accuracy and 0.2% yield over 72 days (Gianni and others, Science, 2026-02-13), the kind of laboratory demonstration the test names. None settles how improbable the first step is; the K2-18 b dispute stands where the 2025 reanalyses already in the log left it. The range was left alone: the shape is my ruling, and the ingredients of life are not life."
 sources = ["https://doi.org/10.1038/s41586-025-09413-0", "https://doi.org/10.1038/s41550-025-02655-y", "https://www.science.org/doi/10.1126/science.adt2760"]
 publications = ["hurowitz-2025", "khawaja-2025", "gianni-2026"]
 
