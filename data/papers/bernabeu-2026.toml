@@ -10,15 +10,20 @@ title = "Gene ancestries reveal diverse microbial associations during eukaryogen
 venue = "Nature 656, 399–405 (2026)"
 link = "https://doi.org/10.1038/s41586-026-10639-9"
 finding = """
-Reconstructs the gene set of the last common ancestor of complex cells from thousands of genomes and
-finds its genes came from several bacterial partners beyond the archaeal host and the ancestor of
-mitochondria: Myxococcota (3.9% of the ancestral proteome) and Planctomycetota (2.2%) alongside the
-Alphaproteobacteria (4.0%) and Asgard archaea (3.3%), with giant viruses ferrying genes, and with the
-mitochondrion acquired late in a protracted process rather than in one founding event. The origin of
-complex cells looks less like a single freak capture and more like a long succession of associations
-inside a microbial community."""
+Reconstructs the gene set of the last common ancestor of complex cells, comparing 186 genomes of
+complex cells with more than 65,000 bacterial and archaeal genomes and 1.3 million groups of viral
+genes, and traces where each gene family came from. Besides the two accepted partners, the archaeal
+host's lineage (Asgard archaea, 3.3% of the ancestral proteins on average across three datasets) and
+the ancestor of mitochondria (Alphaproteobacteria, 4.0%), it finds two more bacterial sources passing
+the same tests: Myxococcota (3.9%) and Planctomycetota (2.2%). About 4.5% of the gene families arrived
+by way of viruses, mostly giant viruses. Relative timing from the gene trees, with no dates, puts the
+Asgard genes oldest, then Planctomycetota, with the mitochondrion's ancestor and Myxococcota later and
+overlapping, so some transfers came before the mitochondrion. The authors read the origin of complex
+cells as a gradual process with several partners in a microbial community rather than a one-off
+merger of two cells, and say their data cannot tell which partner was the host or whether any lived
+inside another."""
 factors = ["intelligence"]
 explanations = ["complex-cells-are-rare"]
 moved_range = false
 
-notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict."
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict. Read in full 2026-10-20 against the finding (Nature 656, 399-405, issue of 2026-08-13; published online 2026-06-10). The percentages are borne out: 3.92% Myxococcota, 2.24% Planctomycetota, 3.99% Alphaproteobacteria and 3.28% Asgard archaea, each an average across the paper's three datasets. Corrected: (1) 'from thousands of genomes' now gives the counts; (2) 'acquired late in a protracted process' now says what the paper shows, relative order without dates, with the mitochondrion's ancestor arriving after the Asgard and Planctomycetota genes and overlapping with Myxococcota; the paper calls the process gradual, not protracted; (3) added the paper's own limit, that it cannot say which partner was the host or how the partners lived together. Read the other way: Betts and colleagues 2018 (Nature Ecology and Evolution 2, 1556-1562, https://doi.org/10.1038/s41559-018-0644-x) call the earlier evidence for a late mitochondrion an artefact and read their dates as a quick origin driven by the capture, so the late-mitochondrion reading is argued, not settled."

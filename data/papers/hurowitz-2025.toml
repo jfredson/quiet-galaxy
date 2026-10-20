@@ -10,15 +10,21 @@ title = "Redox-driven mineral and organic associations in Jezero Crater, Mars"
 venue = "Nature 645, 332–340 (2025)"
 link = "https://doi.org/10.1038/s41586-025-09413-0"
 finding = """
-The Perseverance rover found, in a mudstone called Cheyava Falls in an old river channel on Mars,
-organic carbon together with tiny nodules and millimetre-scale reaction fronts of iron phosphate and
-iron sulfide, the minerals that form on Earth when organic matter feeds reactions at low temperature,
-most often with microbes involved. The team found no strong evidence for a non-biological route and
-no sign of the heating that one would need, but cannot rule it out: the paper calls the features
-potential biosignatures and says the drilled sample must be examined on Earth to settle it. The
-sample is sealed on the rover, and the mission to bring it back is unfunded."""
+The Perseverance rover found, in mudstone of the Bright Angel formation in Neretva Vallis, an old
+river valley on Mars (at a rock surface the team named Cheyava Falls, from which it drilled the core
+Sapphire Canyon), organic carbon together with tiny nodules and millimetre-scale reaction fronts made
+of iron phosphate (probably vivianite) and iron sulfide (probably greigite). The team reads them as
+the products of chemical reactions, after the mud was laid down and at low temperature, in which
+organic matter was used up as it stripped oxygen from iron and sulfate. On Earth such minerals often
+form as by-products of microbes feeding on organic matter. The paper weighs a route without life too:
+organic compounds can do the iron reaction on their own at 10 to 80 degrees Celsius, but making the
+sulfide without life would need temperatures above about 150 degrees or sulfide gas from a volcanic
+source, and the team saw signs of neither. It calls the features potential biosignatures, meaning
+features that fit biology but need more data before anyone can say whether life made them, and says
+measurements on the core in laboratories on Earth are what would settle it. The core is still on Mars,
+and Congress did not fund the mission to bring samples back for 2026."""
 factors = ["life"]
 explanations = ["rare-life", "great-filter-behind-us"]
 moved_range = false
 
-notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict. Checked 2026-10-17 against the paper's own page on nature.com (https://www.nature.com/articles/s41586-025-09413-0) and the Crossref record: the byline is 89 names and is now given in full; Nature 645, 332-340, published online 2025-09-10."
+notes = "Logged by the first weekly reading, 2026-10-16; the reading record says which records it was read against and with what verdict. Checked 2026-10-17 against the paper's own page on nature.com (https://www.nature.com/articles/s41586-025-09413-0) and the Crossref record: the byline is 89 names and is now given in full; Nature 645, 332-340, published online 2025-09-10. Read in full 2026-10-20 against the finding. Corrected: (1) the finding said the team found no strong evidence for a route without life; the paper says organic compounds could have done the iron reaction without life at 10 to 80 degrees Celsius, and that the difficulty for a route without life is the sulfide, which would need heating above about 150 to 200 degrees or a distant volcanic source, neither seen; (2) the finding said such minerals form on Earth most often with microbes involved; the paper says they are known to form as by-products of microbial reactions and gives no share, so it now says often; (3) Cheyava Falls is a rock surface in the Bright Angel formation mudstone, not the name of the mudstone, and the drilled core is Sapphire Canyon; (4) the closing sentence said the sample is sealed on the rover and the return mission unfunded, with no source; it now says only what a source shows: Congress declined to fund Mars Sample Return for 2026 and gave 110 million dollars to a Mars Future Missions line instead (Sky and Telescope, 2026-01-20, https://skyandtelescope.org/astronomy-news/nasas-budget-woes-are-over-for-now/). No sentence in the records says evidence of life about this rock; the paper's own term, potential biosignatures, is the one used."
