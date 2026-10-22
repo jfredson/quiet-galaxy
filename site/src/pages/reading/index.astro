@@ -48,7 +48,7 @@ const postFor = (recordId: string) => newsPosts.find((p) => p.data.records.inclu
       Each of the seven pieces of the equation says what kind of discovery would move its range, and each explanation says what would strengthen or weaken it. Once a week a fresh session searches for what was published against each of those lines and writes down what it found, whether or not anything moved.
     </p>
     <p class="dim" style="font-size: 14px;">
-      Every paper that bears on a record is logged in <a href="/story/">the story so far</a>. The reading may move one end of a piece's range by a small step with a published number behind it; anything beyond that, it leaves for me and says so. Each reading is a file in the repository, written once and never edited, and the site refuses to build if one of them does not add up.
+      Every paper that bears on a record is logged in <a href="/about/#story">the story so far</a>. The reading may move one end of a piece's range by a small step with a published number behind it; anything beyond that, it leaves for me and says so. Each reading is a file in the repository, written once and never edited, and the site refuses to build if one of them does not add up.
     </p>
   </section>
 
@@ -203,6 +203,6 @@ const postFor = (recordId: string) => newsPosts.find((p) => p.data.records.inclu
     {readingCounts.readings === 0
       ? 'No reading has run yet.'
       : `${readingCounts.readings} reading${readingCounts.readings === 1 ? '' : 's'} on the record, ${readingCounts.items} record check${readingCounts.items === 1 ? '' : 's'} in all${readingCounts.by_hand ? `, ${readingCounts.by_hand} of the readings run by hand` : ''}.`}
-    <span class="sep">|</span><a href="/equation/">The equation</a><span class="sep">|</span><a href="/story/">The story so far</a>
+    <span class="sep">|</span><a href="/equation/">The equation</a><span class="sep">|</span><a href="/about/#story">The story so far</a>
   </p>
 </Base>

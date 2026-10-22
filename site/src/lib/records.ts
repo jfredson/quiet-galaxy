@@ -24,7 +24,7 @@ export interface PubBrief {
   authors: string[];
   moved_range: boolean;
   link?: string;
-  path: string;      // /story/#id
+  path: string;      // /about/#id (the story part of About)
 }
 
 export interface LibraryBrief {

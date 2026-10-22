@@ -1,0 +1,48 @@
+---
+// About: who is asking and why, then how the numbers are worked out, then what has been read and
+// what it moved. Made on 2026-10-21 from the Method and Story pages when the top bar was simplified
+// (tracker pattern rule 4.21, ruled by John that day): the two pages' text is kept as it was, in
+// components/AboutMethod.astro and components/AboutStory.astro, and /method/ and /story/ redirect to
+// their parts here. The "Who is asking" section, which opened the method page, now opens this one.
+import Base from '../layouts/Base.astro';
+import AboutMethod from '../components/AboutMethod.astro';
+import AboutStory from '../components/AboutStory.astro';
+---
+
+<Base
+  title="About The Quiet Galaxy: who is asking, how the numbers are worked out, and what has moved them"
+  description="Who built The Quiet Galaxy and why, how the number at the top of the site is computed from the seven pieces of the equation, and every paper read so far with whether it moved a range."
+>
+  <section class="hero">
+    <p class="eyebrow">About</p>
+    <h1>Who is asking, and how it works</h1>
+  </section>
+
+  <section class="section who" id="who">
+    <div>
+      <p class="kicker">Who is asking</p>
+      <p>I'm John, and I write about AI, sentience and the spread of conscious life beyond Earth at <a href="https://sentient-horizons.com" rel="noopener">Sentient Horizons</a>. This is the sister of <a href="https://beltequation.com" rel="noopener">The Belt Equation</a>, where I track the odds of leaving Earth myself. Here the question is older and larger: whether anyone else is out there, and why we cannot tell. I wanted a place where the argument is laid out piece by piece, every number carries its source, and a new discovery moves the answer in public.</p>
+    </div>
+    <div>
+      <p class="kicker">Why the name?</p>
+      <p>Because that is the observed fact. The sky is quiet. Every explanation on this site is an answer to that one observation, and the site does not presume which answer is right: it works out, from the published numbers, how surprised we should be.</p>
+    </div>
+  </section>
+  <section class="section narrow">
+    <ul class="about-toc">
+      <li><a href="#method">How the numbers are worked out</a></li>
+      <li><a href="#story">The story so far</a>, every paper read and whether it moved a range</li>
+      <li><a href="/reading/">This week's reading</a>, where every piece and every explanation is read against the news each week</li>
+      <li><a href="/disagree/">Feedback</a>, if a number here is wrong</li>
+    </ul>
+  </section>
+
+  <AboutMethod />
+  <AboutStory />
+</Base>
+
+<style>
+  .about-toc { margin: 0; padding-left: 1.1em; font-size: 16px; line-height: 1.7; }
+  :global(.about-part) { border-top: 1px solid var(--line); margin-top: 40px; padding-top: 48px; scroll-margin-top: 70px; }
+  :global(.about-h) { font-size: clamp(30px, 4vw, 44px); line-height: 1.12; letter-spacing: -0.02em; margin: 0 0 14px; }
+</style>

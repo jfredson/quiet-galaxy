@@ -18,19 +18,19 @@
 // Rule 4.7 of the tracker pattern (ruled by John 2026-10-16): the bar carries short handles,
 // one or two words per page; the full plain names stay as the page titles and in the footer.
 const path = Astro.url.pathname;
+// Simplified on 2026-10-21 (tracker pattern rule 4.21, ruled by John that day), which replaces the
+// tiers described above: the pages a reader would come for, then Family beside the theme switch (rule
+// 4.9). Method and Story became the two parts of About; this week's reading keeps its page and is
+// linked from the home page, About, News and the footer; Feedback and Source moved to the footer.
 const primary = [
   { href: '/equation/', label: 'Equation' },
   { href: '/explanations/', label: 'Explanations' },
   { href: '/library/', label: 'Library' },
-  { href: '/reading/', label: 'Reading' },
-  { href: '/news/', label: 'News' }, // tracker pattern rule 4.10, John 2026-10-18
-  { href: '/story/', label: 'Story' },
+  { href: '/news/', label: 'News' }, // tracker pattern rule 4.10
+  { href: '/about/', label: 'About' },
 ];
 const secondary = [
-  { href: '/method/', label: 'Method' },
-  { href: '/disagree/', label: 'Feedback' },
-  { href: 'https://github.com/jfredson/quiet-galaxy', label: 'Source' },
-  { href: 'https://sentient-horizons.com/projects/', label: 'Family' }, // the family's Projects page; tracker pattern rule 4.9, John 2026-10-17
+  { href: 'https://sentient-horizons.com/projects/', label: 'Family' }, // the family's Projects page; tracker pattern rule 4.9
 ];
 const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href) || (href === '/equation/' && path.startsWith('/factors/')));
 ---

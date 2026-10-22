@@ -2,6 +2,10 @@
 
 Every change to a range, a record, the method or the site, with absolute dates. Newest first. A range change always says which publication moved it and by how much.
 
+## 2026-10-21 (a simpler top bar)
+
+- The top bar is now Equation · Explanations · Library · News · About, with Family beside the light/dark switch. How the numbers are worked out and the story so far are now the two parts of one About page, which opens with "Who is asking"; their text is unchanged, and the old addresses (`/method/` and `/story/`, including a link to one paper in the story) land on the matching part. This week's reading keeps its page and address and is linked from the home page, About, News and the footer. Feedback and the source code moved to the footer. No range, record or other address changed.
+
 ## 2026-10-20 (four papers read in full against the record)
 
 Four papers bought for the record were read in full against the records that cite them, by a session reporting to the master session; the papers stay private and only short phrases are used. **No range, shape, status or test line was changed, and the headline did not move.** Nothing was posted or shared about them, since the two records they serve are still open.

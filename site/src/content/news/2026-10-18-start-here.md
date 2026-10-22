@@ -7,7 +7,7 @@ sources:
   - label: The numbers as they stand
     url: https://thequietgalaxy.com/data/headline.json
   - label: How the numbers are worked out
-    url: https://thequietgalaxy.com/method/
+    url: https://thequietgalaxy.com/about/#method
 ---
 
 Over lunch in 1950, the physicist [Enrico Fermi](https://en.wikipedia.org/wiki/Enrico_Fermi) asked a question that has never gone away: [where is everybody?](/) Our galaxy is old enough and big enough that someone should have shown up by now, and nobody has. This site is my attempt to keep an honest count of what we actually know about that silence, and to change the count only when the evidence does.
@@ -32,17 +32,17 @@ These are the seven ranges behind those numbers. An outside review argued with e
 - [the share of intelligent species that make themselves detectable](/factors/detectable/): 1 in 100 to all of them;
 - [how long a civilisation stays detectable](/factors/lifetime/): 100 years to 10 billion years.
 
-One of the seven matters more than all the others put together: whether life starts at all on a planet where it could. Nobody knows whether that happens on nearly every such planet or on almost none, which is why that range is so wide. Changing nothing but how the site spreads its guesses across that range moves the chance that we are alone in the galaxy anywhere from 38 to 94 percent ([how the numbers are worked out](/method/)).
+One of the seven matters more than all the others put together: whether life starts at all on a planet where it could. Nobody knows whether that happens on nearly every such planet or on almost none, which is why that range is so wide. Changing nothing but how the site spreads its guesses across that range moves the chance that we are alone in the galaxy anywhere from 38 to 94 percent ([how the numbers are worked out](/about/#method)).
 
 ## How to Follow It
 
 Every Saturday evening, Pacific time, the site runs an automatic reading of new published work. Each of the seven pieces, and each of the thirty-two explanations for the silence, says what kind of finding would change it, and the reading searches for exactly that and reports what it found. In a single week it may stretch or shrink either end of a range tenfold at most, and it may never touch the range for whether life starts. Anything bigger comes to me ([this week's reading](https://thequietgalaxy.com/reading/)).
 
-To try your own numbers, use the sliders on [the equation page](https://thequietgalaxy.com/equation/). To see what has been read and what it changed, there is [the story so far](https://thequietgalaxy.com/story/). [The feed](/news/feed.xml) carries every post in this section, and if you think a number here is wrong, [Feedback](/disagree/) says how to tell me and what happens next.
+To try your own numbers, use the sliders on [the equation page](https://thequietgalaxy.com/equation/). To see what has been read and what it changed, there is [the story so far](https://thequietgalaxy.com/about/#story). [The feed](/news/feed.xml) carries every post in this section, and if you think a number here is wrong, [Feedback](/disagree/) says how to tell me and what happens next.
 
 ## What Has Happened So Far
 
-The biggest change so far had nothing to do with the sky. On 16 October 2026, before the site went public, [the first calculation](/story/#logged-2026-10-16) came out at 88 percent alone in the galaxy. It used a simple stand-in for the range for whether life starts, one that put most of its weight on life being very rare. The 2018 paper, the only published treatment of that uncertainty, splits the weight evenly between life being easy and life being hard. The same day I switched to the paper's version, and the answer fell to 59 percent ([how the numbers are worked out](/method/)). Nothing out there had changed; what changed was how the site described what we do not know. That is worth keeping in mind before reading any other number here: the answer leans hardest on the piece nobody has measured.
+The biggest change so far had nothing to do with the sky. On 16 October 2026, before the site went public, [the first calculation](/about/#logged-2026-10-16) came out at 88 percent alone in the galaxy. It used a simple stand-in for the range for whether life starts, one that put most of its weight on life being very rare. The 2018 paper, the only published treatment of that uncertainty, splits the weight evenly between life being easy and life being hard. The same day I switched to the paper's version, and the answer fell to 59 percent ([how the numbers are worked out](/about/#method)). Nothing out there had changed; what changed was how the site described what we do not know. That is worth keeping in mind before reading any other number here: the answer leans hardest on the piece nobody has measured.
 
 The first weekly reading, run by hand the same day before the Saturday schedule began, found [a 2023 study by Siegert and colleagues](https://arxiv.org/abs/2301.10192). From the faint gamma-ray glow of radioactive aluminium, which massive stars scatter through the galaxy, it works out to 8 to 16 stars born each year: above the top of the range, which was then 10. An outside review weighed it on 17 October 2026, and [the top went up to 20](/news/2026-10-18-the-star-formation-range-widens/). The answer in the middle moved from 0.016 to 0.021, and the chance we are alone in the galaxy from 58.8 to 58.0 percent. It was the only range the review moved, and doubling the top of the best-measured of the seven pieces shifted the answer by less than one point.
 
