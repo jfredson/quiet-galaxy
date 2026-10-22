@@ -83,13 +83,13 @@ const SHORT: Record<string, string> = {
         ) : (
           <span>
             No weekly reading of the records against the news has run yet. The records were last changed on {longDate(records.exported_on)}: {written} of the seven pieces written up, {plural(c.explanations, 'explanation', 'explanations')}, {plural(c.publications, 'paper logged', 'papers logged')}.
-            {' '}<a href="/story/">See the story so far</a>.
+            {' '}<a href="/about/#story">See the story so far</a>.
           </span>
         )}
       </p>
       <div class="ctas">
         <a class="btn" href="/equation/">Why so uncertain?</a>
-        <a class="btn ghost" href="/method/#who">Who is asking</a>
+        <a class="btn ghost" href="/about/#who">Who is asking</a>
       </div>
     </div>
 
@@ -130,7 +130,7 @@ const SHORT: Record<string, string> = {
     <div class="move">
       <p class="kicker">What has changed</p>
       <p>Every paper and discovery that bears on the numbers is logged with its date, which piece it touches, and whether it moved a range. The log reaches back to the founding papers of the 1960s and forward to whatever is published next.</p>
-      <a class="btn ghost" href="/story/">Read the story so far</a>
+      <a class="btn ghost" href="/about/#story">Read the story so far</a>
     </div>
     <div class="move">
       <p class="kicker">Think a number here is wrong?</p>
@@ -141,6 +141,6 @@ const SHORT: Record<string, string> = {
 
   <p class="dim home-meta">
     Records as of {longDate(records.exported_on)}. Everything on this site is built from a public repository, <a href="https://github.com/jfredson/quiet-galaxy" rel="noopener">on GitHub</a>, where every number carries its source and every change its date.
-    <span class="sep">|</span><a href="/method/">How the numbers are worked out</a><span class="sep">|</span><a href="/library/">Books and films that take the question seriously</a>
+    <span class="sep">|</span><a href="/about/#method">How the numbers are worked out</a><span class="sep">|</span><a href="/library/">Books and films that take the question seriously</a>
   </p>
 </Base>

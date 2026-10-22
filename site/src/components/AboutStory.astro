@@ -1,0 +1,110 @@
+---
+// The story so far, moved here from pages/story/index.astro on 2026-10-21 when the top bar was simplified
+// (tracker pattern rule 4.21, ruled by John that day). The text is unchanged; it is the second part of /about/.
+// The story so far: the publications log read as a dated record, newest first (tracker pattern,
+// section 4, rules 4.2 and 4.3). Each entry is a paper or discovery, says which piece of the
+// equation or which explanation it bears on, and says whether it moved a range. The entries that
+// moved nothing get the same card as the ones that did: a reader who sees the number move should
+// be able to tell whether the world got closer or the author changed his mind. The entry card is
+// copied from The Belt Equation's story page (site/src/pages/story.astro: `entries`, `entry`).
+import { records, longDate, worldDate, symbolHtml, plainNumber, plural, recordUrl } from '../lib/records';
+import { datedPosts, postPath } from '../lib/news';
+const newsPosts = await datedPosts();
+const postsFor = (date: string) => newsPosts.filter((p) => p.data.date === date); // rule 4.14
+
+const pubs = records.publications;
+const totals = records.story_totals;
+
+// Group by the day each was logged, newest day first (the export already sorts them that way).
+const days: { date: string; entries: typeof pubs }[] = [];
+for (const p of pubs) {
+  const last = days[days.length - 1];
+  if (last && last.date === p.added_on) last.entries.push(p);
+  else days.push({ date: p.added_on, entries: [p] });
+}
+---
+
+  <section class="hero about-part" id="story">
+    <p class="eyebrow">The story so far</p>
+    <h2 class="about-h">What has been read, and what it moved</h2>
+    <p class="lede">
+      Every paper and discovery that bears on the number at the top of the site is logged here with the date it was read, which piece of the equation or which explanation it touches, and one plain question answered: did it move a range? Most do not, and saying so is the point.
+    </p>
+    <p class="dim" style="font-size: 14px;">
+      The log is only ever added to. An entry is never edited except to fix an error, with a line in the repository's changelog saying so. The founding papers of the 1960s are logged first; from here on, each new paper is logged as it is read, and the weekly reading of the records against the news, once it runs, adds its findings here.
+    </p>
+  </section>
+
+  <section class="section narrow-wide" style="padding-top: 0;">
+    <ul class="tally">
+      <li><span class="stat">{totals.entries}</span><span class="stat-label">{totals.entries === 1 ? 'entry' : 'entries'} in the log</span></li>
+      <li><span class="stat">{totals.moved}</span><span class="stat-label">moved a range</span></li>
+      <li><span class="stat">{totals.held}</span><span class="stat-label">read and logged; moved nothing</span></li>
+      <li><span class="stat">{totals.days}</span><span class="stat-label">{totals.days === 1 ? 'day' : 'days'} on which something was logged</span></li>
+    </ul>
+
+    {pubs.length === 0 ? (
+      <p class="empty-note">Nothing has been logged yet.</p>
+    ) : days.map((day) => (
+      <div class="day">
+        <h2 id={`logged-${day.date}`}>Logged {longDate(day.date)}</h2>
+        {postsFor(day.date).map((p) => <p class="in-the-news-line">In the news: <a href={postPath(p)}>{p.data.title}</a>.</p>)}
+        <div class="entries">
+          {day.entries.map((p) => (
+            <details class="entry" id={p.id}>
+              <summary>
+                <span class="entry-meta">
+                  <span class="entry-date">appeared {worldDate(p.date)}</span>
+                  <span class={`chip kind ${p.moved_range ? 'kind-moved' : 'kind-held'}`}>{p.moved_range ? 'Moved a range' : 'Read; moved nothing'}</span>
+                  {p.factors.map((f) => <a class="chip" href={f.path} title={f.name}><span set:html={symbolHtml(f.symbol)}></span></a>)}
+                  {p.explanations.map((e) => <a class="chip" href={e.path}>{e.name.split(':')[0]}</a>)}
+                </span>
+                <span class="entry-title">{p.title}</span>
+                <span class="entry-authors">{p.authors.length > 3 ? `${p.authors[0]} and ${p.authors.length - 1} others` : p.authors.join(', ')}</span>
+              </summary>
+              <div class="entry-body">
+                <p>{p.finding}</p>
+                <p class="dim" style="font-size: 14px;">
+                  {p.authors.join(', ')}. <em>{p.venue}</em>. <a href={p.link} rel="noopener">Read it</a>.
+                </p>
+                <p style="font-size: 15px;">
+                  <strong>Bears on:</strong>{' '}
+                  {p.factors.map((f, i) => <><a href={f.path}>{f.name}</a>{i < p.factors.length - 1 || p.explanations.length > 0 ? '; ' : '.'}</>)}
+                  {p.explanations.map((e, i) => <><a href={e.path}>{e.name}</a>{i < p.explanations.length - 1 ? '; ' : '.'}</>)}
+                </p>
+                {p.moved_range ? (
+                  <>
+                    <p style="font-size: 15px;"><strong>What it moved:</strong></p>
+                    <table class="ptable">
+                      <thead><tr><th>Piece</th><th>What</th><th>From</th><th>To</th><th>Why</th></tr></thead>
+                      <tbody>
+                        {p.revisions.map((r) => (
+                          <tr>
+                            <td><a href={`/factors/${r.factor}/`}>{r.factor_name}</a></td>
+                            <td>{r.field}</td>
+                            <td class="dim">{typeof r.old === 'number' ? plainNumber(r.old) : String(r.old)}</td>
+                            <td>{typeof r.new === 'number' ? plainNumber(r.new) : String(r.new)}</td>
+                            <td>{r.why}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </>
+                ) : (
+                  <p style="font-size: 15px;"><strong>What it moved:</strong> nothing. It was read against the ranges it bears on and none of them changed. Logging it anyway is how the record shows what has been considered.</p>
+                )}
+                {p.notes && <p class="dim" style="font-size: 14px;">{p.notes}</p>}
+                {p.verify.length > 0 && <p class="dim" style="font-size: 14px;">Still to be checked against a source: {p.verify.join(' ')}</p>}
+                <p class="dim" style="font-size: 13px;">The record is <a href={recordUrl(p.file)} rel="noopener"><code>{p.file}</code></a> in the public repository.</p>
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    ))}
+
+    <p class="dim" style="font-size: 14px;">
+      The project's full changelog, down to each change to a record or to the site, is <a href="https://github.com/jfredson/quiet-galaxy/blob/main/CHANGELOG.md" rel="noopener">in the public repository</a>. Know a paper that should be here? <a href="/disagree/">Say so</a>, with the piece it bears on.
+    </p>
+  </section>
+

@@ -309,10 +309,10 @@ def build_export(loaded: dict, headline: dict | None = None) -> dict:
         p = publications_by_id.get(pid)
         if not p:
             return {"id": pid, "title": pid, "date": "", "added_on": "", "authors": [], "moved_range": False,
-                    "path": f"/story/#{pid}"}
+                    "path": f"/about/#{pid}"}
         return {"id": p["id"], "title": p["title"], "date": p["date"], "added_on": p["added_on"].isoformat(),
                 "authors": list(p.get("authors") or []), "moved_range": bool(p.get("moved_range")),
-                "link": p.get("link", ""), "path": f"/story/#{p['id']}"}
+                "link": p.get("link", ""), "path": f"/about/#{p['id']}"}
 
     def pub_sort_key(pid: str):
         p = publications_by_id.get(pid)
@@ -442,7 +442,7 @@ def build_export(loaded: dict, headline: dict | None = None) -> dict:
         publications.append({
             "id": p["id"], "date": p["date"], "added_on": p["added_on"].isoformat(),
             "authors": list(p["authors"]), "title": p["title"], "venue": p["venue"], "link": p["link"],
-            "finding": text(p["finding"]), "path": f"/story/#{p['id']}", "file": f"data/papers/{p['id']}.toml",
+            "finding": text(p["finding"]), "path": f"/about/#{p['id']}", "file": f"data/papers/{p['id']}.toml",
             "factors": [factor_brief(x) for x in p.get("factors") or []],
             "explanations": [explanation_brief(x) for x in p.get("explanations") or []],
             "moved_range": bool(p["moved_range"]),

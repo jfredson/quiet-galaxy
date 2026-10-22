@@ -8,7 +8,7 @@
 import type { APIRoute } from 'astro';
 import { records } from '../lib/records';
 
-const FIXED = ['/', '/equation/', '/explanations/', '/library/', '/story/', '/reading/', '/method/', '/disagree/'];
+const FIXED = ['/', '/equation/', '/explanations/', '/library/', '/about/', '/reading/', '/disagree/'];
 
 export const GET: APIRoute = ({ site }) => {
   const paths = [
