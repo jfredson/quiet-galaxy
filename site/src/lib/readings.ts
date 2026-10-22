@@ -126,3 +126,46 @@ export function readingSummary(reading: Reading): string {
   const joined = parts.length === 1 ? parts[0] : parts.slice(0, -1).join(', ') + ' and ' + parts[parts.length - 1];
   return reading.counts.moved ? `${read}, ${joined}` : `${read}, nothing moved, ${joined}`;
 }
+
+/** The reading page's one-line form of a note (the one-column layout John approved 2026-10-21,
+ *  copied from Outrunning Ageing's lib/records.ts): its first sentence, and the rest for when the
+ *  entry is opened. Nothing is rewritten; the split is at the first full stop, question or
+ *  exclamation mark followed by a space and a capital, a digit or an opening bracket, skipping
+ *  initials ("U.S.") and the common abbreviations. A note with no such break is all line. */
+const ABBREVIATIONS = /(?:^|\s)(?:e\.g|i\.e|etc|vs|cf|al|Dr|Mr|Mrs|Ms|Prof|St|No|Fig|approx|Inc|Ltd|Co|Jr|Sr)\.$/;
+export function splitFirstSentence(note: string): { line: string; rest: string } {
+  const text = note.replace(/\s+/g, ' ').trim();
+  const breakAt = /[.!?]["'’”)]?\s+(?=[A-Z0-9(“"‘'])/g;
+  let m: RegExpExecArray | null;
+  while ((m = breakAt.exec(text)) !== null) {
+    const upTo = text.slice(0, m.index + 1);
+    if (ABBREVIATIONS.test(upTo) || /(?:^|[\s.])[A-Z]\.$/.test(upTo)) continue;
+    const end = m.index + m[0].trimEnd().length;
+    return { line: text.slice(0, end), rest: text.slice(end).trim() };
+  }
+  return { line: text, rest: '' };
+}
+
+/** Which entries open by default: every verdict but "Nothing new", so a range that moved,
+ *  anything logged, and anything left for me, whether or not it has since been ruled on. */
+export const opensByDefault = (item: ReadingItem) => item.verdict !== 'quiet';
+
+/** The order the counts line reads in: the common verdict first, the rare ones after. */
+const COUNT_ORDER: Verdict[] = ['quiet', 'noted', 'moved', 'flagged'];
+
+/** "39 records read · 30 logged, no change · 1 waiting on me, since ruled on": the line under
+ *  the reading page's heading, in the verdicts' own words. */
+export function readingCountLine(reading: Reading): string {
+  const parts = [`${reading.records_read} record${reading.records_read === 1 ? '' : 's'} read`];
+  for (const v of COUNT_ORDER) {
+    const n = reading.counts[v];
+    if (n === 0) continue;
+    let part = `${n} ${verdictLabel[v].charAt(0).toLowerCase()}${verdictLabel[v].slice(1)}`;
+    if (v === 'flagged') {
+      const ruled = n - reading.open_flags;
+      if (ruled > 0) part += reading.open_flags === 0 ? (n === 1 ? ', since ruled on' : `, all ${n} since ruled on`) : `, ${ruled} since ruled on`;
+    }
+    parts.push(part);
+  }
+  return parts.join(' · ');
+}

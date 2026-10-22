@@ -1,0 +1,83 @@
+---
+// One reading's entries in one column, grouped under the seven pieces and then the three families
+// (the layout John approved 2026-10-21 in place of the card grid; copied from Outrunning Ageing's
+// components/ReadingEntries.astro and adapted). Each entry is one row when closed: the name, the
+// verdict, and the first sentence of what was found. Opening it shows the rest of the note,
+// anything left for me and how it was ruled on, the papers it logged, the sources and the
+// searches. "Nothing new" starts closed; every other verdict starts open. A native <details>, so
+// it works without JavaScript and with a keyboard and a screen reader. The latest reading and the
+// earlier ones both use it.
+import { records, symbolHtml } from '../lib/records';
+import { datedPosts, postPath } from '../lib/news';
+import { verdictLabel, splitFirstSentence, opensByDefault, type Reading, type ReadingItem } from '../lib/readings';
+
+interface Props { reading: Reading; full?: boolean }
+const { reading, full = false } = Astro.props;
+
+// Items grouped the way the site is read: the seven pieces in equation order, then the three
+// families of explanation in the order the explanations index shows them.
+const groups: { key: string; name: string; path: string; items: ReadingItem[] }[] = [
+  { key: 'factors', name: 'The seven pieces of the equation', path: '/equation/',
+    items: reading.items.filter((i) => i.kind === 'factor').sort((a, b) => (a.order ?? 0) - (b.order ?? 0)) },
+  ...records.families.map((fam) => ({
+    key: fam.key, name: fam.name, path: `/explanations/#${fam.key}`,
+    items: reading.items.filter((i) => i.family === fam.key),
+  })),
+].filter((g) => g.items.length > 0);
+
+const newsPosts = await datedPosts();
+const postFor = (recordId: string) => newsPosts.find((p) => p.data.records.includes(recordId)) ?? null; // rule 4.14
+const recordWord = { factor: 'the piece', explanation: 'the explanation' } as const;
+---
+
+{groups.map((g) => (
+  <div class={full ? 'link-group' : 'reading-group'}>
+    {full ? (
+      <div class="link-head">
+        <h3>{g.name}</h3>
+        <span class="dim"><a href={g.path}>{g.key === 'factors' ? 'the equation' : 'the family'}</a> · {g.items.length} record{g.items.length === 1 ? '' : 's'} read</span>
+      </div>
+    ) : (
+      <h4 class="reading-group-name">{g.name}</h4>
+    )}
+    <div class="reading-rows">
+      {g.items.map((item) => {
+        const { line, rest } = splitFirstSentence(item.found);
+        const post = item.picked_up ? postFor(item.record) : null;
+        return (
+          <details class={`reading-row v-${item.verdict}`} id={`${reading.id}-${item.record}`} open={opensByDefault(item)}>
+            <summary>
+              <span class="row-head">
+                <span class="row-name">{item.symbol && <><span set:html={symbolHtml(item.symbol)}></span> · </>}{item.name}</span>
+                <span class="row-tags">
+                  <span class={`badge v-${item.verdict}`}>{item.picked_up ? 'Ruled' : verdictLabel[item.verdict]}</span>
+                </span>
+              </span>
+              <span class="row-line">{line}</span>
+            </summary>
+            <div class="row-body">
+              {rest && <p class="card-found">{rest}</p>}
+              {item.for_john && <p class="card-john"><strong>For me:</strong>{' '}{item.for_john}</p>}
+              {item.picked_up && <p class="card-john dim">Taken off my list on {item.picked_up.on}, by {item.picked_up.how}.</p>}
+              {post && <p class="card-john">In the news: <a href={postPath(post)}>{post.data.title}</a>.</p>}
+              {item.publications.length > 0 && (
+                <p class="row-searches">Logged in the story so far: {item.publications.map((p, i) => (
+                  <>{i > 0 ? '; ' : ''}<a href={p.path}>{p.authors.length ? p.authors[0].split(' ').slice(-1)[0] : p.title}, {p.date.slice(0, 4)}</a></>
+                ))}.</p>
+              )}
+              <div class="row-searches">
+                <p>{item.queries.length} search{item.queries.length === 1 ? '' : 'es'}{item.sources.length > 0 ? `, ${item.sources.length} source${item.sources.length === 1 ? '' : 's'}` : ''}:</p>
+                <ul>
+                  {item.queries.map((q) => <li>{q}</li>)}
+                  {item.reused.map((q) => <li class="row-reused">{q}</li>)}
+                  {item.sources.map((s) => <li><a href={s} rel="noopener nofollow">{s}</a></li>)}
+                </ul>
+              </div>
+              <p class="row-link"><a href={item.path}>Go to {recordWord[item.kind]}</a></p>
+            </div>
+          </details>
+        );
+      })}
+    </div>
+  </div>
+))}
