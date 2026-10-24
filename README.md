@@ -70,10 +70,12 @@ Every change since, with its date and reason, is in `CHANGELOG.md`.
 
 ## Licences
 
-The records and every other data file are under Creative Commons Attribution 4.0 (`LICENSE-DATA`): reuse them freely, with credit. The scripts and the site are under the MIT licence (`LICENSE`). Both from the first commit, as the Sentient Horizons design standard asks.
+The records and every other data file are under Creative Commons Attribution 4.0 (`LICENSE-DATA`): reuse them freely, with credit. The scripts and the site's code are under the MIT licence (`LICENSE`); its text and data are under CC BY 4.0 (`LICENSE-DATA`). Both from the first commit, as the Sentient Horizons design standard asks.
 
-To cite the data: John Fredrickson, *The Quiet Galaxy*, Sentient Horizons, 2026, with the date you read it and the address of the record.
+When you reuse the data or the text, please credit it as: *The Quiet Galaxy*, by John Andrew Fredrickson, a Sentient Horizons project, https://thequietgalaxy.com/
+
+To cite the data: John Andrew Fredrickson, *The Quiet Galaxy*, Sentient Horizons, 2026, with the date you read it and the address of the record.
 
 ## Author
 
-John Fredrickson, with Claude as a working partner. Published under the Sentient Horizons project.
+John Andrew Fredrickson, with Claude as a working partner. Published under the Sentient Horizons project.
