@@ -2,6 +2,10 @@
 
 Every change to a range, a record, the method or the site, with absolute dates. Newest first. A range change always says which publication moved it and by how much.
 
+## 2026-10-31
+
+- **The home page's browser-tab title now carries the subject: "The Quiet Galaxy: a public tracker of the Fermi Paradox".** The bare name is shared with songs and videos, and a check on 2026-10-31 of how the family's sites show up on Google when searched by name found this site indexed but not on the first page for it. The home page also gives search engines the site's name, its bare name as an alternate, its one-line description and its address as structured data (`site/src/layouts/Base.astro`). The visible heading, the share-card title and every inner page's title are unchanged. No range or record changed.
+
 ## 2026-10-24
 
 - Weekly reading (scheduled task, 2026-10-24): 39 records read, 0 ranges moved, 0 logged, 0 flagged for John; record at data/readings/2026-10-24.toml.
