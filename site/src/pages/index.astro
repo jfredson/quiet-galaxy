@@ -16,6 +16,19 @@
 import Base from '../layouts/Base.astro';
 import { records, longDate, plainNumber, percent, rangeText, plural, symbolHtml, medianWords } from '../lib/records';
 import { latestReading, readingSummary } from '../lib/readings';
+import { datedPosts, opener, postPath, KIND_LABEL } from '../lib/news';
+
+// The latest news, on the right of the first screen (the tracker family's home-page panel,
+// first built on The Belt Equation on 2026-11-14; both layouts considered are drawn in
+// sentient-horizons/design/proposals/home-latest-news-2026-11-14.md). Titles and links only: the
+// three newest posts, newest first, so a returning reader sees what is new the moment the page
+// opens. The pinned "Start here" post is not one of the three; it gets its own line underneath.
+// One dated post is enough to show the panel: its date tells the reader how fresh it is.
+const NEWS_ON_HOME = 3;
+const NEWS_MIN_POSTS = 1;
+const newsPosts = await datedPosts();
+const latestNews = newsPosts.length >= NEWS_MIN_POSTS ? newsPosts.slice(0, NEWS_ON_HOME) : [];
+const startHere = await opener();
 
 const head = records.headline;
 const c = records.counts;
@@ -93,6 +106,7 @@ const SHORT: Record<string, string> = {
       </div>
     </div>
 
+    <div class="home-side">
     <aside class="home-number" aria-label="The answer so far">
       <p class="number-label">The answer so far</p>
       <p class={`big-number ${head.available ? '' : 'pending'}`}>{head.available ? percent(1 - head.alone_galaxy) : NOT_YET}</p>
@@ -103,6 +117,26 @@ const SHORT: Record<string, string> = {
       </p>
       <p class="number-foot">{head.available ? <>Played out {plainNumber(head.runs ?? 0)} times from the seven ranges. {head.any_range_first_pass ? 'Every range is a first pass until the outside review has run.' : ''}</> : <>The number appears once the seven pieces have ranges.</>}</p>
     </aside>
+    {latestNews.length > 0 && (
+      <aside class="side-news" aria-labelledby="side-news-title">
+        <div class="side-news-head">
+          <h2 class="number-label" id="side-news-title">Latest news</h2>
+          <a href="/news/">All news</a>
+        </div>
+        <ul class="side-news-list">
+          {latestNews.map((p) => (
+            <li>
+              <p class="side-news-meta"><time datetime={p.data.date}>{longDate(p.data.date)}</time><span class="kind">{KIND_LABEL[p.data.kind]}</span></p>
+              <a class="side-news-title" href={postPath(p)}>{p.data.title}</a>
+            </li>
+          ))}
+        </ul>
+        {startHere && (
+          <p class="side-news-foot">New here? <a href={postPath(startHere)}>Start with the opening post</a>.</p>
+        )}
+      </aside>
+    )}
+    </div>
   </section>
 
   <section class="section" id="explanations">
