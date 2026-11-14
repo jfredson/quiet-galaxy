@@ -1055,7 +1055,7 @@ def headline(loaded: dict, runs: int = RUNS, seed: int = SEED, galaxies: float =
             "seed": seed,
             "independent_draws": True,
             "galaxies": galaxies,
-            "status": "ruled by John 2026-10-16 (docs/method.md)",
+            "status": "Decided 2026-10-16 (docs/method.md)",
         },
         "ranges": [{
             "id": f["id"], "symbol": f["symbol"], "name": f["name"], "unit": f["unit"],

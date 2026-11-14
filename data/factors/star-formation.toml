@@ -71,7 +71,7 @@ high = 16
 source = "Siegert and others, 'Galactic Population Synthesis of Radioactive Nucleosynthesis Ejecta', Astronomy and Astrophysics 672, A54 (2023) (siegert-2023)"
 link = "https://arxiv.org/abs/2301.10192"
 publication = "siegert-2023"
-method = "Measured the gamma-ray glow of radioactive aluminium made by massive stars across the galaxy and worked back to how fast stars must be forming to keep it topped up; 4 to 8 solar masses of new stars a year (the paper's figure, in solar masses only), which is 8 to 16 stars a year at half a solar mass per star (this site's conversion; Science News's reading of the paper converted it to 10 to 20). One method, and above the several that agree on 1 to 4; added at my ruling on 2026-10-16 after the first weekly reading found it."
+method = "Measured the gamma-ray glow of radioactive aluminium made by massive stars across the galaxy and worked back to how fast stars must be forming to keep it topped up; 4 to 8 solar masses of new stars a year (the paper's figure, in solar masses only), which is 8 to 16 stars a year at half a solar mass per star (this site's conversion; Science News's reading of the paper converted it to 10 to 20). One method, and above the several that agree on 1 to 4; added on 2026-10-16 after the first weekly reading found it."
 
 [[estimate]]
 who = "Alexis Quintana and others"
@@ -80,7 +80,7 @@ value = 1.3
 source = "Quintana and others, 'A census of OB stars within 1 kpc and the star formation and core collapse supernova rates of the Milky Way', Monthly Notices of the Royal Astronomical Society (2025) (quintana-2025)"
 link = "https://arxiv.org/abs/2503.08286"
 publication = "quintana-2025"
-method = "Counted the massive, short-lived stars within about three thousand light years of the Sun and scaled the count to the whole galaxy; 0.67 solar masses a year, which is 1.3 stars a year at half a solar mass per star. Added at my ruling on 2026-10-16 after the first weekly reading found it."
+method = "Counted the massive, short-lived stars within about three thousand light years of the Sun and scaled the count to the whole galaxy; 0.67 solar masses a year, which is 1.3 stars a year at half a solar mass per star. Added on 2026-10-16 after the first weekly reading found it."
 
 [range]
 low = 1
@@ -132,7 +132,7 @@ date = 2026-10-17
 field = "range.status"
 old = "first-pass"
 new = "reviewed"
-why = "The outside review of the seven ranges ran on 2026-10-17 and I ruled on every item the same day (docs/reviews/2026-10-17-rulings.md)."
+why = "The outside review of the seven ranges ran on 2026-10-17 and every item it raised was settled the same day (docs/reviews/2026-10-17-rulings.md); a range that has been through the outside review is marked reviewed."
 
 [[revision]]
 date = 2026-10-17

@@ -38,7 +38,7 @@ Filter ahead of us, Hanson 1998, hanson-1998; self-destruction) are arguments th
 is short; the founding pessimist papers (Hart 1975, hart-1975; Tipler 1980, tipler-1980) argue
 instead that no civilisation has lasted long enough to spread here, which bounds this factor and
 the previous one together. The 2018 paper cuts its span off at ten billion years because a
-civilisation older than the galaxy cannot have appeared at a steady rate. Written 2026-10-16. Outside review, 2026-10-17, I ruled the same day: lowering the floor from 100 to 10 years (item 18) was declined, narrowly: the only measured case, ours, has been detectable for about ninety years and counting, and the figures below a century are arguments and not measurements. Garrett (2025, garrett-2025) argues the detectable phase may last 'mere decades'; it is now in the estimate list (item 19) with the span of 10 to 100 years as how 'decades' reads, the paper giving no number of its own. To revisit if a paper gives a figure below 100 with a method behind it. Rahvar and Rouhani (2026, rahvar-2026) stay in the log and linked from this factor but are not an estimate (item 20): their 5,000 years is an upper bound derived from the silence if the other six factors are generous, and using it would count the silence twice."""
+civilisation older than the galaxy cannot have appeared at a steady rate. Written 2026-10-16. Outside review, 2026-10-17: lowering the floor from 100 to 10 years (item 18) was declined, narrowly: the only measured case, ours, has been detectable for about ninety years and counting, and the figures below a century are arguments and not measurements. Garrett (2025, garrett-2025) argues the detectable phase may last 'mere decades'; it is now in the estimate list (item 19) with the span of 10 to 100 years as how 'decades' reads, the paper giving no number of its own. To revisit if a paper gives a figure below 100 with a method behind it. Rahvar and Rouhani (2026, rahvar-2026) stay in the log and linked from this factor but are not an estimate (item 20): their 5,000 years is an upper bound derived from the silence if the other six factors are generous, and using it would count the silence twice."""
 
 [[estimate]]
 who = "Frank Drake and the Green Bank meeting"
@@ -130,7 +130,7 @@ date = 2026-10-17
 field = "range.status"
 old = "first-pass"
 new = "reviewed"
-why = "The outside review of the seven ranges ran on 2026-10-17 and I ruled on every item the same day (docs/reviews/2026-10-17-rulings.md)."
+why = "The outside review of the seven ranges ran on 2026-10-17 and every item it raised was settled the same day (docs/reviews/2026-10-17-rulings.md); a range that has been through the outside review is marked reviewed."
 
 [[revision]]
 date = 2026-10-17
