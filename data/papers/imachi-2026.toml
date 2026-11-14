@@ -1,0 +1,24 @@
+# Publication record. Layout in docs/record-schema.md. Logged by hand on 2026-11-13 in the one-off catch-up
+# pass over ten journals for 2026-01-01 to 2026-11-13 (docs/weekly-reading.md, choice 27, ruled by John 2026-11-13).
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "imachi-2026"
+date = "2026-10-28"
+added_on = 2026-11-13
+authors = ["Hiroyuki Imachi", "Masaru K. Nobu", "Shun’ichi Ishii", "Hiroki Hashiguchi", "Yuga Hirakata", "Naoki Hosogi", "Tetsuro Ikuta", "Yuta Isaji", "Makoto Miyata", "Masayuki Miyazaki", "Yuki Morono", "Kazuyoshi Murata", "Satoshi Nakagawa", "Akihiro Narita", "Miyuki Ogawara", "Satoshi Okada", "Yumi Saito", "Sanae Sakai", "Shigeru Shimamura", "Yuhei O. Tahara", "Yoshihiro Takaki", "Yoshinori Takano", "Eiji Tasumi", "Katsuyuki Uematsu", "Toshihiro Yoshimura", "Ken Takai"]
+title = "Eukaryotes’ closest relatives are internally simple syntrophic peptidotrophic archaea"
+venue = "Nature (2026), published online 2026-10-28; no volume or pages yet"
+link = "https://doi.org/10.1038/s41586-026-11170-7"
+finding = """
+The authors grew in the laboratory, for the first time, two strains of the group of simple microbes
+that sits closest on the tree of life to complex cells (cells with a nucleus and internal
+compartments, like ours). Both live without oxygen, feed on fragments of protein and depend on
+partner microbes. They put out protrusions and small bubbles of membrane but have no lasting
+compartments inside. One strain carries genes usually tied to breathing oxygen, yet the evidence is
+that it uses them to get rid of oxygen, not to breathe it. The authors conclude that the ancestor of
+complex cells was probably like this, so that becoming a complex cell meant a steep change in the
+cell's structure and a shift from life without oxygen to life with it."""
+explanations = ["complex-cells-are-rare"]
+moved_range = false
+
+notes = "Logged by hand on 2026-11-13 in the catch-up pass over this year's journals, not by a reading. It was found by listing the journal by date through Crossref, the public catalogue that publishers register papers with, as step 1a of the weekly reading does. The listing returned a Nature research briefing dated 2026-10-28 (https://doi.org/10.1038/d41586-026-03294-7), which names this paper; the paper itself was not among the titles the word filter picked out. The finding is written from the paper's abstract, read on 2026-11-13 on the journal's own page; the rest of the text was not read. The 26 authors and the date are Crossref's, and the journal's page gives the same date. Listed under the explanation that complex cells are rare, beside the study of where the genes of the first complex cell came from (bernabeu-2026): even the nearest living relatives of complex cells are simple inside, which fits that record's picture of a single large step and is not a test of how likely the step was. It gives no number and bears on no factor's range."
