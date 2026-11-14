@@ -412,6 +412,19 @@ class TheStricterReading(unittest.TestCase):
         self.assertTrue(any("needs 'pages_opened'" in p for p in problems), problems)
         self.assertTrue(any("needs 'limits'" in p for p in problems), problems)
 
+    def test_a_reading_from_2026_11_14_says_which_journals_it_listed(self):
+        """Ruled by John 2026-11-13 (docs/weekly-reading.md, choice 26)."""
+        with TempData() as data:
+            later = data / "readings" / "2026-11-14.toml"
+            (data / "readings" / "2026-11-07.toml").rename(later)
+            edit(later, r'^id = "2026-11-07"', 'id = "2026-11-14"')
+            edit(later, r'^date = 2026-11-07', "date = 2026-11-14")
+            problems = problems_for(data)
+            self.assertTrue(any("needs 'journals_checked'" in p for p in problems), problems)
+            edit(later, r'^date = 2026-11-14', 'date = 2026-11-14\njournals_checked = "Ten journals listed for 2026-10-31 to 2026-11-14; 60 titles read."')
+            problems = problems_for(data)
+            self.assertFalse(any("journals_checked" in p for p in problems), problems)
+
     def test_every_record_needs_a_search_of_its_own(self):
         with TempData() as data:
             self._later(data)

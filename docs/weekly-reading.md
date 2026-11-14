@@ -94,9 +94,9 @@ Ruled by John on 2026-10-18 (relayed by the master session), after `docs/reading
 
 The reading of 2026-10-17 and the reading of 2026-10-16 are not edited; the stricter checks apply only to readings dated 2026-10-19 or later.
 
-## Proposed 2026-11-13: journals as well as preprints
+## Ruled 2026-11-13: journals as well as preprints
 
-**Proposed by Claude on 2026-11-13, at John's request the same day ("Yes, propose it"). Not ruled. The procedure below is unchanged until John rules.**
+**Proposed by Claude on 2026-11-13 at John's request ("Yes, propose it"), and accepted by John the same day as written ("Accept as written"). All eight choices, 20 to 27, are ruled. They are in the procedure below (step 1a and step 5) and apply from the reading of 2026-11-14. Nature (ISSN 1476-4687), Science (1095-9203) and the Proceedings of the National Academy of Sciences (1091-6490) had their numbers checked in Crossref on 2026-11-13 and are on the list. The catch-up pass of choice 27 is a separate job, not yet run.**
 
 **Why.** A review of the news on 2026-11-13 found three papers that bear on a record's test and were not in the publications log. Two of them had never appeared on arXiv, which is the only place the reading can search by date: Murphy and colleagues on organic carbon in the Jezero crater mudstones (Science Advances, June 2026) and Doughty and colleagues on carbon fixed on nearby planets (International Journal of Astrobiology, online 2026-09-22). Every reading since 2026-10-24 has said as much in its own `limits` line ("no journal tables of contents"). The Mars paper bears directly on the test for the chance life starts, the factor the whole answer most depends on, so this is the gap most worth closing.
 
@@ -109,7 +109,7 @@ The reading of 2026-10-17 and the reading of 2026-10-16 are not edited; the stri
 | Crossref, one named journal at a time, by date (`https://api.crossref.org/journals/<ISSN>/works?filter=from-pub-date:...,until-pub-date:...`) | Found the Mars paper in Science Advances when a few words were added (four results). Found the astrobiology paper only when the filter was the online date (`from-online-pub-date`), because that journal registers the year alone as its publication date. |
 | How much a 14-day window returns, per journal (2026-10-30 to 2026-11-13) | Astrobiology 4, Nature Astronomy 11, Icarus 49, Acta Astronautica 119, The Astrophysical Journal 212, Science Advances 243. |
 
-**The proposal in one paragraph.** Once per reading, before the records are read, the run lists what a short fixed set of journals published in the window, using Crossref's per-journal listing. It reads every title from the small specialist journals, and from the large general ones only the titles a few words pick out. Any title that looks as if it bears on a record's test is opened and handed to that record, where it is judged like any arXiv candidate. The record says which journals were listed and how many titles were read.
+**The change in one paragraph.** Once per reading, before the records are read, the run lists what a short fixed set of journals published in the window, using Crossref's per-journal listing. It reads every title from the small specialist journals, and from the large general ones only the titles a few words pick out. Any title that looks as if it bears on a record's test is opened and handed to that record, where it is judged like any arXiv candidate. The record says which journals were listed and how many titles were read.
 
 | # | Choice | Confidence | Standard or judgment | Strongest alternative and its cost |
 |---|---|---|---|---|
@@ -126,7 +126,7 @@ The reading of 2026-10-17 and the reading of 2026-10-16 are not edited; the stri
 
 **What it still does not catch.** A paper in a journal that is not on the list. A press story about an older paper, such as the release of 2026-11-12 about the Mars paper of June: the web search still cannot filter by date. A result announced by a mission or an agency before any paper exists.
 
-**Flagged for reconsideration:** choice 21, the list itself. If John would rather start smaller, the three specialist journals plus Science Advances, Nature and Science would have caught both missed papers and cost about half as much.
+**Flagged for reconsideration:** choice 21, the list itself. John was offered a smaller start and chose the list as written; for the record, the three specialist journals plus Science Advances, Nature and Science would have caught both missed papers and cost about half as much.
 
 ## The procedure
 
@@ -141,6 +141,7 @@ The standalone instruction for the scheduled reading. A fresh Claude session wit
 - Read this file, `docs/record-schema.md` (the reading record and the publication record), and `CLAUDE.md` at the root and in `~/Code` if present (plain language; absolute dates; every design choice with confidence and an alternative; a commit hook that refuses a relative date).
 - The window is the **last 14 days** ending on the reading's date, or the time since the newest reading in `data/readings/` if that is longer (read that file's date). Windows overlap on purpose: a paper an earlier reading missed gets a second look, and the search tool's habit of returning the older papers first stops mattering. If there is no earlier reading, say so in `window` and search back over the past year. Say the window in `window` in one line, with its two dates.
 - **Test that pages open, first.** Before any search, open one named page with `WebFetch`: `https://arxiv.org/abs/2607.09460` (a paper that exists, with a title you can check: "Project Hephaistos -- IV"). Note the result for the record's `pages_opened` line: if it opened, "opened"; if not, "none" and the error in plain words. If it did not open, continue, but every `found` sentence must then say it rests on search extracts only (see step 1) and the record's `limits` line must say that no page could be opened.
+- Step 1a (the journal listing) runs once, after this step and before the first record is read.
 - Load the records with Python's `tomllib` to get the list: every file under `data/factors/` and `data/explanations/`. Do not parse by hand. Every record is read every week.
 
 ### 1. Read each record against the world
@@ -158,6 +159,31 @@ For each record, factors first in equation order (`order` 1 to 7), then explanat
 
 Search economy: no fewer than two searches for each record (one of them its own, at most one borrowed), no more than four. If a search tool fails twice, mark the record `quiet` with `found = "search unavailable"` and move on.
 
+### 1a. List the journals (once per reading, before the records are read)
+
+Added 2026-11-13 (choices 20 to 27 above, ruled by John that day). The arXiv listing shows preprints only, and some papers that bear on a test appear only in a journal. So once per reading, before step 1, list what these ten journals published in the window, using Crossref, the public catalogue that publishers register papers with. Fetch with `curl` or `WebFetch`; no key is needed; pause one second between calls.
+
+| Group | Journal | ISSN |
+|---|---|---|
+| Read every title | International Journal of Astrobiology | 1475-3006 |
+| Read every title | Astrobiology | 1531-1074 |
+| Read every title | Nature Astronomy | 2397-3366 |
+| Filtered by words | Science Advances | 2375-2548 |
+| Filtered by words | Nature | 1476-4687 |
+| Filtered by words | Science | 1095-9203 |
+| Filtered by words | Proceedings of the National Academy of Sciences | 1091-6490 |
+| Filtered by words | The Astrophysical Journal | 1538-4357 |
+| Filtered by words | Icarus | 0019-1035 |
+| Filtered by words | Acta Astronautica | 0094-5765 |
+
+1. **Each journal is listed twice and the two lists merged**, because some journals register only the year as the publication date and a paper then shows up only under its online date. With `FROM` and `TO` the window's two dates:
+   - `https://api.crossref.org/journals/<ISSN>/works?filter=from-pub-date:FROM,until-pub-date:TO&rows=100&select=DOI,title,published,published-online,type`
+   - the same with `from-online-pub-date:FROM,until-online-pub-date:TO`.
+2. **For a journal in the second group, add the words** `&query.bibliographic=life+biosignature+habitable+extraterrestrial+technosignature+Mars+Enceladus+Europa+exoplanet` to both addresses. On 2026-11-13 this left three to nine titles a journal for a 14-day window.
+3. **Read every title that comes back.** A title that looks as if it bears on any record's test is a candidate. Open it: the publisher's page through the DOI first; if that refuses, the abstract in the Crossref record (`https://api.crossref.org/works/<DOI>`) or in Europe PMC (`https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:<DOI>&resultType=core&format=json`) counts as the page opened, and everything written from it says "abstract only".
+4. **Hand each candidate to the record whose test it bears on.** In step 1 it is judged there like any arXiv candidate. List the journal address that found it among that record's `queries`; it does not count as the record's own search or its preprint-listing query, which are still required. A journal listing that produced no candidate is not listed under any item and is not counted in `searches`; it is accounted for in `journals_checked` instead.
+5. **Keep the tally for the record's `journals_checked` line** (step 5): the journals listed, the window's two dates, how many titles were read in all, how many were opened, and any journal whose listing failed. If Crossref cannot be reached at all, write `journals_checked = "none"` with the error in plain words, say so in `limits`, and carry on with the reading.
+
 ### 2. Log the publications
 
 For every paper or discovery a `noted`, `moved` or `flagged` item rests on, add a publication record under `data/papers/` in the layout `docs/record-schema.md` gives: id from the first author's surname and year (add a word when two collide, as `hanson-2021-grabby` does), `date` the paper's own date as text, `added_on` the reading's date, authors as on the paper (the first twelve and a count when there are more), title, venue with volume and pages where they exist, link, a `finding` of two to four plain sentences with the numbers that matter, the factors and explanations it bears on, `moved_range = false` (true only when step 3 moves a range on it), a `verify` list for anything not checked on the paper's page, and a `notes` line naming the reading. Never edit a publication record that already exists; if one is wrong, say so in the report. Check each file with `python3 -c "import tomllib,sys; tomllib.load(open(sys.argv[1],'rb'))" data/papers/X.toml` and then `python3 scripts/compute.py validate`.
@@ -172,7 +198,7 @@ Edit the factor's TOML by text, keeping its layout. In `[range]`, change `low` o
 
 ### 5. Write the reading record
 
-Write `data/readings/YYYY-MM-DD.toml` (create the folder if absent) exactly in the layout `docs/record-schema.md` gives: `id` and `date` the reading's date, `ran_at` from `date -u +%Y-%m-%dT%H:%M:%SZ`, `run_by = "scheduled"`, `window` in one line, **`pages_opened`** (how many pages you opened beyond the search tool, by `WebFetch`, and which kinds; "none" and why if none, including the result of the page test in step 0), **`limits`** (in plain words, what you could not see: for example that the web search tool cannot filter by date, which listings you did and did not check, anything that would not open), `records_read`, `searches` (the number of distinct searches across all items; the validator counts what the items list), `commit_before`, then one `[[item]]` per record in the order read, with `record`, `verdict`, `queries`, `reused` where step 1 asked for it, `found` (one to three plain sentences, absolute dates), `sources` for every verdict but quiet, `publications` for noted and moved (and for flagged when one was logged), `for_john` for flagged. If the folder already has a file dated today, suffix `-2`. **Count your own searches before you write `searches`**: every web search and every listing query you made, including any made only to check a date or a name. Each one is listed under the item it served; the number you counted must equal `searches`. The validator cannot see a search you left out, so this count is yours. Run `python3 scripts/compute.py validate`; fix what it names before going on.
+Write `data/readings/YYYY-MM-DD.toml` (create the folder if absent) exactly in the layout `docs/record-schema.md` gives: `id` and `date` the reading's date, `ran_at` from `date -u +%Y-%m-%dT%H:%M:%SZ`, `run_by = "scheduled"`, `window` in one line, **`pages_opened`** (how many pages you opened beyond the search tool, by `WebFetch`, and which kinds; "none" and why if none, including the result of the page test in step 0), **`journals_checked`** (from step 1a: which journals were listed, over which dates, how many titles read and how many opened, or "none" and why), **`limits`** (in plain words, what you could not see: for example that the web search tool cannot filter by date, which listings you did and did not check, anything that would not open), `records_read`, `searches` (the number of distinct searches across all items; the validator counts what the items list), `commit_before`, then one `[[item]]` per record in the order read, with `record`, `verdict`, `queries`, `reused` where step 1 asked for it, `found` (one to three plain sentences, absolute dates), `sources` for every verdict but quiet, `publications` for noted and moved (and for flagged when one was logged), `for_john` for flagged. If the folder already has a file dated today, suffix `-2`. **Count your own searches before you write `searches`**: every web search and every listing query you made, including any made only to check a date or a name. Each one is listed under the item it served; the number you counted must equal `searches`. The validator cannot see a search you left out, so this count is yours. Run `python3 scripts/compute.py validate`; fix what it names before going on.
 
 ### 6. Changelog
 

@@ -113,7 +113,7 @@ ALLOWED: dict[str, set[str]] = {
     "publication": {"id", "date", "added_on", "authors", "title", "venue", "link", "finding",
                     "factors", "explanations", "moved_range", "verify", "notes"},
     "reading": {"id", "date", "ran_at", "run_by", "window", "records_read", "searches",
-                "commit_before", "pages_opened", "limits", "item", "notes"},
+                "commit_before", "pages_opened", "limits", "journals_checked", "item", "notes"},
 }
 REQUIRED: dict[str, list[str]] = {
     "factor": ["id", "symbol", "order", "name", "unit", "description", "what_would_move_this",
@@ -130,6 +130,9 @@ REQUIRED: dict[str, list[str]] = {
 # (docs/readings/audit-2026-10-17.md) apply to readings dated on or after this day, so the two
 # readings that came before stay valid as they were written (a reading is never edited).
 READING_RULES_FROM = dt.date(2026, 10, 19)
+# Journals as well as preprints (docs/weekly-reading.md, choices 20 to 27, ruled by John 2026-11-13):
+# a reading dated on or after this day says which journals it listed.
+READING_JOURNALS_FROM = dt.date(2026, 11, 14)
 READING_ITEM_ALLOWED = {"record", "verdict", "queries", "reused", "found", "sources", "publications",
                         "for_john"}
 ESTIMATE_ALLOWED = {"who", "when", "value", "low", "high", "source", "method", "link", "publication"}
@@ -625,6 +628,12 @@ def _check_reading(r: dict, tag: str, factors: dict[str, dict], explanation_ids:
                                      "filter by date, or that the preprint listing was not checked)")):
             if not isinstance(r.get(key), str) or not r[key].strip():
                 problems.append(f"{tag}: a reading needs '{key}': {what}")
+
+    if "journals_checked" in r and (not isinstance(r["journals_checked"], str) or not r["journals_checked"].strip()):
+        problems.append(f"{tag}: 'journals_checked' must be a line of text")
+    if isinstance(date, dt.date) and date >= READING_JOURNALS_FROM and "journals_checked" not in r:
+        problems.append(f"{tag}: a reading needs 'journals_checked': which journals' listings the run read, "
+                        f"over which dates and how many titles, or 'none' and why")
 
     items = r.get("item", [])
     if not isinstance(items, list):

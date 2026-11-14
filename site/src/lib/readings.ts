@@ -40,6 +40,9 @@ export interface Reading {
       what it could not see; both empty on the two readings that came before the rule. */
   pages_opened: string;
   limits: string;
+  /** Added 2026-11-13: which journals the run listed by date, and how many titles it read; empty on
+      readings from before 2026-11-14. */
+  journals_checked: string;
   notes: string;
   file: string;
   path: string;

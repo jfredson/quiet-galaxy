@@ -64,6 +64,7 @@ const description = latestReading
             read against the records as they stood that day (<a href={`https://github.com/jfredson/quiet-galaxy/tree/${latestReading.commit_before}`} rel="noopener">this version</a>). The run finished {ranAtLabel(latestReading)}.
             {latestReading.window && <> Window: {latestReading.window}</>}
             {latestReading.pages_opened && <> Pages opened: {latestReading.pages_opened}</>}
+            {latestReading.journals_checked && <> Journals listed: {latestReading.journals_checked}</>}
             {latestReading.limits && <> What it could not see: {latestReading.limits}</>}
             {' '}The record is <code>{latestReading.file}</code>.
           </p>
