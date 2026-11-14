@@ -94,6 +94,40 @@ Ruled by John on 2026-10-18 (relayed by the master session), after `docs/reading
 
 The reading of 2026-10-17 and the reading of 2026-10-16 are not edited; the stricter checks apply only to readings dated 2026-10-19 or later.
 
+## Proposed 2026-11-13: journals as well as preprints
+
+**Proposed by Claude on 2026-11-13, at John's request the same day ("Yes, propose it"). Not ruled. The procedure below is unchanged until John rules.**
+
+**Why.** A review of the news on 2026-11-13 found three papers that bear on a record's test and were not in the publications log. Two of them had never appeared on arXiv, which is the only place the reading can search by date: Murphy and colleagues on organic carbon in the Jezero crater mudstones (Science Advances, June 2026) and Doughty and colleagues on carbon fixed on nearby planets (International Journal of Astrobiology, online 2026-09-22). Every reading since 2026-10-24 has said as much in its own `limits` line ("no journal tables of contents"). The Mars paper bears directly on the test for the chance life starts, the factor the whole answer most depends on, so this is the gap most worth closing.
+
+**What was tested on 2026-11-13,** from John's Mac, with plain fetches and no key:
+
+| Tried | Result |
+|---|---|
+| Crossref (the public catalogue that publishers register papers with), searched by words across all journals inside a date window | Too noisy to use. Neither paper came back in the first eight results; an Indonesian engineering journal named "Mars" did. |
+| Europe PMC (the public catalogue of life-science papers), searched by words inside a date window | Found the Mars paper, four results in all. Did not find the astrobiology paper. |
+| Crossref, one named journal at a time, by date (`https://api.crossref.org/journals/<ISSN>/works?filter=from-pub-date:...,until-pub-date:...`) | Found the Mars paper in Science Advances when a few words were added (four results). Found the astrobiology paper only when the filter was the online date (`from-online-pub-date`), because that journal registers the year alone as its publication date. |
+| How much a 14-day window returns, per journal (2026-10-30 to 2026-11-13) | Astrobiology 4, Nature Astronomy 11, Icarus 49, Acta Astronautica 119, The Astrophysical Journal 212, Science Advances 243. |
+
+**The proposal in one paragraph.** Once per reading, before the records are read, the run lists what a short fixed set of journals published in the window, using Crossref's per-journal listing. It reads every title from the small specialist journals, and from the large general ones only the titles a few words pick out. Any title that looks as if it bears on a record's test is opened and handed to that record, where it is judged like any arXiv candidate. The record says which journals were listed and how many titles were read.
+
+| # | Choice | Confidence | Standard or judgment | Strongest alternative and its cost |
+|---|---|---|---|---|
+| 20 | **Crossref's per-journal listing by date is the tool.** | Moderate. It found both missed papers today and needs no key. It is untested from the cloud routine, though the arXiv listing is fetched the same way there and works. | Judgment. | NASA's Astrophysics Data System, which covers preprints and journals in one search and is what astronomers use. It needs a key stored on the routine, which is one more secret to keep, and it is thin on biology journals. Worth a second look if Crossref proves unreliable from the cloud. |
+| 21 | **A fixed list of journals, in two groups.** Read whole: International Journal of Astrobiology (ISSN 1475-3006), Astrobiology (1531-1074), Nature Astronomy (2397-3366). Filtered by a few words (life, biosignature, habitable, extraterrestrial, technosignature, Mars, Enceladus, Europa, exoplanet): Science Advances (2375-2548), Icarus (0019-1035), Acta Astronautica (0094-5765), The Astrophysical Journal (1538-4357), and Nature, Science and the Proceedings of the National Academy of Sciences once their numbers are checked. | Moderate on having a list; low on this exact list, which is the part I expect to change after the first few runs. | Judgment. | A search by words across every journal. Tested today and it missed both papers. A longer list costs more titles to read for little gain, since most astronomy journals' papers are on arXiv already. |
+| 22 | **Once per reading, not once per record.** The listing is one pass of about ten fetches; candidates are then assigned to records. | Moderate. Thirty-nine records times ten journals would be 390 fetches for the same titles. | Judgment. | Per record, as the arXiv query is. It keeps "a search counts only where it was aimed" intact, at many times the cost. Under this proposal a journal candidate is listed under the record it was handed to, with the listing address as the search. |
+| 23 | **Each journal is listed twice, by publication date and by online date,** and the two lists are merged. | High. The astrobiology paper appears only under the online date. | Standard for this catalogue. | One filter only, which would have missed one of the two papers. |
+| 24 | **The window for journals is the same 14 days.** | Moderate. A journal can register a paper some days after it appears, so a paper may be missed once and caught by the overlap the next week. | Judgment. | Twenty-eight days for journals. Doubles the titles read, and catches late registrations with more margin. |
+| 25 | **When a publisher's page refuses the fetch, the abstract in Crossref or Europe PMC counts as the page opened,** and the record says "abstract only". Science's site refused on 2026-11-13; the abstract was readable in both catalogues. | Moderate. | Judgment. | Require the publisher's own page. That would have left the Mars paper unlogged. |
+| 26 | **The reading record gains one header line, `journals_checked`,** saying which journals were listed, over which dates, and how many titles were read; the `limits` line stops saying journals were not checked. The validator and the reading page need a small change for it, made by an ordinary session and not by the reading. | Moderate that a new line is better than a longer `limits` line. | Judgment. | Put it in `limits` as prose. No change to the validator or the page, at the cost of a line the site cannot print on its own. |
+| 27 | **One catch-up pass by hand, over 2026-01-01 to the day of the ruling,** with the same journals, so the log does not carry a gap from before the change. | Low to moderate; it is a few hours of a session for papers that are mostly old news. | Judgment. | No catch-up. The log simply starts covering journals from the ruling on, and says so. |
+
+**What it costs.** About ten more fetches a run and a few hundred titles to scan, most of them plainly off the subject. No money, no key.
+
+**What it still does not catch.** A paper in a journal that is not on the list. A press story about an older paper, such as the release of 2026-11-12 about the Mars paper of June: the web search still cannot filter by date. A result announced by a mission or an agency before any paper exists.
+
+**Flagged for reconsideration:** choice 21, the list itself. If John would rather start smaller, the three specialist journals plus Science Advances, Nature and Science would have caught both missed papers and cost about half as much.
+
 ## The procedure
 
 The standalone instruction for the scheduled reading. A fresh Claude session with no memory of any earlier conversation follows this from top to bottom. When this file and anything else disagree, this file wins for the reading and the disagreement is a flag for John.
