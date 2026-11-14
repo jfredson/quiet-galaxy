@@ -148,7 +148,7 @@ date = 2026-10-17
 field = "range.status"
 old = "first-pass"
 new = "reviewed"
-why = "The outside review of the seven ranges ran on 2026-10-17 and I ruled on every item the same day (docs/reviews/2026-10-17-rulings.md)."
+why = "The outside review of the seven ranges ran on 2026-10-17 and every item it raised was settled the same day (docs/reviews/2026-10-17-rulings.md); a range that has been through the outside review is marked reviewed."
 
 [[revision]]
 date = 2026-10-17
