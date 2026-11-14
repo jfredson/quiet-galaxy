@@ -1,0 +1,28 @@
+# Publication record. Layout in docs/record-schema.md. Logged by hand on 2026-11-13 after a review of
+# the news since 2026-10-18 found it missing from the log; John asked for it to be added the same day.
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "gerrard-2026"
+date = "2026-10-05"
+added_on = 2026-11-13
+authors = ["Isabel Gerrard", "Sofia Z. Sheikh"]
+title = "A Technosignature Survey Of The Anti-Solar Point: The SETI Institute's Largest-Ever Campaign With The Allen Telescope Array"
+venue = "arXiv:2610.07065 (astro-ph.IM); a preprint (version 1, 2026-10-05), accepted as an oral presentation at the 77th International Astronautical Congress"
+link = "https://arxiv.org/abs/2610.07065"
+finding = """
+The SETI Institute is using the Allen Telescope Array to listen at the point in the sky directly
+opposite the Sun, night by night, at radio frequencies of 2,356 to 3,700 megahertz. The reasoning
+is borrowed from game theory: someone looking back from that direction would see Earth cross the
+face of the Sun, so it is a place and a time that both sides could choose without having agreed
+on anything. Between 2024-08-30 and 2026-08-25 the survey made 126 observing sessions (about 876
+hours on the sky) and covered about 12 percent of the 87,660 pointings a full circuit needs; the
+authors expect the whole survey to take more than four years. Of the 84 sessions analysed so far,
+the software found nearly 170 million narrow, drifting signals, of which more than 11,000 were
+plotted and inspected by eye. Twenty-five of the plots show a signal that appears only in the beam
+pointed at the target, at ten sky positions that are scheduled to be observed again. The paper
+reports no detection and sets no limit on how many transmitters there could be; it says this is
+the first time anyone has observed this long-proposed place at all."""
+explanations = ["not-looked-long-enough"]
+moved_range = false
+
+notes = "Logged by hand on 2026-11-13, not by a reading. The weekly readings of 2026-10-24 and 2026-10-31 opened the abstract and gave a quiet verdict without logging it; it has since been widely reported (Universe Today, republished by phys.org on 2026-11-08, https://phys.org/news/2026-11-game-theory-seti-alien-civilizations.html). Read on 2026-11-13 on arXiv's own pages: the abstract, and sections 1 to 4 of the full text at https://arxiv.org/html/2610.07065. The figure in the press reports of about 1.9 million signals in 17 hours, all of human origin, is not in this paper: it belongs to the survey's earlier trial run, which this paper cites as Sheikh, Hort and colleagues, in press, and which has not been read here. Listed under the explanation that we have not looked long enough because that explanation's test asks for a demonstration of how far from complete past searches were; the paper gives no number for any of the seven factors, so no range is argued for."

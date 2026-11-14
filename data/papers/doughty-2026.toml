@@ -1,0 +1,25 @@
+# Publication record. Layout in docs/record-schema.md. Logged by hand on 2026-11-13 after a review of
+# the news since 2026-10-18 found it missing from the log; John asked for it to be added the same day.
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "doughty-2026"
+date = "2026-09-22"
+added_on = 2026-11-13
+authors = ["Christopher E. Doughty", "Cameron Hrabak", "Benjamin C. Wiebe", "Zephyr Kennan", "Denis E. Sergeev", "Michael Gowanlock"]
+title = "Calculating potential cumulative carbon fixed and evolutionary stage for Earthlike planets in our solar neighborhood"
+venue = "International Journal of Astrobiology 25, e14 (2026)"
+link = "https://doi.org/10.1017/S1473550426100378"
+finding = """
+The authors start from a hypothesis they state as such: that how far life on a planet has evolved
+goes in step with the total carbon its plants and microbes have ever taken up through
+photosynthesis. They estimate Earth's total at about 9.4 times ten to the 25 grams of carbon. Their
+climate simulations of TRAPPIST-1e, treated as an ocean world with Earth's present level of carbon
+dioxide, find it would need 18 billion years to match that, against an estimated age of 7.6
+billion, so they place it at a possible microbial stage. Applying the method to 29 nearby planets
+that may be able to support life, they find two that pass Earth's total and so could have
+multicellular and intelligent life, and six more at a possible multicellular stage."""
+factors = ["intelligence"]
+explanations = ["rare-intelligence", "we-are-early"]
+moved_range = false
+
+notes = "Logged by hand on 2026-11-13, not by a reading. The paper appeared in a journal and not on the arXiv preprint listing the weekly readings search; it came to notice through a Centauri Dreams post of 2026-10-02 (https://www.centauri-dreams.org/2026/10/02/photosynthesis-a-new-angle-into-fermis-paradox/). The finding is written from the paper's abstract, read on 2026-11-13 in the Crossref record, which also gives the authors, the volume and the date it went online; the full text has not been read, and a figure from the blog post that is not in the abstract is left out. Two of 29 planets is not a measurement of how often intelligence follows from life: it follows from the hypothesis in the first sentence, which the paper does not test, and it lies inside the range the site already uses for that factor. No range is argued for. Listed under the explanation that we are early because the paper's worked case, TRAPPIST-1e, orbits a red dwarf star, and that explanation's test turns on whether such planets can support life."

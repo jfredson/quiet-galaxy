@@ -2,6 +2,10 @@
 
 Every change to a range, a record, the method or the site, with absolute dates. Newest first. A range change always says which publication moved it and by how much.
 
+## 2026-11-13
+
+- Three publications logged by hand, after a review of the news since 2026-10-18 (asked for by John the same day) found them missing from the log; 81 records under `data/papers/` now. None moves a range, and the headline is unchanged. `gerrard-2026`: the SETI Institute's Allen Telescope Array survey of the point in the sky opposite the Sun (arXiv 2610.07065, 2026-10-05), about 12 percent complete with no detection; two weekly readings had opened it and left it unlogged. `murphy-2026`: organic carbon in two mudstones at the Bright Angel outcrop in Jezero crater on Mars (Science Advances 12 (26), June 2026), a companion to the Cheyava Falls paper that says the measurements cannot tell life from chemistry. `doughty-2026`: an estimate, resting on an untested hypothesis, that two of 29 nearby planets could have fixed as much carbon as Earth (International Journal of Astrobiology 25, e14, online 2026-09-22). The last two appeared only in journals, which the weekly reading does not search. The second and third are written from their abstracts; the notes on each record say what was read.
+
 ## 2026-11-07
 
 - Weekly reading (scheduled task, 2026-11-07): 39 records read, 0 ranges moved, 0 logged, 0 flagged for John; record at data/readings/2026-11-07.toml.

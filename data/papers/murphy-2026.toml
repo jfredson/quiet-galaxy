@@ -1,0 +1,26 @@
+# Publication record. Layout in docs/record-schema.md. Logged by hand on 2026-11-13 after a review of
+# the news since 2026-10-18 found it missing from the log; John asked for it to be added the same day.
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "murphy-2026"
+date = "2026-06"
+added_on = 2026-11-13
+authors = ["Ashley E. Murphy", "Kyle Uckert", "Kevin P. Hand", "Rohit Bhartia", "Sergei V. Bykov", "Keyron Hickman-Lewis", "Ryan S. Jakubek", "Carina Lee", "Francis M. McCubbin", "Michelle E. Minitti", "Alyssa Pascuzzo", "Sandra Siljeström", "Sunanda Sharma", "Andrew Steele", "Kenneth H. Williford", "William Abbey", "Sanford A. Asher", "Robert Barnes", "Parker A. Barr", "James F. Bell", "Olivier Beyssac", "Tanja Bosak", "Michael S. Bramble", "Adrian Brown", "Adrian P. Broz", "Denise Buckner", "Emily L. Cardarelli", "Joseph L. Carsten", "Andrea Corpolongo", "Andrew Czaja", "Scott G. C. Edgington", "Bethany L. Ehlmann", "Kenneth A. Farley", "Teresa Fornaro", "Marc Fries", "Roxana González-Burgos", "Sanjeev Gupta", "Nikole C. Haney", "William Hug", "Joshua Huggett", "Joel A. Hurowitz", "Samara Imbeah", "Joanna Clark", "Alexander J. Jones", "Linda C. Kah", "Megan R. Kennedy", "Steven W. Lee", "Justin Maki", "Brian Nixon", "Jorge I. Núñez", "Jeffrey T. Osterhout", "Nicole D. Phelan", "Yu Yu Phua", "Michael A. Ravine", "Joseph Razzell Hollis", "Eva Scheller", "Mitchell D. Schulte", "Mark A. Sephton", "Justin I. Simon", "Anushree Srivastava", "Kathryn M. Stack", "Jason Van Beek", "Benjamin P. Weiss", "Roger Wiens", "Amy J. Williams", "Brittan V. Wogsland", "R. Aileen Yingst"]
+title = "Spatially distributed complex organic matter detected in an ancient river valley in Jezero crater, Mars"
+venue = "Science Advances 12 (26), eadx0047 (2026)"
+link = "https://doi.org/10.1126/sciadv.adx0047"
+finding = """
+An instrument on the Perseverance rover that identifies molecules by the way they scatter laser
+light (a Raman spectrometer) recorded hundreds of detections of organic carbon in two mudstones in
+an old river valley in Jezero crater on Mars, at the Bright Angel outcrop where the Cheyava Falls
+features were found. The authors call it the most robust detection of organic matter in the crater
+so far and, to their knowledge, the only detection on Mars of carbon in large, linked molecules on
+a natural rock surface. Inside one rock the carbon sits with carbonate and sulfate minerals that
+formed after the mud was laid down; in the other it sits with the original silicate grains. The
+paper says the measurements cannot tell whether the carbon came from life or from chemistry
+without life."""
+factors = ["life"]
+explanations = ["rare-life", "great-filter-behind-us"]
+moved_range = false
+
+notes = "Logged by hand on 2026-11-13, not by a reading. The weekly readings search the arXiv preprint listing and this paper appeared only in a journal, so none of them saw it; it came to notice when ScienceDaily carried a release about it dated 2026-11-12 (https://www.sciencedaily.com/releases/2026/11/261111005908.htm). The finding is written from the paper's abstract, read on 2026-11-13 in the Crossref record and in Europe PMC (PMC13292988); the journal's own page refused an automatic fetch and the full text has not been read. The byline of 67 names is Crossref's. The date is given as the month only because the two catalogues differ by two days: Crossref says 2026-06-26, Europe PMC 2026-06-24. It is a companion to the Cheyava Falls paper (hurowitz-2025) and is listed against the same records. It confirms organic carbon in those rocks and says nothing either way about life, so no range is argued for."
