@@ -109,7 +109,7 @@ date = 2026-10-16
 field = "estimate"
 old = "four published estimates"
 new = "six published estimates: the 2023 aluminium-26 measurement (8 to 16 stars a year) and the 2025 massive-star census (1.3 a year) added"
-why = "The weekly reading of 2026-10-16 found two measurements the record did not carry and flagged the range for me. He ruled on 2026-10-16: add both to the estimate list and leave the range's top at 10 until the outside review of the seven ranges."
+why = "The weekly reading of 2026-10-16 found two measurements the record did not carry. Both were added to the estimate list on 2026-10-16, and the range's top was left at 10 until the outside review of the seven ranges."
 publication = "siegert-2023"
 
 [[revision]]
@@ -147,4 +147,4 @@ date = 2026-11-14
 field = "estimate"
 old = "Drake 1961 source: Pearman (1963), page 289"
 new = "Drake 1961 source: Pearman (1963), page 289, and Drake and Sobel (1992), page 55"
-why = "Read 2026-11-14 from John's photographs of the book's copyright page and pages 55 to 63 (the Delta paperback of 1994). Drake's own account of the 1961 meeting gives the conservative answer, agreed by everyone, of one new star a year, which agrees with the value recorded from Pearman's account, so the book is added as a second source (John's ruling of the same day). On 2026-10-17 this book had been dropped as a source because it had not been read; it now has been. The estimate's numbers are unchanged."
+why = "Read 2026-11-14 from John's photographs of the book's copyright page and pages 55 to 63 (the Delta paperback of 1994). Drake's own account of the 1961 meeting gives the conservative answer, agreed by everyone, of one new star a year, which agrees with the value recorded from Pearman's account, so the book is added as a second source. On 2026-10-17 this book had been dropped as a source because it had not been read; it now has been. The estimate's numbers are unchanged."
