@@ -1,0 +1,33 @@
+# Publication record. Layout in docs/record-schema.md. Logged by hand on 2026-11-14: the journal
+# catch-up pass of 2026-11-13 found this paper by its title and could not open it; John saved the
+# journal's preview page the next day and it was read from that.
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "geslin-2026"
+date = "2026-08"
+added_on = 2026-11-14
+authors = ["Erik Geslin"]
+title = "Incorporating an exopsychological biocentric contact-willingness factor into the Drake Equation"
+venue = "Acta Astronautica 245, 644–651 (2026)"
+link = "https://doi.org/10.1016/j.actaastro.2026.03.030"
+finding = """
+The Drake Equation counts civilisations that are able to communicate. The author argues that
+being able to and wanting to are two different things, and proposes one more term for the
+equation: the share of communicating civilisations that are willing to contact a species like
+ours. His reasoning is that a civilisation which lasts long enough to become very advanced has
+probably learned to live in balance with the other life on its planet and to value all of it, and
+that such a civilisation may see no reason to contact a species that fights among itself and
+damages its own living world. He ties the new term to the older ideas that advanced civilisations
+keep a rule of not interfering, or treat Earth as a reserve. The paper works through pessimistic,
+neutral and optimistic cases, and reports that whether one assumes the others think as humans do
+or value all life equally changes the estimated number of contacts by a factor of four to five.
+The author says the term is speculative and hard to pin down separately from the equation's other
+terms, since a short lifetime, few civilisations that transmit and rare intelligence would each
+produce the same silence. He also draws a practical consequence: if willingness is low, searches
+should look for signs a civilisation gives off without meaning to and should not wait for a
+message sent on purpose."""
+factors = ["detectable"]
+explanations = ["no-interest-in-contact", "zoo-hypothesis"]
+moved_range = false
+
+notes = "Logged by hand on 2026-11-14, not by a reading. The finding is written from the journal's own preview page for the article (ScienceDirect), which John opened in his browser and saved as a file on 2026-11-14 after the page had refused a script and the browser pane: the four highlight lines, the abstract, the introduction and the opening sentences of each later section. The full text is behind the journal's paywall and has not been read, so the values the author gives the new term in his three cases are not known and none is recorded here. The volume and page numbers are from the Crossref catalogue record for the DOI, read on 2026-11-13; the date is the month the preview page gives for the journal volume. It bears on the share of civilisations that are detectable because the two explanations it draws on lower that share for a reason of choice and not of ability, and the paper turns that choice into a separate term. It is an argument and a set of worked cases, not a measurement: nothing in it is evidence about what any other civilisation wants, and the author says as much. It meets neither explanation's test for being strengthened or weakened, and no range is argued for. The preview page carries the author's statement that he used ChatGPT only to improve the language and readability of the text."
