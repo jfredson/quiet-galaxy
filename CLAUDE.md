@@ -49,6 +49,16 @@ says so; a proposal that has not been ruled is written up as proposed, with the 
 document it belongs to (`docs/record-schema.md` for the record layout). Do not reopen what
 the kickoff document (`docs/2026-10-16-kickoff.md`) already proposes without saying why.
 
+## Public text is written for visitors
+
+Decided by John on 2026-11-14, after a review of the live site found notes to him on public pages.
+A record's `notes`, a revision's `why`, the weekly readings and the changelog appear on public pages, so each is written for a visitor: what changed or was decided,
+and why. Never who was told, who ruled or what is waiting for whom ("flagged for John", "John's
+ruling", "waiting on me"), and never how the work was done (which computer, a session, a routine, a
+pull request or a commit). A question for John goes on the roadmap, not in the record.
+`scripts/check_site.py` reads the built site after every build and stops the deploy if a page
+carries one of those phrases, the check The Belt Equation has run since 2026-10-27.
+
 ## Two things specific to this repository
 
 - **Explanation ids are public addresses.** An explanation's `id` is the last part of its

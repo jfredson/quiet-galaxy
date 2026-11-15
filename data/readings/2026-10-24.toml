@@ -307,7 +307,7 @@ queries = [
   "https://export.arxiv.org/api/query?search_query=all:SETI+AND+(all:%22search%22+OR+all:%22survey%22+OR+all:%22Breakthrough+Listen%22)&sortBy=submittedDate&sortOrder=descending&max_results=25",
   "Breakthrough Listen all-sky comprehensive survey results SETI search coverage fraction explored 2026",
 ]
-found = "Imran (arXiv 2026-10-15) froze one machine-learning detector and injected 15,000 test signals into Green Bank data; recall fell as signals brightened, even for a narrowband needle (0.590 to 0.090). It tests one detector, not past searches, so it is read as short of the test; borderline and left for John's eye. The web search found no all-sky coverage figure dated 2026."
+found = "Imran (arXiv 2026-10-15) froze one machine-learning detector and injected 15,000 test signals into Green Bank data; recall fell as signals brightened, even for a narrowband needle (0.590 to 0.090). It tests one detector, not past searches, so it is read as short of the test; borderline and left as an open question. The web search found no all-sky coverage figure dated 2026."
 
 [[item]]
 record = "planetarium"
