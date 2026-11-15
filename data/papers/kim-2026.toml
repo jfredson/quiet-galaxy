@@ -1,0 +1,39 @@
+# Publication record. Layout in docs/record-schema.md. Logged by hand on 2026-11-15: the journal
+# catch-up pass of 2026-11-13 found this paper by its title and could not open it; John saved the
+# open-access article from the publisher's site on 2026-11-15 and it was read in full.
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "kim-2026"
+date = "2026-05-28"
+added_on = 2026-11-15
+authors = ["Dong-Jin Kim", "Chris Phillips", "Cormac Reynolds", "Danny C. Price", "Michael A. Garrett"]
+title = "Technosignature searches with VLBI"
+venue = "Acta Astronautica 248, 1002–1007 (2026)"
+link = "https://doi.org/10.1016/j.actaastro.2026.05.052"
+finding = """
+Radio searches for signals from other civilisations are increasingly swamped by our own
+transmitters, and a single dish cannot easily tell a signal from the sky from one made nearby.
+The authors test a way round this: linking radio telescopes hundreds to thousands of kilometres
+apart so that they work as one instrument (very long baseline interferometry, VLBI). Interference
+near one telescope is not seen by the others, and the linked array can say where on the sky a
+signal comes from and how fast its source is moving across it.
+
+As a trial they pointed five linked telescopes in Australia and New Zealand at the Voyager 2
+spacecraft for three hours in May 2024 and picked up its transmitter. They then simulated what
+the same array would record from a transmitter on a planet circling a star 20 parsecs away, about
+65 light-years, at half, one and two times Earth's distance from the Sun. The two look clearly
+different. Voyager 2, the most distant thing humans have sent, still crosses the sky fast enough
+to leave a strong, changing mark in the linked data; a transmitter on a planet of another star
+would barely move, and would leave a mark hundreds of times smaller that shows only between the
+telescopes farthest apart. So the method can separate a signal from another star's planet from
+one of our own spacecraft, and could confirm or dismiss a candidate found by a single dish.
+
+No search for signals was made. The authors call this a preparatory study and plan two
+programmes with the same array: watching nearby rocky planets in the liquid-water band of their
+stars, timed for moments when two planets of one system line up with Earth, and quick follow-up
+of candidates reported by other searches."""
+factors = ["detectable"]
+explanations = ["not-looked-long-enough"]
+moved_range = false
+
+notes = "Logged by hand on 2026-11-15, not by a reading. The journal catch-up pass of 2026-11-13 found it by its title through Crossref and could not open it; the article is open access, the publisher's site (ScienceDirect) refuses a script and the browser, and John saved it from his own browser on 2026-11-15. It was read in full that day: five pages of text and the reference list's first lines. The date is the day it went online; the volume and pages are on its first page, which also says it belongs to a special issue of invited papers from the 76th International Astronautical Congress. The array is the Long Baseline Array; the five stations were the Australia Telescope Compact Array, Parkes, Mopra, Ceduna and Warkworth, observing at 8.42 gigahertz on 2024-05-20. The measure that separates the two cases is the fringe rate, the rate at which the combined signal from a pair of telescopes cycles: it drifted by up to 40 thousandths of a cycle a second for Voyager 2 and by a few thousandths in the simulated planet cases, and then only on the pairs 1,300 and 2,300 kilometres apart. 'Hundreds of times smaller' in the finding is this record's summary of the paper's Table 1 and figures, not a number the paper states. The simulation assumes that errors from the atmosphere and the instruments are fully corrected, and the authors say this may not hold; in the real Voyager data one pair of telescopes departed from the model for that reason. The paper also works out how strong a transmitter would have to be: Voyager 2 sends at most 18 watts through a dish that concentrates it to the equivalent of about 1.14 million watts sent in all directions, and to appear as bright from X parsecs away a transmitter would need the equivalent of about 2.4 times ten to the 12 watts times X squared, which at 20 parsecs is about ten to the 15 watts; a narrower signal would need less. That figure is left out of the finding because it describes this array's reach and is not a result about any star. The paper cites the 2019 candidate from Proxima Centauri's direction, later traced to local interference, as the kind of case the method is for. Listed under the explanation that we have not looked long enough because it bears on how far a search result can be trusted and on what a future search could cover; it reports no search and no limit on any star, so it meets no explanation's test for being strengthened or weakened, and no range is argued for."
