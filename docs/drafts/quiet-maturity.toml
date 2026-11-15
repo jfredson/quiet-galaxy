@@ -1,0 +1,103 @@
+# DRAFT explanation record, written 2026-11-15. Not in data/ yet: an explanation's id is a
+# permanent page address, so the file moves to data/explanations/ only once the id and the
+# wording are agreed. Layout in docs/record-schema.md.
+
+id = "quiet-maturity"
+name = "Quiet maturity: past a certain point a civilisation stops growing outward and puts its effort into doing more with less, so the mature ones give off almost nothing we would notice"
+family = "unseen"
+proposed_by = "John Fredrickson"
+proposed_in = 2026
+proposed_source = "\"The Quiet Galaxy Hypothesis: Advanced Intelligence, Informational Resilience, and the Ethics of Cosmic Silence\", an essay on Sentient Horizons, published 2026-01-18 (https://sentient-horizons.com/essays/the-quiet-galaxy-hypothesis-advanced-intelligence-informational-resilience-and-the-ethics-of-cosmic-silence/)"
+summary = """
+Technical civilisations may be common, but loud only briefly. A young civilisation like
+ours spills radio and burns energy as it grows, but once it can build minds better than
+its own, the gains stop coming from more territory and more power and start coming from
+doing more computing with less matter and less energy. A civilisation that goes that way
+spreads itself thinly and redundantly rather than building great visible structures, and it
+has no reason to disturb younger worlds. On this view the galaxy is quiet because the
+civilisations in it grew up, not because they are afraid, gone or absent, and our searches
+are tuned to the short noisy stage that each of them passes through quickly."""
+body = """
+I put this one forward myself, in an essay on my blog Sentient Horizons in January 2026,
+and it is held to the same standard as every other page here: what it claims, what it
+borrows, and the strongest objections I know of.
+
+The argument starts from two ways of measuring how advanced a civilisation is. The
+Kardashev scale ranks civilisations by how much energy they command: a planet's, a star's,
+a galaxy's. In his 1998 book Impossibility, the physicist John Barrow proposed an opposite
+scale that ranks them by how small a scale of matter they can control: everyday objects,
+then molecules, then atoms, then the parts of atoms, and finally space and time
+themselves. Most expectations about what aliens would look like assume the first
+scale, with its megastructures and starlight-hungry engineering. The quiet maturity idea
+says the second scale is where the gains are once a civilisation can build minds better
+than its own, because a more capable mind does more by computing efficiently than by
+owning more.
+
+From that come three claims. A mature civilisation stops expanding outward, because the
+cost and risk of crossing between stars buys less than improving what it already has.
+It keeps itself safe by spreading copies of itself thinly across many small, scattered
+pieces rather than by building a few large, fortified structures, because systems that
+last a long time tend to rely on redundancy and recovery. And it leaves younger
+civilisations alone, because it no longer competes with them for matter or energy. Each of
+these makes a civilisation harder to see. The essay estimates the loud stage, from the first
+radio to the turn inward, at a few centuries to a thousand years, which is a flicker
+against the age of the galaxy, so two civilisations are almost never loud at the same time.
+
+The idea borrows from older work. John Smart's transcension hypothesis has civilisations
+compress themselves inward until nothing outside can see them; quiet maturity stops short of
+that and asks only for efficiency. Milan Ćirković argued in 2008, in a paper called
+Against the Empire, that advanced civilisations are more likely to be driven by making the
+most of what they have than by expansion, and so to stay compact. Jacob Haqq-Misra and Seth
+Baum argued in 2009 that fast growth may not be sustainable across a galaxy, so the
+civilisations that last may be ones that never spread far. What this version adds is the claim that the
+turn is driven by building minds better than one's own, and that heat, the one thing
+efficiency cannot remove, can be made to look natural.
+
+It bears on the equation at the last two factors. It lowers the share of intelligent
+species that are detectable, and it shortens how long each one stays detectable, while
+leaving the earlier factors as large as the optimists want.
+
+The first objection is the one every explanation of this kind faces. It needs nearly every
+civilisation to take the quiet path, and a single exception that chose to spread outward
+would be enough to fill the galaxy, an argument Michael Hart made in 1975 against every
+explanation that rests on all civilisations behaving alike. The reply in the essay is that
+the quiet path is not a choice that could go either way but where the pressure toward
+efficiency leads; that is a claim about every civilisation's future, and it cannot be
+checked from here.
+
+The second objection is about heat. A civilisation that captures a large share of a star's
+light has to give all of that power off again as heat; spreading the heat over a larger,
+cooler swarm moves it to longer wavelengths but does not make it smaller. The dust around
+ordinary stars re-radiates less than about one percent of their light, and usually far
+less, so a swarm passes for dust only if it captures a small share too, which limits how
+much a quiet civilisation could use. The search called Project Hephaistos, published in
+2024, shows the confusion does happen at the margins: of about five million stars it found
+seven with heat it could not easily explain, all of them small red stars, which a partial
+swarm might account for. Other astronomers then found that three of the seven sit in line
+with distant radio sources and were probably misidentified, and that dusty galaxies far
+behind are common enough to explain all seven. At the scale of whole galaxies, a survey of
+about 100,000 found none in which a civilisation could be turning more than 85 percent of
+the starlight into heat.
+
+The third objection is that silence fits this idea and the plain absence of anyone equally
+well, so the silence cannot count in its favour. A galaxy full of living planets with no
+sign of technology would not separate the two either: it would fit a mature quiet galaxy,
+and it would equally fit a barrier between simple life and intelligence. The idea needs a
+test of its own, and the most direct is a search for the small, engineered traces it
+predicts close to home. Finally, the whole picture rests on a forecast about what minds
+better than ours will want, which is a forecast about our own future rather than a fact
+about the galaxy."""
+standing = "Not published in a journal or discussed in the research literature: it is my own synthesis of older ideas (Barrow's scale, Smart's transcension, Ćirković's case against galactic empire, the sustainability solution) and is listed here so that readers can hold it to the same standard as the rest."
+would_strengthen = "A confirmed source of heat around a star whose pattern points to a partial swarm capturing a small share of its light; engineered objects or materials of very small size found in the solar system, such as in the regolith of moons or among asteroids; evidence that the cost of computing keeps falling toward physical limits rather than levelling off."
+would_weaken = "A detected civilisation that has spread across many stars or a galaxy; waste-heat surveys that rule out even small captured fractions around large numbers of stars; a demonstration that a civilisation cannot gain more by efficiency than by expansion over the long run."
+related = ["transcension", "they-became-machines", "inward-turn", "aestivation", "dark-forest", "ships-in-the-night", "zoo-hypothesis"]
+
+notes = "Written 2026-11-15 from the Sentient Horizons essay of 2026-01-18. The essay lists 'biosignatures common without technosignatures' both as a prediction and as a result that would weaken the idea; this page uses it as neither, because such a census bounds the late factors together rather than this explanation on its own, the same reason it is not a test on the intelligence factor's page. Checked 2026-11-15. Barrow's scale: Impossibility: The Limits of Science and the Science of Limits, 1998, as described at https://en.wikipedia.org/wiki/Kardashev_scale. Ćirković, Against the Empire, Journal of the British Interplanetary Society, 2008 (https://arxiv.org/abs/0805.1821): advanced civilisations are more likely optimisation-driven than expansion-driven, favouring a spatially compact model. Haqq-Misra and Baum, The Sustainability Solution to the Fermi Paradox, Journal of the British Interplanetary Society 62, 47-51, 2009 (https://arxiv.org/abs/0906.0568): faster growth may not be sustainable on the galactic scale. Hart, An Explanation for the Absence of Extraterrestrials on Earth, Quarterly Journal of the Royal Astronomical Society 16, 128-135, 1975 (text at https://www.astro.ncu.edu.tw/~wchen/FindLife/mhart.htm; https://en.wikipedia.org/wiki/Hart%E2%80%93Tipler_conjecture): explanations that need every civilisation to behave alike fail, because one that chose to expand would have reached Earth. Waste heat: Wright and others, The Astrophysical Journal 792, 26, 2014 (https://arxiv.org/abs/1408.1133): collected energy is ultimately re-radiated as waste heat. Debris dust: Hughes, Duchêne and Matthews, Annual Review of Astronomy and Astrophysics, 2018 (https://arxiv.org/abs/1802.04313): a debris disk re-radiates less than 8 thousandths of its star's light, and only rare extreme disks reach one hundredth. Project Hephaistos: Suazo and others, Monthly Notices of the Royal Astronomical Society, 2024 (https://arxiv.org/abs/2405.02927): five million objects, seven candidates, all M dwarfs. The follow-up: Ren, Garrett and Siemion, 2024, posted on arXiv with no journal named there (https://arxiv.org/abs/2405.14921): candidates A, B and G coincide with radio sources and were misidentified, and dust-obscured galaxies are common enough to explain all seven. Galaxies: Griffith and others, The Astrophysical Journal Supplement Series 217, 25, 2015 (https://arxiv.org/abs/1504.03418): about 100,000 galaxies, none with a civilisation reprocessing more than 85 percent of its starlight. A reminder for later: check whether the Ren, Garrett and Siemion paper has since appeared in a journal."
+
+[[bears_on]]
+factor = "detectable"
+direction = "lowers"
+
+[[bears_on]]
+factor = "lifetime"
+direction = "lowers"
