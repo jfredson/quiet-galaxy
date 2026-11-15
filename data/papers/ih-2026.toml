@@ -1,0 +1,28 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the weekly reading of 2026-11-14.
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "ih-2026"
+date = "2026-11-12"
+added_on = 2026-11-14
+authors = ["Jegug Ih", "Shubham Kanodia", "Nicholas Wogan", "Mark Fortune", "Natalie H. Allen", "Hannah Diamond-Lowe", "Mike Greklek-McKeon", "Måns Holmberg", "Jonathan Brande", "Reza Ashtari", "Katherine A. Bennett", "Jacob Lustig-Yaeger", "and 6 more"]
+title = "JWST Rocky Worlds DDT Observations of LTT 1445 A b and c in Secondary Eclipse Using MIRI/F1500W"
+venue = "arXiv:2611.17300 (astro-ph.EP), submitted to the AAS journals"
+link = "https://arxiv.org/abs/2611.17300"
+finding = """
+The James Webb Space Telescope's Rocky Worlds programme measured the heat from the day sides of
+LTT 1445 A b and c, two rocky planets of a red dwarf 6.9 parsecs away, the nearest such system.
+Planet b glows at about 528 kelvin, as a dark bare rock would; with an earlier spectrum this limits
+its carbon dioxide to under 0.6 thousandths of a bar and its whole atmosphere to about 0.1 bar or
+less, so the authors conclude it has no substantial atmosphere. Planet c (about 625 kelvin) is
+poorly measured and only atmospheres of a bar or more carrying carbon dioxide are ruled out. The
+authors say the line between red-dwarf planets that keep air and those that lose it (the 'cosmic
+shoreline') cannot lie much farther toward the airless side than predicted."""
+factors = ["habitable-planets"]
+explanations = ["rare-earth", "we-are-early"]
+moved_range = false
+
+verify = [
+  "The paper is a preprint submitted to the AAS journals and not yet accepted; check the venue when it is published.",
+]
+
+notes = "Logged by the weekly reading of 2026-11-14 (data/readings/2026-11-14.toml), which found it in arXiv's listing by date and read the abstract on the arXiv page and in arXiv's own catalogue entry; the full text was not read. The eighteen authors are as arXiv lists them. Both planets orbit closer to their star than the band where water stays liquid, so, like the TRAPPIST-1 b and c results already in the log (Gillon and colleagues, 2026; Zieba and colleagues, 2023), it says how often rocky red-dwarf planets keep air, not how many habitable planets there are per star, and no range is argued for."
