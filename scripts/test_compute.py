@@ -660,6 +660,16 @@ class NewsPosts(unittest.TestCase):
         opener = self.GOOD.replace("kind: rung-reached", "kind: start-here").replace("records: [a-leaf]\n", "")
         self.assertEqual(self.run_check(opener, name="2026-10-18-start-here.md"), [])
 
+    def test_an_essay_may_name_a_record_that_has_not_changed(self):
+        essay = self.GOOD.replace("kind: rung-reached", "kind: essay").replace("date: 2026-10-18", "date: 2026-12-30")
+        self.assertEqual(self.run_check(essay, name="2026-12-30-a-leaf-moves.md"), [])
+
+    def test_an_essay_must_still_name_a_record_and_link_its_figures(self):
+        essay = self.GOOD.replace("kind: rung-reached", "kind: essay")
+        self.assertTrue(any("names no record" in p for p in self.run_check(essay.replace("records: [a-leaf]\n", ""))))
+        bad = essay.replace("[published it](https://example.org/paper)", "published it")
+        self.assertTrue(any("states a figure with no link" in p for p in self.run_check(bad)))
+
 
 
 

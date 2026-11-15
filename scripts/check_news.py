@@ -10,13 +10,17 @@ site/src/data/records.json (the build's prebuild does both, in that order):
 
 A post is one Markdown file, YYYY-MM-DD-slug.md, with a frontmatter block. The check refuses a
 post that: has a file name not of that form, or a frontmatter date that differs from it; carries
-a kind outside the seven; names no record, or one that does not exist (the opener, kind
+a kind outside the eight; names no record, or one that does not exist (the opener, kind
 "start-here", is the one post that need not name a record); cites no source with an https
 address; states a figure (any digit) in a paragraph that carries no link (a Markdown link or a written-out https address) to a source or a record
 (a table is covered by the record links the page draws under the post; the frontmatter is not
 prose); or names a record that shows no dated change within fourteen days of the post's date
 (a revision, a range set, or a reading item ruled or moved), so a post cannot announce
 what the record does not show. The rules are John's of 2026-10-18.
+
+The eighth kind, "essay" (added 2026-11-15), is the author's own judgement set beside the records. It
+must name at least one record, cite a source and link every figure, like any other post. It announces
+no change, so the fourteen-day rule does not apply to it.
 
 Pictures (tracker pattern, rule 4.23, in force since 2026-11-14). A post may show real photographs
 of its event. The check refuses a post whose picture: is not written as a <figure> with an <img> and
@@ -37,7 +41,11 @@ from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-KINDS = {"start-here", "rung-reached", "estimate-revised", "flagged-item-ruled", "claim", "headline-moved", "method-changed"}
+KINDS = {"start-here", "rung-reached", "estimate-revised", "flagged-item-ruled", "claim", "headline-moved", "method-changed", "essay"}
+# An essay gives the author's own judgement beside the records. It names the records it argues with, cites a
+# source and links every figure like any other post, but it announces no change, so the rule that a named
+# record must show a dated change near the post's date does not apply to it (added 2026-11-15).
+NO_CHANGE_NEEDED = {"start-here", "essay"}
 WINDOW_DAYS = 14
 NAME_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})-([a-z0-9]+(?:-[a-z0-9]+)*)\.md$")
 
@@ -213,7 +221,7 @@ def check(posts_dir: Path, records: dict, pictures_dir: Path | None = None) -> t
             problems.append(f"{name}: the frontmatter date {fm['date']} differs from the file name's {m.group(1)}")
         kind = fm.get("kind")
         if kind not in KINDS:
-            problems.append(f"{name}: kind {kind!r} is not one of the seven")
+            problems.append(f"{name}: kind {kind!r} is not one of the eight")
         if kind == "start-here":
             openers += 1
         recs = fm.get("records") or []
@@ -230,7 +238,7 @@ def check(posts_dir: Path, records: dict, pictures_dir: Path | None = None) -> t
             when = date.fromisoformat(fm.get("date") or m.group(1))
         except ValueError:
             when = None
-        if when and kind != "start-here":
+        if when and kind not in NO_CHANGE_NEEDED:
             for rid in recs:
                 if rid in by_id and not record_changed_near(by_id[rid], when, readings):
                     problems.append(f"{name}: {rid} shows no dated change within {WINDOW_DAYS} days of {when}; a post cannot announce what the record does not show")

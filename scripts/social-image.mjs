@@ -82,7 +82,7 @@ const out = fileURLToPath(new URL('../site/public/social-preview.png', import.me
 // ---- the news posts' cards (tracker pattern, rule 4.15; John 2026-10-18), copied from Outrunning Ageing's ----
 import { readdirSync, readFileSync, mkdirSync } from 'node:fs';
 import { basename, join } from 'node:path';
-const KIND_LABEL = { 'start-here': 'start here', 'rung-reached': 'a rung reached', 'estimate-revised': 'a range revised', 'flagged-item-ruled': 'a flagged item ruled', 'claim': 'a claim settled', 'headline-moved': 'the headline moved', 'method-changed': 'the method changed' };
+const KIND_LABEL = { 'start-here': 'start here', 'rung-reached': 'a rung reached', 'estimate-revised': 'a range revised', 'flagged-item-ruled': 'a flagged item ruled', 'claim': 'a claim settled', 'headline-moved': 'the headline moved', 'method-changed': 'the method changed', 'essay': 'essay' };
 function fm(text) { const m = text.match(/^---\n([\s\S]*?)\n---/); const d = {}; if (!m) return d; for (const line of m[1].split('\n')) { const k = line.match(/^([a-z_]+):\s*(.*)$/); if (k) d[k[1]] = k[2].trim().replace(/^"|"$/g, ''); } return d; }
 function longDate(iso) { const d = new Date(iso + 'T12:00:00Z'); return `${d.getUTCDate()} ${d.toLocaleString('en-GB', { month: 'long', timeZone: 'UTC' })} ${d.getUTCFullYear()}`; }
 function wrapWords(text, max) { const lines = []; let cur = ''; for (const w of text.split(/\s+/)) { const t = (cur + ' ' + w).trim(); if (t.length <= max) cur = t; else { lines.push(cur); cur = w; } } if (cur) lines.push(cur); return lines; }
