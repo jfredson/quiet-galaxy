@@ -3,6 +3,7 @@ title: "Are we any less alone than a year ago? The Quiet Galaxy's 2026, and what
 date: 2026-12-29
 kind: year-in-review
 summary: In 2026 the strongest hints of other life and other minds either faded on a closer look or stayed open, and none moved the ranges this site multiplies together. The chance that we are alone in the galaxy stands at 58.0 percent, and 2027 brings the first planet-hunting season of a new space telescope and the launch of another.
+after: "58.0 percent alone in the galaxy, with no range moved by a 2026 finding"
 records: [star-formation, planets, habitable-planets, life, detectable]
 sources:
   - label: The numbers as they stand
