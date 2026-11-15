@@ -64,6 +64,7 @@ const docs = [
     <h2 id="why-a-spread">Why a spread, not a point</h2>
     <p>
       For decades people plugged a single favourite value into each piece and multiplied, and got whatever number they had hoped for. The trouble is that for most of the seven the honest answer is "somewhere between this and that", and the gap between this and that is often not a factor of two but a factor of a thousand, or a million, or far more. A single value hides that. In 2018 the researchers Anders Sandberg, Eric Drexler and Toby Ord, in a paper called "Dissolving the Fermi Paradox", showed what happens when you keep the uncertainty in: the answer is not a number but a wide spread, and a large part of that spread sits below one civilisation per galaxy. On their reading, the silence is not a paradox at all; it is roughly what you should expect given how little we know.
+      {head.available && <> This site's own run gives the same picture: a {percent(head.alone_galaxy)} chance that we are alone in the galaxy, which the home page shows the other way round, as a {percent(1 - head.alone_galaxy)} chance that there are others.</>}
     </p>
     <p>
       This site follows that method. Each of the seven pieces carries a range, set from the published estimates listed on its page, with a written reason. The multiplication is then run many thousands of times. Each time, a value is picked at random from every piece's range, the seven are multiplied, and the result is kept. The thousands of results are the spread.
