@@ -4,6 +4,7 @@ Every change to a range, a record, the method or the site, with absolute dates. 
 
 ## 2026-11-14
 
+- **The news check now checks a post's pictures** (`scripts/check_news.py`, `scripts/test_news_photos.py`). Each picture must be written as a figure with a caption that links to its source page, be kept on this site, carry a description for readers who cannot see it, and have an entry in the post's own record giving its source page, credit, licence and the day the licence was read. No post carries a picture yet, so nothing a reader sees changes.
 - **The home page now lists the latest news on the right of the first screen**, under "The answer so far": up to three of the newest posts, each as its date, its kind and a title that links to the post, with a link to all the news and a line sending a new reader to the opening post (`site/src/pages/index.astro`). Before this, nothing on the home page said a post existed. No range, record or number changes.
 
 ## 2026-11-13
