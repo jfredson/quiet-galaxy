@@ -55,5 +55,8 @@ the kickoff document (`docs/2026-10-16-kickoff.md`) already proposes without say
   page address (`/explanations/dark-forest/`) and is never renamed once committed. Retire it
   in `data/retired.toml` and point at the replacement instead. The validator checks this.
 - **Facts from memory are marked.** A claim written without checking it against a source
-  goes in the record's `verify` list, and a later session clears it. The ranges and the
+  goes in the record's `verify` list, and a later session clears it. Nothing is promoted or
+  shared while a `verify` entry is open (ruled by John 2026-10-17). A reminder to check
+  something later, such as a preprint's venue once a journal publishes it, is not a claim from
+  memory: it goes in `notes` and does not hold up sharing (ruled by John 2026-11-14). The ranges and the
   publications log are only as good as their sources.
