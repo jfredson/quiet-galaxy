@@ -22,6 +22,45 @@ for (const p of pubs) {
   if (last && last.date === p.added_on) last.entries.push(p);
   else days.push({ date: p.added_on, entries: [p] });
 }
+
+// The author index (added 2026-11-15, asked for by John that day): every person named as an
+// author of a logged paper, A to Z by family name, each linked to the entry or entries that cite
+// their work, so an author can find how they are cited. A group credit ("and the Kepler team")
+// is not a person and is left out. The family name is taken as the last word of the name, with
+// the particles that belong to it ("von Hoerner", "de Visscher") kept in front.
+const PARTICLES = new Set(['von', 'van', 'de', 'der', 'den', 'del', 'della', 'di', 'dos', 'da', 'le', 'la', 'ter']);
+const familyOf = (name: string) => {
+  const words = name.trim().split(/\s+/);
+  let i = words.length - 1;
+  while (i > 0 && PARTICLES.has(words[i - 1].toLowerCase())) i--;
+  return { family: words.slice(i).join(' '), given: words.slice(0, i).join(' ') };
+};
+const plainKey = (t: string) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+const shortTitle = (t: string) => (t.length > 64 ? `${t.slice(0, 61).trimEnd()}…` : t);
+const byAuthor = new Map<string, { family: string; given: string; papers: typeof pubs }>();
+for (const p of pubs) {
+  for (const name of p.authors) {
+    if (/^and\b/i.test(name.trim())) continue;
+    const { family, given } = familyOf(name);
+    const key = plainKey(`${family}|${given}`);
+    const row = byAuthor.get(key) ?? { family, given, papers: [] };
+    if (!row.papers.includes(p)) row.papers.push(p);
+    byAuthor.set(key, row);
+  }
+}
+const authorRows = [...byAuthor.entries()].sort((x, y) => x[0].localeCompare(y[0])).map(([, v]) => v);
+const letterOf = (family: string) => {
+  const stripped = plainKey(family).replace(/^(von|van|de|der|den|del|della|di|dos|da|le|la|ter) /, '');
+  const c = stripped.charAt(0).toUpperCase();
+  return /[A-Z]/.test(c) ? c : '#';
+};
+const letters: { letter: string; rows: typeof authorRows }[] = [];
+for (const row of [...authorRows].sort((x, y) => (letterOf(x.family) + plainKey(x.family + x.given)).localeCompare(letterOf(y.family) + plainKey(y.family + y.given)))) {
+  const letter = letterOf(row.family);
+  const last = letters[letters.length - 1];
+  if (last && last.letter === letter) last.rows.push(row);
+  else letters.push({ letter, rows: [row] });
+}
 ---
 
   <section class="hero about-part" id="story">
@@ -43,6 +82,33 @@ for (const p of pubs) {
       <li><span class="stat">{totals.days}</span><span class="stat-label">{totals.days === 1 ? 'day' : 'days'} on which something was logged</span></li>
     </ul>
 
+    <div class="finder" id="find">
+      <label for="paper-filter">Find a paper</label>
+      <input id="paper-filter" type="search" autocomplete="off" spellcheck="false" placeholder="An author's name, or a word from the title" />
+      <p class="finder-count" id="paper-filter-count" aria-live="polite"></p>
+    </div>
+
+    <details class="author-index" id="authors">
+      <summary>Every author cited, A to Z <span class="dim">({authorRows.length} people)</span></summary>
+      <p class="dim" style="font-size: 14px; margin: 0 0 10px;">Choose a name to open the entry that cites that person's work.</p>
+      <p class="author-letters">
+        {letters.map((l) => <a href={`#authors-${l.letter}`}>{l.letter}</a>)}
+      </p>
+      {letters.map((l) => (
+        <div class="author-letter">
+          <h3 id={`authors-${l.letter}`}>{l.letter}</h3>
+          <ul>
+            {l.rows.map((r) => (
+              <li>
+                <span class="author-name">{r.family}{r.given ? `, ${r.given}` : ''}</span>
+                {r.papers.map((p) => <a href={`#${p.id}`} title={p.title}>{shortTitle(p.title)}</a>)}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </details>
+
     {pubs.length === 0 ? (
       <p class="empty-note">Nothing has been logged yet.</p>
     ) : days.map((day) => (
@@ -51,7 +117,7 @@ for (const p of pubs) {
         {postsFor(day.date).map((p) => <p class="in-the-news-line">In the news: <a href={postPath(p)}>{p.data.title}</a>.</p>)}
         <div class="entries">
           {day.entries.map((p) => (
-            <details class="entry" id={p.id}>
+            <details class="entry" id={p.id} data-search={plainKey(`${p.title} ${p.authors.join(' ')} ${p.venue}`)}>
               <summary>
                 <span class="entry-meta">
                   <span class="entry-date">appeared {worldDate(p.date)}</span>
@@ -95,7 +161,7 @@ for (const p of pubs) {
                 )}
                 {p.notes && <p class="dim" style="font-size: 14px;">{p.notes}</p>}
                 {p.verify.length > 0 && <p class="dim" style="font-size: 14px;">Still to be checked against a source: {p.verify.join(' ')}</p>}
-                <p class="dim" style="font-size: 13px;">The record is <a href={recordUrl(p.file)} rel="noopener"><code>{p.file}</code></a> in the public repository.</p>
+                <p class="dim" style="font-size: 13px;"><a href={`#${p.id}`}>Link to this entry</a>. The record is <a href={recordUrl(p.file)} rel="noopener"><code>{p.file}</code></a> in the public repository.</p>
               </div>
             </details>
           ))}
@@ -108,3 +174,65 @@ for (const p of pubs) {
     </p>
   </section>
 
+<script is:inline>
+  // Added 2026-11-15. Two small helpers for the log of papers: opening the entry a link points
+  // at, and narrowing the list as a name or a word is typed. With scripts off, every entry is
+  // still on the page and every link still lands on its entry; it just stays closed.
+  (function () {
+    var input = document.getElementById('paper-filter');
+    var count = document.getElementById('paper-filter-count');
+    var entries = Array.prototype.slice.call(document.querySelectorAll('details.entry[data-search]'));
+    var days = Array.prototype.slice.call(document.querySelectorAll('.day'));
+    var plain = function (t) { return t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim(); };
+
+    function narrow() {
+      var words = plain(input.value).split(/\s+/).filter(Boolean);
+      var shown = 0;
+      entries.forEach(function (e) {
+        var text = e.getAttribute('data-search');
+        var hit = words.every(function (w) { return text.indexOf(w) !== -1; });
+        e.hidden = !hit;
+        if (hit) shown++;
+      });
+      days.forEach(function (d) { d.hidden = !d.querySelector('details.entry:not([hidden])'); });
+      count.textContent = words.length === 0 ? '' : shown === 0 ? 'No paper in the log matches that.' : shown === 1 ? '1 paper matches.' : shown + ' papers match.';
+    }
+
+    function openTarget() {
+      var id = decodeURIComponent(location.hash.slice(1));
+      if (!id) return;
+      var el = document.getElementById(id);
+      if (!el || !el.matches('details.entry')) return;
+      if (el.hidden && input) { input.value = ''; narrow(); }
+      el.open = true;
+      el.scrollIntoView({ block: 'start' });
+    }
+
+    if (input) input.addEventListener('input', narrow);
+    window.addEventListener('hashchange', openTarget);
+    openTarget();
+  })();
+</script>
+
+<style>
+  .finder { margin: 0 0 14px; }
+  .finder label { display: block; font-family: var(--sans); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin: 0 0 6px; }
+  .finder input { width: 100%; max-width: 520px; box-sizing: border-box; font: inherit; font-size: 16px; padding: 10px 12px; color: var(--text); background: var(--panel); border: 1px solid var(--line-strong); border-radius: var(--radius); }
+  .finder input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .finder-count { font-family: var(--sans); font-size: 13px; color: var(--muted); margin: 6px 0 0; min-height: 1.2em; }
+  .author-index { border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); padding: 0 18px; margin: 0 0 30px; scroll-margin-top: 80px; }
+  .author-index > summary { cursor: pointer; padding: 14px 0; font-size: 16px; color: var(--text); }
+  .author-index > summary:hover { color: var(--accent); }
+  .author-index[open] { padding-bottom: 16px; }
+  .author-letters { display: flex; flex-wrap: wrap; gap: 4px 10px; margin: 0 0 6px; font-family: var(--sans); font-size: 14px; }
+  .author-letter h3 { font-family: var(--sans); font-size: 13px; letter-spacing: 0.08em; color: var(--accent); border-bottom: 1px solid var(--line); padding: 14px 0 6px; margin: 0 0 8px; scroll-margin-top: 80px; }
+  .author-letter ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+  .author-letter li { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); gap: 2px 14px; font-size: 14.5px; line-height: 1.45; }
+  .author-name { color: var(--text-soft); }
+  .author-letter li a { grid-column: 2; overflow-wrap: anywhere; }
+  .entry { scroll-margin-top: 80px; }
+  @media (max-width: 620px) {
+    .author-letter li { grid-template-columns: 1fr; }
+    .author-letter li a { grid-column: 1; padding-left: 12px; }
+  }
+</style>

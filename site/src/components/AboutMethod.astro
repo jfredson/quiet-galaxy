@@ -51,17 +51,17 @@ const docs = [
     <p class="eyebrow">How it works</p>
     <h2 class="about-h">How the numbers are worked out</h2>
     <p class="lede">
-      The number at the top of the site is never typed in. It is worked out from the seven pieces of the equation, each carrying a range drawn from what has been published, by a method that anyone can run from the public repository.
+      The number at the top of the site is worked out from the seven pieces of the equation, each carrying a range drawn from what has been published, by a method that anyone can run from the public repository.
     </p>
   </section>
 
   <section class="section narrow prose">
-    <h2>The multiplication</h2>
+    <h2 id="the-multiplication">The multiplication</h2>
     <p>
       In 1961 the astronomer Frank Drake wrote down a way to organise the question "how many civilisations in our galaxy could we detect right now?" as a multiplication of seven quantities: how many stars are born each year; what share of them have planets; how many planets per star could support life; on what share of those life starts; on what share of those it becomes intelligent; what share of intelligent species make themselves detectable; and how long they stay detectable. Multiply the seven and you have N, the number of detectable civilisations. The equation is a way of dividing one unanswerable question into seven smaller ones, some of which can now be answered.
     </p>
 
-    <h2>Why a spread, not a point</h2>
+    <h2 id="why-a-spread">Why a spread, not a point</h2>
     <p>
       For decades people plugged a single favourite value into each piece and multiplied, and got whatever number they had hoped for. The trouble is that for most of the seven the honest answer is "somewhere between this and that", and the gap between this and that is often not a factor of two but a factor of a thousand, or a million, or far more. A single value hides that. In 2018 the researchers Anders Sandberg, Eric Drexler and Toby Ord, in a paper called "Dissolving the Fermi Paradox", showed what happens when you keep the uncertainty in: the answer is not a number but a wide spread, and a large part of that spread sits below one civilisation per galaxy. On their reading, the silence is not a paradox at all; it is roughly what you should expect given how little we know.
     </p>
@@ -69,12 +69,12 @@ const docs = [
       This site follows that method. Each of the seven pieces carries a range, set from the published estimates listed on its page, with a written reason. The multiplication is then run many thousands of times. Each time, a value is picked at random from every piece's range, the seven are multiplied, and the result is kept. The thousands of results are the spread.
     </p>
 
-    <h2>How a value is picked from a range</h2>
+    <h2 id="how-a-value-is-picked">How a value is picked from a range</h2>
     <p>
       For most pieces the range is drawn so that every tenfold step is equally likely: a pick between 0.001 and 1 is as likely to land between 0.001 and 0.01 as between 0.1 and 1. That is the right way to be uncertain about a quantity that could be any of several orders of magnitude, and it is what the 2018 paper did. A piece whose range is narrow enough that tenfold steps make no sense (a share of stars that is known to lie between 0.6 and 1, say) can instead be drawn so that every value is equally likely. One piece, the chance that life starts, has no two ends to draw between, and uses the 2018 paper's own shape: what is picked is the number of times life starts on such a planet over its life, from a bell curve in its powers of ten centred on one start and fifty powers of ten wide, and the chance is one minus e to the minus that number. About half the picks then land near 1 and the rest spread across fifty powers of ten below, which is the published argument in one curve: life is either easy or very hard, and nobody knows which. Each piece's page says which shape it uses.
     </p>
 
-    <h2>The three numbers, and the width</h2>
+    <h2 id="the-three-numbers">The three numbers, and the width</h2>
     <p>
       From the spread come the three numbers on the home page. The first is the middle of the spread: the value of N such that half the results came out above it and half below. The second is the share of results that came out below one, which is the chance that we are the only detectable civilisation in the galaxy. The third is the same for the whole observable universe: the share of results so small that, even multiplied by the number of galaxies there are, they come to fewer than one.
     </p>
@@ -99,7 +99,7 @@ const docs = [
       </p>
     )}
 
-    <h2>Where the ranges come from</h2>
+    <h2 id="where-the-ranges-come-from">Where the ranges come from</h2>
     <p>
       The ranges are the least certain part of the method, and the rest of the method exists to correct them over time. Each piece's page lists every published estimate on the record, with who made it, when, how, and where to find it. The range is then set by hand from those estimates, with a reason written in plain words. It is not computed from them, because the judgement about which estimates to lean on is the arguable part, and it should be visible and arguable.
     </p>
@@ -107,7 +107,7 @@ const docs = [
       Every range starts life marked as a first pass. Before it is called settled, it goes through an outside review: the estimates and the reason are put to other readers, including other AI models, with a fixed brief to argue the range up or down, and I rule on every disagreement. Until that has happened for all seven, the home page says so. The review ran on 2026-10-17, with one outside model as the reader, and all twenty of its points were settled the same day; all seven ranges are now marked as reviewed, and the page for each piece lists what the review changed and what it turned down, with the reason for each. Each range was first drafted by Claude, the AI I build this project with, from the published estimates, and accepted or moved by me; every change since is a dated revision on the piece's page with the old number, the new one and the reason.
     </p>
 
-    <h2>What moves a number, and what does not</h2>
+    <h2 id="what-moves-a-number">What moves a number, and what does not</h2>
     <p>
       Fixed, and changed only at a yearly review: the seven pieces, the method of picking from a range, and the rule for setting a range from estimates. Moved whenever the record moves, with a dated line: a piece's range, when a paper or a survey of the kind its page names under "what would move this" is published. Added at any time: a new explanation for the silence, a new paper in the log, a new work on the library shelf. Never changed once published: an explanation's address.
     </p>
@@ -115,17 +115,17 @@ const docs = [
       Each paper is logged in <a href="#story">the story so far</a> whether or not it moved anything, and most do not. A paper that says it moved a range must be named by a dated revision on some piece, and the checking script refuses the record otherwise; that cross-check is what keeps the log honest.
     </p>
 
-    <h2>What the explanations are, in this method</h2>
+    <h2 id="what-the-explanations-are">What the explanations are, in this method</h2>
     <p>
       An explanation for the silence is, in the end, a claim about one or more of the seven pieces: that life is rarer than it looks, that civilisations do not last, or that the pieces are fine and we are failing to see what is there. Each explanation's page says which pieces it bears on and in which direction, and what evidence would strengthen or weaken it. The explanations are not given probabilities and are not multiplied into anything. They are the catalogue of arguments the ranges are read against.
     </p>
 
-    <h2>What is not in the method</h2>
+    <h2 id="what-is-not-in-the-method">What is not in the method</h2>
     <p>
       The seven pieces are drawn independently, as the 2018 paper's main text does; a world in which life starts easily may also be one in which it becomes intelligent easily, and the method does not yet allow for that. The explanations are not weighed against each other. There is no attempt to update the ranges on the silence itself, which the 2018 paper does in its later sections and which this site may add later with a note here. These are the known gaps, and the yearly review is where they are reconsidered.
     </p>
 
-    <h2>The working documents</h2>
+    <h2 id="the-working-documents">The working documents</h2>
     <p>
       The documents below are published as they are written, because they are the record and rewriting them would change it. They use the project's own shorthand, and this page is the plain account of the same material.
     </p>
