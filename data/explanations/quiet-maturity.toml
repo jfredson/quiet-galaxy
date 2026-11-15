@@ -1,7 +1,3 @@
-# DRAFT explanation record, written 2026-11-15. Not in data/ yet: an explanation's id is a
-# permanent page address, so the file moves to data/explanations/ only once the id and the
-# wording are agreed. Layout in docs/record-schema.md.
-
 id = "quiet-maturity"
 name = "Quiet maturity: past a certain point a civilisation stops growing outward and puts its effort into doing more with less, so the mature ones give off almost nothing we would notice"
 family = "unseen"
