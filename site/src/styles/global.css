@@ -603,6 +603,16 @@ table.ptable { width: 100%; border-collapse: collapse; font-family: var(--sans);
 .post td, .post th { text-align: left; padding: 8px 10px 8px 0; vertical-align: top; border-bottom: 1px solid var(--line); }
 .post th { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
 .post .stand-in { border: 1px dashed var(--line-strong); padding: 8px 12px; font-family: var(--sans); font-size: 13px; color: var(--muted); margin: 0 0 18px; }
+/* "Recent news" beside a news post (2026-11-14, carried over from The Belt Equation): the post and
+   the list side by side on a wide screen, the list staying in view; below 900px it drops under the post. */
+.post-layout { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 32px; align-items: start; }
+.post-layout .post { min-width: 0; }
+.recent-news { position: sticky; top: 86px; padding: 16px 18px; gap: 8px; }
+.recent-news .side-news-title { font-size: 15px; }
+@media (max-width: 900px) {
+  .post-layout { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .recent-news { position: static; max-width: 760px; }
+}
 .post-record { margin-top: 28px; border-top: 1px solid var(--line); padding-top: 12px; }
 .post-record .rec { font-family: var(--sans); font-size: 14px; color: var(--text-soft); margin: 0 0 8px; }
 .post-record .sources { font-family: var(--sans); font-size: 13.5px; color: var(--muted); margin: 0; }
