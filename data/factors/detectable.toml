@@ -38,7 +38,7 @@ who = "Frank Drake and the Green Bank meeting"
 when = "1961"
 low = 0.1
 high = 0.2
-source = "Green Bank meeting of November 1961, as reported by Pearman in the first printed account of it (Interstellar Communication, 1963), page 291 (drake-1961)"
+source = "Green Bank meeting of November 1961, as reported by Pearman in the first printed account of it (Interstellar Communication, 1963), page 291 (drake-1961); Drake's own account of the meeting gives the same value, Drake and Sobel, Is Anyone Out There? (1992; Delta paperback, 1994), pages 59 to 61"
 method = "Pearman: about 0.2 of intelligent cultures reach the communicative state, from counting between one and five independent attempts on Earth at large-scale social organisation, one of which has got there (an argument the meeting called vulnerable and anthropocentric); whether such a society would be interested in signalling is conjecture, and 0.1 to 0.2 was suggested."
 
 [[estimate]]
@@ -117,3 +117,10 @@ field = "estimate"
 old = "Drake 1961 source: Drake and Sobel (1992), pages 55 to 62"
 new = "Drake 1961 source: Pearman (1963), page 291"
 why = "Checked 2026-10-17 against Pearman's 1963 account of the meeting, the first printed one, which is openly readable at the Internet Archive; the source line now cites it with its page, in place of Drake and Sobel (1992), whose page numbers came from a secondary summary and which has not been read. The estimate's numbers are unchanged. The method line now gives the account's reasoning."
+
+[[revision]]
+date = 2026-11-14
+field = "estimate"
+old = "Drake 1961 source: Pearman (1963), page 291"
+new = "Drake 1961 source: Pearman (1963), page 291, and Drake and Sobel (1992), pages 59 to 61"
+why = "Read 2026-11-14 from John's photographs of the book's copyright page and pages 55 to 63 (the Delta paperback of 1994). Drake's own account of the 1961 meeting gives 10 to 20 percent, which agrees with the value recorded from Pearman's account, so the book is added as a second source (John's ruling of the same day). On 2026-10-17 this book had been dropped as a source because it had not been read; it now has been. The estimate's numbers are unchanged."

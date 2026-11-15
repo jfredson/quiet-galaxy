@@ -55,8 +55,22 @@ who = "Frank Drake and the Green Bank meeting"
 when = "1961"
 low = 1000
 high = 100000000
-source = "Green Bank meeting of November 1961, as reported by Pearman in the first printed account of it (Interstellar Communication, 1963), page 292 (drake-1961)"
+source = "Green Bank meeting of November 1961, as reported by Pearman in the first printed account of it (Interstellar Communication, 1963), page 292 (drake-1961); Drake's own account of the meeting gives the same value, Drake and Sobel, Is Anyone Out There? (1992; Delta paperback, 1994), pages 61 to 62"
 method = "Pearman: the distribution of lifetimes might have two humps, societies that destroy themselves within, say, less than a thousand years and others that last for periods of the order of hundreds of millions of years; the record's 1,000 to 100,000,000 is those two ends, rounded. The account says the lifetime has a decisive influence on the number of civilisations."
+
+[[estimate]]
+who = "Carl Sagan"
+when = "1966"
+value = 10000000
+source = "Shklovskii and Sagan, Intelligent Life in the Universe (Holden-Day, 1966), chapter 29, pages 412 to 413"
+method = "Set two extremes, a civilisation that destroys itself within a hundred years of being able to communicate and one that learns to live with itself and lasts far longer than a hundred million years, then judged that at least a few percent do not destroy themselves or lose interest, and adopted ten million years as the average over the short-lived and the long-lived together. With his other values that gives about a million civilisations in the galaxy. Read 2026-11-14 from photographs of the pages."
+
+[[estimate]]
+who = "Sebastian von Hoerner, as set out by Shklovskii and Sagan"
+when = "1966"
+value = 6500
+source = "Shklovskii and Sagan, Intelligent Life in the Universe (Holden-Day, 1966), chapter 29, pages 414 to 416 and Table VI"
+method = "Listed the ways a technical civilisation could end (complete destruction of life, destruction of higher life, degeneration, loss of interest), gave each a lifetime and a probability, and took the weighted average, 6,500 years; the book calls the values arbitrary and purely subjective. He gave no weight to a civilisation with no limit on its lifetime. The date is the book's: these are von Hoerner's figures as the book reports them, and his own paper has not been read. Read 2026-11-14 from photographs of the pages."
 
 [[estimate]]
 who = "J. Richard Gott"
@@ -155,3 +169,17 @@ field = "range.why"
 old = "the ceiling covers Grinspoon's billion years and Drake's hundred million"
 new = "the ceiling covers Drake's hundreds of millions of years"
 why = "Follows the removal of Grinspoon's estimate the same day: the reason no longer names a figure the book does not give. 'Hundred million' becomes 'hundreds of millions' to match the Green Bank estimate's method line. The range itself (100 to ten billion years) is unchanged."
+
+[[revision]]
+date = 2026-11-14
+field = "estimate"
+old = "six published estimates"
+new = "eight: Carl Sagan (1966), ten million years, and Sebastian von Hoerner as set out in the same book, 6,500 years, added"
+why = "John's ruling of 2026-11-14, after the pages of Shklovskii and Sagan's Intelligent Life in the Universe were read for another record that day (chapter 29, pages 412 to 416). Each figure has a number and a stated method. Both lie inside the range of 100 to ten billion years, which is unchanged."
+
+[[revision]]
+date = 2026-11-14
+field = "estimate"
+old = "Drake 1961 source: Pearman (1963), page 292"
+new = "Drake 1961 source: Pearman (1963), page 292, and Drake and Sobel (1992), pages 61 to 62"
+why = "Read 2026-11-14 from John's photographs of the book's copyright page and pages 55 to 63 (the Delta paperback of 1994). Drake's own account of the 1961 meeting gives either less than a thousand years or more than perhaps hundreds of millions of years, which agrees with the value recorded from Pearman's account, so the book is added as a second source (John's ruling of the same day). On 2026-10-17 this book had been dropped as a source because it had not been read; it now has been. The estimate's numbers are unchanged."

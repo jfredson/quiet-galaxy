@@ -45,7 +45,7 @@ Written 2026-10-16. Pascal Lee's estimate was checked on 2026-10-17 against the 
 who = "Frank Drake and the Green Bank meeting"
 when = "1961"
 value = 1
-source = "Green Bank meeting of November 1961, as reported by Pearman in the first printed account of it (Interstellar Communication, 1963), page 291 (drake-1961)"
+source = "Green Bank meeting of November 1961, as reported by Pearman in the first printed account of it (Interstellar Communication, 1963), page 291 (drake-1961); Drake's own account of the meeting gives the same value, Drake and Sobel, Is Anyone Out There? (1992; Delta paperback, 1994), pages 57 to 59"
 method = "Pearman: a value of about unity was postulated, on the view that intelligence has high enough adaptive value for its eventual selection to be very likely, with some appeal to the sun and solar system being unexceptional; the intelligence of dolphins was noted as suggesting it may not be a very unlikely event."
 
 [[estimate]]
@@ -137,3 +137,10 @@ field = "estimate"
 old = "Lee method: a million years since the first humans"
 new = "Lee method: a million years since Homo erectus, defined by him as the first intelligent creature"
 why = "Checked 2026-10-17 against the recordings of his talks of 2020-10-24 and 2021-03-06, in which he takes the time since Homo erectus, not since the first humans. The estimate's number is unchanged."
+
+[[revision]]
+date = 2026-11-14
+field = "estimate"
+old = "Drake 1961 source: Pearman (1963), page 291"
+new = "Drake 1961 source: Pearman (1963), page 291, and Drake and Sobel (1992), pages 57 to 59"
+why = "Read 2026-11-14 from John's photographs of the book's copyright page and pages 55 to 63 (the Delta paperback of 1994). Drake's own account of the 1961 meeting gives a value of one, which agrees with the value recorded from Pearman's account, so the book is added as a second source (John's ruling of the same day). On 2026-10-17 this book had been dropped as a source because it had not been read; it now has been. The estimate's numbers are unchanged."
