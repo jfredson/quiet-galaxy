@@ -7,7 +7,7 @@ name = "Ships in the night: civilisations are common but short-lived against the
 family = "gone"
 proposed_by = "Implicit in Frank Drake's equation of 1961; set out plainly by Iosif Shklovskii and Carl Sagan in 1966, with modern treatments by Duncan Forgan and others"
 proposed_in = 1961
-proposed_source = "Drake's equation at the Green Bank meeting of 1961; Shklovskii and Sagan, Intelligent Life in the Universe (1966); Forgan, 'A numerical testbed for hypotheses of extraterrestrial life and intelligence', International Journal of Astrobiology 8, 121–131 (2009)"
+proposed_source = "Drake's equation at the Green Bank meeting of 1961; Shklovskii and Sagan, Intelligent Life in the Universe (Holden-Day, 1966), chapter 29, pages 412 to 413 and 416 to 417; Forgan, 'A numerical testbed for hypotheses of extraterrestrial life and intelligence', International Journal of Astrobiology 8, 121–131 (2009)"
 summary = """
 The galaxy is about thirteen billion years old. Suppose it has produced many thousands of
 civilisations in that time, and suppose each one is detectable for ten thousand years,
@@ -26,11 +26,16 @@ million years, there are ten thousand. The number of civilisations the galaxy ha
 produced is not what matters. What matters is how many of their lifetimes overlap with
 ours.
 
-Shklovskii and Sagan drew out the consequence in their 1966 book, which did more than any
-other to bring the question to a wide audience. If the typical civilisation is detectable
-for a few thousand years, then the galaxy's whole history is a sequence of brief flashes,
-each gone before its light has crossed much of the galaxy, and two flashes close enough
-in both space and time to notice one another would be rare. The picture has been
+Shklovskii and Sagan worked through the consequence in their 1966 book. With the other
+terms set as they chose, the number of civilisations comes to a tenth of the lifetime in
+years, and they wrote that it "depends very critically" on that lifetime. If civilisations
+destroy themselves within a century, there are fewer than ten in the galaxy and we might be
+the only one; if they last far longer than a hundred million years, the galaxy is filled
+with them. They also set out a calculation by the astronomer Sebastian von Hoerner in which
+a civilisation lasts 6,500 years on average and the nearest is about a thousand light-years
+away. A question and its answer then take more than 2,000 years, so only about ten exchanges
+fit inside a lifetime, and if the wait is longer than the lifetime, no answer ever arrives.
+The picture has been
 tried out in computer models since, among them a random-trial model of the whole galaxy built
 by Duncan Forgan in 2009, in which signal lifetime is one of the inputs and the number of
 civilisations on the air at any moment is something the model counts rather than assumes.
@@ -58,10 +63,6 @@ would_strengthen = "Evidence that detectable lifetimes are short, such as detect
 would_weaken = "Any detected civilisation that is old; evidence of long-lived structures or activity around other stars; a persuasive case that civilisations which survive their first few thousand years go on for millions."
 related = ["self-destruction", "civilisations-burn-out", "natural-catastrophes", "interstellar-travel-impractical", "not-looked-long-enough"]
 
-verify = [
-  "That Shklovskii and Sagan's 1966 book discusses the overlap-in-time problem in those terms; check the chapter on the lifetime of civilisations. Tried 2026-10-16: the book's text is not freely available (the Internet Archive copy is lending-only), review pages and the book's contents were not reachable, and a 1980 summary by Peter Sturrock (https://ntrs.nasa.gov/citations/19800014518) confirms only that Sagan weighed a long and a short lifetime and typically put the number of communicating civilisations near a million; whether the book frames the overlap problem as described could not be confirmed. Awaiting the book, ordered 2026-10-17: Intelligent Life in the Universe (Shklovskii and Sagan, 1966); the next pass with the book in hand closes this entry.",
-]
-
 notes = """
 Checked 2026-10-16. Forgan's paper is correctly cited: International Journal of Astrobiology 8
 (2), 121-131, published online 23 January 2009
@@ -71,8 +72,26 @@ any two civilisations making contact is small. The paper is a method paper: it s
 random-trial model of the galaxy and reports counts of inhabited planets, civilisations that
 destroy themselves and the distribution of signal lifetimes under three hypotheses. I found no
 contact-probability result in it (the full text was searched, not read line by line). The body now
-describes what it does. The sentence about Shklovskii and Sagan's discussion stays in the
-verify list.
+describes what it does.
+
+Checked 2026-11-14 against Shklovskii and Sagan's book itself (Intelligent Life in the Universe,
+Holden-Day, copyright 1966), from John's photographs of the contents, the index, chapter 29
+(pages 409 to 418) and pages 449 to 451. Pages 412 to 413: with the other terms as chosen, N is
+one tenth of L; a lifetime under 100 years gives fewer than ten civilisations ('we might be the
+only extant civilization'), one far above 100 million years gives many more than ten million, and
+the count 'depends very critically' on the lifetime; Sagan adopts ten million years, which gives
+about a million civilisations, the nearest several hundred light-years away. Pages 414 to 417:
+von Hoerner's calculation, an average lifetime of 6,500 years, about one civilisation for every
+three million stars, about 1,000 light-years between them, more than 2,000 years between a
+question and its answer, about ten two-way exchanges in a lifetime, and no answer at all if the
+wait is much longer than the lifetime. Page 418 sums up: between 50 thousand and one million
+civilisations, a few hundred to about 1,000 light-years apart. The body's paragraph was rewritten
+the same day to say what these pages say (John's ruling). Two things in the old wording went
+further than the book and are gone: that two civilisations close enough in space and time to
+notice one another 'would be rare' when lifetimes are a few thousand years (with 6,500 years the
+book finds contact slow and limited, not rare, and still worth trying), and that the book 'did
+more than any other to bring the question to a wide audience', a claim about its influence for
+which no source was found. The verify entry is closed.
 """
 
 
