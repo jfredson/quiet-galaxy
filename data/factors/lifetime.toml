@@ -13,14 +13,10 @@ falls silent or changes into something we would not recognise. Multiplied by the
 civilisations appear, this gives how many are detectable at any one moment, which is why Drake's
 1961 meeting concluded that N is roughly equal to L. Our own technological civilisation has been
 detectable for about a century. The published figures run from a few hundred years, read off
-the lifetimes of historical empires, to billions of years for a civilisation that spreads
-beyond its home planet; the gap between them is the single widest in the equation after the
-chance of life starting."""
+the lifetimes of historical empires, to ten billion years at the top of the widest published
+span; the gap between them is the single widest in the equation after the chance of life
+starting."""
 what_would_move_this = "A published argument with a number on how long technological civilisations last (from history, from risk studies of our own prospects, or from the physics of long-lived machines), or a detection whose age bounds it."
-
-verify = [
-  "David Grinspoon's 'potentially billions of years' is quoted from the Wikipedia article, which cites Lonely Planets (2004); check the book, and whether a billion is his figure or the article's rounding. Tried 2026-10-16 and still open: the Internet Archive copy is not readable (lending only) and Google Books refused the query. Second-hand only: a Drake-equation paper (arXiv:1705.07816) says Grinspoon replaces the factor by the share of civilisations that become immortal times how long that has been going on, which 'may approach the age of the universe'; so the structure in the method line holds, but a figure of one billion is not confirmed, and the book's first publication was 2003 (the record says 2004, the paperback). Awaiting the book, ordered 2026-10-17: Lonely Planets (Grinspoon, 2004); the next pass with the book in hand closes this entry.",
-]
 
 notes = """
 Westby and Conselice (2020, westby-2020) make this the deciding factor explicitly: taking our own
@@ -32,13 +28,27 @@ billion years; the paper's 'Weak Copernican' case) gives 928 civilisations, the 
 light-years away. They say a search is expected to succeed if civilisations last on average
 about 3,060 years under the strong condition and about 1,030 years under the weak one (read
 from the arXiv version of the paper, 2026-10-16). Checked 2026-10-16 against the primary
-sources: Shermer's two figures are in his column (reprinted on his own site); Grinspoon's could
-not be checked (see the open item above). The 'they are gone' family of explanations (the Great
+sources: Shermer's two figures are in his column (reprinted on his own site). The 'they are gone' family of explanations (the Great
 Filter ahead of us, Hanson 1998, hanson-1998; self-destruction) are arguments that this factor
 is short; the founding pessimist papers (Hart 1975, hart-1975; Tipler 1980, tipler-1980) argue
 instead that no civilisation has lasted long enough to spread here, which bounds this factor and
 the previous one together. The 2018 paper cuts its span off at ten billion years because a
-civilisation older than the galaxy cannot have appeared at a steady rate. Written 2026-10-16. Outside review, 2026-10-17: lowering the floor from 100 to 10 years (item 18) was declined, narrowly: the only measured case, ours, has been detectable for about ninety years and counting, and the figures below a century are arguments and not measurements. Garrett (2025, garrett-2025) argues the detectable phase may last 'mere decades'; it is now in the estimate list (item 19) with the span of 10 to 100 years as how 'decades' reads, the paper giving no number of its own. To revisit if a paper gives a figure below 100 with a method behind it. Rahvar and Rouhani (2026, rahvar-2026) stay in the log and linked from this factor but are not an estimate (item 20): their 5,000 years is an upper bound derived from the silence if the other six factors are generous, and using it would count the silence twice."""
+civilisation older than the galaxy cannot have appeared at a steady rate. Written 2026-10-16. Outside review, 2026-10-17: lowering the floor from 100 to 10 years (item 18) was declined, narrowly: the only measured case, ours, has been detectable for about ninety years and counting, and the figures below a century are arguments and not measurements. Garrett (2025, garrett-2025) argues the detectable phase may last 'mere decades'; it is now in the estimate list (item 19) with the span of 10 to 100 years as how 'decades' reads, the paper giving no number of its own. To revisit if a paper gives a figure below 100 with a method behind it. Rahvar and Rouhani (2026, rahvar-2026) stay in the log and linked from this factor but are not an estimate (item 20): their 5,000 years is an upper bound derived from the silence if the other six factors are generous, and using it would count the silence twice.
+
+David Grinspoon's Lonely Planets (first published 2003; read 2026-11-14 in the Ecco paperback of
+2004, pages 299 to 300 and 401 to 404, from photographs of the pages) is an argument about this
+factor and not an estimate of it, so it is not in the estimate list. He argues (page 401) that at
+least a tiny share of species will escape self-destruction and learn to avoid natural disasters,
+and that the combination will make them immortal. For those he writes a new equation with no
+lifetime in it (pages 402 to 403), because such civilisations 'have no finite lifetime': it keeps
+the Drake equation's earlier terms and ends with the share of civilisations that make the
+transition to immortality. It gives the rate at which immortal civilisations appear, and he works
+out that over 'the 10 billion years leading up to now' the galaxy would have produced between ten
+thousand and five million of them. He gives no number of years for the lifetime. The nearest he
+comes is on page 299, retelling the 1961 meeting: if we learn to live sustainably and guard
+against natural disasters, 'we might last for billions of years'. Until 2026-11-14 this record
+listed him with an estimate of one billion years, taken from a Wikipedia article's wording; the
+book does not give that figure and the entry was removed (see the revision of that date)."""
 
 [[estimate]]
 who = "Frank Drake and the Green Bank meeting"
@@ -64,13 +74,6 @@ low = 304
 high = 420
 source = "Shermer, 'Why ET hasn't called', Scientific American 287(2), 21 (2002)"
 method = "Averaged the recorded lifetimes of sixty historical civilisations on Earth, 420 years, and of the twenty-eight since the fall of Rome, 304 years (the column gives 420.6 and 304.5), and took that as the likely lifetime of a technological civilisation."
-
-[[estimate]]
-who = "David Grinspoon"
-when = "2004"
-value = 1000000000
-source = "Grinspoon, Lonely Planets: The Natural Philosophy of Alien Life (HarperCollins, 2004)"
-method = "Argued that a civilisation which survives its first dangerous centuries may become effectively immortal, so that the factor should be replaced by the share of civilisations that become immortal times the age of the galaxy; a billion years is the figure the argument reaches."
 
 [[estimate]]
 who = "Anders Sandberg, Eric Drexler and Toby Ord"
@@ -107,7 +110,7 @@ status = "reviewed"
 set_on = 2026-10-16
 sources = ["sandberg-2018"]
 why = """
-The 2018 paper's span of 100 to ten billion years, kept as it is. The floor is Westby and Conselice's century, which is how long our own civilisation has been detectable so far; Shermer's three to four hundred years sits just above it. Garrett's 'mere decades' (2025) is shorter, but it is a model of what might happen to a machine-based civilisation and not a measurement, and the one measured case has already lasted about ninety years, so the floor was left at 100 (decided 2026-10-17 on the outside review, item 18). The ceiling is the age of the galaxy, past which the equation's assumption of a steady rate of appearance breaks down, and it covers Grinspoon's billion years and Drake's hundred million. Evenly spread across its powers of ten because nothing favours any power of ten between the two: the argument is between 'civilisations burn out' and 'civilisations become permanent', and both are published."""
+The 2018 paper's span of 100 to ten billion years, kept as it is. The floor is Westby and Conselice's century, which is how long our own civilisation has been detectable so far; Shermer's three to four hundred years sits just above it. Garrett's 'mere decades' (2025) is shorter, but it is a model of what might happen to a machine-based civilisation and not a measurement, and the one measured case has already lasted about ninety years, so the floor was left at 100 (decided 2026-10-17 on the outside review, item 18). The ceiling is the age of the galaxy, past which the equation's assumption of a steady rate of appearance breaks down, and it covers Drake's hundreds of millions of years. Evenly spread across its powers of ten because nothing favours any power of ten between the two: the argument is between 'civilisations burn out' and 'civilisations become permanent', and both are published."""
 
 [[revision]]
 date = 2026-10-17
@@ -138,3 +141,17 @@ field = "estimate"
 old = "Drake 1961 source: Drake and Sobel (1992), pages 55 to 62; method named a spread of N of 20 to 50 million"
 new = "Drake 1961 source: Pearman (1963), page 292; the spread of N is no longer stated"
 why = "Checked 2026-10-17 against Pearman's 1963 account of the meeting, the first printed one, which is openly readable at the Internet Archive; the source line now cites it with its page, in place of Drake and Sobel (1992), whose page numbers came from a secondary summary and which has not been read. The estimate's numbers are unchanged. The clause about a spread of N of 20 to 50 million is removed from the method line: it came from a secondary summary and Pearman's account does not say it in a form that could be read."
+
+[[revision]]
+date = 2026-11-14
+field = "estimate"
+old = "seven published estimates, among them David Grinspoon (2004), one billion years"
+new = "six: Grinspoon's entry removed; his argument is described in the notes"
+why = "Checked 2026-11-14 against the book itself (Lonely Planets, Ecco paperback of 2004, pages 299 to 300 and 401 to 404). The figure of one billion years came from a Wikipedia article and is not in the book: Grinspoon gives no lifetime in years, and for the civilisations he calls immortal he drops the lifetime from the equation. An estimate must carry a number, so the entry was removed and the argument is set out in the notes with its pages. The range is unchanged."
+
+[[revision]]
+date = 2026-11-14
+field = "range.why"
+old = "the ceiling covers Grinspoon's billion years and Drake's hundred million"
+new = "the ceiling covers Drake's hundreds of millions of years"
+why = "Follows the removal of Grinspoon's estimate the same day: the reason no longer names a figure the book does not give. 'Hundred million' becomes 'hundreds of millions' to match the Green Bank estimate's method line. The range itself (100 to ten billion years) is unchanged."

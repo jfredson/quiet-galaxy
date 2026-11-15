@@ -1,5 +1,5 @@
 {
-  "computed_on": "2026-10-17",
+  "computed_on": "2026-11-14",
   "method": {
     "after": "sandberg-2018",
     "runs": 200000,
@@ -112,7 +112,7 @@
       "middle": 1000000.0,
       "status": "reviewed",
       "set_on": "2026-10-16",
-      "estimates": 7
+      "estimates": 6
     }
   ],
   "life_sensitivity": [
@@ -1058,5 +1058,5 @@
       "optimist": 200000000000.0
     }
   },
-  "verify_open": 1
+  "verify_open": 0
 }
