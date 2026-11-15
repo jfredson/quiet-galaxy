@@ -2,6 +2,10 @@
 
 Every change to a range, a record, the method or the site, with absolute dates. Newest first. A range change always says which publication moved it and by how much.
 
+## 2026-11-15
+
+- **Three more publication records checked against the full text; none changed in its finding** (`data/papers/cherubim-2026.toml`, `doughty-2026.toml`, `zielinska-2026.toml`). A search for free copies found the authors' own copy of Cherubim and others on arXiv, the published article of Doughty and others free at the journal, and the version of Zielinska and others posted on bioRxiv before peer review. Each finding, written on 2026-11-13 from the abstract alone, matches what was read. Each record's notes gain a dated line saying what was read, what was not, and the limits the body states that the abstract does not. No range, estimate or number changes. Of the nine records written from abstracts, six are now checked; Craddock, Pavlov and Shostak remain.
+
 ## 2026-11-14
 
 - **Gillon and colleagues (2026) checked against the full text; one small error fixed** (`data/papers/gillon-2026.toml`; an error fix to a publication record). The record had been written from the abstract. John opened the article by signing in with his own subscription, and its whole main text was read on 2026-11-14; the methods, the extended data and the supplement were not. The finding had said both planets were followed 'through their whole orbits'. The paper says the observation covers a full orbit of planet b and 90 percent of planet c's, and the finding now says that. The rest of the finding matches. A dated line in the notes records where the main text is more guarded than the abstract: planet b's surface is described as not very dark, planet c's result is called more ambiguous, and two finely tuned atmospheres for planet b are not strictly ruled out. No range is argued for.
