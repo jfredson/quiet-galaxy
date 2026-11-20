@@ -2,6 +2,10 @@
 
 Every change to a range, a record, the method or the site, with absolute dates. Newest first. A range change always says which publication moved it and by how much.
 
+## 2026-11-20
+
+- **DRAFT on a branch, not yet approved or published: the deploy check now stops any page that says a fact was "written from memory"** (`scripts/check_site.py`; decided 2026-11-20). No page says so today. The pages for an explanation and for a factor would print that phrase if a record with unchecked facts ever reached the built site, and the check now stops the deploy when that happens, so the facts are checked before anything is published.
+
 ## 2026-11-15
 
 - **A thirty-third explanation: quiet maturity, my own** (`data/explanations/quiet-maturity.toml`; written 2026-11-15 from my Sentient Horizons essay of 2026-01-18, and published the same day once its address was agreed). It says a civilisation stops growing outward once it can build minds better than its own, spreads itself thinly and leaves younger worlds alone, so the mature ones give off almost nothing we would notice. Listed with the explanations that say they are out there and we cannot see them. It lowers the share of civilisations that are detectable and how long each stays detectable. The page names the older work it builds on (Barrow, Smart, Ćirković, Haqq-Misra and Baum) and gives three objections: it needs nearly every civilisation to go quiet (Hart, 1975), waste heat can be spread out but not made smaller, and silence fits plain absence equally well. Every source was opened on 2026-11-15. No range, estimate or number changes.
