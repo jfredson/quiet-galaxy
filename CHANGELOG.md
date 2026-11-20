@@ -4,7 +4,7 @@ Every change to a range, a record, the method or the site, with absolute dates. 
 
 ## 2026-11-20
 
-- **DRAFT on a branch, not yet approved or published: the deploy check now stops any page that says a fact was "written from memory"** (`scripts/check_site.py`; decided 2026-11-20). No page says so today. The pages for an explanation and for a factor would print that phrase if a record with unchecked facts ever reached the built site, and the check now stops the deploy when that happens, so the facts are checked before anything is published.
+- **The deploy check now stops any page that says a fact was "written from memory"** (`scripts/check_site.py`; decided 2026-11-20). No page says so today. The pages for an explanation and for a factor would print that phrase if a record with unchecked facts ever reached the built site, and the check now stops the deploy when that happens, so the facts are checked before anything is published.
 
 ## 2026-11-15
 
