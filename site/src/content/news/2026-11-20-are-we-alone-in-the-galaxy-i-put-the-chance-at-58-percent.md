@@ -1,8 +1,8 @@
 ---
-title: "Are we alone in the galaxy? The Quiet Galaxy's estimate is 58 percent, and it leaves out that we have found nobody"
+title: "Are we alone in the galaxy? I put the chance at 58 percent"
 date: 2026-11-20
 kind: essay
-summary: The Quiet Galaxy puts the chance that we are alone in our galaxy at 58 percent, and in the whole observable universe at 39 percent. Both figures come from what has been published about stars, planets, life and minds, and neither counts the fact that we have looked and found nobody. The 2018 paper that my method follows did count it for its own figures, and both of them rose.
+summary: I put the chance that we are alone in our galaxy at 58 percent, and in the whole observable universe at 39 percent. Both figures come from what has been published about stars, planets, life and minds, and neither counts the fact that we have looked and found nobody. The 2018 paper that my method follows did count it for its own figures, and both of them rose.
 records: [no-paradox-just-wide-ranges, life]
 sources:
   - label: The numbers as they stand
