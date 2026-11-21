@@ -2,7 +2,7 @@
 title: "Are we alone in the galaxy? My model puts the chance at 58 percent"
 date: 2026-11-20
 kind: essay
-summary: I built a model that works out the chance that we are alone, and it currently puts that chance at 58 percent for our galaxy and 39 percent for the whole observable universe. The model leaves out, on purpose, the fact that we have looked and found nobody, because how much that tells us rests on guesses about how other civilisations would behave. The 2018 paper that my method follows made those guesses, and most of the rise it found rests on one of them.
+summary: "I built a model to answer one question as far as the published evidence allows: are we the only civilisation in our galaxy that could be detected right now? It gives each of the seven quantities in the Drake equation the range that published estimates support, runs the calculation two hundred thousand times, and currently puts the chance that we are alone at 58 percent for our galaxy and 39 percent for the whole observable universe."
 records: [no-paradox-just-wide-ranges, life]
 sources:
   - label: The numbers as they stand
