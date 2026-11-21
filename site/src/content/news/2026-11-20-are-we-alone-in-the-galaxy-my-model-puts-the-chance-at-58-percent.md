@@ -1,5 +1,5 @@
 ---
-title: "Are we alone in the galaxy? I put the chance at 58 percent"
+title: "Are we alone in the galaxy? My model puts the chance at 58 percent"
 date: 2026-11-20
 kind: essay
 summary: I built a model that works out the chance that we are alone, and it currently puts that chance at 58 percent for our galaxy and 39 percent for the whole observable universe. Both figures come from what has been published about stars, planets, life and minds, and neither counts the fact that we have looked and found nobody. The 2018 paper that my method follows did count it for its own figures, and both of them rose.
