@@ -1,0 +1,383 @@
+# The weekly reading of 2026-11-21 (docs/weekly-reading.md). Written once and never edited.
+
+id = "2026-11-21"
+date = 2026-11-21
+ran_at = "2026-11-22T03:12:31Z"
+run_by = "scheduled"
+window = "The 14 days from 2026-11-07 to 2026-11-21 (the newest earlier reading, 2026-11-14, is shorter); preprints submitted from 2026-11-04 were also treated as candidates, since arXiv announces a day or two late."
+pages_opened = "7 pages opened by WebFetch: the page test (https://arxiv.org/abs/2607.09460, Project Hephaistos IV, opened, title confirmed, submitted 2026-07-10), three arXiv abstract pages (2611.17376, 2611.26025, 2611.10651), the arXiv full text of 2611.17376 (all but its last part), a ScienceDaily release of 2026-11-12 and a KTVU news report of 2026-11-13. Four pages refused the fetch: three Nature pages (Hand's News and Views on Enceladus grains, and Nature Astronomy's 'Paradoxical advocacy' and 'Looking for another pot of gold') and one Science Advances page (Postberg and colleagues), so those were judged from their Crossref records. Eight journal candidates were looked up in Crossref's record by curl (three with abstracts, all three already judged by the reading of 2026-11-14), plus the Science Advances study one of them cites, and the 48 arXiv queries (47 listings and one lookup by number) were fetched with curl from export.arxiv.org and read from the XML."
+journals_checked = "All ten journals of step 1a listed through Crossref for 2026-11-07 to 2026-11-21, each by publication date and by online date (20 listings, none failed): 30 titles read (International Journal of Astrobiology 0, Astrobiology 1, Nature Astronomy 13, Science Advances 4, Nature 4, Science 3, PNAS 2, The Astrophysical Journal 3, Icarus 0, Acta Astronautica 0), 8 looked up in Crossref; three had abstracts and had already been judged by the reading of 2026-11-14 (Swailem and Dill in PNAS, Smit and colleagues in Science Advances, McGrath in The Astrophysical Journal), and five had none and their publishers' pages refused or were not tried. One candidate, Hand's News and Views on Enceladus grains in Nature, was handed to the record on life under the ice."
+limits = "The web search tool cannot filter by date and returned nothing dated inside the window that bore on any test except the two pages opened, so most web-search findings rest on search extracts with pages not opened. The arXiv listings are date-sorted but cover arXiv only, and several narrow queries returned few or old entries or caught unrelated papers by a shared word; entries submitted before 2026-11-04 were not treated as candidates, and some in-window entries were judged by title alone. Journals were listed for the ten journals of step 1a only, and Icarus and Acta Astronautica returned no title matching the filter words; Nature and Science refused the fetch, so Nature Astronomy's one-page pieces 'Paradoxical advocacy' (2026-11-13) and 'Looking for another pot of gold' (2026-11-13) and Nature's 'Should we move from artificial intelligence to artificial life?' (2026-11-17) could be judged only by their titles and were handed to no record. Mission pages and news archives were not checked, and claims-to-check lists were not worked, as the procedure says."
+notes = "Garrett's 'The Ionospheric Cut-off as a Potential Radio Technosignature' (arXiv 2611.26025, 2026-11-19, accepted by Monthly Notices of the Royal Astronomical Society) was opened and judged a proposed way of searching, not a result against any record's test, so it is not logged. An Oxford-led molecular-clock study on the age of the first animals in Science Advances, reported on 2026-10-06, came up only as a search extract, before the window; it was not opened and is left for a later reading."
+records_read = 40
+searches = 89
+commit_before = "2b66080"
+
+[[item]]
+record = "star-formation"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=abs%3A%22star+formation+history%22+AND+%28abs%3AGalaxy+OR+abs%3A%22Milky+Way%22%29+AND+abs%3Adisc&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "Galactic star formation rate measurement solar masses per year study published November 2026",
+  "https://export.arxiv.org/api/query?search_query=ti%3A%22star+formation%22+AND+%28abs%3A%22Galactic+disk%22+OR+abs%3A%22Galactic+disc%22+OR+abs%3A%22whole+Galaxy%22%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+]
+found = "Neither arXiv listing had anything submitted on or after 2026-11-04. The newest disc star-formation-history entry was a 2026-10-27 paper on cosmic rays in galaxy halos (2610.38061), and the newest title-search entry was dated 2026-09-02. The web search turned up only the familiar older figures (about 2 solar masses a year as the standard value, 4 to 8 from aluminium-26, and Evans's 2022 range of 0.5 to 5.9); these come from search extracts and no page was opened."
+
+[[item]]
+record = "planets"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=abs%3A%22occurrence+rate%22+AND+%28abs%3Amicrolensing+OR+abs%3A%22radial+velocity%22%29+AND+abs%3Aplanets&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "fraction of stars hosting no planets census Gaia TESS microlensing result November 2026",
+]
+found = "Two entries in the occurrence-rate listing fall in the window: Gaia astrometry of outer companions to super-Earths (arXiv 2611.21436, 2026-11-16) and a brown-dwarf-desert study of 63,254 stars (arXiv 2611.12881, 2026-11-09). Judging by their titles, both are about companions to stars that already have planets or companions, and neither gives the share of stars with no planet; their pages were not opened. The web search returned a January 2026 TESS census of close-in planets and older multiplicity studies, with nothing from November 2026, all from search extracts."
+
+[[item]]
+record = "habitable-planets"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=abs%3A%22habitable+zone%22+AND+%28abs%3A%22occurrence+rate%22+OR+abs%3A%22occurrence+rates%22%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "https://export.arxiv.org/api/query?search_query=abs%3AJWST+AND+abs%3A%22rocky%22+AND+%28abs%3A%22secondary+eclipse%22+OR+abs%3A%22transmission+spectrum%22%29+AND+abs%3Aatmosphere&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "habitable zone rocky exoplanet atmosphere or water detection new paper mid-November 2026",
+]
+found = "The newest entry in the habitable-zone occurrence-rate listing was from 2026-08-19, so there is no new count per star. The only in-window entry in the JWST rocky-atmosphere listing was the LTT 1445 A eclipse paper (arXiv 2611.17300, 2026-11-12), already in the log as Ih and colleagues, 2026. The web search's newest relevant item was the July 2026 LHS 1140 b helium result, also already logged; nothing was found for November 2026, and this rests on search extracts only."
+
+[[item]]
+record = "life"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=%28abs%3Aabiogenesis+OR+abs%3A%22origin+of+life%22%29+AND+%28abs%3Aself-replicating+OR+abs%3Areplicator+OR+abs%3Aautocatalytic%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "Perseverance Mars sample or Enceladus plume organic evidence for life announcement November 2026",
+]
+found = "The only in-window entry in the self-copying-chemistry listing was Kim and Sönmez on catalyst-driven chemical networks (arXiv 2611.06033, 2026-11-04), which the reading of 2026-11-14 already judged as theory, not a laboratory demonstration. The web search led to a ScienceDaily release dated 2026-11-12 (page opened) about organic carbon in two Jezero crater rocks; it reports the Science Advances paper by Murphy and colleagues, already in the log, which says the carbon could be biological or not, so it is not a sign of life."
+
+[[item]]
+record = "intelligence"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=%28abs%3A%22technological+intelligence%22+OR+abs%3A%22intelligent+life%22%29+AND+%28abs%3Aprobability+OR+abs%3Aevolution+OR+abs%3Aconvergence%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "earliest animals or complex cells fossil age revised new discovery published November 2026",
+]
+found = "The newest entry in the listing on how often intelligence arises was a 2026-10-21 essay on post-biological intelligence (arXiv 2610.29038), before the window. The web search's newest item was an Oxford-led molecular-clock study in Science Advances, reported on 2026-10-06, placing the first animals around 800 to 700 million years ago; it is outside the window and known only from a search extract, page not opened, so it is not logged."
+
+[[item]]
+record = "lifetime"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=%28abs%3A%22Great+Filter%22+OR+abs%3A%22civilization+lifetime%22+OR+abs%3A%22civilisation+lifetime%22+OR+abs%3A%22existential+risk%22%29+AND+%28abs%3ASETI+OR+abs%3AFermi+OR+abs%3ADrake+OR+abs%3Aextraterrestrial%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "estimate of civilization longevity L Drake equation paper released November 2026",
+]
+found = "The newest entry in the Great Filter and existential-risk listing was 'The Great Filter hypothesis -- a new Great Filter?' (arXiv 2602.08188, 2026-02-09), nine months before the window. The web search returned only older discussions of the lifetime term (Drake's 10,000 years, Prantzos 2020, a 2017 biotechnology model), from search extracts, with nothing dated November 2026."
+
+[[item]]
+record = "detectable"
+verdict = "noted"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=%28abs%3A%22Breakthrough+Listen%22+OR+ti%3ASETI+OR+ti%3Atechnosignatures%29+AND+%28abs%3Atransmitters+OR+abs%3A%22EIRP%22+OR+abs%3Anon-detection%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "SETI radio search no signals found limits on alien transmitters new results November 2026",
+]
+found = "Sheikh and colleagues (arXiv 2611.17376, submitted 2026-11-11; The Astronomical Journal 172, 288, online 2026-11-03; abstract and full text opened) report the trial run of the Allen Telescope Array's anti-solar-point survey: about 17 hours on three nights between 1.06 and 2.38 GHz found no narrowband signal, a limit of 115 to 936 jansky that rules out an Arecibo-like transmitter within 44 to 124 light-years in that strip of sky. It is a survey limit for one small strip, not a count of transmitters and not an argument about civilisations going quiet, so it is logged and the range stays. The web search's newest item was the June 2026 report of no signals from comet 3I/ATLAS, from a search extract."
+sources = ["https://arxiv.org/abs/2611.17376", "https://doi.org/10.3847/1538-3881/aeaa59"]
+publications = ["sheikh-2026"]
+[[item]]
+record = "complex-cells-are-rare"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=abs%3A%22eukaryotic+cell%22+AND+%28abs%3Aevolution+OR+abs%3Amitochondria+OR+abs%3Aenergetics%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "https://export.arxiv.org/api/query?search_query=all%3AAsgard+OR+all%3Aeukaryogenesis+OR+%28abs%3Aendosymbiosis+AND+abs%3Aorigin%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "complex cells eukaryote origin archaea mitochondria new findings November 2026",
+]
+found = "The listing on the energetics and evolution of complex cells had nothing newer than 2025-09-24, and the second listing's only entries from the window were reports on the Asgard/NOTT telescope instrument (newest 2026-11-18, arXiv 2611.24397), which shares a name with the archaea but has nothing to do with cells. The web search returned work from 2019 to 2022 on Asgard archaea and on large cells without mitochondria, from extracts; no pages opened."
+
+[[item]]
+record = "great-filter-behind-us"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=abs%3A%22hard+steps%22+OR+%28abs%3A%22Great+Filter%22+AND+abs%3Aevolution%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "\"Great Filter\" evolutionary transitions improbable new research November 2026",
+]
+found = "The hard-steps listing's one entry from the window was a paper on tuning a particle accelerator (arXiv 2611.23625, 2026-11-17), unrelated; the newest relevant entries were Prokopenko and colleagues (arXiv 2605.04498, 2026-05-06) and 'The Great Filter hypothesis -- a new Great Filter?' (arXiv 2602.08188, 2026-02-09), both well before the window. The web search turned up the same May 2026 preprint and a January 2026 preprint on preprints.org, from extracts, with no pages opened."
+
+[[item]]
+record = "hostile-galaxy"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=abs%3A%22galactic+habitable+zone%22+OR+%28abs%3A%22gamma-ray+bursts%22+AND+abs%3Alife%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "gamma-ray burst sterilise planets Milky Way galactic habitable zone study published November 2026",
+]
+found = "The listing on the galactic habitable zone and gamma-ray bursts stopped at Tsumura's civilisation-network paper (arXiv 2610.20475, 2026-10-14), and the EAGLE habitable-zone simulation (arXiv 2610.07450, 2026-10-05) and the March 2026 paper on bursts and extinction (arXiv 2603.18250) came before it; earlier readings have already seen all three. The web search returned only older work, Gowanlock (2016) and Piran and Jimenez (2014), from extracts; no pages opened."
+
+[[item]]
+record = "no-paradox-just-wide-ranges"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=abs%3A%22Sandberg%22+OR+%28abs%3A%22Drake+equation%22+AND+abs%3Aprobability%29+OR+abs%3A%22alone+in+the+galaxy%22&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "\"Dissolving the Fermi paradox\" probability we are alone new estimate November 2026",
+]
+found = "The listing's newest relevant entry was 'Implications of the Pessimistic Lower Limit on the Drake Equation' (arXiv 2603.02372, 2026-03-02), already in the log; the one entry from 2026-10 was an unrelated mathematics paper. The web search returned only the 2018 Sandberg, Drexler and Ord paper and press coverage of it, from extracts, with no pages opened."
+
+[[item]]
+record = "rare-earth"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=%28abs%3A%22terrestrial+exoplanet%22+OR+abs%3A%22rocky+exoplanet%22%29+AND+%28abs%3A%22secondary+atmosphere%22+OR+abs%3A%22bare+rock%22+OR+abs%3Aobliquity%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "Earth-sized habitable zone exoplanet atmosphere JWST result November 2026 Rare Earth",
+]
+found = "The only rocky-planet atmosphere paper from the window in the listing was the Rocky Worlds eclipse of LTT 1445 A b and c (Ih and colleagues, arXiv 2611.17300, 2026-11-12), already logged in the previous reading; the entry before it was dated 2026-09-17. The web search returned only older JWST work on TRAPPIST-1 d and e and LHS 475 b, from extracts, with no pages opened; Smit and colleagues' mountain-building paper (Science Advances, 2026-11-13) was judged in the previous reading."
+
+[[item]]
+record = "rare-intelligence"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=%28abs%3Acognition+OR+abs%3A%22brain+size%22%29+AND+%28abs%3Aextraterrestrial+OR+abs%3Aastrobiology+OR+abs%3ASETI%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "animal intelligence evolved independently octopus corvid cognition new study November 2026",
+]
+found = "The listing on cognition and brain size in astrobiology had nothing newer than 'Astrobiology and the Transformation of Scientific Epistemology' (arXiv 2608.17728, 2026-08-18). The web search returned background on intelligence evolving separately in birds, mammals and octopuses, the newest a February 2025 series in Science, from extracts, with no pages opened."
+
+[[item]]
+record = "rare-life"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=%28abs%3A%22prebiotic%22+OR+abs%3A%22RNA+world%22%29+AND+%28abs%3Areplicator+OR+abs%3Aautocatalytic+OR+abs%3A%22emergence+of+life%22%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "abiogenesis experiment RNA replicates itself lab result November 2026",
+]
+found = "The prebiotic-chemistry listing's one entry from the window was a theory paper on the handedness of molecules, 'Symmetry-Induced Conservation Laws, Three-Channel Attribution, and Solid-Phase Recycling in Prebiotic Enantiomeric Excess' (arXiv 2611.10725, 2026-11-07); judged by its title, it is not a self-copying system, and the page was not opened. The web search returned older laboratory RNA-copying results (Salk, Cambridge, Tokyo), from extracts, with no pages opened; Swailem and Dill (PNAS, 2026-11-10) was judged in the previous reading."
+
+[[item]]
+record = "rare-technology"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=%28abs%3A%22ocean+planet%22+OR+abs%3A%22land+fraction%22+OR+abs%3A%22subaerial+land%22%29+AND+%28abs%3Ahabitability+OR+abs%3Atechnology%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "https://export.arxiv.org/api/query?search_query=%28abs%3A%22technosignature%22+OR+abs%3A%22technosignatures%22%29+AND+%28abs%3Afrequency+OR+abs%3A%22upper+limit%22+OR+abs%3Arare%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "animals cumulative culture tool use chimpanzees technology origin study November 2026",
+]
+found = "The ocean-planet and land-fraction listing stopped at 'Climates of Gl 514 b' (arXiv 2608.12457, 2026-08-12). The technosignature listing's entry from the window, Sheikh and colleagues' Allen Telescope Array pilot of the anti-solar point (arXiv 2611.17376, 2026-11-11, page opened), found no narrowband signal between 1 and 2.4 GHz, so it is not the detected technology the test names. The web search on cumulative culture in chimpanzees returned only work from 2013 to 2021, from extracts."
+
+[[item]]
+record = "we-are-early"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=%28abs%3A%22TRAPPIST-1%22+OR+abs%3A%22LHS+1140%22%29+AND+abs%3Aatmosphere+AND+abs%3AJWST&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "https://export.arxiv.org/api/query?search_query=%28abs%3A%22cosmic+time%22+OR+abs%3A%22cosmic+history%22%29+AND+%28abs%3A%22habitable+planets%22+OR+abs%3A%22emergence+of+life%22+OR+abs%3Abiosphere%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "red dwarf planets habitable atmospheres retained new evidence humanity early in universe November 2026",
+]
+found = "The listing on TRAPPIST-1 and LHS 1140 atmospheres stopped at a paper on red-dwarf magnetic activity (arXiv 2610.31647, 2026-10-22), and the listing on life across cosmic time returned nothing after 2020-12-03. The newest item the web search returned was July 2026 coverage of helium escaping from LHS 1140 b, which is already in the log, with the rest from 2024 and 2025; nothing was from the window, and no pages were opened."
+[[item]]
+record = "berserkers"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=abs%3A%22technosignature%22+AND+%28abs%3A%22solar+system%22+OR+abs%3Aprobe+OR+abs%3Aartifact%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "alien probe artifact found in solar system news November 2026",
+]
+found = "The technosignature listing's newest entry was Garrett's 'The Ionospheric Cut-off as a Potential Radio Technosignature' (arXiv 2611.26025, 2026-11-19, page opened). It proposes a way to detect radio from a planet's surface and does not bear on probes or ended civilisations. The web search returned news of 2026-11-13 (KTVU, page opened) that the small near-Earth object 1998 KY26 might be the Soviet probe Phobos 1, lost in 1988. That claim rests on a blog post, not a paper, and the object would in any case be of known human origin."
+
+[[item]]
+record = "civilisations-burn-out"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=abs%3A%22sustainability%22+AND+%28abs%3Aexocivilization+OR+abs%3A%22technological+civilization%22+OR+abs%3A%22planetary+boundaries%22%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "model civilisation planet coupled collapse soft landing study published November 2026",
+]
+found = "The newest entry in the sustainability listing was 'Limits to research in astrophysics' (arXiv 2611.04727, 2026-11-03), which is not about civilisations and planets, and the one before it dated from 2026-08-21. The web search returned only Frank and colleagues' 'The Anthropocene Generalized' (2018) and a 2021 follow-up by Savitch and colleagues, both from search extracts with pages not opened, and no new model of civilisation-and-planet collapse."
+
+[[item]]
+record = "great-filter-ahead"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=abs%3A%22great+filter%22+OR+abs%3A%22hard+steps%22&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "\"Great Filter\" new paper origin of life rare or easy November 2026",
+]
+found = "Among Great Filter and hard-steps papers, the listing's newest was Prokopenko and colleagues on bottlenecks in evolution (arXiv 2605.04498, 2026-05-06); its only newer entry was an unrelated accelerator-tuning paper. The web search turned up nothing from November 2026, only that May preprint and the 2024 reassessment of the hard-steps model (arXiv 2408.10293), from search extracts with pages not opened."
+
+[[item]]
+record = "natural-catastrophes"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=%28abs%3A%22gamma-ray+burst%22+OR+abs%3Asupernova+OR+abs%3Asuperflare%29+AND+%28abs%3A%22extinction%22+OR+abs%3Abiosphere%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "https://export.arxiv.org/api/query?search_query=abs%3A%22mass+extinction%22+AND+%28abs%3Aastronomical+OR+abs%3Acosmic+OR+abs%3Abolide+OR+abs%3A%22impact+crater%22%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "nearby supernova gamma-ray burst linked to mass extinction Earth new study November 2026",
+]
+found = "The listing on supernovae, gamma-ray bursts and superflares did return entries from inside the window, such as a study of supernova progenitors in the Large Magellanic Cloud (arXiv 2611.17665, 2026-11-13), but they concern dust extinction of starlight, not extinctions of life. The mass-extinction listing's newest entry dated from 2025-07-20. The web search returned only older work linking supernovae to the Devonian and Ordovician extinctions (2020 onward), from search extracts with pages not opened."
+
+[[item]]
+record = "self-destruction"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=%28abs%3A%22civilization%22+OR+abs%3A%22civilisation%22%29+AND+%28abs%3A%22self-destruction%22+OR+abs%3A%22collapse%22+OR+abs%3A%22catastrophic+risk%22%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "nuclear near miss or bioweapon incident reported mid-November 2026",
+]
+found = "The listing on civilisational collapse and catastrophic risk had no relevant entry newer than an agent-based model of ancient Aksum (arXiv 2610.09789, 2026-10-07); its 2026-11-06 entry is about machine-learning methods. The web search reported no nuclear or biological close call in the window, only a commentary of 2026-10-12 on a laboratory death in Irkutsk, which itself says it does not claim a release took place. These are from search extracts; pages not opened."
+
+[[item]]
+record = "ships-in-the-night"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=%28abs%3A%22SETI%22+OR+abs%3Atechnosignature%29+AND+%28abs%3Alongevity+OR+abs%3Alifetime+OR+abs%3A%22transient%22%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "how long do technological civilizations stay detectable research November 2026",
+]
+found = "The listing on technosignature lifetimes and transients went no later than 2026-10-30, with first light from the PANOSETI Dark100 array (arXiv 2610.41775), an instrument report, before the window opened. The web search returned only earlier preprints on short detection windows, 'SETI's blind spot' (arXiv 2607.07413, July 2026) and the 2026 technosphere projections (arXiv 2604.13774), from search extracts with pages not opened."
+
+[[item]]
+record = "aestivation"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=%28abs%3A%22Kardashev%22+OR+abs%3A%22Dyson%22%29+AND+%28abs%3A%22cosmic+expansion%22+OR+abs%3A%22far+future%22+OR+abs%3A%22waste+heat%22%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "dormant civilisations waiting for colder universe Sandberg hypothesis news November 2026",
+]
+found = "The listing on Kardashev, Dyson and waste-heat papers stopped at an ALMA2040 submillimetre SETI paper (arXiv 2610.22266, 2026-10-15). Before that came the logged 'Slysh haloes' paper by Garrett (2026-08-31). The web search returned only coverage from 2017 of the original paper (arXiv 1705.03394) and the critique by Bennett, Hanson and Riedel, from search extracts with pages not opened."
+
+[[item]]
+record = "dark-forest"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=%28abs%3A%22METI%22+OR+abs%3A%22messaging+extraterrestrial%22+OR+abs%3A%22active+SETI%22%29+OR+%28abs%3A%22concealment%22+AND+abs%3Atechnosignature%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "https://export.arxiv.org/api/query?search_query=%28abs%3A%22Fermi+paradox%22+OR+abs%3A%22great+silence%22%29+AND+%28abs%3Asilence+OR+abs%3Ahiding+OR+abs%3Adeterrence+OR+abs%3Aequilibrium%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "can an alien civilisation hide its waste heat and radio leakage, study November 2026",
+]
+found = "The messaging and concealment listing returned only unrelated recent papers that matched on the word 'Metis'. The listing on silence and the Fermi paradox had nothing newer than 'Blink and you'll miss it' (arXiv 2509.23632, 2025-09-28). The web search found no study from November 2026 on hiding waste heat or radio leakage, only older Earth-leakage and waste-heat work from 2015 to 2023, from search extracts with pages not opened."
+[[item]]
+record = "everyone-listens-nobody-transmits"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=abs%3Abeacon+AND+%28abs%3Aextraterrestrial+OR+abs%3Atechnosignature+OR+abs%3ASETI%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "deliberate interstellar beacon versus passive eavesdropping SETI paper November 2026",
+]
+found = "The beacon listing's one entry inside the window was the Allen Telescope Array trial search of the anti-solar point by Sheikh and colleagues (arXiv 2611.17376, 2026-11-11, page opened), which found no beacon and says nothing about leakage, so it neither confirms nor rules out a galaxy of listeners; the next newest entry, on phase-coded beacons in pulsating stars (arXiv 2610.31860, 2026-10-22), falls before the window. The web search returned only older work on beacons and eavesdropping, such as Shostak's essay on whether transmitting is dangerous and the 2021 Gertz preprint, from extracts, pages not opened."
+
+[[item]]
+record = "expansion-stalls"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=abs%3A%22Fermi+paradox%22+AND+%28abs%3Asettlement+OR+abs%3Acolonization+OR+abs%3Aexpansion+OR+abs%3Avoids%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "spacefaring civilisation settlement waves halt galactic voids stellar mixing new study November 2026",
+]
+found = "The settlement-and-expansion listing's newest entry was Romanovskaya on post-biological intelligence settling cyberspace (arXiv 2610.29038, 2026-10-21), already seen by the readings of 2026-11-07 and 2026-11-14 and before this window. The web search returned only the 2019 settlement-front model by Carroll-Nellenback and colleagues, with its voids and its point about stellar motion, from extracts, pages not opened."
+
+[[item]]
+record = "interstellar-travel-impractical"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=%28abs%3A%22interstellar+flight%22+OR+abs%3A%22interstellar+travel%22+OR+abs%3A%22relativistic+spacecraft%22%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "Bailer-Jones physics of interstellar travel dust impacts probe November 2026",
+]
+found = "Bailer-Jones's short semi-popular article 'The Physics of Interstellar Travel' (arXiv 2611.10651, 2026-11-07, abstract page opened) summarises his 2026 book on propulsion, dust impacts and communication for an uncrewed probe to the nearest stars and reports no new barrier; a search extract of its full text (not opened) cites simulations in which about a centimetre of graphite or quartz stops all but the largest grains. The other web results were earlier studies of dust erosion, the newest an April 2026 Proxima Centauri mission study (arXiv 2604.20182), from extracts, pages not opened."
+
+[[item]]
+record = "inward-turn"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=%28abs%3A%22Dyson+sphere%22+OR+abs%3Amegastructure+OR+abs%3AKardashev%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "civilisations retreat into simulation virtual reality instead of space exploration argument published November 2026",
+]
+found = "The megastructure listing had nothing inside the window; its newest entry was Vidal and Kadian on power density and the stellivore idea (arXiv 2611.03691, 2026-10-27), which the reading of 2026-11-07 opened and judged, before this window's preprint margin. The web search on civilisations retreating into virtual worlds returned only pieces from 2015 to 2017 and undated commentary on the transcension idea, from extracts, pages not opened."
+
+[[item]]
+record = "life-under-ice"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=%28abs%3AEnceladus+OR+abs%3AEuropa%29+AND+%28abs%3Abiosignature+OR+abs%3A%22life+detection%22+OR+abs%3Ahydrothermal+OR+abs%3Aplume%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "Enceladus Europa subsurface ocean energy chemistry life evidence new findings November 2026",
+  "https://api.crossref.org/journals/1476-4687/works?filter=from-pub-date:2026-11-07,until-pub-date:2026-11-21&rows=100&select=DOI,title,published,published-online,type&query.bibliographic=life+biosignature+habitable+extraterrestrial+technosignature+Mars+Enceladus+Europa+exoplanet",
+]
+found = "The journal listing for Nature turned up Hand's News and Views piece of 2026-11-11 on salty grains in Saturn's outer ring (Nature's page refused the fetch); its Crossref reference list names the study it discusses, Postberg and colleagues' Cassini dust-analyser paper (Science Advances 12, eaee7256, published 2026-09-25, abstract only), which shows the ocean's salts and organics sorted into different grains as spray freezes slowly in the vents. That is about how the grains form, says nothing of energy or life in the ocean, and came out before the window. The ocean-world listing's newest entry was a heat-flux study of Enceladus's ice shell (arXiv 2610.19242, 2026-10-13), and the web search returned nothing newer than a September 2026 EarthSky report, from extracts, pages not opened."
+
+[[item]]
+record = "listening-the-wrong-way"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=%28abs%3Atechnosignature+OR+abs%3Atechnosignatures%29+AND+%28abs%3Aradio+OR+abs%3Aoptical+OR+abs%3Alaser+OR+abs%3Ainfrared%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "unconventional technosignature detection method beyond narrowband radio new result mid-November 2026",
+]
+found = "Garrett proposes the ionospheric cut-off as a radio technosignature (arXiv 2611.26025, 2026-11-19, accepted by Monthly Notices of the Royal Astronomical Society, page opened): a planet's ionosphere should block broadband surface radio below roughly 5 to 40 MHz, and a cut-off that varies with the orbit would be hard to explain naturally. It is a proposed new way of looking, not a signal found by one, so it does not meet the test. The web search returned nothing newer than 2026 work from May to July, including Garrett's broadband-leakage framework (arXiv 2605.10212), from extracts, pages not opened."
+
+[[item]]
+record = "no-interest-in-contact"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=%28abs%3A%22Fermi+paradox%22+OR+abs%3A%22great+silence%22+OR+abs%3Aextraterrestrial%29+AND+%28abs%3Amotive+OR+abs%3Aincentive+OR+abs%3Abehavior+OR+abs%3Asociological+OR+abs%3A%22game+theory%22%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "aliens uninterested in contact or expansion mature civilisation lose drive paper November 2026",
+]
+found = "The motives listing returned nothing on the subject inside the window: its newest entries were planetary-rover engineering papers caught by the word behaviour, and the newest relevant entry was 'Kardashev's Conundrum' (arXiv 2604.17516, 2026-04-19). The web search returned older arguments that mature civilisations stop expanding, such as Wong and Bartlett's 2022 asymptotic burnout paper and Ćirković's 2008 'Against the Empire', from extracts, pages not opened."
+
+[[item]]
+record = "not-looked-long-enough"
+verdict = "noted"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=abs%3ASETI+AND+%28abs%3A%22all-sky%22+OR+abs%3A%22upper+limit%22+OR+abs%3A%22non-detection%22+OR+abs%3A%22transmitter%22%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "Allen Telescope Array anti-solar point pilot survey no signals SETI coverage essentially zero November 2026",
+  "https://export.arxiv.org/api/query?id_list=2611.17376",
+]
+found = "Sheikh and colleagues published the design and trial results of the Allen Telescope Array's anti-solar point survey (arXiv 2611.17376, 2026-11-11; The Astronomical Journal 172, 288; abstract and full text opened). They show that no earlier radio search had watched this long-proposed place at the right time, calling its earlier coverage essentially zero, and their three-night trial found no signal from 1 to 2.4 GHz while covering about 0.8 percent of the planned survey. This is a measured example of the gaps in past searches that the test describes; the SETI listing had nothing else in the window, its next newest entry being the ten-year UCLA search of 2026-05-06."
+sources = ["https://arxiv.org/abs/2611.17376", "https://doi.org/10.3847/1538-3881/aeaa59"]
+publications = ["sheikh-2026"]
+[[item]]
+record = "planetarium"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=abs%3A%22planetarium+hypothesis%22+OR+%28abs%3A%22violation%22+AND+abs%3A%22isotropy%22+AND+abs%3A%22cosmological+principle%22%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "\"planetarium hypothesis\" or cosmic seam anomaly New Horizons Voyager measurements November 2026",
+]
+found = "The listing on the planetarium idea and tests of the cosmological principle had its newest entry on 2026-04-15, a reanalysis of large-scale structure from gamma-ray bursts (arXiv 2604.13712), which is no seam in the sky. The web search returned only 2025 coverage of an Oort Cloud spiral found while making a planetarium show, which has nothing to do with this idea. Nothing was in the window, and no pages were opened."
+
+[[item]]
+record = "quiet-maturity"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=%28abs%3A%22Dyson+swarm%22+OR+abs%3A%22partial+Dyson%22%29+AND+%28abs%3Ainfrared+OR+abs%3A%22waste+heat%22%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "Dyson sphere candidates infrared excess new study November 2026",
+]
+found = "The listing on partial swarms and waste heat had its newest entry on 2026-08-31, a paper on submillimetre waste heat from cold computing (arXiv 2608.31153). The web search returned the 2024 Project Hephaistos II candidates and the July 2026 Project Hephaistos III follow-up (arXiv 2607.25701, already in the log as Korn and colleagues 2026). Nothing new was in the window, and no pages were opened."
+
+[[item]]
+record = "shouting-is-costly"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=abs%3ASETI+AND+%28abs%3Aintermittent+OR+abs%3A%22duty+cycle%22+OR+abs%3A%22transient+signals%22%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "SETI search for brief repeating radio pulses Milky Way plane survey result November 2026",
+]
+found = "The listing on intermittent and transient SETI signals had its newest entry on 2026-01-21, a FAST search for kilohertz periodic signals from five nearby stars (arXiv 2601.14630). The web search returned older work: the Parkes galactic-plane survey, the 2022 Gajjar search for pulsed beacons and the Astropulse project, all seen in search extracts only. There was no brief artificial pulse and no new count of past searches' sensitivity in the window, and no pages were opened."
+
+[[item]]
+record = "simulation"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=abs%3A%22simulation+hypothesis%22+OR+abs%3A%22simulated+reality%22+OR+%28abs%3A%22discrete+spacetime%22+AND+abs%3Atest%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "physicists test whether universe is a simulation discrete spacetime paper November 2026",
+]
+found = "This listing caught mostly off-topic engineering and AI papers. Its newest entry on the simulation argument itself was Vazza's astrophysical case against a full simulation, dated 2025-04-11 (arXiv 2504.08461). The web search returned only the 2012 Beane, Davoudi and Savage lattice test and its 2014 journal version, seen in search extracts. Nothing was in the window, and no pages were opened."
+
+[[item]]
+record = "they-are-already-here"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=abs%3A%223I%2FATLAS%22+AND+%28abs%3Anongravitational+OR+abs%3Aanomal%2A+OR+abs%3Aartificial%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "3I/ATLAS artificial or natural comet findings published mid-November 2026",
+]
+found = "The newest 3I/ATLAS entry in the listing was still the 2026-10-28 paper on its non-gravitational motion (arXiv 2610.38485), which falls before the window. The web search returned coverage of the radio searches by the SETI Institute and Breakthrough Listen, which found nothing artificial and treat it as a natural comet. That coverage is dated 2025 and early 2026 and was seen in search extracts. No pages were opened."
+
+[[item]]
+record = "they-became-machines"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=%28abs%3A%22post-biological%22+OR+abs%3A%22machine+intelligence%22+OR+abs%3A%22artificial+superintelligence%22%29+AND+%28abs%3Aextraterrestrial+OR+abs%3Atechnosignatures%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "post-biological machine civilisations aliens AI research paper November 2026",
+]
+found = "The listing on machine and post-biological intelligence had its newest entry on 2026-04-23, the Dyson Minds workshop report on SETI around black holes (arXiv 2604.21886). The web search returned Garrett's 2024 paper on AI as a great filter (arXiv 2405.00042) and older essays by Schneider and Dick. None was a detection or a heat survey, and none was in the window. No pages were opened."
+
+[[item]]
+record = "transcension"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=abs%3A%22transcension+hypothesis%22+OR+%28abs%3A%22black+holes%22+AND+abs%3A%22extraterrestrial+civilizations%22%29+OR+%28abs%3A%22black+hole%22+AND+abs%3Atechnosignature%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "advanced civilisations black holes inner space \"transcension\" news November 2026",
+]
+found = "The listing on transcension and black holes as technosignatures had its newest entry on 2026-10-27, Vidal's stellivore paper (arXiv 2611.03691), which falls before the window's preprint margin. The web search returned Smart's 2012 paper, Dvali and Osmanov's 2023 idea of black holes as quantum computers, and Loeb's 2024 black-hole-moon idea, seen in search extracts. There was no unusual black hole, and no pages were opened."
+
+[[item]]
+record = "zoo-hypothesis"
+verdict = "quiet"
+queries = [
+  "https://export.arxiv.org/api/query?search_query=abs%3A%22zoo+hypothesis%22+OR+abs%3A%22great+silence%22+OR+%28abs%3A%22Fermi+paradox%22+AND+abs%3Adeliberate%29&sortBy=submittedDate&sortOrder=descending&max_results=25",
+  "aliens watching Earth zoo hypothesis Fermi paradox study November 2026",
+]
+found = "This listing's newest entry was a paper on the future of technosignature searches and the Fermi paradox, submitted on 2026-05-30 (arXiv 2606.00463). The web search returned Crawford and Schulze-Makuch's 2023 Nature Astronomy perspective, 'the zoo hypothesis or nothing', and older explainers. None showed watching of Earth or a settled galaxy, and nothing was in the window. No pages were opened."

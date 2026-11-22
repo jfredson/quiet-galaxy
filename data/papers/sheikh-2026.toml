@@ -1,0 +1,25 @@
+# Publication record. Layout in docs/record-schema.md. Logged by the weekly reading of 2026-11-21.
+# Publication records are appended and never edited except to fix an error, with a changelog line.
+
+id = "sheikh-2026"
+date = "2026-11-03"
+added_on = 2026-11-21
+authors = ["Sofia Z. Sheikh", "Eleanor Hort", "Bárbara Cabrales", "Isabel Gerrard", "Wael Farah", "Nick Tusay", "David R. DeBoer", "Saul Balcarcel-Salazar", "Joe S. Bright", "Luigi F. Cruz", "Ben Jacobson-Bell", "Mark Masters", "and 4 more"]
+title = "A Large-Scale Technosignature Survey of the Anti-Solar Point with the Allen Telescope Array: Survey Design and Pilot Results"
+venue = "The Astronomical Journal 172 (6), 288 (2026), https://doi.org/10.3847/1538-3881/aeaa59; also arXiv:2611.17376"
+link = "https://arxiv.org/abs/2611.17376"
+finding = """
+The trial run of the SETI Institute's survey of the anti-solar point, the place in the sky from
+which Earth would be seen crossing the face of the Sun. Over three nights (about 17 hours with 20
+dishes of the Allen Telescope Array, 1.06 to 2.38 gigahertz, about 0.8 percent of the planned
+survey) it found about 1.9 million narrow signals, all explained as human interference, and no
+signal fixed on the sky. That sets a limit of 115 to 936 jansky, enough to rule out a transmitter
+like the old Arecibo radar out to about 44 to 124 light-years in that strip of sky. The authors show
+that earlier radio searches had almost never watched this place at the right time (Breakthrough
+Listen had no pointing within half a degree of it as of 2020) and call its earlier coverage
+essentially zero. The paper sets no limit on how many transmitters there could be."""
+factors = ["detectable"]
+explanations = ["not-looked-long-enough"]
+moved_range = false
+
+notes = "Logged by the weekly reading of 2026-11-21 (data/readings/2026-11-21.toml), which found it in arXiv's listing by date (submitted to arXiv 2026-11-11) and read the abstract and most of the full text on arXiv's pages; the journal's own page was not opened, and the volume, issue, article number and online date of 2026-11-03 come from Crossref and arXiv's journal reference, which agree. The sixteen authors are as arXiv and Crossref list them; the last four are Alexander W. Pollak, Seth Shostak, Carol Shumaker and Andrew Siemion. The paper gives the trial run's season as summer 2023 in its abstract and summer 2024 in its section on the observations. It is the trial run that the survey paper already in the log (Gerrard and Sheikh, 2026) cites as in press. It is a survey limit for one small strip of sky, not a count of transmitters and not an argument about how often civilisations go quiet, so it is logged under the share of civilisations that are detectable and no range is argued for."

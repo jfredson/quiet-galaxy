@@ -2,6 +2,10 @@
 
 Every change to a range, a record, the method or the site, with absolute dates. Newest first. A range change always says which publication moved it and by how much.
 
+## 2026-11-21
+
+- Weekly reading (scheduled task, 2026-11-21): 40 records read, 0 ranges moved, 1 logged, 0 flagged for John; record at data/readings/2026-11-21.toml. Logged `sheikh-2026` (Sheikh and colleagues, 2026): the trial run of the Allen Telescope Array's survey of the anti-solar point, which found no signal and shows earlier searches had almost never watched that place, read against the share of civilisations that are detectable and the explanation that we have not looked long enough. No range moved and the headline was not rerun.
+
 ## 2026-11-20
 
 - **The first essay, published on John's go: "Are we alone in the galaxy? My model puts the chance at 58 percent"** (`site/src/content/news/2026-11-20-are-we-alone-in-the-galaxy-my-model-puts-the-chance-at-58-percent.md`, with its card). It carries on from the Start Here post: why the model was built, how it works, and that it currently gives 58 percent for the galaxy and 39 percent for the observable universe. It explains that the 42 percent left over is the share of runs in which the published ranges give company, not a measure of doubt, that the range for whether life starts moves the answer most (38 to 94 percent across its tested versions), and it sets out the 2025 review by Mills and colleagues as the published case against the hard-steps argument. It rebuilds the draft of 2026-11-15 on John's decisions of 2026-11-20: cut anything that is pure speculation, credit the number to the model, follow on from the Start Here post, and leave out what the model does not do. Every figure is from the computed headline, the life range's test of other versions, the method notes or the two papers, each opened on 2026-11-20. The News page's opening paragraph gains one sentence saying how an essay differs from the other posts. No range, estimate or number changes.
